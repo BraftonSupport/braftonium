@@ -1,0 +1,59 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Admin Stylesheet
+
+If you like living on the edge, you can add some styles here to
+customize the dashboard and WordPress admin area. This stylesheet
+is empty, but you can just start dropping your styles here to
+start customizing. All admin functions are located in lib/admin/
+
+******************************************************************/
+/* line 15, ../scss/admin.scss */
+.acf-fields.-left > .acf-field:before {
+  content: none !important;
+}
+
+/* line 18, ../scss/admin.scss */
+.acf-fields.-left > .acf-field > .acf-label,
+.acf-fields.-left > .acf-field > .acf-input {
+  float: none !important;
+  width: 100% !important;
+}
+
+/* line 26, ../scss/admin.scss */
+#acf_after_title-sortables .postbox .layout:first-child, #acf_after_title-sortables .postbox .layout:nth-child(7) {
+  background: rgba(127, 0, 0, 0.1);
+}
+/* line 29, ../scss/admin.scss */
+#acf_after_title-sortables .postbox .layout:nth-child(2), #acf_after_title-sortables .postbox .layout:nth-child(8) {
+  background: rgba(0, 127, 0, 0.1);
+}
+/* line 32, ../scss/admin.scss */
+#acf_after_title-sortables .postbox .layout:nth-child(3), #acf_after_title-sortables .postbox .layout:nth-child(9) {
+  background: rgba(0, 0, 127, 0.1);
+}
+/* line 35, ../scss/admin.scss */
+#acf_after_title-sortables .postbox .layout:nth-child(4), #acf_after_title-sortables .postbox .layout:nth-child(10) {
+  background: rgba(127, 127, 0, 0.1);
+}
+/* line 38, ../scss/admin.scss */
+#acf_after_title-sortables .postbox .layout:nth-child(5), #acf_after_title-sortables .postbox .layout:nth-child(11) {
+  background: rgba(127, 0, 127, 0.1);
+}
+/* line 41, ../scss/admin.scss */
+#acf_after_title-sortables .postbox .layout:nth-child(6), #acf_after_title-sortables .postbox .layout:nth-child(12) {
+  background: rgba(0, 127, 127, 0.1);
+}
+
+/* line 47, ../scss/admin.scss */
+.mce-edit-area iframe {
+  max-height: 200px;
+}
+
+/* line 50, ../scss/admin.scss */
+.acf-field-5a908ed0a68bd {
+  float: right !important;
+  clear: none !important;
+}

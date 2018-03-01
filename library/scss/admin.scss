@@ -1,0 +1,53 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Admin Stylesheet
+
+If you like living on the edge, you can add some styles here to
+customize the dashboard and WordPress admin area. This stylesheet
+is empty, but you can just start dropping your styles here to
+start customizing. All admin functions are located in lib/admin/
+
+******************************************************************/
+
+
+.acf-fields.-left > .acf-field:before {
+	content: none!important;
+}
+.acf-fields.-left > .acf-field > .acf-label,
+.acf-fields.-left > .acf-field > .acf-input {
+	float: none!important;
+	width: 100%!important;
+}
+
+// Full Width Sections
+#acf_after_title-sortables .postbox .layout {
+	&:first-child, &:nth-child(7) {
+    	background: rgba(127,0,0,.1);
+	}
+	&:nth-child(2), &:nth-child(8) {
+		background: rgba(0,127,0,.1);
+	}
+	&:nth-child(3), &:nth-child(9) {
+		background: rgba(0,0,127,.1);
+	}
+	&:nth-child(4), &:nth-child(10) {
+		background: rgba(127,127,0,.1);
+	}
+	&:nth-child(5), &:nth-child(11) {
+		background: rgba(127,0,127,.1);
+	}
+	&:nth-child(6), &:nth-child(12) {
+    	background: rgba(0,127,127,.1);
+	}
+}
+
+// Banner
+.mce-edit-area iframe {
+	max-height: 200px;
+}
+.acf-field-5a908ed0a68bd {
+	float: right!important;
+	clear: none!important;
+}

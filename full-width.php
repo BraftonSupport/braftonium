@@ -1,0 +1,100 @@
+<?php
+if(!session_id()) session_start();
+/*
+ Template Name: Full Width
+ *
+ * For more info: http://codex.wordpress.org/Page_Templates
+*/
+$style = get_field('style');
+$bg = $style['background_color'];
+$color = $style['color'];
+$bg_image = $style['background_image'];
+$video = $style['video_url'];
+$class = $style['add_class'];
+$other = $style['other'];
+?>
+
+<?php get_header(); ?>
+
+	<div id="content">
+		<?php // check if the flexible content field has rows of data
+			$sectionrow=0;
+			if( have_rows('content') ):
+				// loop through the rows of data
+				while ( have_rows('content') ) : the_row();
+					$_SESSION['sectionrow']=$sectionrow;
+					if( get_row_layout() == 'visual' ):
+						get_template_part( 'post-formats/content', 'visual' );
+						$sectionrow++;
+					elseif( get_row_layout() == 'list' ): 
+						get_template_part( 'post-formats/content', 'list' );
+						$sectionrow++;
+					elseif( get_row_layout() == 'validation' ):
+						get_template_part( 'post-formats/content', 'validation' );
+						$sectionrow++;
+					elseif( get_row_layout() == 'row' ): 
+						get_template_part( 'post-formats/content', 'row' );
+						$sectionrow++;
+					elseif( get_row_layout() == 'cta' ): 
+						get_template_part( 'post-formats/content', 'cta' );
+						$sectionrow++;
+					elseif( get_row_layout() == 'map' ):
+						get_template_part( 'post-formats/content', 'map' );
+						$sectionrow++;
+					endif;
+				endwhile;
+			endif; ?>
+			<div id="inner-content" class="wrap cf">
+
+				<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+							<header class="article-header">
+								<?php if( !have_rows('content') ): ?>
+									<h1 class="page-title"><?php the_title(); ?></h1>
+								<?php else : ?>
+									<h2 class="page-title"><?php the_title(); ?></h2>
+								<?php endif; ?>
+
+								<p class="byline vcard">
+									<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'business-theme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
+								</p>
+
+							</header>
+
+							<section class="entry-content cf" itemprop="articleBody">
+								<?php
+									the_content();
+								?>
+							</section>
+
+						</article>
+
+					<?php endwhile; else : ?>
+
+						<article id="post-not-found" class="hentry cf">
+							<header class="article-header">
+								<h1><?php _e( 'Oops, Post Not Found!', 'business-theme' ); ?></h1>
+							</header>
+							<section class="entry-content">
+								<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'business-theme' ); ?></p>
+							</section>
+							<footer class="article-footer">
+								<p><?php _e( 'This is the error message in the full-width.php template.', 'business-theme' ); ?></p>
+							</footer>
+						</article>
+
+					<?php endif; ?>
+
+				</main>
+
+				<?php get_sidebar(); ?>
+
+			</div>
+
+		</div>
+
+<?php get_footer(); ?>
