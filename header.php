@@ -8,69 +8,12 @@
  * @subpackage Business_Theme
  * @since Business Theme 1.0
  */
-$nav = get_field('navigation_bar_position', 'option');
-$ga = get_field('google_analytics', 'option');?>
-<!doctype html>
-
+?>
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
-<?php
-if ( $ga ) : ?>
-	<!-- Google Analytics -->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', '<?php echo $ga; ?>', 'auto');
-		  ga('send', 'pageview');
-		</script>
-	<!-- End Google Analytics -->
-<?php endif;
-
-$description = get_bloginfo( 'description', 'display' );
-echo '<script type="application/ld+json">
-	{
-		"@context": "http://schema.org/",
-		"@type": "Organization",
-		"name": "'.get_bloginfo( "name" ).'",
-		"legalName": "'.get_bloginfo( "name" ).'",
-		"url": "'.network_site_url( '/' ).'",
-		"email": "",
-		"telephone": "",
-		"description": "'.$description.'"
-	}
-</script>';
-if(is_single()) {
-	$content = wp_strip_all_tags(apply_filters('the_content', $post->post_content)); 
-	$excerpt = wp_strip_all_tags(apply_filters('the_excerpt', $post->post_excerpt)); 
-	$image_url = esc_url( get_theme_mod( 'businesstheme_logo' ) );
-	$author = $post->post_author; 
-	echo '<script type="application/ld+json">
-		{ "@context": "http://schema.org",
-		"@type": "BlogPosting",
-		"headline": "'.esc_html( get_the_title() ).'",
-		"image": "'.get_the_post_thumbnail_url().'",
-		"wordcount": "'.str_word_count($content,0).'",
-		"publisher": {
-		"@type": "Organization",
-		"name": "'.get_bloginfo( "name" ).'",
-		"logo": "'.$image_url.'"
-		},
-		"url": "'.get_permalink().'",
-		"datePublished": "'.get_the_date('Y-m-d').'",
-		"description": "'.$excerpt.'",
-		"author": {
-		"@type": "Person",
-		"name": "'.get_the_author_meta( "user_nicename" , $author ).'"
-		}
-		}
-	</script>';
-}
-?>
+<!doctype html>
 	<head>
 		<meta charset="utf-8">
 
@@ -101,8 +44,63 @@ if(is_single()) {
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
 
-		<?php // drop Google Analytics Here ?>
-		<?php // end analytics ?>
+		<?php $nav = get_field('navigation_bar_position', 'option');
+		$ga = get_field('google_analytics', 'option');
+
+		if ( $ga ) : ?>
+			<!-- Google Analytics -->
+				<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', '<?php echo $ga; ?>', 'auto');
+				ga('send', 'pageview');
+				</script>
+			<!-- End Google Analytics -->
+		<?php endif;
+
+		$description = get_bloginfo( 'description', 'display' );
+		echo '<script type="application/ld+json">
+			{
+				"@context": "http://schema.org/",
+				"@type": "Organization",
+				"name": "'.get_bloginfo( "name" ).'",
+				"legalName": "'.get_bloginfo( "name" ).'",
+				"url": "'.network_site_url( '/' ).'",
+				"email": "",
+				"telephone": "",
+				"description": "'.$description.'"
+			}
+		</script>';
+		if(is_single()) {
+			$content = wp_strip_all_tags(apply_filters('the_content', $post->post_content)); 
+			$excerpt = wp_strip_all_tags(apply_filters('the_excerpt', $post->post_excerpt)); 
+			$image_url = esc_url( get_theme_mod( 'businesstheme_logo' ) );
+			$author = $post->post_author; 
+			echo '<script type="application/ld+json">
+				{ "@context": "http://schema.org",
+				"@type": "BlogPosting",
+				"headline": "'.esc_html( get_the_title() ).'",
+				"image": "'.get_the_post_thumbnail_url().'",
+				"wordcount": "'.str_word_count($content,0).'",
+				"publisher": {
+				"@type": "Organization",
+				"name": "'.get_bloginfo( "name" ).'",
+				"logo": "'.$image_url.'"
+				},
+				"url": "'.get_permalink().'",
+				"datePublished": "'.get_the_date('Y-m-d').'",
+				"description": "'.$excerpt.'",
+				"author": {
+				"@type": "Person",
+				"name": "'.get_the_author_meta( "user_nicename" , $author ).'"
+				}
+				}
+			</script>';
+		}
+		?>
 
 	</head>
 
@@ -112,15 +110,15 @@ if(is_single()) {
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="inner-header" class="wrap cf">
+				<div id="inner-header" class="wrap cf container">
 
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow">
+					<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow">
 					<?php $logo1 = get_theme_mod( 'businesstheme_logo' );
 						if ($logo1) { ?>
 						<img src='<?php echo $logo1; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="site-title">
 					<?php } else {
 						bloginfo('name');
-					} ?></a></p>
+					} ?></a></div>
 
 					<div class="nextwidget">
 						<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'businesstheme' );

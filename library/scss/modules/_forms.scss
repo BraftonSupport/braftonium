@@ -38,27 +38,27 @@ input[type="color"],
 select,
 textarea,
 .field {
-  display: block;
   height: 40px;
   line-height: 1em;
-  padding: 0 12px;
-  margin-bottom: 14px;
+  padding: 0 0 0 12px;
+  margin-bottom: 10px;
   font-size: 1em;
   color: $text-color;
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
   border: 0;
+  display: inline-block;
   width: 100%;
   max-width: 400px;
   font-family: $lato;
-  background-color: $gray;
+  background-color: rgba($color: $gray, $alpha: .75);
   @include transition(background-color 0.24s ease-in-out);
 
   // a focused input (or hovered on)
   &:focus,
   &:active {
-    background-color: lighten($gray, 4%);
+    background-color: rgba($color: $gray, $alpha: 1);
     outline: none; 
   } // end hover or focus
 

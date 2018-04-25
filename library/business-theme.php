@@ -257,60 +257,14 @@ function excerpt_more($more) {
  *
  * @return array $social_links_icons
  */
-
 	// changing it up
 	class Social_Nav_Menu extends Walker_Nav_Menu {
 		function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-			$output .= sprintf("\n<li %s><a href='%s'> </a>\n", ( array_search('current-menu-item', $item->classes) ) ? '' : '', $item->url, $item->title );
+			if ( 'social' === $args->theme_location ) {
+				$social_media = preg_replace('#^www\.|\.com$#', '$1', parse_url($item->url)['host']);
+				$svg = get_svg_path('icon-'.$social_media);
+				$output .= sprintf("\n<li %s><a href='%s' target='_blank' title='%s'>".$svg."</a>\n", ( array_search('current-menu-item', $item->classes) ) ? '' : '', $item->url, $item->title );
+			};
 		}
 	}
-
-/**
- * Returns an array of supported social links (URL and icon name).
- *
- * @return array $social_links_icons
- */
-function business_social_links_icons() {
-	// Supported social links icons.
-	$social_links_icons = array(
-		'behance.net'     => 'behance',
-		'codepen.io'      => 'codepen',
-		'deviantart.com'  => 'deviantart',
-		'digg.com'        => 'digg',
-		'dribbble.com'    => 'dribbble',
-		'dropbox.com'     => 'dropbox',
-		'facebook.com'    => 'facebook',
-		'flickr.com'      => 'flickr',
-		'foursquare.com'  => 'foursquare',
-		'plus.google.com' => 'google-plus',
-		'github.com'      => 'github',
-		'instagram.com'   => 'instagram',
-		'linkedin.com'    => 'linkedin',
-		'mailto:'         => 'envelope-o',
-		'medium.com'      => 'medium',
-		'path.com'        => 'path',
-		'pinterest.com'   => 'pinterest-p',
-		'getpocket.com'   => 'get-pocket',
-		'polldaddy.com'   => 'polldaddy',
-		'reddit.com'      => 'reddit-alien',
-		'skype.com'       => 'skype',
-		'skype:'          => 'skype',
-		'slideshare.net'  => 'slideshare',
-		'snapchat.com'    => 'snapchat-ghost',
-		'soundcloud.com'  => 'soundcloud',
-		'spotify.com'     => 'spotify',
-		'stumbleupon.com' => 'stumbleupon',
-		'tumblr.com'      => 'tumblr',
-		'twitch.tv'       => 'twitch',
-		'twitter.com'     => 'twitter',
-		'vimeo.com'       => 'vimeo',
-		'vine.co'         => 'vine',
-		'vk.com'          => 'vk',
-		'wordpress.org'   => 'wordpress',
-		'wordpress.com'   => 'wordpress',
-		'yelp.com'        => 'yelp',
-		'youtube.com'     => 'youtube',
-	);
-	return apply_filters( 'business_social_links_icons', $social_links_icons );
-}
 ?>

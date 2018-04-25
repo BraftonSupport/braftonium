@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
         content = $('#content');
   
     $(window).scroll(function() {
-      if( $(this).scrollTop() > hdr ) {
+      if( $(this).scrollTop() > hdr-45 ) {
         mn.addClass(mns);
         content.css( "margin-top", hdr );
       } else {
