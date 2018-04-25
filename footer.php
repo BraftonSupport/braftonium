@@ -28,10 +28,10 @@
 					dynamic_sidebar( 'footer-right' );
 					echo '</div>';
 				endif; ?>
+				<div class="copyright"><p class="source-org wrap">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p></div>
 			</footer>
 
 		</div>
-		<p class="source-org copyright wrap">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 		<?php wp_footer(); ?>
 
 	</body>

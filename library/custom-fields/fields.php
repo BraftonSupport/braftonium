@@ -1,5 +1,5 @@
 <?php
-require_once ABSPATH . 'wp-content/plugins/advanced-custom-fields/acf.php';
+require_once ABSPATH . 'wp-content/plugins/advanced-custom-fields-pro/acf.php';
 require_once ABSPATH . 'wp-content/themes/business-theme-v2/library/theme-options/business-theme-options.acf.php';
 
 if(function_exists("register_field_group"))

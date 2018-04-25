@@ -259,37 +259,12 @@ function excerpt_more($more) {
  */
 	// changing it up
 	class Social_Nav_Menu extends Walker_Nav_Menu {
-
 		function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-
 			if ( 'social' === $args->theme_location ) {
-			// so if $item->url has a string in array
-			// return that array key in get_svg_path()
-			// $item->classes .= add the $item->title
-			// output blah blah blah 
-
-			$social_media= preg_replace('#^www\.(.+\.)#i', '$1', parse_url($item->url)['host']);
-
-			$social_links_icons = array(
-				'facebook.com'    => 'facebook',
-				'plus.google.com' => 'google-plus',
-				'instagram.com'   => 'instagram',
-				'linkedin.com'    => 'linkedin',
-				'pinterest.com'   => 'pinterest',
-				'tumblr.com'      => 'tumblr',
-				'twitter.com'     => 'twitter',
-				'wordpress.org'   => 'wordpress',
-				'wordpress.com'   => 'wordpress',
-				'youtube.com'     => 'youtube',
-			);
-			
-			// if (in_array($social_media, $social_links_icons)){
-				echo $social_media;
-			// }
-
-			$output .= sprintf("\n<li %s><a href='%s'>%s</a>\n", ( array_search('current-menu-item', $item->classes) ) ? '' : '', $item->url, $item->title );
-			}
+				$social_media = preg_replace('#^www\.|\.com$#', '$1', parse_url($item->url)['host']);
+				$svg = get_svg_path('icon-'.$social_media);
+				$output .= sprintf("\n<li %s><a href='%s' target='_blank' title='%s'>".$svg."</a>\n", ( array_search('current-menu-item', $item->classes) ) ? '' : '', $item->url, $item->title );
+			};
 		}
 	}
-
 ?>

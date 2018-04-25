@@ -5,6 +5,9 @@ if(!session_id()) session_start();
  *
  * For more info: http://codex.wordpress.org/Page_Templates
 */
+$background_image = get_field('background_image');
+$title = get_field('title');
+$tagline = get_field('tagline');
 $style = get_field('style');
 $bg = $style['background_color'];
 $color = $style['color'];
@@ -17,8 +20,16 @@ $other = $style['other'];
 <?php get_header(); ?>
 
 	<div id="content">
-		<?php // check if the flexible content field has rows of data
-			$sectionrow=0;
+		<?php $sectionrow=0;
+		if ($background_image||$title||$tagline) : ?>
+			<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
+				<div class="black"><div class="wrap">
+					<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
+					<?php if ($tagline): echo $tagline; endif; ?>
+				</div></div>
+			</section>
+		<?php $sectionrow++;
+		endif; // check if the flexible content field has rows of data
 			if( have_rows('content') ):
 				// loop through the rows of data
 				while ( have_rows('content') ) : the_row();

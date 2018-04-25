@@ -3,6 +3,7 @@
 // LOAD BUSINESS THEME CORE (if you remove this, the theme will break)
 require_once( 'library/business-theme.php' );
 
+include_once get_template_directory().'/library/custom-fields/fields.php';
 
 /*
 Making the Business Theme Option Page
@@ -18,7 +19,6 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
-include_once get_template_directory().'/library/custom-fields/fields.php';
 
 
 /**
