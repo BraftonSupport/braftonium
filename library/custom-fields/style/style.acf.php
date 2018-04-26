@@ -177,16 +177,16 @@ acf_add_local_field_group(array(
 	),
 	'location' => array(
 		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'page',
-			),
-			array(
-				'param' => 'post_template',
-				'operator' => '!=',
-				'value' => 'full-width.php',
-			),
+			// array(
+			// 	'param' => 'post_type',
+			// 	'operator' => '==',
+			// 	'value' => 'page',
+			// ),
+			// array(
+			// 	'param' => 'post_template',
+			// 	'operator' => '!=',
+			// 	'value' => 'full-width.php',
+			// ),
 		),
 	),
 	'menu_order' => 0,

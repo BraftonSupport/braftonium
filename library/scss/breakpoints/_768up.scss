@@ -14,15 +14,6 @@ come into play. Have fun!
 
 
 /*********************
-GENERAL STYLES
-*********************/
-
-/*********************
-LAYOUT & GRID STYLES
-*********************/
-
-
-/*********************
 HEADER STYLES
 *********************/
 
@@ -162,7 +153,14 @@ POSTS & CONTENT STYLES
 .banner .wrap {
 	padding: 5em 0;
 }
-
+.page-template-full-width .list .container {
+	-webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	.list-item {
+		max-width: inherit;
+	}
+}
 
 /*********************
 SIDEBARS & ASIDES

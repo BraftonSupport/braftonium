@@ -159,7 +159,7 @@ HEADER STYLES
 			display: none;
 		}
 		.nextwidget {
-			margin-top:10px;
+			margin: 5px 0 10px auto;
 			float:right;
 		}
 		nav {
@@ -168,6 +168,9 @@ HEADER STYLES
 	}
 	p {
 		margin: 7px 0;
+	}
+	input {
+		background-color: rgba($color: $gray, $alpha: .65);
 	}
 }
 
@@ -221,7 +224,6 @@ HEADER STYLES
 			max-width: 250px;
 			margin: 0;
 			border-radius: 4px 0 0 4px;
-			background-color: rgba($color: $gray, $alpha: .65);
 			height: 33px;
 			font-size: .9em;
 		}
@@ -315,7 +317,30 @@ svg {
 		top: 2px;
 	}
 }
+.blog .hentry {
+	padding: 0;
+}
 
+.page-template-full-width {
+	.hentry {
+		padding: 0;
+	}
+	section {
+		background-position: center;
+		background-size: cover;
+		.wrap {
+			padding: 2em 0 2.5em;
+		}
+	}
+	.list .container {
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		.list-item {
+			max-width: 200px;
+		}
+	}
+}
 		.hentry {
 			padding: 2em 0 2.5em;
 			img {
@@ -352,7 +377,7 @@ svg {
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 0 0;
+			padding: 0;
 
 			p {
 				margin: 0 0 1.5em;
@@ -477,7 +502,9 @@ svg {
 	.tags {
 		margin: 0;
 	}
-
+	a.excerpt-read-more {
+		display: table;
+	}
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -557,7 +584,6 @@ PAGE NAVI STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
 .no-widgets {
 	background-color: $white;
 	padding: 1.5em;

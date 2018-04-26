@@ -26,7 +26,7 @@ if ( $style['other'] && in_array('full', $style['other']) ) {
 	$classes[] = "full";
 } ?>
 
-<section <?php post_class( $classes ); ?> style="<?php
+<section class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
 if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
 if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >

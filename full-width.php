@@ -19,7 +19,7 @@ $other = $style['other'];
 
 <?php get_header(); ?>
 
-	<div id="content">
+	<div id="content" class="hentry">
 		<?php $sectionrow=0;
 		if ($background_image||$title||$tagline) : ?>
 			<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>

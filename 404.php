@@ -26,12 +26,6 @@
 
 							</section>
 
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'business-theme' ); ?></p>
-
-							</footer>
-
 						</article>
 
 					</main>
