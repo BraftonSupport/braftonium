@@ -267,4 +267,15 @@ function excerpt_more($more) {
 			};
 		}
 	}
+/**
+ * Now the Main Nav adding the svg
+ * */	
+function be_arrows_in_menus( $item_output, $item, $depth, $args ) {
+	if( in_array( 'menu-item-has-children', $item->classes ) ) {
+		$arrow = '<button>'.get_svg_path('icon-expand').'</button>';
+		$item_output = str_replace( '</a>', '</a>' . $arrow, $item_output );
+	}
+	return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'be_arrows_in_menus', 10, 4 );
 ?>

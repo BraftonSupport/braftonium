@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Business Template
+Author: Yvonne!
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -81,6 +81,7 @@ LINK STYLES
 
 a, a:visited {
 	color: $link-color;
+	@include transition(all 0.2s ease-in-out);
 
 	/* on hover */
 	&:hover, &:focus {
@@ -91,8 +92,52 @@ a, a:visited {
 	}
 	/* mobile tap color */
 	&:link {
-		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+		-webkit-tap-highlight-color : rgba($color: $black, $alpha: .3);
 	}
+}
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+ul {
+	list-style-type: disc;
+	li {
+		margin-left: 1em;
+	}
+	ul {
+		list-style-type: circle;
+		li {
+			margin-left: 0;
+		}
+		ul {
+			list-style-type: disc;
+		}
+	}
+}
+section > ul {
+	margin: 0 0 1.5em 1.5em;
+}
+.widget {
+	.menu button {
+		display: none;
+	}
+	div>ul {
+		margin: 0 0 1em 1.5em;
+	}
+	ul {
+		margin: 0;
+		li {
+			ul {
+				padding-left: 1em;
+			}
+		}
+	}
+}
+
+.rotate { 
+	@include rotate(90);
+	@include transition(all 0.2s ease-in-out);
 }
 
 /******************************************************************
@@ -159,7 +204,7 @@ HEADER STYLES
 			display: none;
 		}
 		.nextwidget {
-			margin-top:10px;
+			margin: 5px 0 10px auto;
 			float:right;
 		}
 		nav {
@@ -168,6 +213,9 @@ HEADER STYLES
 	}
 	p {
 		margin: 7px 0;
+	}
+	input {
+		background-color: rgba($color: $gray, $alpha: .65);
 	}
 }
 
@@ -197,7 +245,7 @@ HEADER STYLES
 	}
 	.nextwidget {
 		.widget {
-			margin-top:0;
+			margin:0;
 			.widget-title {
 				margin: 5px 0;
 			}
@@ -221,7 +269,6 @@ HEADER STYLES
 			max-width: 250px;
 			margin: 0;
 			border-radius: 4px 0 0 4px;
-			background-color: rgba($color: $gray, $alpha: .65);
 			height: 33px;
 			font-size: .9em;
 		}
@@ -240,23 +287,49 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 
-.nav {
+#menu-nav.nav {
 	border-bottom: 0;
 	margin: 0;
-
+	button {
+		background: transparent;
+		border: none;
+		border-left: 1px solid rgba($color: $white, $alpha: .1);
+		color: rgba($color: $white, $alpha: .5);
+		float: right;
+		padding: 0;
+		height: 1.5em;
+		width: 1.5em;
+		margin-top: -1.8em;
+		&:hover {
+			color: rgba($color: $white, $alpha: .75);
+		}
+		&.rotate {
+			border-left: none;
+			border-bottom: 1px solid rgba($color: $white, $alpha: .1);
+		}
+	}
 	li {
-
+		margin: 0;
+		border-bottom: 1px solid rgba($color: $white, $alpha: .1);
 		a {
 			display: block;
+			padding: 5px 0;
 			color: $white;
 			text-decoration: none;
-			padding: 0.25em 0.75em;
+			&:hover {
+				color: $bones-pink;
+			}
 		}
 		ul.sub-menu,
 		ul.children {
+			display: none;
+			margin: 0;
+			list-style-type: none;
 			li {
+				border-top: 1px solid rgba($color: $white, $alpha: .1);
+				border-bottom: none;
 				a {
-					padding-left: 30px;
+					padding-left: 1.5em;
 				}
 			}
 		}
@@ -278,9 +351,9 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 .black {
-	background: rgba(0,0,0,.5);
+	background: rgba($color: $black, $alpha: .4);
 }
-.banner {
+.banner, .page-template-full-width .banner {
 	color: #fff;
 	background-position: center;
 	background-size: cover;
@@ -315,7 +388,30 @@ svg {
 		top: 2px;
 	}
 }
+.blog .hentry {
+	padding: 2em 0 0;
+}
 
+.page-template-full-width {
+	.hentry {
+		padding: 0;
+	}
+	section {
+		background-position: center;
+		background-size: cover;
+		.wrap {
+			padding: 2em 0 2.5em;
+		}
+	}
+	.list .container {
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		.list-item {
+			max-width: 200px;
+		}
+	}
+}
 		.hentry {
 			padding: 2em 0 2.5em;
 			img {
@@ -324,7 +420,7 @@ svg {
 			}
 
 			header {
-				padding: 1.5em 0;
+				padding: 0 0 1.5em 0;
 			}
 
 			footer {
@@ -352,7 +448,7 @@ svg {
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 0 0;
+			padding: 0;
 
 			p {
 				margin: 0 0 1.5em;
@@ -477,7 +573,9 @@ svg {
 	.tags {
 		margin: 0;
 	}
-
+	a.excerpt-read-more {
+		display: table;
+	}
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -557,7 +655,10 @@ PAGE NAVI STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.widget {
+	margin: 0 0 2em 0;
+}
+
 .no-widgets {
 	background-color: $white;
 	padding: 1.5em;
@@ -584,7 +685,7 @@ FOOTER STYLES
 	.copyright {
 		font-size: .8em;
 		padding: 7px 0;
-		background: rgba(0,0,0,.2);
+		background: rgba($color: $black, $alpha: .2);
 	}
 	section {
 		h3 {

@@ -25,10 +25,11 @@ if ( $style['other'] && in_array('full', $style['other']) ) {
 	$classes[] = "full";
 } ?>
 
-<section <?php post_class( $classes ); ?> style="<?php
+<section class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
 if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
 if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
+<?php if ( $style['background_image'] ) { echo '<div class="black">'; } ?>
 	<?php if ( $style['video_url'] ) {
 		if (strpos($video, 'youtube.com') == true || strpos($video, '.webm') == false && strpos($video, '.mp4') == false) {
 			$videoid = preg_replace('/https:\/\/www.youtube.com\/watch\?v=/', '', $video);
@@ -85,6 +86,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		endif; ?>
 
 	</div>
+<?php if ( $style['background_image'] ) { echo '</div>'; } ?>
 </section><!-- section -->
 
 <?php if ( $style['other'] && in_array('shadow', $style['other']) ) { echo '<div class="shadow"></div>'; } ?>

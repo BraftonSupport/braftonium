@@ -40,6 +40,22 @@ USAGE: @include transition(all 0.2s ease-in-out);
   }
 }
 
+
+/*********************
+rotating
+*********************/
+@mixin transform($transform...){
+	$prefixes:      ("-webkit-", "-moz-", "-o-", "-ms-");
+	@each $prefix in $prefixes {
+		#{$prefix}transform: $transform;
+	}
+}
+
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+
 /*********************
 CSS3 GRADIENTS
 Be careful with these since they can
@@ -69,5 +85,3 @@ probably best not to use it. I mean, were you going to anyway? */
 	-ms-box-sizing:     $type;
 	box-sizing:         $type;
 }
-
-
