@@ -1,17 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Tablet & Small Desktop Stylesheet
-
-Here's where you can start getting into the good stuff.
-This size will work on iPads, other tablets, and desktops.
-So you can start working with more styles, background images,
-and other resources. You'll also notice the grid starts to
-come into play. Have fun!
-
 ******************************************************************/
-
 
 /*********************
 HEADER STYLES
@@ -48,68 +37,56 @@ nav {
 NAVIGATION STYLES
 *********************/
 
-.nav {
+#menu-nav.nav {
 	border: 0;
 	ul {
-		background:$black;
 		margin-top:0;
+		background: $black;
 	}
 	li {
 		float: left;
 		position: relative;
-
-		a {
-			border-bottom: 0;
-
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
-			&:hover, &:focus {
-				color: $white;
-				text-decoration: underline;
-			}
+		border: none;
+		button {
+			border: none;
+			float: none;
+			height: inherit;
+			position: relative;
+			top: 2px;
 		}
-
-		&:first-child {}
-		&:last-child {}
-
+		&.menu-item-has-children a {
+			padding-right: 0;
+		}
+		a {	
+			display: inline-block;
+			border-bottom: 0;
+			padding: 5px 15px;
+			background: $black;
+			border-bottom: 1px solid rgba($color: $black, $alpha: .1);
+		}
 		/*
 		plan your menus and drop-downs wisely.
 		*/
 		ul.sub-menu,
 		ul.children {
 			margin-top: 0;
-			border: 1px solid #ccc;
+			border: 1px solid rgba($color: $white, $alpha: .1);
 			border-top: 0;
 			position: absolute;
 			visibility: hidden;
 			z-index: 8999;
-
+			display: inherit;
+			button {
+				float: right;
+				@include rotate(-90);
+			}
 			li {
-
 				a {
 					padding-left: 10px;
 					border-right: 0;
 					display: block;
 					width: 180px;
-					border-bottom: 1px solid #ccc;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
 				}
-
-				&:first-child {}
-
-				&:last-child {
-
-					a {
-						border-bottom: 0;
-					}
-				}
-
 				/*
 				if you need to go deeper, go nuts
 				just remember deeper menus suck
@@ -150,8 +127,8 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-.banner .wrap {
-	padding: 5em 0;
+.banner .wrap, .page-template-full-width .banner .wrap {
+	padding: 4em 0;
 }
 .page-template-full-width .list .container {
 	-webkit-flex-wrap: nowrap;
@@ -161,13 +138,16 @@ POSTS & CONTENT STYLES
 		max-width: inherit;
 	}
 }
-
+.blog .hentry {
+	padding: 3em 0 0;
+}
 /*********************
 SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 1.2em;
+	margin: 3em 0 0 0;
+	padding: 0 0 0 15px;
 }
 
 	.widgettitle {
@@ -176,23 +156,7 @@ SIDEBARS & ASIDES
 	}
 
 	.widget {
-		margin: 2.2em 0;
-
-		ul {
-			li {
-				margin-bottom: 0.75em;
-
-				&:first-child {}
-				&:last-child {}
-				a {}
-				/* deep nesting */
-
-				ul {
-					margin-top: 0.75em;
-					padding-left: 1em;
-				}
-			}
-		}
+		margin: 0 0 3em 0;
 	}
 
 /*********************

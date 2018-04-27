@@ -144,6 +144,8 @@ acf_add_local_field_group(array(
 					'choices' => array(
 						'shadow' => 'Add Shadow',
 						'full' => 'Full Screen',
+						'compact' => 'Compact',
+						'thin' => 'Thin',
 					),
 					'allow_custom' => 0,
 					'save_custom' => 0,
@@ -176,18 +178,8 @@ acf_add_local_field_group(array(
 		),
 	),
 	'location' => array(
-		array(
-			// array(
-			// 	'param' => 'post_type',
-			// 	'operator' => '==',
-			// 	'value' => 'page',
-			// ),
-			// array(
-			// 	'param' => 'post_template',
-			// 	'operator' => '!=',
-			// 	'value' => 'full-width.php',
-			// ),
-		),
+		// array(
+		// ),
 	),
 	'menu_order' => 0,
 	'position' => 'side',
