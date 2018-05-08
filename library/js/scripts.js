@@ -1,5 +1,5 @@
 /*
- * Business Theme Scripts File
+ * Braftonium Theme Scripts File
  * Author: Eddie Machado
  *
  * This file should contain any js scripts you want to add to the site.

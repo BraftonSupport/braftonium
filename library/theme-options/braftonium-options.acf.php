@@ -1,7 +1,7 @@
 <?php
 acf_add_local_field_group(array(
 	'key' => 'group_5a4e8d955ca60',
-	'title' => 'Business Theme Options',
+	'title' => 'Braftonium Theme Options',
 	'fields' => array(
 		array(
 			'key' => 'field_5a4e8db865361',
@@ -272,29 +272,29 @@ acf_add_local_field_group(array(
 
 /* Adding the logo to the settings page*/
 
-function businesstheme_site_options( $wp_customize ) {
-	$wp_customize->add_setting( 'businesstheme_logo' );
+function braftonium_site_options( $wp_customize ) {
+	$wp_customize->add_setting( 'braftonium_logo' );
 
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'businesstheme_logo', array(
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'braftonium_logo', array(
 	'label' => __( 'Logo' ),
 	'section'  => 'title_tagline',
-	'settings' => 'businesstheme_logo',
+	'settings' => 'braftonium_logo',
 	) ) );
 
-	$wp_customize->add_setting( 'businesstheme_footerlogo' );
+	$wp_customize->add_setting( 'braftonium_footerlogo' );
 	
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'businesstheme_footerlogo', array(
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'braftonium_footerlogo', array(
 	'label' => __( 'Logo in the Footer' ),
 	'section'  => 'title_tagline',
-	'settings' => 'businesstheme_footerlogo',
+	'settings' => 'braftonium_footerlogo',
 	) ) );
 }
 
-add_action('customize_register', 'businesstheme_site_options');
+add_action('customize_register', 'braftonium_site_options');
 
 /* Logo size */
 
-function businesstheme_get_image_id($image_url) {
+function braftonium_get_image_id($image_url) {
 	global $wpdb;
 	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
         return $attachment[0]; 

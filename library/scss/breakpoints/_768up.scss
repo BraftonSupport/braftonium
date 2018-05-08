@@ -130,12 +130,20 @@ POSTS & CONTENT STYLES
 .banner .wrap, .page-template-full-width .banner .wrap {
 	padding: 4em 0;
 }
-.page-template-full-width .list .container {
-	-webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-	flex-wrap: nowrap;
-	.list-item {
-		max-width: inherit;
+.page-template-full-width {
+	section .wrap {
+		padding: 3em 0 3.5em;
+	}
+	.compact .wrap {
+		width: 75%;
+	}
+	.list .container {
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		.list-item {
+			max-width: inherit;
+		}
 	}
 }
 .blog .hentry {

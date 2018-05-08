@@ -5,8 +5,8 @@
  * Displays all of the head element and everything up until the "site-content" div.
  *
  * @package WordPress
- * @subpackage Business_Theme
- * @since Business Theme 1.0
+ * @subpackage Braftonium
+ * @since Braftonium Theme 1.0
  */
 ?>
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -77,7 +77,7 @@
 		if(is_single()) {
 			$content = wp_strip_all_tags(apply_filters('the_content', $post->post_content)); 
 			$excerpt = wp_strip_all_tags(apply_filters('the_excerpt', $post->post_excerpt)); 
-			$image_url = esc_url( get_theme_mod( 'businesstheme_logo' ) );
+			$image_url = esc_url( get_theme_mod( 'braftonium_logo' ) );
 			$author = $post->post_author; 
 			echo '<script type="application/ld+json">
 				{ "@context": "http://schema.org",
@@ -113,7 +113,7 @@
 				<div id="inner-header" class="wrap cf container">
 
 					<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow">
-					<?php $logo1 = get_theme_mod( 'businesstheme_logo' );
+					<?php $logo1 = get_theme_mod( 'braftonium_logo' );
 						if ($logo1) { ?>
 						<img src='<?php echo $logo1; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="site-title">
 					<?php } else {
@@ -121,7 +121,7 @@
 					} ?></a></div>
 
 					<div class="nextwidget">
-						<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'businesstheme' );
+						<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'braftonium' );
 						echo get_svg_path('icon-bars'); ?></button>	
 						<?php if ( is_active_sidebar( 'header-sidebar' ) ) {
 							dynamic_sidebar( 'header-sidebar' );
@@ -132,7 +132,7 @@
 						<?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
 							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-							'menu' => __( 'The Main Menu', 'business-theme' ),  // nav name
+							'menu' => __( 'The Main Menu', 'braftonium' ),  // nav name
 							'menu_class' => 'nav top-nav cf',               // adding custom nav class
 							'theme_location' => 'main-nav',                 // where it's located in the theme
 							'before' => '',                                 // before the menu

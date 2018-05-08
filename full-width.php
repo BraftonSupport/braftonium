@@ -71,7 +71,7 @@ $other = $style['other'];
 								<?php endif; ?>
 
 								<p class="byline vcard">
-									<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'business-theme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
+									<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'braftonium' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
 								</p>
 
 							</header>
@@ -88,13 +88,13 @@ $other = $style['other'];
 
 						<article id="post-not-found" class="hentry cf">
 							<header class="article-header">
-								<h1><?php _e( 'Oops, Post Not Found!', 'business-theme' ); ?></h1>
+								<h1><?php _e( 'Oops, Post Not Found!', 'braftonium' ); ?></h1>
 							</header>
 							<section class="entry-content">
-								<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'business-theme' ); ?></p>
+								<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'braftonium' ); ?></p>
 							</section>
 							<footer class="article-footer">
-								<p><?php _e( 'This is the error message in the full-width.php template.', 'business-theme' ); ?></p>
+								<p><?php _e( 'This is the error message in the full-width.php template.', 'braftonium' ); ?></p>
 							</footer>
 						</article>
 
