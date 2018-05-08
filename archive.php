@@ -19,11 +19,11 @@
 
 									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 									<p class="byline entry-meta vcard">
-										<?php printf( __( 'Posted', 'business-theme' ).' %1$s %2$s',
+										<?php printf( __( 'Posted', 'braftonium' ).' %1$s %2$s',
                   							     /* the time the post was published */
                   							     '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
                        								/* the author of the post */
-                       								'<span class="by">'.__('by', 'business-theme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+                       								'<span class="by">'.__('by', 'braftonium').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
                     							); ?>
 									</p>
 
@@ -41,19 +41,19 @@
 
 							<?php endwhile; ?>
 
-									<?php business_page_navi(); ?>
+									<?php braftonium_page_navi(); ?>
 
 							<?php else : ?>
 
 									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'business-theme' ); ?></h1>
+											<h1><?php _e( 'Oops, Post Not Found!', 'braftonium' ); ?></h1>
 										</header>
 										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'business-theme' ); ?></p>
+											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'braftonium' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the archive.php template.', 'business-theme' ); ?></p>
+												<p><?php _e( 'This is the error message in the archive.php template.', 'braftonium' ); ?></p>
 										</footer>
 									</article>
 

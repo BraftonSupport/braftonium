@@ -10,13 +10,13 @@
 
 							<header class="article-header">
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'business-theme' ); ?></h1>
+								<h1><?php _e( 'Epic 404 - Article Not Found', 'braftonium' ); ?></h1>
 
 							</header>
 
 							<section class="entry-content">
 
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'business-theme' ); ?></p>
+								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'braftonium' ); ?></p>
 
 							</section>
 

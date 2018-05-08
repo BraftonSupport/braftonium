@@ -1,5 +1,5 @@
 /******************************************************************
-Site Name: Business Template
+Site Name: Braftonium Template
 Author: Yvonne!
 
 Stylesheet: Base Mobile Stylesheet
@@ -358,7 +358,7 @@ POSTS & CONTENT STYLES
 	background-position: center;
 	background-size: cover;
 	.wrap {
-		padding: 2em 0;
+		padding: 2.5em 0;
 	}
 	font-size: 1.15em;
 	text-align: center;
@@ -391,7 +391,16 @@ svg {
 .blog .hentry {
 	padding: 2em 0 0;
 }
-
+.shadow {
+	height: 0;
+	position: relative;
+	&:before {
+		display: block;
+		background: url(../images/shadow.png) center 75% no-repeat transparent;
+		height: 25px;
+		content: " ";
+	}
+}
 .page-template-full-width {
 	.hentry {
 		padding: 0;
@@ -401,6 +410,16 @@ svg {
 		background-size: cover;
 		.wrap {
 			padding: 2em 0 2.5em;
+		}
+		&.full {
+			display: flex;
+			height: 90%;
+			.wrap {
+				margin: auto;
+			}
+		}
+		&.thin .wrap {
+			padding: 1em 0 1.5em;
 		}
 	}
 	.list .container {
@@ -633,7 +652,7 @@ PAGE NAVI STYLES
  		}
  	}
 
-  } /* end .business-theme_page_navi */
+  } /* end .braftonium_page_navi */
 
 	/* fallback previous & next links */
 	.wp-prev-next {

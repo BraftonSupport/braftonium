@@ -3,8 +3,8 @@
  * The template used for displaying row section of page.
  *
  * @package WordPress
- * @subpackage Business_Theme
- * @since businesstheme 2.0
+ * @subpackage Braftonium
+ * @since braftonium 1.0
  */
 
 if(!session_id()) session_start();
@@ -19,8 +19,16 @@ if ($style['class']){
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
 }
-if ( $style['other'] && in_array('full', $style['other']) ) {
-	$classes[] = "full";
+if ( $style['other'] ) {
+	if (in_array('full', $style['other'])){
+		$classes[] = "full";
+	}
+	if (in_array('compact', $style['other'])){
+		$classes[] = "compact";
+	}
+	if (in_array('thin', $style['other'])){
+		$classes[] = "thin";
+	}
 } ?>
 
 <section class="<?php echo implode(' ',$classes); ?>" style="<?php

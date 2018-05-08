@@ -192,8 +192,8 @@ acf_add_local_field_group(array(
 								'id' => '',
 							),
 							'choices' => array(
-								'Custom' => 'Custom',
-								'Recent' => 'Recent',
+								'custom' => 'Custom',
+								'recent' => 'Recent',
 							),
 							'allow_null' => 0,
 							'other_choice' => 0,
@@ -214,7 +214,7 @@ acf_add_local_field_group(array(
 									array(
 										'field' => 'field_5a4d574f8c579',
 										'operator' => '==',
-										'value' => 'Custom',
+										'value' => 'custom',
 									),
 								),
 							),
@@ -363,15 +363,15 @@ acf_add_local_field_group(array(
 							'key' => 'field_5a4d5799d4ddb',
 							'label' => 'Recent',
 							'name' => 'recent',
-							'type' => 'select',
-							'instructions' => 'This is supposed to be a select field that chooses Post Types. It\'s in the inc/folder, get that to work.',
+							'type' => 'radio',
+							'instructions' => 'If not the most recent posts, put in a custom post type, eg: "testimonial", "event", and "team-member".',
 							'required' => 0,
 							'conditional_logic' => array(
 								array(
 									array(
 										'field' => 'field_5a4d574f8c579',
 										'operator' => '==',
-										'value' => 'Recent',
+										'value' => 'recent',
 									),
 								),
 							),
@@ -383,14 +383,12 @@ acf_add_local_field_group(array(
 							'choices' => array(
 								'post' => 'post',
 							),
-							'default_value' => array(
-							),
 							'allow_null' => 0,
-							'multiple' => 0,
-							'ui' => 0,
-							'ajax' => 0,
+							'other_choice' => 1,
+							'save_other_choice' => 0,
+							'default_value' => '',
+							'layout' => 'horizontal',
 							'return_format' => 'value',
-							'placeholder' => '',
 						),
 						array(
 							'key' => 'field_5a4d583bee06f',
@@ -404,7 +402,7 @@ acf_add_local_field_group(array(
 									array(
 										'field' => 'field_5a4d574f8c579',
 										'operator' => '==',
-										'value' => 'Recent',
+										'value' => 'recent',
 									),
 								),
 							),
@@ -477,6 +475,25 @@ acf_add_local_field_group(array(
 					'label' => 'Validation (Slider)',
 					'display' => 'block',
 					'sub_fields' => array(
+						array(
+							'key' => 'field_5a4d552a2f98f',
+							'label' => 'Section Title',
+							'name' => 'title',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
 						array(
 							'key' => 'field_5a4d59aa13b52',
 							'label' => 'Clone of Services List',
