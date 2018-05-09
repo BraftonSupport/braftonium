@@ -69,8 +69,6 @@
 				"name": "'.get_bloginfo( "name" ).'",
 				"legalName": "'.get_bloginfo( "name" ).'",
 				"url": "'.network_site_url( '/' ).'",
-				"email": "",
-				"telephone": "",
 				"description": "'.$description.'"
 			}
 		</script>';

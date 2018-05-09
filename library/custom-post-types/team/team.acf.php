@@ -1,11 +1,11 @@
 <?php
 acf_add_local_field_group(array(
 	'key' => 'group_5a905e927edba',
-	'title' => 'Team Member',
+	'title' => __( 'Team Member', 'braftonium' ),
 	'fields' => array(
 		array(
 			'key' => 'field_5a905f64f0245',
-			'label' => 'Job Title',
+			'label' => __( 'Job Title', 'braftonium' ),
 			'name' => 'job_title',
 			'type' => 'text',
 			'instructions' => '',

@@ -71,7 +71,12 @@ $other = $style['other'];
 								<?php endif; ?>
 
 								<p class="byline vcard">
-									<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'braftonium' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
+								<?php printf( __( 'Posted', 'braftonium' ).' %1$s %2$s',
+									/* the time the post was published */
+									'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+									/* the author of the post */
+									'<span class="by">'.__( 'by', 'braftonium' ).'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+								); ?>
 								</p>
 
 							</header>
@@ -91,7 +96,7 @@ $other = $style['other'];
 								<h1><?php _e( 'Oops, Post Not Found!', 'braftonium' ); ?></h1>
 							</header>
 							<section class="entry-content">
-								<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'braftonium' ); ?></p>
+								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'braftonium' ); ?></p>
 							</section>
 							<footer class="article-footer">
 								<p><?php _e( 'This is the error message in the full-width.php template.', 'braftonium' ); ?></p>

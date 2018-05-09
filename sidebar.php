@@ -8,7 +8,7 @@
 					
 						<?php if ( is_single() && get_field('related_posts', 'option')=='side' ) : ?>
 							<div class="latest">
-								<h3>Related Posts</h3>
+								<h3><?php _e( 'Related Posts', 'braftonium' ); ?></h3>
 								<?php $categories = get_the_category();
 								if ($categories) {
 									foreach ($categories as $category) {
