@@ -5,7 +5,7 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5a4d3dc7e18d5',
-			'label' => 'Style',
+			'label' => __( 'Style', 'braftonium' ),
 			'name' => 'style',
 			'type' => 'group',
 			'instructions' => '',
@@ -20,7 +20,7 @@ acf_add_local_field_group(array(
 			'sub_fields' => array(
 				array(
 					'key' => 'field_5a4d3996952f0',
-					'label' => 'Background Color',
+					'label' => __( 'Background Color', 'braftonium' ),
 					'name' => 'background_color',
 					'type' => 'color_picker',
 					'instructions' => '',
@@ -35,7 +35,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5a4d39b1952f1',
-					'label' => 'Color',
+					'label' => __( 'Color', 'braftonium' ),
 					'name' => 'color',
 					'type' => 'color_picker',
 					'instructions' => '',
@@ -50,7 +50,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5a4d3087df49d',
-					'label' => 'Background',
+					'label' => __( 'Background', 'braftonium' ),
 					'name' => 'background',
 					'type' => 'radio',
 					'instructions' => '',
@@ -62,8 +62,8 @@ acf_add_local_field_group(array(
 						'id' => '',
 					),
 					'choices' => array(
-						'Static' => 'Static',
-						'Video' => 'Video',
+						'Static' => __( 'Static', 'braftonium' ),
+						'Video' => __( 'Video', 'braftonium' ),
 					),
 					'allow_null' => 0,
 					'other_choice' => 0,
@@ -74,7 +74,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5a4d2f89df498',
-					'label' => 'Background Image',
+					'label' => __( 'Background Image', 'braftonium' ),
 					'name' => 'background_image',
 					'type' => 'image',
 					'instructions' => '',
@@ -106,7 +106,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5a4d2fcddf499',
-					'label' => 'Video Url',
+					'label' => __( 'Video Url', 'braftonium' ),
 					'name' => 'video_url',
 					'type' => 'url',
 					'instructions' => '',
@@ -130,7 +130,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5a4d42b4ce417',
-					'label' => 'Other',
+					'label' => __( 'Other', 'braftonium' ),
 					'name' => 'other',
 					'type' => 'checkbox',
 					'instructions' => '',
@@ -142,10 +142,10 @@ acf_add_local_field_group(array(
 						'id' => '',
 					),
 					'choices' => array(
-						'shadow' => 'Add Shadow',
-						'full' => 'Full Screen',
-						'compact' => 'Compact',
-						'thin' => 'Thin',
+						'shadow' => __( 'Add Shadow', 'braftonium' ),
+						'full' => __( 'Full Screen', 'braftonium' ),
+						'compact' => __( 'Compact', 'braftonium' ),
+						'thin' => __( 'Thin', 'braftonium' ),
 					),
 					'allow_custom' => 0,
 					'save_custom' => 0,
@@ -157,7 +157,7 @@ acf_add_local_field_group(array(
 				),
 				array(
 					'key' => 'field_5a4d4292ce416',
-					'label' => 'Add Class',
+					'label' => __( 'Add Class', 'braftonium' ),
 					'name' => 'add_class',
 					'type' => 'text',
 					'instructions' => '',

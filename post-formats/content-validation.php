@@ -114,7 +114,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 						}
 						echo '</p>';
 					if ( $showbutton ){ ?>
-						<a href="<?php echo get_permalink(); ?>" class="button">Read More</a>
+						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e('Read More', 'braftonium') ?></a>
 					<?php } ?>
 				</div>
 			<?php endwhile;

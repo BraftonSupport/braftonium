@@ -41,14 +41,14 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 	<div class="wrap container">
 		<div>
 		<?php if( have_rows('address') ):
-		echo '<h3>'.get_svg_path('icon-map-marker').' Address:</h3>';
+		echo '<h3>'.get_svg_path('icon-map-marker'). __( "Address", "braftonium" ) .':</h3>';
 			while ( have_rows('address') ) : the_row();
 				echo get_sub_field('address_line');
 				echo '<br/>';
 			endwhile;
 		endif;
 		if( have_rows('phone') ):
-			echo '<h3>'.get_svg_path('icon-phone').' Phone:</h3>';
+			echo '<h3>'.get_svg_path('icon-phone'). __( "Phone", "braftonium" ) .':</h3>';
 			while ( have_rows('phone') ) : the_row();
 				echo get_sub_field('phone_label').': ';
 				echo get_sub_field('phone_number');
@@ -56,7 +56,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			endwhile;
 		endif;
 		if( have_rows('email_input') ):
-			echo '<h3>'.get_svg_path('icon-envelope').' Email:</h3>';
+			echo '<h3>'.get_svg_path('icon-envelope'). __( "Email", "braftonium" ) .':</h3>';
 			while ( have_rows('email_input') ) : the_row();
 				echo get_sub_field('email_label').': ';
 				echo get_sub_field('email_address');
@@ -64,12 +64,12 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			endwhile;
 		endif;
 		echo '</div>';
-		if ($google_api): echo '<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGilMdFrZ4H5n6C27oabY7X-r7N-63AAM"></script>'; endif;
+		if ($google_api): echo '<script src="https://maps.googleapis.com/maps/api/js?key='.$google_api.'"></script>'; endif;
 		
 		if( !empty($map) ): ?>
-<div class="acf-map">
-	<div class="marker" data-lat="<?php echo $map['lat']; ?>" data-lng="<?php echo $map['lng']; ?>"></div>
-</div>
+			<div class="acf-map">
+				<div class="marker" data-lat="<?php echo $map['lat']; ?>" data-lng="<?php echo $map['lng']; ?>"></div>
+			</div>
 		<?php endif; ?>
 
 	</div>

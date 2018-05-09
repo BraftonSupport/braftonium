@@ -50,7 +50,7 @@
 											<h1><?php _e( 'Oops, Post Not Found!', 'braftonium' ); ?></h1>
 										</header>
 										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'braftonium' ); ?></p>
+											<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'braftonium' ); ?></p>
 										</section>
 										<footer class="article-footer">
 												<p><?php _e( 'This is the error message in the archive.php template.', 'braftonium' ); ?></p>

@@ -10,8 +10,8 @@ Making the Braftonium Theme Option Page
 */
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title'	=> 'Theme Settings',
+		'page_title' 	=> __( 'Theme General Settings', 'braftonium' ),
+		'menu_title'	=> __( 'Theme Settings', 'braftonium' ),
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',
 		'parent_slug'	=> 'themes.php',
@@ -34,7 +34,7 @@ function braftonium_widgets_init() {
 				register_sidebar( array(
 					'name'		  => __( 'Footer Left Widget', 'braftonium' ),
 					'id'			=> 'footer-left',
-					'description'   => 'This is located in the footer. Use only 1 widget.',
+					'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
 					'before_widget' => '<section id="%1$s" class="widget %2$s">',
 					'after_widget'  => '</section>',
 					'before_title'  => '<h3 class="widget-title">',
@@ -43,7 +43,7 @@ function braftonium_widgets_init() {
 				register_sidebar( array(
 					'name'		  => __( 'Footer Middle Widget', 'braftonium' ),
 					'id'			=> 'footer-middle',
-					'description'   => 'This is located in the footer. Use only 1 widget.',
+					'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
 					'before_widget' => '<section id="%1$s" class="widget %2$s">',
 					'after_widget'  => '</section>',
 					'before_title'  => '<h3 class="widget-title">',
@@ -52,7 +52,7 @@ function braftonium_widgets_init() {
 				register_sidebar( array(
 					'name'		  => __( 'Footer Right Widget', 'braftonium' ),
 					'id'			=> 'footer-right',
-					'description'   => 'This is located in the footer. Use only 1 widget.',
+					'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
 					'before_widget' => '<section id="%1$s" class="widget %2$s">',
 					'after_widget'  => '</section>',
 					'before_title'  => '<h3 class="widget-title">',
@@ -60,9 +60,9 @@ function braftonium_widgets_init() {
 				) );
 			} else {
 				register_sidebar( array(
-					'name'		  => __( ucwords($widgetarea).' Sidebar', 'braftonium' ),
+					'name'		  => ucwords($widgetarea).' '.__( 'Sidebar', 'braftonium' ),
 					'id'			=> $widgetarea.'-sidebar',
-					'description'   => ucwords($widgetarea).' widget area.',
+					'description'   => ucwords($widgetarea).' '.__( 'widget area.', 'braftonium' ),
 					'before_widget' => '<section id="%1$s" class="widget %2$s">',
 					'after_widget'  => '</section>',
 					'before_title'  => '<h3 class="widget-title">',
@@ -87,10 +87,10 @@ function braftonium_posttypes_init() {
     foreach( $custom_post_types as $custom_post_type ):
       $custom_post_title = ucwords(str_replace('_', ' ', $custom_post_type));
 			$posttypes_labels = array(
-				'name'				=> $custom_post_title.'s',
+				'name'				=> $custom_post_title.__( 's', 'braftonium' ),
 				'singular_name'		=> $custom_post_title,
-				'menu_name'			=> $custom_post_title.'s',
-				'add_new_item'		=> 'Add New '.$custom_post_title,
+				'menu_name'			=> $custom_post_title.__( 's', 'braftonium' ),
+				'add_new_item'		=> __( 'Add New', 'braftonium' ).' '.$custom_post_title,
 			);
 			$posttypes_args = array(
 				'labels'			=> $posttypes_labels,
@@ -171,14 +171,6 @@ add_action( 'after_setup_theme', 'braftonium_start' );
 if ( ! isset( $content_width ) ) {
 	$content_width = 680;
 }
-
-/*
-The function above adds the ability to use the dropdown menu to select
-the new images sizes you have just created from within the media manager
-when you add media to your content blocks. If you add more image sizes,
-duplicate one of the lines in the array and name it according to your
-new image size.
-*/
 
 /************* THEME CUSTOMIZE *********************/
 
@@ -268,12 +260,12 @@ if (!function_exists( 'social_sharing_buttons' ) ) :
 			// Add sharing button at the end of page/page content
 			$variable .= '<span class="ssb-social"><span class="ssb-text">Social Share: </span>';
 			$options = get_option( 'braftonium_options' );
-			if ( in_array('facebook', $social_media) ) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>'; }
-			if ( in_array('twitter', $social_media) ) { $variable .= '<a class="ssb-twitter" href="'. $twitterURL .'" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>'; }
-			if ( in_array('google', $social_media) ) { $variable .= '<a class="ssb-googleplus" href="'.$googleURL.'" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>'; }
-			if ( in_array('linkedin', $social_media) ) { $variable .= '<a class="ssb-linked" href="'.$linkedURL.'" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>'; }
-			if ( in_array('pinterest', $social_media) ) { $variable .= '<a class="ssb-pinterest" href="'.$pinterestURL.'" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>'; }
-			if ( in_array('email', $social_media) ) { $variable .= '<a class="ssb-email" href="mailto:?subject=I wanted you to see this site&amp;body='.$ssbURL.'"><i class="fa fa-envelope" aria-hidden="true"></i></a>'; }
+			if ( in_array('facebook', $social_media) ) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank">'.get_svg_path('icon-facebook').'</a>'; }
+			if ( in_array('twitter', $social_media) ) { $variable .= '<a class="ssb-twitter" href="'. $twitterURL .'" target="_blank">'.get_svg_path('icon-twitter').'</a>'; }
+			if ( in_array('google', $social_media) ) { $variable .= '<a class="ssb-googleplus" href="'.$googleURL.'" target="_blank">'.get_svg_path('icon-google').'</a>'; }
+			if ( in_array('linkedin', $social_media) ) { $variable .= '<a class="ssb-linked" href="'.$linkedURL.'" target="_blank">'.get_svg_path('icon-linkedin').'</a>'; }
+			if ( in_array('pinterest', $social_media) ) { $variable .= '<a class="ssb-pinterest" href="'.$pinterestURL.'" target="_blank">'.get_svg_path('icon-pinterest').'</a>'; }
+			if ( in_array('email', $social_media) ) { $variable .= '<a class="ssb-email" href="mailto:?subject=I wanted you to see this site&amp;body='.$ssbURL.'">'.get_svg_path('icon-envelope').'</a>'; }
 			$variable .= '</span>';
 
 			if ( is_single() && $ss_location=="post" || !is_single() && $ss_location=="excerpt" || $ss_location=="all" ){

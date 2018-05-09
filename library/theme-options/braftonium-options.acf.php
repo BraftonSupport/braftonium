@@ -5,7 +5,7 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5a4e8db865361',
-			'label' => 'Navigation Bar Position',
+			'label' => __( "Navigation Bar Position", "braftonium" ),
 			'name' => 'navigation_bar_position',
 			'type' => 'select',
 			'instructions' => '',
@@ -17,8 +17,8 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'next' => 'Next to the Nav 75%',
-				'below' => 'Below the Logo 100%',
+				'next' => __( "Next to the Nav 75%", "braftonium" ),
+				'below' => __( "Below the Logo 100%", "braftonium" ),
 			),
 			'default_value' => array(
 			),
@@ -31,7 +31,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4e8e2f65362',
-			'label' => 'Sticky Nav',
+			'label' => __( "Sticky Nav", "braftonium" ),
 			'name' => 'sticky_nav',
 			'type' => 'checkbox',
 			'instructions' => '',
@@ -43,7 +43,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'on' => 'Sticky?',
+				'on' => __( "Sticky?", "braftonium" ),
 			),
 			'allow_custom' => 0,
 			'save_custom' => 0,
@@ -55,7 +55,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4e8e5a65363',
-			'label' => 'Google Analytics',
+			'label' => __( "Google Analytics", "braftonium" ),
 			'name' => 'google_analytics',
 			'type' => 'text',
 			'instructions' => '',
@@ -74,10 +74,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4e8e7665364',
-			'label' => 'Social Share Buttons',
+			'label' => __( "Social Share Buttons", "braftonium" ),
 			'name' => 'social_share_buttons',
 			'type' => 'checkbox',
-			'instructions' => 'These are not links to your social media, these are for people to share a particular page or post on their own social media profiles.',
+			'instructions' => __( "These are not links to your social media, these are for people to share a particular page or post on their own social media profiles.", "braftonium" ),
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -86,7 +86,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'on' => 'Social Share Buttons?',
+				'on' => __( 'Social Share Buttons?', 'braftonium' ),
 			),
 			'allow_custom' => 0,
 			'save_custom' => 0,
@@ -98,7 +98,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4e8e9565365',
-			'label' => 'Social Share Button Location',
+			'label' => __( "Social Share Button Location", "braftonium" ),
 			'name' => 'ss_button_location',
 			'type' => 'radio',
 			'instructions' => '',
@@ -118,9 +118,9 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'all' => 'On All',
-				'excerpt' => 'On Excerpt',
-				'post' => 'On Post',
+				'all' => __( "On All", "braftonium" ),
+				'excerpt' => __( "On Excerpt", "braftonium" ),
+				'post' => __( "On Post", "braftonium" ),
 			),
 			'allow_null' => 0,
 			'other_choice' => 0,
@@ -131,7 +131,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4e8f3565366',
-			'label' => 'Social Media',
+			'label' => __( "Social Media", "braftonium" ),
 			'name' => 'social_media',
 			'type' => 'checkbox',
 			'instructions' => '',
@@ -156,7 +156,7 @@ acf_add_local_field_group(array(
 				'google' => 'Google+',
 				'linkedin' => 'LinkedIn',
 				'pinterest' => 'Pinterest',
-				'email' => 'Email',
+				'email' => __( "Email", "braftonium" ),
 			),
 			'allow_custom' => 0,
 			'save_custom' => 0,
@@ -168,7 +168,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4ea9e92e432',
-			'label' => 'Related Posts',
+			'label' => __( "Related Posts", "braftonium" ),
 			'name' => 'related_posts',
 			'type' => 'select',
 			'instructions' => '',
@@ -180,9 +180,9 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'no' => 'No Related Posts',
-				'below' => 'Below Post',
-				'side' => 'On the Sidebar',
+				'no' => __( "No Related Posts", "braftonium" ),
+				'below' => __( "Below Post", "braftonium" ),
+				'side' => __( "On the Sidebar", "braftonium" ),
 			),
 			'default_value' => array(
 			),
@@ -195,7 +195,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4e8f8065367',
-			'label' => 'Extra Widget Areas',
+			'label' => __( "Extra Widget Areas", "braftonium" ),
 			'name' => 'extra_widget_areas',
 			'type' => 'checkbox',
 			'instructions' => '',
@@ -207,10 +207,10 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'header' => 'Header',
-				'page' => 'Page Sidebar',
-				'blog' => 'Blog Sidebar',
-				'footer' => 'Footer Widget Area',
+				'header' => __( "Header", "braftonium" ),
+				'page' => __( "Page Sidebar", "braftonium" ),
+				'blog' => __( "Blog Sidebar", "braftonium" ),
+				'footer' => __( "Footer Widget Area", "braftonium" ),
 			),
 			'allow_custom' => 1,
 			'save_custom' => 1,
@@ -222,10 +222,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a8f488bf8df7',
-			'label' => 'Custom Post Types',
+			'label' => __( "Custom Post Types", "braftonium" ),
 			'name' => 'custom_post_types',
 			'type' => 'checkbox',
-			'instructions' => 'Adding \'testimonial\', \'event\', and \'team-member\' will automatically add accompanying options.',
+			'instructions' => __( 'Adding \'testimonial\', \'event\', and \'team-member\' will automatically add accompanying options', 'braftonium' ),
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -234,9 +234,9 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'testimonial' => 'Testimonial',
-				'event' => 'Event',
-				'team_member' => 'Team Member',
+				'testimonial' => __( 'Testimonial', 'braftonium' ),
+				'event' => __( 'Event', 'braftonium' ),
+				'team_member' => __( 'Team Member', 'braftonium' ),
 			),
 			'allow_custom' => 1,
 			'save_custom' => 1,

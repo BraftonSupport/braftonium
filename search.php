@@ -28,7 +28,6 @@
 
 								<section class="entry-content">
 										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'braftonium' ) . '</span>' ); ?>
-
 								</section>
 
 								<footer class="article-footer">
@@ -65,7 +64,7 @@
 
 						</main>
 
-							<?php get_sidebar(); ?>
+						<?php get_sidebar(); ?>
 
 					</div>
 

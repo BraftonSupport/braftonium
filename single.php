@@ -12,7 +12,7 @@
 									/* the author of the post */
 									'<span class="by">'.__( 'by', 'braftonium' ).'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
 								); ?>
-								<?php printf( __( 'in', 'braftonium' ).': %1$s', get_the_category_list(', ') ); ?>
+								<?php printf( __( 'filed under', 'braftonium' ).': %1$s', get_the_category_list(', ') ); ?>
 								<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'braftonium' ) . '</span> ', ', ', '</p>' ); ?>
 							</p>
 						</div></div>
@@ -50,7 +50,7 @@
 						<?php endif; ?>
 						<?php if ( is_single() && get_field('related_posts', 'option')=='below' ) : ?>
 						<div class="latest">
-							<h3>Related Posts</h3>
+							<h3><?php _e( 'Related Posts', 'braftonium' ); ?></h3>
 							<?php $categories = get_the_category();
 							if ($categories) {
 								foreach ($categories as $category) {
