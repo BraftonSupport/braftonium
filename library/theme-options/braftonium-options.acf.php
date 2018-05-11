@@ -225,7 +225,7 @@ acf_add_local_field_group(array(
 			'label' => __( "Custom Post Types", "braftonium" ),
 			'name' => 'custom_post_types',
 			'type' => 'checkbox',
-			'instructions' => __( 'Adding \'testimonial\', \'event\', and \'team-member\' will automatically add accompanying options', 'braftonium' ),
+			'instructions' => __( 'Adding \'testimonial\', \'event\', and \'team-member\' will automatically add accompanying options.', 'braftonium' ),
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(

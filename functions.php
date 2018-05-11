@@ -276,4 +276,27 @@ if (!function_exists( 'social_sharing_buttons' ) ) :
 
 endif;
 
+
+// Add new constant that returns true if WooCommerce is active
+define( 'WPEX_WOOCOMMERCE_ACTIVE', class_exists( 'WooCommerce' ) );
+
+// Checking if WooCommerce is active
+if ( WPEX_WOOCOMMERCE_ACTIVE ) {
+	add_action( 'after_setup_theme', function() {
+		add_theme_support( 'woocommerce' );
+	} );
+
+	add_action('woocommerce_before_main_content', 'theme_prefix_wrapper_start', 10);
+	add_action('woocommerce_after_main_content', 'theme_prefix_wrapper_end', 10);
+	
+	function theme_prefix_wrapper_start() {
+		echo '<div id="content"><div id="inner-content" class="wrap cf"><main id="main" class="m-all t-2of3 d-5of7 cf"><article class="hentry">';
+	}
+	
+	function theme_prefix_wrapper_end() {
+		echo '</article></main></div></div>';
+	}
+}
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

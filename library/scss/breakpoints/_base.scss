@@ -317,7 +317,7 @@ NAVIGATION STYLES
 			color: $white;
 			text-decoration: none;
 			&:hover {
-				color: $bones-pink;
+				color: $pink;
 			}
 		}
 		ul.sub-menu,
@@ -388,6 +388,15 @@ svg {
 		top: 2px;
 	}
 }
+.acf-map {
+	width: 100%;
+	min-height: 300px;
+	border: #ccc solid 1px;
+	img {
+		max-width: inherit !important;
+	}
+}
+
 .blog .hentry {
 	padding: 2em 0 0;
 }
