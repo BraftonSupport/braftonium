@@ -1,376 +1,633 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: wp theme bones\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-02 22:11+0100\n"
-"PO-Revision-Date: \n"
-"Language-Team: fulgor <frag.fulgor@gmail.com>\n"
-"Language-Team: fulgor <frag.fulgor@gmail.com>\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-05-11 10:13-0400\n"
+"PO-Revision-Date: 2018-05-11 13:20-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;_n\n"
-"X-Poedit-Basepath: /home/fulgor/GIT/bones\n"
-"Last-Translator: \n"
-"X-Generator: Poedit 1.7.4\n"
-"Language: da_DK\n"
-"X-Poedit-SearchPath-0: /home/fulgor/GIT/bones\n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: comments.php:12
-msgid "This post is password protected. Enter the password to view comments."
-msgstr "Dette indlæg er kodeordsbeskyttet. Skriv kodeordet for at se kommentarer."
+#: 404.php:13
+msgid "Epic 404 - Article Not Found"
+msgstr "Episk 404 - Emne Blev Ikke Fundet"
 
-#: comments.php:23
-msgid "Response"
-msgstr "Svar"
+#: 404.php:19 archive.php:53 full-width.php:99
+msgid "The article you were looking for was not found, but maybe try looking again!"
+msgstr "Det emne, du ledte efter blev ikke fundet, men prøv måske at lede igen!"
 
-#: comments.php:24
-msgid "Responses"
-msgstr "Svar"
+#: archive.php:22 full-width.php:74 index.php:29 post-formats/format.php:23
+#: single.php:9
+msgid "Posted"
+msgstr "Skrevet"
 
-#: comments.php:25
-msgid "One"
-msgstr "En"
+#: archive.php:26 full-width.php:78 index.php:33 post-formats/format.php:27
+#: single.php:13
+msgid "by"
+msgstr "af"
 
-#: comments.php:26
-msgid "No"
-msgstr "Nej"
+#: archive.php:50 full-width.php:96 index.php:51 single.php:40
+msgid "Oops, Post Not Found!"
+msgstr "Ups ! Intet fundet!"
 
-#: comments.php:32
-msgid "to"
-msgstr "til"
+#: archive.php:56
+msgid "This is the error message in the archive.php template."
+msgstr "Dette er fejl beskeden i skabelonen archive.php."
 
-#: comments.php:59
-msgid "Comments are closed."
-msgstr "Der er lukket for kommentarer."
+#: full-width.php:102
+msgid "This is the error message in the full-width.php template."
+msgstr "Dette er fejl beskeden i skabelonen full-width.php."
 
-#: comments.php:70
-msgid "Leave a Reply"
-msgstr "Efterlad et svar"
+#: functions.php:13
+msgid "Theme General Settings"
+msgstr "Generelle temaindstillinger"
 
-#: comments.php:70
-#, php-format
-msgid "Leave a Reply to %s"
-msgstr "Efterlad et svar til %s"
+#: functions.php:14
+msgid "Theme Settings"
+msgstr "Temaindstillinger"
 
-#: comments.php:78
-msgid "You must be"
-msgstr "Du skal være"
+#: functions.php:35
+msgid "Footer Left Widget"
+msgstr "Sidefod – Venstre Widget"
 
-#: comments.php:78
-msgid "logged in"
-msgstr "logget ind"
+#: functions.php:37 functions.php:46 functions.php:55
+msgid "This is located in the footer. Use only 1 widget."
+msgstr "Dette er placeret i sidefoden. Brug kun 1 widget."
 
-#: comments.php:78
-msgid "to post a comment"
-msgstr "for at kunne kommentere"
+#: functions.php:44
+msgid "Footer Middle Widget"
+msgstr "Sidefod - Midterst Widget"
 
-#: comments.php:86
-msgid "Logged in as"
-msgstr "Logget ind som"
+#: functions.php:53
+msgid "Footer Right Widget"
+msgstr "Sidefod - Højre Widget"
 
-#: comments.php:86
-msgid "Log out of this account"
-msgstr "Log ud af denne konto"
+#: functions.php:63
+msgid "Sidebar"
+msgstr "Sidebjælke"
 
-#: comments.php:86
-msgid "Log out"
-msgstr "Log ud"
+#: functions.php:65
+msgid "widget area."
+msgstr "widget område."
 
-#: comments.php:93
-msgid "Name"
-msgstr "Navn"
+#: functions.php:90 functions.php:92
+msgid "s"
+msgstr ""
 
-#: comments.php:93 comments.php:98
-msgid "(required)"
-msgstr "(obligatorisk)"
+#: functions.php:93
+msgid "Add New"
+msgstr "Tilføj Nyt"
 
-#: comments.php:94
-msgid "Your Name"
-msgstr "Dit navn"
+#: header.php:122
+msgid "Menu"
+msgstr ""
 
-#: comments.php:98
-msgid "Email"
-msgstr "Email"
+#: header.php:133
+msgid "The Main Menu"
+msgstr "Hovedmenuen"
 
-#: comments.php:99
-msgid "Your Email"
-msgstr "Din Email"
+#: index.php:54 single.php:43
+msgid "Uh Oh. Something is missing. Try double checking things."
+msgstr "Åh åh. Noget mangler. Prøv dobbelttjekke af ting."
 
-#: comments.php:100
-msgid "will not be published"
-msgstr "vil ikke blive offentliggjort"
+#: index.php:57
+msgid "This is the error message in the index.php template."
+msgstr "Dette er fejlmeddelelsen i index.php-skabelonen."
 
-#: comments.php:104
-msgid "Website"
-msgstr "Webside"
-
-#: comments.php:105
-msgid "Your Website"
-msgstr "Din Webside"
-
-#: comments.php:112
-msgid "Your Comment Here..."
-msgstr "Din Kommentar her…"
-
-#: comments.php:115
-msgid "Submit Comment"
-msgstr "Indsend Kommentar"
-
-#: comments.php:120
-msgid "You can use these tags"
-msgstr "Du kan anvende disse tags"
-
-#: header.php:23
+#: library/braftonium.php:60
 #, php-format
 msgid "Page %s"
 msgstr "Side %s"
 
-#: taxonomy-custom_cat.php:22 archive.php:9
-msgid "Posts Categorized:"
-msgstr "Kategoriserede Indlæg:"
+#: library/braftonium.php:167
+msgid "Navigation"
+msgstr "Navigation"
 
-#: taxonomy-custom_cat.php:32 embed-post_meta.php:1 single-custom_type.php:30
-msgid "Posted"
-msgstr "Skrevet"
+#: library/braftonium.php:168
+#: library/theme-options/braftonium-options.acf.php:134
+msgid "Social Media"
+msgstr "Sociale Medier"
 
-#: taxonomy-custom_cat.php:32 embed-post_meta.php:1 single-custom_type.php:30
-msgid "by"
-msgstr "af"
+#: library/braftonium.php:206
+msgid "No Related Posts Yet!"
+msgstr "Ingen relaterede indlæg endnu!"
 
-#: taxonomy-custom_cat.php:32 embed-post_meta.php:1 single-custom_type.php:30
-msgid "filed under"
-msgstr "sorteret under"
+#: library/braftonium.php:251
+msgid "Read "
+msgstr "Læs "
 
-#: taxonomy-custom_cat.php:41
-msgid "Read more"
-msgstr "Læs mere"
-
-#: functions.php:103
-msgid "(Edit)"
-msgstr "(Rediger)"
-
-#: functions.php:107
-msgid "Your comment is awaiting moderation."
-msgstr "Din kommentar afventer moderation."
-
-#: functions.php:124
-msgid "Search for:"
-msgstr "Søg efter:"
-
-#: functions.php:125
-msgid "Search the Site..."
-msgstr "Søg på siden…"
-
-#: 404.php:11
-msgid "Epic 404 - Article Not Found"
-msgstr "Episk 404 - Emne Blev Ikke Fundet"
-
-#: 404.php:17
-msgid "The article you were looking for was not found, but maybe try looking again!"
-msgstr "Det emne, du ledte efter blev ikke fundet, men prøv måske at lede igen!"
-
-#: search.php:7
-msgid "Search Results for:"
-msgstr "Søgeresultater for:"
-
-#: search.php:23
-msgid "Read more on"
-msgstr "Læs mere på"
-
-#: archive.php:13
-msgid "Posts Tagged:"
-msgstr "Taggede Indlæg:"
-
-#: archive.php:17 author.php:8
-msgid "Posts By:"
-msgstr "Indlæg Af:"
-
-#: archive.php:21
-msgid "Daily Archives:"
-msgstr "Daglige Arkiver:"
-
-#: archive.php:25
-msgid "Monthly Archives:"
-msgstr "Månedlige Arkiver:"
-
-#: archive.php:29
-msgid "Yearly Archives:"
-msgstr "Årlige Arkiver:"
-
-#: single-custom_type.php:43
-msgid "Custom Tags"
-msgstr "Brugerdefinerede Tags"
-
-#: embed-tags.php:3
-msgid "Tag"
-msgstr "Tag"
-
-#: embed-tags.php:3
-msgid "Tags"
-msgstr "Tags"
-
-#: image.php:20
-msgid "Read the rest of this entry"
-msgstr "Læs resten af dette indlæg"
-
-#: image.php:38
-msgid "Sorry, no attachments matched your criteria."
-msgstr "Beklager, ingen vedhæftninger matchede dine kriterier."
-
-#: embed-prev_next.php:3
-msgid "&laquo; Older Entries"
-msgstr "&laquo; Ældre Indlæg"
-
-#: embed-prev_next.php:4
-msgid "Newer Entries &raquo;"
-msgstr "Nyere Indlæg &raquo;"
-
-#: footer.php:9
-msgid "is powered by"
-msgstr "drives af"
-
-#: embed-not_found.php:3
-msgid "Not Found"
-msgstr "Ikke Fundet"
-
-#: embed-not_found.php:6
-msgid "Sorry, but the requested resource was not found on this site."
-msgstr "Beklager, men det søgte emne blev ikke fundet på denne side."
-
-#: sidebar.php:15
-msgid "Please activate some Widgets."
-msgstr "Aktiver venligst nogle Widgets."
-
-#: library/bones.php:52
+#: library/braftonium.php:251 search.php:30
 msgid "Read more &raquo;"
 msgstr "Læs mere &raquo;"
 
-#: library/custom-post-type.php:24
-msgid "Custom Types"
-msgstr "Brugerdefinerede Typer"
+#: library/custom-fields/banner/banner.acf.php:8
+#: library/custom-fields/style/style.acf.php:77
+msgid "Background Image"
+msgstr "Baggrundsbillede"
 
-#: library/custom-post-type.php:25
-msgid "Custom Post"
-msgstr "Brugerdefineret Indlæg"
+#: library/custom-fields/banner/banner.acf.php:32
+#: library/custom-fields/full-width/full-width.acf.php:112
+#: library/custom-fields/full-width/full-width.acf.php:285
+#: library/custom-fields/full-width/full-width.acf.php:578
+#: library/custom-fields/full-width/full-width.acf.php:710
+msgid "Title"
+msgstr "Titel"
 
-#: library/custom-post-type.php:26
-msgid "Add New"
-msgstr "Tilføj Nyt"
+#: library/custom-fields/banner/banner.acf.php:51
+#: library/custom-fields/full-width/full-width.acf.php:47
+msgid "Tagline"
+msgstr ""
 
-#: library/custom-post-type.php:27
-msgid "Add New Custom Type"
-msgstr "Tilføj Ny Brugerdefineret Type"
+#: library/custom-fields/full-width/full-width.acf.php:8
+#: library/custom-fields/full-width/full-width.acf.php:304
+msgid "Content"
+msgstr "Indhold"
 
-#: library/custom-post-type.php:28
-msgid "Edit"
-msgstr "Rediger"
+#: library/custom-fields/full-width/full-width.acf.php:23
+msgid "Visual"
+msgstr "Visuel"
 
-#: library/custom-post-type.php:29
-msgid "Edit Post Types"
-msgstr "Rediger Indlæg Typer"
+#: library/custom-fields/full-width/full-width.acf.php:28
+msgid "Headline"
+msgstr "Overskrift"
 
-#: library/custom-post-type.php:30
-msgid "New Post Type"
-msgstr "Ny Indlæg Type"
+#: library/custom-fields/full-width/full-width.acf.php:66
+#: library/custom-fields/full-width/full-width.acf.php:323
+#: library/custom-fields/full-width/full-width.acf.php:748
+msgid "Button"
+msgstr "Knap"
 
-#: library/custom-post-type.php:31
-msgid "View Post Type"
-msgstr "Se Indlæg Type "
+#: library/custom-fields/full-width/full-width.acf.php:81
+#: library/custom-fields/full-width/full-width.acf.php:449
+#: library/custom-fields/full-width/full-width.acf.php:547
+#: library/custom-fields/full-width/full-width.acf.php:679
+#: library/custom-fields/full-width/full-width.acf.php:763
+#: library/custom-fields/full-width/full-width.acf.php:989
+#: library/custom-fields/style/style.acf.php:8
+msgid "Style"
+msgstr "Stil"
 
-#: library/custom-post-type.php:32
-msgid "Search Post Type"
-msgstr "Søg Indlæg Type"
+#: library/custom-fields/full-width/full-width.acf.php:107
+msgid "Services or List"
+msgstr "Tjenester eller Liste"
 
-#: library/custom-post-type.php:33
-msgid "Nothing found in the Database."
-msgstr "Intet fundet i Databasen."
+#: library/custom-fields/full-width/full-width.acf.php:131
+msgid "Show"
+msgstr "Vis"
 
-#: library/custom-post-type.php:34
-msgid "Nothing found in Trash"
-msgstr "Intet fundet i Papirkurven"
+#: library/custom-fields/full-width/full-width.acf.php:143
+msgid "Show Intro Text"
+msgstr "Vis Intro Tekst"
 
-#: library/custom-post-type.php:37
-msgid "This is the example custom post type"
-msgstr "Dette er et ekempel på en brugerdefineret indlæg type."
+#: library/custom-fields/full-width/full-width.acf.php:144
+msgid "Show Outro Text"
+msgstr "Vis Outro Tekst"
 
-#: library/custom-post-type.php:73
-msgid "Custom Categories"
-msgstr "Brugerdefinerede Kategorier"
+#: library/custom-fields/full-width/full-width.acf.php:156
+msgid "Intro Text"
+msgstr "Intro tekst"
 
-#: library/custom-post-type.php:74
-msgid "Custom Category"
-msgstr "Brugerdefineret Kategori"
+#: library/custom-fields/full-width/full-width.acf.php:183
+msgid "List Custom Posts or Recent Posts"
+msgstr "Liste Brugerdefinerede Indlæg Eller Seneste Indlæg"
 
-#: library/custom-post-type.php:75
-msgid "Search Custom Categories"
-msgstr "Søg Brugerdefinerede Kategorier"
+#: library/custom-fields/full-width/full-width.acf.php:195
+msgid "Custom"
+msgstr "Brugerdefinerede"
 
-#: library/custom-post-type.php:33
-msgid "All Custom Posts"
-msgstr "Alle Brugerdefinerede Indlæg"
+#: library/custom-fields/full-width/full-width.acf.php:196
+#: library/custom-fields/full-width/full-width.acf.php:364
+msgid "Recent"
+msgstr "Seneste"
 
-#: library/custom-post-type.php:76
-msgid "All Custom Categories"
-msgstr "Alle Brugerdefinerede Kategorier"
+#: library/custom-fields/full-width/full-width.acf.php:207
+msgid "Custom List"
+msgstr "Brugerdefineret Liste"
 
-#: library/custom-post-type.php:77
-msgid "Parent Custom Category"
-msgstr "Forældre Brugerdefineret Kategori"
+#: library/custom-fields/full-width/full-width.acf.php:234
+#: library/custom-fields/full-width/full-width.acf.php:612
+#: library/custom-fields/full-width/full-width.acf.php:617
+msgid "Image"
+msgstr "Billede"
 
-#: library/custom-post-type.php:78
-msgid "Parent Custom Category:"
-msgstr "Forældre Brugerdefineret Kategori:"
+#: library/custom-fields/full-width/full-width.acf.php:258
+msgid "Image Size and Shape"
+msgstr "Billedstørrelse og form"
 
-#: library/custom-post-type.php:79
-msgid "Edit Custom Category"
-msgstr "Rediger Brugerdefineret Kategori"
+#: library/custom-fields/full-width/full-width.acf.php:270
+msgid "Round the image (click square as well)"
+msgstr "Runde billedet (klik også på kvadrat)"
 
-#: library/custom-post-type.php:80
-msgid "Update Custom Category"
-msgstr "Updater brugerdefineret Kategori"
+#: library/custom-fields/full-width/full-width.acf.php:271
+msgid "Thumbnail (max height & width 150px)"
+msgstr "Miniature (max højde & bredde 150px)"
 
-#: library/custom-post-type.php:81
-msgid "Add New Custom Category"
-msgstr "Tilføj Nyt Brugerdefineret Kategori"
+#: library/custom-fields/full-width/full-width.acf.php:272
+msgid "Squared (300px by 300px)"
+msgstr "Kvadreret (300px af 300px)"
 
-#: library/custom-post-type.php:82
-msgid "New Custom Category Name"
-msgstr "Nyt Brugerdefineret Kategori Navn"
+#: library/custom-fields/full-width/full-width.acf.php:273
+msgid "Uncropped (best for awards and different sized images.)"
+msgstr "Ukuperede (bedst til præmie og billeder i forskellige størrelser.)"
 
-#: library/custom-post-type.php:95
-msgid "Custom Tag"
-msgstr "Brugerdefineret Tag"
+#: library/custom-fields/full-width/full-width.acf.php:340
+msgid "Button?"
+msgstr "Knap?"
 
-#: library/custom-post-type.php:96
-msgid "Search Custom Tags"
-msgstr "Søg Brugerdefinerede Tags"
+#: library/custom-fields/full-width/full-width.acf.php:343
+msgid "Check this box if you want to link the content but not show the button."
+msgstr "Marker dette felt, hvis du vil linke indholdet, men ikke vise knappen."
 
-#: library/custom-post-type.php:97
-msgid "All Custom Tags"
-msgstr "Alle Brugerdefinerede Tags"
+#: library/custom-fields/full-width/full-width.acf.php:367
+msgid "If not the most recent posts, put in a custom post type, eg: \"testimonial\", \"event\", and \"team-member\"."
+msgstr "Hvis ikke de seneste indlæg, indsæt en brugerdefineret posttype, fx: \"testimonial\", \"begivenhed\" og \"medarbejder\"."
 
-#: library/custom-post-type.php:98
-msgid "Parent Custom Tag"
-msgstr "Forældre Brugerdefineret Tag"
+#: library/custom-fields/full-width/full-width.acf.php:395
+msgid "Number of Posts"
+msgstr "Antal af indlæg"
 
-#: library/custom-post-type.php:99
-msgid "Parent Custom Tag:"
-msgstr "Forældre Brugerdefineret Tag:"
+#: library/custom-fields/full-width/full-width.acf.php:422
+msgid "Outro Text"
+msgstr "Outro tekst"
 
-#: library/custom-post-type.php:100
-msgid "Edit Custom Tag"
-msgstr "Rediger Brugerdefineret Tag"
+#: library/custom-fields/full-width/full-width.acf.php:475
+msgid "Validation (Slider)"
+msgstr "Validering (skyderen)"
 
-#: library/custom-post-type.php:101
-msgid "Update Custom Tag"
-msgstr "Opdater Brugerdefineret Tag"
+#: library/custom-fields/full-width/full-width.acf.php:523
+#: post-formats/content-validation.php:117
+msgid "Read More"
+msgstr "Læs Mere"
 
-#: library/custom-post-type.php:102
-msgid "Add New Custom Tag"
-msgstr "Tilføj Nyt Brugerdefineret Tag"
+#: library/custom-fields/full-width/full-width.acf.php:526
+msgid "Add Read More Button"
+msgstr "Tilføj Læs mere knap"
 
-#: library/custom-post-type.php:103
-msgid "New Custom Tag Name"
-msgstr "Nyt Brugerdefineret Tag Navn"
+#: library/custom-fields/full-width/full-width.acf.php:573
+msgid "Row"
+msgstr "Række"
+
+#: library/custom-fields/full-width/full-width.acf.php:597
+msgid "Flexible Content"
+msgstr "Fleksibelt indhold"
+
+#: library/custom-fields/full-width/full-width.acf.php:600
+msgid "When you add more blocks, they will show up next to each other in a single row."
+msgstr "Når du tilføjer flere blokke, vises de ved siden af ​​hinanden i en enkelt række."
+
+#: library/custom-fields/full-width/full-width.acf.php:646
+#: library/custom-fields/full-width/full-width.acf.php:651
+#: library/custom-fields/full-width/full-width.acf.php:729
+msgid "Text"
+msgstr "Tekst"
+
+#: library/custom-fields/full-width/full-width.acf.php:673
+msgid "Add Block"
+msgstr "Tilføj blok"
+
+#: library/custom-fields/full-width/full-width.acf.php:789
+#: library/custom-fields/full-width/full-width.acf.php:952
+msgid "Map"
+msgstr "Kort"
+
+#: library/custom-fields/full-width/full-width.acf.php:794
+#: post-formats/content-map.php:44
+msgid "Address"
+msgstr "Adresse"
+
+#: library/custom-fields/full-width/full-width.acf.php:809
+msgid "Add Address Line"
+msgstr "Tilføj Adresselinje"
+
+#: library/custom-fields/full-width/full-width.acf.php:813
+msgid "Address Line"
+msgstr "Adresselinje"
+
+#: library/custom-fields/full-width/full-width.acf.php:834
+#: post-formats/content-map.php:51
+msgid "Phone"
+msgstr "Telefon"
+
+#: library/custom-fields/full-width/full-width.acf.php:849
+msgid "Add Phone Number"
+msgstr "Tilføj telefonnummer"
+
+#: library/custom-fields/full-width/full-width.acf.php:853
+msgid "Phone Label"
+msgstr "Telefon Etiket"
+
+#: library/custom-fields/full-width/full-width.acf.php:865
+msgid "Toll Free/Fax/"
+msgstr "Tollfrit/Fax/"
+
+#: library/custom-fields/full-width/full-width.acf.php:872
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+#: library/custom-fields/full-width/full-width.acf.php:893
+#: library/theme-options/braftonium-options.acf.php:159
+#: post-formats/content-map.php:59
+msgid "Email"
+msgstr ""
+
+#: library/custom-fields/full-width/full-width.acf.php:908
+msgid "Add Email"
+msgstr "Tilføj email"
+
+#: library/custom-fields/full-width/full-width.acf.php:912
+msgid "Email Label"
+msgstr "Email Etiket"
+
+#: library/custom-fields/full-width/full-width.acf.php:924
+msgid "Info/Sales/Support"
+msgstr "Info/Salg/Støtte"
+
+#: library/custom-fields/full-width/full-width.acf.php:931
+msgid "Email Address"
+msgstr "Email adresse"
+
+#: library/custom-fields/full-width/full-width.acf.php:943
+msgid "info/sales/support@website.com"
+msgstr "info/salg/støtte@website.com"
+
+#: library/custom-fields/full-width/full-width.acf.php:973
+msgid "Go to <a href=\"https://developers.google.com/maps/documentation/embed/\" target=\"_blank\">this page</a> and get yourself a key. Select a new project then click \"Enable API\". Copy and paste the result here. It is free and takes less than a minute."
+msgstr "Gå til <a href=\"https://developers.google.com/maps/documentation/embed/\" target=\"_blank\"> denne side </a> og få dig en nøgle. Vælg et nyt projekt og klik derefter på \"Aktivér API\". Kopier og indsæt resultatet her. Det er gratis og tager mindre end et minut."
+
+#: library/custom-fields/full-width/full-width.acf.php:1013
+msgid "Add Row"
+msgstr "Tilføj række"
+
+#: library/custom-fields/style/style.acf.php:23
+msgid "Background Color"
+msgstr "Baggrundsfarve"
+
+#: library/custom-fields/style/style.acf.php:38
+msgid "Color"
+msgstr "Farve"
+
+#: library/custom-fields/style/style.acf.php:53
+msgid "Background"
+msgstr "Baggrund"
+
+#: library/custom-fields/style/style.acf.php:65
+msgid "Static"
+msgstr "Statisk"
+
+#: library/custom-fields/style/style.acf.php:66
+msgid "Video"
+msgstr ""
+
+#: library/custom-fields/style/style.acf.php:109
+msgid "Video Url"
+msgstr ""
+
+#: library/custom-fields/style/style.acf.php:133
+msgid "Other"
+msgstr "Andet"
+
+#: library/custom-fields/style/style.acf.php:145
+msgid "Add Shadow"
+msgstr "Tilføj skygge"
+
+#: library/custom-fields/style/style.acf.php:146
+msgid "Full Screen"
+msgstr "Fuld skærm"
+
+#: library/custom-fields/style/style.acf.php:147
+msgid "Compact"
+msgstr "Kompakt"
+
+#: library/custom-fields/style/style.acf.php:148
+msgid "Thin"
+msgstr "Tynd"
+
+#: library/custom-fields/style/style.acf.php:160
+msgid "Add Class"
+msgstr "Tilføj klasse"
+
+#: library/custom-post-types/events/events.acf.php:4
+msgid "Events"
+msgstr "Begivenheder"
+
+#: library/custom-post-types/events/events.acf.php:8
+msgid "Start Date"
+msgstr "Start Dato"
+
+#: library/custom-post-types/events/events.acf.php:11
+msgid "If both start date and end date are left blank, you have the choice of \"TBD\" or \"Various Dates\"."
+msgstr "Hvis både startdato og slutdato er tom, har du valg af \"TBD\" eller \"Various Dates\"."
+
+#: library/custom-post-types/events/events.acf.php:18
+msgid "End Date"
+msgstr "Slutdato"
+
+#: library/custom-post-types/events/events.acf.php:27
+msgid "Date Text"
+msgstr "Dato Tekst"
+
+#: library/custom-post-types/events/events.acf.php:31
+msgid "TBD"
+msgstr ""
+
+#: library/custom-post-types/events/events.acf.php:32
+msgid "Various Dates"
+msgstr "Forskellige datoer"
+
+#: library/custom-post-types/events/events.acf.php:41
+#: library/custom-post-types/testimonials/testimonials.acf.php:44
+msgid "Location"
+msgstr "Beliggenhed"
+
+#: library/custom-post-types/team/team.acf.php:4
+#: library/theme-options/braftonium-options.acf.php:239
+msgid "Team Member"
+msgstr "Medarbejder"
+
+#: library/custom-post-types/team/team.acf.php:8
+msgid "Job Title"
+msgstr "Jobtitel"
+
+#: library/custom-post-types/testimonials/testimonials.acf.php:4
+msgid "Testimonials"
+msgstr "Udtalelser"
+
+#: library/custom-post-types/testimonials/testimonials.acf.php:8
+msgid "Name"
+msgstr "Navn"
+
+#: library/custom-post-types/testimonials/testimonials.acf.php:20
+msgid "Position"
+msgstr "Stilling"
+
+#: library/custom-post-types/testimonials/testimonials.acf.php:32
+msgid "Company"
+msgstr "Selskab"
+
+#: library/custom-post-types/testimonials/testimonials.acf.php:56
+msgid "Website"
+msgstr "Internet side"
+
+#: library/theme-options/braftonium-options.acf.php:8
+msgid "Navigation Bar Position"
+msgstr "Navigationsbar Position"
+
+#: library/theme-options/braftonium-options.acf.php:20
+msgid "Next to the Nav 75%"
+msgstr "Ved siden af navigationsbar 75%"
+
+#: library/theme-options/braftonium-options.acf.php:21
+msgid "Below the Logo 100%"
+msgstr "Under logoet 100%"
+
+#: library/theme-options/braftonium-options.acf.php:34
+msgid "Sticky Nav"
+msgstr "Klæbrig Navigations"
+
+#: library/theme-options/braftonium-options.acf.php:46
+msgid "Sticky?"
+msgstr "Klæbrig?"
+
+#: library/theme-options/braftonium-options.acf.php:58
+msgid "Google Analytics"
+msgstr ""
+
+#: library/theme-options/braftonium-options.acf.php:77
+msgid "Social Share Buttons"
+msgstr "Sociale deleknapper"
+
+#: library/theme-options/braftonium-options.acf.php:80
+msgid "These are not links to your social media, these are for people to share a particular page or post on their own social media profiles."
+msgstr "Disse er ikke links til dine sociale medier, det er for folk at dele en bestemt side eller poste på deres egne sociale medier profiler."
+
+#: library/theme-options/braftonium-options.acf.php:89
+msgid "Social Share Buttons?"
+msgstr "Sociale deleknapper?"
+
+#: library/theme-options/braftonium-options.acf.php:101
+msgid "Social Share Button Location"
+msgstr "Sociale Deleknapper Placering"
+
+#: library/theme-options/braftonium-options.acf.php:121
+msgid "On All"
+msgstr "På Alle"
+
+#: library/theme-options/braftonium-options.acf.php:122
+msgid "On Excerpt"
+msgstr "På Uddrag"
+
+#: library/theme-options/braftonium-options.acf.php:123
+msgid "On Post"
+msgstr "På Indlæg"
+
+#: library/theme-options/braftonium-options.acf.php:171 sidebar.php:11
+#: single.php:53
+msgid "Related Posts"
+msgstr "Relaterede Indlæg"
+
+#: library/theme-options/braftonium-options.acf.php:183
+msgid "No Related Posts"
+msgstr "Ingen Relaterede Indlæg"
+
+#: library/theme-options/braftonium-options.acf.php:184
+msgid "Below Post"
+msgstr "Under Indlæg"
+
+#: library/theme-options/braftonium-options.acf.php:185
+msgid "On the Sidebar"
+msgstr "På Sidebjælken"
+
+#: library/theme-options/braftonium-options.acf.php:198
+msgid "Extra Widget Areas"
+msgstr "Ekstra Widget Områder"
+
+#: library/theme-options/braftonium-options.acf.php:210
+msgid "Header"
+msgstr ""
+
+#: library/theme-options/braftonium-options.acf.php:211
+msgid "Page Sidebar"
+msgstr "Sider sidebjælke"
+
+#: library/theme-options/braftonium-options.acf.php:212
+msgid "Blog Sidebar"
+msgstr "Blog sidebjælke"
+
+#: library/theme-options/braftonium-options.acf.php:213
+msgid "Footer Widget Area"
+msgstr "Sidefod Widget Area"
+
+#: library/theme-options/braftonium-options.acf.php:225
+msgid "Custom Post Types"
+msgstr "Brugerdefinerede posttyper"
+
+#: library/theme-options/braftonium-options.acf.php:228
+msgid "Adding 'testimonial', 'event', and 'team-member' will automatically add accompanying options."
+msgstr "Tilføjelse af \"testimonial\", \"begivenhed\" og \"medarbejder\" tilføjer automatisk ledsagende muligheder."
+
+#: library/theme-options/braftonium-options.acf.php:237
+msgid "Testimonial"
+msgstr ""
+
+#: library/theme-options/braftonium-options.acf.php:238
+msgid "Event"
+msgstr "Begivenhed"
+
+#: library/theme-options/braftonium-options.acf.php:279
+msgid "Logo"
+msgstr ""
+
+#: library/theme-options/braftonium-options.acf.php:287
+msgid "Logo in the Footer"
+msgstr "Logo i Sidefod"
+
+#: post-formats/format.php:29 single.php:15
+msgid "filed under"
+msgstr "sorteret under"
+
+#: post-formats/format.php:30 search.php:39 single.php:16
+msgid "Tags:"
+msgstr ""
+
+#: search.php:8
+msgid "Search Results for:"
+msgstr "Søgeresultater for:"
+
+#: search.php:19
+#, php-format
+msgid "Posted %1$s by %2$s"
+msgstr "Posted %1$s af %2$s"
+
+#: search.php:36
+#, php-format
+msgid "Filed under: %1$s"
+msgstr "Sorteret under: %1$s"
+
+#: search.php:53
+msgid "Sorry, No Results."
+msgstr "Beklager, Ingen resultater."
+
+#: search.php:56
+msgid "Try your search again."
+msgstr "Prøv din søgning igen."
+
+#: search.php:59
+msgid "This is the error message in the search.php template."
+msgstr "Dette er fejlmeddelelsen i search.php-skabelonen."
+
+#: searchform.php:2
+msgid "Search for:"
+msgstr "Søge efter:"
+
+#: searchform.php:3
+msgid "Search"
+msgstr "Søg"
+
+#: single.php:46
+msgid "This is the error message in the single.php template."
+msgstr "Dette er fejlmeddelelsen i single.php-skabelonen."

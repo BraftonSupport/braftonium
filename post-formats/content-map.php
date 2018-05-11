@@ -41,14 +41,14 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 	<div class="wrap container">
 		<div>
 		<?php if( have_rows('address') ):
-		echo '<h3>'.get_svg_path('icon-map-marker'). __( "Address", "braftonium" ) .':</h3>';
+		echo '<h3>'.get_svg_path('icon-map-marker').' '. __( "Address", "braftonium" ) .':</h3>';
 			while ( have_rows('address') ) : the_row();
 				echo get_sub_field('address_line');
 				echo '<br/>';
 			endwhile;
 		endif;
 		if( have_rows('phone') ):
-			echo '<h3>'.get_svg_path('icon-phone'). __( "Phone", "braftonium" ) .':</h3>';
+			echo '<h3>'.get_svg_path('icon-phone').' '.  __( "Phone", "braftonium" ) .':</h3>';
 			while ( have_rows('phone') ) : the_row();
 				echo get_sub_field('phone_label').': ';
 				echo get_sub_field('phone_number');
@@ -56,7 +56,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			endwhile;
 		endif;
 		if( have_rows('email_input') ):
-			echo '<h3>'.get_svg_path('icon-envelope'). __( "Email", "braftonium" ) .':</h3>';
+			echo '<h3>'.get_svg_path('icon-envelope').' '. __( "Email", "braftonium" ) .':</h3>';
 			while ( have_rows('email_input') ) : the_row();
 				echo get_sub_field('email_label').': ';
 				echo get_sub_field('email_address');
@@ -75,16 +75,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 	</div>
 	<style type="text/css">
 
-.acf-map {
-	width: 100%;
-	min-height: 300px;
-	border: #ccc solid 1px;
-}
 
-/* fixes potential theme css conflict */
-.acf-map img {
-   max-width: inherit !important;
-}
 
 </style>
 </section><!-- section -->
