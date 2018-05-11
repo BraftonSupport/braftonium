@@ -34,25 +34,9 @@ $other = $style['other'];
 				// loop through the rows of data
 				while ( have_rows('content') ) : the_row();
 					$_SESSION['sectionrow']=$sectionrow;
-					if( get_row_layout() == 'visual' ):
-						get_template_part( 'post-formats/content', 'visual' );
-						$sectionrow++;
-					elseif( get_row_layout() == 'list' ): 
-						get_template_part( 'post-formats/content', 'list' );
-						$sectionrow++;
-					elseif( get_row_layout() == 'validation' ):
-						get_template_part( 'post-formats/content', 'validation' );
-						$sectionrow++;
-					elseif( get_row_layout() == 'row' ): 
-						get_template_part( 'post-formats/content', 'row' );
-						$sectionrow++;
-					elseif( get_row_layout() == 'cta' ): 
-						get_template_part( 'post-formats/content', 'cta' );
-						$sectionrow++;
-					elseif( get_row_layout() == 'map' ):
-						get_template_part( 'post-formats/content', 'map' );
-						$sectionrow++;
-					endif;
+					$row_layout = get_row_layout();
+					get_template_part( 'post-formats/content', $row_layout);
+					$sectionrow++;
 				endwhile;
 			endif; ?>
 			<div id="inner-content" class="wrap cf">
