@@ -7,7 +7,7 @@
 						<?php dynamic_sidebar( 'blog-sidebar' ); ?>
 					
 						<?php if ( is_single() && get_field('related_posts', 'option')=='side' ) : ?>
-							<div class="latest">
+							<section class="latest widget">
 								<h3><?php _e( 'Related Posts', 'braftonium' ); ?></h3>
 								<?php $categories = get_the_category();
 								if ($categories) {
@@ -20,7 +20,7 @@
 
 										if( $my_query->have_posts() ) {
 											while ($my_query->have_posts()) : $my_query->the_post();
-											$url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
+											$url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'medium' );
 											echo '<a href="' . get_the_permalink() . '" title="'.get_the_title().'">';
 												if ( $options['featured_style']=="rollover" ) {
 													echo '<div class="thumb" style="background-image: url('.$url[0].')"></div>';
@@ -33,7 +33,7 @@
 										}
 									}
 								} ?>
-							</div>
+							</section>
 						<?php endif; ?>
 					</div>
 				<?php endif; ?>

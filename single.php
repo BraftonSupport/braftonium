@@ -48,9 +48,13 @@
 							</article>
 
 						<?php endif; ?>
-						<?php if ( is_single() && get_field('related_posts', 'option')=='below' ) : ?>
+						
+					</main>
+
+					<?php get_sidebar(); ?>
+					<?php if ( is_single() && get_field('related_posts', 'option')=='below' ) : ?>
 						<div class="latest">
-							<h3><?php _e( 'Related Posts', 'braftonium' ); ?></h3>
+							<h3><?php _e( 'Related Posts', 'braftonium' ); ?></h3><div class="container">
 							<?php $categories = get_the_category();
 							if ($categories) {
 								foreach ($categories as $category) {
@@ -75,12 +79,8 @@
 									}
 								}
 							 } ?>
-						</div>
+						</div></div>
 					<?php endif; ?>
-					</main>
-
-					<?php get_sidebar(); ?>
-
 				</div>
 
 			</div>

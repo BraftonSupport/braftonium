@@ -2215,33 +2215,57 @@ SIDEBARS & ASIDES
   margin-bottom: 1.5em;
 }
 
+/* line 698, ../scss/breakpoints/_base.scss */
+.latest {
+  clear: both;
+}
+/* line 700, ../scss/breakpoints/_base.scss */
+.latest h5 {
+  margin: .5em 0 2em;
+}
+/* line 703, ../scss/breakpoints/_base.scss */
+.latest img {
+  max-width: 300px;
+}
+
+/* line 708, ../scss/breakpoints/_base.scss */
+.sidebar .latest img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 713, ../scss/breakpoints/_base.scss */
+.tiny {
+  font-size: .9em;
+}
+
 /*********************
 FOOTER STYLES
 *********************/
-/* line 703, ../scss/breakpoints/_base.scss */
+/* line 721, ../scss/breakpoints/_base.scss */
 .footer {
   clear: both;
   background-color: #323944;
   color: #f8f9fa;
 }
-/* line 707, ../scss/breakpoints/_base.scss */
+/* line 725, ../scss/breakpoints/_base.scss */
 .footer a.logo img {
   max-width: 150px;
   width: 100%;
   display: block;
   margin: 5px auto 0;
 }
-/* line 713, ../scss/breakpoints/_base.scss */
+/* line 731, ../scss/breakpoints/_base.scss */
 .footer .copyright {
   font-size: .8em;
   padding: 7px 0;
   background: rgba(50, 57, 68, 0.2);
 }
-/* line 718, ../scss/breakpoints/_base.scss */
+/* line 736, ../scss/breakpoints/_base.scss */
 .footer section {
   margin-bottom: 1em;
 }
-/* line 719, ../scss/breakpoints/_base.scss */
+/* line 737, ../scss/breakpoints/_base.scss */
 .footer section h3 {
   margin-bottom: .25em;
 }
@@ -2255,22 +2279,22 @@ it simple because you'll have to
 override these styles for the desktop
 view.
 */
-/* line 735, ../scss/breakpoints/_base.scss */
+/* line 753, ../scss/breakpoints/_base.scss */
 .social-navigation {
   margin: 0;
   text-align: center;
 }
-/* line 738, ../scss/breakpoints/_base.scss */
+/* line 756, ../scss/breakpoints/_base.scss */
 .social-navigation li {
   display: inline;
 }
-/* line 741, ../scss/breakpoints/_base.scss */
+/* line 759, ../scss/breakpoints/_base.scss */
 .social-navigation a {
   display: inline-block;
   margin: 1em;
   text-align: center;
 }
-/* line 750, ../scss/breakpoints/_base.scss */
+/* line 768, ../scss/breakpoints/_base.scss */
 .social-navigation svg {
   height: 1.5em;
   width: 1.5em;
@@ -2616,7 +2640,7 @@ you can add resource intensive styles.
   /* line 156, ../scss/breakpoints/_768up.scss */
   .sidebar {
     margin: 3em 0 0 0;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 30px;
   }
 
   /* line 161, ../scss/breakpoints/_768up.scss */
