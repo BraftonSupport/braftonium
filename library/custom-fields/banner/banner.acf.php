@@ -1,4 +1,5 @@
 <?php
+if(function_exists("acf_add_local_field_group")){
 acf_add_local_field_group(array(
 	'key' => 'group_5a908eac0f1d0',
 	'title' => 'Banner',
@@ -91,3 +92,4 @@ acf_add_local_field_group(array(
 	'active' => 1,
 	'description' => '',
 ));
+}

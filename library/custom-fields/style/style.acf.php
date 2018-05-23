@@ -1,4 +1,5 @@
 <?php
+if(function_exists("acf_add_local_field_group")){
 acf_add_local_field_group(array(
 	'key' => 'group_5a4d3902e55eb',
 	'title' => 'Style',
@@ -190,3 +191,4 @@ acf_add_local_field_group(array(
 	'active' => 1,
 	'description' => '',
 ));
+}
