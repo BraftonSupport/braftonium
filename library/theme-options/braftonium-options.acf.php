@@ -1,4 +1,5 @@
 <?php
+if(function_exists("acf_add_local_field_group")){
 acf_add_local_field_group(array(
 	'key' => 'group_5a4e8d955ca60',
 	'title' => 'Braftonium Theme Options',
@@ -265,7 +266,7 @@ acf_add_local_field_group(array(
 	'active' => 1,
 	'description' => '',
 ));
-
+}
 
 /* Adding More Options to the Wordpress Theme Customizer.
 -----------------------------------------------------------------*/
