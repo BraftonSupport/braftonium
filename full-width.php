@@ -50,25 +50,11 @@ $other = $style['other'];
 							<header class="article-header">
 								<?php if( !have_rows('content') ): ?>
 									<h1 class="page-title"><?php the_title(); ?></h1>
-								<?php else : ?>
-									<h2 class="page-title"><?php the_title(); ?></h2>
 								<?php endif; ?>
-
-								<p class="byline vcard">
-								<?php printf( __( 'Posted', 'braftonium' ).' %1$s %2$s',
-									/* the time the post was published */
-									'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-									/* the author of the post */
-									'<span class="by">'.__( 'by', 'braftonium' ).'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-								); ?>
-								</p>
-
 							</header>
 
 							<section class="entry-content cf" itemprop="articleBody">
-								<?php
-									the_content();
-								?>
+								<?php the_content(); ?>
 							</section>
 
 						</article>

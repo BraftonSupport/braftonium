@@ -298,5 +298,49 @@ if ( WPEX_WOOCOMMERCE_ACTIVE ) {
 	}
 }
 
+/**
+ * What it says on the tin.
+ */
+
+if (!function_exists( 'social_sharing_buttons' ) ) :
+	$socialshare = get_field('social_share_buttons', 'option');
+	$location = get_field('ss_button_location', 'option');
+	$socialmedias = get_field('social_media', 'option');
+	if ( $socialshare=="on" ) {
+		function social_sharing_buttons() {
+			// Get current page URL 
+			$ssbURL = get_permalink();
+
+			// Get current page title
+			$ssbTitle = str_replace( ' ', '%20', get_the_title());
+				
+			// Get Post Thumbnail for pinterest
+			$ssbThumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+
+			// Construct sharing URL without using any script
+			$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$ssbURL;
+			$twitterURL = 'https://twitter.com/intent/tweet?text='.$ssbTitle.'&amp;url='.$ssbURL;
+			$googleURL = 'https://plus.google.com/share?url='.$ssbURL;
+			$pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$ssbURL.'&amp;media='.$ssbThumbnail[0].'&amp;description='.$ssbTitle;
+			$linkedURL = 'https://linkedin.com/shareArticle?mini=true&url='.$ssbURL.'&title='.$ssbTitle;
+
+			// Add sharing button at the end of page/page content
+			$variable .= '<span class="ssb-social"><span class="ssb-text">Social Share: </span>';
+			$options = get_option( 'businesstheme_options' );
+			if (in_array("facebook", $socialmedias) ) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank">'.get_svg_path('icon-facebook').'</a>'; }
+			if ( in_array("twitter", $socialmedias) ) { $variable .= '<a class="ssb-twitter" href="'. $twitterURL .'" target="_blank">'.get_svg_path('icon-twitter').'</a>'; }
+			if ( in_array("google", $socialmedias) ) { $variable .= '<a class="ssb-googleplus" href="'.$googleURL.'" target="_blank">'.get_svg_path('icon-google').'</a>'; }
+			if ( in_array("linkedin", $socialmedias) ) { $variable .= '<a class="ssb-linked" href="'.$linkedURL.'" target="_blank">'.get_svg_path('icon-linkedin').'</a>'; }
+			if ( in_array("pinterest", $socialmedias) ) { $variable .= '<a class="ssb-pinterest" href="'.$pinterestURL.'" target="_blank">'.get_svg_path('icon-pinterest').'</a>'; }
+			if ( in_array("email", $socialmedias) ) { $variable .= '<a class="ssb-email" href="mailto:?subject=I wanted you to see this site&amp;body='.$ssbURL.'">'.get_svg_path('icon-envelope').'</a>'; }
+			$variable .= '</span>';
+
+			if ( is_single() && $location=="post" || !is_single() && $location=="excerpt" || $location=="all" ){
+				echo $variable;
+			}
+		}
+	}
+
+endif;
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

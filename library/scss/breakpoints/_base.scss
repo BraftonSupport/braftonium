@@ -695,6 +695,24 @@ SIDEBARS & ASIDES
 	border-radius: 2px;
 	margin-bottom: 1.5em;
 }
+.latest {
+	clear: both;
+	h5 {
+		margin: .5em 0 2em;
+	}
+	img {
+		max-width: 300px;
+	}
+}
+.sidebar .latest {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+.tiny {
+	font-size: .9em;
+}
 
 /*********************
 FOOTER STYLES
