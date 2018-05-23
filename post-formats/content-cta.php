@@ -31,6 +31,9 @@ if ( $style['other'] ) {
 	if (in_array('thin', $style['other'])){
 		$classes[] = "thin";
 	}
+	if (in_array('center', $style['other'])){
+		$classes[] = "center";
+	}
 } ?>
 
 <section class="<?php echo implode(' ',$classes); ?>" style="<?php
@@ -85,8 +88,8 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		<?php }
 	} ?><div class="wrap">
 
-		<?php echo $titletext;
-		echo $text;
+		<?php if ($titletext): echo $titletext; endif;
+		if ($text): echo $text; endif;
 		if ($button):
 			echo '<a href="'.$button['url'].'" class="button"';
 			if ($button['target']): echo 'target="'.$button['target'].'"'; endif;

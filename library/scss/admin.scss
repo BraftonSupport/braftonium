@@ -51,3 +51,32 @@ start customizing. All admin functions are located in lib/admin/
 	float: right!important;
 	clear: none!important;
 }
+
+//style
+.acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > div {
+	margin-right: auto;
+	border-left: 1px solid #eee;
+	border-top: 0;
+	min-width: 150px;
+}
+.acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > div:last-of-type {
+	width: 40%!important;
+	margin-right: 0;
+}
+.acf-field-5a4d3dc7e18d5 .acf-field-5a4d42b4ce417 {
+	width: 60%!important;
+}
+.acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > .acf-field-5a4d42b4ce417, .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > .acf-field-5a4d4292ce416 {
+	border-top: 1px solid #eee;
+}
