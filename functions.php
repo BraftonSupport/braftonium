@@ -117,17 +117,17 @@ Let's get everything up and running.
 function braftonium_start() {
 
   //Allow editor style.
-  add_editor_style( get_stylesheet_directory_uri() . '/library/css/editor-style.css' );
+  add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
 
   add_action( 'admin_enqueue_scripts', 'load_admin_style' );
   function load_admin_style() {
-	wp_enqueue_style( 'admin_css', get_stylesheet_directory_uri() . '/library/css/admin.css', false, '1.0.0' );
+	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/library/css/admin.css', false, '1.0.0' );
   }
 
   wp_enqueue_script( 'functions', get_template_directory_uri() . '/library/js/functions.js', array(), '1.0.0', true );
   wp_enqueue_script( 'slick', get_template_directory_uri() . '/library/js/slick/slick.min.js', array(), '1.0.0', true );
-  wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/library/js/slick/slick.css', false, '1.0.0' );
-  wp_enqueue_style( 'slick-themes', get_stylesheet_directory_uri() . '/library/js/slick/slick-theme.css', false, '1.0.0' );
+  wp_enqueue_style( 'slick', get_template_directory_uri() . '/library/js/slick/slick.css', false, '1.0.0' );
+  wp_enqueue_style( 'slick-themes', get_template_directory_uri() . '/library/js/slick/slick-theme.css', false, '1.0.0' );
 
   if ( get_field('sticky_nav', 'option')[0]=='on' ){
 	wp_enqueue_script( 'sticky', get_template_directory_uri() . '/library/js/sticky.js', array(), '1.0.0', true );
