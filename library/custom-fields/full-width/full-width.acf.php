@@ -181,7 +181,7 @@ acf_add_local_field_group(array(
 						),
 						array(
 							'key' => 'field_5a4d574f8c579',
-							'label' => __( 'List Custom Posts or Recent Posts', 'braftonium' ),
+							'label' => __( 'List Custom Content or Recent Posts', 'braftonium' ),
 							'name' => 'list_type',
 							'type' => 'radio',
 							'instructions' => '',
@@ -205,7 +205,7 @@ acf_add_local_field_group(array(
 						),
 						array(
 							'key' => 'field_5a4d487bcb1fe',
-							'label' => __( 'Custom List', 'braftonium' ),
+							'label' => __( 'Custom Content', 'braftonium' ),
 							'name' => 'custom_list',
 							'type' => 'repeater',
 							'instructions' => '',
@@ -228,7 +228,7 @@ acf_add_local_field_group(array(
 							'min' => 0,
 							'max' => 0,
 							'layout' => 'block',
-							'button_label' => '',
+							'button_label' => 'Add Content',
 							'sub_fields' => array(
 								array(
 									'key' => 'field_5a4d48e3cb1ff',

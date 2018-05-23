@@ -32,6 +32,9 @@ if ( $style['other'] ) {
 	if (in_array('thin', $style['other'])){
 		$classes[] = "thin";
 	}
+	if (in_array('center', $style['other'])){
+		$classes[] = "center";
+	}
 } ?>
 
 <section class="<?php echo implode(' ',$classes); ?>" style="<?php

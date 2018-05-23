@@ -38,6 +38,9 @@ if ( $style['other'] ) {
 	if (in_array('thin', $style['other'])){
 		$classes[] = "thin";
 	}
+	if (in_array('center', $style['other'])){
+		$classes[] = "center";
+	}
 } ?>
 
 <section class="<?php echo implode(' ',$classes); ?>" style="<?php
@@ -46,9 +49,8 @@ if ( $style['background_color'] ) { echo 'background-color: ' . $style['backgrou
 if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 	<div class="wrap">
 
-		<?php echo $titletext;
-		echo $intro;
-		?>
+		<?php if ($titletext): echo $titletext; endif;
+		if ($intro): echo $intro; endif; ?>
 	
 		<div class="container"><?php
 		if ( $custom ) :

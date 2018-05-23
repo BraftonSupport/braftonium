@@ -147,6 +147,7 @@ acf_add_local_field_group(array(
 						'full' => __( 'Full Screen', 'braftonium' ),
 						'compact' => __( 'Compact', 'braftonium' ),
 						'thin' => __( 'Thin', 'braftonium' ),
+						'center' => __( 'Center', 'braftonium' ),
 					),
 					'allow_custom' => 0,
 					'save_custom' => 0,
