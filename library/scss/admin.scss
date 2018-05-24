@@ -62,7 +62,8 @@ start customizing. All admin functions are located in lib/admin/
     flex-direction: row;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
+	background-color: rgba(255, 255, 255, 0.25);
 }
 .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > div {
 	margin-right: auto;

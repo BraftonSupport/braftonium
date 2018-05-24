@@ -149,6 +149,21 @@ POSTS & CONTENT STYLES
 .blog .hentry {
 	padding: 3em 0 0;
 }
+
+.alignleft, img.alignleft {
+	float: left;
+	margin-right: 15px;}
+.alignright, img.alignright {
+	float: right;
+	margin-left: 15px;
+}
+.aligncenter, img.aligncenter {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
 /*********************
 SIDEBARS & ASIDES
 *********************/

@@ -69,9 +69,10 @@ start customizing. All admin functions are located in lib/admin/
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
-/* line 67, ../scss/admin.scss */
+/* line 68, ../scss/admin.scss */
 .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > div {
   margin-right: auto;
   border-left: 1px solid #eee;
@@ -79,18 +80,18 @@ start customizing. All admin functions are located in lib/admin/
   min-width: 150px;
 }
 
-/* line 73, ../scss/admin.scss */
+/* line 74, ../scss/admin.scss */
 .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > div:last-of-type {
   width: 40% !important;
   margin-right: 0;
 }
 
-/* line 77, ../scss/admin.scss */
+/* line 78, ../scss/admin.scss */
 .acf-field-5a4d3dc7e18d5 .acf-field-5a4d42b4ce417 {
   width: 60% !important;
 }
 
-/* line 80, ../scss/admin.scss */
+/* line 81, ../scss/admin.scss */
 .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > .acf-field-5a4d42b4ce417, .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > .acf-field-5a4d4292ce416 {
   border-top: 1px solid #eee;
 }
