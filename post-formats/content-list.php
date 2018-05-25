@@ -55,18 +55,22 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		<div class="container"><?php
 		if ( $custom ) :
 			foreach( $custom as $item ):
-				$url = $item['button']['url'];
-				$text = $item['button']['text'];
+				if($item['button']):
+					$url = $item['button']['url'];
+					$text = $item['button']['text'];
+				endif;
+				if(is_array($item['image_size_and_shape'])):
 					if( in_array('thumb', $item['image_size_and_shape']) ): $size = 'thumbnail'; endif;
 					if( in_array('square', $item['image_size_and_shape']) ): $size = 'mediumsquared'; endif;
 					if( in_array('uncropped', $item['image_size_and_shape']) ): $size = 'full'; endif;
+				endif;
 			?>
 				<div class="list-item"><?php
 				if ( !$showbutton ):'<a href="'.$url.'"">'; endif;
-				echo '<div class="list-featured-image">';
+				echo '<div class="image">';
 				if ( $item['image'] ):
 					
-					if ( in_array('round', $item['image_size_and_shape']) ):
+					if ( is_array($item['image_size_and_shape']) && in_array('round', $item['image_size_and_shape']) ):
 						echo wp_get_attachment_image( $item['image'], $size, "", ["class" => "round"] );
 					else:
 						echo wp_get_attachment_image( $item['image'], $size );

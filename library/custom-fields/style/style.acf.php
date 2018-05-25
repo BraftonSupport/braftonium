@@ -145,8 +145,8 @@ acf_add_local_field_group(array(
 					'choices' => array(
 						'shadow' => __( 'Add Shadow', 'braftonium' ),
 						'full' => __( 'Full Screen', 'braftonium' ),
-						'compact' => __( 'Compact', 'braftonium' ),
-						'thin' => __( 'Thin', 'braftonium' ),
+						'compact' => __( 'Compact (width)', 'braftonium' ),
+						'thin' => __( 'Thin (height/padding)', 'braftonium' ),
 						'center' => __( 'Center', 'braftonium' ),
 					),
 					'allow_custom' => 0,

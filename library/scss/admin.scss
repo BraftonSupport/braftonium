@@ -23,6 +23,9 @@ start customizing. All admin functions are located in lib/admin/
 
 // Full Width Sections
 #acf_after_title-sortables .postbox .layout {
+	.layout {
+		background-color: rgba(255, 255, 255, 0.3)!important;
+	}
 	&:first-child, &:nth-child(7) {
     	background: rgba(127,0,0,.1);
 	}
@@ -62,7 +65,8 @@ start customizing. All admin functions are located in lib/admin/
     flex-direction: row;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
+	background-color: rgba(255, 255, 255, 0.3);
 }
 .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > div {
 	margin-right: auto;
