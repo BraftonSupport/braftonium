@@ -96,6 +96,14 @@ a, a:visited {
 	}
 }
 
+a.blue-btn {
+	color: $white;
+	&:hover,
+	&:focus {
+	  color: $white;
+	} // end hover
+}
+
 /*********************
 TYPOGRAPHY
 *********************/
@@ -317,7 +325,7 @@ NAVIGATION STYLES
 			color: $white;
 			text-decoration: none;
 			&:hover {
-				color: $pink;
+				color: $lightblue;
 			}
 		}
 		ul.sub-menu,
@@ -354,7 +362,7 @@ POSTS & CONTENT STYLES
 	background: rgba($color: $black, $alpha: .4);
 }
 .banner, .page-template-full-width .banner {
-	color: #fff;
+	color: $white;
 	background-position: center;
 	background-size: cover;
 	.wrap {
@@ -445,31 +453,11 @@ svg {
 	}
 }
 
-
-			/*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
-			.alignleft, img.alignleft {
-				float: left;
-				margin-right: 15px;}
-			.alignright, img.alignright {
-				float: right;
-				margin-left: 15px;
-			}
-			.aligncenter, img.aligncenter {
-				text-align: center;
-				margin-right: auto;
-				margin-left: auto;
-			}
-			
 		.hentry {
 			padding: 2em 0 2.5em;
-			img {
-				// width: 100%;
-				// height: auto;
+			.image img {
+				width: 100%;
+				height: auto;
 			}
 
 			header {
@@ -594,7 +582,7 @@ svg {
 
 		.wp-caption {
 			max-width: 100%;
-			background: #eee;
+			background: $gray;
 			padding: 5px;
 
 			/* images inside wp-caption */

@@ -67,7 +67,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			?>
 				<div class="list-item"><?php
 				if ( !$showbutton ):'<a href="'.$url.'"">'; endif;
-				echo '<div class="list-featured-image">';
+				echo '<div class="image">';
 				if ( $item['image'] ):
 					
 					if ( is_array($item['image_size_and_shape']) && in_array('round', $item['image_size_and_shape']) ):

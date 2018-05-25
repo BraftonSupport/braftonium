@@ -83,9 +83,10 @@ NAVIGATION STYLES
 			li {
 				a {
 					padding-left: 10px;
+					padding-right: 10px;
 					border-right: 0;
 					display: block;
-					width: 180px;
+					width: 200px;
 				}
 				/*
 				if you need to go deeper, go nuts
@@ -146,6 +147,7 @@ POSTS & CONTENT STYLES
 		}
 	}
 }
+
 .blog .hentry {
 	padding: 3em 0 0;
 }

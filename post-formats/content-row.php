@@ -90,9 +90,9 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			echo '<div class="container">';
 			while ( have_rows('row_content') ) : the_row();
 				if( get_row_layout() == 'imageblock' ):
-					echo '<div>'.wp_get_attachment_image( get_sub_field('Image'), 'full' ).'</div>';
+					echo '<div class="image">'.wp_get_attachment_image( get_sub_field('Image'), 'full' ).'</div>';
 				elseif( get_row_layout() == 'textblock' ): 
-					echo '<div>'.get_sub_field('text').'</div>';
+					echo '<div class="text">'.get_sub_field('text').'</div>';
 				endif;
 			endwhile;
 			echo '</div>';
