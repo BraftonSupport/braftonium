@@ -272,8 +272,7 @@ acf_add_local_field_group(array(
 -----------------------------------------------------------------*/
 
 /* Adding the logo to the settings page*/
-
-function braftonium_site_options( $wp_customize ) {
+function braftonium_logo_options( $wp_customize ) {
 	$wp_customize->add_setting( 'braftonium_logo' );
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'braftonium_logo', array(
@@ -291,12 +290,91 @@ function braftonium_site_options( $wp_customize ) {
 	) ) );
 }
 
-add_action('customize_register', 'braftonium_site_options');
+add_action('customize_register', 'braftonium_logo_options');
 
-/* Logo size */
 
-function braftonium_get_image_id($image_url) {
-	global $wpdb;
-	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
-        return $attachment[0]; 
+/* Adding the color options to the settings page*/
+function braftonium_color_options( $wp_customize ) {
+	$wp_customize->add_setting( 'braftonium_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_color', array(
+	'label' => __( 'Text Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_color',
+	) ) );
+
+	$wp_customize->add_setting( 'braftonium_link_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_link_color', array(
+	'label' => __( 'Link Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_link_color',
+	) ) );
+
+	$wp_customize->add_setting( 'braftonium_linkhover_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_linkhover_color', array(
+	'label' => __( 'Link Hover Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_linkhover_color',
+	) ) );
+
+	$wp_customize->add_setting( 'braftonium_headerbg_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_headerbg_color', array(
+	'label' => __( 'Header Background Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_headerbg_color',
+	) ) );
+
+	$wp_customize->add_setting( 'braftonium_header_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_header_color', array(
+	'label' => __( 'Header Text Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_header_color',
+	) ) );
+
+	$wp_customize->add_setting( 'braftonium_headerlink_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_headerlink_color', array(
+	'label' => __( 'Header Link Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_headerlink_color',
+	) ) );
+
+	$wp_customize->add_setting( 'braftonium_headerlinkhover_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_headerlinkhover_color', array(
+	'label' => __( 'Header Link Hover Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_headerlinkhover_color',
+	) ) );
+
+	$wp_customize->add_setting( 'braftonium_footerbg_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_footerbg_color', array(
+	'label' => __( 'Footer Background Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_footerbg_color',
+	) ) );
+
+	$wp_customize->add_setting( 'braftonium_footer_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_footer_color', array(
+	'label' => __( 'Footer Text Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_footer_color',
+	) ) );
+
+	$wp_customize->add_setting( 'braftonium_footerlink_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_footerlink_color', array(
+	'label' => __( 'Footer Link Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_footerlink_color',
+	) ) );
+
+	$wp_customize->add_setting( 'braftonium_footerlinkhover_color' );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_footerlinkhover_color', array(
+	'label' => __( 'Footer Link Hover Color' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_footerlinkhover_color',
+	) ) );
 }
+add_action('customize_register', 'braftonium_color_options');
+
+function braftonium_customize_preview_js() {
+	wp_enqueue_script( 'braftonium-customize-preview', get_template_directory_uri() . '/library/js/customize-preview.js', array( 'customize-preview' ), '20150825', true );
+}
+add_action( 'customize_preview_init', 'braftonium_customize_preview_js' );

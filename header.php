@@ -42,11 +42,35 @@
 
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
-		<?php // end of wordpress head ?>
+		<?php // end of wordpress head
+			$braftonium_text = get_theme_mod( 'braftonium_color' );
+			$braftonium_link = get_theme_mod( 'braftonium_link_color' );
+			$braftonium_hover = get_theme_mod( 'braftonium_linkhover_color' );
+			$braftonium_headerbg = get_theme_mod( 'braftonium_headerbg_color' );
+			$braftonium_headercolor = get_theme_mod( 'braftonium_header_color' );
+			$braftonium_headerlink = get_theme_mod( 'braftonium_headerlink_color' );
+			$braftonium_headerlinkhover = get_theme_mod( 'braftonium_headerlinkhover_color' );
+			$braftonium_footerbg_color = get_theme_mod( 'braftonium_footerbg_color' );
+			$braftonium_footer_color = get_theme_mod( 'braftonium_footer_color' );
+			$braftonium_footerlink_color = get_theme_mod( 'braftonium_footerlink_color' );
+			$braftonium_footerlinkhover_color = get_theme_mod( 'braftonium_footerlinkhover_color' );
+		echo '<style>';
+			if ($braftonium_text) { echo 'body { color:'.$braftonium_text.';}'; }
+			if ($braftonium_link) { echo 'a, a:visited { color:'.$braftonium_link.';} button, .blue-btn { background-color:'.$braftonium_link.';} '; }
+			if ($braftonium_hover) { echo 'a:hover { color:'.$braftonium_hover.';} .button:hover { background-color:'.$braftonium_hover.';} '; }
+			if ($braftonium_headerbg) { echo '.header { background-color:'.$braftonium_headerbg.';} '; }
+			if ($braftonium_headercolor) { echo '.header { color:'.$braftonium_headercolor.';} '; }
+			if ($braftonium_headerlink) { echo '.header a, #menu-nav.nav li a { color:'.$braftonium_headerlink.';} .header button, .header .blue-btn { background-color:'.$headerlink.';} '; }
+			if ($braftonium_headerlinkhover) { echo '.header a:hover, #menu-nav.nav li a:hover { color:'.$braftonium_headerlinkhover.';} .header .header button:hover, .header .blue-btn:hover { background-color:'.$headerlinkhover.';}'; }
+			if ($braftonium_footerbg_color) { echo '.footer { background-color:'.$braftonium_footerbg_color.';} '; }
+			if ($braftonium_footer_color) { echo '.footer { color:'.$braftonium_footer_color.';} '; }
+			if ($braftonium_footerlink_color) { echo '.footer a { color:'.$braftonium_footerlink_color.';} .footer button, .footer .blue-btn { background-color:'.$braftonium_footerlink_color.';} '; }
+			if ($braftonium_footerlinkhover_color) { echo '.footer a:hover { color:'.$braftonium_footerlinkhover_color.';} .footer button:hover, .footer .blue-btn:hover { background-color:'.$braftonium_footerlinkhover_color.';} '; }
+			if ($braftonium_hover) { echo '@media only screen and (min-width: 768px){ #menu-nav.nav li a { background-color:'.$braftonium_headerbg.';} } '; }
+		echo '</style>';
 
-		<?php $nav = get_field('navigation_bar_position', 'option');
+		$nav = get_field('navigation_bar_position', 'option');
 		$ga = get_field('google_analytics', 'option');
-
 		if ( $ga ) : ?>
 			<!-- Google Analytics -->
 				<script>
