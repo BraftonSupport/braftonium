@@ -2,7 +2,6 @@
 
 // LOAD BRAFTONIUM THEME CORE (if you remove this, the theme will break)
 require_once( 'library/braftonium.php' );
-
 include_once get_template_directory().'/library/custom-fields/fields.php';
 
 /*
@@ -18,7 +17,6 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 }
-
 
 
 /**
@@ -195,7 +193,7 @@ function braftonium_customizer($wp_customize) {
 
   // $wp_customize->remove_section('title_tagline');
   // $wp_customize->remove_section('colors');
-  // $wp_customize->remove_section('background_image');
+  $wp_customize->remove_section('background_image');
   // $wp_customize->remove_section('static_front_page');
   // $wp_customize->remove_section('nav');
 
@@ -203,8 +201,8 @@ function braftonium_customizer($wp_customize) {
   // $wp_customize->remove_control('blogdescription');
   
   // Uncomment the following to change the default section titles
-  // $wp_customize->get_section('colors')->title = __( 'Theme Colors' );
-  // $wp_customize->get_section('background_image')->title = __( 'Images' );
+  $wp_customize->get_section('colors')->title = __( 'Theme Colors' );
+//   $wp_customize->get_section('background_image')->title = __( 'Images' );
 }
 
 add_action( 'customize_register', 'braftonium_customizer' );
@@ -231,16 +229,16 @@ function get_svg_path($svgid) {
 	return '<svg class="'.$svgid.$second_step[0].'</svg>';
 }
 
-
 /**
  * What it says on the tin.
  */
 if (!function_exists( 'social_sharing_buttons' ) ) :
 	$ssbutton = get_field('social_share_buttons', 'option');
-	$ss_location = get_field('ss_button_location', 'option');
-	$social_media = get_field('ss_button_location', 'option');
-	if ( $ssbutton=='on' ) {
+	if (in_array("on", $ssbutton) ) {
 		function social_sharing_buttons() {
+			$social_media = get_field('social_media', 'option');
+			$ss_location = get_field('ss_button_location', 'option');
+
 			// Get current page URL 
 			$ssbURL = get_permalink();
 
@@ -258,9 +256,9 @@ if (!function_exists( 'social_sharing_buttons' ) ) :
 			$linkedURL = 'https://linkedin.com/shareArticle?mini=true&url='.$ssbURL.'&title='.$ssbTitle;
 
 			// Add sharing button at the end of page/page content
-			$variable .= '<span class="ssb-social"><span class="ssb-text">Social Share: </span>';
-			$options = get_option( 'braftonium_options' );
-			if ( in_array('facebook', $social_media) ) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank">'.get_svg_path('icon-facebook').'</a>'; }
+			$variable = '<span class="ssb-social"><span class="ssb-text">Social Share: </span>';
+
+			if (is_array($social_media) && in_array("facebook", $social_media)) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank">'.get_svg_path('icon-facebook').'</a>'; }
 			if ( in_array('twitter', $social_media) ) { $variable .= '<a class="ssb-twitter" href="'. $twitterURL .'" target="_blank">'.get_svg_path('icon-twitter').'</a>'; }
 			if ( in_array('google', $social_media) ) { $variable .= '<a class="ssb-googleplus" href="'.$googleURL.'" target="_blank">'.get_svg_path('icon-google').'</a>'; }
 			if ( in_array('linkedin', $social_media) ) { $variable .= '<a class="ssb-linked" href="'.$linkedURL.'" target="_blank">'.get_svg_path('icon-linkedin').'</a>'; }
@@ -273,7 +271,6 @@ if (!function_exists( 'social_sharing_buttons' ) ) :
 			}
 		}
 	}
-
 endif;
 
 
@@ -297,50 +294,5 @@ if ( WPEX_WOOCOMMERCE_ACTIVE ) {
 		echo '</article></main></div></div>';
 	}
 }
-
-/**
- * What it says on the tin.
- */
-
-if (!function_exists( 'social_sharing_buttons' ) ) :
-	$socialshare = get_field('social_share_buttons', 'option');
-	$location = get_field('ss_button_location', 'option');
-	$socialmedias = get_field('social_media', 'option');
-	if ( $socialshare=="on" ) {
-		function social_sharing_buttons() {
-			// Get current page URL 
-			$ssbURL = get_permalink();
-
-			// Get current page title
-			$ssbTitle = str_replace( ' ', '%20', get_the_title());
-				
-			// Get Post Thumbnail for pinterest
-			$ssbThumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-
-			// Construct sharing URL without using any script
-			$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$ssbURL;
-			$twitterURL = 'https://twitter.com/intent/tweet?text='.$ssbTitle.'&amp;url='.$ssbURL;
-			$googleURL = 'https://plus.google.com/share?url='.$ssbURL;
-			$pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$ssbURL.'&amp;media='.$ssbThumbnail[0].'&amp;description='.$ssbTitle;
-			$linkedURL = 'https://linkedin.com/shareArticle?mini=true&url='.$ssbURL.'&title='.$ssbTitle;
-
-			// Add sharing button at the end of page/page content
-			$variable .= '<span class="ssb-social"><span class="ssb-text">Social Share: </span>';
-			$options = get_option( 'businesstheme_options' );
-			if (in_array("facebook", $socialmedias) ) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank">'.get_svg_path('icon-facebook').'</a>'; }
-			if ( in_array("twitter", $socialmedias) ) { $variable .= '<a class="ssb-twitter" href="'. $twitterURL .'" target="_blank">'.get_svg_path('icon-twitter').'</a>'; }
-			if ( in_array("google", $socialmedias) ) { $variable .= '<a class="ssb-googleplus" href="'.$googleURL.'" target="_blank">'.get_svg_path('icon-google').'</a>'; }
-			if ( in_array("linkedin", $socialmedias) ) { $variable .= '<a class="ssb-linked" href="'.$linkedURL.'" target="_blank">'.get_svg_path('icon-linkedin').'</a>'; }
-			if ( in_array("pinterest", $socialmedias) ) { $variable .= '<a class="ssb-pinterest" href="'.$pinterestURL.'" target="_blank">'.get_svg_path('icon-pinterest').'</a>'; }
-			if ( in_array("email", $socialmedias) ) { $variable .= '<a class="ssb-email" href="mailto:?subject=I wanted you to see this site&amp;body='.$ssbURL.'">'.get_svg_path('icon-envelope').'</a>'; }
-			$variable .= '</span>';
-
-			if ( is_single() && $location=="post" || !is_single() && $location=="excerpt" || $location=="all" ){
-				echo $variable;
-			}
-		}
-	}
-
-endif;
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
