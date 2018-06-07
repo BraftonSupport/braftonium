@@ -9,13 +9,13 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
+if (get_sub_field('title')):
 $titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
-
+endif;
 $style = get_sub_field('style');
-$add_class = get_sub_field('add_class');
 $classes = array('row');
-if ($style['class']){
-	$classes[] = $section_class;
+if ($style['add_class']){
+	$classes[] = $style['add_class'];
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
@@ -33,11 +33,7 @@ if ( $style['other'] ) {
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
-}
-if ( $add_class ) {
-	$classes[] = $add_class;
 } ?>
-
 <section class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
 if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }

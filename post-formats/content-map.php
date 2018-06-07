@@ -14,11 +14,10 @@ $map = get_sub_field('map');
 $google_api = get_sub_field('google_api');
 
 $style = get_sub_field('style');
-$add_class = get_sub_field('add_class');
 $classes = array('map');
 
-if ($style['class']){
-	$classes[] = $section_class;
+if ($style['add_class']){
+	$classes[] = $style['add_class'];
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
@@ -36,9 +35,6 @@ if ( $style['other'] ) {
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
-}
-if ( $add_class ) {
-	$classes[] = $add_class;
 } ?>
 
 <section class="<?php echo implode(' ',$classes); ?>" style="<?php
