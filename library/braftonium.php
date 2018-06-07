@@ -194,7 +194,7 @@ function related_posts() {
 		}
 		$args = array(
 			'tag' => $tag_arr,
-			'numberposts' => 5, /* you can change this to show more */
+			'numberposts' => 3, /* you can change this to show more */
 			'post__not_in' => array($post->ID)
 		);
 		$related_posts = get_posts( $args );
@@ -209,6 +209,7 @@ function related_posts() {
 	wp_reset_postdata();
 	echo '</ul>';
 } /* end related posts function */
+
 
 /*********************
 PAGE NAVI

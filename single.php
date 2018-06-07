@@ -55,6 +55,7 @@
 
 					<?php get_sidebar(); ?>
 					<?php if ( is_single() && get_field('related_posts', 'option')=='below' ) : ?>
+					<!-- HEY think about using related_posts(); -->
 						<div class="latest">
 							<h3><?php _e( 'Related Posts', 'braftonium' ); ?></h3><div class="container">
 							<?php $categories = get_the_category();

@@ -259,8 +259,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'all' => __( "On All", "braftonium" ),
-				'excerpt' => __( "On Excerpt", "braftonium" ),
+				'all' => __( "On Both Post and Excerpt", "braftonium" ),
 				'post' => __( "On Post", "braftonium" ),
 			),
 			'allow_null' => 0,
