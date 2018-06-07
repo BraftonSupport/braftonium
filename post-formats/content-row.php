@@ -12,6 +12,7 @@ $sectionrow = $_SESSION['sectionrow'];
 $titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
 
 $style = get_sub_field('style');
+$add_class = get_sub_field('add_class');
 $classes = array('row');
 if ($style['class']){
 	$classes[] = $section_class;
@@ -32,6 +33,9 @@ if ( $style['other'] ) {
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
+}
+if ( $add_class ) {
+	$classes[] = $add_class;
 } ?>
 
 <section class="<?php echo implode(' ',$classes); ?>" style="<?php

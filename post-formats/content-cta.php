@@ -14,6 +14,7 @@ $text = get_sub_field('text');
 $button = get_sub_field('button');
 
 $style = get_sub_field('style');
+$add_class = get_sub_field('add_class');
 $classes = array('cta');
 if ($style['class']){
 	$classes[] = $section_class;
@@ -34,7 +35,11 @@ if ( $style['other'] ) {
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
-} ?>
+}
+if ( $add_class ) {
+	$classes[] = $add_class;
+}
+?>
 
 <section class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }

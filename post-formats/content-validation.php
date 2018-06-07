@@ -16,6 +16,7 @@ $list_type = get_sub_field('list_type');
 	if ($list_type=='recent'): $recent = get_sub_field('recent'); $number = get_sub_field('number_of_posts'); endif;
 	$showbutton	 = get_sub_field('showbutton');
 $style = get_sub_field('style');
+$add_class = get_sub_field('add_class');
 $classes = array('validation');
 if ($style['class']){
 	$classes[] = $section_class;
@@ -36,6 +37,9 @@ if ( $style['other'] ) {
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
+}
+if ( $add_class ) {
+	$classes[] = $add_class;
 } ?>
 
 <section class="<?php echo implode(' ',$classes); ?>" style="<?php

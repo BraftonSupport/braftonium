@@ -14,6 +14,7 @@ $map = get_sub_field('map');
 $google_api = get_sub_field('google_api');
 
 $style = get_sub_field('style');
+$add_class = get_sub_field('add_class');
 $classes = array('map');
 
 if ($style['class']){
@@ -35,6 +36,9 @@ if ( $style['other'] ) {
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
+}
+if ( $add_class ) {
+	$classes[] = $add_class;
 } ?>
 
 <section class="<?php echo implode(' ',$classes); ?>" style="<?php
