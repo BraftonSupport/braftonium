@@ -2664,15 +2664,17 @@ you can add resource intensive styles.
   .alignleft, img.alignleft {
     float: left;
     margin-right: 15px;
+    margin-bottom: 15px;
   }
 
-  /* line 158, ../scss/breakpoints/_768up.scss */
+  /* line 160, ../scss/breakpoints/_768up.scss */
   .alignright, img.alignright {
     float: right;
     margin-left: 15px;
+    margin-bottom: 15px;
   }
 
-  /* line 162, ../scss/breakpoints/_768up.scss */
+  /* line 165, ../scss/breakpoints/_768up.scss */
   .aligncenter, img.aligncenter {
     text-align: center;
     margin-right: auto;
@@ -2682,19 +2684,19 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 173, ../scss/breakpoints/_768up.scss */
+  /* line 176, ../scss/breakpoints/_768up.scss */
   .sidebar {
     margin: 3em 0 0 0;
     padding: 0 0 0 30px;
   }
 
-  /* line 178, ../scss/breakpoints/_768up.scss */
+  /* line 181, ../scss/breakpoints/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
   }
 
-  /* line 183, ../scss/breakpoints/_768up.scss */
+  /* line 186, ../scss/breakpoints/_768up.scss */
   .widget {
     margin: 0 0 3em 0;
   }
@@ -2707,24 +2709,24 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 197, ../scss/breakpoints/_768up.scss */
+  /* line 200, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
   }
-  /* line 201, ../scss/breakpoints/_768up.scss */
+  /* line 204, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer section {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     margin: 1em auto 2em 0;
   }
-  /* line 206, ../scss/breakpoints/_768up.scss */
+  /* line 209, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer section h3 {
     margin-bottom: 1em;
   }
-  /* line 209, ../scss/breakpoints/_768up.scss */
+  /* line 212, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer section:last-child {
     margin-left: auto;
     -webkit-flex: 0 1 auto;

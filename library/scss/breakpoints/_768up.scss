@@ -154,10 +154,13 @@ POSTS & CONTENT STYLES
 
 .alignleft, img.alignleft {
 	float: left;
-	margin-right: 15px;}
+	margin-right: 15px; 
+	margin-bottom: 15px;
+}
 .alignright, img.alignright {
 	float: right;
-	margin-left: 15px;
+	margin-left: 15px; 
+	margin-bottom: 15px;
 }
 .aligncenter, img.aligncenter {
 	text-align: center;
