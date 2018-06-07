@@ -47,15 +47,19 @@ $other = $style['other'];
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
+							<?php if( the_title() ): ?>
 							<header class="article-header">
 								<?php if( !have_rows('content') ): ?>
 									<h1 class="page-title"><?php the_title(); ?></h1>
 								<?php endif; ?>
 							</header>
+							<?php endif; ?>
 
+							<?php if( the_content() ): ?>
 							<section class="entry-content cf" itemprop="articleBody">
 								<?php the_content(); ?>
 							</section>
+							<?php endif; ?>
 
 						</article>
 
