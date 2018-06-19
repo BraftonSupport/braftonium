@@ -44,9 +44,9 @@ HEADER STYLES
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	>* {
-		-webkit-flex: 1 1 48%;
-		-ms-flex: 1 1 48%;
-		flex: 1 1 48%;
+		-webkit-flex: 0 1 auto;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
 	}
 }
 

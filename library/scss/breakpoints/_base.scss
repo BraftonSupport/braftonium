@@ -216,7 +216,7 @@ HEADER STYLES
 			float:right;
 		}
 		nav {
-			margin: auto;
+			margin: auto 0 auto auto;
 		}
 	}
 	p {
@@ -289,6 +289,9 @@ HEADER STYLES
 		-webkit-flex: 1 1 100%;
 		-ms-flex: 1 1 100%;
 		flex: 1 1 100%;
+	}
+	.next {
+		margin: 0 0 0 auto;
 	}
 
 /*********************
