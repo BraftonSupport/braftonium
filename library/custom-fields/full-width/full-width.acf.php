@@ -321,7 +321,7 @@ acf_add_local_field_group(array(
 								),
 								array(
 									'key' => 'field_5a4d49facb201',
-									'label' => __( 'Button', 'braftonium' ),
+									'label' => __( 'Link', 'braftonium' ),
 									'name' => 'button',
 									'type' => 'link',
 									'instructions' => '',

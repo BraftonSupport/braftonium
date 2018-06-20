@@ -59,7 +59,8 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			foreach( $custom as $item ):
 				if($item['button']):
 					$url = $item['button']['url'];
-					$text = $item['button']['text'];
+					$text = $item['button']['title'];
+					$target = $item['button']['target'];
 				endif;
 				if(is_array($item['image_size_and_shape'])):
 					if( in_array('thumb', $item['image_size_and_shape']) ): $size = 'thumbnail'; endif;
@@ -68,7 +69,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 				endif;
 			?>
 				<div class="list-item"><?php
-				if ( !$showbutton ):'<a href="'.$url.'"">'; endif;
+				if ( !$showbutton ): echo '<a href="'.$url.'" target="'. $target.'"'; endif;
 				echo '<div class="image">';
 				if ( $item['image'] ):
 					
@@ -79,11 +80,11 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 					endif;
 				endif;
 				echo '</div>';
-				if ( !$showbutton ):'</a>'; endif;
+				if ( !$showbutton ): echo '</a>'; endif;
 
 				if ( $item['title'] ):
 					echo '<h3>';
-					 if ($url): echo '<a href="'.$url.'">'; endif;
+					 if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
 					 $titlestring = $item['title'];
 					 if (strlen($titlestring) > 65){
 						 $titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
@@ -93,7 +94,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 
 				if ( $item['content'] ): echo $item['content']; endif;
 
-				if ( $showbutton ): echo '<a href="'.$url.'" class="button">'.$text.'</a>';endif;
+				if ( $showbutton ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">'.$text.'</a>';endif;
 
 				echo '</div>';
 			endforeach;
