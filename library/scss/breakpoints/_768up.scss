@@ -173,11 +173,61 @@ POSTS & CONTENT STYLES
 		width: 75%;
 	}
 	.list .container {
-		-webkit-flex-wrap: nowrap;
-		-ms-flex-wrap: nowrap;
-		flex-wrap: nowrap;
+		&.count1, &.count2, &.count3, &.count4, &.count5, &.count6, &.count7, &.count8, &.count9, &.count10, &.count11, &.count12, &.count13, &.count14, &.count15 {
 		.list-item {
 			max-width: inherit;
+			&:last-child {
+				margin-right: 0;
+			}
+		}}
+		&.count1 .list-item {
+			-webkit-flex: 1 1 100%;
+			-ms-flex: 1 1 100%;
+			flex: 1 1 100%;
+		}
+		&.count2 {
+			.list-item {
+				margin-right: 2%;
+				-webkit-flex: 1 0 49%;
+				-ms-flex: 1 0 49%;
+				flex: 1 0 49%;
+				&:nth-child(2n){
+					margin-right: 0;
+				}
+			}
+		}
+		&.count3, &.count6 {
+			.list-item {
+				margin-right: 2%;
+				-webkit-flex: 1 0 32%;
+				-ms-flex: 1 0 32%;
+				flex: 1 0 32%;
+				&:nth-child(3n){
+					margin-right: 0;
+				}
+			}
+		}
+		&.count4, &.count7, &.count8, &.count11, &.count12 {
+			.list-item {
+				margin-right: 2.35%;
+				-webkit-flex: 1 0 23%;
+				-ms-flex: 1 0 23%;
+				flex: 1 0 23%;
+				&:nth-child(4n){
+					margin-right: 0;
+				}
+			}
+		}
+		&.count5, &.count9, &.count10, &.count13, &.count14, &.count15 {
+			.list-item {
+				margin-right: 1.25%;
+				-webkit-flex: 1 0 19%;
+				-ms-flex: 1 0 19%;
+				flex: 1 0 19%;
+				&:nth-child(5n){
+					margin-right: 0;
+				}
+			}
 		}
 	}
 }
