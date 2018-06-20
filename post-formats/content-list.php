@@ -52,9 +52,9 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 	<div class="wrap">
 
 		<?php if ($titletext): echo $titletext; endif;
-		if ($intro): echo $intro; endif; ?>
-	
-		<div class="container"><?php
+		if ($intro): echo $intro; endif;
+			$count = count($custom);
+			echo '<div class="container count'.$count.'">';
 		if ( $custom ) :
 			foreach( $custom as $item ):
 				if($item['button']):
