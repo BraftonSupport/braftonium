@@ -232,8 +232,16 @@ POSTS & CONTENT STYLES
 	}
 }
 
-.blog .hentry {
-	padding: 3em 0 0;
+.blog {
+	.hentry {
+		padding: 3em 0 0;
+	}
+	article {
+		display: block;
+		.thumbnail, .content {
+			margin: 0;
+		}
+	}
 }
 
 .alignleft, img.alignleft {
