@@ -362,7 +362,7 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 .black {
-	background: rgba($color: $black, $alpha: .4);
+	background: rgba($color: $black, $alpha: .6);
 }
 .banner, .page-template-full-width .banner {
 	color: $white;
@@ -408,9 +408,12 @@ svg {
 	}
 }
 
-.blog .hentry {
-	padding: 2em 0 0;
+.blog {
+	.hentry {
+		padding: 2em 0 0;
+	}
 }
+
 .shadow {
 	height: 0;
 	position: relative;
@@ -487,7 +490,6 @@ svg {
 
 		/* post meta */
 		.byline {
-			color: $meta-gray;
 			font-style: italic;
 			margin: 0;
 		}
@@ -621,6 +623,10 @@ svg {
 		top: 2px;
 		display: inline-block;
 		position: relative;
+	}
+	.banner	.ssb-social {
+		padding: 0;
+		display: block;
 	}
 
 /******************************************************************

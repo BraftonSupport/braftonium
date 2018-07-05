@@ -105,7 +105,21 @@ POSTS & CONTENT STYLES
 		margin-right: 0;
 	}
 }
-
+.blog {
+	article {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		.thumbnail, .content {
+			flex: 1 0 45%;
+			margin: 0 5% 0 0;
+		}
+		.thumbnail img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
 
 /*********************
 FOOTER STYLES

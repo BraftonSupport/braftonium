@@ -2,7 +2,7 @@
 
 			<div id="content">
 				<?php if (has_post_thumbnail()) : ?>
-					<section class="banner visual"<?php echo ' style="background-image:url('.get_the_post_thumbnail_url('full').')"'; ?>>
+					<section class="banner visual"<?php echo ' style="background-image:url('.get_the_post_thumbnail_url(get_the_ID(),'full').')"'; ?>>
 						<div class="black"><div class="wrap">
 							<h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 							<p class="byline entry-meta vcard">

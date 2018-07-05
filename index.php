@@ -22,8 +22,12 @@ $tagline = get_field('tagline',$blog_page_id); ?>
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
-
-								<header class="article-header">
+								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+									echo '<div class="thumbnail">';
+									the_post_thumbnail('medium');
+									echo '</div>';
+								} ?>
+								<div class="content"><header class="article-header">
 									<h2 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 									<p class="byline entry-meta vcard">
 										<?php printf( __( 'Posted', 'braftonium' ).' %1$s %2$s',
@@ -37,7 +41,7 @@ $tagline = get_field('tagline',$blog_page_id); ?>
 
 								<section class="entry-content cf">
 									<?php the_excerpt(); ?>
-								</section>
+								</section></div>
 
 							</article>
 						<?php endwhile; ?>
