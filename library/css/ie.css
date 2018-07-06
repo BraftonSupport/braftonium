@@ -560,9 +560,9 @@ POSTS & CONTENT STYLES
 /* line 210, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count4 .list-item, .page-template-full-width .list .container.count7 .list-item, .page-template-full-width .list .container.count8 .list-item, .page-template-full-width .list .container.count11 .list-item, .page-template-full-width .list .container.count12 .list-item {
   margin-right: 2.35%;
-  -webkit-flex: 1 0 23%;
-  -ms-flex: 1 0 23%;
-  flex: 1 0 23%;
+  -webkit-flex: 0 1 23%;
+  -ms-flex: 0 1 23%;
+  flex: 0 1 23%;
 }
 /* line 215, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count4 .list-item:nth-child(4n), .page-template-full-width .list .container.count7 .list-item:nth-child(4n), .page-template-full-width .list .container.count8 .list-item:nth-child(4n), .page-template-full-width .list .container.count11 .list-item:nth-child(4n), .page-template-full-width .list .container.count12 .list-item:nth-child(4n) {
@@ -571,9 +571,9 @@ POSTS & CONTENT STYLES
 /* line 221, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count5 .list-item, .page-template-full-width .list .container.count9 .list-item, .page-template-full-width .list .container.count10 .list-item, .page-template-full-width .list .container.count13 .list-item, .page-template-full-width .list .container.count14 .list-item, .page-template-full-width .list .container.count15 .list-item {
   margin-right: 1.25%;
-  -webkit-flex: 1 0 19%;
-  -ms-flex: 1 0 19%;
-  flex: 1 0 19%;
+  -webkit-flex: 0 1 19%;
+  -ms-flex: 0 1 19%;
+  flex: 0 1 19%;
 }
 /* line 226, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count5 .list-item:nth-child(5n), .page-template-full-width .list .container.count9 .list-item:nth-child(5n), .page-template-full-width .list .container.count10 .list-item:nth-child(5n), .page-template-full-width .list .container.count13 .list-item:nth-child(5n), .page-template-full-width .list .container.count14 .list-item:nth-child(5n), .page-template-full-width .list .container.count15 .list-item:nth-child(5n) {

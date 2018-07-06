@@ -209,9 +209,9 @@ POSTS & CONTENT STYLES
 		&.count4, &.count7, &.count8, &.count11, &.count12 {
 			.list-item {
 				margin-right: 2.35%;
-				-webkit-flex: 1 0 23%;
-				-ms-flex: 1 0 23%;
-				flex: 1 0 23%;
+				-webkit-flex: 0 1 23%;
+				-ms-flex: 0 1 23%;
+				flex: 0 1 23%;
 				&:nth-child(4n){
 					margin-right: 0;
 				}
@@ -220,9 +220,9 @@ POSTS & CONTENT STYLES
 		&.count5, &.count9, &.count10, &.count13, &.count14, &.count15 {
 			.list-item {
 				margin-right: 1.25%;
-				-webkit-flex: 1 0 19%;
-				-ms-flex: 1 0 19%;
-				flex: 1 0 19%;
+				-webkit-flex: 0 1 19%;
+				-ms-flex: 0 1 19%;
+				flex: 0 1 19%;
 				&:nth-child(5n){
 					margin-right: 0;
 				}
