@@ -34,8 +34,9 @@ nav {
 	margin-top: 0;
 }
 
-#inner-header {display: grid;
-	grid-template-columns: 25% 75%;
+#inner-header {
+	display: grid;
+	grid-template-columns: 20% 80%;
 	grid-template-rows: auto auto auto;
 	#logo {
 		grid-column: 1 / 2;
