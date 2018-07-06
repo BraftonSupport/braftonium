@@ -304,16 +304,12 @@ NAVIGATION STYLES
 	button {
 		background: transparent;
 		border: none;
-		border-left: 1px solid rgba($color: $white, $alpha: .1);
-		color: rgba($color: $white, $alpha: .5);
+		color: inherit;
 		float: right;
 		padding: 0;
 		height: 1.5em;
 		width: 1.5em;
 		margin-top: -1.8em;
-		&:hover {
-			color: rgba($color: $white, $alpha: .75);
-		}
 		&.rotate {
 			border-left: none;
 			border-bottom: 1px solid rgba($color: $white, $alpha: .1);
@@ -333,11 +329,10 @@ NAVIGATION STYLES
 		}
 		ul.sub-menu,
 		ul.children {
-			display: none;
 			margin: 0;
 			list-style-type: none;
 			li {
-				border-top: 1px solid rgba($color: $white, $alpha: .1);
+				border-top: 1px solid rgba($color: $gray, $alpha: .1);
 				border-bottom: none;
 				a {
 					padding-left: 1.5em;
