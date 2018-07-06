@@ -72,7 +72,6 @@ NAVIGATION STYLES
 	border: 0;
 	ul {
 		margin-top:0;
-		background: $black;
 	}
 	li {
 		float: left;
@@ -92,7 +91,6 @@ NAVIGATION STYLES
 			display: inline-block;
 			border-bottom: 0;
 			padding: 5px 15px;
-			background: $black;
 			border-bottom: 1px solid rgba($color: $black, $alpha: .1);
 		}
 		&:first-of-type a {
@@ -103,6 +101,7 @@ NAVIGATION STYLES
 		*/
 		ul.sub-menu,
 		ul.children {
+			background: $black;
 			margin-top: 0;
 			border: 1px solid rgba($color: $white, $alpha: .1);
 			border-top: 0;
