@@ -72,7 +72,6 @@ NAVIGATION STYLES
 	border: 0;
 	ul {
 		margin-top:0;
-		background: $black;
 	}
 	li {
 		float: left;
@@ -92,7 +91,6 @@ NAVIGATION STYLES
 			display: inline-block;
 			border-bottom: 0;
 			padding: 5px 15px;
-			background: $black;
 			border-bottom: 1px solid rgba($color: $black, $alpha: .1);
 		}
 		&:first-of-type a {
@@ -103,6 +101,7 @@ NAVIGATION STYLES
 		*/
 		ul.sub-menu,
 		ul.children {
+			background: $black;
 			margin-top: 0;
 			border: 1px solid rgba($color: $white, $alpha: .1);
 			border-top: 0;
@@ -210,9 +209,9 @@ POSTS & CONTENT STYLES
 		&.count4, &.count7, &.count8, &.count11, &.count12 {
 			.list-item {
 				margin-right: 2.35%;
-				-webkit-flex: 1 0 23%;
-				-ms-flex: 1 0 23%;
-				flex: 1 0 23%;
+				-webkit-flex: 0 1 23%;
+				-ms-flex: 0 1 23%;
+				flex: 0 1 23%;
 				&:nth-child(4n){
 					margin-right: 0;
 				}
@@ -221,9 +220,9 @@ POSTS & CONTENT STYLES
 		&.count5, &.count9, &.count10, &.count13, &.count14, &.count15 {
 			.list-item {
 				margin-right: 1.25%;
-				-webkit-flex: 1 0 19%;
-				-ms-flex: 1 0 19%;
-				flex: 1 0 19%;
+				-webkit-flex: 0 1 19%;
+				-ms-flex: 0 1 19%;
+				flex: 0 1 19%;
 				&:nth-child(5n){
 					margin-right: 0;
 				}

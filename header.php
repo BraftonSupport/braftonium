@@ -58,7 +58,7 @@
 			if ($braftonium_text) { echo 'body { color:'.$braftonium_text.';}'; }
 			if ($braftonium_link) { echo 'a, a:visited { color:'.$braftonium_link.';} button, .blue-btn { background-color:'.$braftonium_link.';} '; }
 			if ($braftonium_hover) { echo 'a:hover { color:'.$braftonium_hover.';} .button:hover { background-color:'.$braftonium_hover.';} '; }
-			if ($braftonium_headerbg) { echo '.header { background-color:'.$braftonium_headerbg.';} '; }
+			if ($braftonium_headerbg) { echo '.header, #menu-nav.nav li ul.sub-menu { background-color:'.$braftonium_headerbg.';} '; }
 			if ($braftonium_headercolor) { echo '.header { color:'.$braftonium_headercolor.';} '; }
 			if ($braftonium_headerlink) { echo '.header a, #menu-nav.nav li a { color:'.$braftonium_headerlink.';} .header button, .header .blue-btn { background-color:'.$headerlink.';} '; }
 			if ($braftonium_headerlinkhover) { echo '.header a:hover, #menu-nav.nav li a:hover { color:'.$braftonium_headerlinkhover.';} .header .header button:hover, .header .blue-btn:hover { background-color:'.$headerlinkhover.';}'; }
