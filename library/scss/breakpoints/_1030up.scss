@@ -9,6 +9,16 @@ be seen on the Desktop.
 
 ******************************************************************/
 
+#menu-nav.nav {
+	display: flex;
+	li {
+		margin-right: auto;
+		a {
+			padding: 5px 0;
+		}
+	} 
+}
+
 .hentry {
   padding: 3em 0 3.75em;
 }
