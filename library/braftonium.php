@@ -144,6 +144,8 @@ function braftonium_support() {
 	// default thumb size
 	set_post_thumbnail_size(125, 125, true);
 
+	add_image_size( 'squared', 300, 300, array( 'center', 'center' ) );
+
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
 	    array(
