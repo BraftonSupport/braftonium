@@ -307,9 +307,7 @@ NAVIGATION STYLES
 		color: inherit;
 		float: right;
 		padding: 0;
-		height: 1.5em;
-		width: 1.5em;
-		margin-top: -1.8em;
+		width: 1.25em;
 		&.rotate {
 			border-left: none;
 			border-bottom: 1px solid rgba($color: $white, $alpha: .1);
@@ -461,6 +459,9 @@ svg {
 				img {
 					width: 100%;
 					height: auto;
+					&.round {
+						border-radius: 50%;
+					}
 				}
 			}
 			header {
