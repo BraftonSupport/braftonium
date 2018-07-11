@@ -1472,7 +1472,7 @@ GENERAL STYLES
 *********************/
 /* line 18, ../scss/breakpoints/_base.scss */
 body {
-  font-family: Arial, "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
