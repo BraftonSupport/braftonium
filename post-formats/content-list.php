@@ -69,7 +69,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 				endif;
 			?>
 				<div class="list-item"><?php
-				if ( !$showbutton ): echo '<a href="'.$url.'" target="'. $target.'">'.$text.'</a>'; endif;
+				if ( !$showbutton ): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
 				echo '<div class="image">';
 				if ( $item['image'] ):
 					

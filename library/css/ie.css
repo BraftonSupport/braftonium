@@ -259,34 +259,36 @@ POSTS & CONTENT STYLES
 }
 /* line 88, ../scss/breakpoints/_481up.scss */
 .container > * {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 1 1 50%;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
   margin-right: 2%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-/* line 94, ../scss/breakpoints/_481up.scss */
+/* line 96, ../scss/breakpoints/_481up.scss */
 .container > .list-item {
   -webkit-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
   flex: 1 1 50%;
 }
-/* line 99, ../scss/breakpoints/_481up.scss */
+/* line 101, ../scss/breakpoints/_481up.scss */
 .container > *:last-child {
   margin-right: 0;
 }
 
-/* line 104, ../scss/breakpoints/_481up.scss */
+/* line 106, ../scss/breakpoints/_481up.scss */
 .blog article {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 108, ../scss/breakpoints/_481up.scss */
+/* line 110, ../scss/breakpoints/_481up.scss */
 .blog article .thumbnail, .blog article .content {
   flex: 1 0 45%;
   margin: 0 5% 0 0;
 }
-/* line 112, ../scss/breakpoints/_481up.scss */
+/* line 114, ../scss/breakpoints/_481up.scss */
 .blog article .thumbnail img {
   width: 100%;
   height: auto;
@@ -295,24 +297,24 @@ POSTS & CONTENT STYLES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 124, ../scss/breakpoints/_481up.scss */
+/* line 126, ../scss/breakpoints/_481up.scss */
 .footer a.logo {
   width: 50%;
   float: left;
 }
-/* line 127, ../scss/breakpoints/_481up.scss */
+/* line 129, ../scss/breakpoints/_481up.scss */
 .footer a.logo img {
   margin: 10px 0 10px;
   max-width: 100px;
 }
 
-/* line 134, ../scss/breakpoints/_481up.scss */
+/* line 136, ../scss/breakpoints/_481up.scss */
 .social-navigation {
   float: right;
   text-align: right;
   margin: 5px 0 0 auto;
 }
-/* line 138, ../scss/breakpoints/_481up.scss */
+/* line 140, ../scss/breakpoints/_481up.scss */
 .social-navigation a {
   text-align: right;
   margin: .5em;
