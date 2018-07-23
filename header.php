@@ -150,7 +150,7 @@
 						} ?>
 					</div>
 
-					<nav class="<?php echo $nav; ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="<?php if ($nav): echo $nav; else: echo 'below'; endif; ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
 							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
