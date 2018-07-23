@@ -9,15 +9,9 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
-<<<<<<< HEAD
-if (get_sub_field('title')){
-	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
-}
-=======
 if (get_sub_field('title')):
 	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
 endif;
->>>>>>> 3c7e5ea86f3f2b15b857ce53f811df74b1445125
 $text = get_sub_field('text');
 $button = get_sub_field('button');
 
@@ -95,10 +89,12 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 				<source src="<?php echo $vidstring; ?>.mp4" type="video/mp4">
 			</video>
 		<?php }
-	} ?><div class="wrap">
+	} ?><div class="wrap container">
 
-		<?php if ($titletext): echo $titletext; endif;
+		<?php echo '<div class="text">';
+		if ($titletext): echo $titletext; endif;
 		if ($text): echo $text; endif;
+		echo '</div>';
 		if ($button):
 			echo '<a href="'.$button['url'].'" class="blue-btn"';
 			if ($button['target']): echo 'target="'.$button['target'].'"'; endif;

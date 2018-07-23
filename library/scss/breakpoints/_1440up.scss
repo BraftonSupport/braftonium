@@ -1,0 +1,26 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Extra Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+.page-template-full-width .list .container {
+	&.count5, &.count9, &.count10, &.count13, &.count14, &.count15 {
+		.list-item {
+			margin-right: 1%;
+			-webkit-flex: 1 1 19%;
+			-ms-flex: 1 1 19%;
+			flex: 1 1 19%;
+			&:nth-child(3n){
+				margin-right: 1%;
+			}
+			&:nth-child(5n){
+				margin-right: 0;
+			}
+		}
+	}
+}

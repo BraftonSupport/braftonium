@@ -9,16 +9,10 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
-<<<<<<< HEAD
-if (get_sub_field('title')){
-	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
-}
-=======
 if (get_sub_field('title')):
 	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
 endif;
 
->>>>>>> 3c7e5ea86f3f2b15b857ce53f811df74b1445125
 $show_text = get_sub_field('show_text');
 	if ($show_text && in_array('intro', $show_text)): $intro = get_sub_field('intro_text'); endif;
 	if ($show_text && in_array('outro', $show_text)): $outro = get_sub_field('outro_text'); endif;
@@ -59,9 +53,10 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 
 		<?php if ($titletext): echo $titletext; endif;
 		if ($intro): echo $intro; endif;
-			$count = count($custom);
-			echo '<div class="container count'.$count.'">';
+		
 		if ( $custom ) :
+		$count = count($custom);
+		echo '<div class="container count'.$count.'">';
 			foreach( $custom as $item ):
 				if($item['button']):
 					$url = $item['button']['url'];
@@ -106,6 +101,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			endforeach;
 			
 		elseif ( $recent ):
+		echo '<div class="container count'.$number.'">';
 			$recent_query = new WP_Query(
 				array( 
 					'post_type' => $recent,
