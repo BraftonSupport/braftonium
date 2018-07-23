@@ -9,10 +9,16 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
+<<<<<<< HEAD
+if (get_sub_field('title')){
+	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
+}
+=======
 if (get_sub_field('title')):
 	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
 endif;
 
+>>>>>>> 3c7e5ea86f3f2b15b857ce53f811df74b1445125
 $show_text = get_sub_field('show_text');
 	if ($show_text && in_array('intro', $show_text)): $intro = get_sub_field('intro_text'); endif;
 	if ($show_text && in_array('outro', $show_text)): $outro = get_sub_field('outro_text'); endif;
