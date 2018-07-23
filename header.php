@@ -56,7 +56,7 @@
 			$braftonium_footerlinkhover_color = get_theme_mod( 'braftonium_footerlinkhover_color' );
 		echo '<style>';
 			if ($braftonium_text) { echo 'body { color:'.$braftonium_text.';}'; }
-			if ($braftonium_link) { echo 'a, a:visited { color:'.$braftonium_link.';} button, .blue-btn { background-color:'.$braftonium_link.';} '; }
+			if ($braftonium_link) { echo 'a:not(.blu-btn):not(.orange-btn), a:not(.blu-btn):not(.orange-btn):visited { color:'.$braftonium_link.';} button, .blue-btn { background-color:'.$braftonium_link.';} '; }
 			if ($braftonium_hover) { echo 'a:hover { color:'.$braftonium_hover.';} .button:hover { background-color:'.$braftonium_hover.';} '; }
 			if ($braftonium_headerbg) { echo '.header, #menu-nav.nav li ul.sub-menu { background-color:'.$braftonium_headerbg.';} '; }
 			if ($braftonium_headercolor) { echo '.header { color:'.$braftonium_headercolor.';} '; }

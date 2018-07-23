@@ -80,6 +80,7 @@ LINK STYLES
 *********************/
 
 a, a:visited {
+	text-decoration: none;
 	color: $link-color;
 	@include transition(all 0.2s ease-in-out);
 
@@ -451,11 +452,18 @@ svg {
 		}
 	}
 }
+.cta .wrap {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
 
 		.hentry {
 			padding: 2em 0 2.5em;
 			.image {
 				min-width: 10%;
+				text-align: center;
+				margin: auto;
 				img {
 					max-width: 100%;
 					height: auto;

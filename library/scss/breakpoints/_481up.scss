@@ -85,11 +85,13 @@ POSTS & CONTENT STYLES
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	> * {
-		-webkit-flex: 1 1 auto;
-		-ms-flex: 1 1 auto;
-		flex: 1 1 auto;
+	> .text, > .image {
+		-webkit-flex: 1 1 50%;
+		-ms-flex: 1 1 50%;
+		flex: 1 1 50%;
 		margin-right: 2%;
+		margin-top: auto;
+		margin-bottom: auto;
 	}
 	> .list-item {
 		-webkit-flex: 1 1 50%;
