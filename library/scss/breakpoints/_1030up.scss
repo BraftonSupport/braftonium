@@ -18,7 +18,10 @@ be seen on the Desktop.
 		}
 	} 
 }
-
+.next #menu-nav.nav li {
+	margin-right: 0;
+	margin-left: auto;
+}
 .hentry {
   padding: 3em 0 3.75em;
 }
