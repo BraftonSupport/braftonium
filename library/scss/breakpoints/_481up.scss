@@ -43,11 +43,6 @@ HEADER STYLES
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	>* {
-		-webkit-flex: 1 1 48%;
-		-ms-flex: 1 1 48%;
-		flex: 1 1 48%;
-	}
 }
 
 /*********************
@@ -90,11 +85,13 @@ POSTS & CONTENT STYLES
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	> * {
-		-webkit-flex: 1 1 auto;
-		-ms-flex: 1 1 auto;
-		flex: 1 1 auto;
+	> .text, > .image {
+		-webkit-flex: 1 1 50%;
+		-ms-flex: 1 1 50%;
+		flex: 1 1 50%;
 		margin-right: 2%;
+		margin-top: auto;
+		margin-bottom: auto;
 	}
 	> .list-item {
 		-webkit-flex: 1 1 50%;
@@ -105,7 +102,21 @@ POSTS & CONTENT STYLES
 		margin-right: 0;
 	}
 }
-
+.blog {
+	article {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		.thumbnail, .content {
+			flex: 1 0 45%;
+			margin: 0 5% 0 0;
+		}
+		.thumbnail img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
 
 /*********************
 FOOTER STYLES

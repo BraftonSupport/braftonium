@@ -9,9 +9,16 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
+<<<<<<< HEAD
 if (get_sub_field('title')){
 	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
 }
+=======
+if (get_sub_field('title')):
+	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
+endif;
+
+>>>>>>> 3c7e5ea86f3f2b15b857ce53f811df74b1445125
 $show_text = get_sub_field('show_text');
 	if ($show_text && in_array('intro', $show_text)): $intro = get_sub_field('intro_text'); endif;
 	if ($show_text && in_array('outro', $show_text)): $outro = get_sub_field('outro_text'); endif;
@@ -23,8 +30,8 @@ $showbutton	 = get_sub_field('showbutton');
 
 $style = get_sub_field('style');
 $classes = array('list');
-if ($style['class']){
-	$classes[] = $section_class;
+if ($style['add_class']){
+	$classes[] = $style['add_class'];
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
@@ -39,44 +46,51 @@ if ( $style['other'] ) {
 	if (in_array('thin', $style['other'])){
 		$classes[] = "thin";
 	}
+	if (in_array('center', $style['other'])){
+		$classes[] = "center";
+	}
 } ?>
 
-<section class="<?php echo implode(' ',$classes); ?>" style="<?php
+<section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
 if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
 if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 	<div class="wrap">
 
-		<?php echo $titletext;
-		echo $intro;
-		?>
-	
-		<div class="container"><?php
+		<?php if ($titletext): echo $titletext; endif;
+		if ($intro): echo $intro; endif;
+			$count = count($custom);
+			echo '<div class="container count'.$count.'">';
 		if ( $custom ) :
 			foreach( $custom as $item ):
-				$url = $item['button']['url'];
-				$text = $item['button']['text'];
+				if($item['button']):
+					$url = $item['button']['url'];
+					$text = $item['button']['title'];
+					$target = $item['button']['target'];
+				endif;
+				if(is_array($item['image_size_and_shape'])):
 					if( in_array('thumb', $item['image_size_and_shape']) ): $size = 'thumbnail'; endif;
 					if( in_array('square', $item['image_size_and_shape']) ): $size = 'mediumsquared'; endif;
 					if( in_array('uncropped', $item['image_size_and_shape']) ): $size = 'full'; endif;
+				endif;
 			?>
 				<div class="list-item"><?php
-				if ( !$showbutton ):'<a href="'.$url.'"">'; endif;
-				echo '<div class="list-featured-image">';
+				if ( !$showbutton ): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
+				echo '<div class="image">';
 				if ( $item['image'] ):
 					
-					if ( in_array('round', $item['image_size_and_shape']) ):
+					if ( is_array($item['image_size_and_shape']) && in_array('round', $item['image_size_and_shape']) ):
 						echo wp_get_attachment_image( $item['image'], $size, "", ["class" => "round"] );
 					else:
 						echo wp_get_attachment_image( $item['image'], $size );
 					endif;
 				endif;
 				echo '</div>';
-				if ( !$showbutton ):'</a>'; endif;
+				if ( !$showbutton ): echo '</a>'; endif;
 
 				if ( $item['title'] ):
 					echo '<h3>';
-					 if ($url): echo '<a href="'.$url.'">'; endif;
+					 if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
 					 $titlestring = $item['title'];
 					 if (strlen($titlestring) > 65){
 						 $titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
@@ -86,7 +100,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 
 				if ( $item['content'] ): echo $item['content']; endif;
 
-				if ( $showbutton ): echo '<a href="'.$url.'" class="button">'.$text.'</a>';endif;
+				if ( $showbutton ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">'.$text.'</a>';endif;
 
 				echo '</div>';
 			endforeach;

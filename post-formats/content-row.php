@@ -9,13 +9,19 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
+<<<<<<< HEAD
 if (get_sub_field('title')){
 	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
 }
+=======
+if (get_sub_field('title')):
+$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
+endif;
+>>>>>>> 3c7e5ea86f3f2b15b857ce53f811df74b1445125
 $style = get_sub_field('style');
 $classes = array('row');
-if ($style['class']){
-	$classes[] = $section_class;
+if ($style['add_class']){
+	$classes[] = $style['add_class'];
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
@@ -30,9 +36,11 @@ if ( $style['other'] ) {
 	if (in_array('thin', $style['other'])){
 		$classes[] = "thin";
 	}
+	if (in_array('center', $style['other'])){
+		$classes[] = "center";
+	}
 } ?>
-
-<section class="<?php echo implode(' ',$classes); ?>" style="<?php
+<section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
 if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
 if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
@@ -83,14 +91,14 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		<?php }
 	} ?><div class="wrap">
 
-		<?php echo $titletext;
+		<?php if ($titletext): echo $titletext; endif;
 		if( have_rows('row_content') ):
 			echo '<div class="container">';
 			while ( have_rows('row_content') ) : the_row();
 				if( get_row_layout() == 'imageblock' ):
-					echo '<div>'.wp_get_attachment_image( get_sub_field('Image'), 'full' ).'</div>';
+					echo '<div class="image">'.wp_get_attachment_image( get_sub_field('Image'), 'full' ).'</div>';
 				elseif( get_row_layout() == 'textblock' ): 
-					echo '<div>'.get_sub_field('text').'</div>';
+					echo '<div class="text">'.get_sub_field('text').'</div>';
 				endif;
 			endwhile;
 			echo '</div>';

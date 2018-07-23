@@ -16,8 +16,8 @@ $google_api = get_sub_field('google_api');
 $style = get_sub_field('style');
 $classes = array('map');
 
-if ($style['class']){
-	$classes[] = $section_class;
+if ($style['add_class']){
+	$classes[] = $style['add_class'];
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
@@ -32,9 +32,12 @@ if ( $style['other'] ) {
 	if (in_array('thin', $style['other'])){
 		$classes[] = "thin";
 	}
+	if (in_array('center', $style['other'])){
+		$classes[] = "center";
+	}
 } ?>
 
-<section class="<?php echo implode(' ',$classes); ?>" style="<?php
+<section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
 if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
 if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >

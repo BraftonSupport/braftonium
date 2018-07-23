@@ -102,16 +102,16 @@ function braftonium_scripts_and_styles() {
   if (!is_admin()) {
 
 		// modernizr (without media query polyfill)
-		wp_register_script( 'braftonium-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+		wp_register_script( 'braftonium-modernizr', get_template_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet
-		wp_register_style( 'braftonium-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+		wp_register_style( 'braftonium-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 
 		// ie-only style sheet
-		wp_register_style( 'braftonium-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
+		wp_register_style( 'braftonium-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );
 
  		//adding scripts file in the footer
-		wp_register_script( 'braftonium-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		wp_register_script( 'braftonium-js', get_template_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'braftonium-modernizr' );
@@ -143,6 +143,8 @@ function braftonium_support() {
 
 	// default thumb size
 	set_post_thumbnail_size(125, 125, true);
+
+	add_image_size( 'squared', 300, 300, array( 'center', 'center' ) );
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
@@ -194,7 +196,7 @@ function related_posts() {
 		}
 		$args = array(
 			'tag' => $tag_arr,
-			'numberposts' => 5, /* you can change this to show more */
+			'numberposts' => 3, /* you can change this to show more */
 			'post__not_in' => array($post->ID)
 		);
 		$related_posts = get_posts( $args );
@@ -209,6 +211,7 @@ function related_posts() {
 	wp_reset_postdata();
 	echo '</ul>';
 } /* end related posts function */
+
 
 /*********************
 PAGE NAVI

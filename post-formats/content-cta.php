@@ -9,16 +9,22 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
+<<<<<<< HEAD
 if (get_sub_field('title')){
 	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
 }
+=======
+if (get_sub_field('title')):
+	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
+endif;
+>>>>>>> 3c7e5ea86f3f2b15b857ce53f811df74b1445125
 $text = get_sub_field('text');
 $button = get_sub_field('button');
 
 $style = get_sub_field('style');
 $classes = array('cta');
-if ($style['class']){
-	$classes[] = $section_class;
+if ($style['add_class']){
+	$classes[] = $style['add_class'];
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
@@ -33,9 +39,13 @@ if ( $style['other'] ) {
 	if (in_array('thin', $style['other'])){
 		$classes[] = "thin";
 	}
-} ?>
+	if (in_array('center', $style['other'])){
+		$classes[] = "center";
+	}
+}
+?>
 
-<section class="<?php echo implode(' ',$classes); ?>" style="<?php
+<section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
 if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
 if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
@@ -87,10 +97,10 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		<?php }
 	} ?><div class="wrap">
 
-		<?php echo $titletext;
-		echo $text;
+		<?php if ($titletext): echo $titletext; endif;
+		if ($text): echo $text; endif;
 		if ($button):
-			echo '<a href="'.$button['url'].'" class="button"';
+			echo '<a href="'.$button['url'].'" class="blue-btn"';
 			if ($button['target']): echo 'target="'.$button['target'].'"'; endif;
 			echo '>'.$button['title'].'</a>';
 		endif; ?>

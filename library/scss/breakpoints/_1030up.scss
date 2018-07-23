@@ -9,6 +9,16 @@ be seen on the Desktop.
 
 ******************************************************************/
 
+#menu-nav.nav {
+	display: flex;
+	li {
+		margin-right: auto;
+		a {
+			padding: 5px 0;
+		}
+	} 
+}
+
 .hentry {
   padding: 3em 0 3.75em;
 }
@@ -19,4 +29,20 @@ be seen on the Desktop.
 
 .page-template-full-width .compact .wrap {
   width: 50%;
+}
+
+.blog {
+	article {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		.thumbnail, .content {
+			flex: 1 0 45%;
+			margin: 0 5% 0 0;
+		}
+		.thumbnail img {
+			width: 100%;
+			height: auto;
+		}
+	}
 }

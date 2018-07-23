@@ -9,17 +9,17 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
-if (get_sub_field('title')){
+if (get_sub_field('title')):
 	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
-}
+endif;
 $tagline = get_sub_field('tagline');
 $button = get_sub_field('button');
 $style = get_sub_field('style');
 $video = $style['video_url'];
 
 $classes = array('visual');
-if ($style['class']){
-	$classes[] = $section_class;
+if ($style['add_class']){
+	$classes[] = $style['add_class'];
 }
 if ($video){
 	$classes[] = 'video';
@@ -38,27 +38,17 @@ if ( $style['other'] ) {
 	if (in_array('thin', $style['other'])){
 		$classes[] = "thin";
 	}
+	if (in_array('center', $style['other'])){
+		$classes[] = "center";
+	}
 } ?>
 
-<section class="<?php echo implode(' ',$classes); ?>" style="<?php
-	if ( $style['background_image'] && !$video ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
-	if ( $style['background_color'] && !$video ) { echo 'background-color: ' . $style['background_color'] . ';'; }
-	if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
-
-<div class="wrap">
-
-<?php echo $titletext;
-echo $tagline;
-if ($button):
-	echo '<a href="'.$button['url'].'" class="button"';
-	if ($button['target']): echo 'target="'.$button['target'].'"'; endif;
-	echo '>'.$button['title'].'</a>';
-endif; ?>
-
-</div>
-
-	<?php if ( $video ) {
-		if (strpos($video, 'youtube.com') == true ) {
+<section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
+if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
+if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
+if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
+	<?php if ( $style['video_url'] ) {
+		if (strpos($video, 'youtube.com') == true || strpos($video, '.webm') == false && strpos($video, '.mp4') == false) {
 			$videoid = preg_replace('/https:\/\/www.youtube.com\/watch\?v=/', '', $video);
 		?>
 
@@ -95,7 +85,17 @@ endif; ?>
 				})
 				</script>
 		<?php }
-	} ?>
+	} ?><div class="wrap">
+
+		<?php if ($titletext): echo $titletext; endif;
+		if ($tagline): echo $tagline; endif;
+		if ($button):
+			echo '<a href="'.$button['url'].'" class="button"';
+			if ($button['target']): echo 'target="'.$button['target'].'"'; endif;
+			echo '>'.$button['title'].'</a>';
+		endif; ?>
+
+	</div>
 </section><!-- section -->
 
 <?php if ( $style['other'] && in_array('shadow', $style['other']) ) { echo '<div class="shadow"></div>'; } ?>

@@ -80,6 +80,7 @@ LINK STYLES
 *********************/
 
 a, a:visited {
+	text-decoration: none;
 	color: $link-color;
 	@include transition(all 0.2s ease-in-out);
 
@@ -94,6 +95,14 @@ a, a:visited {
 	&:link {
 		-webkit-tap-highlight-color : rgba($color: $black, $alpha: .3);
 	}
+}
+
+a.blue-btn {
+	color: $white;
+	&:hover,
+	&:focus {
+	  color: $white;
+	} // end hover
 }
 
 /*********************
@@ -208,7 +217,7 @@ HEADER STYLES
 			float:right;
 		}
 		nav {
-			margin: auto;
+			margin: auto 0 auto auto;
 		}
 	}
 	p {
@@ -282,6 +291,9 @@ HEADER STYLES
 		-ms-flex: 1 1 100%;
 		flex: 1 1 100%;
 	}
+	.next {
+		margin: 0 0 0 auto;
+	}
 
 /*********************
 NAVIGATION STYLES
@@ -293,16 +305,10 @@ NAVIGATION STYLES
 	button {
 		background: transparent;
 		border: none;
-		border-left: 1px solid rgba($color: $white, $alpha: .1);
-		color: rgba($color: $white, $alpha: .5);
+		color: inherit;
 		float: right;
 		padding: 0;
-		height: 1.5em;
-		width: 1.5em;
-		margin-top: -1.8em;
-		&:hover {
-			color: rgba($color: $white, $alpha: .75);
-		}
+		width: 1.25em;
 		&.rotate {
 			border-left: none;
 			border-bottom: 1px solid rgba($color: $white, $alpha: .1);
@@ -317,16 +323,15 @@ NAVIGATION STYLES
 			color: $white;
 			text-decoration: none;
 			&:hover {
-				color: $pink;
+				color: $lightblue;
 			}
 		}
 		ul.sub-menu,
 		ul.children {
-			display: none;
 			margin: 0;
 			list-style-type: none;
 			li {
-				border-top: 1px solid rgba($color: $white, $alpha: .1);
+				border-top: 1px solid rgba($color: $gray, $alpha: .1);
 				border-bottom: none;
 				a {
 					padding-left: 1.5em;
@@ -351,10 +356,10 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 .black {
-	background: rgba($color: $black, $alpha: .4);
+	background: rgba($color: $black, $alpha: .6);
 }
 .banner, .page-template-full-width .banner {
-	color: #fff;
+	color: $white;
 	background-position: center;
 	background-size: cover;
 	.wrap {
@@ -397,9 +402,12 @@ svg {
 	}
 }
 
-.blog .hentry {
-	padding: 2em 0 0;
+.blog {
+	.hentry {
+		padding: 2em 0 0;
+	}
 }
+
 .shadow {
 	height: 0;
 	position: relative;
@@ -457,6 +465,10 @@ svg {
 		&.thin .wrap {
 			padding: 1em 0 1.5em;
 		}
+		&.center div {
+			text-align: center;
+			margin: auto;
+		}
 	}
 	.list .container {
 		-webkit-flex-wrap: wrap;
@@ -467,13 +479,27 @@ svg {
 		}
 	}
 }
+.cta .wrap {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
 		.hentry {
 			padding: 2em 0 2.5em;
-			img {
-				width: 100%;
-				height: auto;
+			.image {
+				min-width: 10%;
+				text-align: center;
+				margin: auto;
+				img {
+					max-width: 100%;
+					height: auto;
+					width: auto;
+					&.round {
+						border-radius: 50%;
+					}
+				}
 			}
-
 			header {
 				padding: 0 0 1.5em 0;
 			}
@@ -496,7 +522,6 @@ svg {
 
 		/* post meta */
 		.byline {
-			color: $meta-gray;
 			font-style: italic;
 			margin: 0;
 		}
@@ -574,16 +599,6 @@ svg {
 				height: auto;
 			}
 
-			/*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
-			.alignleft, img.alignleft {}
-			.alignright, img.alignright {}
-			.aligncenter, img.aligncenter {}
-
 			.size-auto,
 			.size-full,
 			.size-large,
@@ -606,7 +621,7 @@ svg {
 
 		.wp-caption {
 			max-width: 100%;
-			background: #eee;
+			background: $gray;
 			padding: 5px;
 
 			/* images inside wp-caption */
@@ -631,6 +646,21 @@ svg {
 	a.excerpt-read-more {
 		display: table;
 	}
+
+	.ssb-social {
+		padding: 0 10px 0 0;
+	}
+	.ssb-social a {
+		width: 1.25em;
+		top: 2px;
+		display: inline-block;
+		position: relative;
+	}
+	.banner	.ssb-social {
+		padding: 0;
+		display: block;
+	}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -758,7 +788,7 @@ FOOTER STYLES
 	.copyright {
 		font-size: .8em;
 		padding: 7px 0;
-		background: rgba($color: $black, $alpha: .2);
+		background: rgba( #000, $alpha: .2);
 	}
 	section {
 		h3 {
