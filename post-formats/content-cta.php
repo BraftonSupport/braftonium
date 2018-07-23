@@ -9,7 +9,9 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
-$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
+if (get_sub_field('title')){
+	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
+}
 $text = get_sub_field('text');
 $button = get_sub_field('button');
 

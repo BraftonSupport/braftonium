@@ -9,8 +9,9 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
-$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
-
+if (get_sub_field('title')){
+	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
+}
 $style = get_sub_field('style');
 $classes = array('row');
 if ($style['class']){
