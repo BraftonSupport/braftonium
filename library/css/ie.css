@@ -258,7 +258,7 @@ POSTS & CONTENT STYLES
   display: flex;
 }
 /* line 88, ../scss/breakpoints/_481up.scss */
-.container > * {
+.container > .text, .container > .image {
   -webkit-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
   flex: 1 1 50%;
@@ -517,93 +517,87 @@ POSTS & CONTENT STYLES
 .page-template-full-width .compact .wrap {
   width: 75%;
 }
-/* line 176, ../scss/breakpoints/_768up.scss */
+/* line 175, ../scss/breakpoints/_768up.scss */
+.page-template-full-width .list .container .list-post-featured-image img {
+  width: 100%;
+  height: auto;
+}
+/* line 180, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count1 .list-item, .page-template-full-width .list .container.count2 .list-item, .page-template-full-width .list .container.count3 .list-item, .page-template-full-width .list .container.count4 .list-item, .page-template-full-width .list .container.count5 .list-item, .page-template-full-width .list .container.count6 .list-item, .page-template-full-width .list .container.count7 .list-item, .page-template-full-width .list .container.count8 .list-item, .page-template-full-width .list .container.count9 .list-item, .page-template-full-width .list .container.count10 .list-item, .page-template-full-width .list .container.count11 .list-item, .page-template-full-width .list .container.count12 .list-item, .page-template-full-width .list .container.count13 .list-item, .page-template-full-width .list .container.count14 .list-item, .page-template-full-width .list .container.count15 .list-item {
   max-width: inherit;
 }
-/* line 178, ../scss/breakpoints/_768up.scss */
+/* line 182, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count1 .list-item:last-child, .page-template-full-width .list .container.count2 .list-item:last-child, .page-template-full-width .list .container.count3 .list-item:last-child, .page-template-full-width .list .container.count4 .list-item:last-child, .page-template-full-width .list .container.count5 .list-item:last-child, .page-template-full-width .list .container.count6 .list-item:last-child, .page-template-full-width .list .container.count7 .list-item:last-child, .page-template-full-width .list .container.count8 .list-item:last-child, .page-template-full-width .list .container.count9 .list-item:last-child, .page-template-full-width .list .container.count10 .list-item:last-child, .page-template-full-width .list .container.count11 .list-item:last-child, .page-template-full-width .list .container.count12 .list-item:last-child, .page-template-full-width .list .container.count13 .list-item:last-child, .page-template-full-width .list .container.count14 .list-item:last-child, .page-template-full-width .list .container.count15 .list-item:last-child {
   margin-right: 0;
 }
-/* line 182, ../scss/breakpoints/_768up.scss */
+/* line 186, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count1 .list-item {
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
 }
-/* line 188, ../scss/breakpoints/_768up.scss */
+/* line 192, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count2 .list-item {
   margin-right: 2%;
   -webkit-flex: 1 0 49%;
   -ms-flex: 1 0 49%;
   flex: 1 0 49%;
 }
-/* line 193, ../scss/breakpoints/_768up.scss */
+/* line 197, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count2 .list-item:nth-child(2n) {
   margin-right: 0;
 }
-/* line 199, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .list .container.count3 .list-item, .page-template-full-width .list .container.count6 .list-item {
+/* line 203, ../scss/breakpoints/_768up.scss */
+.page-template-full-width .list .container.count3 .list-item, .page-template-full-width .list .container.count6 .list-item, .page-template-full-width .list .container.count5 .list-item, .page-template-full-width .list .container.count9 .list-item, .page-template-full-width .list .container.count10 .list-item, .page-template-full-width .list .container.count13 .list-item, .page-template-full-width .list .container.count14 .list-item, .page-template-full-width .list .container.count15 .list-item {
   margin-right: 2%;
-  -webkit-flex: 1 0 32%;
-  -ms-flex: 1 0 32%;
-  flex: 1 0 32%;
+  -webkit-flex: 0 1 32%;
+  -ms-flex: 0 1 32%;
+  flex: 0 1 32%;
 }
-/* line 204, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .list .container.count3 .list-item:nth-child(3n), .page-template-full-width .list .container.count6 .list-item:nth-child(3n) {
+/* line 208, ../scss/breakpoints/_768up.scss */
+.page-template-full-width .list .container.count3 .list-item:nth-child(3n), .page-template-full-width .list .container.count6 .list-item:nth-child(3n), .page-template-full-width .list .container.count5 .list-item:nth-child(3n), .page-template-full-width .list .container.count9 .list-item:nth-child(3n), .page-template-full-width .list .container.count10 .list-item:nth-child(3n), .page-template-full-width .list .container.count13 .list-item:nth-child(3n), .page-template-full-width .list .container.count14 .list-item:nth-child(3n), .page-template-full-width .list .container.count15 .list-item:nth-child(3n) {
   margin-right: 0;
 }
-/* line 210, ../scss/breakpoints/_768up.scss */
+/* line 214, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count4 .list-item, .page-template-full-width .list .container.count7 .list-item, .page-template-full-width .list .container.count8 .list-item, .page-template-full-width .list .container.count11 .list-item, .page-template-full-width .list .container.count12 .list-item {
   margin-right: 2.35%;
   -webkit-flex: 0 1 23%;
   -ms-flex: 0 1 23%;
   flex: 0 1 23%;
 }
-/* line 215, ../scss/breakpoints/_768up.scss */
+/* line 219, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .list .container.count4 .list-item:nth-child(4n), .page-template-full-width .list .container.count7 .list-item:nth-child(4n), .page-template-full-width .list .container.count8 .list-item:nth-child(4n), .page-template-full-width .list .container.count11 .list-item:nth-child(4n), .page-template-full-width .list .container.count12 .list-item:nth-child(4n) {
   margin-right: 0;
 }
-/* line 221, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .list .container.count5 .list-item, .page-template-full-width .list .container.count9 .list-item, .page-template-full-width .list .container.count10 .list-item, .page-template-full-width .list .container.count13 .list-item, .page-template-full-width .list .container.count14 .list-item, .page-template-full-width .list .container.count15 .list-item {
-  margin-right: 1.25%;
-  -webkit-flex: 0 1 19%;
-  -ms-flex: 0 1 19%;
-  flex: 0 1 19%;
-}
-/* line 226, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .list .container.count5 .list-item:nth-child(5n), .page-template-full-width .list .container.count9 .list-item:nth-child(5n), .page-template-full-width .list .container.count10 .list-item:nth-child(5n), .page-template-full-width .list .container.count13 .list-item:nth-child(5n), .page-template-full-width .list .container.count14 .list-item:nth-child(5n), .page-template-full-width .list .container.count15 .list-item:nth-child(5n) {
-  margin-right: 0;
-}
 
-/* line 235, ../scss/breakpoints/_768up.scss */
+/* line 228, ../scss/breakpoints/_768up.scss */
 .blog .hentry {
   padding: 3em 0 0;
 }
-/* line 238, ../scss/breakpoints/_768up.scss */
+/* line 231, ../scss/breakpoints/_768up.scss */
 .blog article {
   display: block;
 }
-/* line 240, ../scss/breakpoints/_768up.scss */
+/* line 233, ../scss/breakpoints/_768up.scss */
 .blog article .thumbnail, .blog article .content {
   margin: 0;
 }
 
-/* line 246, ../scss/breakpoints/_768up.scss */
+/* line 239, ../scss/breakpoints/_768up.scss */
 .alignleft, img.alignleft {
   float: left;
   margin-right: 15px;
   margin-bottom: 15px;
 }
 
-/* line 251, ../scss/breakpoints/_768up.scss */
+/* line 244, ../scss/breakpoints/_768up.scss */
 .alignright, img.alignright {
   float: right;
   margin-left: 15px;
   margin-bottom: 15px;
 }
 
-/* line 256, ../scss/breakpoints/_768up.scss */
+/* line 249, ../scss/breakpoints/_768up.scss */
 .aligncenter, img.aligncenter {
   text-align: center;
   margin-right: auto;
@@ -613,19 +607,19 @@ POSTS & CONTENT STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 267, ../scss/breakpoints/_768up.scss */
+/* line 260, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin: 3em 0 0 0;
   padding: 0 0 0 30px;
 }
 
-/* line 272, ../scss/breakpoints/_768up.scss */
+/* line 265, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 277, ../scss/breakpoints/_768up.scss */
+/* line 270, ../scss/breakpoints/_768up.scss */
 .widget {
   margin: 0 0 3em 0;
 }
@@ -638,24 +632,24 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 291, ../scss/breakpoints/_768up.scss */
+/* line 284, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 295, ../scss/breakpoints/_768up.scss */
+/* line 288, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 1em auto 2em 0;
 }
-/* line 300, ../scss/breakpoints/_768up.scss */
+/* line 293, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section h3 {
   margin-bottom: 1em;
 }
-/* line 303, ../scss/breakpoints/_768up.scss */
+/* line 296, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section:last-child {
   margin-left: auto;
   -webkit-flex: 0 1 auto;

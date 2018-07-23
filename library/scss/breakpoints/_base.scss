@@ -422,6 +422,9 @@ svg {
 .visual.video {
 	position: relative;
 	overflow: hidden;
+	.black {
+		display: flex;
+	}
 }
 
 #video {
@@ -438,6 +441,7 @@ svg {
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
 }
+
 
 #vidpause {
 	position: relative;
@@ -456,10 +460,12 @@ svg {
 			padding: 2em 0 2.5em;
 		}
 		&.full {
-			display: flex;
 			height: 90%;
 			.wrap {
 				margin: auto;
+			}
+			.black {
+				height: 100%;
 			}
 		}
 		&.thin .wrap {
@@ -477,14 +483,15 @@ svg {
 		.list-item {
 			max-width: 200px;
 		}
+		.list-post-featured-image img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	.cta .blue-btn {
+		margin: auto;
 	}
 }
-.cta .wrap {
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-}
-
 		.hentry {
 			padding: 2em 0 2.5em;
 			.image {

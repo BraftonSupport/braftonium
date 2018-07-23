@@ -85,7 +85,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 				})
 				</script>
 		<?php }
-	} ?><div class="wrap">
+	} ?><?php if ($video): echo '<div class="black">'; endif; ?><div class="wrap">
 
 		<?php if ($titletext): echo $titletext; endif;
 		if ($tagline): echo $tagline; endif;
@@ -95,7 +95,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			echo '>'.$button['title'].'</a>';
 		endif; ?>
 
-	</div>
+	<?php if ($video): echo '</div>'; endif; ?></div>
 </section><!-- section -->
 
 <?php if ( $style['other'] && in_array('shadow', $style['other']) ) { echo '<div class="shadow"></div>'; } ?>
