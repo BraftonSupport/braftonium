@@ -230,6 +230,9 @@ POSTS & CONTENT STYLES
 			margin: 0;
 		}
 	}
+	.full article.hentry .thumbnail {
+		max-height: 220px;
+	}
 }
 
 .alignleft, img.alignleft {

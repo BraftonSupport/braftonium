@@ -1,4 +1,6 @@
 <?php get_header();
+$layout = get_field('blog_layout', 'option');
+$layoutarray = array('full','rich','simple');
 $blog_page_id = get_option( "page_for_posts" );
 $background_image = get_field('background_image',$blog_page_id);
 $title = get_field('title',$blog_page_id);
@@ -13,7 +15,7 @@ $tagline = get_field('tagline',$blog_page_id); ?>
 					</section>
 				<?php endif; ?>
 				<div id="inner-content" class="wrap cf">
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="m-all t-2of3 d-5of7 cf<?php echo ' '.$layout; ?>" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php if (!$title): ?><header class="article-header hentry">
 							<h1 class="page-title" itemprop="headline"><?php echo get_the_title( $blog_page_id ); ?></h1>
@@ -24,7 +26,13 @@ $tagline = get_field('tagline',$blog_page_id); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 									echo '<div class="thumbnail">';
-									the_post_thumbnail('medium');
+									if (in_array($layout, $layoutarray)):
+										echo '<a href="'. get_the_permalink().'">';
+										the_post_thumbnail('medium');
+										echo '</a>';
+									else:
+										the_post_thumbnail('medium');
+									endif;
 									echo '</div>';
 								} ?>
 								<div class="content"><header class="article-header">
@@ -35,7 +43,8 @@ $tagline = get_field('tagline',$blog_page_id); ?>
 											'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
 											/* the author of the post */
 											'<span class="by">'.__( 'by', 'braftonium').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-										); ?>
+										); 
+										social_sharing_buttons(); ?>
 									</p>
 								</header>
 
