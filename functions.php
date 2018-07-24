@@ -294,4 +294,13 @@ if ( WPEX_WOOCOMMERCE_ACTIVE ) {
 	}
 }
 
+
+/* Excerpt shortening*/
+$layout = get_field('blog_layout', 'option');
+if ( $layout=='rich' ) {
+	function custom_excerpt_length( $length ) {
+		return 10;
+	}
+	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+}
 /* DON'T DELETE THIS CLOSING TAG */ ?>

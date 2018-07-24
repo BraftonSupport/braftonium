@@ -21,6 +21,9 @@ You can't use @extend within media queries
 anymore, so just be aware that if you drop
 them in here, they won't work.
 */
+h1, .h1 {
+	font-size: 2.5em;
+}
 
 /*********************
 HEADER STYLES
@@ -111,9 +114,23 @@ POSTS & CONTENT STYLES
 			flex: 1 0 45%;
 			margin: 0 5% 0 0;
 		}
-		.thumbnail img {
-			width: 100%;
-			height: auto;
+	}
+	.full .thumbnail {
+		overflow: hidden;
+	}
+	.full article.hentry, .rich article.hentry, .simple article.hentry {
+		width: 49%;
+		margin-right: 2%;
+		float: left;
+	}
+	.rich article.hentry, .simple article.hentry {
+		flex: 1 0 45%;
+		margin-right: 5% ;
+		&:nth-child(2n+1), &:last-of-type {
+			margin-right: 0;
+		}
+		&:first-of-type {
+			flex: 1 0 100%;
 		}
 	}
 }

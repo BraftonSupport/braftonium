@@ -75,3 +75,7 @@ button {
 
 } // end blue button
 
+.hero .read-more {
+  @extend %btn;
+  @extend .blue-btn;
+}

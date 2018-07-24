@@ -48,4 +48,10 @@ be seen on the Desktop.
 			height: auto;
 		}
 	}
+	.full article.hentry .thumbnail {
+		max-height: 200px;
+	}
+	.simple article {
+		display: block;
+	}
 }
