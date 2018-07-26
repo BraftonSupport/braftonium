@@ -45,7 +45,7 @@ msgstr "Dette er fejl beskeden i skabelonen full-width.php."
 
 #: functions.php:13
 msgid "Theme General Settings"
-msgstr "Generelle temaindstillinger"
+msgstr "Generelle Temaindstillinger"
 
 #: functions.php:14
 msgid "Theme Settings"

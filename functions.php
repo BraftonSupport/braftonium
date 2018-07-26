@@ -4,6 +4,64 @@
 require_once( 'library/braftonium.php' );
 include_once get_template_directory().'/library/custom-fields/fields.php';
 
+/*********************
+LAUNCH BRAFTONIUM
+Let's get everything up and running.
+*********************/
+
+function braftonium_start() {
+
+  // let's get language support going, if you need it
+  load_theme_textdomain( 'braftonium', get_template_directory() . '/library/translation' );
+
+  //Allow editor style.
+  add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
+
+  add_action( 'admin_enqueue_scripts', 'load_admin_style' );
+  function load_admin_style() {
+	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/library/css/admin.css', false, '1.0.0' );
+  }
+
+  wp_enqueue_script( 'functions', get_template_directory_uri() . '/library/js/functions.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'slick', get_template_directory_uri() . '/library/js/slick/slick.min.js', array(), '1.0.0', true );
+  wp_enqueue_style( 'slick', get_template_directory_uri() . '/library/js/slick/slick.css', false, '1.0.0' );
+  wp_enqueue_style( 'slick-themes', get_template_directory_uri() . '/library/js/slick/slick-theme.css', false, '1.0.0' );
+
+  if ( get_field('sticky_nav', 'option')&&get_field('sticky_nav', 'option')[0]=='on' ){
+	wp_enqueue_script( 'sticky', get_template_directory_uri() . '/library/js/sticky.js', array(), '1.0.0', true );
+  }
+
+  // launching operation cleanup
+  add_action( 'init', 'braftonium_head_cleanup' );
+  // A better title
+  add_filter( 'wp_title', 'rw_title', 10, 3 );
+  // remove WP version from RSS
+  add_filter( 'the_generator', 'braftonium_rss_version' );
+  // remove pesky injected css for recent comments widget
+  add_filter( 'wp_head', 'braftonium_remove_wp_widget_recent_comments_style', 1 );
+  // clean up comment styles in the head
+  add_action( 'wp_head', 'braftonium_remove_recent_comments_style', 1 );
+
+  // enqueue base scripts and styles
+  add_action( 'wp_enqueue_scripts', 'braftonium_scripts_and_styles', 999 );
+  // ie conditional wrapper
+
+  // launching this stuff after theme setup
+  braftonium_support();
+
+  // cleaning up random code around images
+  add_filter( 'the_content', 'filter_ptags_on_images' );
+  // cleaning up excerpt
+  add_filter( 'excerpt_more', 'excerpt_more' );
+
+} /* end braftonium */
+
+// let's get this party started
+add_action( 'after_setup_theme', 'braftonium_start' );
+
+
+
+
 /*
 Making the Braftonium Theme Option Page
 */
@@ -106,63 +164,6 @@ add_action( 'widgets_init', 'braftonium_posttypes_init' );
 
 
 
-/*********************
-LAUNCH BRAFTONIUM
-Let's get everything up and running.
-*********************/
-
-function braftonium_start() {
-
-  //Allow editor style.
-  add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
-
-  add_action( 'admin_enqueue_scripts', 'load_admin_style' );
-  function load_admin_style() {
-	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/library/css/admin.css', false, '1.0.0' );
-  }
-
-  wp_enqueue_script( 'functions', get_template_directory_uri() . '/library/js/functions.js', array(), '1.0.0', true );
-  wp_enqueue_script( 'slick', get_template_directory_uri() . '/library/js/slick/slick.min.js', array(), '1.0.0', true );
-  wp_enqueue_style( 'slick', get_template_directory_uri() . '/library/js/slick/slick.css', false, '1.0.0' );
-  wp_enqueue_style( 'slick-themes', get_template_directory_uri() . '/library/js/slick/slick-theme.css', false, '1.0.0' );
-
-  if ( get_field('sticky_nav', 'option')[0]=='on' ){
-	wp_enqueue_script( 'sticky', get_template_directory_uri() . '/library/js/sticky.js', array(), '1.0.0', true );
-  }
-
-  // let's get language support going, if you need it
-  load_theme_textdomain( 'braftonium', get_template_directory() . '/library/translation' );
-
-  // launching operation cleanup
-  add_action( 'init', 'braftonium_head_cleanup' );
-  // A better title
-  add_filter( 'wp_title', 'rw_title', 10, 3 );
-  // remove WP version from RSS
-  add_filter( 'the_generator', 'braftonium_rss_version' );
-  // remove pesky injected css for recent comments widget
-  add_filter( 'wp_head', 'braftonium_remove_wp_widget_recent_comments_style', 1 );
-  // clean up comment styles in the head
-  add_action( 'wp_head', 'braftonium_remove_recent_comments_style', 1 );
-
-  // enqueue base scripts and styles
-  add_action( 'wp_enqueue_scripts', 'braftonium_scripts_and_styles', 999 );
-  // ie conditional wrapper
-
-  // launching this stuff after theme setup
-  braftonium_support();
-
-  // cleaning up random code around images
-  add_filter( 'the_content', 'filter_ptags_on_images' );
-  // cleaning up excerpt
-  add_filter( 'excerpt_more', 'excerpt_more' );
-
-} /* end braftonium */
-
-// let's get this party started
-add_action( 'after_setup_theme', 'braftonium_start' );
-
-
-
 /************* OEMBED SIZE OPTIONS *************/
 
 if ( ! isset( $content_width ) ) {
@@ -200,7 +201,7 @@ function braftonium_customizer($wp_customize) {
   // $wp_customize->remove_control('blogdescription');
   
   // Uncomment the following to change the default section titles
-  $wp_customize->get_section('colors')->title = __( 'Theme Colors' );
+  $wp_customize->get_section('colors')->title = __( 'Theme Colors', 'braftonium' );
 //   $wp_customize->get_section('background_image')->title = __( 'Images' );
 }
 
@@ -221,8 +222,14 @@ function braftonium_fonts() {
 add_action('wp_enqueue_scripts', 'braftonium_fonts');
 
 /* I CALL UPON THE POWERS OF AN SVG SPRITESHEET except linking an svg file doesn't work in IE so I gots to do this */
+require_once(ABSPATH . 'wp-admin/includes/file.php');
+
+
 function get_svg_path($svgid) {
-	$content = file_get_contents(get_template_directory_uri().'/library/theme-options/svg-icons.svg');
+	WP_Filesystem();
+	global $wp_filesystem;
+	$file_data = get_template_directory_uri().'/library/theme-options/svg-icons.svg';
+	$content = $wp_filesystem->get_contents($file_data);
 	$first_step = explode( '<symbol id="'.$svgid , $content );
 	$second_step = explode("</path>" , $first_step[1] );
 	return '<svg class="'.$svgid.$second_step[0].'</svg>';
