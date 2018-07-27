@@ -11,6 +11,18 @@ start customizing. All admin functions are located in lib/admin/
 
 ******************************************************************/
 
+// Theme General Settings
+#acf-group_5a4e8d955ca60 {
+	.acf-field-5a4e8e2f65362 {
+		border-bottom: 1px solid #ddd;
+	}
+	.acf-field-5b185eb33c54b {
+		border-top: 5px solid #f1f1f1;
+	}
+	& >.handlediv, & > h2.hndle {
+		display: none;
+	}
+}
 
 .acf-fields.-left > .acf-field:before {
 	content: none!important;

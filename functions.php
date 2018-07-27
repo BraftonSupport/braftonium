@@ -60,8 +60,6 @@ function braftonium_start() {
 add_action( 'after_setup_theme', 'braftonium_start' );
 
 
-
-
 /*
 Making the Braftonium Theme Option Page
 */
@@ -76,92 +74,39 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
-/**
- * Register widget areas.
- */
-
 function braftonium_widgets_init() {
-
 	$widgetareas = get_field('extra_widget_areas', 'option');
-	if( $widgetareas ):
-		foreach( $widgetareas as $widgetarea ):
-			if ( $widgetarea == 'footer' ) {
-				register_sidebar( array(
-					'name'		  => __( 'Footer Left Widget', 'braftonium' ),
-					'id'			=> 'footer-left',
-					'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-					'before_widget' => '<section id="%1$s" class="widget %2$s">',
-					'after_widget'  => '</section>',
-					'before_title'  => '<h3 class="widget-title">',
-					'after_title'   => '</h3>',
-				) );
-				register_sidebar( array(
-					'name'		  => __( 'Footer Middle Widget', 'braftonium' ),
-					'id'			=> 'footer-middle',
-					'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-					'before_widget' => '<section id="%1$s" class="widget %2$s">',
-					'after_widget'  => '</section>',
-					'before_title'  => '<h3 class="widget-title">',
-					'after_title'   => '</h3>',
-				) );
-				register_sidebar( array(
-					'name'		  => __( 'Footer Right Widget', 'braftonium' ),
-					'id'			=> 'footer-right',
-					'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-					'before_widget' => '<section id="%1$s" class="widget %2$s">',
-					'after_widget'  => '</section>',
-					'before_title'  => '<h3 class="widget-title">',
-					'after_title'   => '</h3>',
-				) );
-			} else {
-				register_sidebar( array(
-					'name'		  => ucwords($widgetarea).' '.__( 'Sidebar', 'braftonium' ),
-					'id'			=> $widgetarea.'-sidebar',
-					'description'   => ucwords($widgetarea).' '.__( 'widget area.', 'braftonium' ),
-					'before_widget' => '<section id="%1$s" class="widget %2$s">',
-					'after_widget'  => '</section>',
-					'before_title'  => '<h3 class="widget-title">',
-					'after_title'   => '</h3>',
-				) );
-			}
-		endforeach;
-	endif;
+	if( $widgetareas && in_array('footer', $widgetareas) ) {
+		register_sidebar( array(
+			'name'		  => __( 'Footer Left Widget', 'braftonium' ),
+			'id'			=> 'footer-left',
+			'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+		register_sidebar( array(
+			'name'		  => __( 'Footer Middle Widget', 'braftonium' ),
+			'id'			=> 'footer-middle',
+			'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+		register_sidebar( array(
+			'name'		  => __( 'Footer Right Widget', 'braftonium' ),
+			'id'			=> 'footer-right',
+			'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+	}
 }
 add_action( 'widgets_init', 'braftonium_widgets_init' );
-
-
-
-/* Custom Post Types */
-
-/**
- * Register Post Types.
- */
-function braftonium_posttypes_init() {
-	$custom_post_types = get_field('custom_post_types', 'option');
-	if( $custom_post_types ):
-    foreach( $custom_post_types as $custom_post_type ):
-      $custom_post_title = ucwords(str_replace('_', ' ', $custom_post_type));
-			$posttypes_labels = array(
-				'name'				=> $custom_post_title.__( 's', 'braftonium' ),
-				'singular_name'		=> $custom_post_title,
-				'menu_name'			=> $custom_post_title.__( 's', 'braftonium' ),
-				'add_new_item'		=> __( 'Add New', 'braftonium' ).' '.$custom_post_title,
-			);
-			$posttypes_args = array(
-				'labels'			=> $posttypes_labels,
-				'menu_icon'			=> 'dashicons-star-filled',
-				'public'			=> true,
-				'capability_type'	=> 'page',
-				'has_archive'		=> true,
-				'hierarchical'		=> true,
-				'supports'			=> array( 'title', 'excerpt', 'editor', 'thumbnail', 'revisions' )
-			);
-			register_post_type($custom_post_type, $posttypes_args);
-		endforeach;
-	endif;
-}
-add_action( 'widgets_init', 'braftonium_posttypes_init' );
-
 
 
 /************* OEMBED SIZE OPTIONS *************/
