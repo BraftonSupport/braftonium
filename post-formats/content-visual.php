@@ -53,13 +53,10 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		?>
 
 			<iframe id="video" src="https://www.youtube.com/embed/<?php echo $videoid; ?>?autoplay=1&mute=1&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		<?php } else {
-			$vidstring = chop($video, '.webm');
-			$vidstring = chop($vidstring, '.mp4'); ?>
+		<?php } else { ?>
 			<!-- <button id="vidpause"><?php //echo get_svg_path('icon-pause'); ?></button> -->
 			<video playsinline autoplay muted loop id="video">
-				<source src="<?php echo $vidstring; ?>.webm" type="video/webm">
-				<source src="<?php echo $vidstring; ?>.mp4" type="video/mp4">
+				<source src="<?php echo $video; ?>" type="video/<?php if (strpos($video, '.webm') == true): echo 'webm'; elseif (strpos($video, '.mp4') == true): echo 'mp4'; endif; ?>">
 			</video>
 			<script>
 				var vid = document.getElementById("bgvid"),

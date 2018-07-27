@@ -57,7 +57,7 @@ function rw_title( $title, $sep, $seplocation ) {
 
   // Add a page number if necessary:
   if ( $paged >= 2 || $page >= 2 ) {
-    $title .= " {$sep} " . sprintf( __( 'Page %s', 'dbt' ), max( $paged, $page ) );
+    $title .= " {$sep} " . sprintf( __( 'Page %s', 'braftonium' ), max( $paged, $page ) );
   }
 
   return $title;
@@ -160,10 +160,10 @@ function braftonium_support() {
 	// rss thingy
 	add_theme_support('automatic-feed-links');
 
-	// wp menus
-	add_theme_support( 'menus' );
+	// registering title tag
+	add_theme_support( "title-tag" );
 
-	// registering wp3+ menus
+	// registering menus
 	register_nav_menus(
 		array(
 			'main-nav' => __( 'Navigation', 'braftonium' ),   // main nav in header

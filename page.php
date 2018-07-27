@@ -31,7 +31,22 @@ $tagline = get_field('tagline');
 										// the content (pretty self explanatory huh)
 										the_content();
 									?>
-								</section> <?php // end article section ?>
+								</section> <?php // end article section 
+								 	$defaults = array(
+										'before'           => '<p>' . __( 'Pages:', 'braftonium' ),
+										'after'            => '</p>',
+										'link_before'      => '',
+										'link_after'       => '',
+										'next_or_number'   => 'number',
+										'separator'        => ' ',
+										'nextpagelink'     => __( 'Next page', 'braftonium'),
+										'previouspagelink' => __( 'Previous page', 'braftonium' ),
+										'pagelink'         => '%',
+										'echo'             => 1
+									);
+								 
+										wp_link_pages( $defaults );
+								?>
 
 							</article>
 

@@ -10,59 +10,72 @@ is empty, but you can just start dropping your styles here to
 start customizing. All admin functions are located in lib/admin/
 
 ******************************************************************/
-/* line 15, ../scss/admin.scss */
+/* line 16, ../scss/admin.scss */
+#acf-group_5a4e8d955ca60 .acf-field-5a4e8e2f65362 {
+  border-bottom: 1px solid #ddd;
+}
+/* line 19, ../scss/admin.scss */
+#acf-group_5a4e8d955ca60 .acf-field-5b185eb33c54b {
+  border-top: 5px solid #f1f1f1;
+}
+/* line 22, ../scss/admin.scss */
+#acf-group_5a4e8d955ca60 > .handlediv, #acf-group_5a4e8d955ca60 > h2.hndle {
+  display: none;
+}
+
+/* line 27, ../scss/admin.scss */
 .acf-fields.-left > .acf-field:before {
   content: none !important;
 }
 
-/* line 18, ../scss/admin.scss */
+/* line 30, ../scss/admin.scss */
 .acf-fields.-left > .acf-field > .acf-label,
 .acf-fields.-left > .acf-field > .acf-input {
   float: none !important;
   width: 100% !important;
 }
 
-/* line 26, ../scss/admin.scss */
+/* line 38, ../scss/admin.scss */
 #acf_after_title-sortables .postbox .layout .layout {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
-/* line 29, ../scss/admin.scss */
+/* line 41, ../scss/admin.scss */
 #acf_after_title-sortables .postbox .layout:first-child, #acf_after_title-sortables .postbox .layout:nth-child(7) {
   background: rgba(127, 0, 0, 0.1);
 }
-/* line 32, ../scss/admin.scss */
+/* line 44, ../scss/admin.scss */
 #acf_after_title-sortables .postbox .layout:nth-child(2), #acf_after_title-sortables .postbox .layout:nth-child(8) {
   background: rgba(0, 127, 0, 0.1);
 }
-/* line 35, ../scss/admin.scss */
+/* line 47, ../scss/admin.scss */
 #acf_after_title-sortables .postbox .layout:nth-child(3), #acf_after_title-sortables .postbox .layout:nth-child(9) {
   background: rgba(0, 0, 127, 0.1);
 }
-/* line 38, ../scss/admin.scss */
+/* line 50, ../scss/admin.scss */
 #acf_after_title-sortables .postbox .layout:nth-child(4), #acf_after_title-sortables .postbox .layout:nth-child(10) {
   background: rgba(127, 127, 0, 0.1);
 }
-/* line 41, ../scss/admin.scss */
+/* line 53, ../scss/admin.scss */
 #acf_after_title-sortables .postbox .layout:nth-child(5), #acf_after_title-sortables .postbox .layout:nth-child(11) {
   background: rgba(127, 0, 127, 0.1);
 }
-/* line 44, ../scss/admin.scss */
+/* line 56, ../scss/admin.scss */
 #acf_after_title-sortables .postbox .layout:nth-child(6), #acf_after_title-sortables .postbox .layout:nth-child(12) {
   background: rgba(0, 127, 127, 0.1);
 }
 
-/* line 50, ../scss/admin.scss */
+/* line 62, ../scss/admin.scss */
 .mce-edit-area iframe {
   max-height: 200px;
 }
 
-/* line 53, ../scss/admin.scss */
+/* line 65, ../scss/admin.scss */
 .acf-field-5a908ed0a68bd {
   float: right !important;
   clear: none !important;
 }
 
-/* line 59, ../scss/admin.scss */
+/* line 71, ../scss/admin.scss */
 .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -76,7 +89,7 @@ start customizing. All admin functions are located in lib/admin/
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 71, ../scss/admin.scss */
+/* line 83, ../scss/admin.scss */
 .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > div {
   margin-right: auto;
   border-left: 1px solid #eee;
@@ -84,18 +97,18 @@ start customizing. All admin functions are located in lib/admin/
   min-width: 150px;
 }
 
-/* line 77, ../scss/admin.scss */
+/* line 89, ../scss/admin.scss */
 .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > div:last-of-type {
   width: 40% !important;
   margin-right: 0;
 }
 
-/* line 81, ../scss/admin.scss */
+/* line 93, ../scss/admin.scss */
 .acf-field-5a4d3dc7e18d5 .acf-field-5a4d42b4ce417 {
   width: 60% !important;
 }
 
-/* line 84, ../scss/admin.scss */
+/* line 96, ../scss/admin.scss */
 .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > .acf-field-5a4d42b4ce417, .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > .acf-field-5a4d4292ce416 {
   border-top: 1px solid #eee;
 }

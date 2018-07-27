@@ -31,6 +31,7 @@
 								 * REMEMBER TO ALWAYS HAVE A DEFAULT ONE NAMED "format.php", make different formats if needed
 								*/
 								get_template_part( 'post-formats/format', get_post_format() );
+
 							?>
 
 						<?php endwhile; ?>
