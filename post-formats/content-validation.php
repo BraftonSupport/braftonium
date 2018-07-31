@@ -92,11 +92,11 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			while ($recent_query->have_posts()) : $recent_query->the_post(); ?>
 				<div class="list-item">
 					<?php if ( $item['image_size_and_shape'] && in_array('round', $item['image_size_and_shape']) && has_post_thumbnail() ){
-						?><div class="list-post-featured-image"><?php
+						?><div class="image"><?php
 						 the_post_thumbnail('mediumsquared', ['class' => 'round']);
 						 ?></div><?php
 					} elseif( has_post_thumbnail()){
-						?><div class="list-post-featured-image"><?php
+						?><div class="image"><?php
 						the_post_thumbnail('mediumsquared');
 						?></div><?php
 					}

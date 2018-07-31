@@ -4,22 +4,6 @@ acf_add_local_field_group(array(
 	'key' => 'group_5a4e8d955ca60',
 	'title' => 'Braftonium Theme Options',
 	'fields' => array(
-		// array(
-		// 	'key' => 'field_5b1858bc2f26f',
-		// 	'label' => 'Braftonium Theme Options',
-		// 	'name' => '',
-		// 	'type' => 'tab',
-		// 	'instructions' => '',
-		// 	'required' => 0,
-		// 	'conditional_logic' => 0,
-		// 	'wrapper' => array(
-		// 		'width' => '',
-		// 		'class' => '',
-		// 		'id' => '',
-		// 	),
-		// 	'placement' => 'top',
-		// 	'endpoint' => 0,
-		// ),
 		array(
 			'key' => 'field_5a4e8db865361',
 			'label' => __( "Navigation Bar Position", "braftonium" ),

@@ -1,4 +1,3 @@
-
               <?php
                 /*
                  * This is the default post format.
@@ -36,6 +35,8 @@
                 <section class="entry-content cf" itemprop="articleBody">
                   <?php
                     the_content();
+                    
+								comments_template( 'post-formats/comments.php' );
                   ?>
                 </section> <?php // end article section ?>
 

@@ -40,9 +40,9 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<?php // wordpress head functions ?>
+		<?php // WordPress head functions ?>
 		<?php wp_head(); ?>
-		<?php // end of wordpress head
+		<?php // end of WordPress head
 			$braftonium_text = get_theme_mod( 'braftonium_color' );
 			$braftonium_link = get_theme_mod( 'braftonium_link_color' );
 			$braftonium_hover = get_theme_mod( 'braftonium_linkhover_color' );

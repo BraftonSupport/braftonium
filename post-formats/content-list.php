@@ -19,7 +19,7 @@ $show_text = get_sub_field('show_text');
 $list_type = get_sub_field('list_type');
 	if ($list_type=='custom'): $custom = get_sub_field('custom_list'); endif;
 	if ($list_type=='recent'): $recent = get_sub_field('recent'); $number = get_sub_field('number_of_posts'); endif;
-
+$imagestyle	 = get_sub_field('image_size_and_shape');
 $showbutton	 = get_sub_field('showbutton');
 
 $style = get_sub_field('style');
@@ -63,25 +63,24 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 					$text = $item['button']['title'];
 					$target = $item['button']['target'];
 				endif;
-				if(is_array($item['image_size_and_shape'])):
-					if( in_array('thumb', $item['image_size_and_shape']) ): $size = 'thumbnail'; endif;
-					if( in_array('square', $item['image_size_and_shape']) ): $size = 'mediumsquared'; endif;
-					if( in_array('uncropped', $item['image_size_and_shape']) ): $size = 'full'; endif;
+				if( is_array($imagestyle)):
+					if( in_array('thumb', $imagestyle) ): $size = 'thumbnail'; endif;
+					if( in_array('square', $imagestyle) ): $size = 'mediumsquared'; endif;
+					if( in_array('uncropped', $imagestyle) ): $size = 'full'; endif;
 				endif;
 			?>
 				<div class="list-item"><?php
-				if ( !$showbutton ): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
-				echo '<div class="image">';
+				if ( $item['button'] ): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
 				if ( $item['image'] ):
-					
-					if ( is_array($item['image_size_and_shape']) && in_array('round', $item['image_size_and_shape']) ):
-						echo wp_get_attachment_image( $item['image'], $size, "", ["class" => "round"] );
-					else:
-						echo wp_get_attachment_image( $item['image'], $size );
-					endif;
+					echo '<div class="image">';
+						if ( is_array($imagestyle) && in_array('round', $imagestyle) ):
+							echo wp_get_attachment_image( $item['image'], $size, "", ["class" => "round"] );
+						else:
+							echo wp_get_attachment_image( $item['image'], $size );
+						endif;
+					echo '</div>';
 				endif;
-				echo '</div>';
-				if ( !$showbutton ): echo '</a>'; endif;
+				if ( $item['button'] ): echo '</a>'; endif;
 
 				if ( $item['title'] ):
 					echo '<h3>';
@@ -95,7 +94,12 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 
 				if ( $item['content'] ): echo $item['content']; endif;
 
-				if ( $showbutton ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">'.$text.'</a>';endif;
+				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
+					if (!$text): echo 'Read More';
+					else: echo $text;
+					endif;
+					echo '</a>';
+				endif;
 
 				echo '</div>';
 			endforeach;
@@ -109,24 +113,24 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 				)
 			);
 			while ($recent_query->have_posts()) : $recent_query->the_post(); ?>
-				<div class="list-item">
-					<?php if ( $item['image_size_and_shape'] && in_array('round', $item['image_size_and_shape']) && has_post_thumbnail() ){
-						?><div class="list-post-featured-image"><?php
+				<div class="list-item"><a href="<?php the_permalink() ?>">
+					<?php if ( $imagestyle && in_array('round', $imagestyle) && has_post_thumbnail() ){
+						?><div class="image"><?php
 						 the_post_thumbnail('mediumsquared', ['class' => 'round']);
 						 ?></div><?php
 					} elseif( has_post_thumbnail()){
-						?><div class="list-post-featured-image"><?php
+						?><div class="image"><?php
 						the_post_thumbnail('mediumsquared');
 						?></div><?php
 					}
 					?>
-						<h3><a href="<?php the_permalink() ?>"><?php
+						<h3><?php
 						$titlestring = get_the_title($post);
 						if (strlen($titlestring) > 65){
 							$titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
 						}
 						echo $titlestring;
-						?></a></h3>
+						?></h3></a>
 					<?php
 						echo '<p>';
 						$content= get_the_content();
