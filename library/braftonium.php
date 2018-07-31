@@ -2,11 +2,7 @@
 /* Braftonium Theme
 
 /*********************
-WP_HEAD GOODNESS
-The default wordpress head is
-a mess. Let's clean it up by
-removing all the junk we don't
-need.
+Removing all stuff in WP_HEAD we don't need.
 *********************/
 
 function braftonium_head_cleanup() {
@@ -141,10 +137,7 @@ function braftonium_support() {
 	// wp thumbnails (sizes handled in functions.php)
 	add_theme_support( 'post-thumbnails' );
 
-	// default thumb size
-	set_post_thumbnail_size(125, 125, true);
-
-	add_image_size( 'squared', 300, 300, array( 'center', 'center' ) );
+	add_image_size( 'mediumsquared', 300, 300, true );
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
