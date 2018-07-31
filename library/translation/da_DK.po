@@ -224,16 +224,16 @@ msgid "Round the image (click square as well)"
 msgstr "Runde billedet (klik også på kvadrat)"
 
 #: library/custom-fields/full-width/full-width.acf.php:271
-msgid "Thumbnail (max height & width 150px)"
-msgstr "Miniature (max højde & bredde 150px)"
+msgid "Thumbnail (150px by 150px)"
+msgstr "Miniature (150px af 150px)"
 
 #: library/custom-fields/full-width/full-width.acf.php:272
 msgid "Squared (300px by 300px)"
 msgstr "Kvadreret (300px af 300px)"
 
 #: library/custom-fields/full-width/full-width.acf.php:273
-msgid "Uncropped (best for awards and different sized images.)"
-msgstr "Ukuperede (bedst til præmie og billeder i forskellige størrelser.)"
+msgid "Full (best for awards and different sized images.)"
+msgstr "Fuld (bedst til præmie og billeder i forskellige størrelser.)"
 
 #: library/custom-fields/full-width/full-width.acf.php:340
 msgid "Button?"

@@ -227,7 +227,7 @@ msgid "Round the image (click square as well)"
 msgstr ""
 
 #: library/custom-fields/full-width/full-width.acf.php:271
-msgid "Thumbnail (max height & width 150px)"
+msgid "Thumbnail (150px by 150px)"
 msgstr ""
 
 #: library/custom-fields/full-width/full-width.acf.php:272
@@ -235,7 +235,7 @@ msgid "Squared (300px by 300px)"
 msgstr ""
 
 #: library/custom-fields/full-width/full-width.acf.php:273
-msgid "Uncropped (best for awards and different sized images.)"
+msgid "Full (best for awards and different sized images.)"
 msgstr ""
 
 #: library/custom-fields/full-width/full-width.acf.php:340

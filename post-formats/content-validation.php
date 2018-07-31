@@ -18,6 +18,7 @@ $list_type = get_sub_field('list_type');
 	if ($list_type=='recent'): $recent = get_sub_field('recent'); $number = get_sub_field('number_of_posts'); endif;
 	$showbutton	 = get_sub_field('showbutton');
 $style = get_sub_field('style');
+$imagestyle	 = get_sub_field('image_size_and_shape');
 $classes = array('validation');
 if ($style['add_class']){
 	$classes[] = $style['add_class'];
@@ -54,15 +55,23 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 					$url = $item['button']['url'];
 					$text = $item['button']['text'];
 				}
+				if( is_array($imagestyle)):
+					if( in_array('thumb', $imagestyle) ): $size = 'thumbnail'; endif;
+					if( in_array('square', $imagestyle) ): $size = 'mediumsquared'; endif;
+					if( in_array('full', $imagestyle) ): $size = 'full'; endif;
+				endif;
 			?>
 				<div class="list-item"><?php
 				if ( !$showbutton ):'<a href="'.$url.'"">'; endif;
-				echo '<div class="list-featured-image">';
 				if ( $item['image'] ):
-					echo wp_get_attachment_image( $item['image'], $size );
-
+					echo '<div class="image">';
+						if ( is_array($imagestyle) && in_array('round', $imagestyle) ):
+							echo wp_get_attachment_image( $item['image'], $size, "", ["class" => "round"] );
+						else:
+							echo wp_get_attachment_image( $item['image'], $size );
+						endif;
+					echo '</div>';
 				endif;
-				echo '</div>';
 				if ( !$showbutton ):'</a>'; endif;
 
 				if ( $item['title'] ):
@@ -91,7 +100,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			);
 			while ($recent_query->have_posts()) : $recent_query->the_post(); ?>
 				<div class="list-item">
-					<?php if ( $item['image_size_and_shape'] && in_array('round', $item['image_size_and_shape']) && has_post_thumbnail() ){
+					<?php if ( $imagestyle && in_array('round', $imagestyle) && has_post_thumbnail() ){
 						?><div class="image"><?php
 						 the_post_thumbnail('mediumsquared', ['class' => 'round']);
 						 ?></div><?php
