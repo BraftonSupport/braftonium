@@ -66,7 +66,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 				if( is_array($imagestyle)):
 					if( in_array('thumb', $imagestyle) ): $size = 'thumbnail'; endif;
 					if( in_array('square', $imagestyle) ): $size = 'mediumsquared'; endif;
-					if( in_array('uncropped', $imagestyle) ): $size = 'full'; endif;
+					if( in_array('full', $imagestyle) ): $size = 'full'; endif;
 				endif;
 			?>
 				<div class="list-item"><?php

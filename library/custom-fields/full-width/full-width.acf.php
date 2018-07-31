@@ -348,9 +348,9 @@ acf_add_local_field_group(array(
 							),
 							'choices' => array(
 								'round' => __( 'Round the image', 'braftonium' ),
-								'thumb' => __( 'Thumbnail (150px & 150px )', 'braftonium' ),
+								'thumb' => __( 'Thumbnail (150px by 150px )', 'braftonium' ),
 								'square' => __( 'Squared (300px by 300px)', 'braftonium' ),
-								'uncropped' => __( 'Uncropped (best for awards and different sized images.)', 'braftonium' ),
+								'full' => __( 'Full (best for awards and different sized images.)', 'braftonium' ),
 							),
 							'allow_custom' => 0,
 							'save_custom' => 0,
@@ -558,9 +558,9 @@ acf_add_local_field_group(array(
 							),
 							'choices' => array(
 								'round' => __( 'Round the image', 'braftonium' ),
-								'thumb' => __( 'Thumbnail (150px & 150px )', 'braftonium' ),
+								'thumb' => __( 'Thumbnail (150px by 150px )', 'braftonium' ),
 								'square' => __( 'Squared (300px by 300px)', 'braftonium' ),
-								'uncropped' => __( 'Uncropped (best for awards and different sized images.)', 'braftonium' ),
+								'full' => __( 'Full (best for awards and different sized images.)', 'braftonium' ),
 							),
 							'allow_custom' => 0,
 							'save_custom' => 0,

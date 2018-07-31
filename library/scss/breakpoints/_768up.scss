@@ -220,6 +220,15 @@ POSTS & CONTENT STYLES
 	}
 }
 
+.slick {
+	width: inherit;
+	.image {
+		max-width: 33%;
+		margin-right: 25px;
+		float: left;
+	}
+}
+
 .blog {
 	.hentry {
 		padding: 3em 0 0;
