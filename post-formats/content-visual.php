@@ -87,7 +87,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		<?php if ($titletext): echo $titletext; endif;
 		if ($tagline): echo $tagline; endif;
 		if ($button):
-			echo '<a href="'.$button['url'].'" class="button"';
+			echo '<a href="'.$button['url'].'" class="blue-btn"';
 			if ($button['target']): echo 'target="'.$button['target'].'"'; endif;
 			echo '>'.$button['title'].'</a>';
 		endif; ?>
