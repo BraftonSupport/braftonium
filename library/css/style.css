@@ -2039,7 +2039,7 @@ svg {
 }
 /* line 509, ../scss/breakpoints/_base.scss */
 .blog .rich article.hentry a {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.75);
 }
 /* line 511, ../scss/breakpoints/_base.scss */
 .blog .rich article.hentry a:hover {

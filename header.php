@@ -56,16 +56,16 @@
 			$braftonium_footerlinkhover_color = get_theme_mod( 'braftonium_footerlinkhover_color' );
 		echo '<style>';
 			if ($braftonium_text) { echo 'body { color:'.$braftonium_text.';}'; }
-			if ($braftonium_link) { echo 'a:not(.blu-btn):not(.orange-btn), a:not(.blu-btn):not(.orange-btn):visited { color:'.$braftonium_link.';} button, .blue-btn { background-color:'.$braftonium_link.';} '; }
-			if ($braftonium_hover) { echo 'a:hover { color:'.$braftonium_hover.';} .button:hover { background-color:'.$braftonium_hover.';} '; }
-			if ($braftonium_headerbg) { echo '.header, #menu-nav.nav li ul.sub-menu { background-color:'.$braftonium_headerbg.';} '; }
-			if ($braftonium_headercolor) { echo '.header { color:'.$braftonium_headercolor.';} '; }
-			if ($braftonium_headerlink) { echo '.header a, #menu-nav.nav li a { color:'.$braftonium_headerlink.';} .header button, .header .blue-btn { background-color:'.$headerlink.';} '; }
-			if ($braftonium_headerlinkhover) { echo '.header a:hover, #menu-nav.nav li a:hover { color:'.$braftonium_headerlinkhover.';} .header .header button:hover, .header .blue-btn:hover { background-color:'.$headerlinkhover.';}'; }
-			if ($braftonium_footerbg_color) { echo '.footer { background-color:'.$braftonium_footerbg_color.';} '; }
-			if ($braftonium_footer_color) { echo '.footer { color:'.$braftonium_footer_color.';} '; }
-			if ($braftonium_footerlink_color) { echo '.footer a { color:'.$braftonium_footerlink_color.';} .footer button, .footer .blue-btn { background-color:'.$braftonium_footerlink_color.';} '; }
-			if ($braftonium_footerlinkhover_color) { echo '.footer a:hover { color:'.$braftonium_footerlinkhover_color.';} .footer button:hover, .footer .blue-btn:hover { background-color:'.$braftonium_footerlinkhover_color.';} '; }
+			if ($braftonium_link) { echo 'a:not(.blu-btn):not(.orange-btn):not(.read-more), a:not(.blu-btn):not(.orange-btn):not(.read-more):visited, .blog .read-more { color:'.$braftonium_link.';} button, .blue-btn, .pagination a:hover, .hero .read-more { background-color:'.$braftonium_link.';} .blog .hero article.hentry { border-bottom-color: '.$braftonium_link.'99; }'; }
+			if ($braftonium_hover) { echo 'a:not(.blu-btn):not(.orange-btn):not(.read-more):hover, .pagination a:hover, .blog .read-more:hover { color:'.$braftonium_hover.';} .button:hover, .hero .read-more:hover { background-color:'.$braftonium_hover.';} '; }
+			if ($braftonium_headerbg) { echo '.header, #menu-nav.nav li ul.sub-menu, .blog .simple .byline, .blog .rich article.hentry { background-color:'.$braftonium_headerbg.';} .blog .rich article.hentry .content { background-color:'.$braftonium_headerbg.'cc;}'; }
+			if ($braftonium_headercolor) { echo '.header, .blog .simple .byline, .blog .rich article.hentry .content { color:'.$braftonium_headercolor.';} '; }
+			if ($braftonium_headerlink) { echo '.header a, #menu-nav.nav li a, .blog .simple .byline a, .blog .rich article.hentry a { color:'.$braftonium_headerlink.';} .header button, .header .blue-btn { background-color:'.$headerlink.';} '; }
+			if ($braftonium_headerlinkhover) { echo '.header a:hover, #menu-nav.nav li a:hover, .blog .simple .byline a:hover, .blog .rich article.hentry a:hover { color:'.$braftonium_headerlinkhover.';} .header .header button:hover, .header .blue-btn:hover { background-color:'.$headerlinkhover.';}'; }
+			if ($braftonium_footerbg_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry { background-color:'.$braftonium_footerbg_color.';} '; }
+			if ($braftonium_footer_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry a { color:'.$braftonium_footer_color.';} '; }
+			if ($braftonium_footerlink_color) { echo '.footer a, .blog .simple .entry-title a { color:'.$braftonium_footerlink_color.';} .footer button, .footer .blue-btn { background-color:'.$braftonium_footerlink_color.';} '; }
+			if ($braftonium_footerlinkhover_color) { echo '.footer a:hover, .blog .simple .entry-title a:hover, .blog .full article.hentry a:hover { color:'.$braftonium_footerlinkhover_color.';} .footer button:hover, .footer .blue-btn:hover { background-color:'.$braftonium_footerlinkhover_color.';} '; }
 			if ($braftonium_hover) { echo '@media only screen and (min-width: 768px){ #menu-nav.nav li a { background-color:'.$braftonium_headerbg.';} } '; }
 		echo '</style>';
 
