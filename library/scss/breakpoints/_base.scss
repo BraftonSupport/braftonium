@@ -507,7 +507,7 @@ svg {
 				display: none;
 			}
 			a {
-				color: $white;
+				color: rgba($white, .75);
 				&:hover {
 					color: $lightblue;
 				}
