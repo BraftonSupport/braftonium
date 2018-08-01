@@ -1,4 +1,5 @@
 <?php
+// Theme options page
 if(function_exists("acf_add_local_field_group")){
 acf_add_local_field_group(array(
 	'key' => 'group_5a4e8d955ca60',

@@ -628,7 +628,7 @@ svg {
 			margin: auto;
 		}
 	}
-	.list .container {
+	.list .container, .widgetarea .container {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;

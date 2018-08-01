@@ -54,7 +54,6 @@ $other = $style['other'];
 									</header>
 								<?php endif; ?>
 
-
 								<section class="entry-content cf" itemprop="articleBody">
 									<?php the_content(); ?>
 								</section>

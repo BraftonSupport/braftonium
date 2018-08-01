@@ -75,36 +75,33 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 function braftonium_widgets_init() {
-	$widgetareas = get_field('extra_widget_areas', 'option');
-	if( $widgetareas && in_array('footer', $widgetareas) ) {
-		register_sidebar( array(
-			'name'		  => __( 'Footer Left Widget', 'braftonium' ),
-			'id'			=> 'footer-left',
-			'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		) );
-		register_sidebar( array(
-			'name'		  => __( 'Footer Middle Widget', 'braftonium' ),
-			'id'			=> 'footer-middle',
-			'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		) );
-		register_sidebar( array(
-			'name'		  => __( 'Footer Right Widget', 'braftonium' ),
-			'id'			=> 'footer-right',
-			'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		) );
-	}
+	register_sidebar( array(
+		'name'		  => __( 'Footer Left Widget', 'braftonium' ),
+		'id'			=> 'footer-left',
+		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'		  => __( 'Footer Middle Widget', 'braftonium' ),
+		'id'			=> 'footer-middle',
+		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'		  => __( 'Footer Right Widget', 'braftonium' ),
+		'id'			=> 'footer-right',
+		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'braftonium_widgets_init' );
 
