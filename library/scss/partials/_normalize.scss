@@ -94,7 +94,7 @@ a {
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 
-a:focus {
+a:focus, button:focus {
     outline: thin dotted;
 }
 
