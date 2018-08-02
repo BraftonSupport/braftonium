@@ -8,14 +8,15 @@ jQuery(document).ready(function($){
             $( 'nav' ).toggleClass('toggleon');
             $( this ).children( 'svg' ).toggle();
         });
-
+    }
     //The menu dropdown buttons
         $('#menu-nav button').click(function() {
             $(this).toggleClass('rotate');
             $( this ).next('.sub-menu').toggleClass('toggleon');
         });
-    }
-    
+
+
+
     $('.validation .slick').slick({
         autoplay: true,
         autoplaySpeed: 9500,

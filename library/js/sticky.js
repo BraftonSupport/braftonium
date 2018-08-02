@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-  
+  // if ($(window).width() > 768) {
     var mn = $('.header');
         mns = 'scrolled';
         hdr = $('.header').height();
@@ -14,5 +14,5 @@ jQuery(document).ready(function($){
         content.css( "margin-top", '0' );
       }
     });
-  
-  });
+  // }
+});

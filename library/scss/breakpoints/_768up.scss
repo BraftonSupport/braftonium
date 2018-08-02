@@ -21,9 +21,6 @@ nav {
 .scrolled {
 	nav {
 		display: inline;
-		#menu-nav {
-			float: right;
-		}
 	}
 	.nextwidget {
 		display: none;
@@ -59,10 +56,15 @@ nav {
 	}
 }
 
-.scrolled #inner-header #logo {
-	grid-row: 1 / 4;
+.scrolled #inner-header {
+	#logo {
+		grid-row: 1 / 4;
+	}
+	.below {
+		grid-row: 1 / 4;
+		grid-column: 2 / 3;
+	}
 }
-
 
 /*********************
 NAVIGATION STYLES
@@ -98,14 +100,12 @@ NAVIGATION STYLES
 		plan your menus and drop-downs wisely.
 		*/
 		&:hover {
-			> ul.sub-menu,
-			> ul.children {
+			> ul.sub-menu {
 				top: 2.1em;
 				left: -5px;
 			}
 		}
-		ul.sub-menu,
-		ul.children {
+		ul.sub-menu {
 			position: absolute;
 			top: -9999px;
 			left: -9999px;
@@ -114,6 +114,11 @@ NAVIGATION STYLES
 			border-top: 0;
 			z-index: 8999;
 			width: 200px;
+			&.toggleon {
+				position: absolute;
+				top: 2.1em;
+				left: -5px;
+			}
 			button {
 				@include rotate(-90);
 			}
@@ -125,7 +130,13 @@ NAVIGATION STYLES
 				ul {
 					top: -1000px;
 				}
-				&:hover ul {
+				&:hover {
+					ul {
+						top: -1px;
+						left: 100%;
+					}
+				}
+				.toggleon {
 					top: -1px;
 					left: 100%;
 				}
@@ -214,6 +225,11 @@ POSTS & CONTENT STYLES
 			}
 		}
 	}
+}
+
+.acf-map {
+	flex: 1 0 75%;
+	margin-left: 5%;
 }
 
 .slick {

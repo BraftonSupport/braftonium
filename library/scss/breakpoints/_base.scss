@@ -202,6 +202,7 @@ HEADER STYLES
 		position: fixed;
 		top: 0;
 		width: 100%;
+		z-index: 99;
 		#logo {
 			text-align: left;
 			float: left;
@@ -217,7 +218,7 @@ HEADER STYLES
 			float:right;
 		}
 		nav {
-			margin: auto 0 auto auto;
+			margin: auto 0 auto 15%;
 		}
 	}
 	p {
@@ -423,6 +424,7 @@ svg {
 .acf-map {
 	width: 100%;
 	min-height: 300px;
+	flex: 1;
 	border: #ccc solid 1px;
 	img {
 		max-width: inherit !important;
@@ -664,6 +666,7 @@ svg {
 		flex-wrap: wrap;
 		.list-item {
 			max-width: 200px;
+			margin: auto;
 		}
 	}
 	.cta .blue-btn {
