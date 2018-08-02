@@ -5,16 +5,18 @@ jQuery(document).ready(function($){
 
     //The menu button in the mobile version
         $('#menu-toggle').click(function() {
-            $( 'nav' ).toggle('slow');
+            $( 'nav' ).toggleClass('toggleon');
+            $( this ).children( 'svg' ).toggle();
         });
-
+    }
     //The menu dropdown buttons
         $('#menu-nav button').click(function() {
             $(this).toggleClass('rotate');
-            $( this ).next('.sub-menu').toggle('slow');
+            $( this ).next('.sub-menu').toggleClass('toggleon');
         });
-    }
-    
+
+
+
     $('.validation .slick').slick({
         autoplay: true,
         autoplaySpeed: 9500,

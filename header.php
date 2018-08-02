@@ -60,13 +60,13 @@
 			if ($braftonium_hover) { echo 'a:not(.blue-btn):not(.orange-btn):not(.read-more):hover, .pagination a:hover, .blog .read-more:hover { color:'.$braftonium_hover.';} .button:hover, .blue-btn:hover, .blue-btn:focus, .blue-btn:active, .hero .read-more:hover { background-color:'.$braftonium_hover.';} '; }
 			if ($braftonium_headerbg) { echo '.header, #menu-nav.nav li ul.sub-menu, .blog .simple .byline, .blog .rich article.hentry { background-color:'.$braftonium_headerbg.';} .blog .rich article.hentry .content { background-color:'.$braftonium_headerbg.'cc;}'; }
 			if ($braftonium_headercolor) { echo '.header, .blog .simple .byline, .blog .rich article.hentry .content { color:'.$braftonium_headercolor.';} '; }
-			if ($braftonium_headerlink) { echo '.header a, #menu-nav.nav li a, .blog .simple .byline a, .blog .rich article.hentry a { color:'.$braftonium_headerlink.';} .header button, .header .blue-btn { background-color:'.$headerlink.';} '; }
+			if ($braftonium_headerlink) { echo '.header a, #menu-nav.nav li a, .blog .simple .byline a, .blog .rich article.hentry a { color:'.$braftonium_headerlink.';} .header .blue-btn { background-color: background-color:'.$headerlink.';} '; }
 			if ($braftonium_headerlinkhover) { echo '.header a:hover, #menu-nav.nav li a:hover, .blog .simple .byline a:hover, .blog .rich article.hentry a:hover { color:'.$braftonium_headerlinkhover.';} .header .header button:hover, .header .blue-btn:hover { background-color:'.$headerlinkhover.';}'; }
 			if ($braftonium_footerbg_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry { background-color:'.$braftonium_footerbg_color.';} '; }
 			if ($braftonium_footer_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry a { color:'.$braftonium_footer_color.';} '; }
 			if ($braftonium_footerlink_color) { echo '.footer a, .blog .simple .entry-title a { color:'.$braftonium_footerlink_color.';} .footer button, .footer .blue-btn { background-color:'.$braftonium_footerlink_color.';} '; }
 			if ($braftonium_footerlinkhover_color) { echo '.footer a:hover, .blog .simple .entry-title a:hover, .blog .full article.hentry a:hover { color:'.$braftonium_footerlinkhover_color.';} .footer button:hover, .footer .blue-btn:hover { background-color:'.$braftonium_footerlinkhover_color.';} '; }
-			if ($braftonium_hover) { echo '@media only screen and (min-width: 768px){ #menu-nav.nav li a { background-color:'.$braftonium_headerbg.';} } '; }
+			if ($braftonium_hover) { echo '@media only screen and (max-width: 768px){ #menu-nav.nav li a { background-color:'.$braftonium_headerbg.';} } '; }
 		echo '</style>';
 
 		$nav = get_field('navigation_bar_position', 'option');
@@ -130,13 +130,13 @@
 
 					<div class="nextwidget">
 						<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'braftonium' );
-						echo get_svg_path('icon-bars'); ?></button>	
+						echo get_svg_path('icon-bars').get_svg_path('icon-close'); ?></button>	
 						<?php if ( is_active_sidebar( 'header-sidebar' ) ) {
 							dynamic_sidebar( 'header-sidebar' );
 						} ?>
 					</div>
 
-					<nav class="<?php if ($nav): echo $nav; else: echo 'below'; endif; ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="hide <?php if ($nav): echo $nav; else: echo 'below'; endif; ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
 							'container_class' => 'menu cf',                 // class of container (should you choose to use it)

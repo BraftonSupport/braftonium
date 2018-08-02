@@ -415,7 +415,7 @@ body#tinymce.wp-editor a {
   background: transparent;
 }
 /* line 97, ../scss/partials/_normalize.scss */
-body#tinymce.wp-editor a:focus {
+body#tinymce.wp-editor a:focus, body#tinymce.wp-editor button:focus {
   outline: thin dotted;
 }
 /* line 105, ../scss/partials/_normalize.scss */

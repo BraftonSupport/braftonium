@@ -202,6 +202,7 @@ HEADER STYLES
 		position: fixed;
 		top: 0;
 		width: 100%;
+		z-index: 99;
 		#logo {
 			text-align: left;
 			float: left;
@@ -217,7 +218,7 @@ HEADER STYLES
 			float:right;
 		}
 		nav {
-			margin: auto 0 auto auto;
+			margin: auto 0 auto 15%;
 		}
 	}
 	p {
@@ -243,14 +244,14 @@ HEADER STYLES
 	}
 
 	#menu-toggle {
-		.icon-bars {
+		svg {
 			margin-left: 5px;
 			position: relative;
 			top: 2px;
 		}
-	}
-	nav {
-		display: none;
+		.icon-close {
+			display: none;
+		}
 	}
 	.nextwidget {
 		.widget {
@@ -295,29 +296,49 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-
+// .hide {
+// 	position: absolute;
+// 	top: -9999px;
+// 	left: -9999px;
+//  }
+nav {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	&.toggleon {
+		position: inherit;
+		top: 0;
+		left: 0;
+	}
+}
 #menu-nav.nav {
 	border-bottom: 0;
 	margin: 0;
 	button {
 		background: transparent;
-		border: none;
-		color: inherit;
-		float: right;
 		padding: 0;
 		width: 1.25em;
 		&.rotate {
 			border-left: none;
-			border-bottom: 1px solid rgba($color: $white, $alpha: .1);
 		}
+		&:focus { outline: thin dotted; }
 	}
 	li {
 		margin: 0;
-		border-bottom: 1px solid rgba($color: $white, $alpha: .1);
+		border-top: 1px solid rgba($color: $white, $alpha: .1);
+		&.menu-item-has-children {
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
 		a {
 			display: block;
-			padding: 5px 0;
+			padding: 7px 0;
 			color: $white;
+			margin-right: auto;
 			text-decoration: none;
 			&:hover {
 				color: $lightblue;
@@ -325,11 +346,21 @@ NAVIGATION STYLES
 		}
 		ul.sub-menu,
 		ul.children {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+			-webkit-flex: 1 0 100%;
+			-ms-flex: 1 0 100%;
+			flex: 1 0 100%;
 			margin: 0;
 			list-style-type: none;
+			&.toggleon {
+				position: inherit;
+				top: 0;
+				left: 0;
+			}
 			li {
-				border-top: 1px solid rgba($color: $gray, $alpha: .1);
-				border-bottom: none;
+				// border-bottom: none;
 				a {
 					padding-left: 1.5em;
 				}
@@ -393,6 +424,7 @@ svg {
 .acf-map {
 	width: 100%;
 	min-height: 300px;
+	flex: 1;
 	border: #ccc solid 1px;
 	img {
 		max-width: inherit !important;
@@ -634,6 +666,7 @@ svg {
 		flex-wrap: wrap;
 		.list-item {
 			max-width: 200px;
+			margin: auto;
 		}
 	}
 	.cta .blue-btn {
