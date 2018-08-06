@@ -323,7 +323,7 @@ acf_add_local_field_group(array(
 								'id' => '',
 							),
 							'choices' => array(
-								'show' => 'Show button?',
+								'show' => __( 'Show button?', 'braftonium' ),
 							),
 							'allow_custom' => 0,
 							'save_custom' => 0,

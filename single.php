@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header();
+$brafton_comments = get_field('comments', 'option');
+?>
 
 			<div id="content">
 				<?php if (has_post_thumbnail()) : ?>
@@ -33,7 +35,7 @@
 								get_template_part( 'post-formats/format', get_post_format() );
 
 								// If comments are open or we have at least one comment, load up the comment template.
-								if ( comments_open() || get_comments_number() ) :
+								if ( isset($brafton_comments) && comments_open() || get_comments_number() ) :
 									comments_template();
 								endif;
 							?>

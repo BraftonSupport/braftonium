@@ -169,7 +169,7 @@ if (!function_exists( 'social_sharing_buttons' ) ) :
 			$linkedURL = 'https://linkedin.com/shareArticle?mini=true&url='.$ssbURL.'&title='.$ssbTitle;
 
 			// Add sharing button at the end of page/page content
-			$variable = '<span class="ssb-social"><span class="ssb-text">Social Share: </span>';
+			$variable = '<span class="ssb-social"><span class="ssb-text">'.__( 'Social Share', 'braftonium' ).': </span>';
 
 			if (is_array($social_media) && in_array("facebook", $social_media)) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank">'.get_svg_path('icon-facebook').'</a>'; }
 			if ( in_array('twitter', $social_media) ) { $variable .= '<a class="ssb-twitter" href="'. $twitterURL .'" target="_blank">'.get_svg_path('icon-twitter').'</a>'; }

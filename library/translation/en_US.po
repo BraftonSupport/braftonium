@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Braftonium\n"
 "Report-Msgid-Bugs-To: Yvonne\n"
-"POT-Creation-Date: 2018-08-06 11:07-0400\n"
-"PO-Revision-Date: 2018-08-06 11:47-0400\n"
+"POT-Creation-Date: 2018-08-06 17:33-0400\n"
+"PO-Revision-Date: 2018-08-06 17:33-0400\n"
 "Last-Translator: \n"
-"Language-Team: Brafton\n"
+"Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,183 +16,293 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: braftonium.php:56
+#: 404.php:13
+msgid "Epic 404 - Article Not Found"
+msgstr "Epic 404 - Article Not Found"
+
+#: 404.php:19 archive.php:53 full-width.php:70
+msgid ""
+"The article you were looking for was not found, but maybe try looking again!"
+msgstr ""
+"The article you were looking for was not found, but maybe try looking again!"
+
+#: archive.php:22 index.php:41 post-formats/format.php:22 single.php:9
+msgid "Posted"
+msgstr "Posted"
+
+#: archive.php:26 index.php:45 post-formats/format.php:26 single.php:13
+msgid "by"
+msgstr "by"
+
+#: archive.php:50 full-width.php:67 index.php:64 single.php:47
+msgid "Oops, Post Not Found!"
+msgstr "Oops, Post Not Found!"
+
+#: archive.php:56
+msgid "This is the error message in the archive.php template."
+msgstr "This is the error message in the archive.php template."
+
+#: comments.php:17
+msgid "<span>No</span> Comments"
+msgstr "<span>No</span> Comments"
+
+#: comments.php:17
+msgid "<span>One</span> Comment"
+msgstr "<span>One</span> Comment"
+
+#: comments.php:17
+msgid "<span>%</span> Comments"
+msgstr "<span>%</span> Comments"
+
+#: comments.php:27
+msgid "Reply"
+msgstr "Reply"
+
+#: comments.php:38
+msgid "&larr; Previous Comments"
+msgstr "&larr; Previous Comments"
+
+#: comments.php:39
+msgid "More Comments &rarr;"
+msgstr "More Comments &rarr;"
+
+#: comments.php:44
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#: full-width.php:73
+msgid "This is the error message in the full-width.php template."
+msgstr "This is the error message in the full-width.php template."
+
+#: functions.php:111
+msgid "Theme Colors"
+msgstr "Theme Colors"
+
+#: functions.php:172
+msgid "Social Share"
+msgstr "Social Share"
+
+#: functions.php:208
+#, php-format
+msgid "<cite class=\"fn\">%1$s</cite> %2$s"
+msgstr "<cite class=\"fn\">%1$s</cite> %2$s"
+
+#: functions.php:208
+msgid "(Edit)"
+msgstr "(Edit)"
+
+#: functions.php:209
+msgid "F jS, Y"
+msgstr "F jS, Y"
+
+#: functions.php:214
+msgid "Your comment is awaiting moderation."
+msgstr "Your comment is awaiting moderation."
+
+#: header.php:132
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:143
+msgid "The Main Menu"
+msgstr "The Main Menu"
+
+#: index.php:67 single.php:50
+msgid "Uh Oh. Something is missing. Try double checking things."
+msgstr "Uh Oh. Something is missing. Try double checking things."
+
+#: index.php:70
+msgid "This is the error message in the index.php template."
+msgstr "This is the error message in the index.php template."
+
+#: library/braftonium.php:56
 #, php-format
 msgid "Page %s"
 msgstr "Page %s"
 
-#: braftonium.php:162
+#: library/braftonium.php:162
 msgid "Navigation"
 msgstr "Navigation"
 
-#: braftonium.php:163 theme-options/braftonium-options.acf.php:172
+#: library/braftonium.php:163
+#: library/theme-options/braftonium-options.acf.php:172
 msgid "Social Media"
 msgstr "Social Media"
 
-#: braftonium.php:218
+#: library/braftonium.php:218
 msgid "No Related Posts Yet!"
 msgstr "No Related Posts Yet!"
 
-#: braftonium.php:264
+#: library/braftonium.php:264
 msgid "Read "
 msgstr "Read "
 
-#: braftonium.php:264
+#: library/braftonium.php:264 search.php:30
 msgid "Read more &raquo;"
 msgstr "Read more &raquo;"
 
-#: braftonium.php:301
+#: library/braftonium.php:301
 msgid "Theme General Settings"
 msgstr "Theme General Settings"
 
-#: braftonium.php:302
+#: library/braftonium.php:302
 msgid "Theme Settings"
 msgstr "Theme Settings"
 
-#: braftonium.php:312
+#: library/braftonium.php:312
 msgid "Footer Left Widget"
 msgstr "Footer Left Widget"
 
-#: braftonium.php:314 braftonium.php:323 braftonium.php:332
+#: library/braftonium.php:314 library/braftonium.php:323
+#: library/braftonium.php:332
 msgid "This is located in the footer. Use only 1 widget."
 msgstr "This is located in the footer. Use only 1 widget."
 
-#: braftonium.php:321
+#: library/braftonium.php:321
 msgid "Footer Middle Widget"
 msgstr "Footer Middle Widget"
 
-#: braftonium.php:330
+#: library/braftonium.php:330
 msgid "Footer Right Widget"
 msgstr "Footer Right Widget"
 
-#: custom-fields/banner/banner.acf.php:9 custom-fields/style/style.acf.php:78
+#: library/custom-fields/banner/banner.acf.php:5
+msgid "Banner"
+msgstr "Banner"
+
+#: library/custom-fields/banner/banner.acf.php:9
+#: library/custom-fields/style/style.acf.php:78
 msgid "Background Image"
 msgstr "Background Image"
 
-#: custom-fields/banner/banner.acf.php:33
-#: custom-fields/full-width/full-width.acf.php:113
-#: custom-fields/full-width/full-width.acf.php:259
-#: custom-fields/full-width/full-width.acf.php:606
-#: custom-fields/full-width/full-width.acf.php:738
+#: library/custom-fields/banner/banner.acf.php:33
+#: library/custom-fields/full-width/full-width.acf.php:113
+#: library/custom-fields/full-width/full-width.acf.php:259
+#: library/custom-fields/full-width/full-width.acf.php:606
+#: library/custom-fields/full-width/full-width.acf.php:738
 msgid "Title"
 msgstr "Title"
 
-#: custom-fields/banner/banner.acf.php:52
-#: custom-fields/full-width/full-width.acf.php:48
+#: library/custom-fields/banner/banner.acf.php:52
+#: library/custom-fields/full-width/full-width.acf.php:48
 msgid "Tagline"
 msgstr "Tagline"
 
-#: custom-fields/full-width/full-width.acf.php:9
-#: custom-fields/full-width/full-width.acf.php:278
+#: library/custom-fields/full-width/full-width.acf.php:9
+#: library/custom-fields/full-width/full-width.acf.php:278
 msgid "Content"
 msgstr "Content"
 
-#: custom-fields/full-width/full-width.acf.php:24
+#: library/custom-fields/full-width/full-width.acf.php:24
 msgid "Visual"
 msgstr "Visual"
 
-#: custom-fields/full-width/full-width.acf.php:29
+#: library/custom-fields/full-width/full-width.acf.php:29
 msgid "Headline"
 msgstr "Headline"
 
-#: custom-fields/full-width/full-width.acf.php:67
-#: custom-fields/full-width/full-width.acf.php:776
+#: library/custom-fields/full-width/full-width.acf.php:67
+#: library/custom-fields/full-width/full-width.acf.php:776
 msgid "Button"
 msgstr "Button"
 
-#: custom-fields/full-width/full-width.acf.php:82
-#: custom-fields/full-width/full-width.acf.php:450
-#: custom-fields/full-width/full-width.acf.php:575
-#: custom-fields/full-width/full-width.acf.php:707
-#: custom-fields/full-width/full-width.acf.php:791
-#: custom-fields/full-width/full-width.acf.php:1017
-#: custom-fields/full-width/full-width.acf.php:1095
-#: custom-fields/style/style.acf.php:9
+#: library/custom-fields/full-width/full-width.acf.php:82
+#: library/custom-fields/full-width/full-width.acf.php:450
+#: library/custom-fields/full-width/full-width.acf.php:575
+#: library/custom-fields/full-width/full-width.acf.php:707
+#: library/custom-fields/full-width/full-width.acf.php:791
+#: library/custom-fields/full-width/full-width.acf.php:1017
+#: library/custom-fields/full-width/full-width.acf.php:1095
+#: library/custom-fields/style/style.acf.php:9
 msgid "Style"
 msgstr "Style"
 
-#: custom-fields/full-width/full-width.acf.php:108
+#: library/custom-fields/full-width/full-width.acf.php:108
 msgid "Services or List"
 msgstr "Services or List"
 
-#: custom-fields/full-width/full-width.acf.php:132
+#: library/custom-fields/full-width/full-width.acf.php:132
 msgid "Show"
 msgstr "Show"
 
-#: custom-fields/full-width/full-width.acf.php:144
+#: library/custom-fields/full-width/full-width.acf.php:144
 msgid "Show Intro Text"
 msgstr "Show Intro Text"
 
-#: custom-fields/full-width/full-width.acf.php:145
+#: library/custom-fields/full-width/full-width.acf.php:145
 msgid "Show Outro Text"
 msgstr "Show Outro Text"
 
-#: custom-fields/full-width/full-width.acf.php:157
+#: library/custom-fields/full-width/full-width.acf.php:157
 msgid "Intro Text"
 msgstr "Intro Text"
 
-#: custom-fields/full-width/full-width.acf.php:184
+#: library/custom-fields/full-width/full-width.acf.php:184
 msgid "List Custom Content or Recent Posts"
 msgstr "List Custom Content or Recent Posts"
 
-#: custom-fields/full-width/full-width.acf.php:196
+#: library/custom-fields/full-width/full-width.acf.php:196
 msgid "Custom"
 msgstr "Custom"
 
-#: custom-fields/full-width/full-width.acf.php:197
-#: custom-fields/full-width/full-width.acf.php:365
+#: library/custom-fields/full-width/full-width.acf.php:197
+#: library/custom-fields/full-width/full-width.acf.php:365
 msgid "Recent"
 msgstr "Recent"
 
-#: custom-fields/full-width/full-width.acf.php:208
+#: library/custom-fields/full-width/full-width.acf.php:208
 msgid "Custom Content"
 msgstr "Custom Content"
 
-#: custom-fields/full-width/full-width.acf.php:235
-#: custom-fields/full-width/full-width.acf.php:640
-#: custom-fields/full-width/full-width.acf.php:645
+#: library/custom-fields/full-width/full-width.acf.php:235
+#: library/custom-fields/full-width/full-width.acf.php:640
+#: library/custom-fields/full-width/full-width.acf.php:645
 msgid "Image"
 msgstr "Image"
 
-#: custom-fields/full-width/full-width.acf.php:297
+#: library/custom-fields/full-width/full-width.acf.php:297
 msgid "Link"
 msgstr "Link"
 
-#: custom-fields/full-width/full-width.acf.php:314
+#: library/custom-fields/full-width/full-width.acf.php:314
 msgid "Button?"
 msgstr "Button?"
 
-#: custom-fields/full-width/full-width.acf.php:317
+#: library/custom-fields/full-width/full-width.acf.php:317
 msgid "Check this box if you want to link the content but not show the button."
 msgstr ""
 "Check this box if you want to link the content but not show the button."
 
-#: custom-fields/full-width/full-width.acf.php:338
-#: custom-fields/full-width/full-width.acf.php:548
+#: library/custom-fields/full-width/full-width.acf.php:326
+msgid "Show button?"
+msgstr "Show button?"
+
+#: library/custom-fields/full-width/full-width.acf.php:338
+#: library/custom-fields/full-width/full-width.acf.php:548
 msgid "Image Size and Shape"
 msgstr "Image Size and Shape"
 
-#: custom-fields/full-width/full-width.acf.php:350
-#: custom-fields/full-width/full-width.acf.php:560
+#: library/custom-fields/full-width/full-width.acf.php:350
+#: library/custom-fields/full-width/full-width.acf.php:560
 msgid "Round the image"
 msgstr "Round the image"
 
-#: custom-fields/full-width/full-width.acf.php:351
-#: custom-fields/full-width/full-width.acf.php:561
+#: library/custom-fields/full-width/full-width.acf.php:351
+#: library/custom-fields/full-width/full-width.acf.php:561
 msgid "Thumbnail (150px by 150px )"
 msgstr "Thumbnail (150px by 150px )"
 
-#: custom-fields/full-width/full-width.acf.php:352
-#: custom-fields/full-width/full-width.acf.php:562
+#: library/custom-fields/full-width/full-width.acf.php:352
+#: library/custom-fields/full-width/full-width.acf.php:562
 msgid "Squared (300px by 300px)"
 msgstr "Squared (300px by 300px)"
 
-#: custom-fields/full-width/full-width.acf.php:353
-#: custom-fields/full-width/full-width.acf.php:563
+#: library/custom-fields/full-width/full-width.acf.php:353
+#: library/custom-fields/full-width/full-width.acf.php:563
 msgid "Full (best for awards and different sized images.)"
 msgstr "Full (best for awards and different sized images.)"
 
-#: custom-fields/full-width/full-width.acf.php:368
+#: library/custom-fields/full-width/full-width.acf.php:368
 msgid ""
 "If not the most recent posts, put in a custom post type, eg: \"testimonial"
 "\", \"event\", and \"team-member\"."
@@ -200,35 +310,37 @@ msgstr ""
 "If not the most recent posts, put in a custom post type, eg: \"testimonial"
 "\", \"event\", and \"team-member\"."
 
-#: custom-fields/full-width/full-width.acf.php:396
+#: library/custom-fields/full-width/full-width.acf.php:396
 msgid "Number of Posts"
 msgstr "Number of Posts"
 
-#: custom-fields/full-width/full-width.acf.php:423
+#: library/custom-fields/full-width/full-width.acf.php:423
 msgid "Outro Text"
 msgstr "Outro Text"
 
-#: custom-fields/full-width/full-width.acf.php:476
+#: library/custom-fields/full-width/full-width.acf.php:476
 msgid "Validation (Slider)"
 msgstr "Validation (Slider)"
 
-#: custom-fields/full-width/full-width.acf.php:524
+#: library/custom-fields/full-width/full-width.acf.php:524
+#: post-formats/content-list.php:98 post-formats/content-list.php:145
+#: post-formats/content-validation.php:131
 msgid "Read More"
 msgstr "Read More"
 
-#: custom-fields/full-width/full-width.acf.php:527
+#: library/custom-fields/full-width/full-width.acf.php:527
 msgid "Add Read More Button"
 msgstr "Add Read More Button"
 
-#: custom-fields/full-width/full-width.acf.php:601
+#: library/custom-fields/full-width/full-width.acf.php:601
 msgid "Row"
 msgstr "Row"
 
-#: custom-fields/full-width/full-width.acf.php:625
+#: library/custom-fields/full-width/full-width.acf.php:625
 msgid "Flexible Content"
 msgstr "Flexible Content"
 
-#: custom-fields/full-width/full-width.acf.php:628
+#: library/custom-fields/full-width/full-width.acf.php:628
 msgid ""
 "When you add more blocks, they will show up next to each other in a single "
 "row."
@@ -236,79 +348,82 @@ msgstr ""
 "When you add more blocks, they will show up next to each other in a single "
 "row."
 
-#: custom-fields/full-width/full-width.acf.php:674
-#: custom-fields/full-width/full-width.acf.php:679
-#: custom-fields/full-width/full-width.acf.php:757
+#: library/custom-fields/full-width/full-width.acf.php:674
+#: library/custom-fields/full-width/full-width.acf.php:679
+#: library/custom-fields/full-width/full-width.acf.php:757
 msgid "Text"
 msgstr "Text"
 
-#: custom-fields/full-width/full-width.acf.php:701
+#: library/custom-fields/full-width/full-width.acf.php:701
 msgid "Add Block"
 msgstr "Add Block"
 
-#: custom-fields/full-width/full-width.acf.php:817
-#: custom-fields/full-width/full-width.acf.php:980
+#: library/custom-fields/full-width/full-width.acf.php:817
+#: library/custom-fields/full-width/full-width.acf.php:980
 msgid "Map"
 msgstr "Map"
 
-#: custom-fields/full-width/full-width.acf.php:822
+#: library/custom-fields/full-width/full-width.acf.php:822
+#: post-formats/content-map.php:47
 msgid "Address"
 msgstr "Address"
 
-#: custom-fields/full-width/full-width.acf.php:837
+#: library/custom-fields/full-width/full-width.acf.php:837
 msgid "Add Address Line"
 msgstr "Add Address Line"
 
-#: custom-fields/full-width/full-width.acf.php:841
+#: library/custom-fields/full-width/full-width.acf.php:841
 msgid "Address Line"
 msgstr "Address Line"
 
-#: custom-fields/full-width/full-width.acf.php:862
+#: library/custom-fields/full-width/full-width.acf.php:862
+#: post-formats/content-map.php:54
 msgid "Phone"
 msgstr "Phone"
 
-#: custom-fields/full-width/full-width.acf.php:877
+#: library/custom-fields/full-width/full-width.acf.php:877
 msgid "Add Phone Number"
 msgstr "Add Phone Number"
 
-#: custom-fields/full-width/full-width.acf.php:881
+#: library/custom-fields/full-width/full-width.acf.php:881
 msgid "Phone Label"
 msgstr "Phone Label"
 
-#: custom-fields/full-width/full-width.acf.php:893
+#: library/custom-fields/full-width/full-width.acf.php:893
 msgid "Toll Free/Fax/"
 msgstr "Toll Free/Fax/"
 
-#: custom-fields/full-width/full-width.acf.php:900
+#: library/custom-fields/full-width/full-width.acf.php:900
 msgid "Phone Number"
 msgstr "Phone Number"
 
-#: custom-fields/full-width/full-width.acf.php:921
-#: theme-options/braftonium-options.acf.php:197
+#: library/custom-fields/full-width/full-width.acf.php:921
+#: library/theme-options/braftonium-options.acf.php:197
+#: post-formats/content-map.php:62
 msgid "Email"
 msgstr "Email"
 
-#: custom-fields/full-width/full-width.acf.php:936
+#: library/custom-fields/full-width/full-width.acf.php:936
 msgid "Add Email"
 msgstr "Add Email"
 
-#: custom-fields/full-width/full-width.acf.php:940
+#: library/custom-fields/full-width/full-width.acf.php:940
 msgid "Email Label"
 msgstr "Email Label"
 
-#: custom-fields/full-width/full-width.acf.php:952
+#: library/custom-fields/full-width/full-width.acf.php:952
 msgid "Info/Sales/Support"
 msgstr "Info/Sales/Support"
 
-#: custom-fields/full-width/full-width.acf.php:959
+#: library/custom-fields/full-width/full-width.acf.php:959
 msgid "Email Address"
 msgstr "Email Address"
 
-#: custom-fields/full-width/full-width.acf.php:971
+#: library/custom-fields/full-width/full-width.acf.php:971
 msgid "info/sales/support@website.com"
 msgstr "info/sales/support@website.com"
 
-#: custom-fields/full-width/full-width.acf.php:1001
+#: library/custom-fields/full-width/full-width.acf.php:1001
 msgid ""
 "Go to <a href=\"https://developers.google.com/maps/documentation/embed/\" "
 "target=\"_blank\">this page</a> and get yourself a key. Select a new project "
@@ -320,75 +435,75 @@ msgstr ""
 "then click \"Enable API\". Copy and paste the result here. It is free and "
 "takes less than a minute."
 
-#: custom-fields/full-width/full-width.acf.php:1043
+#: library/custom-fields/full-width/full-width.acf.php:1043
 msgid "Widget Areas"
 msgstr "Widget Areas"
 
-#: custom-fields/full-width/full-width.acf.php:1119
+#: library/custom-fields/full-width/full-width.acf.php:1119
 msgid "Add Row"
 msgstr "Add Row"
 
-#: custom-fields/style/style.acf.php:24
+#: library/custom-fields/style/style.acf.php:24
 msgid "Background Color"
 msgstr "Background Color"
 
-#: custom-fields/style/style.acf.php:39
+#: library/custom-fields/style/style.acf.php:39
 msgid "Color"
 msgstr "Color"
 
-#: custom-fields/style/style.acf.php:54
+#: library/custom-fields/style/style.acf.php:54
 msgid "Background"
 msgstr "Background"
 
-#: custom-fields/style/style.acf.php:66
+#: library/custom-fields/style/style.acf.php:66
 msgid "Static"
 msgstr "Static"
 
-#: custom-fields/style/style.acf.php:67
+#: library/custom-fields/style/style.acf.php:67
 msgid "Video"
 msgstr "Video"
 
-#: custom-fields/style/style.acf.php:110
+#: library/custom-fields/style/style.acf.php:110
 msgid "Video Url"
 msgstr "Video Url"
 
-#: custom-fields/style/style.acf.php:134
+#: library/custom-fields/style/style.acf.php:134
 msgid "Other"
 msgstr "Other"
 
-#: custom-fields/style/style.acf.php:146
+#: library/custom-fields/style/style.acf.php:146
 msgid "Add Shadow"
 msgstr "Add Shadow"
 
-#: custom-fields/style/style.acf.php:147
+#: library/custom-fields/style/style.acf.php:147
 msgid "Full Screen"
 msgstr "Full Screen"
 
-#: custom-fields/style/style.acf.php:148
+#: library/custom-fields/style/style.acf.php:148
 msgid "Compact (add side margins)"
 msgstr "Compact (add side margins)"
 
-#: custom-fields/style/style.acf.php:149
+#: library/custom-fields/style/style.acf.php:149
 msgid "Thin (reduce padding from the top and bottom)"
 msgstr "Thin (reduce padding from the top and bottom)"
 
-#: custom-fields/style/style.acf.php:150
+#: library/custom-fields/style/style.acf.php:150
 msgid "Center"
 msgstr "Center"
 
-#: custom-fields/style/style.acf.php:162
+#: library/custom-fields/style/style.acf.php:162
 msgid "Add Class"
 msgstr "Add Class"
 
-#: custom-post-types/events/events.acf.php:4
+#: library/custom-post-types/events/events.acf.php:4
 msgid "Events"
 msgstr "Events"
 
-#: custom-post-types/events/events.acf.php:8
+#: library/custom-post-types/events/events.acf.php:8
 msgid "Start Date"
 msgstr "Start Date"
 
-#: custom-post-types/events/events.acf.php:11
+#: library/custom-post-types/events/events.acf.php:11
 msgid ""
 "If both start date and end date are left blank, you have the choice of \"TBD"
 "\" or \"Various Dates\"."
@@ -396,104 +511,105 @@ msgstr ""
 "If both start date and end date are left blank, you have the choice of \"TBD"
 "\" or \"Various Dates\"."
 
-#: custom-post-types/events/events.acf.php:18
+#: library/custom-post-types/events/events.acf.php:18
 msgid "End Date"
 msgstr "End Date"
 
-#: custom-post-types/events/events.acf.php:27
+#: library/custom-post-types/events/events.acf.php:27
 msgid "Date Text"
 msgstr "Date Text"
 
-#: custom-post-types/events/events.acf.php:31
+#: library/custom-post-types/events/events.acf.php:31
 msgid "TBD"
 msgstr "TBD"
 
-#: custom-post-types/events/events.acf.php:32
+#: library/custom-post-types/events/events.acf.php:32
 msgid "Various Dates"
 msgstr "Various Dates"
 
-#: custom-post-types/events/events.acf.php:41
-#: custom-post-types/testimonials/testimonials.acf.php:44
+#: library/custom-post-types/events/events.acf.php:41
+#: library/custom-post-types/testimonials/testimonials.acf.php:44
 msgid "Location"
 msgstr "Location"
 
-#: custom-post-types/team/team.acf.php:4
+#: library/custom-post-types/team/team.acf.php:4
 msgid "Team Member"
 msgstr "Team Member"
 
-#: custom-post-types/team/team.acf.php:8
+#: library/custom-post-types/team/team.acf.php:8
 msgid "Job Title"
 msgstr "Job Title"
 
-#: custom-post-types/testimonials/testimonials.acf.php:4
+#: library/custom-post-types/testimonials/testimonials.acf.php:4
 msgid "Testimonials"
 msgstr "Testimonials"
 
-#: custom-post-types/testimonials/testimonials.acf.php:8
+#: library/custom-post-types/testimonials/testimonials.acf.php:8
 msgid "Name"
 msgstr "Name"
 
-#: custom-post-types/testimonials/testimonials.acf.php:20
+#: library/custom-post-types/testimonials/testimonials.acf.php:20
 msgid "Position"
 msgstr "Position"
 
-#: custom-post-types/testimonials/testimonials.acf.php:32
+#: library/custom-post-types/testimonials/testimonials.acf.php:32
 msgid "Company"
 msgstr "Company"
 
-#: custom-post-types/testimonials/testimonials.acf.php:56
+#: library/custom-post-types/testimonials/testimonials.acf.php:56
 msgid "Website"
 msgstr "Website"
 
-#: theme-options/braftonium-options.acf.php:6
+#: library/theme-options/braftonium-options.acf.php:6
 msgid "Braftonium Theme Options"
 msgstr "Braftonium Theme Options"
 
-#: theme-options/braftonium-options.acf.php:10
+#: library/theme-options/braftonium-options.acf.php:10
 msgid "Navigation Bar Position"
 msgstr "Navigation Bar Position"
 
-#: theme-options/braftonium-options.acf.php:22
+#: library/theme-options/braftonium-options.acf.php:22
 msgid "Next to the Logo 75%"
 msgstr "Next to the Logo 75%"
 
-#: theme-options/braftonium-options.acf.php:23
+#: library/theme-options/braftonium-options.acf.php:23
 msgid "Below the Logo 100%"
 msgstr "Below the Logo 100%"
 
-#: theme-options/braftonium-options.acf.php:36
+#: library/theme-options/braftonium-options.acf.php:36
 msgid "Sticky Nav"
 msgstr "Sticky Nav"
 
-#: theme-options/braftonium-options.acf.php:48
+#: library/theme-options/braftonium-options.acf.php:48
 msgid "Sticky?"
 msgstr "Sticky?"
 
-#: theme-options/braftonium-options.acf.php:60
+#: library/theme-options/braftonium-options.acf.php:60
 msgid "Blog Layout"
 msgstr "Blog Layout"
 
-#: theme-options/braftonium-options.acf.php:89
+#: library/theme-options/braftonium-options.acf.php:89 sidebar.php:11
+#: single.php:64
 msgid "Related Posts"
 msgstr "Related Posts"
 
-#: theme-options/braftonium-options.acf.php:101
+#: library/theme-options/braftonium-options.acf.php:101
 msgid "No Related Posts"
 msgstr "No Related Posts"
 
-#: theme-options/braftonium-options.acf.php:102
+#: library/theme-options/braftonium-options.acf.php:102
 msgid "Below Post"
 msgstr "Below Post"
 
-#: theme-options/braftonium-options.acf.php:103
+#: library/theme-options/braftonium-options.acf.php:103
 msgid "On the Sidebar"
 msgstr "On the Sidebar"
 
-#: theme-options/braftonium-options.acf.php:116
+#: library/theme-options/braftonium-options.acf.php:116
 msgid "Social Share Buttons"
 msgstr "Social Share Buttons"
 
-#: theme-options/braftonium-options.acf.php:119
+#: library/theme-options/braftonium-options.acf.php:119
 msgid ""
 "These are not links to your social media, these are for people to share a "
 "particular page or post on their own social media profiles."
@@ -501,73 +617,131 @@ msgstr ""
 "These are not links to your social media, these are for people to share a "
 "particular page or post on their own social media profiles."
 
-#: theme-options/braftonium-options.acf.php:128
+#: library/theme-options/braftonium-options.acf.php:128
 msgid "Social Share Buttons?"
 msgstr "Social Share Buttons?"
 
-#: theme-options/braftonium-options.acf.php:140
+#: library/theme-options/braftonium-options.acf.php:140
 msgid "Social Share Button Location"
 msgstr "Social Share Button Location"
 
-#: theme-options/braftonium-options.acf.php:160
+#: library/theme-options/braftonium-options.acf.php:160
 msgid "On Both Post and Excerpt"
 msgstr "On Both Post and Excerpt"
 
-#: theme-options/braftonium-options.acf.php:161
+#: library/theme-options/braftonium-options.acf.php:161
 msgid "On Post"
 msgstr "On Post"
 
-#: theme-options/braftonium-options.acf.php:238
+#: library/theme-options/braftonium-options.acf.php:209
+msgid "Allow Comments"
+msgstr "Allow Comments"
+
+#: library/theme-options/braftonium-options.acf.php:212
+msgid "I must warn you, it's going to be spam."
+msgstr "I must warn you, it's going to be spam."
+
+#: library/theme-options/braftonium-options.acf.php:221
+msgid "Comments"
+msgstr "Comments"
+
+#: library/theme-options/braftonium-options.acf.php:262
 msgid "Logo"
 msgstr "Logo"
 
-#: theme-options/braftonium-options.acf.php:248
+#: library/theme-options/braftonium-options.acf.php:272
 msgid "Logo in the Footer"
 msgstr "Logo in the Footer"
 
-#: theme-options/braftonium-options.acf.php:263
+#: library/theme-options/braftonium-options.acf.php:287
 msgid "Text Color"
 msgstr "Text Color"
 
-#: theme-options/braftonium-options.acf.php:272
+#: library/theme-options/braftonium-options.acf.php:296
 msgid "Link Color"
 msgstr "Link Color"
 
-#: theme-options/braftonium-options.acf.php:281
+#: library/theme-options/braftonium-options.acf.php:305
 msgid "Link Hover Color"
 msgstr "Link Hover Color"
 
-#: theme-options/braftonium-options.acf.php:290
+#: library/theme-options/braftonium-options.acf.php:314
 msgid "Header Background Color"
 msgstr "Header Background Color"
 
-#: theme-options/braftonium-options.acf.php:299
+#: library/theme-options/braftonium-options.acf.php:323
 msgid "Header Text Color"
 msgstr "Header Text Color"
 
-#: theme-options/braftonium-options.acf.php:308
+#: library/theme-options/braftonium-options.acf.php:332
 msgid "Header Link Color"
 msgstr "Header Link Color"
 
-#: theme-options/braftonium-options.acf.php:317
+#: library/theme-options/braftonium-options.acf.php:341
 msgid "Header Link Hover Color"
 msgstr "Header Link Hover Color"
 
-#: theme-options/braftonium-options.acf.php:326
+#: library/theme-options/braftonium-options.acf.php:350
 msgid "Footer Background Color"
 msgstr "Footer Background Color"
 
-#: theme-options/braftonium-options.acf.php:335
+#: library/theme-options/braftonium-options.acf.php:359
 msgid "Footer Text Color"
 msgstr "Footer Text Color"
 
-#: theme-options/braftonium-options.acf.php:344
+#: library/theme-options/braftonium-options.acf.php:368
 msgid "Footer Link Color"
 msgstr "Footer Link Color"
 
-#: theme-options/braftonium-options.acf.php:353
+#: library/theme-options/braftonium-options.acf.php:377
 msgid "Footer Link Hover Color"
 msgstr "Footer Link Hover Color"
+
+#: page.php:41
+msgid "Pages:"
+msgstr "Pages:"
+
+#: page.php:47
+msgid "Next page"
+msgstr "Next page"
+
+#: page.php:48
+msgid "Previous page"
+msgstr "Previous page"
+
+#: post-formats/format.php:28 single.php:16
+msgid "filed under"
+msgstr "filed under"
+
+#: post-formats/format.php:29 search.php:39 single.php:17
+msgid "Tags:"
+msgstr "Tags:"
+
+#: search.php:8
+msgid "Search Results for:"
+msgstr "Search Results for:"
+
+#: search.php:19
+#, php-format
+msgid "Posted %1$s by %2$s"
+msgstr "Posted %1$s by %2$s"
+
+#: search.php:36
+#, php-format
+msgid "Filed under: %1$s"
+msgstr "Filed under: %1$s"
+
+#: search.php:53
+msgid "Sorry, No Results."
+msgstr "Sorry, No Results."
+
+#: search.php:56
+msgid "Try your search again."
+msgstr "Try your search again."
+
+#: search.php:59
+msgid "This is the error message in the search.php template."
+msgstr "This is the error message in the search.php template."
 
 #: searchform.php:2
 msgid "Search for"
@@ -576,3 +750,7 @@ msgstr "Search for"
 #: searchform.php:3
 msgid "Search"
 msgstr "Search"
+
+#: single.php:53
+msgid "This is the error message in the single.php template."
+msgstr "This is the error message in the single.php template."

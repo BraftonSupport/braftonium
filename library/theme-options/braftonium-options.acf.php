@@ -204,6 +204,30 @@ acf_add_local_field_group(array(
 			'toggle' => 0,
 			'return_format' => 'value',
 		),
+		array(
+			'key' => 'field_5b61e4ff523a7',
+			'label' => __( 'Allow Comments', 'braftonium' ),
+			'name' => 'comments',
+			'type' => 'checkbox',
+			'instructions' => __( 'I must warn you, it\'s going to be spam.', 'braftonium' ),
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'comments' => __( 'Comments', 'braftonium' ),
+			),
+			'allow_custom' => 0,
+			'save_custom' => 0,
+			'default_value' => array(
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'value',
+		),
 	),
 	'location' => array(
 		array(
