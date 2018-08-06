@@ -95,7 +95,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 				if ( $item['content'] ): echo $item['content']; endif;
 
 				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
-					if (!$text): echo 'Read More';
+					if (!$text): __( 'Read More', 'braftonium' );
 					else: echo $text;
 					endif;
 					echo '</a>';
@@ -142,7 +142,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 						}
 						echo '</p>';
 					if ( $showbutton ){ ?>
-						<a href="<?php echo get_permalink(); ?>" class="button">Read More</a>
+						<a href="<?php echo get_permalink(); ?>" class="button"> <?php _e( 'Read More', 'braftonium' ); ?></a>
 					<?php } ?>
 				</div>
 			<?php endwhile;

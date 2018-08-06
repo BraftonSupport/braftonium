@@ -4,16 +4,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Braftonium v1.0.0\n"
-"Report-Msgid-Bugs-To: Yvonne\n"
-"POT-Creation-Date: 2018-08-06 11:32-0400\n"
+"POT-Creation-Date: 2018-08-06 11:07-0400\n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
 "Language-Team: Brafton\n"
-"Language: da\n"
+"Report-Msgid-Bugs-To: Yvonne\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
@@ -21,60 +19,62 @@ msgstr ""
 "_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Generator: Poedit 2.1.1\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: braftonium.php:56
 #, php-format
 msgid "Page %s"
-msgstr "Side %s"
+msgstr "页面 %s"
 
 #: braftonium.php:162
 msgid "Navigation"
-msgstr "Navigation"
+msgstr "导航菜单"
 
 #: braftonium.php:163 theme-options/braftonium-options.acf.php:172
 msgid "Social Media"
-msgstr "Sociale Medier"
+msgstr "社交媒体"
 
 #: braftonium.php:218
 msgid "No Related Posts Yet!"
-msgstr "Ingen relaterede indlæg endnu!"
+msgstr "暂无相关帖子！"
 
 #: braftonium.php:264
 msgid "Read "
-msgstr "Læse "
+msgstr "阅读 "
 
 #: braftonium.php:264
 msgid "Read more &raquo;"
-msgstr "Læs mere &raquo;"
+msgstr "阅读更多 &raquo;"
 
 #: braftonium.php:301
 msgid "Theme General Settings"
-msgstr "Generelle indstillinger for tema"
+msgstr "主题设置"
 
 #: braftonium.php:302
 msgid "Theme Settings"
-msgstr "Temaindstillinger"
+msgstr "主题设置"
 
 #: braftonium.php:312
 msgid "Footer Left Widget"
-msgstr "Footer venstre widget"
+msgstr ""
 
 #: braftonium.php:314 braftonium.php:323 braftonium.php:332
 msgid "This is located in the footer. Use only 1 widget."
-msgstr "Dette er placeret i sidefoden. Brug kun 1 widget."
+msgstr ""
 
 #: braftonium.php:321
 msgid "Footer Middle Widget"
-msgstr "Footer midterste widget"
+msgstr ""
 
 #: braftonium.php:330
 msgid "Footer Right Widget"
-msgstr "Footer højre widget"
+msgstr ""
 
 #: custom-fields/banner/banner.acf.php:9 custom-fields/style/style.acf.php:78
 msgid "Background Image"
-msgstr "Baggrundsbillede"
+msgstr ""
 
 #: custom-fields/banner/banner.acf.php:33
 #: custom-fields/full-width/full-width.acf.php:113
@@ -82,30 +82,30 @@ msgstr "Baggrundsbillede"
 #: custom-fields/full-width/full-width.acf.php:606
 #: custom-fields/full-width/full-width.acf.php:738
 msgid "Title"
-msgstr "Titel"
+msgstr ""
 
 #: custom-fields/banner/banner.acf.php:52
 #: custom-fields/full-width/full-width.acf.php:48
 msgid "Tagline"
-msgstr "Tagline"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:9
 #: custom-fields/full-width/full-width.acf.php:278
 msgid "Content"
-msgstr "Indhold"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:24
 msgid "Visual"
-msgstr "Visual"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:29
 msgid "Headline"
-msgstr "Overskrift"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:67
 #: custom-fields/full-width/full-width.acf.php:776
 msgid "Button"
-msgstr "Knap"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:82
 #: custom-fields/full-width/full-width.acf.php:450
@@ -116,203 +116,199 @@ msgstr "Knap"
 #: custom-fields/full-width/full-width.acf.php:1095
 #: custom-fields/style/style.acf.php:9
 msgid "Style"
-msgstr "Stil"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:108
 msgid "Services or List"
-msgstr "Tjenester eller liste"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:132
 msgid "Show"
-msgstr "Vis"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:144
 msgid "Show Intro Text"
-msgstr "Vis Intro tekst"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:145
 msgid "Show Outro Text"
-msgstr "Vis Outro tekst"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:157
 msgid "Intro Text"
-msgstr "Intro Tekst"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:184
 msgid "List Custom Content or Recent Posts"
-msgstr "Liste Brugerdefinerede Indlæg Eller Seneste Indlæg"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:196
 msgid "Custom"
-msgstr "Brugerdefinerede"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:197
 #: custom-fields/full-width/full-width.acf.php:365
 msgid "Recent"
-msgstr "Seneste"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:208
 msgid "Custom Content"
-msgstr "Brugerdefinerede Indhold"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:235
 #: custom-fields/full-width/full-width.acf.php:640
 #: custom-fields/full-width/full-width.acf.php:645
 msgid "Image"
-msgstr "Billede"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:297
 msgid "Link"
-msgstr "Link"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:314
 msgid "Button?"
-msgstr "Knap?"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:317
 msgid "Check this box if you want to link the content but not show the button."
-msgstr "Marker dette felt, hvis du vil linke indholdet, men ikke vise knappen."
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:338
 #: custom-fields/full-width/full-width.acf.php:548
 msgid "Image Size and Shape"
-msgstr "Billedstørrelse og form"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:350
 #: custom-fields/full-width/full-width.acf.php:560
 msgid "Round the image"
-msgstr "Runde billede"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:351
 #: custom-fields/full-width/full-width.acf.php:561
 msgid "Thumbnail (150px by 150px )"
-msgstr "Miniaturebillede (150px ved 150px)"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:352
 #: custom-fields/full-width/full-width.acf.php:562
 msgid "Squared (300px by 300px)"
-msgstr "Squared (300px ved 300px)"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:353
 #: custom-fields/full-width/full-width.acf.php:563
 msgid "Full (best for awards and different sized images.)"
-msgstr "Fuld (bedste til præmie og billeder i forskellige størrelser.)"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:368
 msgid ""
 "If not the most recent posts, put in a custom post type, eg: \"testimonial"
 "\", \"event\", and \"team-member\"."
 msgstr ""
-"Hvis ikke de seneste indlæg, skal du indtaste en brugerdefineret posttype, f."
-"eks .: \"testimonial\", \"event\" og \"employee\"."
 
 #: custom-fields/full-width/full-width.acf.php:396
 msgid "Number of Posts"
-msgstr "Antal af indlæg"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:423
 msgid "Outro Text"
-msgstr "Outro tekst"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:476
 msgid "Validation (Slider)"
-msgstr "Validering (skyderen)"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:524
 msgid "Read More"
-msgstr "Læs Mere"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:527
 msgid "Add Read More Button"
-msgstr "Tilføj Læs mere knap"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:601
 msgid "Row"
-msgstr "Række"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:625
 msgid "Flexible Content"
-msgstr "Fleksibelt indhold"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:628
 msgid ""
 "When you add more blocks, they will show up next to each other in a single "
 "row."
 msgstr ""
-"Når du tilføjer flere blokke, vises de ved siden af ​​hinanden i en enkelt "
-"række."
 
 #: custom-fields/full-width/full-width.acf.php:674
 #: custom-fields/full-width/full-width.acf.php:679
 #: custom-fields/full-width/full-width.acf.php:757
 msgid "Text"
-msgstr "Tekst"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:701
 msgid "Add Block"
-msgstr "Tilføj blok"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:817
 #: custom-fields/full-width/full-width.acf.php:980
 msgid "Map"
-msgstr "Kort"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:822
 msgid "Address"
-msgstr "Adresse"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:837
 msgid "Add Address Line"
-msgstr "Tilføj Adresselinje"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:841
 msgid "Address Line"
-msgstr "Adresselinje"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:862
 msgid "Phone"
-msgstr "Telefon"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:877
 msgid "Add Phone Number"
-msgstr "Tilføj telefonnummer"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:881
 msgid "Phone Label"
-msgstr "Telefon Etiket"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:893
 msgid "Toll Free/Fax/"
-msgstr "Tollfrit/Fax/"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:900
 msgid "Phone Number"
-msgstr "Telefonnummer"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:921
 #: theme-options/braftonium-options.acf.php:197
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:936
 msgid "Add Email"
-msgstr "Tilføj email"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:940
 msgid "Email Label"
-msgstr "Email Etiket"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:952
 msgid "Info/Sales/Support"
-msgstr "Info/Salg/Støtte"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:959
 msgid "Email Address"
-msgstr "Email adresse"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:971
 msgid "info/sales/support@website.com"
-msgstr "info/salg/støtte@website.com"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:1001
 msgid ""
@@ -321,262 +317,256 @@ msgid ""
 "then click \"Enable API\". Copy and paste the result here. It is free and "
 "takes less than a minute."
 msgstr ""
-"Gå til <a href=\"https://developers.google.com/maps/documentation/embed/\" "
-"target=\"_blank\"> denne side </a> og få dig en nøgle. Vælg et nyt projekt, "
-"og klik derefter på \"Aktivér API\". Kopier og indsæt resultatet her. Det er "
-"gratis og tager mindre end et minut."
 
 #: custom-fields/full-width/full-width.acf.php:1043
 msgid "Widget Areas"
-msgstr "Ekstra Widget Områder"
+msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:1119
 msgid "Add Row"
-msgstr "Tilføj række"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:24
 msgid "Background Color"
-msgstr "Baggrundsfarve"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:39
 msgid "Color"
-msgstr "Farve"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:54
 msgid "Background"
-msgstr "Baggrund"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:66
 msgid "Static"
-msgstr "Statisk"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:67
 msgid "Video"
-msgstr "Video"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:110
 msgid "Video Url"
-msgstr "Video Url"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:134
 msgid "Other"
-msgstr "Andet"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:146
 msgid "Add Shadow"
-msgstr "Tilføj skygge"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:147
 msgid "Full Screen"
-msgstr "Fuld skærm"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:148
 msgid "Compact (add side margins)"
-msgstr "Kompakt (tilføj marginaler til sider)"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:149
 msgid "Thin (reduce padding from the top and bottom)"
-msgstr "Tynd (reducer polstring fra top og bund)"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:150
 msgid "Center"
-msgstr "Centrere"
+msgstr ""
 
 #: custom-fields/style/style.acf.php:162
 msgid "Add Class"
-msgstr "Tilføj klasse"
+msgstr ""
 
 #: custom-post-types/events/events.acf.php:4
 msgid "Events"
-msgstr "Begivenheder"
+msgstr ""
 
 #: custom-post-types/events/events.acf.php:8
 msgid "Start Date"
-msgstr "Start Dato"
+msgstr ""
 
 #: custom-post-types/events/events.acf.php:11
 msgid ""
 "If both start date and end date are left blank, you have the choice of \"TBD"
 "\" or \"Various Dates\"."
 msgstr ""
-"Hvis både startdato og slutdato er tom, har du valget af \"Mangler at blive "
-"afklaret\" eller \"Forskellige datoer\"."
 
 #: custom-post-types/events/events.acf.php:18
 msgid "End Date"
-msgstr "Slutdato"
+msgstr ""
 
 #: custom-post-types/events/events.acf.php:27
 msgid "Date Text"
-msgstr "Dato Tekst"
+msgstr ""
 
 #: custom-post-types/events/events.acf.php:31
 msgid "TBD"
-msgstr "Mangler at blive afklaret"
+msgstr ""
 
 #: custom-post-types/events/events.acf.php:32
 msgid "Various Dates"
-msgstr "Forskellige datoer"
+msgstr ""
 
 #: custom-post-types/events/events.acf.php:41
 #: custom-post-types/testimonials/testimonials.acf.php:44
 msgid "Location"
-msgstr "Beliggenhed"
+msgstr ""
 
 #: custom-post-types/team/team.acf.php:4
 msgid "Team Member"
-msgstr "Medarbejder"
+msgstr ""
 
 #: custom-post-types/team/team.acf.php:8
 msgid "Job Title"
-msgstr "Jobtitel"
+msgstr ""
 
 #: custom-post-types/testimonials/testimonials.acf.php:4
 msgid "Testimonials"
-msgstr "Udtalelser"
+msgstr ""
 
 #: custom-post-types/testimonials/testimonials.acf.php:8
 msgid "Name"
-msgstr "Navn"
+msgstr ""
 
 #: custom-post-types/testimonials/testimonials.acf.php:20
 msgid "Position"
-msgstr "Stilling"
+msgstr ""
 
 #: custom-post-types/testimonials/testimonials.acf.php:32
 msgid "Company"
-msgstr "Selskab"
+msgstr ""
 
 #: custom-post-types/testimonials/testimonials.acf.php:56
 msgid "Website"
-msgstr "Internet side"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:6
 msgid "Braftonium Theme Options"
-msgstr "Braftonium tema muligheder"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:10
 msgid "Navigation Bar Position"
-msgstr "Navigationslinje Position"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:22
 msgid "Next to the Logo 75%"
-msgstr "Ved siden af logoet 75%"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:23
 msgid "Below the Logo 100%"
-msgstr "Under logoet 100%"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:36
 msgid "Sticky Nav"
-msgstr "Klæbrig Navigationslinje"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:48
 msgid "Sticky?"
-msgstr "Klæbrig?"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:60
 msgid "Blog Layout"
-msgstr "Blog Layout"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:89
 msgid "Related Posts"
-msgstr "Relaterede Indlæg"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:101
 msgid "No Related Posts"
-msgstr "Ingen Relaterede Indlæg"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:102
 msgid "Below Post"
-msgstr "Under Indlæg"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:103
 msgid "On the Sidebar"
-msgstr "På Sidebjælken"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:116
 msgid "Social Share Buttons"
-msgstr "Sociale deleknapper"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:119
 msgid ""
 "These are not links to your social media, these are for people to share a "
 "particular page or post on their own social media profiles."
 msgstr ""
-"Disse er ikke links til dine sociale medier, det er for folk at dele en "
-"bestemt side eller poste på deres egne sociale medier profiler."
 
 #: theme-options/braftonium-options.acf.php:128
 msgid "Social Share Buttons?"
-msgstr "Sociale deleknapper?"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:140
 msgid "Social Share Button Location"
-msgstr "Sociale Deleknapper Placering"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:160
 msgid "On Both Post and Excerpt"
-msgstr "På både Indlæg og uddrag"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:161
 msgid "On Post"
-msgstr "På Indlæg"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:238
 msgid "Logo"
-msgstr "Logoet"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:248
 msgid "Logo in the Footer"
-msgstr "Logo i Sidefod"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:263
 msgid "Text Color"
-msgstr "Tekstfarve"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:272
 msgid "Link Color"
-msgstr "Link Farve"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:281
 msgid "Link Hover Color"
-msgstr "Link Hover Farve"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:290
 msgid "Header Background Color"
-msgstr "Baggrundsfarve for overskrift"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:299
 msgid "Header Text Color"
-msgstr "Overskrift Tekst Farve"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:308
 msgid "Header Link Color"
-msgstr "Overskrift Link Farve"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:317
 msgid "Header Link Hover Color"
-msgstr "Overskrift Link Hover Farve"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:326
 msgid "Footer Background Color"
-msgstr "Fod Baggrundsfarve"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:335
 msgid "Footer Text Color"
-msgstr "Fodtekstfarve"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:344
 msgid "Footer Link Color"
-msgstr "Footer Link Farve"
+msgstr ""
 
 #: theme-options/braftonium-options.acf.php:353
 msgid "Footer Link Hover Color"
-msgstr "Footer Link Hover Farve"
+msgstr ""
 
-#~ msgid "Search for"
-#~ msgstr "Søg efter"
+#: searchform.php:2
+msgid "Search for"
+msgstr ""
 
-#~ msgid "Search"
-#~ msgstr "Søg"
+#: searchform.php:3
+msgid "Search"
+msgstr ""
