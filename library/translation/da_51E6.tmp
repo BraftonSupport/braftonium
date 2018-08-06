@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Braftonium v1.0.0\n"
 "Report-Msgid-Bugs-To: Yvonne\n"
-"POT-Creation-Date: 2018-08-06 11:32-0400\n"
+"POT-Creation-Date: 2018-08-02 19:18-0400\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Brafton\n"
@@ -16,9 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
-"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Generator: Poedit 2.1.1\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -42,35 +40,11 @@ msgstr "Ingen relaterede indlæg endnu!"
 
 #: braftonium.php:264
 msgid "Read "
-msgstr "Læse "
+msgstr "Læse"
 
 #: braftonium.php:264
 msgid "Read more &raquo;"
 msgstr "Læs mere &raquo;"
-
-#: braftonium.php:301
-msgid "Theme General Settings"
-msgstr "Generelle indstillinger for tema"
-
-#: braftonium.php:302
-msgid "Theme Settings"
-msgstr "Temaindstillinger"
-
-#: braftonium.php:312
-msgid "Footer Left Widget"
-msgstr "Footer venstre widget"
-
-#: braftonium.php:314 braftonium.php:323 braftonium.php:332
-msgid "This is located in the footer. Use only 1 widget."
-msgstr "Dette er placeret i sidefoden. Brug kun 1 widget."
-
-#: braftonium.php:321
-msgid "Footer Middle Widget"
-msgstr "Footer midterste widget"
-
-#: braftonium.php:330
-msgid "Footer Right Widget"
-msgstr "Footer højre widget"
 
 #: custom-fields/banner/banner.acf.php:9 custom-fields/style/style.acf.php:78
 msgid "Background Image"
@@ -199,12 +173,8 @@ msgid "Full (best for awards and different sized images.)"
 msgstr "Fuld (bedste til præmie og billeder i forskellige størrelser.)"
 
 #: custom-fields/full-width/full-width.acf.php:368
-msgid ""
-"If not the most recent posts, put in a custom post type, eg: \"testimonial"
-"\", \"event\", and \"team-member\"."
-msgstr ""
-"Hvis ikke de seneste indlæg, skal du indtaste en brugerdefineret posttype, f."
-"eks .: \"testimonial\", \"event\" og \"employee\"."
+msgid "If not the most recent posts, put in a custom post type, eg: \"testimonial\", \"event\", and \"team-member\"."
+msgstr "Hvis ikke de seneste indlæg, skal du indtaste en brugerdefineret posttype, f.eks .: \"testimonial\", \"event\" og \"employee\"."
 
 #: custom-fields/full-width/full-width.acf.php:396
 msgid "Number of Posts"
@@ -235,12 +205,8 @@ msgid "Flexible Content"
 msgstr "Fleksibelt indhold"
 
 #: custom-fields/full-width/full-width.acf.php:628
-msgid ""
-"When you add more blocks, they will show up next to each other in a single "
-"row."
-msgstr ""
-"Når du tilføjer flere blokke, vises de ved siden af ​​hinanden i en enkelt "
-"række."
+msgid "When you add more blocks, they will show up next to each other in a single row."
+msgstr "Når du tilføjer flere blokke, vises de ved siden af ​​hinanden i en enkelt række."
 
 #: custom-fields/full-width/full-width.acf.php:674
 #: custom-fields/full-width/full-width.acf.php:679
@@ -315,16 +281,8 @@ msgid "info/sales/support@website.com"
 msgstr "info/salg/støtte@website.com"
 
 #: custom-fields/full-width/full-width.acf.php:1001
-msgid ""
-"Go to <a href=\"https://developers.google.com/maps/documentation/embed/\" "
-"target=\"_blank\">this page</a> and get yourself a key. Select a new project "
-"then click \"Enable API\". Copy and paste the result here. It is free and "
-"takes less than a minute."
-msgstr ""
-"Gå til <a href=\"https://developers.google.com/maps/documentation/embed/\" "
-"target=\"_blank\"> denne side </a> og få dig en nøgle. Vælg et nyt projekt, "
-"og klik derefter på \"Aktivér API\". Kopier og indsæt resultatet her. Det er "
-"gratis og tager mindre end et minut."
+msgid "Go to <a href=\"https://developers.google.com/maps/documentation/embed/\" target=\"_blank\">this page</a> and get yourself a key. Select a new project then click \"Enable API\". Copy and paste the result here. It is free and takes less than a minute."
+msgstr "Gå til <a href=\"https://developers.google.com/maps/documentation/embed/\" target=\"_blank\"> denne side </a> og få dig en nøgle. Vælg et nyt projekt, og klik derefter på \"Aktivér API\". Kopier og indsæt resultatet her. Det er gratis og tager mindre end et minut."
 
 #: custom-fields/full-width/full-width.acf.php:1043
 msgid "Widget Areas"
@@ -395,12 +353,8 @@ msgid "Start Date"
 msgstr "Start Dato"
 
 #: custom-post-types/events/events.acf.php:11
-msgid ""
-"If both start date and end date are left blank, you have the choice of \"TBD"
-"\" or \"Various Dates\"."
-msgstr ""
-"Hvis både startdato og slutdato er tom, har du valget af \"Mangler at blive "
-"afklaret\" eller \"Forskellige datoer\"."
+msgid "If both start date and end date are left blank, you have the choice of \"TBD\" or \"Various Dates\"."
+msgstr "Hvis både startdato og slutdato er tom, har du valget af \"Mangler at blive afklaret\" eller \"Forskellige datoer\"."
 
 #: custom-post-types/events/events.acf.php:18
 msgid "End Date"
@@ -451,10 +405,6 @@ msgstr "Selskab"
 msgid "Website"
 msgstr "Internet side"
 
-#: theme-options/braftonium-options.acf.php:6
-msgid "Braftonium Theme Options"
-msgstr "Braftonium tema muligheder"
-
 #: theme-options/braftonium-options.acf.php:10
 msgid "Navigation Bar Position"
 msgstr "Navigationslinje Position"
@@ -474,10 +424,6 @@ msgstr "Klæbrig Navigationslinje"
 #: theme-options/braftonium-options.acf.php:48
 msgid "Sticky?"
 msgstr "Klæbrig?"
-
-#: theme-options/braftonium-options.acf.php:60
-msgid "Blog Layout"
-msgstr "Blog Layout"
 
 #: theme-options/braftonium-options.acf.php:89
 msgid "Related Posts"
@@ -500,12 +446,8 @@ msgid "Social Share Buttons"
 msgstr "Sociale deleknapper"
 
 #: theme-options/braftonium-options.acf.php:119
-msgid ""
-"These are not links to your social media, these are for people to share a "
-"particular page or post on their own social media profiles."
-msgstr ""
-"Disse er ikke links til dine sociale medier, det er for folk at dele en "
-"bestemt side eller poste på deres egne sociale medier profiler."
+msgid "These are not links to your social media, these are for people to share a particular page or post on their own social media profiles."
+msgstr "Disse er ikke links til dine sociale medier, det er for folk at dele en bestemt side eller poste på deres egne sociale medier profiler."
 
 #: theme-options/braftonium-options.acf.php:128
 msgid "Social Share Buttons?"
@@ -575,8 +517,3 @@ msgstr "Footer Link Farve"
 msgid "Footer Link Hover Color"
 msgstr "Footer Link Hover Farve"
 
-#~ msgid "Search for"
-#~ msgstr "Søg efter"
-
-#~ msgid "Search"
-#~ msgstr "Søg"

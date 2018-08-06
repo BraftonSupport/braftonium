@@ -1,19 +1,29 @@
 <?php
+function braftonium_language_setup(){
+
+	load_theme_textdomain( 'braftonium', get_template_directory() . '/library/translation' );
+  
+	$locale = get_locale();
+	$locale_file = get_template_directory() . "/library/translation/$locale.php";
+  
+	if ( is_readable( $locale_file ) ) {
+		require_once( $locale_file );
+	}
+	// var_dump($locale_file);
+  }
+  add_action('after_setup_theme', 'braftonium_language_setup');
 
 // LOAD BRAFTONIUM THEME CORE (if you remove this, the theme will break)
-require_once( 'library/braftonium.php' );
-include_once get_template_directory().'/library/custom-fields/fields.php';
+
 
 /*********************
 LAUNCH BRAFTONIUM
 Let's get everything up and running.
 *********************/
-
 function braftonium_start() {
-
-  // let's get language support going, if you need it
-  load_theme_textdomain( 'braftonium', get_template_directory() . '/library/translation' );
-
+	require_once( 'library/braftonium.php' );
+	include_once get_template_directory().'/library/custom-fields/fields.php';
+	
   //Allow editor style.
   add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
 
@@ -59,51 +69,6 @@ function braftonium_start() {
 // let's get this party started
 add_action( 'after_setup_theme', 'braftonium_start' );
 
-
-/*
-Making the Braftonium Theme Option Page
-*/
-if( function_exists('acf_add_options_page') ) {
-	acf_add_options_page(array(
-		'page_title' 	=> __( 'Theme General Settings', 'braftonium' ),
-		'menu_title'	=> __( 'Theme Settings', 'braftonium' ),
-		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'edit_posts',
-		'parent_slug'	=> 'themes.php',
-		'redirect'		=> false
-	));
-}
-
-function braftonium_widgets_init() {
-	register_sidebar( array(
-		'name'		  => __( 'Footer Left Widget', 'braftonium' ),
-		'id'			=> 'footer-left',
-		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
-		'name'		  => __( 'Footer Middle Widget', 'braftonium' ),
-		'id'			=> 'footer-middle',
-		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
-		'name'		  => __( 'Footer Right Widget', 'braftonium' ),
-		'id'			=> 'footer-right',
-		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-}
-add_action( 'widgets_init', 'braftonium_widgets_init' );
 
 
 /************* OEMBED SIZE OPTIONS *************/

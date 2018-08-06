@@ -1,5 +1,5 @@
 <?php
-/* Braftonium Theme
+/* Braftonium Theme */
 
 /*********************
 Removing all stuff in WP_HEAD we don't need.
@@ -166,9 +166,9 @@ function braftonium_support() {
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
-		// 'comment-list',
+		'comment-list',
 		'search-form',
-		// 'comment-form'
+		'comment-form'
 	) );
 
 } /* end theme support */
@@ -290,4 +290,51 @@ function be_arrows_in_menus( $item_output, $item, $depth, $args ) {
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'be_arrows_in_menus', 10, 4 );
+
+
+
+/*
+Making the Braftonium Theme Option Page
+*/
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> __( 'Theme General Settings', 'braftonium' ),
+		'menu_title'	=> __( 'Theme Settings', 'braftonium' ),
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'parent_slug'	=> 'themes.php',
+		'redirect'		=> false
+	));
+}
+
+function braftonium_widgets_init() {
+	register_sidebar( array(
+		'name'		  => __( 'Footer Left Widget', 'braftonium' ),
+		'id'			=> 'footer-left',
+		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'		  => __( 'Footer Middle Widget', 'braftonium' ),
+		'id'			=> 'footer-middle',
+		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'		  => __( 'Footer Right Widget', 'braftonium' ),
+		'id'			=> 'footer-right',
+		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'braftonium_widgets_init' );
 ?>

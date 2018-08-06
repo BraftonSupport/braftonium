@@ -6,7 +6,7 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5a908eb3a68bb',
-			'label' => __( "Background Image", "braftonium" ),
+			'label' => __( 'Background Image', 'braftonium' ),
 			'name' => 'background_image',
 			'type' => 'image',
 			'instructions' => '',
@@ -30,7 +30,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a908ecba68bc',
-			'label' => __( "Title", "braftonium" ),
+			'label' => __( 'Title', 'braftonium' ),
 			'name' => 'title',
 			'type' => 'text',
 			'instructions' => '',
@@ -49,7 +49,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a908ed0a68bd',
-			'label' => __( "Tagline", "braftonium" ),
+			'label' => __( 'Tagline', 'braftonium' ),
 			'name' => 'tagline',
 			'type' => 'wysiwyg',
 			'instructions' => '',

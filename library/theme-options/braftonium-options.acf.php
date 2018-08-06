@@ -3,11 +3,11 @@
 if(function_exists("acf_add_local_field_group")){
 acf_add_local_field_group(array(
 	'key' => 'group_5a4e8d955ca60',
-	'title' => 'Braftonium Theme Options',
+	'title' => __( 'Braftonium Theme Options', 'braftonium' ),
 	'fields' => array(
 		array(
 			'key' => 'field_5a4e8db865361',
-			'label' => __( "Navigation Bar Position", "braftonium" ),
+			'label' => __( 'Navigation Bar Position', 'braftonium' ),
 			'name' => 'navigation_bar_position',
 			'type' => 'select',
 			'instructions' => '',
@@ -19,8 +19,8 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'next' => __( "Next to the Nav 75%", "braftonium" ),
-				'below' => __( "Below the Logo 100%", "braftonium" ),
+				'next' => __( 'Next to the Logo 75%', 'braftonium' ),
+				'below' => __( 'Below the Logo 100%', 'braftonium' ),
 			),
 			'default_value' => array(
 			),
@@ -33,7 +33,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4e8e2f65362',
-			'label' => __( "Sticky Nav", "braftonium" ),
+			'label' => __( 'Sticky Nav', 'braftonium' ),
 			'name' => 'sticky_nav',
 			'type' => 'checkbox',
 			'instructions' => '',
@@ -45,7 +45,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'on' => __( "Sticky?", "braftonium" ),
+				'on' => __( 'Sticky?', 'braftonium' ),
 			),
 			'allow_custom' => 0,
 			'save_custom' => 0,
@@ -57,7 +57,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5b185eb33c54b',
-			'label' => 'Blog Layout',
+			'label' => __( 'Blog Layout', 'braftonium' ),
 			'name' => 'blog_layout',
 			'type' => 'select',
 			'instructions' => '',
@@ -86,7 +86,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4ea9e92e432',
-			'label' => __( "Related Posts", "braftonium" ),
+			'label' => __( 'Related Posts', 'braftonium' ),
 			'name' => 'related_posts',
 			'type' => 'select',
 			'instructions' => '',
@@ -98,9 +98,9 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'no' => __( "No Related Posts", "braftonium" ),
-				'below' => __( "Below Post", "braftonium" ),
-				'side' => __( "On the Sidebar", "braftonium" ),
+				'no' => __( 'No Related Posts', 'braftonium' ),
+				'below' => __( 'Below Post', 'braftonium' ),
+				'side' => __( 'On the Sidebar', 'braftonium' ),
 			),
 			'default_value' => array(
 			),
@@ -113,10 +113,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4e8e7665364',
-			'label' => __( "Social Share Buttons", "braftonium" ),
+			'label' => __( 'Social Share Buttons', 'braftonium' ),
 			'name' => 'social_share_buttons',
 			'type' => 'checkbox',
-			'instructions' => __( "These are not links to your social media, these are for people to share a particular page or post on their own social media profiles.", "braftonium" ),
+			'instructions' => __( 'These are not links to your social media, these are for people to share a particular page or post on their own social media profiles.', 'braftonium' ),
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -137,7 +137,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4e8e9565365',
-			'label' => __( "Social Share Button Location", "braftonium" ),
+			'label' => __( 'Social Share Button Location', 'braftonium' ),
 			'name' => 'ss_button_location',
 			'type' => 'radio',
 			'instructions' => '',
@@ -157,8 +157,8 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'all' => __( "On Both Post and Excerpt", "braftonium" ),
-				'post' => __( "On Post", "braftonium" ),
+				'all' => __( 'On Both Post and Excerpt', 'braftonium' ),
+				'post' => __( 'On Post', 'braftonium' ),
 			),
 			'allow_null' => 0,
 			'other_choice' => 0,
@@ -169,7 +169,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5a4e8f3565366',
-			'label' => __( "Social Media", "braftonium" ),
+			'label' => __( 'Social Media', 'braftonium' ),
 			'name' => 'social_media',
 			'type' => 'checkbox',
 			'instructions' => '',
@@ -194,7 +194,7 @@ acf_add_local_field_group(array(
 				'google' => 'Google+',
 				'linkedin' => 'LinkedIn',
 				'pinterest' => 'Pinterest',
-				'email' => __( "Email", "braftonium" ),
+				'email' => __( 'Email', 'braftonium' ),
 			),
 			'allow_custom' => 0,
 			'save_custom' => 0,
