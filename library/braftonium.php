@@ -31,7 +31,7 @@ function braftonium_head_cleanup() {
 
 // A better title
 // http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
-function rw_title( $title, $sep, $seplocation ) {
+function braftonium_rw_title( $title, $sep, $seplocation ) {
   global $page, $paged;
 
   // Don't affect in feeds.
@@ -135,8 +135,8 @@ THEME SUPPORT
 function braftonium_support() {
 
 	// wp thumbnails (sizes handled in functions.php)
+	add_theme_support( 'custom-header');
 	add_theme_support( 'post-thumbnails' );
-
 	add_image_size( 'mediumsquared', 300, 300, true );
 
 	// wp custom background (thx to @bransonwerner for update)
@@ -195,31 +195,44 @@ add_filter('acf/load_field/key=field_5b43bc9b0acf1', 'acf_load_widget_area_field
 RELATED POSTS FUNCTION
 *********************/
 
-// Related Posts Function (call using related_posts(); )
-function related_posts() {
-	echo '<ul id="related-posts">';
+// Related Posts Function (call using braftonium_related_posts(); )
+function braftonium_related_posts($number) {
 	global $post;
-	$tags = wp_get_post_tags( $post->ID );
-	if($tags) {
-		foreach( $tags as $tag ) {
-			$tag_arr .= $tag->slug . ',';
+	$categories = wp_get_post_categories( $post->ID );
+	if($categories) {
+		foreach( $categories as $category ) {
+			$cat_arr .= $cat->slug . ',';
 		}
 		$args = array(
-			'tag' => $tag_arr,
-			'numberposts' => 3, /* you can change this to show more */
+			'cat' => $cat_arr,
+			'numberposts' => $number, /* you can change this to show more */
 			'post__not_in' => array($post->ID)
 		);
-		$related_posts = get_posts( $args );
-		if($related_posts) {
-			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
-				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-			<?php endforeach; }
-		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'braftonium' ) . '</li>'; ?>
-		<?php }
 	}
+
+		$related_posts = get_posts( $args );
+		$location = get_field('related_posts', 'option');
+		echo '<section class="latest widget"><h3>'. __( 'Related Posts', 'braftonium' ).'</h3>';
+		if ( $location=='below'): echo '<div class="container">'; endif;
+			if($related_posts):
+				foreach ( $related_posts as $post ) : setup_postdata( $post );
+				$url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+				echo '<a href="' . get_the_permalink() . '" title="'.get_the_title().'">';
+				if ($url) :
+					echo '<div class="thumbnail" style="background-image: url('.$url[0].')"></div>';
+				endif;
+				
+				echo '<h4>'.get_the_title().'<br/><span class="tiny">'.get_the_date('M j, Y').'</span></h4>';
+				echo '</a>';
+				
+				endforeach;
+			else:
+				echo '<p class="no_related_post">' . __( 'No Related Posts Yet!', 'braftonium' ) . '</p>';
+			endif;
+		if ( $location=='below'): echo '</div>'; endif;
+	echo '</section>';
+
 	wp_reset_postdata();
-	echo '</ul>';
 } /* end related posts function */
 
 
@@ -228,7 +241,7 @@ PAGE NAVI
 *********************/
 
 // Numeric Page Navi (built into the theme by default)
-function page_navi() {
+function braftonium_page_navi() {
   global $wp_query;
   $bignum = 999999999;
   if ( $wp_query->max_num_pages <= 1 )
@@ -253,12 +266,12 @@ RANDOM CLEANUP ITEMS
 *********************/
 
 // remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
-function filter_ptags_on_images($content){
+function braftonium_filter_ptags_on_images($content){
 	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
 // This removes the annoying […] to a Read More link
-function excerpt_more($more) {
+function braftonium_excerpt_more($more) {
 	global $post;
 	// edit here if you like
 	return '...  <a class="read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'braftonium' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'braftonium' ) .'</a>';
@@ -274,7 +287,7 @@ function excerpt_more($more) {
 		function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
 			if ( 'social' === $args->theme_location ) {
 				$social_media = preg_replace('#^www\.|\.com$#', '$1', parse_url($item->url)['host']);
-				$svg = get_svg_path('icon-'.$social_media);
+				$svg = braftonium_get_svg_path('icon-'.$social_media);
 				$output .= sprintf("\n<li %s><a href='%s' target='_blank' title='%s'>".$svg."</a>\n", ( array_search('current-menu-item', $item->classes) ) ? '' : '', $item->url, $item->title );
 			};
 		}
@@ -282,14 +295,14 @@ function excerpt_more($more) {
 /**
  * Now the Main Nav adding the svg
  * */	
-function be_arrows_in_menus( $item_output, $item, $depth, $args ) {
+function braftonium_be_arrows_in_menus( $item_output, $item, $depth, $args ) {
 	if( in_array( 'menu-item-has-children', $item->classes ) ) {
-		$arrow = '<button>'.get_svg_path('icon-expand').'</button>';
+		$arrow = '<button>'.braftonium_get_svg_path('icon-expand').'</button>';
 		$item_output = str_replace( '</a>', '</a>' . $arrow, $item_output );
 	}
 	return $item_output;
 }
-add_filter( 'walker_nav_menu_start_el', 'be_arrows_in_menus', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'braftonium_be_arrows_in_menus', 10, 4 );
 
 
 

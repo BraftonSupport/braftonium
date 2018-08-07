@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header();
+$brafton_comments = get_field('comments', 'option');
+?>
 
 			<div id="content">
 				<?php if (has_post_thumbnail()) : ?>
@@ -15,7 +17,7 @@
 								?>
 								<?php printf( __( 'filed under', 'braftonium' ).': %1$s', get_the_category_list(', ') ); ?>
 								<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'braftonium' ) . '</span> ', ', ', '</p>' );
-								social_sharing_buttons(); ?>
+								braftonium_social_sharing_buttons(); ?>
 							</p>
 						</div></div>
 					</section>
@@ -33,7 +35,7 @@
 								get_template_part( 'post-formats/format', get_post_format() );
 
 								// If comments are open or we have at least one comment, load up the comment template.
-								if ( comments_open() || get_comments_number() ) :
+								if ( !empty($brafton_comments) && comments_open() || get_comments_number() ) :
 									comments_template();
 								endif;
 							?>
@@ -58,36 +60,9 @@
 					</main>
 
 					<?php get_sidebar(); ?>
-					<?php if ( is_single() && get_field('related_posts', 'option')=='below' ) : ?>
-					<!-- HEY think about using related_posts(); -->
-						<div class="latest">
-							<h3><?php _e( 'Related Posts', 'braftonium' ); ?></h3><div class="container">
-							<?php $categories = get_the_category();
-							if ($categories) {
-								foreach ($categories as $category) {
-									$cat = $category->cat_ID;
-									$args=array( 'cat' => $cat, 'post__not_in' => array($post->ID), 'posts_per_page'=>3 );
-
-									$my_query = null;
-									$my_query = new WP_Query($args);
-
-									if( $my_query->have_posts() ) {
-										while ($my_query->have_posts()) : $my_query->the_post();
-										$url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
-										echo '<a href="' . get_the_permalink() . '" title="'.get_the_title().'">';
-											if ( $options['featured_style']=="rollover" ) {
-												echo '<div class="thumb" style="background-image: url('.$url[0].')"></div>';
-											} else if ( get_post_thumbnail_id( get_the_ID() ) ) {
-												echo '<img src="'.$url[0].'" alt="'.get_the_title().'">';
-											}
-											echo '<h5>'.get_the_title().'<br/><span class="tiny">'.get_the_date('M j, Y').'</span></h5>';
-										echo '</a>';
-										endwhile;
-									}
-								}
-							 } ?>
-						</div></div>
-					<?php endif; ?>
+					<?php if ( is_single() && get_field('related_posts', 'option')=='below' ) :
+						braftonium_related_posts(3);
+					endif; ?>
 				</div>
 
 			</div>

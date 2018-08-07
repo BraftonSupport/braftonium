@@ -2,6 +2,7 @@
 $background_image = get_field('background_image');
 $title = get_field('title');
 $tagline = get_field('tagline');
+$brafton_comments = get_field('comments', 'option');
 ?>
 
 			<div id="content">
@@ -32,7 +33,7 @@ $tagline = get_field('tagline');
 										the_content();
 
 										// If comments are open or we have at least one comment, load up the comment template.
-										if ( comments_open() || get_comments_number() ) :
+										if ( !empty($brafton_comments) && comments_open() || get_comments_number() ) :
 											comments_template();
 										endif;
 									?>

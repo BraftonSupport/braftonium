@@ -37,14 +37,14 @@ function braftonium_start() {
   wp_enqueue_style( 'slick', get_template_directory_uri() . '/library/js/slick/slick.css', false, '1.0.0' );
   wp_enqueue_style( 'slick-themes', get_template_directory_uri() . '/library/js/slick/slick-theme.css', false, '1.0.0' );
 
-  if ( get_field('sticky_nav', 'option')&&get_field('sticky_nav', 'option')[0]=='on' ){
+  if ( get_field('sticky_nav', 'option')[0]=='on' ){
 	wp_enqueue_script( 'sticky', get_template_directory_uri() . '/library/js/sticky.js', array(), '1.0.0', true );
   }
 
   // launching operation cleanup
   add_action( 'init', 'braftonium_head_cleanup' );
   // A better title
-  add_filter( 'wp_title', 'rw_title', 10, 3 );
+  add_filter( 'wp_title', 'braftonium_rw_title', 10, 3 );
   // remove WP version from RSS
   add_filter( 'the_generator', 'braftonium_rss_version' );
   // remove pesky injected css for recent comments widget
@@ -60,9 +60,9 @@ function braftonium_start() {
   braftonium_support();
 
   // cleaning up random code around images
-  add_filter( 'the_content', 'filter_ptags_on_images' );
+  add_filter( 'the_content', 'braftonium_filter_ptags_on_images' );
   // cleaning up excerpt
-  add_filter( 'excerpt_more', 'excerpt_more' );
+  add_filter( 'excerpt_more', 'braftonium_excerpt_more' );
 
 } /* end braftonium */
 
@@ -125,14 +125,11 @@ and be up and running in seconds.
 function braftonium_fonts() {
   wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
 }
-
 add_action('wp_enqueue_scripts', 'braftonium_fonts');
 
 /* I CALL UPON THE POWERS OF AN SVG SPRITESHEET except linking an svg file doesn't work in IE so I gots to do this */
 require_once(ABSPATH . 'wp-admin/includes/file.php');
-
-
-function get_svg_path($svgid) {
+function braftonium_get_svg_path($svgid) {
 	WP_Filesystem();
 	global $wp_filesystem;
 	$file_data = get_template_directory_uri().'/library/theme-options/svg-icons.svg';
@@ -145,10 +142,10 @@ function get_svg_path($svgid) {
 /**
  * What it says on the tin.
  */
-if (!function_exists( 'social_sharing_buttons' ) ) :
+if (!function_exists( 'braftonium_social_sharing_buttons' ) ) :
 	$ssbutton = get_field('social_share_buttons', 'option');
 	if (in_array("on", $ssbutton) ) {
-		function social_sharing_buttons() {
+		function braftonium_social_sharing_buttons() {
 			$social_media = get_field('social_media', 'option');
 			$ss_location = get_field('ss_button_location', 'option');
 
@@ -169,14 +166,14 @@ if (!function_exists( 'social_sharing_buttons' ) ) :
 			$linkedURL = 'https://linkedin.com/shareArticle?mini=true&url='.$ssbURL.'&title='.$ssbTitle;
 
 			// Add sharing button at the end of page/page content
-			$variable = '<span class="ssb-social"><span class="ssb-text">Social Share: </span>';
+			$variable = '<span class="ssb-social"><span class="ssb-text">'.__( 'Social Share', 'braftonium' ).': </span>';
 
-			if (is_array($social_media) && in_array("facebook", $social_media)) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank">'.get_svg_path('icon-facebook').'</a>'; }
-			if ( in_array('twitter', $social_media) ) { $variable .= '<a class="ssb-twitter" href="'. $twitterURL .'" target="_blank">'.get_svg_path('icon-twitter').'</a>'; }
-			if ( in_array('google', $social_media) ) { $variable .= '<a class="ssb-googleplus" href="'.$googleURL.'" target="_blank">'.get_svg_path('icon-google').'</a>'; }
-			if ( in_array('linkedin', $social_media) ) { $variable .= '<a class="ssb-linked" href="'.$linkedURL.'" target="_blank">'.get_svg_path('icon-linkedin').'</a>'; }
-			if ( in_array('pinterest', $social_media) ) { $variable .= '<a class="ssb-pinterest" href="'.$pinterestURL.'" target="_blank">'.get_svg_path('icon-pinterest').'</a>'; }
-			if ( in_array('email', $social_media) ) { $variable .= '<a class="ssb-email" href="mailto:?subject=I wanted you to see this site&amp;body='.$ssbURL.'">'.get_svg_path('icon-envelope').'</a>'; }
+			if (is_array($social_media) && in_array("facebook", $social_media)) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank">'.braftonium_get_svg_path('icon-facebook').'</a>'; }
+			if ( in_array('twitter', $social_media) ) { $variable .= '<a class="ssb-twitter" href="'. $twitterURL .'" target="_blank">'.braftonium_get_svg_path('icon-twitter').'</a>'; }
+			if ( in_array('google', $social_media) ) { $variable .= '<a class="ssb-googleplus" href="'.$googleURL.'" target="_blank">'.braftonium_get_svg_path('icon-google').'</a>'; }
+			if ( in_array('linkedin', $social_media) ) { $variable .= '<a class="ssb-linked" href="'.$linkedURL.'" target="_blank">'.braftonium_get_svg_path('icon-linkedin').'</a>'; }
+			if ( in_array('pinterest', $social_media) ) { $variable .= '<a class="ssb-pinterest" href="'.$pinterestURL.'" target="_blank">'.braftonium_get_svg_path('icon-pinterest').'</a>'; }
+			if ( in_array('email', $social_media) ) { $variable .= '<a class="ssb-email" href="mailto:?subject=I wanted you to see this site&amp;body='.$ssbURL.'">'.braftonium_get_svg_path('icon-envelope').'</a>'; }
 			$variable .= '</span>';
 
 			if ( is_single() && $ss_location=="post" || !is_single() && $ss_location=="excerpt" || $ss_location=="all" ){
@@ -255,4 +252,11 @@ if ( $layout=='rich' ) {
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 }
+
+
+function braftonium_video_script() {
+	wp_enqueue_script( 'video', get_template_directory_uri() . '/library/js/video.js', array(), '1.0.0', true );
+}
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

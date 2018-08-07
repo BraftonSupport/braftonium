@@ -130,7 +130,7 @@
 
 					<div class="nextwidget">
 						<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'braftonium' );
-						echo get_svg_path('icon-bars').get_svg_path('icon-close'); ?></button>	
+						echo braftonium_get_svg_path('icon-bars').braftonium_get_svg_path('icon-close'); ?></button>	
 						<?php if ( is_active_sidebar( 'header-sidebar' ) ) {
 							dynamic_sidebar( 'header-sidebar' );
 						} ?>

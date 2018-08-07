@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Braftonium v1.0.0\n"
 "Report-Msgid-Bugs-To: Yvonne\n"
-"POT-Creation-Date: 2018-08-06 11:32-0400\n"
+"POT-Creation-Date: 2018-08-06 17:33-0400\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: Brafton\n"
+"Language-Team: \n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,8 +17,7 @@ msgstr ""
 "X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
-"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__; __\n"
 "X-Poedit-Basepath: ..\n"
 "X-Generator: Poedit 2.1.1\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -71,6 +70,10 @@ msgstr "Footer midterste widget"
 #: braftonium.php:330
 msgid "Footer Right Widget"
 msgstr "Footer højre widget"
+
+#: custom-fields/banner/banner.acf.php:5
+msgid "Banner"
+msgstr "Banner"
 
 #: custom-fields/banner/banner.acf.php:9 custom-fields/style/style.acf.php:78
 msgid "Background Image"
@@ -172,6 +175,10 @@ msgstr "Knap?"
 #: custom-fields/full-width/full-width.acf.php:317
 msgid "Check this box if you want to link the content but not show the button."
 msgstr "Marker dette felt, hvis du vil linke indholdet, men ikke vise knappen."
+
+#: custom-fields/full-width/full-width.acf.php:326
+msgid "Show button?"
+msgstr "Vis knap?"
 
 #: custom-fields/full-width/full-width.acf.php:338
 #: custom-fields/full-width/full-width.acf.php:548
@@ -523,57 +530,72 @@ msgstr "På både Indlæg og uddrag"
 msgid "On Post"
 msgstr "På Indlæg"
 
-#: theme-options/braftonium-options.acf.php:238
+#: theme-options/braftonium-options.acf.php:209
+msgid "Allow Comments"
+msgstr "Tillad kommentarer"
+
+#: theme-options/braftonium-options.acf.php:212
+msgid "I must warn you, it's going to be spam."
+msgstr "Jeg advarer dig, det vil alle være spam."
+
+#: theme-options/braftonium-options.acf.php:221
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: theme-options/braftonium-options.acf.php:262
 msgid "Logo"
 msgstr "Logoet"
 
-#: theme-options/braftonium-options.acf.php:248
+#: theme-options/braftonium-options.acf.php:272
 msgid "Logo in the Footer"
 msgstr "Logo i Sidefod"
 
-#: theme-options/braftonium-options.acf.php:263
+#: theme-options/braftonium-options.acf.php:287
 msgid "Text Color"
 msgstr "Tekstfarve"
 
-#: theme-options/braftonium-options.acf.php:272
+#: theme-options/braftonium-options.acf.php:296
 msgid "Link Color"
 msgstr "Link Farve"
 
-#: theme-options/braftonium-options.acf.php:281
+#: theme-options/braftonium-options.acf.php:305
 msgid "Link Hover Color"
 msgstr "Link Hover Farve"
 
-#: theme-options/braftonium-options.acf.php:290
+#: theme-options/braftonium-options.acf.php:314
 msgid "Header Background Color"
 msgstr "Baggrundsfarve for overskrift"
 
-#: theme-options/braftonium-options.acf.php:299
+#: theme-options/braftonium-options.acf.php:323
 msgid "Header Text Color"
 msgstr "Overskrift Tekst Farve"
 
-#: theme-options/braftonium-options.acf.php:308
+#: theme-options/braftonium-options.acf.php:332
 msgid "Header Link Color"
 msgstr "Overskrift Link Farve"
 
-#: theme-options/braftonium-options.acf.php:317
+#: theme-options/braftonium-options.acf.php:341
 msgid "Header Link Hover Color"
 msgstr "Overskrift Link Hover Farve"
 
-#: theme-options/braftonium-options.acf.php:326
+#: theme-options/braftonium-options.acf.php:350
 msgid "Footer Background Color"
 msgstr "Fod Baggrundsfarve"
 
-#: theme-options/braftonium-options.acf.php:335
+#: theme-options/braftonium-options.acf.php:359
 msgid "Footer Text Color"
 msgstr "Fodtekstfarve"
 
-#: theme-options/braftonium-options.acf.php:344
+#: theme-options/braftonium-options.acf.php:368
 msgid "Footer Link Color"
 msgstr "Footer Link Farve"
 
-#: theme-options/braftonium-options.acf.php:353
+#: theme-options/braftonium-options.acf.php:377
 msgid "Footer Link Hover Color"
 msgstr "Footer Link Hover Farve"
+
+#~ msgid "Social Share"
+#~ msgstr "Sociale medier"
 
 #~ msgid "Search for"
 #~ msgstr "Søg efter"

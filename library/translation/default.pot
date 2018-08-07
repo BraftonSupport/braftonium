@@ -7,43 +7,37 @@ msgstr ""
 "Project-Id-Version: "
 "Braftonium v1.0.0\n"
 "POT-Creation-Date: "
-"2018-08-06 11:07-0400\n"
+"2018-08-06 17:33-0400\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Yvonne\n"
 "Language-Team: Brafton\n"
 "Report-Msgid-Bugs-To: "
 "Yvonne\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/"
-"plain; charset=UTF-8\n"
-"Content-Transfer-"
-"Encoding: 8bit\n"
-"Plural-Forms: "
-"nplurals=2; plural=n != "
-"1;\n"
-"X-Textdomain-Support: "
-"yesX-Generator: Poedit "
-"1.6.4\n"
+"Content-Type: text/plain; "
+"charset=UTF-8\n"
+"Content-Transfer-Encoding: "
+"8bit\n"
+"Plural-Forms: nplurals=2; "
+"plural=n != 1;\n"
+"X-Textdomain-Support: yesX-"
+"Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: "
 "UTF-8\n"
-"X-Poedit-KeywordsList: "
-"__;_e;esc_html_e;"
-"esc_html_x:1,2c;"
-"esc_html__;esc_attr_e;"
-"esc_attr_x:1,2c;"
+"X-Poedit-KeywordsList: __;"
+"_e;esc_html_e;"
+"esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;"
 "esc_attr__;_ex:1,2c;"
-"_nx:4c,1,2;"
-"_nx_noop:4c,1,2;_x:1,2c;"
-"_n:1,2;_n_noop:1,2;"
+"_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;"
 "__ngettext:1,2;"
 "__ngettext_noop:1,2;_c,"
 "_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "Language: en_US\n"
-"X-Generator: Poedit "
-"2.1.1\n"
-"X-Poedit-"
-"SearchPath-0: .\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: braftonium.php:56
 #, php-format
@@ -60,8 +54,7 @@ msgid "Social Media"
 msgstr ""
 
 #: braftonium.php:218
-msgid ""
-"No Related Posts Yet!"
+msgid "No Related Posts Yet!"
 msgstr ""
 
 #: braftonium.php:264
@@ -90,17 +83,19 @@ msgstr ""
 #: braftonium.php:332
 msgid ""
 "This is located in the "
-"footer. Use only 1 "
-"widget."
+"footer. Use only 1 widget."
 msgstr ""
 
 #: braftonium.php:321
-msgid ""
-"Footer Middle Widget"
+msgid "Footer Middle Widget"
 msgstr ""
 
 #: braftonium.php:330
 msgid "Footer Right Widget"
+msgstr ""
+
+#: custom-fields/banner/banner.acf.php:5
+msgid "Banner"
 msgstr ""
 
 #: custom-fields/banner/banner.acf.php:9
@@ -205,15 +200,18 @@ msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:317
 msgid ""
-"Check this box if you "
-"want to link the content "
-"but not show the button."
+"Check this box if you want "
+"to link the content but "
+"not show the button."
+msgstr ""
+
+#: custom-fields/full-width/full-width.acf.php:326
+msgid "Show button?"
 msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:338
 #: custom-fields/full-width/full-width.acf.php:548
-msgid ""
-"Image Size and Shape"
+msgid "Image Size and Shape"
 msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:350
@@ -224,8 +222,7 @@ msgstr ""
 #: custom-fields/full-width/full-width.acf.php:351
 #: custom-fields/full-width/full-width.acf.php:561
 msgid ""
-"Thumbnail (150px by "
-"150px )"
+"Thumbnail (150px by 150px )"
 msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:352
@@ -237,9 +234,8 @@ msgstr ""
 #: custom-fields/full-width/full-width.acf.php:353
 #: custom-fields/full-width/full-width.acf.php:563
 msgid ""
-"Full (best for awards "
-"and different sized "
-"images.)"
+"Full (best for awards and "
+"different sized images.)"
 msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:368
@@ -268,8 +264,7 @@ msgid "Read More"
 msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:527
-msgid ""
-"Add Read More Button"
+msgid "Add Read More Button"
 msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:601
@@ -282,10 +277,9 @@ msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:628
 msgid ""
-"When you add more "
-"blocks, they will show "
-"up next to each other in "
-"a single row."
+"When you add more blocks, "
+"they will show up next to "
+"each other in a single row."
 msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:674
@@ -358,23 +352,23 @@ msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:971
 msgid ""
-"info/sales/"
-"support@website.com"
+"info/sales/support@website."
+"com"
 msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:1001
 msgid ""
 "Go to <a href=\"https://"
-"developers.google.com/"
-"maps/documentation/embed/"
-"\" target=\"_blank"
-"\">this page</a> and get "
-"yourself a key. Select a "
-"new project then click "
+"developers.google.com/maps/"
+"documentation/embed/\" "
+"target=\"_blank\">this "
+"page</a> and get yourself "
+"a key. Select a new "
+"project then click "
 "\"Enable API\". Copy and "
-"paste the result here. "
-"It is free and takes "
-"less than a minute."
+"paste the result here. It "
+"is free and takes less "
+"than a minute."
 msgstr ""
 
 #: custom-fields/full-width/full-width.acf.php:1043
@@ -423,14 +417,13 @@ msgstr ""
 
 #: custom-fields/style/style.acf.php:148
 msgid ""
-"Compact (add side "
-"margins)"
+"Compact (add side margins)"
 msgstr ""
 
 #: custom-fields/style/style.acf.php:149
 msgid ""
-"Thin (reduce padding "
-"from the top and bottom)"
+"Thin (reduce padding from "
+"the top and bottom)"
 msgstr ""
 
 #: custom-fields/style/style.acf.php:150
@@ -451,11 +444,10 @@ msgstr ""
 
 #: custom-post-types/events/events.acf.php:11
 msgid ""
-"If both start date and "
-"end date are left blank, "
-"you have the choice of "
-"\"TBD\" or \"Various "
-"Dates\"."
+"If both start date and end "
+"date are left blank, you "
+"have the choice of \"TBD\" "
+"or \"Various Dates\"."
 msgstr ""
 
 #: custom-post-types/events/events.acf.php:18
@@ -518,8 +510,7 @@ msgid ""
 msgstr ""
 
 #: theme-options/braftonium-options.acf.php:22
-msgid ""
-"Next to the Logo 75%"
+msgid "Next to the Logo 75%"
 msgstr ""
 
 #: theme-options/braftonium-options.acf.php:23
@@ -555,23 +546,21 @@ msgid "On the Sidebar"
 msgstr ""
 
 #: theme-options/braftonium-options.acf.php:116
-msgid ""
-"Social Share Buttons"
+msgid "Social Share Buttons"
 msgstr ""
 
 #: theme-options/braftonium-options.acf.php:119
 msgid ""
 "These are not links to "
 "your social media, these "
-"are for people to share "
-"a particular page or "
-"post on their own social "
-"media profiles."
+"are for people to share a "
+"particular page or post on "
+"their own social media "
+"profiles."
 msgstr ""
 
 #: theme-options/braftonium-options.acf.php:128
-msgid ""
-"Social Share Buttons?"
+msgid "Social Share Buttons?"
 msgstr ""
 
 #: theme-options/braftonium-options.acf.php:140
@@ -589,68 +578,72 @@ msgstr ""
 msgid "On Post"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:238
+#: theme-options/braftonium-options.acf.php:209
+msgid "Allow Comments"
+msgstr ""
+
+#: theme-options/braftonium-options.acf.php:212
+msgid ""
+"I must warn you, it's "
+"going to be spam."
+msgstr ""
+
+#: theme-options/braftonium-options.acf.php:221
+msgid "Comments"
+msgstr ""
+
+#: theme-options/braftonium-options.acf.php:262
 msgid "Logo"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:248
+#: theme-options/braftonium-options.acf.php:272
 msgid "Logo in the Footer"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:263
+#: theme-options/braftonium-options.acf.php:287
 msgid "Text Color"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:272
+#: theme-options/braftonium-options.acf.php:296
 msgid "Link Color"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:281
+#: theme-options/braftonium-options.acf.php:305
 msgid "Link Hover Color"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:290
+#: theme-options/braftonium-options.acf.php:314
 msgid ""
 "Header Background Color"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:299
+#: theme-options/braftonium-options.acf.php:323
 msgid "Header Text Color"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:308
+#: theme-options/braftonium-options.acf.php:332
 msgid "Header Link Color"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:317
+#: theme-options/braftonium-options.acf.php:341
 msgid ""
 "Header Link Hover Color"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:326
+#: theme-options/braftonium-options.acf.php:350
 msgid ""
 "Footer Background Color"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:335
+#: theme-options/braftonium-options.acf.php:359
 msgid "Footer Text Color"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:344
+#: theme-options/braftonium-options.acf.php:368
 msgid "Footer Link Color"
 msgstr ""
 
-#: theme-options/braftonium-options.acf.php:353
+#: theme-options/braftonium-options.acf.php:377
 msgid ""
 "Footer Link Hover Color"
-msgstr ""
-
-#: searchform.php:2
-msgid ""
-"Search for"
-msgstr ""
-
-#: searchform.php:3
-msgid ""
-"Search"
 msgstr ""
