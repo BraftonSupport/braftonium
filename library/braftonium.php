@@ -135,8 +135,8 @@ THEME SUPPORT
 function braftonium_support() {
 
 	// wp thumbnails (sizes handled in functions.php)
+	add_theme_support( 'custom-header');
 	add_theme_support( 'post-thumbnails' );
-
 	add_image_size( 'mediumsquared', 300, 300, true );
 
 	// wp custom background (thx to @bransonwerner for update)
@@ -195,31 +195,44 @@ add_filter('acf/load_field/key=field_5b43bc9b0acf1', 'acf_load_widget_area_field
 RELATED POSTS FUNCTION
 *********************/
 
-// Related Posts Function (call using related_posts(); )
-function related_posts() {
-	echo '<ul id="related-posts">';
+// Related Posts Function (call using braftonium_related_posts(); )
+function braftonium_related_posts($number) {
 	global $post;
-	$tags = wp_get_post_tags( $post->ID );
-	if($tags) {
-		foreach( $tags as $tag ) {
-			$tag_arr .= $tag->slug . ',';
+	$categories = wp_get_post_categories( $post->ID );
+	if($categories) {
+		foreach( $categories as $category ) {
+			$cat_arr .= $cat->slug . ',';
 		}
 		$args = array(
-			'tag' => $tag_arr,
-			'numberposts' => 3, /* you can change this to show more */
+			'cat' => $cat_arr,
+			'numberposts' => $number, /* you can change this to show more */
 			'post__not_in' => array($post->ID)
 		);
-		$related_posts = get_posts( $args );
-		if($related_posts) {
-			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
-				<li class="related_post"><a class="entry-unrelated" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-			<?php endforeach; }
-		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'braftonium' ) . '</li>'; ?>
-		<?php }
 	}
+
+		$related_posts = get_posts( $args );
+		$location = get_field('related_posts', 'option');
+		echo '<section class="latest widget"><h3>'. __( 'Related Posts', 'braftonium' ).'</h3>';
+		if ( $location=='below'): echo '<div class="container">'; endif;
+			if($related_posts):
+				foreach ( $related_posts as $post ) : setup_postdata( $post );
+				$url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+				echo '<a href="' . get_the_permalink() . '" title="'.get_the_title().'">';
+				if ($url) :
+					echo '<div class="thumbnail" style="background-image: url('.$url[0].')"></div>';
+				endif;
+				
+				echo '<h4>'.get_the_title().'<br/><span class="tiny">'.get_the_date('M j, Y').'</span></h4>';
+				echo '</a>';
+				
+				endforeach;
+			else:
+				echo '<p class="no_related_post">' . __( 'No Related Posts Yet!', 'braftonium' ) . '</p>';
+			endif;
+		if ( $location=='below'): echo '</div>'; endif;
+	echo '</section>';
+
 	wp_reset_postdata();
-	echo '</ul>';
 } /* end related posts function */
 
 
