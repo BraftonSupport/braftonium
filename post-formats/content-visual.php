@@ -51,37 +51,15 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		if (strpos($video, 'youtube.com') == true || strpos($video, '.webm') == false && strpos($video, '.mp4') == false) {
 			$videoid = preg_replace('/https:\/\/www.youtube.com\/watch\?v=/', '', $video);
 		?>
-
 			<iframe id="video" src="https://www.youtube.com/embed/<?php echo $videoid; ?>?autoplay=1&mute=1&loop=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		<?php } else { ?>
-			<!-- <button id="vidpause"><?php //echo get_svg_path('icon-pause'); ?></button> -->
+			<button id="vidpause"><?php echo braftonium_get_svg_path('icon-pause').braftonium_get_svg_path('icon-play'); ?></button>
 			<video playsinline autoplay muted loop id="video">
 				<source src="<?php echo $video; ?>" type="video/<?php if (strpos($video, '.webm') == true): echo 'webm'; elseif (strpos($video, '.mp4') == true): echo 'mp4'; endif; ?>">
 			</video>
-			<script>
-				var vid = document.getElementById("bgvid"),
-				pauseButton = document.getElementById("vidpause");
-				function vidFade() {
-					vid.classList.add("stopfade");
-				}
-				vid.addEventListener('ended', function() {
-					// only functional if "loop" is removed 
-					vid.pause();
-					// to capture IE10
-					vidFade();
-				});
-				pauseButton.addEventListener("click", function() {
-					vid.classList.toggle("stopfade");
-					if (vid.paused) {
-				vid.play();
-						// pauseButton.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
-					} else {
-						vid.pause();
-						// pauseButton.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
-					}
-				})
-				</script>
-		<?php }
+		<?php
+			braftonium_video_script();
+		}
 	} ?><?php if ($video): echo '<div class="black">'; endif; ?><div class="wrap">
 
 		<?php if ($titletext): echo $titletext; endif;

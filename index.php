@@ -44,7 +44,7 @@ $tagline = get_field('tagline',$blog_page_id); ?>
 											/* the author of the post */
 											'<span class="by">'.__( 'by', 'braftonium').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
 										); 
-										social_sharing_buttons(); ?>
+										braftonium_social_sharing_buttons(); ?>
 									</p>
 								</header>
 
@@ -55,7 +55,7 @@ $tagline = get_field('tagline',$blog_page_id); ?>
 							</article>
 						<?php endwhile; ?>
 
-							<?php page_navi(); ?>
+							<?php braftonium_page_navi(); ?>
 
 						<?php else : ?>
 

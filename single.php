@@ -17,7 +17,7 @@ $brafton_comments = get_field('comments', 'option');
 								?>
 								<?php printf( __( 'filed under', 'braftonium' ).': %1$s', get_the_category_list(', ') ); ?>
 								<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'braftonium' ) . '</span> ', ', ', '</p>' );
-								social_sharing_buttons(); ?>
+								braftonium_social_sharing_buttons(); ?>
 							</p>
 						</div></div>
 					</section>

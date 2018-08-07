@@ -31,7 +31,7 @@ function braftonium_head_cleanup() {
 
 // A better title
 // http://www.deluxeblogtips.com/2012/03/better-title-meta-tag.html
-function rw_title( $title, $sep, $seplocation ) {
+function braftonium_rw_title( $title, $sep, $seplocation ) {
   global $page, $paged;
 
   // Don't affect in feeds.
@@ -241,7 +241,7 @@ PAGE NAVI
 *********************/
 
 // Numeric Page Navi (built into the theme by default)
-function page_navi() {
+function braftonium_page_navi() {
   global $wp_query;
   $bignum = 999999999;
   if ( $wp_query->max_num_pages <= 1 )
@@ -266,12 +266,12 @@ RANDOM CLEANUP ITEMS
 *********************/
 
 // remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
-function filter_ptags_on_images($content){
+function braftonium_filter_ptags_on_images($content){
 	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
 // This removes the annoying […] to a Read More link
-function excerpt_more($more) {
+function braftonium_excerpt_more($more) {
 	global $post;
 	// edit here if you like
 	return '...  <a class="read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'braftonium' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'braftonium' ) .'</a>';
@@ -287,7 +287,7 @@ function excerpt_more($more) {
 		function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
 			if ( 'social' === $args->theme_location ) {
 				$social_media = preg_replace('#^www\.|\.com$#', '$1', parse_url($item->url)['host']);
-				$svg = get_svg_path('icon-'.$social_media);
+				$svg = braftonium_get_svg_path('icon-'.$social_media);
 				$output .= sprintf("\n<li %s><a href='%s' target='_blank' title='%s'>".$svg."</a>\n", ( array_search('current-menu-item', $item->classes) ) ? '' : '', $item->url, $item->title );
 			};
 		}
@@ -295,14 +295,14 @@ function excerpt_more($more) {
 /**
  * Now the Main Nav adding the svg
  * */	
-function be_arrows_in_menus( $item_output, $item, $depth, $args ) {
+function braftonium_be_arrows_in_menus( $item_output, $item, $depth, $args ) {
 	if( in_array( 'menu-item-has-children', $item->classes ) ) {
-		$arrow = '<button>'.get_svg_path('icon-expand').'</button>';
+		$arrow = '<button>'.braftonium_get_svg_path('icon-expand').'</button>';
 		$item_output = str_replace( '</a>', '</a>' . $arrow, $item_output );
 	}
 	return $item_output;
 }
-add_filter( 'walker_nav_menu_start_el', 'be_arrows_in_menus', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'braftonium_be_arrows_in_menus', 10, 4 );
 
 
 
