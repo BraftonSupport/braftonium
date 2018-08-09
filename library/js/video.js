@@ -11,7 +11,7 @@ button.addEventListener("click", function() {
 	}
 });
 
-//someone help, I can't do this with js
+//I need help, I can't do this with js
 jQuery(document).ready(function($){
     $("#vidpause").click(function() {
         $(".icon-pause").toggle();

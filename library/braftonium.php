@@ -274,7 +274,6 @@ function braftonium_filter_ptags_on_images($content){
 function braftonium_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a class="read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'braftonium' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'braftonium' ) .'</a>';
 }
 
 /**

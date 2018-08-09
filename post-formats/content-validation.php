@@ -6,7 +6,6 @@
  * @subpackage Braftonium
  * @since braftonium 1.0
  */
-
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
 if (get_sub_field('title')):
@@ -39,7 +38,10 @@ if ( $style['other'] ) {
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
-} ?>
+}
+
+braftonium_slick_script();
+?>
 
 <section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }

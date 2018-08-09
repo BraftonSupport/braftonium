@@ -56,8 +56,8 @@
 			$braftonium_footerlinkhover_color = get_theme_mod( 'braftonium_footerlinkhover_color' );
 		echo '<style>';
 			if ($braftonium_text) { echo 'body { color:'.$braftonium_text.';}'; }
-			if ($braftonium_link) { echo 'a:not(.blue-btn):not(.orange-btn):not(.read-more), a:not(.blue-btn):not(.orange-btn):not(.read-more):visited, .blog .read-more, .slick-prev:before, .slick-next:before { color:'.$braftonium_link.';} button, .blue-btn, .pagination a:hover, .hero .read-more { background-color:'.$braftonium_link.';} .blog .hero article.hentry { border-bottom-color: '.$braftonium_link.'99; }'; }
-			if ($braftonium_hover) { echo 'a:not(.blue-btn):not(.orange-btn):not(.read-more):hover, .pagination a:hover, .blog .read-more:hover { color:'.$braftonium_hover.';} .button:hover, .blue-btn:hover, .blue-btn:focus, .blue-btn:active, .hero .read-more:hover { background-color:'.$braftonium_hover.';} '; }
+			if ($braftonium_link) { echo 'a, a:visited, .blog .read-more, .slick-prev:before, .slick-next:before { color:'.$braftonium_link.';} button, .blue-btn, .pagination a:hover, .hero .read-more { background-color:'.$braftonium_link.';} .blog .hero article.hentry { border-bottom-color: '.$braftonium_link.'99; }'; }
+			if ($braftonium_hover) { echo 'a:hover, .pagination a:hover, .blog .read-more:hover { color:'.$braftonium_hover.';} .button:hover, .blue-btn:hover, .blue-btn:focus, .blue-btn:active, .hero .read-more:hover { background-color:'.$braftonium_hover.';} '; }
 			if ($braftonium_headerbg) { echo '.header, #menu-nav.nav li ul.sub-menu, .blog .simple .byline, .blog .rich article.hentry { background-color:'.$braftonium_headerbg.';} .blog .rich article.hentry .content { background-color:'.$braftonium_headerbg.'cc;}'; }
 			if ($braftonium_headercolor) { echo '.header, .blog .simple .byline, .blog .rich article.hentry .content { color:'.$braftonium_headercolor.';} '; }
 			if ($braftonium_headerlink) { echo '.header a, #menu-nav.nav li a, .blog .simple .byline a, .blog .rich article.hentry a { color:'.$braftonium_headerlink.';} .header .blue-btn { background-color: background-color:'.$headerlink.';} '; }
@@ -136,7 +136,7 @@
 						} ?>
 					</div>
 
-					<nav class="hide <?php if ($nav): echo $nav; else: echo 'below'; endif; ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="<?php if ($nav): echo $nav; else: echo 'below'; endif; ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
 							'container_class' => 'menu cf',                 // class of container (should you choose to use it)

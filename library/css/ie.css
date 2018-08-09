@@ -618,36 +618,37 @@ POSTS & CONTENT STYLES
 
 /* line 245, ../scss/breakpoints/_768up.scss */
 .blog .hentry {
-  padding: 3em 0 0;
+  padding: 0;
+  margin: 3em 0 0;
 }
-/* line 248, ../scss/breakpoints/_768up.scss */
+/* line 249, ../scss/breakpoints/_768up.scss */
 .blog article {
   display: block;
 }
-/* line 250, ../scss/breakpoints/_768up.scss */
+/* line 251, ../scss/breakpoints/_768up.scss */
 .blog article .thumbnail, .blog article .content {
   margin: 0;
 }
-/* line 254, ../scss/breakpoints/_768up.scss */
+/* line 255, ../scss/breakpoints/_768up.scss */
 .blog .full article.hentry .thumbnail {
   max-height: 220px;
 }
 
-/* line 259, ../scss/breakpoints/_768up.scss */
+/* line 260, ../scss/breakpoints/_768up.scss */
 .alignleft, img.alignleft {
   float: left;
   margin-right: 15px;
   margin-bottom: 15px;
 }
 
-/* line 264, ../scss/breakpoints/_768up.scss */
+/* line 265, ../scss/breakpoints/_768up.scss */
 .alignright, img.alignright {
   float: right;
   margin-left: 15px;
   margin-bottom: 15px;
 }
 
-/* line 269, ../scss/breakpoints/_768up.scss */
+/* line 270, ../scss/breakpoints/_768up.scss */
 .aligncenter, img.aligncenter {
   text-align: center;
   margin-right: auto;
@@ -657,19 +658,19 @@ POSTS & CONTENT STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 280, ../scss/breakpoints/_768up.scss */
+/* line 281, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin: 3em 0 0 0;
   padding: 0 0 0 30px;
 }
 
-/* line 285, ../scss/breakpoints/_768up.scss */
+/* line 286, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
 
-/* line 290, ../scss/breakpoints/_768up.scss */
+/* line 291, ../scss/breakpoints/_768up.scss */
 .widget {
   margin: 0 0 3em 0;
 }
@@ -682,24 +683,24 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 304, ../scss/breakpoints/_768up.scss */
+/* line 305, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 308, ../scss/breakpoints/_768up.scss */
+/* line 309, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 1em auto 2em 0;
 }
-/* line 313, ../scss/breakpoints/_768up.scss */
+/* line 314, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section h3 {
   margin-bottom: 1em;
 }
-/* line 316, ../scss/breakpoints/_768up.scss */
+/* line 317, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section:last-child {
   margin-left: auto;
   -webkit-flex: 0 1 auto;

@@ -14,12 +14,4 @@ jQuery(document).ready(function($){
             $(this).toggleClass('rotate');
             $( this ).next('.sub-menu').toggleClass('toggleon');
         });
-
-
-
-    $('.validation .slick').slick({
-        autoplay: true,
-        autoplaySpeed: 9500,
-        adaptiveHeight: false,    
-      });
 });

@@ -636,9 +636,9 @@
 		 * @param {string} value Custom CSS..
 		 * @returns {void}
 		 */
-		custom_css: function( value ) {
-			$( '#wp-custom-css' ).text( value );
-		},
+		// custom_css: function( value ) {
+		// 	$( '#wp-custom-css' ).text( value );
+		// },
 
 		/**
 		 * Preview changes to any of the background settings.
