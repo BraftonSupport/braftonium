@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Braftonium\n"
 "Report-Msgid-Bugs-To: Yvonne\n"
-"POT-Creation-Date: 2018-08-06 17:33-0400\n"
-"PO-Revision-Date: 2018-08-08 11:13-0400\n"
+"POT-Creation-Date: 2018-08-09 17:14-0400\n"
+"PO-Revision-Date: 2018-08-09 17:15-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -26,15 +26,15 @@ msgid ""
 msgstr ""
 "The article you were looking for was not found, but maybe try looking again!"
 
-#: archive.php:22 index.php:41 post-formats/format.php:22 single.php:9
+#: archive.php:22 index.php:41 post-formats/format.php:13 single.php:11
 msgid "Posted"
 msgstr "Posted"
 
-#: archive.php:26 index.php:45 post-formats/format.php:26 single.php:13
+#: archive.php:26 index.php:45 post-formats/format.php:17 single.php:15
 msgid "by"
 msgstr "by"
 
-#: archive.php:50 full-width.php:67 index.php:64 single.php:47
+#: archive.php:50 full-width.php:67 index.php:64 single.php:49
 msgid "Oops, Post Not Found!"
 msgstr "Oops, Post Not Found!"
 
@@ -43,16 +43,16 @@ msgid "This is the error message in the archive.php template."
 msgstr "This is the error message in the archive.php template."
 
 #: comments.php:17
-msgid "<span>No</span> Comments"
-msgstr "<span>No</span> Comments"
+msgid "No Comments"
+msgstr "No Comments"
 
 #: comments.php:17
-msgid "<span>One</span> Comment"
-msgstr "<span>One</span> Comment"
+msgid "One Comment"
+msgstr "One Comment"
 
 #: comments.php:17
-msgid "<span>%</span> Comments"
-msgstr "<span>%</span> Comments"
+msgid "% Comments"
+msgstr "% Comments"
 
 #: comments.php:27
 msgid "Reply"
@@ -74,28 +74,28 @@ msgstr "Comments are closed."
 msgid "This is the error message in the full-width.php template."
 msgstr "This is the error message in the full-width.php template."
 
-#: functions.php:111
+#: functions.php:108
 msgid "Theme Colors"
 msgstr "Theme Colors"
 
-#: functions.php:172
+#: functions.php:166
 msgid "Social Share"
 msgstr "Social Share"
 
-#: functions.php:208
+#: functions.php:202
 #, php-format
 msgid "<cite class=\"fn\">%1$s</cite> %2$s"
 msgstr "<cite class=\"fn\">%1$s</cite> %2$s"
 
-#: functions.php:208
+#: functions.php:202
 msgid "(Edit)"
 msgstr "(Edit)"
 
-#: functions.php:209
+#: functions.php:203
 msgid "F jS, Y"
 msgstr "F jS, Y"
 
-#: functions.php:214
+#: functions.php:208
 msgid "Your comment is awaiting moderation."
 msgstr "Your comment is awaiting moderation."
 
@@ -107,7 +107,7 @@ msgstr "Menu"
 msgid "The Main Menu"
 msgstr "The Main Menu"
 
-#: index.php:67 single.php:50
+#: index.php:67 single.php:52
 msgid "Uh Oh. Something is missing. Try double checking things."
 msgstr "Uh Oh. Something is missing. Try double checking things."
 
@@ -129,40 +129,37 @@ msgstr "Navigation"
 msgid "Social Media"
 msgstr "Social Media"
 
-#: library/braftonium.php:218
+#: library/braftonium.php:215
+#: library/theme-options/braftonium-options.acf.php:89
+msgid "Related Posts"
+msgstr "Related Posts"
+
+#: library/braftonium.php:230
 msgid "No Related Posts Yet!"
 msgstr "No Related Posts Yet!"
 
-#: library/braftonium.php:264
-msgid "Read "
-msgstr "Read "
-
-#: library/braftonium.php:264 search.php:30
-msgid "Read more &raquo;"
-msgstr "Read more &raquo;"
-
-#: library/braftonium.php:301
+#: library/braftonium.php:313
 msgid "Theme General Settings"
 msgstr "Theme General Settings"
 
-#: library/braftonium.php:302
+#: library/braftonium.php:314
 msgid "Theme Settings"
 msgstr "Theme Settings"
 
-#: library/braftonium.php:312
+#: library/braftonium.php:324
 msgid "Footer Left Widget"
 msgstr "Footer Left Widget"
 
-#: library/braftonium.php:314 library/braftonium.php:323
-#: library/braftonium.php:332
+#: library/braftonium.php:326 library/braftonium.php:335
+#: library/braftonium.php:344
 msgid "This is located in the footer. Use only 1 widget."
 msgstr "This is located in the footer. Use only 1 widget."
 
-#: library/braftonium.php:321
+#: library/braftonium.php:333
 msgid "Footer Middle Widget"
 msgstr "Footer Middle Widget"
 
-#: library/braftonium.php:330
+#: library/braftonium.php:342
 msgid "Footer Right Widget"
 msgstr "Footer Right Widget"
 
@@ -324,7 +321,7 @@ msgstr "Validation (Slider)"
 
 #: library/custom-fields/full-width/full-width.acf.php:524
 #: post-formats/content-list.php:98 post-formats/content-list.php:145
-#: post-formats/content-validation.php:131
+#: post-formats/content-validation.php:133
 msgid "Read More"
 msgstr "Read More"
 
@@ -588,11 +585,6 @@ msgstr "Sticky?"
 msgid "Blog Layout"
 msgstr "Blog Layout"
 
-#: library/theme-options/braftonium-options.acf.php:89 sidebar.php:11
-#: single.php:64
-msgid "Related Posts"
-msgstr "Related Posts"
-
 #: library/theme-options/braftonium-options.acf.php:101
 msgid "No Related Posts"
 msgstr "No Related Posts"
@@ -697,23 +689,23 @@ msgstr "Footer Link Color"
 msgid "Footer Link Hover Color"
 msgstr "Footer Link Hover Color"
 
-#: page.php:41
+#: page.php:42
 msgid "Pages:"
 msgstr "Pages:"
 
-#: page.php:47
+#: page.php:48
 msgid "Next page"
 msgstr "Next page"
 
-#: page.php:48
+#: page.php:49
 msgid "Previous page"
 msgstr "Previous page"
 
-#: post-formats/format.php:28 single.php:16
+#: post-formats/format.php:19 single.php:18
 msgid "filed under"
 msgstr "filed under"
 
-#: post-formats/format.php:29 search.php:39 single.php:17
+#: post-formats/format.php:20 search.php:39 single.php:19
 msgid "Tags:"
 msgstr "Tags:"
 
@@ -725,6 +717,10 @@ msgstr "Search Results for:"
 #, php-format
 msgid "Posted %1$s by %2$s"
 msgstr "Posted %1$s by %2$s"
+
+#: search.php:30
+msgid "Read more &raquo;"
+msgstr "Read more &raquo;"
 
 #: search.php:36
 #, php-format
@@ -751,6 +747,18 @@ msgstr "Search for"
 msgid "Search"
 msgstr "Search"
 
-#: single.php:53
+#: single.php:55
 msgid "This is the error message in the single.php template."
 msgstr "This is the error message in the single.php template."
+
+#~ msgid "<span>No</span> Comments"
+#~ msgstr "<span>No</span> Comments"
+
+#~ msgid "<span>One</span> Comment"
+#~ msgstr "<span>One</span> Comment"
+
+#~ msgid "<span>%</span> Comments"
+#~ msgstr "<span>%</span> Comments"
+
+#~ msgid "Read "
+#~ msgstr "Read "

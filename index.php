@@ -27,7 +27,7 @@ $tagline = get_field('tagline',$blog_page_id); ?>
 								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 									echo '<div class="thumbnail">';
 									if (in_array($layout, $layoutarray)):
-										echo '<a href="'. get_the_permalink().'">';
+										echo '<a href="'. get_the_permalink().'"  title="'. the_title_attribute( 'echo=0' ) .'">';
 										the_post_thumbnail('medium');
 										echo '</a>';
 									else:
