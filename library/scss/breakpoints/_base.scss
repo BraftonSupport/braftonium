@@ -21,8 +21,8 @@ body {
 	line-height: 1.5;
 	color: $text-color;
 	background-color: $gray;
-  	-webkit-font-smoothing: antialiased;
-  	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /********************
@@ -73,6 +73,12 @@ LAYOUT & GRID STYLES
 .wrap {
 	width: 94%;
 	margin: 0 auto;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 
 /*********************
@@ -428,11 +434,20 @@ svg {
 }
 
 .blog {
+	.content {
+		width: 100%;
+	}
 	.thumbnail img {
 		width: 100%;
 		height: auto;
 	}
 	.hentry {
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		-webkit-hyphens: auto;
+		-ms-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
 		padding: 2em 0 0;
 	}
 	.read-more {
@@ -688,6 +703,9 @@ svg {
 	margin: auto;
 }
 		.hentry {
+			time {
+				text-transform: capitalize;
+			}
 			padding: 2em 0 2.5em;
 			.image {
 				min-width: 10%;

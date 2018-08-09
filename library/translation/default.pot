@@ -647,3 +647,63 @@ msgstr ""
 msgid ""
 "Footer Link Hover Color"
 msgstr ""
+
+#: theme-options/braftonium-options.acf.php:377
+msgid ""
+"Footer Link Hover Color"
+msgstr ""
+
+#: archive.php:22
+msgid ""
+"Posted"
+msgstr ""
+
+#: archive.php:26
+msgid ""
+"by"
+msgstr ""
+
+#: comments.php:17
+msgid ""
+"No Comments"
+msgstr ""
+
+#: comments.php:17
+msgid ""
+"One Comment"
+msgstr ""
+
+#: comments.php:17
+msgid ""
+"% Comments"
+msgstr ""
+
+#: comments.php:27
+msgid ""
+"Reply"
+msgstr ""
+
+#: comments.php:38
+msgid ""
+"&larr; Previous Comments"
+msgstr ""
+
+#: comments.php:39
+msgid ""
+"More Comments &rarr;"
+msgstr ""
+
+#: comments.php:44
+msgid ""
+"Comments are closed"
+msgstr ""
+
+#: functions.php:108
+msgid ""
+"Theme Colors"
+msgstr ""
+
+#: functions.php:166
+msgid ""
+"Social Share"
+msgstr ""

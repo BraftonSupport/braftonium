@@ -14,7 +14,7 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
   <?php if ( have_comments() ) : ?>
 
-    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'braftonium' ), __( '<span>One</span> Comment', 'braftonium' ), __( '<span>%</span> Comments', 'braftonium' ) );?></h3>
+    <h3 id="comments-title" class="h2"><?php comments_number( __( 'No Comments', 'braftonium' ), __( 'One Comment', 'braftonium' ), __( '% Comments', 'braftonium' ) );?></h3>
 
     <section class="commentlist">
       <?php
