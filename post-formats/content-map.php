@@ -42,7 +42,7 @@ if ( $style['background_image'] ) { echo 'background-image: url(' . $style['back
 if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
 if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 	<div class="wrap container">
-		<div>
+		<div class="text">
 		<?php if( have_rows('address') ):
 		echo '<h3>'.braftonium_get_svg_path('icon-map-marker').' '. __( 'Address', 'braftonium' ) .':</h3>';
 			while ( have_rows('address') ) : the_row();

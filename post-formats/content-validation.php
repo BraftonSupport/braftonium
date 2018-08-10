@@ -77,6 +77,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 				if ( !$showbutton ):'</a>'; endif;
 
 				if ( $item['title'] ):
+					echo '<div class="text">';
 					echo '<h3>';
 					 if ($url): echo '<a href="'.$url.'">'; endif;
 					 $titlestring = $item['title'];
@@ -84,6 +85,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 						 $titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
 					 }
 					 echo $titlestring.'</a></h3>';
+					 echo '</div>';
 				endif;
 
 				if ( $item['content'] ): echo $item['content']; endif;
@@ -112,7 +114,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 						?></div><?php
 					}
 					?>
-						<h3><a href="<?php the_permalink() ?>"><?php
+						<div class="text"><h3><a href="<?php the_permalink() ?>"><?php
 						$titlestring = get_the_title($post);
 						if (strlen($titlestring) > 65){
 							$titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
@@ -132,6 +134,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 					if ( $showbutton ){ ?>
 						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e('Read More', 'braftonium') ?></a>
 					<?php } ?>
+					</div>
 				</div>
 			<?php endwhile;
 			wp_reset_postdata();
