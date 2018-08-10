@@ -257,8 +257,8 @@ function braftonium_video_script() {
 
 //I need help with this bit, what if someone has more than one slider, this will be called more than once.
 function braftonium_slick_script() {
-	wp_enqueue_script( 'slickfunction', get_template_directory_uri() . '/library/js/slickfunction.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/library/js/slick/slick.min.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'slickfunction', get_template_directory_uri() . '/library/js/slickfunction.js', array(), '1.0.0', true );
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/library/js/slick/slick.css', false, '1.0.0' );
 	wp_enqueue_style( 'slick-themes', get_template_directory_uri() . '/library/js/slick/slick-theme.css', false, '1.0.0' );
 }

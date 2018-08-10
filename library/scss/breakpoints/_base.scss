@@ -742,6 +742,12 @@ svg {
 
 		} /* end .hentry */
 
+.text, .page-template-default .entry-content, .single .entry-content {
+	a {
+		text-decoration: underline;
+	}
+}
+
 		.single-title,
 		.page-title,
 		.entry-title {

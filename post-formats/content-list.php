@@ -91,9 +91,10 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 					 }
 					 echo $titlestring.'</a></h3>';
 				endif;
-
+				echo '<div class="text">';
 				if ( $item['content'] ): echo $item['content']; endif;
-
+				echo '</div>';
+				
 				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
 					if (!$text): __( 'Read More', 'braftonium' );
 					else: echo $text;
@@ -132,7 +133,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 						echo $titlestring;
 						?></h3></a>
 					<?php
-						echo '<p>';
+						echo '<p class="text">';
 						$content= get_the_content();
 						$the_excerpt= substr($content,0,strpos($content,'.')+1);
 						if (strlen($the_excerpt) > 125){
