@@ -117,7 +117,11 @@
 		<div id="container">
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-
+				<?php if (is_page_template('full-width.php')){ ?>
+					<a class="skip-link" href="#content">Skip to content</a>
+				<?php } else { ?>
+					<a class="skip-link" href="#inner-content">Skip to content</a>
+				<?php }?>
 				<div id="inner-header" class="wrap cf container">
 
 					<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow">

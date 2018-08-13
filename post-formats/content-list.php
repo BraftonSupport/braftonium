@@ -95,7 +95,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 				if ( $item['content'] ): echo $item['content']; endif;
 				echo '</div>';
 				
-				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
+				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" title="'. $titlestring .'" target="'. $target.'">';
 					if (!$text): __( 'Read More', 'braftonium' );
 					else: echo $text;
 					endif;

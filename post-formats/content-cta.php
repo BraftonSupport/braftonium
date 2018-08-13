@@ -64,7 +64,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		if ($text): echo $text; endif;
 		echo '</div>';
 		if ($button):
-			echo '<a href="'.$button['url'].'" class="blue-btn"';
+			echo '<a href="'.$button['url'].'" class="blue-btn" title="'.$titletext.'"';
 			if ($button['target']): echo 'target="'.$button['target'].'"'; endif;
 			echo '>'.$button['title'].'</a>';
 		endif; ?>

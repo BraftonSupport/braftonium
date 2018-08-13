@@ -381,6 +381,17 @@ nav {
 
 } /* end .nav */
 
+.skip-link {
+	position: absolute;
+	top: -200px;
+	left: 5px;
+	background: $white;
+	padding: 5px;
+}
+
+.skip-link:focus {
+	top: 5px;
+}
 
 /*********************
 POSTS & CONTENT STYLES
