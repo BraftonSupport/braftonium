@@ -1,7 +1,7 @@
 <?php get_header();
-$background_image = get_field('background_image');
-$title = get_field('title');
-$tagline = get_field('tagline');
+$background_image = esc_url(get_field('background_image'));
+$title = wp_kses_post(get_field('title'));
+$tagline = wp_kses_post(get_field('tagline'));
 $brafton_comments = get_field('comments', 'option');
 ?>
 

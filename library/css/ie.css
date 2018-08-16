@@ -434,7 +434,7 @@ nav {
 NAVIGATION STYLES
 *********************/
 /* line 73, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav {
+nav .nav {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -443,42 +443,42 @@ NAVIGATION STYLES
   /* end current highlighters */
 }
 /* line 77, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav ul {
+nav .nav ul {
   margin-top: 0;
 }
 /* line 80, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav > li {
+nav .nav > li {
   border: none;
   display: inline-block;
   margin-right: auto;
 }
 /* line 85, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li {
+nav .nav li {
   position: relative;
   /*
   plan your menus and drop-downs wisely.
   */
 }
 /* line 88, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li.menu-item-has-children a {
+nav .nav li.menu-item-has-children a {
   padding-right: 5px;
 }
 /* line 92, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li a {
+nav .nav li a {
   display: inline-block;
   border-bottom: 0;
 }
 /* line 96, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li:first-of-type a {
+nav .nav li:first-of-type a {
   padding-left: 0;
 }
 /* line 103, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li:hover > ul.sub-menu {
+nav .nav li:hover > ul.sub-menu {
   top: 2.1em;
   left: -5px;
 }
 /* line 108, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li ul.sub-menu {
+nav .nav li ul.sub-menu {
   position: absolute;
   top: -9999px;
   left: -9999px;
@@ -490,47 +490,47 @@ NAVIGATION STYLES
   /* highlight sub-menu current page */
 }
 /* line 117, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li ul.sub-menu.toggleon {
+nav .nav li ul.sub-menu.toggleon {
   position: absolute;
   top: 2.1em;
   left: -5px;
 }
 /* line 122, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li ul.sub-menu button {
+nav .nav li ul.sub-menu button {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
 }
 /* line 126, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li ul.sub-menu li a {
+nav .nav li ul.sub-menu li a {
   display: block;
   padding-left: 10px;
 }
 /* line 130, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li ul.sub-menu li ul {
+nav .nav li ul.sub-menu li ul {
   top: -1000px;
 }
 /* line 134, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li ul.sub-menu li:hover ul {
+nav .nav li ul.sub-menu li:hover ul {
   top: -1px;
   left: 100%;
 }
 /* line 139, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li ul.sub-menu li .toggleon {
+nav .nav li ul.sub-menu li .toggleon {
   top: -1px;
   left: 100%;
 }
 /* line 149, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li ul.sub-menu li.current-menu-item a,
-#menu-nav.nav li ul.sub-menu li.current_page_item a,
-#menu-nav.nav li ul.sub-menu li.current_page_ancestor a {
+nav .nav li ul.sub-menu li.current-menu-item a,
+nav .nav li ul.sub-menu li.current_page_item a,
+nav .nav li ul.sub-menu li.current_page_ancestor a {
   font-weight: bold;
 }
 /* line 160, ../scss/breakpoints/_768up.scss */
-#menu-nav.nav li.current-menu-item a,
-#menu-nav.nav li.current_page_item a,
-#menu-nav.nav li.current_page_ancestor a {
+nav .nav li.current-menu-item a,
+nav .nav li.current_page_item a,
+nav .nav li.current_page_ancestor a {
   font-weight: bold;
 }
 
@@ -719,16 +719,16 @@ be seen on the Desktop.
 
 ******************************************************************/
 /* line 13, ../scss/breakpoints/_1030up.scss */
-#menu-nav.nav li {
+nav .nav li {
   margin-right: auto;
 }
 /* line 15, ../scss/breakpoints/_1030up.scss */
-#menu-nav.nav li a {
+nav .nav li a {
   padding: 5px 0;
 }
 
 /* line 20, ../scss/breakpoints/_1030up.scss */
-.next #menu-nav.nav li {
+.next .nav li {
   margin-right: 0;
   margin-left: auto;
 }

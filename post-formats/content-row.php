@@ -9,13 +9,15 @@
 
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
-if (get_sub_field('title')):
-$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
+$title = wp_kses_post(get_sub_field('title'));
+if ($title):
+	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
 endif;
 $style = get_sub_field('style');
+$video = esc_url($style['video_url']);
 $classes = array('row');
 if ($style['add_class']){
-	$classes[] = $style['add_class'];
+	$classes[] = sanitize_html_class($style['add_class']);
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
@@ -35,9 +37,9 @@ if ( $style['other'] ) {
 	}
 } ?>
 <section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
-if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
-if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
-if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
+if ( $style['background_image'] ) { echo 'background-image: url(' . esc_url($style['background_image']) . ');'; }
+if ( $style['background_color'] ) { echo 'background-color: ' . sanitize_hex_color($style['background_color']) . ';'; }
+if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . ';'; } ?>" >
 	<?php if ( $style['video_url'] ) {
 		if (strpos($video, 'youtube.com') == true || strpos($video, '.webm') == false && strpos($video, '.mp4') == false) {
 			$videoid = preg_replace('/https:\/\/www.youtube.com\/watch\?v=/', '', $video);
@@ -58,9 +60,9 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 			echo '<div class="container">';
 			while ( have_rows('row_content') ) : the_row();
 				if( get_row_layout() == 'imageblock' ):
-					echo '<div class="image">'.wp_get_attachment_image( get_sub_field('Image'), 'full' ).'</div>';
+					echo '<div class="image">'.wp_get_attachment_image( intval(get_sub_field('Image')), 'full' ).'</div>';
 				elseif( get_row_layout() == 'textblock' ): 
-					echo '<div class="text">'.get_sub_field('text').'</div>';
+					echo '<div class="text">'.wp_kses_post(get_sub_field('text')).'</div>';
 				endif;
 			endwhile;
 			echo '</div>';

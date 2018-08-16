@@ -8,19 +8,20 @@
  */
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
-if (get_sub_field('title')):
-	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
+$title = wp_kses_post(get_sub_field('title'));
+if ($title):
+	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
 endif;
 
 $list_type = get_sub_field('list_type');
 	if ($list_type=='custom'): $custom = get_sub_field('custom_list'); endif;
-	if ($list_type=='recent'): $recent = get_sub_field('recent'); $number = get_sub_field('number_of_posts'); endif;
+	if ($list_type=='recent'): $recent = sanitize_text_field(get_sub_field('recent')); $number = intval(get_sub_field('number_of_posts')); endif;
 	$showbutton	 = get_sub_field('showbutton');
 $style = get_sub_field('style');
 $imagestyle	 = get_sub_field('image_size_and_shape');
 $classes = array('validation');
 if ($style['add_class']){
-	$classes[] = $style['add_class'];
+	$classes[] = sanitize_html_class($style['add_class']);
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
@@ -44,9 +45,9 @@ braftonium_slick_script();
 ?>
 
 <section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
-if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
-if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
-if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
+if ( $style['background_image'] ) { echo 'background-image: url(' . esc_url($style['background_image']) . ');'; }
+if ( $style['background_color'] ) { echo 'background-color: ' . sanitize_hex_color($style['background_color']) . ';'; }
+if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . ';'; } ?>" >
 	<div class="wrap">
 
 		<?php if ($titletext): echo $titletext; endif;
@@ -54,8 +55,8 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		if ( $custom ) :
 			foreach( $custom as $item ):
 				if ($item['button']){
-					$url = $item['button']['url'];
-					$text = $item['button']['text'];
+					$url = esc_url($item['button']['url']);
+					$text = sanitize_text_field($item['button']['text']);
 				}
 				if( is_array($imagestyle)):
 					if( in_array('thumb', $imagestyle) ): $size = 'thumbnail'; endif;
@@ -80,7 +81,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 					echo '<div class="text">';
 					echo '<h3>';
 					 if ($url): echo '<a href="'.$url.'">'; endif;
-					 $titlestring = $item['title'];
+					 $titlestring = sanitize_text_field($item['title']);
 					 if (strlen($titlestring) > 65){
 						 $titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
 					 }
@@ -88,7 +89,7 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 					 echo '</div>';
 				endif;
 
-				if ( $item['content'] ): echo $item['content']; endif;
+				if ( $item['content'] ): echo wp_kses_post($item['content']); endif;
 
 				if ( $showbutton ): echo '<a href="'.$url.'" class="button">'.$text.'</a>';endif;
 

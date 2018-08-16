@@ -6,7 +6,9 @@ https://github.com/BraftonSupport/braftonium
 License: WTFPL
 License URI: http://sam.zoy.org/wtfpl/
 
-## turn on ACF Pro first!
+## Plugins needed:
+ACF Pro
+Braftonium
 
 #### Submit Bugs & or Fixes:
 https://github.com/BraftonSupport/braftonium/issues

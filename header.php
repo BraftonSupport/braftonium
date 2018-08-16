@@ -9,11 +9,11 @@
  * @since Braftonium Theme 1.0
  */
 ?>
+<!doctype html>
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
-<!doctype html>
 	<head>
 		<meta charset="utf-8">
 
@@ -43,30 +43,30 @@
 		<?php // WordPress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of WordPress head
-			$braftonium_text = get_theme_mod( 'braftonium_color' );
-			$braftonium_link = get_theme_mod( 'braftonium_link_color' );
-			$braftonium_hover = get_theme_mod( 'braftonium_linkhover_color' );
-			$braftonium_headerbg = get_theme_mod( 'braftonium_headerbg_color' );
-			$braftonium_headercolor = get_theme_mod( 'braftonium_header_color' );
-			$braftonium_headerlink = get_theme_mod( 'braftonium_headerlink_color' );
-			$braftonium_headerlinkhover = get_theme_mod( 'braftonium_headerlinkhover_color' );
-			$braftonium_footerbg_color = get_theme_mod( 'braftonium_footerbg_color' );
-			$braftonium_footer_color = get_theme_mod( 'braftonium_footer_color' );
-			$braftonium_footerlink_color = get_theme_mod( 'braftonium_footerlink_color' );
-			$braftonium_footerlinkhover_color = get_theme_mod( 'braftonium_footerlinkhover_color' );
+			$braftonium_text = sanitize_hex_color(get_theme_mod( 'braftonium_color' ));
+			$braftonium_link = sanitize_hex_color(get_theme_mod( 'braftonium_link_color' ));
+			$braftonium_hover = sanitize_hex_color(get_theme_mod( 'braftonium_linkhover_color' ));
+			$braftonium_headerbg = sanitize_hex_color(get_theme_mod( 'braftonium_headerbg_color' ));
+			$braftonium_headercolor = sanitize_hex_color(get_theme_mod( 'braftonium_header_color' ));
+			$braftonium_headerlink = sanitize_hex_color(get_theme_mod( 'braftonium_headerlink_color' ));
+			$braftonium_headerlinkhover = sanitize_hex_color(get_theme_mod( 'braftonium_headerlinkhover_color' ));
+			$braftonium_footerbg_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerbg_color' ));
+			$braftonium_footer_color = sanitize_hex_color(get_theme_mod( 'braftonium_footer_color' ));
+			$braftonium_footerlink_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerlink_color' ));
+			$braftonium_footerlinkhover_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerlinkhover_color' ));
 		echo '<style>';
 			if ($braftonium_text) { echo 'body { color:'.$braftonium_text.';}'; }
 			if ($braftonium_link) { echo 'a, a:visited, .blog .read-more, .slick-prev:before, .slick-next:before { color:'.$braftonium_link.';} button, .blue-btn, .pagination a:hover, .hero .read-more { background-color:'.$braftonium_link.';} .blog .hero article.hentry { border-bottom-color: '.$braftonium_link.'99; }'; }
 			if ($braftonium_hover) { echo 'a:hover, .pagination a:hover, .blog .read-more:hover { color:'.$braftonium_hover.';} .button:hover, .blue-btn:hover, .blue-btn:focus, .blue-btn:active, .hero .read-more:hover { background-color:'.$braftonium_hover.';} '; }
-			if ($braftonium_headerbg) { echo '.header, #menu-nav.nav li ul.sub-menu, .blog .simple .byline, .blog .rich article.hentry { background-color:'.$braftonium_headerbg.';} .blog .rich article.hentry .content { background-color:'.$braftonium_headerbg.'cc;}'; }
+			if ($braftonium_headerbg) { echo '.header, nav .nav li ul.sub-menu, .blog .simple .byline, .blog .rich article.hentry { background-color:'.$braftonium_headerbg.';} .blog .rich article.hentry .content { background-color:'.$braftonium_headerbg.'cc;}'; }
 			if ($braftonium_headercolor) { echo '.header, .blog .simple .byline, .blog .rich article.hentry .content { color:'.$braftonium_headercolor.';} '; }
-			if ($braftonium_headerlink) { echo '.header a, #menu-nav.nav li a, .blog .simple .byline a, .blog .rich article.hentry a { color:'.$braftonium_headerlink.';} .header .blue-btn { background-color: background-color:'.$headerlink.';} '; }
-			if ($braftonium_headerlinkhover) { echo '.header a:hover, #menu-nav.nav li a:hover, .blog .simple .byline a:hover, .blog .rich article.hentry a:hover { color:'.$braftonium_headerlinkhover.';} .header .header button:hover, .header .blue-btn:hover { background-color:'.$headerlinkhover.';}'; }
+			if ($braftonium_headerlink) { echo '.header a, nav .nav li a, .blog .simple .byline a, .blog .rich article.hentry a { color:'.$braftonium_headerlink.';} .header .blue-btn { background-color: background-color:'.$headerlink.';} '; }
+			if ($braftonium_headerlinkhover) { echo '.header a:hover, nav .nav li a:hover, .blog .simple .byline a:hover, .blog .rich article.hentry a:hover { color:'.$braftonium_headerlinkhover.';} .header .header button:hover, .header .blue-btn:hover { background-color:'.$headerlinkhover.';}'; }
 			if ($braftonium_footerbg_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry { background-color:'.$braftonium_footerbg_color.';} '; }
 			if ($braftonium_footer_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry a { color:'.$braftonium_footer_color.';} '; }
 			if ($braftonium_footerlink_color) { echo '.footer a, .blog .simple .entry-title a { color:'.$braftonium_footerlink_color.';} .footer button, .footer .blue-btn { background-color:'.$braftonium_footerlink_color.';} '; }
 			if ($braftonium_footerlinkhover_color) { echo '.footer a:hover, .blog .simple .entry-title a:hover, .blog .full article.hentry a:hover { color:'.$braftonium_footerlinkhover_color.';} .footer button:hover, .footer .blue-btn:hover { background-color:'.$braftonium_footerlinkhover_color.';} '; }
-			if ($braftonium_hover) { echo '@media only screen and (max-width: 768px){ #menu-nav.nav li a { background-color:'.$braftonium_headerbg.';} } '; }
+			if ($braftonium_hover) { echo '@media only screen and (max-width: 768px){ nav .nav li a { background-color:'.$braftonium_headerbg.';} } '; }
 		echo '</style>';
 
 		$nav = get_field('navigation_bar_position', 'option');
@@ -121,7 +121,7 @@
 				<div id="inner-header" class="wrap cf container">
 
 					<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow">
-					<?php $logo1 = get_theme_mod( 'braftonium_logo' );
+					<?php $logo1 = esc_url(get_theme_mod( 'braftonium_logo' ));
 						if ($logo1) { ?>
 						<img src='<?php echo $logo1; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="site-title">
 					<?php } else {
@@ -136,7 +136,7 @@
 						} ?>
 					</div>
 
-					<nav class="<?php if ($nav): echo $nav; else: echo 'below'; endif; ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="<?php if ($nav): echo sanitize_text_field ($nav); else: echo 'below'; endif; ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
 							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
