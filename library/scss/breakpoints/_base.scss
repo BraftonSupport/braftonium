@@ -209,6 +209,8 @@ HEADER STYLES
 		top: 0;
 		width: 100%;
 		z-index: 99;
+		max-height: 50px;
+		overflow: hidden;
 		#logo {
 			text-align: left;
 			float: left;
