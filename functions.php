@@ -9,15 +9,21 @@ function braftonium_language_setup(){
 	if ( is_readable( $locale_file ) ) {
 		require_once( $locale_file );
 	}
-	// var_dump($locale_file);
   }
   add_action('after_setup_theme', 'braftonium_language_setup');
 
-// LOAD BRAFTONIUM THEME CORE (if you remove this, the theme will break)
-if ( !in_array( 'advanced-custom-fields-pro/acf.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ){
-	$error_message = __('This theme requires <a href="https://wordpress.org/plugins/advanced-custom-fields/">ACF</a> plugin to be active!', 'acf');
-	die($error_message);
+
+
+// see if acf plugin exists
+function do_you_have_acf(){
+	$acf_file = plugins_url().'/advanced-custom-fields-pro';
+	if ( is_readable( $acf_file ) ) {
+		$error_message = __('This theme requires <a href="https://wordpress.org/plugins/advanced-custom-fields/">ACF</a> plugin to exist!', 'acf');
+		die($error_message);
+	}
 }
+add_action( 'after_setup_theme', 'do_you_have_acf' );
+
 
 /*********************
 LAUNCH BRAFTONIUM
@@ -87,10 +93,6 @@ if ( ! isset( $content_width ) ) {
   http://natko.com/changing-default-wordpress-theme-customization-api-sections/
   http://code.tutsplus.com/tutorials/digging-into-the-theme-customizer-components--wp-27162
   
-  To do:
-  - Create a js for the postmessage transport method
-  - Create some sanitize functions to sanitize inputs
-  - Create some boilerplate Sections, Controls and Settings
 */
 
 function braftonium_customizer($wp_customize) {
@@ -116,10 +118,8 @@ add_action( 'customize_register', 'braftonium_customizer' );
 
 
 /*
-This is a modification of a function found in the
-twentythirteen theme where we can declare some
-external fonts. If you're using Google Fonts, you
-can replace these fonts, change it in your scss files
+This is a modification of a function found in the twentythirteen theme where we can declare some
+external fonts. If you're using Google Fonts, you can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function braftonium_fonts() {
