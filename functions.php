@@ -14,7 +14,10 @@ function braftonium_language_setup(){
   add_action('after_setup_theme', 'braftonium_language_setup');
 
 // LOAD BRAFTONIUM THEME CORE (if you remove this, the theme will break)
-
+if ( !in_array( 'advanced-custom-fields-pro/acf.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ){
+	$error_message = __('This theme requires <a href="https://wordpress.org/plugins/advanced-custom-fields/">ACF</a> plugin to be active!', 'acf');
+	die($error_message);
+}
 
 /*********************
 LAUNCH BRAFTONIUM
@@ -135,6 +138,7 @@ function braftonium_get_svg_path($svgid) {
 	$second_step = explode("</path>" , $first_step[1] );
 	return '<svg class="'.$svgid.$second_step[0].'</svg>';
 }
+
 
 /**
  * What it says on the tin.
