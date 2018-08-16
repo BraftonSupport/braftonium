@@ -254,9 +254,7 @@ acf_add_local_field_group(array(
 
 /* Adding the logo to the settings page*/
 function braftonium_logo_options( $wp_customize ) {
-	$wp_customize->add_setting( 'braftonium_logo', array(
-		'sanitize_callback' => 'sanitize_file_name',
-	));
+	$wp_customize->add_setting( 'braftonium_logo');
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'braftonium_logo', array(
 	'label' => __( 'Logo', 'braftonium' ),
@@ -264,9 +262,7 @@ function braftonium_logo_options( $wp_customize ) {
 	'settings' => 'braftonium_logo',
 	) ) );
 
-	$wp_customize->add_setting( 'braftonium_footerlogo', array(
-		'sanitize_callback' => 'sanitize_file_name',
-	) );
+	$wp_customize->add_setting( 'braftonium_footerlogo');
 	
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'braftonium_footerlogo', array(
 	'label' => __( 'Logo in the Footer', 'braftonium' ),

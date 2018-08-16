@@ -85,7 +85,7 @@
 		if(is_single()) {
 			$content = wp_strip_all_tags(apply_filters('the_content', $post->post_content)); 
 			$excerpt = wp_strip_all_tags(apply_filters('the_excerpt', $post->post_excerpt)); 
-			$image_url = esc_url( get_theme_mod( 'braftonium_logo' ) );
+			$image_url = get_theme_mod( 'braftonium_logo' );
 			$author = $post->post_author; 
 			echo '<script type="application/ld+json">
 				{ "@context": "http://schema.org",

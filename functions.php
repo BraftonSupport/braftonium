@@ -156,12 +156,14 @@ if (!function_exists( 'braftonium_social_sharing_buttons' ) && function_exists('
 			// Add sharing button at the end of page/page content
 			$variable = '<span class="ssb-social"><span class="ssb-text">'.__( 'Social Share', 'braftonium' ).': </span>';
 
-			if (is_array($social_media) && in_array("facebook", $social_media)) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank">'.braftonium_get_svg_path('icon-facebook').'</a>'; }
-			if ( in_array('twitter', $social_media) ) { $variable .= '<a class="ssb-twitter" href="'. $twitterURL .'" target="_blank">'.braftonium_get_svg_path('icon-twitter').'</a>'; }
-			if ( in_array('google', $social_media) ) { $variable .= '<a class="ssb-googleplus" href="'.$googleURL.'" target="_blank">'.braftonium_get_svg_path('icon-google').'</a>'; }
-			if ( in_array('linkedin', $social_media) ) { $variable .= '<a class="ssb-linked" href="'.$linkedURL.'" target="_blank">'.braftonium_get_svg_path('icon-linkedin').'</a>'; }
-			if ( in_array('pinterest', $social_media) ) { $variable .= '<a class="ssb-pinterest" href="'.$pinterestURL.'" target="_blank">'.braftonium_get_svg_path('icon-pinterest').'</a>'; }
-			if ( in_array('email', $social_media) ) { $variable .= '<a class="ssb-email" href="mailto:?subject=I wanted you to see this site&amp;body='.$ssbURL.'">'.braftonium_get_svg_path('icon-envelope').'</a>'; }
+			if(is_array($social_media)):
+				if ( in_array("facebook", $social_media)) { $variable .= '<a class="ssb-facebook" href="'.$facebookURL.'" target="_blank">'.braftonium_get_svg_path('icon-facebook').'</a>'; }
+				if ( in_array('twitter', $social_media) ) { $variable .= '<a class="ssb-twitter" href="'. $twitterURL .'" target="_blank">'.braftonium_get_svg_path('icon-twitter').'</a>'; }
+				if ( in_array('google', $social_media) ) { $variable .= '<a class="ssb-googleplus" href="'.$googleURL.'" target="_blank">'.braftonium_get_svg_path('icon-google').'</a>'; }
+				if ( in_array('linkedin', $social_media) ) { $variable .= '<a class="ssb-linked" href="'.$linkedURL.'" target="_blank">'.braftonium_get_svg_path('icon-linkedin').'</a>'; }
+				if ( in_array('pinterest', $social_media) ) { $variable .= '<a class="ssb-pinterest" href="'.$pinterestURL.'" target="_blank">'.braftonium_get_svg_path('icon-pinterest').'</a>'; }
+				if ( in_array('email', $social_media) ) { $variable .= '<a class="ssb-email" href="mailto:?subject=I wanted you to see this site&amp;body='.$ssbURL.'">'.braftonium_get_svg_path('icon-envelope').'</a>'; }
+			endif;
 			$variable .= '</span>';
 
 			if ( is_single() && $ss_location=="post" || !is_single() && $ss_location=="excerpt" || $ss_location=="all" ){
