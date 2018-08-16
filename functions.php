@@ -9,15 +9,18 @@ function braftonium_language_setup(){
 	if ( is_readable( $locale_file ) ) {
 		require_once( $locale_file );
 	}
-	// var_dump($locale_file);
   }
   add_action('after_setup_theme', 'braftonium_language_setup');
 
-// LOAD BRAFTONIUM THEME CORE (if you remove this, the theme will break)
-if ( !in_array( 'advanced-custom-fields-pro/acf.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ){
-	$error_message = __('This theme requires <a href="https://wordpress.org/plugins/advanced-custom-fields/">ACF</a> plugin to be active!', 'acf');
-	die($error_message);
+
+
+// see if acf plugin exists
+$acf_file = plugins_url().'/advanced-custom-fields-pro';
+if ( !is_readable( $acf_file ) ) {
+	$error_message = __('This theme requires <a href="https://wordpress.org/plugins/advanced-custom-fields/">ACF</a> plugin to exist!', 'acf');
+	echo($error_message);
 }
+
 
 /*********************
 LAUNCH BRAFTONIUM
@@ -26,7 +29,7 @@ Let's get everything up and running.
 function braftonium_start() {
 	require_once( 'library/braftonium.php' );
 	include_once get_template_directory().'/library/custom-fields/fields.php';
-	
+
   //Allow editor style.
   add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
 
@@ -87,10 +90,6 @@ if ( ! isset( $content_width ) ) {
   http://natko.com/changing-default-wordpress-theme-customization-api-sections/
   http://code.tutsplus.com/tutorials/digging-into-the-theme-customizer-components--wp-27162
   
-  To do:
-  - Create a js for the postmessage transport method
-  - Create some sanitize functions to sanitize inputs
-  - Create some boilerplate Sections, Controls and Settings
 */
 
 function braftonium_customizer($wp_customize) {
@@ -116,10 +115,8 @@ add_action( 'customize_register', 'braftonium_customizer' );
 
 
 /*
-This is a modification of a function found in the
-twentythirteen theme where we can declare some
-external fonts. If you're using Google Fonts, you
-can replace these fonts, change it in your scss files
+This is a modification of a function found in the twentythirteen theme where we can declare some
+external fonts. If you're using Google Fonts, you can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function braftonium_fonts() {
@@ -143,7 +140,7 @@ function braftonium_get_svg_path($svgid) {
 /**
  * What it says on the tin.
  */
-if (!function_exists( 'braftonium_social_sharing_buttons' ) ) :
+if (!function_exists( 'braftonium_social_sharing_buttons' ) && function_exists('get_field') ) :
 	$ssbutton = get_field('social_share_buttons', 'option');
 	if (in_array("on", $ssbutton) ) {
 		function braftonium_social_sharing_buttons() {
@@ -246,6 +243,7 @@ if ( WPEX_WOOCOMMERCE_ACTIVE ) {
 
 
 /* Excerpt shortening*/
+if (function_exists('get_field')):
 $layout = get_field('blog_layout', 'option');
 if ( $layout=='rich' ) {
 	function custom_excerpt_length( $length ) {
@@ -253,6 +251,7 @@ if ( $layout=='rich' ) {
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 }
+endif;
 
 
 function braftonium_video_script() {
