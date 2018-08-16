@@ -12,16 +12,6 @@ function braftonium_language_setup(){
   }
   add_action('after_setup_theme', 'braftonium_language_setup');
 
-
-
-// see if acf plugin exists
-$acf_file = plugins_url().'/advanced-custom-fields-pro';
-if ( !is_readable( $acf_file ) ) {
-	$error_message = __('This theme requires <a href="https://wordpress.org/plugins/advanced-custom-fields/">ACF</a> plugin to exist!', 'acf');
-	echo($error_message);
-}
-
-
 /*********************
 LAUNCH BRAFTONIUM
 Let's get everything up and running.
@@ -245,7 +235,7 @@ if ( WPEX_WOOCOMMERCE_ACTIVE ) {
 /* Excerpt shortening*/
 if (function_exists('get_field')):
 $layout = get_field('blog_layout', 'option');
-if ( $layout=='rich' ) {
+if ( isset($layout) && $layout=='rich' ) {
 	function custom_excerpt_length( $length ) {
 		return 10;
 	}
