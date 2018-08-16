@@ -312,75 +312,74 @@ nav {
 		top: 0;
 		left: 0;
 	}
-}
-#menu-nav.nav {
-	border-bottom: 0;
-	margin: 0;
-	button {
-		background: transparent;
-		padding: 0;
-		width: 1.25em;
-		&.rotate {
-			border-left: none;
-		}
-		&:focus { outline: thin dotted; }
-	}
-	li {
+	.nav {
+		border-bottom: 0;
 		margin: 0;
-		border-top: 1px solid rgba($color: $white, $alpha: .1);
-		&.menu-item-has-children {
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			-webkit-flex-wrap: wrap;
-			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
-		}
-		a {
-			display: block;
-			padding: 7px 0;
-			color: $white;
-			margin-right: auto;
-			text-decoration: none;
-			&:hover {
-				color: $lightblue;
+		button {
+			background: transparent;
+			padding: 0;
+			width: 1.25em;
+			&.rotate {
+				border-left: none;
 			}
+			&:focus { outline: thin dotted; }
 		}
-		ul.sub-menu,
-		ul.children {
-			position: absolute;
-			top: -9999px;
-			left: -9999px;
-			-webkit-flex: 1 0 100%;
-			-ms-flex: 1 0 100%;
-			flex: 1 0 100%;
+		li {
 			margin: 0;
-			list-style-type: none;
-			&.toggleon {
-				position: inherit;
-				top: 0;
-				left: 0;
+			border-top: 1px solid rgba($color: $white, $alpha: .1);
+			&.menu-item-has-children {
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
 			}
-			li {
-				// border-bottom: none;
-				a {
-					padding-left: 1.5em;
+			a {
+				display: block;
+				padding: 7px 0;
+				color: $white;
+				margin-right: auto;
+				text-decoration: none;
+				&:hover {
+					color: $lightblue;
 				}
 			}
-		}
-	} /* end li */
+			ul.sub-menu,
+			ul.children {
+				position: absolute;
+				top: -9999px;
+				left: -9999px;
+				-webkit-flex: 1 0 100%;
+				-ms-flex: 1 0 100%;
+				flex: 1 0 100%;
+				margin: 0;
+				list-style-type: none;
+				&.toggleon {
+					position: inherit;
+					top: 0;
+					left: 0;
+				}
+				li {
+					// border-bottom: none;
+					a {
+						padding-left: 1.5em;
+					}
+				}
+			}
+		} /* end li */
 
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
 
-		a {}
+			a {}
 
-	}  /* end current highlighters */
+		}  /* end current highlighters */
 
-} /* end .nav */
-
+	} /* end .nav */
+}
 
 /*********************
 POSTS & CONTENT STYLES

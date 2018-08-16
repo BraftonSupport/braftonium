@@ -5,16 +5,9 @@ if(!session_id()) session_start();
  *
  * For more info: http://codex.wordpress.org/Page_Templates
 */
-$background_image = get_field('background_image');
-$title = get_field('title');
-$tagline = get_field('tagline');
-$style = get_field('style');
-$bg = $style['background_color'];
-$color = $style['color'];
-$bg_image = $style['background_image'];
-$video = $style['video_url'];
-$class = $style['add_class'];
-$other = $style['other'];
+$background_image = esc_url(get_field('background_image'));
+$title = wp_kses_post(get_field('title'));
+$tagline = wp_kses_post(get_field('tagline'));
 ?>
 
 <?php get_header(); ?>

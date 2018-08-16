@@ -174,7 +174,7 @@ endif;
 // Comment Layout
 function braftonium_comments( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment; ?>
-   <div id="comment-<?php comment_ID(); ?>" <?php comment_class('cf'); ?>>
+	<div id="comment-<?php comment_ID(); ?>" <?php comment_class('cf'); ?>>
 	 <article  class="cf">
 	   <header class="comment-author vcard">
 		 <?php

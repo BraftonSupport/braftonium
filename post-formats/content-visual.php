@@ -6,20 +6,21 @@
  * @subpackage Braftonium
  * @since braftonium 1.0
  */
-
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
-if (get_sub_field('title')):
-	$titletext = ($sectionrow==0)?'<h1>'.get_sub_field('title').'</h1>':'<h2>'.get_sub_field('title').'</h2>';
+$title = wp_kses_post(get_sub_field('title'));
+if ($title):
+	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
 endif;
-$tagline = get_sub_field('tagline');
+
+$tagline = wp_kses_post(get_sub_field('tagline'));
 $button = get_sub_field('button');
 $style = get_sub_field('style');
-$video = $style['video_url'];
+$video = esc_url($style['video_url']);
 
 $classes = array('visual');
 if ($style['add_class']){
-	$classes[] = $style['add_class'];
+	$classes[] = sanitize_html_class($style['add_class']);
 }
 if ($video){
 	$classes[] = 'video';
@@ -44,9 +45,9 @@ if ( $style['other'] ) {
 } ?>
 
 <section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
-if ( $style['background_image'] ) { echo 'background-image: url(' . $style['background_image'] . ');'; }
-if ( $style['background_color'] ) { echo 'background-color: ' . $style['background_color'] . ';'; }
-if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
+if ( $style['background_image'] ) { echo 'background-image: url(' . esc_url($style['background_image']) . ');'; }
+if ( $style['background_color'] ) { echo 'background-color: ' . sanitize_hex_color($style['background_color']) . ';'; }
+if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . ';'; } ?>" >
 	<?php if ( $style['video_url'] ) {
 		if (strpos($video, 'youtube.com') == true || strpos($video, '.webm') == false && strpos($video, '.mp4') == false) {
 			$videoid = preg_replace('/https:\/\/www.youtube.com\/watch\?v=/', '', $video);
@@ -65,9 +66,9 @@ if ( $style['color'] ) { echo 'color: ' . $style['color'] . ';'; } ?>" >
 		<?php if ($titletext): echo $titletext; endif;
 		if ($tagline): echo $tagline; endif;
 		if ($button):
-			echo '<a href="'.$button['url'].'" class="blue-btn"';
-			if ($button['target']): echo 'target="'.$button['target'].'"'; endif;
-			echo '>'.$button['title'].'</a>';
+			echo '<a href="'.esc_url($button['url']).'" class="blue-btn"';
+			if ($button['target']): echo 'target="'.sanitize_text_field($button['target']).'"'; endif;
+			echo '>'.sanitize_text_field($button['title']).'</a>';
 		endif; ?>
 
 	<?php if ($video): echo '</div>'; endif; ?></div>

@@ -1,10 +1,11 @@
 <?php get_header();
-$layout = get_field('blog_layout', 'option');
+$layout = sanitize_text_field(get_field('blog_layout', 'option'));
 $layoutarray = array('full','rich','simple');
 $blog_page_id = get_option( "page_for_posts" );
-$background_image = get_field('background_image',$blog_page_id);
-$title = get_field('title',$blog_page_id);
-$tagline = get_field('tagline',$blog_page_id); ?>
+$background_image = esc_url(get_field('background_image',$blog_page_id));
+$title = wp_kses_post(get_field('title',$blog_page_id));
+$tagline = wp_kses_post(get_field('tagline',$blog_page_id));
+?>
 			<div id="content">
 				<?php if ($background_image||$title||$tagline) : ?>
 					<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>

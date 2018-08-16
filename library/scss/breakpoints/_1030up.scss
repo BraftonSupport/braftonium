@@ -9,7 +9,7 @@ be seen on the Desktop.
 
 ******************************************************************/
 
-#menu-nav.nav {
+nav .nav {
 	li {
 		margin-right: auto;
 		a {
@@ -17,7 +17,7 @@ be seen on the Desktop.
 		}
 	} 
 }
-.next #menu-nav.nav li {
+.next .nav li {
 	margin-right: 0;
 	margin-left: auto;
 }

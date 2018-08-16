@@ -2,9 +2,9 @@
 				<div id="inner-footer" class="wrap cf">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo">
 						<?php if ( get_theme_mod( 'braftonium_footerlogo' ) ):
-							$footer_logo = get_theme_mod( 'braftonium_footerlogo' );
+							$footer_logo = esc_url(get_theme_mod( 'braftonium_footerlogo' ));
 						elseif ( get_theme_mod( 'braftonium_logo' ) ):
-							$footer_logo = get_theme_mod( 'braftonium_logo' );
+							$footer_logo = esc_url(get_theme_mod( 'braftonium_logo' ));
 						endif;
 						if (isset($footer_logo)): ?>
 							<img src='<?php echo $footer_logo; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
