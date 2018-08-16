@@ -15,14 +15,11 @@ function braftonium_language_setup(){
 
 
 // see if acf plugin exists
-function do_you_have_acf(){
-	$acf_file = plugins_url().'/advanced-custom-fields-pro';
-	if ( is_readable( $acf_file ) ) {
-		$error_message = __('This theme requires <a href="https://wordpress.org/plugins/advanced-custom-fields/">ACF</a> plugin to exist!', 'acf');
-		die($error_message);
-	}
+$acf_file = plugins_url().'/advanced-custom-fields-pro';
+if ( !is_readable( $acf_file ) ) {
+	$error_message = __('This theme requires <a href="https://wordpress.org/plugins/advanced-custom-fields/">ACF</a> plugin to exist!', 'acf');
+	echo($error_message);
 }
-add_action( 'after_setup_theme', 'do_you_have_acf' );
 
 
 /*********************
@@ -32,7 +29,7 @@ Let's get everything up and running.
 function braftonium_start() {
 	require_once( 'library/braftonium.php' );
 	include_once get_template_directory().'/library/custom-fields/fields.php';
-	
+
   //Allow editor style.
   add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
 
@@ -143,7 +140,7 @@ function braftonium_get_svg_path($svgid) {
 /**
  * What it says on the tin.
  */
-if (!function_exists( 'braftonium_social_sharing_buttons' ) ) :
+if (!function_exists( 'braftonium_social_sharing_buttons' ) && function_exists('get_field') ) :
 	$ssbutton = get_field('social_share_buttons', 'option');
 	if (in_array("on", $ssbutton) ) {
 		function braftonium_social_sharing_buttons() {
@@ -246,6 +243,7 @@ if ( WPEX_WOOCOMMERCE_ACTIVE ) {
 
 
 /* Excerpt shortening*/
+if (function_exists('get_field')):
 $layout = get_field('blog_layout', 'option');
 if ( $layout=='rich' ) {
 	function custom_excerpt_length( $length ) {
@@ -253,6 +251,7 @@ if ( $layout=='rich' ) {
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 }
+endif;
 
 
 function braftonium_video_script() {
