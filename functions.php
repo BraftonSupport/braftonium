@@ -142,7 +142,7 @@ function braftonium_get_svg_path($svgid) {
  */
 if (!function_exists( 'braftonium_social_sharing_buttons' ) && function_exists('get_field') ) :
 	$ssbutton = get_field('social_share_buttons', 'option');
-	if (in_array("on", $ssbutton) ) {
+	if (isset($ssbutton) && in_array("on", $ssbutton) ) {
 		function braftonium_social_sharing_buttons() {
 			$social_media = get_field('social_media', 'option');
 			$ss_location = get_field('ss_button_location', 'option');
