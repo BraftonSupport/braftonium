@@ -690,10 +690,10 @@ mobile. Make sure to double check these!
 }
 /* line 308, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  margin: 1em auto 2em 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin: 1em 2% 2em 0;
 }
 /* line 313, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section h3 {
@@ -701,10 +701,7 @@ mobile. Make sure to double check these!
 }
 /* line 316, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section:last-child {
-  margin-left: auto;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  margin-right: 0;
 }
 
 /* end .footer-links */

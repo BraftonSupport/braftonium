@@ -306,18 +306,15 @@ mobile. Make sure to double check these!
 		display: -webkit-flex;
 		display: flex;
 		section {
-			-webkit-flex: 1 1 auto;
-			-ms-flex: 1 1 auto;
-			flex: 1 1 auto;
-			margin: 1em auto 2em 0;
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+			margin: 1em 2% 2em 0;
 			h3 {
 				margin-bottom: 1em;
 			}
 			&:last-child{
-				margin-left: auto;
-				-webkit-flex: 0 1 auto;
-				-ms-flex: 0 1 auto;
-				flex: 0 1 auto;
+				margin-right: 0;
 			}
 		}
 	}
