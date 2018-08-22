@@ -302,7 +302,6 @@ function braftonium_be_arrows_in_menus( $item_output, $item, $depth, $args ) {
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'braftonium_be_arrows_in_menus', 10, 4 );
-
 /**
  * Add the shopping cart svg to any menu item with the cart class
  * */	
@@ -318,6 +317,7 @@ add_filter( 'walker_nav_menu_start_el', 'braftonium_be_cart_icon', 10, 4 );
 /*
 Making the Braftonium Theme Option Page
 */
+
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
 		'page_title' 	=> __( 'Theme General Settings', 'braftonium' ),
@@ -327,6 +327,20 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'themes.php',
 		'redirect'		=> false
 	));
+} else {
+	function braftonium_blanksettingspage() {
+		add_submenu_page( 'themes.php', __( 'Theme General Settings', 'braftonium' ), __( 'Theme Settings', 'braftonium' ),
+		'edit_posts', 'theme-general-settings', 'turnonacf_callback');
+	} 
+	add_action( 'admin_menu', 'braftonium_blanksettingspage' );
+	function turnonacf_callback() { 
+		?>
+		<div class="wrap">
+			<h1><?php _e( 'Theme General Settings', 'braftonium' ); ?></h1>
+			<p><?php _e( 'If you are working locally, you need to turn on the ACF Pro plugin.', 'braftonium' ); ?></p>
+		</div>
+		<?php
+	}
 }
 
 function braftonium_widgets_init() {
