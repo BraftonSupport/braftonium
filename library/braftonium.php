@@ -302,7 +302,17 @@ function braftonium_be_arrows_in_menus( $item_output, $item, $depth, $args ) {
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'braftonium_be_arrows_in_menus', 10, 4 );
-
+/**
+ * Add the shopping cart svg to any menu item with the cart class
+ * */	
+function braftonium_be_cart_icon( $item_output, $item, $depth, $args ) {
+	if( in_array( 'cart', $item->classes ) ) {
+		$icon = '<span>'.braftonium_get_svg_path('icon-cart').'</span>';
+		$item_output = str_replace( '</a>', $icon . '</a>', $item_output );
+	}
+	return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'braftonium_be_cart_icon', 10, 4 );
 
 /*
 Making the Braftonium Theme Option Page
