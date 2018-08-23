@@ -143,13 +143,13 @@ nav .nav {
 			}
 
 			/* highlight sub-menu current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current_page_ancestor {
-				a {
-					font-weight: bold;
-				}
-			}
+			// li.current-menu-item,
+			// li.current_page_item,
+			// li.current_page_ancestor {
+			// 	> a {
+			// 		font-weight: bold;
+			// 	}
+			// }
 		}
 	} /* end .menu ul li */
 
@@ -157,7 +157,7 @@ nav .nav {
 	li.current-menu-item,
 	li.current_page_item,
 	li.current_page_ancestor {
-		a {
+		> a {
 			font-weight: bold;
 		}
 	}  /* end current highlighters */
@@ -306,9 +306,9 @@ mobile. Make sure to double check these!
 		display: -webkit-flex;
 		display: flex;
 		section {
-			-webkit-flex: 0 1 auto;
-			-ms-flex: 0 1 auto;
-			flex: 0 1 auto;
+			-webkit-flex: 0 1 100%;
+			-ms-flex: 0 1 100%;
+			flex: 0 1 100%;
 			margin: 1em 2% 2em 0;
 			h3 {
 				margin-bottom: 1em;

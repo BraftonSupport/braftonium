@@ -521,16 +521,10 @@ nav .nav li ul.sub-menu li .toggleon {
   top: -1px;
   left: 100%;
 }
-/* line 149, ../scss/breakpoints/_768up.scss */
-nav .nav li ul.sub-menu li.current-menu-item a,
-nav .nav li ul.sub-menu li.current_page_item a,
-nav .nav li ul.sub-menu li.current_page_ancestor a {
-  font-weight: bold;
-}
 /* line 160, ../scss/breakpoints/_768up.scss */
-nav .nav li.current-menu-item a,
-nav .nav li.current_page_item a,
-nav .nav li.current_page_ancestor a {
+nav .nav li.current-menu-item > a,
+nav .nav li.current_page_item > a,
+nav .nav li.current_page_ancestor > a {
   font-weight: bold;
 }
 
@@ -690,9 +684,9 @@ mobile. Make sure to double check these!
 }
 /* line 308, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section {
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
   margin: 1em 2% 2em 0;
 }
 /* line 313, ../scss/breakpoints/_768up.scss */
