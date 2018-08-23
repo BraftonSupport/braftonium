@@ -104,11 +104,7 @@ a, a:visited {
 }
 
 a.blue-btn {
-	color: $white;
-	&:hover,
-	&:focus {
-	  color: $white;
-	} // end hover
+	color: $white!important;
 }
 
 /*********************
@@ -321,6 +317,7 @@ nav {
 			background: transparent;
 			padding: 0;
 			width: 1.25em;
+			top: 2px;
 			&.rotate {
 				border-left: none;
 			}
