@@ -105,7 +105,13 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 			);
 			while ($recent_query->have_posts()) : $recent_query->the_post(); ?>
 				<div class="list-item">
-					<?php if ( $imagestyle && in_array('round', $imagestyle) && has_post_thumbnail() ){
+					<?php
+					$name = get_field('name', $post);
+					$position = get_field('position', $post);
+					$company = get_field('company', $post);
+					$location = get_field('location', $post);
+					$website = get_field('website', $post);
+					if ( $imagestyle && in_array('round', $imagestyle) && has_post_thumbnail() ){
 						?><div class="image"><?php
 						 the_post_thumbnail('mediumsquared', ['class' => 'round']);
 						 ?></div><?php
@@ -132,6 +138,13 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 							echo strip_tags($the_excerpt);
 						}
 						echo '</p>';
+						if ( $name || $position || $company || $location || $website) { echo '<p class="testimonial-meta">'; }
+						if ($name) { echo '<span class="testimonial-name">'.$name.'</span>'; }
+						if ($position) { echo '<span class="testimonial-position">'.$position.'</span>'; }
+						if ($company) { echo '<span class="testimonial-company">'.$company.'</span>'; }
+						if ($location) { echo '<span class="testimonial-location">'.$location.'</span>'; }
+						if ($website) { echo '<br/><a href="http://'.$website.'" target="_blank"><span class="testimonial-website">'.$website.'</span></a>'; }
+						if ( $name || $position || $company || $location || $website) { echo '</p>'; }
 					if ( $showbutton ){ ?>
 						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e('Read More', 'braftonium') ?></a>
 					<?php } ?>
