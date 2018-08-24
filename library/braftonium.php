@@ -101,7 +101,7 @@ function braftonium_scripts_and_styles() {
 		wp_register_script( 'braftonium-modernizr', get_template_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
 		// register main stylesheet
-		wp_register_style( 'braftonium-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+		wp_register_style( 'braftonium-stylesheet', get_template_directory_uri() . '/library/css/style.css' );
 
 		// ie-only style sheet
 		wp_register_style( 'braftonium-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );

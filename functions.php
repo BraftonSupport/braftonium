@@ -46,7 +46,7 @@ function braftonium_start() {
   add_action( 'wp_head', 'braftonium_remove_recent_comments_style', 1 );
 
   // enqueue base scripts and styles
-  add_action( 'wp_enqueue_scripts', 'braftonium_scripts_and_styles', 999 );
+  add_action( 'wp_enqueue_scripts', 'braftonium_scripts_and_styles', 20 );
   // ie conditional wrapper
 
   // launching this stuff after theme setup
