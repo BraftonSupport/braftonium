@@ -40,27 +40,27 @@ start customizing. All admin functions are located in lib/admin/
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 /* line 41, ../scss/admin.scss */
-#acf_after_title-sortables .postbox .layout:first-child, #acf_after_title-sortables .postbox .layout:nth-child(7) {
+#acf_after_title-sortables .postbox .layout:first-child, #acf_after_title-sortables .postbox .layout:nth-child(7), #acf_after_title-sortables .postbox .layout:nth-child(13), #acf_after_title-sortables .postbox .layout:nth-child(19) {
   background: rgba(127, 0, 0, 0.1);
 }
 /* line 44, ../scss/admin.scss */
-#acf_after_title-sortables .postbox .layout:nth-child(2), #acf_after_title-sortables .postbox .layout:nth-child(8) {
+#acf_after_title-sortables .postbox .layout:nth-child(2), #acf_after_title-sortables .postbox .layout:nth-child(8), #acf_after_title-sortables .postbox .layout:nth-child(14), #acf_after_title-sortables .postbox .layout:nth-child(20) {
   background: rgba(0, 127, 0, 0.1);
 }
 /* line 47, ../scss/admin.scss */
-#acf_after_title-sortables .postbox .layout:nth-child(3), #acf_after_title-sortables .postbox .layout:nth-child(9) {
+#acf_after_title-sortables .postbox .layout:nth-child(3), #acf_after_title-sortables .postbox .layout:nth-child(9), #acf_after_title-sortables .postbox .layout:nth-child(15), #acf_after_title-sortables .postbox .layout:nth-child(21) {
   background: rgba(0, 0, 127, 0.1);
 }
 /* line 50, ../scss/admin.scss */
-#acf_after_title-sortables .postbox .layout:nth-child(4), #acf_after_title-sortables .postbox .layout:nth-child(10) {
+#acf_after_title-sortables .postbox .layout:nth-child(4), #acf_after_title-sortables .postbox .layout:nth-child(10), #acf_after_title-sortables .postbox .layout:nth-child(16), #acf_after_title-sortables .postbox .layout:nth-child(22) {
   background: rgba(127, 127, 0, 0.1);
 }
 /* line 53, ../scss/admin.scss */
-#acf_after_title-sortables .postbox .layout:nth-child(5), #acf_after_title-sortables .postbox .layout:nth-child(11) {
+#acf_after_title-sortables .postbox .layout:nth-child(5), #acf_after_title-sortables .postbox .layout:nth-child(11), #acf_after_title-sortables .postbox .layout:nth-child(17), #acf_after_title-sortables .postbox .layout:nth-child(23) {
   background: rgba(127, 0, 127, 0.1);
 }
 /* line 56, ../scss/admin.scss */
-#acf_after_title-sortables .postbox .layout:nth-child(6), #acf_after_title-sortables .postbox .layout:nth-child(12) {
+#acf_after_title-sortables .postbox .layout:nth-child(6), #acf_after_title-sortables .postbox .layout:nth-child(12), #acf_after_title-sortables .postbox .layout:nth-child(18), #acf_after_title-sortables .postbox .layout:nth-child(24) {
   background: rgba(0, 127, 127, 0.1);
 }
 
