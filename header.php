@@ -57,7 +57,7 @@
 		echo '<style>';
 			if ($braftonium_text) { echo 'body { color:'.$braftonium_text.';}'; }
 			if ($braftonium_link) { echo 'a, a:visited, .blog .read-more, .slick-prev:before, .slick-next:before { color:'.$braftonium_link.';} button, .blue-btn, .pagination a:hover, .hero .read-more { background-color:'.$braftonium_link.';} .blog .hero article.hentry { border-bottom-color: '.$braftonium_link.'99; }'; }
-			if ($braftonium_hover) { echo 'a:hover, .pagination a:hover, .blog .read-more:hover { color:'.$braftonium_hover.';} .button:hover, .blue-btn:hover, .blue-btn:focus, .blue-btn:active, .hero .read-more:hover { background-color:'.$braftonium_hover.';} '; }
+			if ($braftonium_hover) { echo 'a:hover, a:focus, a:visited:hover, a:visited:focus, .pagination a:hover, .blog .read-more:hover { color:'.$braftonium_hover.';} .button:hover, .blue-btn:hover, .blue-btn:focus, .blue-btn:active, .hero .read-more:hover { background-color:'.$braftonium_hover.';} '; }
 			if ($braftonium_headerbg) { echo '.header, nav .nav li ul.sub-menu, .blog .simple .byline, .blog .rich article.hentry { background-color:'.$braftonium_headerbg.';} .blog .rich article.hentry .content { background-color:'.$braftonium_headerbg.'cc;}'; }
 			if ($braftonium_headercolor) { echo '.header, .blog .simple .byline, .blog .rich article.hentry .content { color:'.$braftonium_headercolor.';} '; }
 			if ($braftonium_headerlink) { echo '.header a, nav .nav li a, .blog .simple .byline a, .blog .rich article.hentry a, .nav button { color:'.$braftonium_headerlink.';} .header .blue-btn { background-color: background-color:'.$headerlink.';} '; }
