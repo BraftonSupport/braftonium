@@ -133,9 +133,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						$content= get_the_content();
 						$the_excerpt= substr($content,0,strpos($content,'.')+1);
 						if (strlen($the_excerpt) > 125){
-							echo implode(' ', array_slice(explode(' ', strip_tags($the_excerpt)), 0, 15)).'...';
+							echo implode(' ', array_slice(explode(' ', strip_tags($the_excerpt)), 0, 20)).'...';
 						} else {
-							echo strip_tags($the_excerpt);
+							echo strip_tags($content);
 						}
 						echo '</p>';
 						if ( $name || $position || $company || $location || $website) { echo '<p class="testimonial-meta">'; }

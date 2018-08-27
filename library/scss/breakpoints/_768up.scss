@@ -57,6 +57,7 @@ nav {
 }
 
 .scrolled #inner-header {
+	grid-template-columns: 15% 85%;
 	#logo {
 		grid-row: 1 / 4;
 	}
