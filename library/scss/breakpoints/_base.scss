@@ -740,7 +740,7 @@ svg {
 		} /* end .hentry */
 
 .text, .page-template-default .entry-content, .single .entry-content {
-	a {
+	a:not(.blue-btn) {
 		text-decoration: underline;
 	}
 }
