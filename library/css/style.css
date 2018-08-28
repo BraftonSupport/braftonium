@@ -2312,7 +2312,7 @@ svg {
 
 /* end .hentry */
 /* line 743, ../scss/breakpoints/_base.scss */
-.text a, .page-template-default .entry-content a, .single .entry-content a {
+.text a:not(.blue-btn):not(.comment-reply-link):not(#submit):not(.button), .page-template-default .entry-content a:not(.blue-btn):not(.comment-reply-link):not(#submit):not(.button), .single .entry-content a:not(.blue-btn):not(.comment-reply-link):not(#submit):not(.button) {
   text-decoration: underline;
 }
 
