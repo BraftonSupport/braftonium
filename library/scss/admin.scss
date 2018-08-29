@@ -13,15 +13,18 @@ start customizing. All admin functions are located in lib/admin/
 
 // Theme General Settings
 #acf-group_5a4e8d955ca60 {
-	.acf-field-5a4e8e2f65362 {
+	.acf-field-5a4e8e2f65362,
+	.acf-field-5b61e4ff523a7 {
 		border-bottom: 1px solid #ddd;
 	}
-	.acf-field-5b185eb33c54b {
+	.acf-field-5b185eb33c54b,
+	.acf-field-5b61e4ff523a1 {
 		border-top: 5px solid #f1f1f1;
 	}
 	& >.handlediv, & > h2.hndle {
 		display: none;
 	}
+
 }
 
 .acf-fields.-left > .acf-field:before {
@@ -93,6 +96,7 @@ start customizing. All admin functions are located in lib/admin/
 .acf-field-5a4d3dc7e18d5 .acf-field-5a4d42b4ce417 {
 	width: 60%!important;
 }
-.acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > .acf-field-5a4d42b4ce417, .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > .acf-field-5a4d4292ce416 {
+.acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > .acf-field-5a4d42b4ce417,
+.acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields > .acf-field-5a4d4292ce416 {
 	border-top: 1px solid #eee;
 }

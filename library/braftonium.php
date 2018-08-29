@@ -124,6 +124,11 @@ function braftonium_scripts_and_styles() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'braftonium-js' );
 
+		$shenanigans = get_field('shenanigans', 'option');
+		if ($shenanigans[0]=='on') :
+		wp_register_style( 'shenanigans', get_template_directory_uri() . '/library/css/wickedcss.min.css' );
+		wp_enqueue_style( 'shenanigans' );
+		endif;
 	}
 }
 

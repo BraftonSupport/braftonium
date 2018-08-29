@@ -115,7 +115,7 @@ nav .nav {
 			border-top: 0;
 			z-index: 8999;
 			width: 200px;
-			&.toggleon {
+			&.toggleon, &:focus-within {
 				position: absolute;
 				top: 2.1em;
 				left: -5px;
@@ -131,11 +131,9 @@ nav .nav {
 				ul {
 					top: -1000px;
 				}
-				&:hover {
-					ul {
-						top: -1px;
-						left: 100%;
-					}
+				&:hover ul, ul:focus-within {
+					top: -1px;
+					left: 100%;
 				}
 				.toggleon {
 					top: -1px;
