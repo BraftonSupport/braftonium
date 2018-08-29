@@ -202,3 +202,23 @@
     opacity: .75;
     color: black;
 }
+
+
+@media only screen and (min-width: 1030px) {
+    .slick-prev
+    {
+        left: -50px;
+    }
+    [dir='rtl'] .slick-prev
+    {
+        right: -50px;
+    }
+    .slick-next
+    {
+        right: -50px;
+    }
+    [dir='rtl'] .slick-next
+    {
+        left: -50px;
+    }
+}
