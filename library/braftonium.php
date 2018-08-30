@@ -290,7 +290,13 @@ function braftonium_excerpt_more($more) {
 	class Social_Nav_Menu extends Walker_Nav_Menu {
 		function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
 			if ( 'social' === $args->theme_location ) {
-				$social_media = preg_replace('#^www\.|\.com$#', '$1', parse_url($item->url)['host']);
+				if (strpos($item->url, 'mailto:') !== false) {
+					$social_media = 'envelope';
+				} elseif (strpos($item->url, 'tel:') !== false) {
+					$social_media = 'phone';
+				} else {
+					$social_media = preg_replace('#^www\.|\.com$#', '$1', parse_url($item->url)['host']);
+				}
 				$svg = braftonium_get_svg_path('icon-'.$social_media);
 				$output .= sprintf("\n<li %s><a href='%s' target='_blank' title='%s'>".$svg."</a>\n", ( array_search('current-menu-item', $item->classes) ) ? '' : '', $item->url, $item->title );
 			};
