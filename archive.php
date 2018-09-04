@@ -53,7 +53,7 @@
 											<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'braftonium' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the archive.php template.', 'braftonium' ); ?></p>
+												<p><?php // _e( 'This is the error message in the archive.php template.', 'braftonium' ); ?></p>
 										</footer>
 									</article>
 
