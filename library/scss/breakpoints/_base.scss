@@ -429,7 +429,9 @@ svg {
 		max-width: inherit !important;
 	}
 }
-
+.archive-title {
+	margin: 2em 0 0;
+}
 .blog {
 	.sticky {
 		background: rgba( #000, $alpha: .1);
