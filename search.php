@@ -18,10 +18,7 @@
                   						<p class="byline entry-meta vcard">
                     							<?php printf( __( 'Posted %1$s by %2$s', 'braftonium' ),
                    							    /* the time the post was published */
-                   							    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                      							    /* the author of the post */
-                       							    '<span class="by">by</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                    							); ?>
+                   							    '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'); ?>
                   						</p>
 
 								</header>
@@ -30,15 +27,15 @@
 										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'braftonium' ) . '</span>' ); ?>
 								</section>
 
-								<footer class="article-footer">
+								<!--<footer class="article-footer">
 
-									<?php if(get_the_category_list(', ') != ''): ?>
-                  					<?php printf( __( 'Filed under: %1$s', 'braftonium' ), get_the_category_list(', ') ); ?>
-                  					<?php endif; ?>
+									<?php //if(get_the_category_list(', ') != ''): ?>
+                  					<?php //printf( __( 'Filed under: %1$s', 'braftonium' ), get_the_category_list(', ') ); ?>
+                  					<?php // endif; ?>
 
-                 					<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'braftonium' ) . '</span> ', ', ', '</p>' ); ?>
+                 					<?php //the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'braftonium' ) . '</span> ', ', ', '</p>' ); ?>
 
-								</footer> <!-- end article footer -->
+								</footer> --><!-- end article footer -->
 
 							</article>
 
@@ -56,7 +53,7 @@
 											<p><?php _e( 'Try your search again.', 'braftonium' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', 'braftonium' ); ?></p>
+												<p><?php //_e( 'This is the error message in the search.php template.', 'braftonium' ); ?></p>
 										</footer>
 									</article>
 

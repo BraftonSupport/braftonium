@@ -52,7 +52,7 @@ $brafton_comments = get_field('comments', 'option');
 										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'braftonium' ); ?></p>
 									</section>
 									<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single.php template.', 'braftonium' ); ?></p>
+											<p><?php //_e( 'This is the error message in the single.php template.', 'braftonium' ); ?></p>
 									</footer>
 							</article>
 
