@@ -62,7 +62,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				if( get_row_layout() == 'imageblock' ):
 					echo '<div class="image">'.wp_get_attachment_image( intval(get_sub_field('Image')), 'full' ).'</div>';
 				elseif( get_row_layout() == 'textblock' ): 
-					echo '<div class="text">'.wp_kses_post(get_sub_field('text')).'</div>';
+					echo '<div class="text">'.get_sub_field('text').'</div>';
 				endif;
 			endwhile;
 			echo '</div>';

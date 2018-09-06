@@ -294,6 +294,8 @@ function braftonium_excerpt_more($more) {
 					$social_media = 'envelope';
 				} elseif (strpos($item->url, 'tel:') !== false) {
 					$social_media = 'phone';
+				} elseif (strpos($item->url, '/feed/') !== false) {
+					$social_media = 'rss';
 				} else {
 					$social_media = preg_replace('#^www\.|\.com$#', '$1', parse_url($item->url)['host']);
 				}
