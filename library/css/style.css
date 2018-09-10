@@ -2268,7 +2268,7 @@ svg {
 /* line 702, ../scss/breakpoints/_base.scss */
 .page-template-full-width .list .container .list-item, .page-template-full-width .widgetarea .container .list-item {
   max-width: 200px;
-  margin: auto;
+  margin: 0;
 }
 /* line 707, ../scss/breakpoints/_base.scss */
 .page-template-full-width .cta .blue-btn, .page-template-full-width .cta .hero .read-more, .hero .page-template-full-width .cta .read-more, .page-template-full-width .cta .comment-reply-link, .page-template-full-width .cta #submit, .page-template-full-width .cta .button {
