@@ -1307,7 +1307,14 @@ FOOTER STYLES
 	}
 }
 
-	/*
+#inner-footer ul {
+	list-style-type: none;
+}
+#inner-footer ul > li {
+	text-transform: uppercase;
+}
+
+/*
 	if you checked out the link above:
 	http://www.alistapart.com/articles/organizing-mobile/
 	you'll want to style the footer nav
