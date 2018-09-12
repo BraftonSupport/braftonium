@@ -550,51 +550,52 @@ POSTS & CONTENT STYLES
 .page-template-full-width .compact .wrap {
   width: 75%;
 }
-/* line 187, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .container.count1 .list-item, .page-template-full-width .container.count1 .widget, .page-template-full-width .container.count2 .list-item, .page-template-full-width .container.count2 .widget, .page-template-full-width .container.count3 .list-item, .page-template-full-width .container.count3 .widget, .page-template-full-width .container.count4 .list-item, .page-template-full-width .container.count4 .widget, .page-template-full-width .container.count5 .list-item, .page-template-full-width .container.count5 .widget, .page-template-full-width .container.count6 .list-item, .page-template-full-width .container.count6 .widget, .page-template-full-width .container.count7 .list-item, .page-template-full-width .container.count7 .widget, .page-template-full-width .container.count8 .list-item, .page-template-full-width .container.count8 .widget, .page-template-full-width .container.count9 .list-item, .page-template-full-width .container.count9 .widget, .page-template-full-width .container.count10 .list-item, .page-template-full-width .container.count10 .widget, .page-template-full-width .container.count11 .list-item, .page-template-full-width .container.count11 .widget, .page-template-full-width .container.count12 .list-item, .page-template-full-width .container.count12 .widget, .page-template-full-width .container.count13 .list-item, .page-template-full-width .container.count13 .widget, .page-template-full-width .container.count14 .list-item, .page-template-full-width .container.count14 .widget, .page-template-full-width .container.count15 .list-item, .page-template-full-width .container.count15 .widget {
+
+/* line 189, ../scss/breakpoints/_768up.scss */
+.container.count1 .list-item, .container.count1 .widget, .container.count2 .list-item, .container.count2 .widget, .container.count3 .list-item, .container.count3 .widget, .container.count4 .list-item, .container.count4 .widget, .container.count5 .list-item, .container.count5 .widget, .container.count6 .list-item, .container.count6 .widget, .container.count7 .list-item, .container.count7 .widget, .container.count8 .list-item, .container.count8 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count11 .list-item, .container.count11 .widget, .container.count12 .list-item, .container.count12 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
   max-width: inherit;
 }
-/* line 189, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .container.count1 .list-item:last-child, .page-template-full-width .container.count1 .widget:last-child, .page-template-full-width .container.count2 .list-item:last-child, .page-template-full-width .container.count2 .widget:last-child, .page-template-full-width .container.count3 .list-item:last-child, .page-template-full-width .container.count3 .widget:last-child, .page-template-full-width .container.count4 .list-item:last-child, .page-template-full-width .container.count4 .widget:last-child, .page-template-full-width .container.count5 .list-item:last-child, .page-template-full-width .container.count5 .widget:last-child, .page-template-full-width .container.count6 .list-item:last-child, .page-template-full-width .container.count6 .widget:last-child, .page-template-full-width .container.count7 .list-item:last-child, .page-template-full-width .container.count7 .widget:last-child, .page-template-full-width .container.count8 .list-item:last-child, .page-template-full-width .container.count8 .widget:last-child, .page-template-full-width .container.count9 .list-item:last-child, .page-template-full-width .container.count9 .widget:last-child, .page-template-full-width .container.count10 .list-item:last-child, .page-template-full-width .container.count10 .widget:last-child, .page-template-full-width .container.count11 .list-item:last-child, .page-template-full-width .container.count11 .widget:last-child, .page-template-full-width .container.count12 .list-item:last-child, .page-template-full-width .container.count12 .widget:last-child, .page-template-full-width .container.count13 .list-item:last-child, .page-template-full-width .container.count13 .widget:last-child, .page-template-full-width .container.count14 .list-item:last-child, .page-template-full-width .container.count14 .widget:last-child, .page-template-full-width .container.count15 .list-item:last-child, .page-template-full-width .container.count15 .widget:last-child {
+/* line 191, ../scss/breakpoints/_768up.scss */
+.container.count1 .list-item:last-child, .container.count1 .widget:last-child, .container.count2 .list-item:last-child, .container.count2 .widget:last-child, .container.count3 .list-item:last-child, .container.count3 .widget:last-child, .container.count4 .list-item:last-child, .container.count4 .widget:last-child, .container.count5 .list-item:last-child, .container.count5 .widget:last-child, .container.count6 .list-item:last-child, .container.count6 .widget:last-child, .container.count7 .list-item:last-child, .container.count7 .widget:last-child, .container.count8 .list-item:last-child, .container.count8 .widget:last-child, .container.count9 .list-item:last-child, .container.count9 .widget:last-child, .container.count10 .list-item:last-child, .container.count10 .widget:last-child, .container.count11 .list-item:last-child, .container.count11 .widget:last-child, .container.count12 .list-item:last-child, .container.count12 .widget:last-child, .container.count13 .list-item:last-child, .container.count13 .widget:last-child, .container.count14 .list-item:last-child, .container.count14 .widget:last-child, .container.count15 .list-item:last-child, .container.count15 .widget:last-child {
   margin-right: 0;
 }
-/* line 193, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .container.count1 .list-item, .page-template-full-width .container.count1 .widget {
+/* line 195, ../scss/breakpoints/_768up.scss */
+.container.count1 .list-item, .container.count1 .widget {
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
 }
-/* line 199, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .container.count2 .list-item, .page-template-full-width .container.count2 .widget {
+/* line 201, ../scss/breakpoints/_768up.scss */
+.container.count2 .list-item, .container.count2 .widget {
   margin-right: 2%;
   -webkit-flex: 1 0 49%;
   -ms-flex: 1 0 49%;
   flex: 1 0 49%;
 }
-/* line 204, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .container.count2 .list-item:nth-child(2n), .page-template-full-width .container.count2 .widget:nth-child(2n) {
+/* line 206, ../scss/breakpoints/_768up.scss */
+.container.count2 .list-item:nth-child(2n), .container.count2 .widget:nth-child(2n) {
   margin-right: 0;
 }
-/* line 210, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .container.count3 .list-item, .page-template-full-width .container.count3 .widget, .page-template-full-width .container.count6 .list-item, .page-template-full-width .container.count6 .widget, .page-template-full-width .container.count5 .list-item, .page-template-full-width .container.count5 .widget, .page-template-full-width .container.count9 .list-item, .page-template-full-width .container.count9 .widget, .page-template-full-width .container.count10 .list-item, .page-template-full-width .container.count10 .widget, .page-template-full-width .container.count13 .list-item, .page-template-full-width .container.count13 .widget, .page-template-full-width .container.count14 .list-item, .page-template-full-width .container.count14 .widget, .page-template-full-width .container.count15 .list-item, .page-template-full-width .container.count15 .widget {
+/* line 212, ../scss/breakpoints/_768up.scss */
+.container.count3 .list-item, .container.count3 .widget, .container.count6 .list-item, .container.count6 .widget, .container.count5 .list-item, .container.count5 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
   margin-right: 2%;
   -webkit-flex: 0 1 32%;
   -ms-flex: 0 1 32%;
   flex: 0 1 32%;
 }
-/* line 215, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .container.count3 .list-item:nth-child(3n), .page-template-full-width .container.count3 .widget:nth-child(3n), .page-template-full-width .container.count6 .list-item:nth-child(3n), .page-template-full-width .container.count6 .widget:nth-child(3n), .page-template-full-width .container.count5 .list-item:nth-child(3n), .page-template-full-width .container.count5 .widget:nth-child(3n), .page-template-full-width .container.count9 .list-item:nth-child(3n), .page-template-full-width .container.count9 .widget:nth-child(3n), .page-template-full-width .container.count10 .list-item:nth-child(3n), .page-template-full-width .container.count10 .widget:nth-child(3n), .page-template-full-width .container.count13 .list-item:nth-child(3n), .page-template-full-width .container.count13 .widget:nth-child(3n), .page-template-full-width .container.count14 .list-item:nth-child(3n), .page-template-full-width .container.count14 .widget:nth-child(3n), .page-template-full-width .container.count15 .list-item:nth-child(3n), .page-template-full-width .container.count15 .widget:nth-child(3n) {
+/* line 217, ../scss/breakpoints/_768up.scss */
+.container.count3 .list-item:nth-child(3n), .container.count3 .widget:nth-child(3n), .container.count6 .list-item:nth-child(3n), .container.count6 .widget:nth-child(3n), .container.count5 .list-item:nth-child(3n), .container.count5 .widget:nth-child(3n), .container.count9 .list-item:nth-child(3n), .container.count9 .widget:nth-child(3n), .container.count10 .list-item:nth-child(3n), .container.count10 .widget:nth-child(3n), .container.count13 .list-item:nth-child(3n), .container.count13 .widget:nth-child(3n), .container.count14 .list-item:nth-child(3n), .container.count14 .widget:nth-child(3n), .container.count15 .list-item:nth-child(3n), .container.count15 .widget:nth-child(3n) {
   margin-right: 0;
 }
-/* line 221, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .container.count4 .list-item, .page-template-full-width .container.count4 .widget, .page-template-full-width .container.count7 .list-item, .page-template-full-width .container.count7 .widget, .page-template-full-width .container.count8 .list-item, .page-template-full-width .container.count8 .widget, .page-template-full-width .container.count11 .list-item, .page-template-full-width .container.count11 .widget, .page-template-full-width .container.count12 .list-item, .page-template-full-width .container.count12 .widget {
+/* line 223, ../scss/breakpoints/_768up.scss */
+.container.count4 .list-item, .container.count4 .widget, .container.count7 .list-item, .container.count7 .widget, .container.count8 .list-item, .container.count8 .widget, .container.count11 .list-item, .container.count11 .widget, .container.count12 .list-item, .container.count12 .widget {
   margin-right: 2.35%;
   -webkit-flex: 0 1 23%;
   -ms-flex: 0 1 23%;
   flex: 0 1 23%;
 }
-/* line 226, ../scss/breakpoints/_768up.scss */
-.page-template-full-width .container.count4 .list-item:nth-child(4n), .page-template-full-width .container.count4 .widget:nth-child(4n), .page-template-full-width .container.count7 .list-item:nth-child(4n), .page-template-full-width .container.count7 .widget:nth-child(4n), .page-template-full-width .container.count8 .list-item:nth-child(4n), .page-template-full-width .container.count8 .widget:nth-child(4n), .page-template-full-width .container.count11 .list-item:nth-child(4n), .page-template-full-width .container.count11 .widget:nth-child(4n), .page-template-full-width .container.count12 .list-item:nth-child(4n), .page-template-full-width .container.count12 .widget:nth-child(4n) {
+/* line 228, ../scss/breakpoints/_768up.scss */
+.container.count4 .list-item:nth-child(4n), .container.count4 .widget:nth-child(4n), .container.count7 .list-item:nth-child(4n), .container.count7 .widget:nth-child(4n), .container.count8 .list-item:nth-child(4n), .container.count8 .widget:nth-child(4n), .container.count11 .list-item:nth-child(4n), .container.count11 .widget:nth-child(4n), .container.count12 .list-item:nth-child(4n), .container.count12 .widget:nth-child(4n) {
   margin-right: 0;
 }
 
