@@ -696,19 +696,21 @@ svg {
 			margin: auto;
 		}
 	}
-	.list .container, .widgetarea .container {
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		.list-item {
-			max-width: 200px;
-			margin: 0;
-		}
-	}
 	.cta .blue-btn {
 		margin: auto;
 	}
 }
+
+.list .container, .widgetarea .container {
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	.list-item {
+		max-width: 200px;
+		margin: 0;
+	}
+}
+
 .slick {
 	width: 90%;
 	margin: auto;

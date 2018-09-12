@@ -2256,67 +2256,68 @@ svg {
   margin: auto;
 }
 /* line 699, ../scss/breakpoints/_base.scss */
-.page-template-full-width .list .container, .page-template-full-width .widgetarea .container {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-/* line 703, ../scss/breakpoints/_base.scss */
-.page-template-full-width .list .container .list-item, .page-template-full-width .widgetarea .container .list-item {
-  max-width: 200px;
-  margin: 0;
-}
-/* line 708, ../scss/breakpoints/_base.scss */
 .page-template-full-width .cta .blue-btn, .page-template-full-width .cta .hero .read-more, .hero .page-template-full-width .cta .read-more, .page-template-full-width .cta .comment-reply-link, .page-template-full-width .cta #submit, .page-template-full-width .cta .button {
   margin: auto;
 }
 
-/* line 712, ../scss/breakpoints/_base.scss */
+/* line 704, ../scss/breakpoints/_base.scss */
+.list .container, .widgetarea .container {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* line 708, ../scss/breakpoints/_base.scss */
+.list .container .list-item, .widgetarea .container .list-item {
+  max-width: 200px;
+  margin: 0;
+}
+
+/* line 714, ../scss/breakpoints/_base.scss */
 .slick {
   width: 90%;
   margin: auto;
 }
 
-/* line 716, ../scss/breakpoints/_base.scss */
+/* line 718, ../scss/breakpoints/_base.scss */
 .hentry {
   padding: 2em 0 2.5em;
 }
-/* line 718, ../scss/breakpoints/_base.scss */
+/* line 720, ../scss/breakpoints/_base.scss */
 .hentry .image {
   min-width: 10%;
   text-align: center;
   margin: auto;
 }
-/* line 722, ../scss/breakpoints/_base.scss */
+/* line 724, ../scss/breakpoints/_base.scss */
 .hentry .image img {
   max-width: 100%;
   height: auto;
   width: auto;
 }
-/* line 726, ../scss/breakpoints/_base.scss */
+/* line 728, ../scss/breakpoints/_base.scss */
 .hentry .image img.round {
   border-radius: 50%;
 }
-/* line 731, ../scss/breakpoints/_base.scss */
+/* line 733, ../scss/breakpoints/_base.scss */
 .hentry header {
   padding: 0 0 1.5em 0;
 }
-/* line 735, ../scss/breakpoints/_base.scss */
+/* line 737, ../scss/breakpoints/_base.scss */
 .hentry footer {
   padding: 1.5em;
 }
-/* line 738, ../scss/breakpoints/_base.scss */
+/* line 740, ../scss/breakpoints/_base.scss */
 .hentry footer p {
   margin: 0;
 }
 
 /* end .hentry */
-/* line 746, ../scss/breakpoints/_base.scss */
+/* line 748, ../scss/breakpoints/_base.scss */
 .text a:not(.blue-btn):not(.comment-reply-link):not(#submit):not(.button), .page-template-default .entry-content a:not(.blue-btn):not(.comment-reply-link):not(#submit):not(.button), .single .entry-content a:not(.blue-btn):not(.comment-reply-link):not(#submit):not(.button) {
   text-decoration: underline;
 }
 
-/* line 751, ../scss/breakpoints/_base.scss */
+/* line 753, ../scss/breakpoints/_base.scss */
 .single-title,
 .page-title,
 .entry-title {
@@ -2324,27 +2325,27 @@ svg {
 }
 
 /* post meta */
-/* line 758, ../scss/breakpoints/_base.scss */
+/* line 760, ../scss/breakpoints/_base.scss */
 .byline {
   margin: 0;
 }
 
 /* entry content */
-/* line 763, ../scss/breakpoints/_base.scss */
+/* line 765, ../scss/breakpoints/_base.scss */
 .entry-content {
   padding: 0;
 }
-/* line 766, ../scss/breakpoints/_base.scss */
+/* line 768, ../scss/breakpoints/_base.scss */
 .entry-content p {
   margin: 0 0 1.5em;
 }
-/* line 770, ../scss/breakpoints/_base.scss */
+/* line 772, ../scss/breakpoints/_base.scss */
 .entry-content table {
   width: 100%;
   border: 1px solid #eaedf2;
   margin-bottom: 1.5em;
 }
-/* line 775, ../scss/breakpoints/_base.scss */
+/* line 777, ../scss/breakpoints/_base.scss */
 .entry-content table caption {
   margin: 0 0 7px;
   font-size: 0.75em;
@@ -2352,34 +2353,34 @@ svg {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 784, ../scss/breakpoints/_base.scss */
+/* line 786, ../scss/breakpoints/_base.scss */
 .entry-content tr {
   border-bottom: 1px solid #eaedf2;
 }
-/* line 787, ../scss/breakpoints/_base.scss */
+/* line 789, ../scss/breakpoints/_base.scss */
 .entry-content tr:nth-child(even) {
   background-color: #f8f9fa;
 }
-/* line 792, ../scss/breakpoints/_base.scss */
+/* line 794, ../scss/breakpoints/_base.scss */
 .entry-content td {
   padding: 7px;
   border-right: 1px solid #eaedf2;
 }
-/* line 796, ../scss/breakpoints/_base.scss */
+/* line 798, ../scss/breakpoints/_base.scss */
 .entry-content td:last-child {
   border-right: 0;
 }
-/* line 801, ../scss/breakpoints/_base.scss */
+/* line 803, ../scss/breakpoints/_base.scss */
 .entry-content th {
   background-color: #f8f9fa;
   border-bottom: 1px solid #eaedf2;
   border-right: 1px solid #eaedf2;
 }
-/* line 806, ../scss/breakpoints/_base.scss */
+/* line 808, ../scss/breakpoints/_base.scss */
 .entry-content th:last-child {
   border-right: 0;
 }
-/* line 811, ../scss/breakpoints/_base.scss */
+/* line 813, ../scss/breakpoints/_base.scss */
 .entry-content blockquote {
   margin: 0 0 1.5em 0.75em;
   padding: 0 0 0 0.75em;
@@ -2387,20 +2388,20 @@ svg {
   font-style: italic;
   color: #9fa6b4;
 }
-/* line 822, ../scss/breakpoints/_base.scss */
+/* line 824, ../scss/breakpoints/_base.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 829, ../scss/breakpoints/_base.scss */
+/* line 831, ../scss/breakpoints/_base.scss */
 .entry-content img {
   margin: 0 0 1.5em 0;
   max-width: 100%;
   height: auto;
 }
-/* line 835, ../scss/breakpoints/_base.scss */
+/* line 837, ../scss/breakpoints/_base.scss */
 .entry-content .size-auto,
 .entry-content .size-full,
 .entry-content .size-large,
@@ -2409,7 +2410,7 @@ svg {
   max-width: 100%;
   height: auto;
 }
-/* line 844, ../scss/breakpoints/_base.scss */
+/* line 846, ../scss/breakpoints/_base.scss */
 .entry-content pre {
   background: #323944;
   color: #f8f9fa;
@@ -2420,20 +2421,20 @@ svg {
 }
 
 /* end .entry-content */
-/* line 855, ../scss/breakpoints/_base.scss */
+/* line 857, ../scss/breakpoints/_base.scss */
 .wp-caption {
   max-width: 100%;
   background: #eaedf2;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 861, ../scss/breakpoints/_base.scss */
+/* line 863, ../scss/breakpoints/_base.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 867, ../scss/breakpoints/_base.scss */
+/* line 869, ../scss/breakpoints/_base.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -2441,17 +2442,17 @@ svg {
 }
 
 /* end .wp-caption */
-/* line 876, ../scss/breakpoints/_base.scss */
+/* line 878, ../scss/breakpoints/_base.scss */
 .tags {
   margin: 0;
 }
 
-/* line 880, ../scss/breakpoints/_base.scss */
+/* line 882, ../scss/breakpoints/_base.scss */
 .ssb-social {
   display: block;
 }
 
-/* line 883, ../scss/breakpoints/_base.scss */
+/* line 885, ../scss/breakpoints/_base.scss */
 .ssb-social a {
   width: 1.25em;
   top: 2px;
@@ -2462,19 +2463,19 @@ svg {
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 894, ../scss/breakpoints/_base.scss */
+/* line 896, ../scss/breakpoints/_base.scss */
 .pagination,
 .wp-prev-next {
   margin: 1.5em 0;
 }
 
-/* line 898, ../scss/breakpoints/_base.scss */
+/* line 900, ../scss/breakpoints/_base.scss */
 .pagination {
   clear: both;
   text-align: center;
   width: 100%;
 }
-/* line 902, ../scss/breakpoints/_base.scss */
+/* line 904, ../scss/breakpoints/_base.scss */
 .pagination ul {
   display: inline-block;
   background-color: #fff;
@@ -2483,7 +2484,7 @@ PAGE NAVI STYLES
   clear: both;
   border-radius: 3px;
 }
-/* line 911, ../scss/breakpoints/_base.scss */
+/* line 913, ../scss/breakpoints/_base.scss */
 .pagination li {
   padding: 0;
   margin: 0;
@@ -2492,7 +2493,7 @@ PAGE NAVI STYLES
   overflow: hidden;
   border-right: 1px solid #eaedf2;
 }
-/* line 920, ../scss/breakpoints/_base.scss */
+/* line 922, ../scss/breakpoints/_base.scss */
 .pagination a, .pagination span {
   margin: 0;
   text-decoration: none;
@@ -2505,17 +2506,17 @@ PAGE NAVI STYLES
   display: block;
   color: #00457c;
 }
-/* line 932, ../scss/breakpoints/_base.scss */
+/* line 934, ../scss/breakpoints/_base.scss */
 .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
   background-color: #00457c;
   color: #fff;
 }
-/* line 938, ../scss/breakpoints/_base.scss */
+/* line 940, ../scss/breakpoints/_base.scss */
 .pagination .current {
   cursor: default;
   color: #5c6b80;
 }
-/* line 942, ../scss/breakpoints/_base.scss */
+/* line 944, ../scss/breakpoints/_base.scss */
 .pagination .current:hover, .pagination .current:focus {
   background-color: #fff;
   color: #5c6b80;
@@ -2523,11 +2524,11 @@ PAGE NAVI STYLES
 
 /* end .braftonium_page_navi */
 /* fallback previous & next links */
-/* line 955, ../scss/breakpoints/_base.scss */
+/* line 957, ../scss/breakpoints/_base.scss */
 .wp-prev-next .prev-link {
   float: left;
 }
-/* line 959, ../scss/breakpoints/_base.scss */
+/* line 961, ../scss/breakpoints/_base.scss */
 .wp-prev-next .next-link {
   float: right;
 }
@@ -2537,7 +2538,7 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 970, ../scss/breakpoints/_base.scss */
+/* line 972, ../scss/breakpoints/_base.scss */
 #comments-title {
   padding: 0.75em;
   margin: 0;
@@ -2545,13 +2546,13 @@ COMMENT STYLES
   /* number of comments span */
 }
 
-/* line 990, ../scss/breakpoints/_base.scss */
+/* line 992, ../scss/breakpoints/_base.scss */
 .commentlist {
   margin: 0;
   list-style-type: none;
 }
 
-/* line 995, ../scss/breakpoints/_base.scss */
+/* line 997, ../scss/breakpoints/_base.scss */
 .comment {
   position: relative;
   clear: both;
@@ -2563,78 +2564,78 @@ COMMENT STYLES
   /* end children */
   /* general comment classes */
 }
-/* line 1002, ../scss/breakpoints/_base.scss */
+/* line 1004, ../scss/breakpoints/_base.scss */
 .comment .comment-author {
   padding: 7px;
   border: 0;
 }
-/* line 1008, ../scss/breakpoints/_base.scss */
+/* line 1010, ../scss/breakpoints/_base.scss */
 .comment .vcard {
   margin-left: 50px;
 }
-/* line 1011, ../scss/breakpoints/_base.scss */
+/* line 1013, ../scss/breakpoints/_base.scss */
 .comment .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 1019, ../scss/breakpoints/_base.scss */
+/* line 1021, ../scss/breakpoints/_base.scss */
 .comment .vcard time {
   display: block;
   font-size: 0.9em;
   font-style: italic;
 }
-/* line 1024, ../scss/breakpoints/_base.scss */
+/* line 1026, ../scss/breakpoints/_base.scss */
 .comment .vcard time a {
   color: #9fa6b4;
   text-decoration: none;
 }
-/* line 1028, ../scss/breakpoints/_base.scss */
+/* line 1030, ../scss/breakpoints/_base.scss */
 .comment .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 1038, ../scss/breakpoints/_base.scss */
+/* line 1040, ../scss/breakpoints/_base.scss */
 .comment .vcard .avatar {
   position: absolute;
   left: 16px;
   border-radius: 50%;
 }
-/* line 1046, ../scss/breakpoints/_base.scss */
+/* line 1048, ../scss/breakpoints/_base.scss */
 .comment:last-child {
   margin-bottom: 0;
 }
-/* line 1050, ../scss/breakpoints/_base.scss */
+/* line 1052, ../scss/breakpoints/_base.scss */
 .comment .children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 1068, ../scss/breakpoints/_base.scss */
+/* line 1070, ../scss/breakpoints/_base.scss */
 .comment[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 1072, ../scss/breakpoints/_base.scss */
+/* line 1074, ../scss/breakpoints/_base.scss */
 .comment.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 1077, ../scss/breakpoints/_base.scss */
+/* line 1079, ../scss/breakpoints/_base.scss */
 .comment:not(.depth-1) {
   margin-top: 0;
   margin-left: 7px;
   padding: 7px;
 }
-/* line 1090, ../scss/breakpoints/_base.scss */
+/* line 1092, ../scss/breakpoints/_base.scss */
 .comment.odd {
   background-color: #fff;
 }
-/* line 1093, ../scss/breakpoints/_base.scss */
+/* line 1095, ../scss/breakpoints/_base.scss */
 .comment.even {
   background: #f8f9fa;
 }
 
 /* comment meta */
 /* comment content */
-/* line 1127, ../scss/breakpoints/_base.scss */
+/* line 1129, ../scss/breakpoints/_base.scss */
 .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
@@ -2643,7 +2644,7 @@ COMMENT STYLES
 
 /* end .commentlist .comment_content */
 /* comment reply link */
-/* line 1136, ../scss/breakpoints/_base.scss */
+/* line 1138, ../scss/breakpoints/_base.scss */
 .comment-reply-link {
   font-size: 0.9em;
   float: right;
@@ -2651,7 +2652,7 @@ COMMENT STYLES
 
 /* end .commentlist .comment-reply-link */
 /* edit comment link */
-/* line 1148, ../scss/breakpoints/_base.scss */
+/* line 1150, ../scss/breakpoints/_base.scss */
 .comment-edit-link {
   font-style: italic;
   margin: 0 7px;
@@ -2662,34 +2663,34 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 1161, ../scss/breakpoints/_base.scss */
+/* line 1163, ../scss/breakpoints/_base.scss */
 .comment-respond {
   padding: 1.5em;
   border-top: 1px solid #f8f9fa;
 }
 
-/* line 1167, ../scss/breakpoints/_base.scss */
+/* line 1169, ../scss/breakpoints/_base.scss */
 #reply-title {
   margin: 0;
 }
 
-/* line 1171, ../scss/breakpoints/_base.scss */
+/* line 1173, ../scss/breakpoints/_base.scss */
 .logged-in-as {
   color: #9fa6b4;
   font-style: italic;
   margin: 0;
 }
-/* line 1176, ../scss/breakpoints/_base.scss */
+/* line 1178, ../scss/breakpoints/_base.scss */
 .logged-in-as a {
   color: #5c6b80;
 }
 
-/* line 1181, ../scss/breakpoints/_base.scss */
+/* line 1183, ../scss/breakpoints/_base.scss */
 .comment-form-comment {
   margin: 1.5em 0 0.75em;
 }
 
-/* line 1185, ../scss/breakpoints/_base.scss */
+/* line 1187, ../scss/breakpoints/_base.scss */
 .form-allowed-tags {
   padding: 1.5em;
   background-color: #f8f9fa;
@@ -2697,14 +2698,14 @@ COMMENT FORM STYLES
 }
 
 /* comment submit button */
-/* line 1192, ../scss/breakpoints/_base.scss */
+/* line 1194, ../scss/breakpoints/_base.scss */
 #submit, .button {
   float: right;
   font-size: 1em;
 }
 
 /* comment form title */
-/* line 1199, ../scss/breakpoints/_base.scss */
+/* line 1201, ../scss/breakpoints/_base.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -2712,13 +2713,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 1212, ../scss/breakpoints/_base.scss */
+/* line 1214, ../scss/breakpoints/_base.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 1217, ../scss/breakpoints/_base.scss */
+/* line 1219, ../scss/breakpoints/_base.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -2726,12 +2727,12 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 1224, ../scss/breakpoints/_base.scss */
+/* line 1226, ../scss/breakpoints/_base.scss */
 .widget {
   margin: 0 0 2em 0;
 }
 
-/* line 1228, ../scss/breakpoints/_base.scss */
+/* line 1230, ../scss/breakpoints/_base.scss */
 .no-widgets {
   background-color: #fff;
   padding: 1.5em;
@@ -2741,24 +2742,24 @@ SIDEBARS & ASIDES
   margin-bottom: 1.5em;
 }
 
-/* line 1236, ../scss/breakpoints/_base.scss */
+/* line 1238, ../scss/breakpoints/_base.scss */
 .latest {
   clear: both;
 }
-/* line 1238, ../scss/breakpoints/_base.scss */
+/* line 1240, ../scss/breakpoints/_base.scss */
 .latest h5 {
   margin: .5em 0 2em;
 }
-/* line 1241, ../scss/breakpoints/_base.scss */
+/* line 1243, ../scss/breakpoints/_base.scss */
 .latest img {
   max-width: 300px;
 }
 
-/* line 1247, ../scss/breakpoints/_base.scss */
+/* line 1249, ../scss/breakpoints/_base.scss */
 .latest h4 {
   margin-top: .25em;
 }
-/* line 1250, ../scss/breakpoints/_base.scss */
+/* line 1252, ../scss/breakpoints/_base.scss */
 .latest img, .latest .thumbnail {
   background-size: cover;
   background-position: center;
@@ -2767,27 +2768,27 @@ SIDEBARS & ASIDES
   height: auto;
 }
 
-/* line 1259, ../scss/breakpoints/_base.scss */
+/* line 1261, ../scss/breakpoints/_base.scss */
 #inner-content > .latest a {
   margin-right: 2%;
   flex: 1;
 }
-/* line 1262, ../scss/breakpoints/_base.scss */
+/* line 1264, ../scss/breakpoints/_base.scss */
 #inner-content > .latest a:last-child {
   margin-right: 0;
 }
 
-/* line 1267, ../scss/breakpoints/_base.scss */
+/* line 1269, ../scss/breakpoints/_base.scss */
 .tiny {
   font-size: .9em;
 }
 
-/* line 1271, ../scss/breakpoints/_base.scss */
+/* line 1273, ../scss/breakpoints/_base.scss */
 .hide {
   display: none;
 }
 
-/* line 1274, ../scss/breakpoints/_base.scss */
+/* line 1276, ../scss/breakpoints/_base.scss */
 .show {
   display: block;
 }
@@ -2795,34 +2796,34 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 1282, ../scss/breakpoints/_base.scss */
+/* line 1284, ../scss/breakpoints/_base.scss */
 .footer {
   clear: both;
   background-color: #323944;
   color: #f8f9fa;
 }
-/* line 1286, ../scss/breakpoints/_base.scss */
+/* line 1288, ../scss/breakpoints/_base.scss */
 .footer a.logo img {
   max-width: 150px;
   width: 100%;
   display: block;
   margin: 5px auto 0;
 }
-/* line 1292, ../scss/breakpoints/_base.scss */
+/* line 1294, ../scss/breakpoints/_base.scss */
 .footer .copyright {
   font-size: .8em;
   padding: 7px 0;
   background: rgba(0, 0, 0, 0.2);
 }
-/* line 1297, ../scss/breakpoints/_base.scss */
+/* line 1299, ../scss/breakpoints/_base.scss */
 .footer section {
   margin-bottom: 1em;
 }
-/* line 1298, ../scss/breakpoints/_base.scss */
+/* line 1300, ../scss/breakpoints/_base.scss */
 .footer section h3 {
   margin-bottom: .25em;
 }
-/* line 1303, ../scss/breakpoints/_base.scss */
+/* line 1305, ../scss/breakpoints/_base.scss */
 .footer .textwidget p:first-of-type {
   margin-top: 0;
 }
@@ -2836,22 +2837,22 @@ it simple because you'll have to
 override these styles for the desktop
 view.
 */
-/* line 1317, ../scss/breakpoints/_base.scss */
+/* line 1319, ../scss/breakpoints/_base.scss */
 .social-navigation {
   margin: 0;
   text-align: center;
 }
-/* line 1320, ../scss/breakpoints/_base.scss */
+/* line 1322, ../scss/breakpoints/_base.scss */
 .social-navigation li {
   display: inline;
 }
-/* line 1323, ../scss/breakpoints/_base.scss */
+/* line 1325, ../scss/breakpoints/_base.scss */
 .social-navigation a {
   display: inline-block;
   margin: 1em;
   text-align: center;
 }
-/* line 1332, ../scss/breakpoints/_base.scss */
+/* line 1334, ../scss/breakpoints/_base.scss */
 .social-navigation svg {
   height: 1.5em;
   width: 1.5em;
@@ -3266,51 +3267,52 @@ you can add resource intensive styles.
   .page-template-full-width .compact .wrap {
     width: 75%;
   }
-  /* line 187, ../scss/breakpoints/_768up.scss */
-  .page-template-full-width .container.count1 .list-item, .page-template-full-width .container.count1 .widget, .page-template-full-width .container.count2 .list-item, .page-template-full-width .container.count2 .widget, .page-template-full-width .container.count3 .list-item, .page-template-full-width .container.count3 .widget, .page-template-full-width .container.count4 .list-item, .page-template-full-width .container.count4 .widget, .page-template-full-width .container.count5 .list-item, .page-template-full-width .container.count5 .widget, .page-template-full-width .container.count6 .list-item, .page-template-full-width .container.count6 .widget, .page-template-full-width .container.count7 .list-item, .page-template-full-width .container.count7 .widget, .page-template-full-width .container.count8 .list-item, .page-template-full-width .container.count8 .widget, .page-template-full-width .container.count9 .list-item, .page-template-full-width .container.count9 .widget, .page-template-full-width .container.count10 .list-item, .page-template-full-width .container.count10 .widget, .page-template-full-width .container.count11 .list-item, .page-template-full-width .container.count11 .widget, .page-template-full-width .container.count12 .list-item, .page-template-full-width .container.count12 .widget, .page-template-full-width .container.count13 .list-item, .page-template-full-width .container.count13 .widget, .page-template-full-width .container.count14 .list-item, .page-template-full-width .container.count14 .widget, .page-template-full-width .container.count15 .list-item, .page-template-full-width .container.count15 .widget {
+
+  /* line 189, ../scss/breakpoints/_768up.scss */
+  .container.count1 .list-item, .container.count1 .widget, .container.count2 .list-item, .container.count2 .widget, .container.count3 .list-item, .container.count3 .widget, .container.count4 .list-item, .container.count4 .widget, .container.count5 .list-item, .container.count5 .widget, .container.count6 .list-item, .container.count6 .widget, .container.count7 .list-item, .container.count7 .widget, .container.count8 .list-item, .container.count8 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count11 .list-item, .container.count11 .widget, .container.count12 .list-item, .container.count12 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
     max-width: inherit;
   }
-  /* line 189, ../scss/breakpoints/_768up.scss */
-  .page-template-full-width .container.count1 .list-item:last-child, .page-template-full-width .container.count1 .widget:last-child, .page-template-full-width .container.count2 .list-item:last-child, .page-template-full-width .container.count2 .widget:last-child, .page-template-full-width .container.count3 .list-item:last-child, .page-template-full-width .container.count3 .widget:last-child, .page-template-full-width .container.count4 .list-item:last-child, .page-template-full-width .container.count4 .widget:last-child, .page-template-full-width .container.count5 .list-item:last-child, .page-template-full-width .container.count5 .widget:last-child, .page-template-full-width .container.count6 .list-item:last-child, .page-template-full-width .container.count6 .widget:last-child, .page-template-full-width .container.count7 .list-item:last-child, .page-template-full-width .container.count7 .widget:last-child, .page-template-full-width .container.count8 .list-item:last-child, .page-template-full-width .container.count8 .widget:last-child, .page-template-full-width .container.count9 .list-item:last-child, .page-template-full-width .container.count9 .widget:last-child, .page-template-full-width .container.count10 .list-item:last-child, .page-template-full-width .container.count10 .widget:last-child, .page-template-full-width .container.count11 .list-item:last-child, .page-template-full-width .container.count11 .widget:last-child, .page-template-full-width .container.count12 .list-item:last-child, .page-template-full-width .container.count12 .widget:last-child, .page-template-full-width .container.count13 .list-item:last-child, .page-template-full-width .container.count13 .widget:last-child, .page-template-full-width .container.count14 .list-item:last-child, .page-template-full-width .container.count14 .widget:last-child, .page-template-full-width .container.count15 .list-item:last-child, .page-template-full-width .container.count15 .widget:last-child {
+  /* line 191, ../scss/breakpoints/_768up.scss */
+  .container.count1 .list-item:last-child, .container.count1 .widget:last-child, .container.count2 .list-item:last-child, .container.count2 .widget:last-child, .container.count3 .list-item:last-child, .container.count3 .widget:last-child, .container.count4 .list-item:last-child, .container.count4 .widget:last-child, .container.count5 .list-item:last-child, .container.count5 .widget:last-child, .container.count6 .list-item:last-child, .container.count6 .widget:last-child, .container.count7 .list-item:last-child, .container.count7 .widget:last-child, .container.count8 .list-item:last-child, .container.count8 .widget:last-child, .container.count9 .list-item:last-child, .container.count9 .widget:last-child, .container.count10 .list-item:last-child, .container.count10 .widget:last-child, .container.count11 .list-item:last-child, .container.count11 .widget:last-child, .container.count12 .list-item:last-child, .container.count12 .widget:last-child, .container.count13 .list-item:last-child, .container.count13 .widget:last-child, .container.count14 .list-item:last-child, .container.count14 .widget:last-child, .container.count15 .list-item:last-child, .container.count15 .widget:last-child {
     margin-right: 0;
   }
-  /* line 193, ../scss/breakpoints/_768up.scss */
-  .page-template-full-width .container.count1 .list-item, .page-template-full-width .container.count1 .widget {
+  /* line 195, ../scss/breakpoints/_768up.scss */
+  .container.count1 .list-item, .container.count1 .widget {
     -webkit-flex: 1 1 100%;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
   }
-  /* line 199, ../scss/breakpoints/_768up.scss */
-  .page-template-full-width .container.count2 .list-item, .page-template-full-width .container.count2 .widget {
+  /* line 201, ../scss/breakpoints/_768up.scss */
+  .container.count2 .list-item, .container.count2 .widget {
     margin-right: 2%;
     -webkit-flex: 1 0 49%;
     -ms-flex: 1 0 49%;
     flex: 1 0 49%;
   }
-  /* line 204, ../scss/breakpoints/_768up.scss */
-  .page-template-full-width .container.count2 .list-item:nth-child(2n), .page-template-full-width .container.count2 .widget:nth-child(2n) {
+  /* line 206, ../scss/breakpoints/_768up.scss */
+  .container.count2 .list-item:nth-child(2n), .container.count2 .widget:nth-child(2n) {
     margin-right: 0;
   }
-  /* line 210, ../scss/breakpoints/_768up.scss */
-  .page-template-full-width .container.count3 .list-item, .page-template-full-width .container.count3 .widget, .page-template-full-width .container.count6 .list-item, .page-template-full-width .container.count6 .widget, .page-template-full-width .container.count5 .list-item, .page-template-full-width .container.count5 .widget, .page-template-full-width .container.count9 .list-item, .page-template-full-width .container.count9 .widget, .page-template-full-width .container.count10 .list-item, .page-template-full-width .container.count10 .widget, .page-template-full-width .container.count13 .list-item, .page-template-full-width .container.count13 .widget, .page-template-full-width .container.count14 .list-item, .page-template-full-width .container.count14 .widget, .page-template-full-width .container.count15 .list-item, .page-template-full-width .container.count15 .widget {
+  /* line 212, ../scss/breakpoints/_768up.scss */
+  .container.count3 .list-item, .container.count3 .widget, .container.count6 .list-item, .container.count6 .widget, .container.count5 .list-item, .container.count5 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
     margin-right: 2%;
     -webkit-flex: 0 1 32%;
     -ms-flex: 0 1 32%;
     flex: 0 1 32%;
   }
-  /* line 215, ../scss/breakpoints/_768up.scss */
-  .page-template-full-width .container.count3 .list-item:nth-child(3n), .page-template-full-width .container.count3 .widget:nth-child(3n), .page-template-full-width .container.count6 .list-item:nth-child(3n), .page-template-full-width .container.count6 .widget:nth-child(3n), .page-template-full-width .container.count5 .list-item:nth-child(3n), .page-template-full-width .container.count5 .widget:nth-child(3n), .page-template-full-width .container.count9 .list-item:nth-child(3n), .page-template-full-width .container.count9 .widget:nth-child(3n), .page-template-full-width .container.count10 .list-item:nth-child(3n), .page-template-full-width .container.count10 .widget:nth-child(3n), .page-template-full-width .container.count13 .list-item:nth-child(3n), .page-template-full-width .container.count13 .widget:nth-child(3n), .page-template-full-width .container.count14 .list-item:nth-child(3n), .page-template-full-width .container.count14 .widget:nth-child(3n), .page-template-full-width .container.count15 .list-item:nth-child(3n), .page-template-full-width .container.count15 .widget:nth-child(3n) {
+  /* line 217, ../scss/breakpoints/_768up.scss */
+  .container.count3 .list-item:nth-child(3n), .container.count3 .widget:nth-child(3n), .container.count6 .list-item:nth-child(3n), .container.count6 .widget:nth-child(3n), .container.count5 .list-item:nth-child(3n), .container.count5 .widget:nth-child(3n), .container.count9 .list-item:nth-child(3n), .container.count9 .widget:nth-child(3n), .container.count10 .list-item:nth-child(3n), .container.count10 .widget:nth-child(3n), .container.count13 .list-item:nth-child(3n), .container.count13 .widget:nth-child(3n), .container.count14 .list-item:nth-child(3n), .container.count14 .widget:nth-child(3n), .container.count15 .list-item:nth-child(3n), .container.count15 .widget:nth-child(3n) {
     margin-right: 0;
   }
-  /* line 221, ../scss/breakpoints/_768up.scss */
-  .page-template-full-width .container.count4 .list-item, .page-template-full-width .container.count4 .widget, .page-template-full-width .container.count7 .list-item, .page-template-full-width .container.count7 .widget, .page-template-full-width .container.count8 .list-item, .page-template-full-width .container.count8 .widget, .page-template-full-width .container.count11 .list-item, .page-template-full-width .container.count11 .widget, .page-template-full-width .container.count12 .list-item, .page-template-full-width .container.count12 .widget {
+  /* line 223, ../scss/breakpoints/_768up.scss */
+  .container.count4 .list-item, .container.count4 .widget, .container.count7 .list-item, .container.count7 .widget, .container.count8 .list-item, .container.count8 .widget, .container.count11 .list-item, .container.count11 .widget, .container.count12 .list-item, .container.count12 .widget {
     margin-right: 2.35%;
     -webkit-flex: 0 1 23%;
     -ms-flex: 0 1 23%;
     flex: 0 1 23%;
   }
-  /* line 226, ../scss/breakpoints/_768up.scss */
-  .page-template-full-width .container.count4 .list-item:nth-child(4n), .page-template-full-width .container.count4 .widget:nth-child(4n), .page-template-full-width .container.count7 .list-item:nth-child(4n), .page-template-full-width .container.count7 .widget:nth-child(4n), .page-template-full-width .container.count8 .list-item:nth-child(4n), .page-template-full-width .container.count8 .widget:nth-child(4n), .page-template-full-width .container.count11 .list-item:nth-child(4n), .page-template-full-width .container.count11 .widget:nth-child(4n), .page-template-full-width .container.count12 .list-item:nth-child(4n), .page-template-full-width .container.count12 .widget:nth-child(4n) {
+  /* line 228, ../scss/breakpoints/_768up.scss */
+  .container.count4 .list-item:nth-child(4n), .container.count4 .widget:nth-child(4n), .container.count7 .list-item:nth-child(4n), .container.count7 .widget:nth-child(4n), .container.count8 .list-item:nth-child(4n), .container.count8 .widget:nth-child(4n), .container.count11 .list-item:nth-child(4n), .container.count11 .widget:nth-child(4n), .container.count12 .list-item:nth-child(4n), .container.count12 .widget:nth-child(4n) {
     margin-right: 0;
   }
 
@@ -3549,18 +3551,18 @@ This is for the larger monitors and possibly full screen viewers.
   
   ******************************************************************/
   /* line 13, ../scss/breakpoints/_1440up.scss */
-  .page-template-full-width .container.count5 .list-item, .page-template-full-width .container.count5 .widget, .page-template-full-width .container.count9 .list-item, .page-template-full-width .container.count9 .widget, .page-template-full-width .container.count10 .list-item, .page-template-full-width .container.count10 .widget, .page-template-full-width .container.count13 .list-item, .page-template-full-width .container.count13 .widget, .page-template-full-width .container.count14 .list-item, .page-template-full-width .container.count14 .widget, .page-template-full-width .container.count15 .list-item, .page-template-full-width .container.count15 .widget {
+  .container.count5 .list-item, .container.count5 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
     margin-right: 1%;
     -webkit-flex: 1 1 19%;
     -ms-flex: 1 1 19%;
     flex: 1 1 19%;
   }
   /* line 18, ../scss/breakpoints/_1440up.scss */
-  .page-template-full-width .container.count5 .list-item:nth-child(3n), .page-template-full-width .container.count5 .widget:nth-child(3n), .page-template-full-width .container.count9 .list-item:nth-child(3n), .page-template-full-width .container.count9 .widget:nth-child(3n), .page-template-full-width .container.count10 .list-item:nth-child(3n), .page-template-full-width .container.count10 .widget:nth-child(3n), .page-template-full-width .container.count13 .list-item:nth-child(3n), .page-template-full-width .container.count13 .widget:nth-child(3n), .page-template-full-width .container.count14 .list-item:nth-child(3n), .page-template-full-width .container.count14 .widget:nth-child(3n), .page-template-full-width .container.count15 .list-item:nth-child(3n), .page-template-full-width .container.count15 .widget:nth-child(3n) {
+  .container.count5 .list-item:nth-child(3n), .container.count5 .widget:nth-child(3n), .container.count9 .list-item:nth-child(3n), .container.count9 .widget:nth-child(3n), .container.count10 .list-item:nth-child(3n), .container.count10 .widget:nth-child(3n), .container.count13 .list-item:nth-child(3n), .container.count13 .widget:nth-child(3n), .container.count14 .list-item:nth-child(3n), .container.count14 .widget:nth-child(3n), .container.count15 .list-item:nth-child(3n), .container.count15 .widget:nth-child(3n) {
     margin-right: 1%;
   }
   /* line 21, ../scss/breakpoints/_1440up.scss */
-  .page-template-full-width .container.count5 .list-item:nth-child(5n), .page-template-full-width .container.count5 .widget:nth-child(5n), .page-template-full-width .container.count9 .list-item:nth-child(5n), .page-template-full-width .container.count9 .widget:nth-child(5n), .page-template-full-width .container.count10 .list-item:nth-child(5n), .page-template-full-width .container.count10 .widget:nth-child(5n), .page-template-full-width .container.count13 .list-item:nth-child(5n), .page-template-full-width .container.count13 .widget:nth-child(5n), .page-template-full-width .container.count14 .list-item:nth-child(5n), .page-template-full-width .container.count14 .widget:nth-child(5n), .page-template-full-width .container.count15 .list-item:nth-child(5n), .page-template-full-width .container.count15 .widget:nth-child(5n) {
+  .container.count5 .list-item:nth-child(5n), .container.count5 .widget:nth-child(5n), .container.count9 .list-item:nth-child(5n), .container.count9 .widget:nth-child(5n), .container.count10 .list-item:nth-child(5n), .container.count10 .widget:nth-child(5n), .container.count13 .list-item:nth-child(5n), .container.count13 .widget:nth-child(5n), .container.count14 .list-item:nth-child(5n), .container.count14 .widget:nth-child(5n), .container.count15 .list-item:nth-child(5n), .container.count15 .widget:nth-child(5n) {
     margin-right: 0;
   }
 }
