@@ -1,5 +1,5 @@
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-				<div id="inner-footer" class="wrap cf">
+				<div class="wrap cf">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo">
 						<?php if ( get_theme_mod( 'braftonium_footerlogo' ) ):
 							$footer_logo = esc_url(get_theme_mod( 'braftonium_footerlogo' ));
