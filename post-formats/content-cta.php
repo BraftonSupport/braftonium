@@ -6,17 +6,14 @@
  * @subpackage Braftonium
  * @since braftonium 1.0
  */
-
 if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
 $title = wp_kses_post(get_sub_field('title'));
 if ($title):
 	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
 endif;
-
 $text = wp_kses_post(get_sub_field('text'));
 $button = get_sub_field('button');
-
 $style = get_sub_field('style');
 $video = esc_url($style['video_url']);
 $classes = array('cta');
