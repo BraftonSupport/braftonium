@@ -1298,14 +1298,19 @@ FOOTER STYLES
 	}
 }
 
-#inner-footer ul {
-	list-style-type: none;
-    line-height: 1.75em;
-	li {
-		text-transform: uppercase;
+#inner-footer {
+	.widget {
+		margin: 0;
 	}
-	.sub-menu li {
-		text-transform: capitalize;
+	ul {
+		list-style-type: none;
+		line-height: 1.75em;
+		li {
+			text-transform: uppercase;
+		}
+		.sub-menu li {
+			text-transform: capitalize;
+		}
 	}
 }
 
