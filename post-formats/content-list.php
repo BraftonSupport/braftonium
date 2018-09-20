@@ -107,11 +107,10 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 			endforeach;
 			
 		elseif ( $recent ):
-			if (empty($number)){
+			if ($number==0){
 				$number = wp_count_posts($recent)->publish;
 			}
 		echo '<div class="container count'.$number.'">';
-		var_dump($number);
 			$recent_query = new WP_Query(
 				array( 
 					'post_type' => $recent,
