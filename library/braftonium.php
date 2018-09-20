@@ -361,8 +361,8 @@ function braftonium_widgets_init() {
 		'name'		  => __( 'Footer Left Widget', 'braftonium' ),
 		'id'			=> 'footer-left',
 		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
@@ -370,8 +370,8 @@ function braftonium_widgets_init() {
 		'name'		  => __( 'Footer Middle Widget', 'braftonium' ),
 		'id'			=> 'footer-middle',
 		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
@@ -379,8 +379,8 @@ function braftonium_widgets_init() {
 		'name'		  => __( 'Footer Right Widget', 'braftonium' ),
 		'id'			=> 'footer-right',
 		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
