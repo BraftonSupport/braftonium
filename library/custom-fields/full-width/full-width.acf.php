@@ -395,7 +395,7 @@ acf_add_local_field_group(array(
 							'key' => 'field_5a4d583bee06f',
 							'label' => __( 'Number of Posts', 'braftonium' ),
 							'name' => 'number_of_posts',
-							'type' => 'text',
+							'type' => 'number',
 							'instructions' => '',
 							'required' => 0,
 							'conditional_logic' => array(
