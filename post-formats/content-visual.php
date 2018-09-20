@@ -12,10 +12,12 @@ $title = wp_kses_post(get_sub_field('title'));
 if ($title):
 	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
 endif;
+
 $tagline = wp_kses_post(get_sub_field('tagline'));
 $button = get_sub_field('button');
 $style = get_sub_field('style');
 $video = esc_url($style['video_url']);
+
 $classes = array('visual');
 if ($style['add_class']){
 	$classes[] = sanitize_html_class($style['add_class']);
@@ -23,6 +25,7 @@ if ($style['add_class']){
 if ($video){
 	$classes[] = 'video';
 }
+
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
 }

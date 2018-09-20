@@ -1,11 +1,14 @@
 /******************************************************************
 Site Name: Braftonium Template
 Author: Yvonne!
+
 Stylesheet: Base Mobile Stylesheet
+
 Be light and don't over style since everything here will be
 loaded by mobile devices. You want to keep it as minimal as
 possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
+
 ******************************************************************/
 
 /*********************
@@ -1306,9 +1309,13 @@ FOOTER STYLES
 
 #inner-footer ul {
 	list-style-type: none;
-}
-#inner-footer ul > li {
-	text-transform: uppercase;
+    line-height: 1.75em;
+	li {
+		text-transform: uppercase;
+	}
+	.sub-menu li {
+		text-transform: capitalize;
+	}
 }
 
 /*
