@@ -113,16 +113,10 @@ TYPOGRAPHY
 *********************/
 
 ul {
-	margin-left: 1em;
 	list-style-type: disc;
-	li {
-		margin-left: 1em;
-	}
 	ul {
+		margin-left: 1em;
 		list-style-type: circle;
-		li {
-			margin-left: 0;
-		}
 		ul {
 			list-style-type: disc;
 		}
@@ -134,9 +128,6 @@ section > ul {
 .widget {
 	.menu button {
 		display: none;
-	}
-	div>ul {
-		margin: 0 0 1em 1.5em;
 	}
 	ul {
 		margin: 0;
@@ -1307,14 +1298,19 @@ FOOTER STYLES
 	}
 }
 
-#inner-footer ul {
-	list-style-type: none;
-    line-height: 1.75em;
-	li {
-		text-transform: uppercase;
+#inner-footer {
+	.widget {
+		margin: 0;
 	}
-	.sub-menu li {
-		text-transform: capitalize;
+	ul {
+		list-style-type: none;
+		line-height: 1.75em;
+		li {
+			text-transform: uppercase;
+		}
+		.sub-menu li {
+			text-transform: capitalize;
+		}
 	}
 }
 
