@@ -21,7 +21,7 @@ $style = get_sub_field('style');
 $video = esc_url($style['video_url']);
 $classes = array('cta');
 if ($style['add_class']){
-	$classes[] = sanitize_html_class($style['add_class']);
+	$classes[] = sanitize_html_classes($style['add_class']);
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";

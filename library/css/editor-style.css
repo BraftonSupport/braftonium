@@ -508,7 +508,7 @@ body#tinymce.wp-editor dl,
 body#tinymce.wp-editor menu,
 body#tinymce.wp-editor ol,
 body#tinymce.wp-editor ul {
-  margin: 1em 0;
+  margin: 1em 0 0 1em;
 }
 /* line 257, ../scss/partials/_normalize.scss */
 body#tinymce.wp-editor dd {

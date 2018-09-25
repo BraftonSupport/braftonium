@@ -21,7 +21,7 @@ $style = get_sub_field('style');
 $imagestyle	 = get_sub_field('image_size_and_shape');
 $classes = array('validation');
 if ($style['add_class']){
-	$classes[] = sanitize_html_class($style['add_class']);
+	$classes[] = sanitize_html_classes($style['add_class']);
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
