@@ -31,8 +31,7 @@ License URI: http://sam.zoy.org/wtfpl/
 **Build a Page** - Use page template "Full Width". Add rows and fill them out. Save + publish.
 
 
-What the heck is **shenanigans**?
-
+##### What the heck is **shenanigans**?
 It's not quite ready yet. Don't know how best to add it to things. [Link](http://kristofferandreasen.github.io/wickedCSS/documentation.html)
 
 ### Submit Bugs & or Fixes:
