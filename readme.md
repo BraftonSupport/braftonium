@@ -17,6 +17,7 @@ Add Another Widget Area - Install Braftonium plugin. Choose your widget areas, o
 Add Custom Post Types - Same as the above.
 
 #### Changes to the Theme
+General Settings - These should be self explanatory. 
 Changes theme Colors
 Build a Page
 
