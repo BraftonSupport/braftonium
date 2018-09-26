@@ -130,7 +130,6 @@ section > ul {
 		display: none;
 	}
 	ul {
-		margin: 0;
 		li {
 			ul {
 				padding-left: 1em;
@@ -1303,6 +1302,7 @@ FOOTER STYLES
 		margin: 0;
 	}
 	ul {
+		margin: 0;
 		list-style-type: none;
 		line-height: 1.75em;
 		li {
