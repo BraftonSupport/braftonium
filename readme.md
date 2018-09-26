@@ -14,24 +14,25 @@ License URI: http://sam.zoy.org/wtfpl/
 - Braftonium
 
 ## How to:
-Add Google Analytics - Install Braftonium plugin. Add GA code. Save.
+**Add Google Analytics** - Install Braftonium plugin. Add GA code. Save.
 
-Add Another Widget Area - Install Braftonium plugin. Choose your widget areas, or add your own. Save.
+**Add Another Widget Area** - Install Braftonium plugin. Choose your widget areas, or add your own. Save.
 
-Add Custom Post Types - Same as the above.
+**Add Custom Post Types** - Same as the above.
 
 ### Changes to the Theme
-General Settings - These should be self explanatory.
+**General Settings** - These should be self explanatory.
 
-Blog Layout
+**Blog Layout** - 
 ![Image](https://raw.githubusercontent.com/BraftonSupport/braftonium/master/library/images/bloglayout.jpg) 
 
-Changes theme Colors - Appearance -> Customize
+**Changes theme Colors** - Appearance -> Customize
 
-Build a Page - Use page template "Full Width"
+**Build a Page** - Use page template "Full Width". Add rows and fill them out. Save + publish.
 
 
-What the heck is shenanigans?
+What the heck is **shenanigans**?
+
 It's not quite ready yet. Don't know how best to add it to things. [Link](http://kristofferandreasen.github.io/wickedCSS/documentation.html)
 
 ### Submit Bugs & or Fixes:
