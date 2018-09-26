@@ -10,6 +10,18 @@ License URI: http://sam.zoy.org/wtfpl/
 ACF Pro
 Braftonium
 
+## How to -
+
+Add Google Analytics - Install Braftonium plugin. Add GA code. Save.
+Add Another Widget Area - Install Braftonium plugin. Choose your widget areas, or add your own. Save.
+Add Custom Post Types - Same as the above.
+
+#### Changes to the Theme
+Changes theme Colors
+Build a Page
+
+What the heck is shenanigans?
+
 #### Submit Bugs & or Fixes:
 https://github.com/BraftonSupport/braftonium/issues
 
