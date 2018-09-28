@@ -69,6 +69,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					if( in_array('square', $imagestyle) ): $size = 'mediumsquared'; endif;
 					if( in_array('full', $imagestyle) ): $size = 'full'; endif;
 				endif;
+				if ( $item['title'] ): $titlestring = sanitize_text_field($item['title']); endif;
 			?>
 				<div class="list-item"><?php
 				if ( $item['button'] ): echo '<a href="'.$url.'" target="'. $target.'" name="'.$titlestring.'>'; endif;
