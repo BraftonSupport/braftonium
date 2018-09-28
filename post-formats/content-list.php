@@ -84,9 +84,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				if ( $item['button'] ): echo '</a>'; endif;
 
 				if ( $item['title'] ):
+					$titlestring = sanitize_text_field($item['title']);
 					echo '<h3>';
 					 if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
-					 $titlestring = sanitize_text_field($item['title']);
 					 if (strlen($titlestring) > 65){
 						 $titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
 					 }
@@ -97,7 +97,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				echo '</div>';
 				
 				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
-					if (!$text): __( 'Read More', 'braftonium' );
+					if ($text=='Read More'): _e( 'Read More', 'braftonium' ); echo '<span class="hide">'. $titlestring.'</span>';
 					else: echo $text;
 					endif;
 					echo '</a>';
@@ -147,7 +147,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						}
 						echo '</p>';
 					if ( $showbutton ){ ?>
-						<a href="<?php echo get_permalink(); ?>" class="button"> <?php _e( 'Read More', 'braftonium' ); ?></a>
+						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e( 'Read More', 'braftonium' ); echo '<span class="hide">'.$titlestring.'</span>'; ?></a>
 					<?php } ?>
 				</div>
 			<?php endwhile;
