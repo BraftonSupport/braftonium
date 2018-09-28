@@ -71,7 +71,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				endif;
 			?>
 				<div class="list-item"><?php
-				if ( $item['button'] ): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
+				if ( $item['button'] ): echo '<a href="'.$url.'" target="'. $target.'" name="'.$titlestring.'>'; endif;
 				if ( $item['image'] ):
 					echo '<div class="image">';
 						if ( is_array($imagestyle) && in_array('round', $imagestyle) ):
@@ -117,8 +117,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					'showposts' => $number
 				)
 			);
-			while ($recent_query->have_posts()) : $recent_query->the_post(); ?>
-				<div class="list-item"><a href="<?php the_permalink() ?>">
+			while ($recent_query->have_posts()) : $recent_query->the_post();
+				$titlestring = get_the_title($post); ?>
+				<div class="list-item"><a href="<?php the_permalink() ?>" name="<?php echo $titlestring; ?>">
 					<?php if ( $imagestyle && in_array('round', $imagestyle) && has_post_thumbnail() ){
 						?><div class="image"><?php
 						 the_post_thumbnail('mediumsquared', ['class' => 'round']);
@@ -130,7 +131,6 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					}
 					?>
 						<h3><?php
-						$titlestring = get_the_title($post);
 						if (strlen($titlestring) > 65){
 							$titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
 						}
