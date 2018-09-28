@@ -105,9 +105,8 @@ add_action( 'customize_register', 'braftonium_customizer' );
 
 
 /*
-This is a modification of a function found in the twentythirteen theme where we can declare some
-external fonts. If you're using Google Fonts, you can replace these fonts, change it in your scss files
-and be up and running in seconds.
+This is where we can declare some external fonts. If you're using Google Fonts, you can replace
+these fonts, change it in your scss files and be up and running in seconds.
 */
 function braftonium_fonts() {
   wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
@@ -245,7 +244,7 @@ if ( isset($layout) && $layout=='rich' ) {
 }
 endif;
 
-
+// Adds js needed for the video background.
 function braftonium_video_script() {
 	wp_enqueue_script( 'video', get_template_directory_uri() . '/library/js/video.js', array(), '1.0.0', true );
 }

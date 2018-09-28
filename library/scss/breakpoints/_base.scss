@@ -1275,10 +1275,27 @@ SIDEBARS & ASIDES
 }
 
 .hide {
-	display: none;
+    border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
 }
 .show {
-	display: block;
+	clip: none;
+	clip-path: none;
+    height: auto;
+    margin: auto;
+    overflow: none;
+    padding: initial;
+    position: initial;
+    width: auto;
+    white-space: auto;
 }
 
 /*********************

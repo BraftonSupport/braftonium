@@ -24,7 +24,7 @@
 								</header>
 
 								<section class="entry-content">
-										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'braftonium' ) . '</span>' ); ?>
+										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'braftonium' ) . '<span class="hide">'.get_the_title().'</span>'.'</span>' ); ?>
 								</section>
 
 								<!--<footer class="article-footer">
