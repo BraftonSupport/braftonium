@@ -15,7 +15,7 @@ $tagline = wp_kses_post(get_field('tagline'));
 	<div id="content" class="hentry">
 		<?php $sectionrow=0;
 		if ($background_image||$title||$tagline) : ?>
-			<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
+			<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>  role="banner">
 				<div class="black"><div class="wrap">
 					<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
 					<?php if ($tagline): echo $tagline; endif; ?>

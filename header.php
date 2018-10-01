@@ -116,7 +116,7 @@
 
 		<div id="container">
 
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="header" itemscope itemtype="http://schema.org/WPHeader">
 				<?php if (is_page_template('full-width.php')){ ?>
 					<a class="skip-link" href="#content">Skip to content</a>
 				<?php } else { ?>
@@ -140,7 +140,8 @@
 						} ?>
 					</div>
 
-					<nav class="<?php if ($nav): echo sanitize_text_field ($nav); else: echo 'below'; endif; ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<div role="navigation" class="<?php if ($nav): echo sanitize_text_field ($nav); else: echo 'below'; endif; ?>">
+					<nav itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
 							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -154,7 +155,6 @@
 							'depth' => 0,                                   // limit the depth of the nav
 							'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
-					</nav>
-
+					</nav></div>
 				</div>
 			</header>
