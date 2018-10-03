@@ -98,7 +98,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				echo '</div>';
 				
 				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
-					if ($text=='Read More'): _e( 'Read More', 'braftonium' ); echo '<span class="hide">'. $titlestring.'</span>';
+					if ($text=='Read More'||$text==''): _e( 'Read More', 'braftonium' ); echo '<span class="hide">'. $titlestring.'</span>';
 					else: echo $text;
 					endif;
 					echo '</a>';

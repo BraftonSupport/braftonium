@@ -276,12 +276,10 @@ HEADER STYLES
 		display: flex;
 		margin-bottom: 15px;
 		.screen-reader-text {
-			clip: rect(1px, 1px, 1px, 1px);
 			height: 1px;
 			overflow: hidden;
-			position: absolute !important;
 			width: 1px;
-			word-wrap: normal !important;
+			font-size: 0;
 		}
 		input {
 			max-width: 250px;
@@ -1275,27 +1273,18 @@ SIDEBARS & ASIDES
 }
 
 .hide {
-    border: 0;
-	clip: rect(0 0 0 0);
-	clip-path: rect(0 0 0 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap;
+	width: 1px;
+	font-size: 0;
 }
 .show {
-	clip: none;
-	clip-path: none;
+	font-size: inherit;
     height: auto;
     margin: auto;
     overflow: none;
-    padding: initial;
-    position: initial;
     width: auto;
-    white-space: auto;
 }
 
 /*********************

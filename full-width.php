@@ -15,7 +15,7 @@ $tagline = wp_kses_post(get_field('tagline'));
 	<div id="content" class="hentry">
 		<?php $sectionrow=0;
 		if ($background_image||$title||$tagline) : ?>
-			<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>  role="banner">
+			<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
 				<div class="black"><div class="wrap">
 					<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
 					<?php if ($tagline): echo $tagline; endif; ?>
@@ -34,12 +34,12 @@ $tagline = wp_kses_post(get_field('tagline'));
 			endif; ?>
 			<div id="inner-content" class="wrap cf">
 
-				<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+				<main id="main" class="m-all t-all d-all cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 						<?php if( get_the_content() ): ?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> itemscope itemtype="http://schema.org/BlogPosting">
 
 								<?php if( get_the_title()&&!have_rows('content') ): ?>
 									<header class="article-header">

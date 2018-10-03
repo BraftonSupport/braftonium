@@ -124,7 +124,7 @@
 				<?php }?>
 				<div id="inner-header" class="wrap cf container">
 
-					<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow">
+					<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow" name='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
 					<?php $logo1 = esc_url(get_theme_mod( 'braftonium_logo' ));
 						if ($logo1) { ?>
 						<img src='<?php echo $logo1; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="site-title">
@@ -140,8 +140,7 @@
 						} ?>
 					</div>
 
-					<div role="navigation" class="<?php if ($nav): echo sanitize_text_field ($nav); else: echo 'below'; endif; ?>">
-					<nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="<?php if ($nav): echo sanitize_text_field ($nav); else: echo 'below'; endif; ?>" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
 							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -155,6 +154,6 @@
 							'depth' => 0,                                   // limit the depth of the nav
 							'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
-					</nav></div>
+					</nav>
 				</div>
 			</header>
