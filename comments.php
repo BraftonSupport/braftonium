@@ -34,7 +34,7 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
     </section>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-    	<nav class="navigation comment-navigation" role="navigation">
+    	<nav class="navigation comment-navigation">
       	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'braftonium' ) ); ?></div>
       	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'braftonium' ) ); ?></div>
     	</nav>

@@ -16,7 +16,7 @@ $tagline = wp_kses_post(get_field('tagline',$blog_page_id));
 					</section>
 				<?php endif; ?>
 				<div id="inner-content" class="wrap cf">
-					<main id="main" class="m-all t-2of3 d-5of7 cf<?php echo ' '.$layout; ?>" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="m-all t-2of3 d-5of7 cf<?php echo ' '.$layout; ?>" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php if (!$title): ?><header class="article-header hentry">
 							<h1 class="page-title" itemprop="headline"><?php echo get_the_title( $blog_page_id ); ?></h1>
@@ -24,7 +24,7 @@ $tagline = wp_kses_post(get_field('tagline',$blog_page_id));
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?>>
 								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 									echo '<div class="thumbnail">';
 									if (in_array($layout, $layoutarray)):

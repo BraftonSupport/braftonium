@@ -4,7 +4,7 @@
                 */
               ?>
 
-              <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+              <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 
                 <?php if (!has_post_thumbnail()) : ?>
                   <header class="article-header entry-header">
