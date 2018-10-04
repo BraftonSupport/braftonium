@@ -1179,7 +1179,7 @@ textarea,
   padding: 0 0 0 12px;
   margin-bottom: 2px;
   font-size: 1em;
-  color: #5c6b80;
+  color: #323944;
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
@@ -1469,7 +1469,7 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #5c6b80;
+  color: #566176;
   background-color: #eaedf2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2514,12 +2514,12 @@ PAGE NAVI STYLES
 /* line 942, ../scss/breakpoints/_base.scss */
 .pagination .current {
   cursor: default;
-  color: #5c6b80;
+  color: #566176;
 }
 /* line 946, ../scss/breakpoints/_base.scss */
 .pagination .current:hover, .pagination .current:focus {
   background-color: #fff;
-  color: #5c6b80;
+  color: #566176;
 }
 
 /* end .braftonium_page_navi */
@@ -2682,7 +2682,7 @@ COMMENT FORM STYLES
 }
 /* line 1180, ../scss/breakpoints/_base.scss */
 .logged-in-as a {
-  color: #5c6b80;
+  color: #566176;
 }
 
 /* line 1185, ../scss/breakpoints/_base.scss */
