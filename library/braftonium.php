@@ -179,6 +179,33 @@ function braftonium_support() {
 } /* end theme support */
 
 
+if ( ! function_exists( "sanitize_html_classes" ) && function_exists( "sanitize_html_class" ) ) {
+	/**
+	   * sanitize_html_class works just fine for a single class
+	   * Some times le wild <span class="blue hedgehog"> appears, which is when you need this function,
+	   * to validate both blue and hedgehog,
+	   * Because sanitize_html_class doesn't allow spaces.
+	   *
+	   * @uses   sanitize_html_class
+	   * @param  (mixed: string/array) $class   "blue hedgehog goes shopping" or array("blue", "hedgehog", "goes", "shopping")
+	   * @param  (mixed) $fallback Anything you want returned in case of a failure
+	   * @return (mixed: string / $fallback )
+	   */
+	  function sanitize_html_classes( $class, $fallback = null ) {
+		  // Explode it, if it's a string
+		  if ( is_string( $class ) ) {
+			  $class = explode(" ", $class);
+		  } 
+		  if ( is_array( $class ) && count( $class ) > 0 ) {
+			  $class = array_map("sanitize_html_class", $class);
+			  return implode(" ", $class);
+		  }
+		  else { 
+			  return sanitize_html_class( $class, $fallback );
+		  }
+	  }
+  }
+
 /**
  * Widget areas to the widget area section 
  */
@@ -315,6 +342,8 @@ function braftonium_be_arrows_in_menus( $item_output, $item, $depth, $args ) {
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'braftonium_be_arrows_in_menus', 10, 4 );
+
+
 /**
  * Add the shopping cart svg to any menu item with the cart class
  * */	
@@ -350,19 +379,22 @@ if( function_exists('acf_add_options_page') ) {
 		?>
 		<div class="wrap">
 			<h1><?php _e( 'Theme General Settings', 'braftonium' ); ?></h1>
-			<p><?php _e( 'If you are working locally, you need to turn on the ACF Pro plugin.', 'braftonium' ); ?></p>
+			<p><?php _e( 'Turn on the Braftonium plugin. You also ACF Pro plugin.', 'braftonium' ); ?></p>
 		</div>
 		<?php
 	}
 }
 
+/**
+ * Adding Footer Widget Areas
+ */
 function braftonium_widgets_init() {
 	register_sidebar( array(
 		'name'		  => __( 'Footer Left Widget', 'braftonium' ),
 		'id'			=> 'footer-left',
 		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
@@ -370,8 +402,8 @@ function braftonium_widgets_init() {
 		'name'		  => __( 'Footer Middle Widget', 'braftonium' ),
 		'id'			=> 'footer-middle',
 		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
@@ -379,11 +411,41 @@ function braftonium_widgets_init() {
 		'name'		  => __( 'Footer Right Widget', 'braftonium' ),
 		'id'			=> 'footer-right',
 		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'braftonium_widgets_init' );
+
+
+function my_set_image_meta_upon_image_upload( $post_ID ) {
+
+	// Check if uploaded file is an image, else do nothing
+	if ( wp_attachment_is_image( $post_ID ) ) {
+
+		$my_image_title = get_post( $post_ID )->post_title;
+
+		// Sanitize the title:  remove hyphens, underscores & extra spaces:
+		$my_image_title = preg_replace( '%\s*[-_\s]+\s*%', ' ',  $my_image_title );
+
+		// Sanitize the title:  capitalize first letter of every word (other letters lower case):
+		$my_image_title = ucwords( strtolower( $my_image_title ) );
+
+		$my_image_meta = array(
+			'ID'		=> $post_ID,			// Specify the image (ID) to be updated
+			'post_title'	=> $my_image_title,		// Set image Title to sanitized title
+		);
+
+		// Set the image Alt-Text
+		update_post_meta( $post_ID, '_wp_attachment_image_alt', $my_image_title );
+
+		// Set the image meta (e.g. Title, Excerpt, Content)
+		wp_update_post( $my_image_meta );
+
+	} 
+}
+add_action( 'add_attachment', 'my_set_image_meta_upon_image_upload' );
+
 ?>

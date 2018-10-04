@@ -6,21 +6,10 @@ if(function_exists("register_field_group"))
 {
 	$dir = dirname(__FILE__);
 	$files = glob("$dir/**/*.acf.php");
-	$custom_post_types = get_field('custom_post_types', 'option');
 	
 	foreach($files as $file){
 		if( is_file($file) ){
 			require_once $file;
 		}
-	}
-		
-	if ( is_array($custom_post_types) && in_array('testimonial', $custom_post_types) ) {
-		require_once get_template_directory().'/library/custom-post-types/testimonials/testimonials.acf.php';
-	}
-	if ( is_array($custom_post_types) &&  in_array('event', $custom_post_types) ) {
-		require_once get_template_directory(). '/library/custom-post-types/events/events.acf.php';
-	}
-	if ( is_array($custom_post_types) &&  in_array('team_member', $custom_post_types) ) {
-		require_once get_template_directory(). '/library/custom-post-types/team/team.acf.php';
 	}
 }

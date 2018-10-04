@@ -113,16 +113,10 @@ TYPOGRAPHY
 *********************/
 
 ul {
-	margin-left: 1em;
 	list-style-type: disc;
-	li {
-		margin-left: 1em;
-	}
 	ul {
+		margin-left: 1em;
 		list-style-type: circle;
-		li {
-			margin-left: 0;
-		}
 		ul {
 			list-style-type: disc;
 		}
@@ -135,11 +129,7 @@ section > ul {
 	.menu button {
 		display: none;
 	}
-	div>ul {
-		margin: 0 0 1em 1.5em;
-	}
 	ul {
-		margin: 0;
 		li {
 			ul {
 				padding-left: 1em;
@@ -198,7 +188,21 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
-
+.skip-link {
+	position: absolute;
+    top: -100px;
+	left: -100px;
+	&:focus, &:focus-within {
+		left: 6px;
+		top: 7px;
+		padding: 15px 23px 14px;
+		background: #f1f1f1;
+		color: #0073aa;
+		z-index: 100000;
+		text-decoration: none;
+		box-shadow: 0 0 2px 2px rgba(0,0,0,.5);
+	}
+}
 .header {
 	background-color: $black;
 	@include transition(all 0.2s ease-in-out);
@@ -272,12 +276,10 @@ HEADER STYLES
 		display: flex;
 		margin-bottom: 15px;
 		.screen-reader-text {
-			clip: rect(1px, 1px, 1px, 1px);
 			height: 1px;
 			overflow: hidden;
-			position: absolute !important;
 			width: 1px;
-			word-wrap: normal !important;
+			font-size: 0;
 		}
 		input {
 			max-width: 250px;
@@ -384,7 +386,7 @@ nav {
 POSTS & CONTENT STYLES
 *********************/
 .black {
-	background: rgba($color: $black, $alpha: .6);
+	background: rgba($color: $black, $alpha: .75);
 }
 .banner, .page-template-full-width .banner {
 	color: $white;
@@ -1275,10 +1277,18 @@ SIDEBARS & ASIDES
 }
 
 .hide {
-	display: none;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+	width: 1px;
+	font-size: 0;
 }
 .show {
-	display: block;
+	font-size: inherit;
+    height: auto;
+    margin: auto;
+    overflow: none;
+    width: auto;
 }
 
 /*********************
@@ -1311,14 +1321,20 @@ FOOTER STYLES
 	}
 }
 
-#inner-footer ul {
-	list-style-type: none;
-    line-height: 1.75em;
-	li {
-		text-transform: uppercase;
+#inner-footer {
+	.widget {
+		margin: 0;
 	}
-	.sub-menu li {
-		text-transform: capitalize;
+	ul {
+		margin: 0;
+		list-style-type: none;
+		line-height: 1.75em;
+		li {
+			text-transform: uppercase;
+		}
+		.sub-menu li {
+			text-transform: capitalize;
+		}
 	}
 }
 

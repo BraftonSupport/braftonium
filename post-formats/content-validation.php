@@ -21,7 +21,7 @@ $style = get_sub_field('style');
 $imagestyle	 = get_sub_field('image_size_and_shape');
 $classes = array('validation');
 if ($style['add_class']){
-	$classes[] = sanitize_html_class($style['add_class']);
+	$classes[] = sanitize_html_classes($style['add_class']);
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
@@ -146,7 +146,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						if ($website) { echo '<br/><a href="http://'.$website.'" target="_blank"><span class="testimonial-website">'.$website.'</span></a>'; }
 						if ( $name || $position || $company || $location || $website) { echo '</p>'; }
 					if ( $showbutton ){ ?>
-						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e('Read More', 'braftonium') ?></a>
+						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e('Read More', 'braftonium'); echo '<span class="hide">'.$titlestring.'</span>'; ?></a>
 					<?php } ?>
 					</div>
 				</div>

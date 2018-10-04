@@ -17,7 +17,7 @@ $widgetareas = sanitize_text_field(get_sub_field('widget_area'));
 $style = get_sub_field('style');
 $classes = array('widgetarea');
 if ($style['add_class']){
-	$classes[] = sanitize_html_class($style['add_class']);
+	$classes[] = sanitize_html_classes($style['add_class']);
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";

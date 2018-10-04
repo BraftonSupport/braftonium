@@ -314,7 +314,7 @@ acf_add_local_field_group(array(
 							'label' => __( 'Button?', 'braftonium' ),
 							'name' => 'showbutton',
 							'type' => 'checkbox',
-							'instructions' => __( 'Check this box if you want to link the content but not show the button.', 'braftonium' ),
+							'instructions' => __( 'Do not check this box if you want to link the content but not show a button.', 'braftonium' ),
 							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
@@ -395,7 +395,7 @@ acf_add_local_field_group(array(
 							'key' => 'field_5a4d583bee06f',
 							'label' => __( 'Number of Posts', 'braftonium' ),
 							'name' => 'number_of_posts',
-							'type' => 'text',
+							'type' => 'number',
 							'instructions' => '',
 							'required' => 0,
 							'conditional_logic' => array(

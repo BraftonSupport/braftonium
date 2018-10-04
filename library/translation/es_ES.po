@@ -275,9 +275,8 @@ msgid "Button?"
 msgstr "¿Botón?"
 
 #: library/custom-fields/full-width/full-width.acf.php:317
-msgid "Check this box if you want to link the content but not show the button."
-msgstr ""
-"Marque esta casilla si desea vincular el contenido pero no mostrar el botón."
+msgid "Do not check this box if you want to link the content but not show a button."
+msgstr "No marque esta casilla si desea vincular el contenido pero no mostrar un botón."
 
 #: library/custom-fields/full-width/full-width.acf.php:326
 msgid "Show button?"

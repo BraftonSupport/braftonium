@@ -19,14 +19,14 @@ $show_text = get_sub_field('show_text');
 	if ($show_text && in_array('outro', $show_text)): $outro = wp_kses_post(get_sub_field('outro_text')); endif;
 $list_type = get_sub_field('list_type');
 	if ($list_type=='custom'): $custom = get_sub_field('custom_list'); endif;
-	if ($list_type=='recent'): $recent = get_sub_field('recent'); $number = intval(get_sub_field('number_of_posts')); endif;
+	if ($list_type=='recent'): $recent = get_sub_field('recent'); $number = get_sub_field('number_of_posts'); endif;
 $imagestyle	 = get_sub_field('image_size_and_shape');
 $showbutton	 = get_sub_field('showbutton');
 
 $style = get_sub_field('style');
 $classes = array('list');
 if ($style['add_class']){
-	$classes[] = sanitize_html_class($style['add_class']);
+	$classes[] = sanitize_html_classes($style['add_class']);
 }
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
@@ -69,9 +69,10 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					if( in_array('square', $imagestyle) ): $size = 'mediumsquared'; endif;
 					if( in_array('full', $imagestyle) ): $size = 'full'; endif;
 				endif;
+				if ( $item['title'] ): $titlestring = sanitize_text_field($item['title']); endif;
 			?>
 				<div class="list-item"><?php
-				if ( $item['button'] ): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
+				if ( $item['button'] ): echo '<a href="'.$url.'" target="'. $target.'" name="'.$titlestring.'>'; endif;
 				if ( $item['image'] ):
 					echo '<div class="image">';
 						if ( is_array($imagestyle) && in_array('round', $imagestyle) ):
@@ -84,9 +85,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				if ( $item['button'] ): echo '</a>'; endif;
 
 				if ( $item['title'] ):
+					$titlestring = sanitize_text_field($item['title']);
 					echo '<h3>';
 					 if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
-					 $titlestring = sanitize_text_field($item['title']);
 					 if (strlen($titlestring) > 65){
 						 $titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
 					 }
@@ -97,7 +98,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				echo '</div>';
 				
 				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
-					if (!$text): __( 'Read More', 'braftonium' );
+					if ($text=='Read More'||$text==''): _e( 'Read More', 'braftonium' ); echo '<span class="hide">'. $titlestring.'</span>';
 					else: echo $text;
 					endif;
 					echo '</a>';
@@ -117,8 +118,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					'showposts' => $number
 				)
 			);
-			while ($recent_query->have_posts()) : $recent_query->the_post(); ?>
-				<div class="list-item"><a href="<?php the_permalink() ?>">
+			while ($recent_query->have_posts()) : $recent_query->the_post();
+				$titlestring = get_the_title($post); ?>
+				<div class="list-item"><a href="<?php the_permalink() ?>" name="<?php echo $titlestring; ?>">
 					<?php if ( $imagestyle && in_array('round', $imagestyle) && has_post_thumbnail() ){
 						?><div class="image"><?php
 						 the_post_thumbnail('mediumsquared', ['class' => 'round']);
@@ -130,7 +132,6 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					}
 					?>
 						<h3><?php
-						$titlestring = get_the_title($post);
 						if (strlen($titlestring) > 65){
 							$titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
 						}
@@ -147,7 +148,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						}
 						echo '</p>';
 					if ( $showbutton ){ ?>
-						<a href="<?php echo get_permalink(); ?>" class="button"> <?php _e( 'Read More', 'braftonium' ); ?></a>
+						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e( 'Read More', 'braftonium' ); echo '<span class="hide">'.$titlestring.'</span>'; ?></a>
 					<?php } ?>
 				</div>
 			<?php endwhile;

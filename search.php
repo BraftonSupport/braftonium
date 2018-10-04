@@ -4,12 +4,12 @@
 
 				<div id="inner-content" class="wrap cf">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+					<main id="main" class="m-all t-2of3 d-5of7 cf">
 						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'braftonium' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?>>
 
 								<header class="entry-header article-header">
 
@@ -24,7 +24,7 @@
 								</header>
 
 								<section class="entry-content">
-										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'braftonium' ) . '</span>' ); ?>
+										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'braftonium' ) . '<span class="hide">'.get_the_title().'</span>'.'</span>' ); ?>
 								</section>
 
 								<!--<footer class="article-footer">

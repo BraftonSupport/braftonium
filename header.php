@@ -60,7 +60,7 @@
 			if ($braftonium_hover) { echo 'a:hover, a:focus, a:visited:hover, a:visited:focus, .pagination a:hover, .blog .read-more:hover { color:'.$braftonium_hover.';} .button:hover, .blue-btn:hover, .blue-btn:focus, .blue-btn:active, .hero .read-more:hover { background-color:'.$braftonium_hover.';} '; }
 			if ($braftonium_headerbg) { echo '.header, nav .nav li ul.sub-menu, .blog .simple .byline, .blog .rich article.hentry { background-color:'.$braftonium_headerbg.';} .blog .rich article.hentry .content { background-color:'.$braftonium_headerbg.'cc;}'; }
 			if ($braftonium_headercolor) { echo '.header, .blog .simple .byline, .blog .rich article.hentry .content { color:'.$braftonium_headercolor.';} '; }
-			if ($braftonium_headerlink) { echo '.header a, nav .nav li a, .blog .simple .byline a, .blog .rich article.hentry a, .nav button { color:'.$braftonium_headerlink.';} .header .blue-btn { background-color: background-color:'.$headerlink.';} '; }
+			if ($braftonium_headerlink) { echo '.header a, nav .nav li a, .blog .simple .byline a, .blog .rich article.hentry a, .nav button { color:'.$braftonium_headerlink.';} .header .blue-btn { background-color:'.$headerlink.';} '; }
 			if ($braftonium_headerlinkhover) { echo '.header a:hover, nav .nav li a:hover, .blog .simple .byline a:hover, .blog .rich article.hentry a:hover, .nav button:hover { color:'.$braftonium_headerlinkhover.';} .header .header button:hover, .header .blue-btn:hover { background-color:'.$headerlinkhover.';}'; }
 			if ($braftonium_footerbg_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry { background-color:'.$braftonium_footerbg_color.';} '; }
 			if ($braftonium_footer_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry a { color:'.$braftonium_footer_color.';} '; }
@@ -116,11 +116,15 @@
 
 		<div id="container">
 
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-
+			<header class="header" itemscope itemtype="http://schema.org/WPHeader">
+				<?php if (is_page_template('full-width.php')){ ?>
+					<a class="skip-link" href="#content">Skip to content</a>
+				<?php } else { ?>
+					<a class="skip-link" href="#inner-content">Skip to content</a>
+				<?php }?>
 				<div id="inner-header" class="wrap cf container">
 
-					<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow">
+					<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow" name='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
 					<?php $logo1 = esc_url(get_theme_mod( 'braftonium_logo' ));
 						if ($logo1) { ?>
 						<img src='<?php echo $logo1; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="site-title">
@@ -136,7 +140,7 @@
 						} ?>
 					</div>
 
-					<nav class="<?php if ($nav): echo sanitize_text_field ($nav); else: echo 'below'; endif; ?>" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="<?php if ($nav): echo sanitize_text_field ($nav); else: echo 'below'; endif; ?>" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
 							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -151,6 +155,5 @@
 							'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 					</nav>
-
 				</div>
 			</header>

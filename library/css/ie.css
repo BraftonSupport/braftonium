@@ -674,11 +674,6 @@ SIDEBARS & ASIDES
   margin-bottom: 0.75em;
 }
 
-/* line 296, ../scss/breakpoints/_768up.scss */
-.widget {
-  margin: 0 0 3em 0;
-}
-
 /*********************
 FOOTER STYLES
 *********************/
@@ -687,24 +682,24 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 310, ../scss/breakpoints/_768up.scss */
+/* line 306, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 314, ../scss/breakpoints/_768up.scss */
+/* line 310, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section {
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
   margin: 1em 2% 2em 0;
 }
-/* line 319, ../scss/breakpoints/_768up.scss */
+/* line 315, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section h3 {
   margin-bottom: 1em;
 }
-/* line 322, ../scss/breakpoints/_768up.scss */
+/* line 318, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section:last-child {
   margin-right: 0;
 }

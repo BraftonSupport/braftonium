@@ -1,4 +1,4 @@
-			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+			<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 				<div class="wrap cf">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo">
 						<?php if ( get_theme_mod( 'braftonium_footerlogo' ) ):
@@ -22,11 +22,13 @@
 					endif; ?>
 				</div>
 				<?php if ( is_active_sidebar( 'footer-left' )||is_active_sidebar( 'footer-middle' )||is_active_sidebar( 'footer-right' ) ) :	
-					echo '<div id="inner-footer" class="wrap cf">';
+					echo '<div id="inner-footer" class="wrap cf"><section>';
 					dynamic_sidebar( 'footer-left' );
+					echo '</section><section>';
 					dynamic_sidebar( 'footer-middle' );
+					echo '</section><section>';
 					dynamic_sidebar( 'footer-right' );
-					echo '</div>';
+					echo '</section></div>';
 				endif; ?>
 				<div class="copyright"><p class="source-org wrap">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p></div>
 			</footer>

@@ -20,7 +20,7 @@ $video = esc_url($style['video_url']);
 
 $classes = array('visual');
 if ($style['add_class']){
-	$classes[] = sanitize_html_class($style['add_class']);
+	$classes[] = sanitize_html_classes($style['add_class']);
 }
 if ($video){
 	$classes[] = 'video';
