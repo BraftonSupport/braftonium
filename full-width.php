@@ -13,6 +13,8 @@ $tagline = wp_kses_post(get_field('tagline'));
 <?php get_header(); ?>
 
 	<div id="content" class="hentry">
+		<div id="inner-content" class="cf">
+		<main id="main" class="m-all t-all d-all cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 		<?php $sectionrow=0;
 		if ($background_image||$title||$tagline) : ?>
 			<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
@@ -22,8 +24,8 @@ $tagline = wp_kses_post(get_field('tagline'));
 				</div></div>
 			</section>
 		<?php $sectionrow++;
-		endif; // check if the flexible content field has rows of data
-			if( have_rows('content') ):
+		endif; // check if the flexible content field has rows of data ?>
+			<?php if( have_rows('content') ):
 				// loop through the rows of data
 				while ( have_rows('content') ) : the_row();
 					$_SESSION['sectionrow']=$sectionrow;
@@ -32,10 +34,7 @@ $tagline = wp_kses_post(get_field('tagline'));
 					$sectionrow++;
 				endwhile;
 			endif; ?>
-			<div id="inner-content" class="wrap cf">
-
-				<main id="main" class="m-all t-all d-all cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
+				<div class="wrap">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 						<?php if( get_the_content() ): ?>
@@ -68,13 +67,13 @@ $tagline = wp_kses_post(get_field('tagline'));
 						</article>
 
 					<?php endif; ?>
+				</div>
+		</main>
 
-				</main>
-
-				<?php get_sidebar(); ?>
-
-			</div>
+		<?php get_sidebar(); ?>
 
 		</div>
+
+	</div>
 
 <?php get_footer(); ?>
