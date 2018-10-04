@@ -3,6 +3,7 @@ $brafton_comments = get_field('comments', 'option');
 ?>
 
 			<div id="content">
+			<main id="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 				<?php if (has_post_thumbnail()) : ?>
 					<section class="banner visual"<?php echo ' style="background-image:url('.get_the_post_thumbnail_url(get_the_ID(),'full').')"'; ?>>
 						<div class="black"><div class="wrap">
@@ -24,7 +25,7 @@ $brafton_comments = get_field('comments', 'option');
 				<?php endif; ?>
 				<div id="inner-content" class="wrap cf">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<div class="m-all t-2of3 d-5of7 cf">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -57,14 +58,14 @@ $brafton_comments = get_field('comments', 'option');
 							</article>
 
 						<?php endif; ?>
-					</main>
+						</div>
 
 					<?php get_sidebar(); ?>
 					<?php if ( is_single() && get_field('related_posts', 'option')=='below' ) :
 						braftonium_related_posts(3);
 					endif; ?>
 				</div>
-
+				</main>
 			</div>
 
 <?php get_footer(); ?>

@@ -1,4 +1,4 @@
-			<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 				<div class="wrap cf">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo">
 						<?php if ( get_theme_mod( 'braftonium_footerlogo' ) ):
