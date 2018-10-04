@@ -65,7 +65,7 @@
 			if ($braftonium_footerbg_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry { background-color:'.$braftonium_footerbg_color.';} '; }
 			if ($braftonium_footer_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry a { color:'.$braftonium_footer_color.';} '; }
 			if ($braftonium_footerlink_color) { echo '.footer a, .blog .simple .entry-title a { color:'.$braftonium_footerlink_color.';} .footer button, .footer .blue-btn { background-color:'.$braftonium_footerlink_color.';} '; }
-			if ($braftonium_footerlinkhover_color) { echo '.footer a:hover, .blog .simple .entry-title a:hover, .blog .full article.hentry a:hover { color:'.$braftonium_footerlinkhover_color.';} .footer button:hover, .footer .blue-btn:hover { background-color:'.$braftonium_footerlinkhover_color.';} '; }
+			if ($braftonium_footerlinkhover_color) { echo '.footer a:hover, .footer a:focus, .blog .simple .entry-title a:hover, .blog .full article.hentry a:hover { color:'.$braftonium_footerlinkhover_color.';} .footer button:hover, .footer .blue-btn:hover { background-color:'.$braftonium_footerlinkhover_color.';} '; }
 			if ($braftonium_hover) { echo '@media only screen and (max-width: 768px){ nav .nav li a { background-color:'.$braftonium_headerbg.';} } '; }
 		echo '</style>';
 
