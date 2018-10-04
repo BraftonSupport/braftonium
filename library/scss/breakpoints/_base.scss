@@ -711,6 +711,10 @@ svg {
 	}
 }
 
+iframe {
+	width: 100%;
+}
+
 .slick {
 	width: 90%;
 	margin: auto;
@@ -1309,9 +1313,13 @@ FOOTER STYLES
 
 #inner-footer ul {
 	list-style-type: none;
-}
-#inner-footer ul > li {
-	text-transform: uppercase;
+    line-height: 1.75em;
+	li {
+		text-transform: uppercase;
+	}
+	.sub-menu li {
+		text-transform: capitalize;
+	}
 }
 
 /*

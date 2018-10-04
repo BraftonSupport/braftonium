@@ -2831,11 +2831,15 @@ FOOTER STYLES
 /* line 1310, ../scss/breakpoints/_base.scss */
 #inner-footer ul {
   list-style-type: none;
+  line-height: 1.75em;
 }
-
 /* line 1313, ../scss/breakpoints/_base.scss */
-#inner-footer ul > li {
+#inner-footer ul li {
   text-transform: uppercase;
+}
+/* line 1316, ../scss/breakpoints/_base.scss */
+#inner-footer ul .sub-menu li {
+  text-transform: capitalize;
 }
 
 /*
@@ -2847,22 +2851,22 @@ FOOTER STYLES
 	override these styles for the desktop
 	view.
 	*/
-/* line 1326, ../scss/breakpoints/_base.scss */
+/* line 1330, ../scss/breakpoints/_base.scss */
 .social-navigation {
   margin: 0;
   text-align: center;
 }
-/* line 1329, ../scss/breakpoints/_base.scss */
+/* line 1333, ../scss/breakpoints/_base.scss */
 .social-navigation li {
   display: inline;
 }
-/* line 1332, ../scss/breakpoints/_base.scss */
+/* line 1336, ../scss/breakpoints/_base.scss */
 .social-navigation a {
   display: inline-block;
   margin: 1em;
   text-align: center;
 }
-/* line 1341, ../scss/breakpoints/_base.scss */
+/* line 1345, ../scss/breakpoints/_base.scss */
 .social-navigation svg {
   height: 1.5em;
   width: 1.5em;
