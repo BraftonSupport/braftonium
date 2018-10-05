@@ -312,7 +312,11 @@ function braftonium_excerpt_more($more) {
  * Let's redo the social media nav
  *
  * @return array $social_links_icons
- */
+ * @param   string  $output			menu HTML
+ * @param   string  $item			menu
+ * @param   int		$depth			menu depth
+ * @param   object  $args			menu args
+ * */
 	// changing it up
 	class Social_Nav_Menu extends Walker_Nav_Menu {
 		function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
@@ -333,7 +337,13 @@ function braftonium_excerpt_more($more) {
 	}
 /**
  * Now the Main Nav adding the svg
- * */	
+ * 
+ * @param   string  $item_output	HTML
+ * @param   string  $item			menu
+ * @param   int		$depth			menu depth
+ * @param   object  $args			menu args
+ * 
+ * @return  string                  modified menu */	
 function braftonium_be_arrows_in_menus( $item_output, $item, $depth, $args ) {
 	if( in_array( 'menu-item-has-children', $item->classes ) ) {
 		$arrow = '<button>'.braftonium_get_svg_path('icon-expand').'</button>';
@@ -346,7 +356,14 @@ add_filter( 'walker_nav_menu_start_el', 'braftonium_be_arrows_in_menus', 10, 4 )
 
 /**
  * Add the shopping cart svg to any menu item with the cart class
- * */	
+ *
+ * @param   string  $item_output	HTML
+ * @param   string  $item			menu
+ * @param   int		$depth			menu depth
+ * @param   object  $args			menu args
+ * 
+ * @return  string                  modified menu */	
+
 function braftonium_be_cart_icon( $item_output, $item, $depth, $args ) {
 	if( in_array( 'cart', $item->classes ) ) {
 		$icon = '<span>'.braftonium_get_svg_path('icon-cart').'</span>';
@@ -359,7 +376,6 @@ add_filter( 'walker_nav_menu_start_el', 'braftonium_be_cart_icon', 10, 4 );
 /*
 Making the Braftonium Theme Option Page
 */
-
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
 		'page_title' 	=> __( 'Theme General Settings', 'braftonium' ),
@@ -420,6 +436,12 @@ function braftonium_widgets_init() {
 add_action( 'widgets_init', 'braftonium_widgets_init' );
 
 
+/** Adds a title attribute to iframe oembeds
+ *
+ * @since   1.0.0
+ *
+ * @param   int  $post_ID        Post ID */
+
 function my_set_image_meta_upon_image_upload( $post_ID ) {
 
 	// Check if uploaded file is an image, else do nothing
@@ -448,4 +470,69 @@ function my_set_image_meta_upon_image_upload( $post_ID ) {
 }
 add_action( 'add_attachment', 'my_set_image_meta_upon_image_upload' );
 
+
+/**
+ * Adds a title attribute to iframe oembeds
+ *
+ * @since   1.0.0
+ *
+ * @param   string  $html           HTML
+ * @param   string  $url            URL to embed
+ * @param   array   $attributes     HTML Attributes
+ * @param   int     $post_id        Post ID
+ * @return  string                  HTML
+ */
+function add_title_to_iframe_oembed( $html, $url, $attributes, $post_id ) {
+    // Bail if this isn't an iframe
+    if ( strpos( $html, '<iframe' ) === false ) {
+        return $html;
+    }
+    // Bail if the attributes already contain a title
+    if ( array_key_exists( 'title', $attributes ) ) {
+        return $html;
+    }
+    // Define the title for the iframe, depending on the source content
+    // List is based on supported Video and Audio providers at https://codex.wordpress.org/Embeds
+    $url = parse_url( $url );
+    $title = '';
+    switch ( str_replace( 'www.', '', $url['host'] ) ) {
+        /**
+         * Video
+         */
+        case 'animoto.com':
+        case 'blip.com':
+        case 'collegehumor.com':
+        case 'dailymotion.com':
+        case 'funnyordie.com':
+        case 'hulu.com':
+        case 'ted.com':
+        case 'videopress.com':
+        case 'vimeo.com':
+        case 'vine.com':
+        case 'wordpress.tv':
+        case 'youtube.com':
+            $title = __( 'Video Player', 'n7studios' );
+            break;
+        /**
+         * Audio
+         */
+        case 'mixcloud.com':
+        case 'reverbnation.com':
+        case 'soundcloud.com':
+        case 'spotify.com':
+            $title = __( 'Audio Player', 'n7studios' );
+            break;
+        /**
+         * Handle any other URLs here, via further code
+         */
+        default:
+            $title = apply_filters( 'add_title_to_iframe_oembed', $title, $url );
+            break;
+    }
+    // Add title to iframe, depending on the oembed provider
+    $html = str_replace( '></iframe>', ' title="' . $title . '"></iframe>', $html );
+    // Return
+    return $html;
+}
+add_filter( 'embed_oembed_html', 'add_title_to_iframe_oembed', 10, 4 );
 ?>
