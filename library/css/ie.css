@@ -740,42 +740,37 @@ nav .nav li a {
   margin-left: auto;
 }
 
-/* line 24, ../scss/breakpoints/_1030up.scss */
-.hentry {
-  padding: 3em 0 3.75em;
-}
-
-/* line 28, ../scss/breakpoints/_1030up.scss */
+/* line 25, ../scss/breakpoints/_1030up.scss */
 .wrap {
   max-width: 1100px;
 }
 
-/* line 32, ../scss/breakpoints/_1030up.scss */
+/* line 29, ../scss/breakpoints/_1030up.scss */
 .page-template-full-width .compact .wrap {
   width: 50%;
 }
 
-/* line 37, ../scss/breakpoints/_1030up.scss */
+/* line 34, ../scss/breakpoints/_1030up.scss */
 .blog article {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 41, ../scss/breakpoints/_1030up.scss */
+/* line 38, ../scss/breakpoints/_1030up.scss */
 .blog article .thumbnail, .blog article .content {
   flex: 1 0 45%;
   margin: 0 5% 0 0;
 }
-/* line 45, ../scss/breakpoints/_1030up.scss */
+/* line 42, ../scss/breakpoints/_1030up.scss */
 .blog article .thumbnail img {
   width: 100%;
   height: auto;
 }
-/* line 50, ../scss/breakpoints/_1030up.scss */
+/* line 47, ../scss/breakpoints/_1030up.scss */
 .blog .full article.hentry .thumbnail {
   max-height: 200px;
 }
-/* line 53, ../scss/breakpoints/_1030up.scss */
+/* line 50, ../scss/breakpoints/_1030up.scss */
 .blog .simple article {
   display: block;
 }
