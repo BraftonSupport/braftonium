@@ -14,26 +14,26 @@ $tagline = wp_kses_post(get_field('tagline'));
 
 	<div id="content" class="hentry">
 		<div id="inner-content" class="cf">
-		<main id="main" class="m-all t-all d-all cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-		<?php $sectionrow=0;
-		if ($background_image||$title||$tagline) : ?>
-			<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
-				<div class="black"><div class="wrap">
-					<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
-					<?php if ($tagline): echo $tagline; endif; ?>
-				</div></div>
-			</section>
-		<?php $sectionrow++;
-		endif; // check if the flexible content field has rows of data ?>
-			<?php if( have_rows('content') ):
-				// loop through the rows of data
-				while ( have_rows('content') ) : the_row();
-					$_SESSION['sectionrow']=$sectionrow;
-					$row_layout = get_row_layout();
-					get_template_part( 'post-formats/content', $row_layout);
-					$sectionrow++;
-				endwhile;
-			endif; ?>
+			<main id="main" class="m-all t-all d-all cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+			<?php $sectionrow=0;
+			if ($background_image||$title||$tagline) : ?>
+				<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
+					<div class="black"><div class="wrap">
+						<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
+						<?php if ($tagline): echo $tagline; endif; ?>
+					</div></div>
+				</section>
+			<?php $sectionrow++;
+			endif; // check if the flexible content field has rows of data ?>
+				<?php if( have_rows('content') ):
+					// loop through the rows of data
+					while ( have_rows('content') ) : the_row();
+						$_SESSION['sectionrow']=$sectionrow;
+						$row_layout = get_row_layout();
+						get_template_part( 'post-formats/content', $row_layout);
+						$sectionrow++;
+					endwhile;
+				endif; ?>
 				<div class="wrap">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -49,7 +49,6 @@ $tagline = wp_kses_post(get_field('tagline'));
 								<section class="entry-content cf" itemprop="articleBody">
 									<?php the_content(); ?>
 								</section>
-
 							</article>
 						<?php endif; ?>
 					<?php endwhile; else : ?>
@@ -68,12 +67,12 @@ $tagline = wp_kses_post(get_field('tagline'));
 
 					<?php endif; ?>
 				</div>
-		</main>
+			</main><!-- //main -->
 
 		<?php get_sidebar(); ?>
 
-		</div>
+		</div><!-- //inner-content -->
 
-	</div>
+	</div><!-- //content -->
 
 <?php get_footer(); ?>
