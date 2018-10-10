@@ -85,7 +85,6 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				if ( $item['button'] ): echo '</a>'; endif;
 
 				if ( $item['title'] ):
-					$titlestring = sanitize_text_field($item['title']);
 					echo '<h3>';
 					 if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
 					 if (strlen($titlestring) > 65){

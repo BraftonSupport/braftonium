@@ -64,9 +64,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 
 		<?php echo '<div class="text">';
 		if (isset($button['url'])&&!isset($button['title'])): echo '<a href="'.esc_url($button['url']).'"';
-			if ($button['target']): echo ' target="'.sanitize_text_field($button['target']).'"'; endif;
+			if (isset($button['target'])): echo ' target="'.sanitize_text_field($button['target']).'"'; endif;
 		echo '>'; endif;
-		if ($titletext): echo $titletext; endif;
+		if (isset($titletext)): echo $titletext; endif;
 		if (isset($button['url'])&&!isset($button['title'])): echo '</a>'; endif;
 		if ($text): echo $text; endif;
 		echo '</div>';
