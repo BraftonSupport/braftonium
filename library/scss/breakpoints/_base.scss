@@ -385,6 +385,10 @@ nav {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+main.t-2of3 {
+    padding-top: 2em;
+}
+
 .black {
 	background: rgba($color: $black, $alpha: .75);
 }
@@ -711,10 +715,6 @@ svg {
 		max-width: 200px;
 		margin: 0;
 	}
-}
-
-iframe {
-	width: 100%;
 }
 
 .slick {

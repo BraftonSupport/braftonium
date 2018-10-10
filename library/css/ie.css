@@ -215,34 +215,39 @@ HEADER STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-/* line 55, ../scss/breakpoints/_481up.scss */
+/* line 54, ../scss/breakpoints/_481up.scss */
+main.t-2of3 {
+  padding-top: 2.5em;
+}
+
+/* line 57, ../scss/breakpoints/_481up.scss */
 .banner .wrap, .page-template-full-width .banner .wrap {
   padding: 3.5em 0;
 }
 
-/* line 60, ../scss/breakpoints/_481up.scss */
+/* line 62, ../scss/breakpoints/_481up.scss */
 .page-template-full-width section .wrap {
   padding: 2.5em 0 3em;
 }
 
 /* entry content */
-/* line 66, ../scss/breakpoints/_481up.scss */
+/* line 68, ../scss/breakpoints/_481up.scss */
 .entry-content {
   /* at this larger size, we can start to align images */
 }
-/* line 68, ../scss/breakpoints/_481up.scss */
+/* line 70, ../scss/breakpoints/_481up.scss */
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
   display: inline;
   float: left;
 }
-/* line 73, ../scss/breakpoints/_481up.scss */
+/* line 75, ../scss/breakpoints/_481up.scss */
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
   display: inline;
   float: right;
 }
-/* line 78, ../scss/breakpoints/_481up.scss */
+/* line 80, ../scss/breakpoints/_481up.scss */
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;
@@ -251,13 +256,13 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 87, ../scss/breakpoints/_481up.scss */
+/* line 89, ../scss/breakpoints/_481up.scss */
 .container {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 91, ../scss/breakpoints/_481up.scss */
+/* line 93, ../scss/breakpoints/_481up.scss */
 .container > .text, .container > .image {
   -webkit-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
@@ -266,53 +271,53 @@ POSTS & CONTENT STYLES
   margin-top: auto;
   margin-bottom: auto;
 }
-/* line 99, ../scss/breakpoints/_481up.scss */
+/* line 101, ../scss/breakpoints/_481up.scss */
 .container > .list-item, .container .widget {
   -webkit-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
   flex: 1 1 50%;
 }
-/* line 104, ../scss/breakpoints/_481up.scss */
+/* line 106, ../scss/breakpoints/_481up.scss */
 .container > *:last-child {
   margin-right: 0;
 }
 
-/* line 109, ../scss/breakpoints/_481up.scss */
+/* line 111, ../scss/breakpoints/_481up.scss */
 .blog article {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 113, ../scss/breakpoints/_481up.scss */
+/* line 115, ../scss/breakpoints/_481up.scss */
 .blog article .thumbnail, .blog article .content {
   flex: 1 0 45%;
   margin: 0 5% 0 0;
 }
-/* line 118, ../scss/breakpoints/_481up.scss */
+/* line 120, ../scss/breakpoints/_481up.scss */
 .blog .full .thumbnail {
   overflow: hidden;
 }
-/* line 121, ../scss/breakpoints/_481up.scss */
+/* line 123, ../scss/breakpoints/_481up.scss */
 .blog .full article.hentry, .blog .rich article.hentry, .blog .simple article.hentry {
   width: 49%;
   margin-right: 2%;
   float: left;
 }
-/* line 126, ../scss/breakpoints/_481up.scss */
+/* line 128, ../scss/breakpoints/_481up.scss */
 .blog .rich article.hentry, .blog .simple article.hentry {
   flex: 1 0 45%;
   margin-right: 5%;
 }
-/* line 129, ../scss/breakpoints/_481up.scss */
+/* line 131, ../scss/breakpoints/_481up.scss */
 .blog .rich article.hentry:nth-child(2n+1), .blog .rich article.hentry:last-of-type, .blog .simple article.hentry:nth-child(2n+1), .blog .simple article.hentry:last-of-type {
   margin-right: 0;
 }
-/* line 132, ../scss/breakpoints/_481up.scss */
+/* line 134, ../scss/breakpoints/_481up.scss */
 .blog .rich article.hentry:first-of-type, .blog .simple article.hentry:first-of-type {
   flex: 1 0 100%;
 }
 
-/* line 137, ../scss/breakpoints/_481up.scss */
+/* line 139, ../scss/breakpoints/_481up.scss */
 .acf-map {
   width: 95%;
   margin-left: 1%;
@@ -321,24 +326,24 @@ POSTS & CONTENT STYLES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 146, ../scss/breakpoints/_481up.scss */
+/* line 148, ../scss/breakpoints/_481up.scss */
 .footer a.logo {
   width: 50%;
   float: left;
 }
-/* line 149, ../scss/breakpoints/_481up.scss */
+/* line 151, ../scss/breakpoints/_481up.scss */
 .footer a.logo img {
   margin: 10px 0 10px;
   max-width: 100px;
 }
 
-/* line 156, ../scss/breakpoints/_481up.scss */
+/* line 158, ../scss/breakpoints/_481up.scss */
 .social-navigation {
   float: right;
   text-align: right;
   margin: 5px 0 0 auto;
 }
-/* line 160, ../scss/breakpoints/_481up.scss */
+/* line 162, ../scss/breakpoints/_481up.scss */
 .social-navigation a {
   text-align: right;
   margin: .5em;
@@ -538,121 +543,126 @@ nav .nav li.current_page_ancestor > a {
 POSTS & CONTENT STYLES
 *********************/
 /* line 175, ../scss/breakpoints/_768up.scss */
+main.t-2of3 {
+  padding-top: 3em;
+}
+
+/* line 179, ../scss/breakpoints/_768up.scss */
 .banner .wrap, .page-template-full-width .banner .wrap {
   padding: 4em 0;
 }
 
-/* line 179, ../scss/breakpoints/_768up.scss */
+/* line 183, ../scss/breakpoints/_768up.scss */
 .page-template-full-width section .wrap {
   padding: 3em 0 3.5em;
 }
-/* line 182, ../scss/breakpoints/_768up.scss */
+/* line 186, ../scss/breakpoints/_768up.scss */
 .page-template-full-width .compact .wrap {
   width: 75%;
 }
 
-/* line 189, ../scss/breakpoints/_768up.scss */
+/* line 193, ../scss/breakpoints/_768up.scss */
 .container.count1 .list-item, .container.count1 .widget, .container.count2 .list-item, .container.count2 .widget, .container.count3 .list-item, .container.count3 .widget, .container.count4 .list-item, .container.count4 .widget, .container.count5 .list-item, .container.count5 .widget, .container.count6 .list-item, .container.count6 .widget, .container.count7 .list-item, .container.count7 .widget, .container.count8 .list-item, .container.count8 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count11 .list-item, .container.count11 .widget, .container.count12 .list-item, .container.count12 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
   max-width: inherit;
 }
-/* line 191, ../scss/breakpoints/_768up.scss */
+/* line 195, ../scss/breakpoints/_768up.scss */
 .container.count1 .list-item:last-child, .container.count1 .widget:last-child, .container.count2 .list-item:last-child, .container.count2 .widget:last-child, .container.count3 .list-item:last-child, .container.count3 .widget:last-child, .container.count4 .list-item:last-child, .container.count4 .widget:last-child, .container.count5 .list-item:last-child, .container.count5 .widget:last-child, .container.count6 .list-item:last-child, .container.count6 .widget:last-child, .container.count7 .list-item:last-child, .container.count7 .widget:last-child, .container.count8 .list-item:last-child, .container.count8 .widget:last-child, .container.count9 .list-item:last-child, .container.count9 .widget:last-child, .container.count10 .list-item:last-child, .container.count10 .widget:last-child, .container.count11 .list-item:last-child, .container.count11 .widget:last-child, .container.count12 .list-item:last-child, .container.count12 .widget:last-child, .container.count13 .list-item:last-child, .container.count13 .widget:last-child, .container.count14 .list-item:last-child, .container.count14 .widget:last-child, .container.count15 .list-item:last-child, .container.count15 .widget:last-child {
   margin-right: 0;
 }
-/* line 195, ../scss/breakpoints/_768up.scss */
+/* line 199, ../scss/breakpoints/_768up.scss */
 .container.count1 .list-item, .container.count1 .widget {
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
 }
-/* line 201, ../scss/breakpoints/_768up.scss */
+/* line 205, ../scss/breakpoints/_768up.scss */
 .container.count2 .list-item, .container.count2 .widget {
   margin-right: 2%;
   -webkit-flex: 1 0 49%;
   -ms-flex: 1 0 49%;
   flex: 1 0 49%;
 }
-/* line 206, ../scss/breakpoints/_768up.scss */
+/* line 210, ../scss/breakpoints/_768up.scss */
 .container.count2 .list-item:nth-child(2n), .container.count2 .widget:nth-child(2n) {
   margin-right: 0;
 }
-/* line 212, ../scss/breakpoints/_768up.scss */
+/* line 216, ../scss/breakpoints/_768up.scss */
 .container.count3 .list-item, .container.count3 .widget, .container.count6 .list-item, .container.count6 .widget, .container.count5 .list-item, .container.count5 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
   margin-right: 2%;
   -webkit-flex: 0 1 32%;
   -ms-flex: 0 1 32%;
   flex: 0 1 32%;
 }
-/* line 217, ../scss/breakpoints/_768up.scss */
+/* line 221, ../scss/breakpoints/_768up.scss */
 .container.count3 .list-item:nth-child(3n), .container.count3 .widget:nth-child(3n), .container.count6 .list-item:nth-child(3n), .container.count6 .widget:nth-child(3n), .container.count5 .list-item:nth-child(3n), .container.count5 .widget:nth-child(3n), .container.count9 .list-item:nth-child(3n), .container.count9 .widget:nth-child(3n), .container.count10 .list-item:nth-child(3n), .container.count10 .widget:nth-child(3n), .container.count13 .list-item:nth-child(3n), .container.count13 .widget:nth-child(3n), .container.count14 .list-item:nth-child(3n), .container.count14 .widget:nth-child(3n), .container.count15 .list-item:nth-child(3n), .container.count15 .widget:nth-child(3n) {
   margin-right: 0;
 }
-/* line 223, ../scss/breakpoints/_768up.scss */
+/* line 227, ../scss/breakpoints/_768up.scss */
 .container.count4 .list-item, .container.count4 .widget, .container.count7 .list-item, .container.count7 .widget, .container.count8 .list-item, .container.count8 .widget, .container.count11 .list-item, .container.count11 .widget, .container.count12 .list-item, .container.count12 .widget {
   margin-right: 2.35%;
   -webkit-flex: 0 1 23%;
   -ms-flex: 0 1 23%;
   flex: 0 1 23%;
 }
-/* line 228, ../scss/breakpoints/_768up.scss */
+/* line 232, ../scss/breakpoints/_768up.scss */
 .container.count4 .list-item:nth-child(4n), .container.count4 .widget:nth-child(4n), .container.count7 .list-item:nth-child(4n), .container.count7 .widget:nth-child(4n), .container.count8 .list-item:nth-child(4n), .container.count8 .widget:nth-child(4n), .container.count11 .list-item:nth-child(4n), .container.count11 .widget:nth-child(4n), .container.count12 .list-item:nth-child(4n), .container.count12 .widget:nth-child(4n) {
   margin-right: 0;
 }
 
-/* line 234, ../scss/breakpoints/_768up.scss */
+/* line 238, ../scss/breakpoints/_768up.scss */
 .acf-map {
   flex: 1 0 75%;
 }
 
-/* line 238, ../scss/breakpoints/_768up.scss */
+/* line 242, ../scss/breakpoints/_768up.scss */
 .slick {
   width: inherit;
 }
-/* line 240, ../scss/breakpoints/_768up.scss */
+/* line 244, ../scss/breakpoints/_768up.scss */
 .slick .image {
   max-width: 33%;
   margin-right: 25px;
   float: left;
 }
 
-/* line 246, ../scss/breakpoints/_768up.scss */
+/* line 250, ../scss/breakpoints/_768up.scss */
 .archive-title {
   margin: 3em 0 0;
 }
 
-/* line 250, ../scss/breakpoints/_768up.scss */
+/* line 254, ../scss/breakpoints/_768up.scss */
 .blog .hentry {
   padding: 0;
   margin: 3em 0 0;
 }
-/* line 254, ../scss/breakpoints/_768up.scss */
+/* line 258, ../scss/breakpoints/_768up.scss */
 .blog article {
   display: block;
 }
-/* line 256, ../scss/breakpoints/_768up.scss */
+/* line 260, ../scss/breakpoints/_768up.scss */
 .blog article .thumbnail, .blog article .content {
   margin: 0;
 }
-/* line 260, ../scss/breakpoints/_768up.scss */
+/* line 264, ../scss/breakpoints/_768up.scss */
 .blog .full article.hentry .thumbnail {
   max-height: 220px;
 }
 
-/* line 265, ../scss/breakpoints/_768up.scss */
+/* line 269, ../scss/breakpoints/_768up.scss */
 .alignleft, img.alignleft {
   float: left;
   margin-right: 15px;
   margin-bottom: 15px;
 }
 
-/* line 270, ../scss/breakpoints/_768up.scss */
+/* line 274, ../scss/breakpoints/_768up.scss */
 .alignright, img.alignright {
   float: right;
   margin-left: 15px;
   margin-bottom: 15px;
 }
 
-/* line 275, ../scss/breakpoints/_768up.scss */
+/* line 279, ../scss/breakpoints/_768up.scss */
 .aligncenter, img.aligncenter {
   text-align: center;
   margin-right: auto;
@@ -662,13 +672,13 @@ POSTS & CONTENT STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 286, ../scss/breakpoints/_768up.scss */
+/* line 290, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin: 3em 0 0 0;
   padding: 0 0 0 30px;
 }
 
-/* line 291, ../scss/breakpoints/_768up.scss */
+/* line 295, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
@@ -682,24 +692,24 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 306, ../scss/breakpoints/_768up.scss */
+/* line 310, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 310, ../scss/breakpoints/_768up.scss */
+/* line 314, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section {
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
   margin: 1em 2% 2em 0;
 }
-/* line 315, ../scss/breakpoints/_768up.scss */
+/* line 319, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section h3 {
   margin-bottom: 1em;
 }
-/* line 318, ../scss/breakpoints/_768up.scss */
+/* line 322, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section:last-child {
   margin-right: 0;
 }
