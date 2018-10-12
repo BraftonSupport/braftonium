@@ -12,7 +12,7 @@ $title = wp_kses_post(get_sub_field('title'));
 if ($title):
 	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
 endif;
-$widgetareas = sanitize_text_field(get_sub_field('widget_area'));
+$widgetareas = get_sub_field('widget_area');
 
 $style = get_sub_field('style');
 $classes = array('widgetarea');
@@ -61,7 +61,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 			$count = count($widgetareas);
 			echo '<div class="container count'.$count.'">';
 			foreach($widgetareas as $widgetarea):
-				dynamic_sidebar( $widgetarea );
+				dynamic_sidebar( sanitize_text_field($widgetarea) );
 			endforeach;
 			echo '</div>';
 		endif; ?>

@@ -36,39 +36,13 @@
 		<?php // or, set /favicon.ico for IE10 win ?>
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-            <meta name="theme-color" content="#121212">
+		<meta name="theme-color" content="#121212">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php // WordPress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of WordPress head
-			$braftonium_text = sanitize_hex_color(get_theme_mod( 'braftonium_color' ));
-			$braftonium_link = sanitize_hex_color(get_theme_mod( 'braftonium_link_color' ));
-			$braftonium_hover = sanitize_hex_color(get_theme_mod( 'braftonium_linkhover_color' ));
-			$braftonium_headerbg = sanitize_hex_color(get_theme_mod( 'braftonium_headerbg_color' ));
-			$braftonium_headercolor = sanitize_hex_color(get_theme_mod( 'braftonium_header_color' ));
-			$braftonium_headerlink = sanitize_hex_color(get_theme_mod( 'braftonium_headerlink_color' ));
-			$braftonium_headerlinkhover = sanitize_hex_color(get_theme_mod( 'braftonium_headerlinkhover_color' ));
-			$braftonium_footerbg_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerbg_color' ));
-			$braftonium_footer_color = sanitize_hex_color(get_theme_mod( 'braftonium_footer_color' ));
-			$braftonium_footerlink_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerlink_color' ));
-			$braftonium_footerlinkhover_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerlinkhover_color' ));
-		echo '<style>';
-			if ($braftonium_text) { echo 'body { color:'.$braftonium_text.';}'; }
-			if ($braftonium_link) { echo 'a, a:visited, .blog .read-more, .slick-prev:before, .slick-next:before { color:'.$braftonium_link.';} button, .blue-btn, .pagination a:hover, .hero .read-more { background-color:'.$braftonium_link.';} .blog .hero article.hentry { border-bottom-color: '.$braftonium_link.'99; }'; }
-			if ($braftonium_hover) { echo 'a:hover, a:focus, a:visited:hover, a:visited:focus, .pagination a:hover, .blog .read-more:hover { color:'.$braftonium_hover.';} .button:hover, .blue-btn:hover, .blue-btn:focus, .blue-btn:active, .hero .read-more:hover { background-color:'.$braftonium_hover.';} '; }
-			if ($braftonium_headerbg) { echo '.header, nav .nav li ul.sub-menu, .blog .simple .byline, .blog .rich article.hentry { background-color:'.$braftonium_headerbg.';} .blog .rich article.hentry .content { background-color:'.$braftonium_headerbg.'cc;}'; }
-			if ($braftonium_headercolor) { echo '.header, .blog .simple .byline, .blog .rich article.hentry .content { color:'.$braftonium_headercolor.';} '; }
-			if ($braftonium_headerlink) { echo '.header a, nav .nav li a, .blog .simple .byline a, .blog .rich article.hentry a, .nav button { color:'.$braftonium_headerlink.';} .header .blue-btn { background-color:'.$headerlink.';} '; }
-			if ($braftonium_headerlinkhover) { echo '.header a:hover, nav .nav li a:hover, .blog .simple .byline a:hover, .blog .rich article.hentry a:hover, .nav button:hover { color:'.$braftonium_headerlinkhover.';} .header .header button:hover, .header .blue-btn:hover { background-color:'.$headerlinkhover.';}'; }
-			if ($braftonium_footerbg_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry { background-color:'.$braftonium_footerbg_color.';} '; }
-			if ($braftonium_footer_color) { echo '.footer, .blog .simple .entry-title, .blog .full article.hentry a { color:'.$braftonium_footer_color.';} '; }
-			if ($braftonium_footerlink_color) { echo '.footer a, .blog .simple .entry-title a { color:'.$braftonium_footerlink_color.';} .footer button, .footer .blue-btn { background-color:'.$braftonium_footerlink_color.';} '; }
-			if ($braftonium_footerlinkhover_color) { echo '.footer a:hover, .blog .simple .entry-title a:hover, .blog .full article.hentry a:hover { color:'.$braftonium_footerlinkhover_color.';} .footer button:hover, .footer .blue-btn:hover { background-color:'.$braftonium_footerlinkhover_color.';} '; }
-			if ($braftonium_hover) { echo '@media only screen and (max-width: 768px){ nav .nav li a { background-color:'.$braftonium_headerbg.';} } '; }
-		echo '</style>';
-
 		$nav = get_field('navigation_bar_position', 'option');
 
 		$description = get_bloginfo( 'description', 'display' );
@@ -109,7 +83,6 @@
 			</script>';
 		}
 		?>
-
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
