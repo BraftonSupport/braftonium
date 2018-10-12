@@ -1,4 +1,7 @@
 <?php
+//stop direct access
+if ( ! defined( 'ABSPATH' ) )  exit;
+
 function braftonium_language_setup(){
 
 	load_theme_textdomain( 'braftonium', get_template_directory() . '/library/translation' );
@@ -124,7 +127,6 @@ function braftonium_get_svg_path($svgid) {
 	$second_step = explode("</path>" , $first_step[1] );
 	return '<svg class="'.$svgid.$second_step[0].'</svg>';
 }
-
 
 /**
  * What it says on the tin.

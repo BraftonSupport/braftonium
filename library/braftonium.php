@@ -1,32 +1,17 @@
 <?php
 /* Braftonium Theme */
+//stop direct access
+if ( ! defined( 'ABSPATH' ) )  exit;
 
 /*********************
 Removing all stuff in WP_HEAD we don't need.
 *********************/
 
 function braftonium_head_cleanup() {
-	// category feeds
-	// remove_action( 'wp_head', 'feed_links_extra', 3 );
-	// post and comment feeds
-	// remove_action( 'wp_head', 'feed_links', 2 );
-	// EditURI link
-	remove_action( 'wp_head', 'rsd_link' );
-	// windows live writer
-	remove_action( 'wp_head', 'wlwmanifest_link' );
-	// previous link
-	remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
-	// start link
-	remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
-	// links for adjacent posts
-	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
-	// WP version
-	remove_action( 'wp_head', 'wp_generator' );
 	// remove WP version from css
 	add_filter( 'style_loader_src', 'braftonium_remove_wp_ver_css_js', 9999 );
 	// remove Wp version from scripts
 	add_filter( 'script_loader_src', 'braftonium_remove_wp_ver_css_js', 9999 );
-
 } /* end braftonium head cleanup */
 
 // A better title
