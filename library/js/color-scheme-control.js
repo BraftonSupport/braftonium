@@ -12,7 +12,7 @@
 			'braftonium_link_color',
 			'braftonium_linkhover_color',
 			'braftonium_headerbg_color',
-			'braftonium_header_color',
+			'braftonium_header_color2',
 			'braftonium_headerlink_color',
 			'braftonium_headerlinkhover_color',
 			'braftonium_footerbg_color',
@@ -26,7 +26,7 @@
 			'braftonium_link_color',
 			'braftonium_linkhover_color',
 			'braftonium_headerbg_color',
-			'braftonium_header_color',
+			'braftonium_header_color2',
 			'braftonium_headerlink_color',
 			'braftonium_headerlinkhover_color',
 			'braftonium_footerbg_color',
@@ -72,8 +72,8 @@
 
 					// Update Header Text Color.
 					color = colors[4];
-					api( 'braftonium_header_color' ).set( color );
-					api.control( 'braftonium_header_color' ).container.find( '.color-picker-hex' )
+					api( 'braftonium_header_color2' ).set( color );
+					api.control( 'braftonium_header_color2' ).container.find( '.color-picker-hex' )
 						.data( 'data-default-color', color )
 						.wpColorPicker( 'defaultColor', color );
 

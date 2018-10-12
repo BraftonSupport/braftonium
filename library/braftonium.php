@@ -140,7 +140,7 @@ THEME SUPPORT
 function braftonium_support() {
 
 	// wp thumbnails (sizes handled in functions.php)
-	add_theme_support( 'custom-header');
+	//add_theme_support( 'custom-header');
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'mediumsquared', 300, 300, true );
 
@@ -535,4 +535,5 @@ function add_title_to_iframe_oembed( $html, $url, $attributes, $post_id ) {
     return $html;
 }
 add_filter( 'embed_oembed_html', 'add_title_to_iframe_oembed', 10, 4 );
+
 ?>
