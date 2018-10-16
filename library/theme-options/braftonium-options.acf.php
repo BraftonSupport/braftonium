@@ -233,7 +233,7 @@ acf_add_local_field_group(array(
 			'label' => __( 'Add Shenanigans', 'braftonium' ),
 			'name' => 'shenanigans',
 			'type' => 'checkbox',
-			'instructions' => '',
+			'instructions' => 'http://kristofferandreasen.github.io/wickedCSS/documentation.html',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
