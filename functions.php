@@ -72,33 +72,9 @@ if ( ! isset( $content_width ) ) {
 
 /************* THEME CUSTOMIZE *********************/
 
-/* 
-  A good tutorial for creating your own Sections, Controls and Settings:
-  http://code.tutsplus.com/series/a-guide-to-the-wordpress-theme-customizer--wp-33722
-  
-  Good articles on modifying the default options:
-  http://natko.com/changing-default-wordpress-theme-customization-api-sections/
-  http://code.tutsplus.com/tutorials/digging-into-the-theme-customizer-components--wp-27162
-  
-*/
-
 function braftonium_customizer($wp_customize) {
-  // $wp_customize calls go here.
-  //
-  // Uncomment the below lines to remove the default customize sections 
-
-  // $wp_customize->remove_section('title_tagline');
-  // $wp_customize->remove_section('colors');
   $wp_customize->remove_section('background_image');
-  // $wp_customize->remove_section('static_front_page');
-  // $wp_customize->remove_section('nav');
-
-  // Uncomment the below lines to remove the default controls
-  // $wp_customize->remove_control('blogdescription');
-  
-  // Uncomment the following to change the default section titles
   $wp_customize->get_section('colors')->title = __( 'Theme Colors', 'braftonium' );
-//   $wp_customize->get_section('background_image')->title = __( 'Images' );
 }
 
 add_action( 'customize_register', 'braftonium_customizer' );
@@ -127,7 +103,7 @@ function braftonium_get_svg_path($svgid) {
 
 
 /**
- * What it says on the tin.
+ * Social Sharing buttons - What it says on the tin.
  */
 if (!function_exists( 'braftonium_social_sharing_buttons' ) && function_exists('get_field') ) :
 	$ssbutton = get_field('social_share_buttons', 'option');
@@ -178,12 +154,6 @@ function braftonium_comments( $comment, $args, $depth ) {
 	<div id="comment-<?php comment_ID(); ?>" <?php comment_class('cf'); ?>>
 	 <article  class="cf">
 	   <header class="comment-author vcard">
-		 <?php
-		 /*
-		   this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular WordPress gravatar call:
-		   echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-		 */
-		 ?>
 		 <?php // custom gravatar call ?>
 		 <?php
 		   // create variable
