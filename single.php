@@ -18,14 +18,14 @@ $brafton_comments = get_field('comments', 'option');
 								?>
 								<?php //printf( __( 'filed under', 'braftonium' ).': %1$s', get_the_category_list(', ') ); ?>
 								<?php //the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'braftonium' ) . '</span> ', ', ', '</p>' );
-								braftonium_social_sharing_buttons(); ?>
+								if (function_exists('braftonium_social_sharing_buttons')): braftonium_social_sharing_buttons(); endif;  ?>
 							</p>
 						</div></div>
 					</section>
 				<?php endif; ?>
 				<div id="inner-content" class="wrap cf">
 
-					<div class="m-all t-2of3 d-5of7 cf">
+					<div class="m-all <?php if(is_active_sidebar('blog-sidebar')): echo 't-2of3 d-5of7'; endif; ?> cf">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

@@ -125,7 +125,7 @@ function braftonium_scripts_and_styles() {
 		wp_enqueue_script( 'braftonium-js' );
 
 		$shenanigans = get_field('shenanigans', 'option');
-		if ($shenanigans[0]=='on') :
+		if (is_array($shenanigans) && $shenanigans[0]=='on') :
 		wp_register_style( 'shenanigans', get_template_directory_uri() . '/library/css/wickedcss.min.css' );
 		wp_enqueue_style( 'shenanigans' );
 		endif;
@@ -305,7 +305,8 @@ function braftonium_filter_ptags_on_images($content){
 // This removes the annoying […] to a Read More link
 function braftonium_excerpt_more($more) {
 	global $post;
-	// edit here if you like
+	$link= '...<br/><a class="button read-more" href="' . get_permalink() . '">'. __( 'Continue', 'braftonium' ).'<span class="hide"> '. get_the_title('', '', false).'</span></a>';
+	return $link;
 }
 
 /**

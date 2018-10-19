@@ -16,7 +16,7 @@ $tagline = wp_kses_post(get_field('tagline',$blog_page_id));
 					</section>
 				<?php endif; ?>
 				<div id="inner-content" class="wrap cf">
-					<main id="main" class="m-all t-2of3 d-5of7 cf<?php echo ' '.$layout; ?>" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="m-all <?php if(is_active_sidebar('blog-sidebar')): echo 't-2of3 d-5of7'; endif; ?> cf<?php echo ' '.$layout; ?>" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php if (!$title): ?><header class="article-header hentry">
 							<h1 class="page-title" itemprop="headline"><?php echo get_the_title( $blog_page_id ); ?></h1>
@@ -45,7 +45,9 @@ $tagline = wp_kses_post(get_field('tagline',$blog_page_id));
 											/* the author of the post */
 											'<span class="by">'.__( 'by', 'braftonium').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
 										); 
-										braftonium_social_sharing_buttons(); ?>
+										if (function_exists('braftonium_social_sharing_buttons')):
+											braftonium_social_sharing_buttons();
+										endif; ?>
 									</p>
 								</header>
 

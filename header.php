@@ -44,6 +44,7 @@
 		<?php wp_head(); ?>
 		<?php // end of WordPress head
 		$nav = get_field('navigation_bar_position', 'option');
+		$logo1 = esc_url(get_theme_mod( 'braftonium_logo' ));
 
 		$description = get_bloginfo( 'description', 'display' );
 		echo '<script type="application/ld+json">
@@ -95,14 +96,19 @@
 				<?php } else { ?>
 					<a class="skip-link" href="#inner-content">Skip to content</a>
 				<?php }?>
-				<div id="inner-header" class="wrap cf container">
+				<div id="inner-header" class="<?php if (!$logo1 && !$nav=='next') : echo 'auto '; endif; ?>wrap cf container">
 
 					<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow" name='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-					<?php $logo1 = esc_url(get_theme_mod( 'braftonium_logo' ));
+					<?php
 						if ($logo1) { ?>
 						<img src='<?php echo $logo1; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="site-title">
 					<?php } else {
-						bloginfo('name');
+						$blogname = get_bloginfo('name');
+						if (strlen($blogname) < 30):
+							echo $blogname;
+						else :
+							echo substr($blogname, 0, 30).'...' ;
+						endif;
 					} ?></a></div>
 
 					<div class="nextwidget">
