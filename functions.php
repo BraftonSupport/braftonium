@@ -1,4 +1,6 @@
 <?php
+
+/* Languages! */
 function braftonium_language_setup(){
 
 	load_theme_textdomain( 'braftonium', get_template_directory() . '/library/translation' );
@@ -27,10 +29,8 @@ function braftonium_start() {
   function load_admin_style() {
 	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/library/css/admin.css', false, '1.0.0' );
   }
-
-  wp_enqueue_script( 'functions', get_template_directory_uri() . '/library/js/functions.js', array(), '1.0.0', true );
-
-  if ( get_field('sticky_nav', 'option')[0]=='on' ){
+	$stickynav=get_field('sticky_nav', 'option');
+  if ( is_array($stickynav) && $stickynav[0]=='on' ){
 	wp_enqueue_script( 'sticky', get_template_directory_uri() . '/library/js/sticky.js', array(), '1.0.0', true );
   }
 
@@ -52,7 +52,7 @@ function braftonium_start() {
   // launching this stuff after theme setup
   braftonium_support();
 
-  // cleaning up random code around images
+  // cleaning up code around images
   add_filter( 'the_content', 'braftonium_filter_ptags_on_images' );
   // cleaning up excerpt
   add_filter( 'excerpt_more', 'braftonium_excerpt_more' );
@@ -107,7 +107,7 @@ function braftonium_get_svg_path($svgid) {
  */
 if (!function_exists( 'braftonium_social_sharing_buttons' ) && function_exists('get_field') ) :
 	$ssbutton = get_field('social_share_buttons', 'option');
-	if (isset($ssbutton) && in_array("on", $ssbutton) ) {
+	if (is_array($ssbutton) && in_array("on", $ssbutton) ) {
 		function braftonium_social_sharing_buttons() {
 			$social_media = get_field('social_media', 'option');
 			$ss_location = get_field('ss_button_location', 'option');

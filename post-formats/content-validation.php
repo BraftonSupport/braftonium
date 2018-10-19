@@ -146,7 +146,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						if ($website) { echo '<br/><a href="http://'.$website.'" target="_blank"><span class="testimonial-website">'.$website.'</span></a>'; }
 						if ( $name || $position || $company || $location || $website) { echo '</p>'; }
 					if ( $showbutton ){ ?>
-						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e('Read More', 'braftonium'); echo '<span class="hide">'.$titlestring.'</span>'; ?></a>
+						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e('', 'braftonium'); echo '<span class="hide">'.$titlestring.'</span>'; ?></a>
 					<?php } ?>
 					</div>
 				</div>
