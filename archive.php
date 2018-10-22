@@ -5,16 +5,13 @@ $layoutarray = array('full','rich','simple');
 ?>
 
 		<div id="content">
-			<div id="inner-content" class="cf">
+			<div id="inner-content" class="wrap cf">
+				<main id="main" class="m-all <?php if(is_active_sidebar('blog-sidebar')): echo 't-2of3 d-5of7'; endif; ?> cf<?php echo ' '.$layout; ?>" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-				<main id="main" itemscope itemprop="mainContentOfPage"  itemtype="http://schema.org/Blog">
-					<div class="wrap">
-						<div class="m-all <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : echo 't-2of3 d-5of7 '; endif; ?>cf" >
-
-							<?php if (!isset($background_image)):
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
-							the_archive_description( '<div class="taxonomy-description">', '</div>' );
-							endif; ?>
+					<?php if (!isset($background_image)):
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_description( '<div class="taxonomy-description">', '</div>' );
+					endif; ?>
 							
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -30,7 +27,8 @@ $layoutarray = array('full','rich','simple');
 										the_post_thumbnail('medium');
 									endif;
 									echo '</div>';
-								} ?><div class="content"><header class="entry-header article-header">
+								} ?>
+								<div class="content"><header class="entry-header article-header">
 									<h2 class="h3 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 									<p class="byline entry-meta vcard">
 										<?php printf( __( 'Posted', 'braftonium' ).' %1$s %2$s',
@@ -53,21 +51,21 @@ $layoutarray = array('full','rich','simple');
 
 							<?php endwhile; ?>
 
-									<?php braftonium_page_navi(); ?>
+								<?php braftonium_page_navi(); ?>
 
 							<?php else : ?>
 
-									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'braftonium' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'braftonium' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php // _e( 'This is the error message in the archive.php template.', 'braftonium' ); ?></p>
-										</footer>
-									</article>
+								<article id="post-not-found" class="hentry cf">
+									<header class="article-header">
+										<h1><?php _e( 'Oops, Post Not Found!', 'braftonium' ); ?></h1>
+									</header>
+									<section class="entry-content">
+										<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'braftonium' ); ?></p>
+									</section>
+									<footer class="article-footer">
+											<p><?php // _e( 'This is the error message in the archive.php template.', 'braftonium' ); ?></p>
+									</footer>
+								</article>
 
 							<?php endif; ?>
 

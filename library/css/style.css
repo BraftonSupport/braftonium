@@ -1969,32 +1969,32 @@ svg {
 }
 
 /* line 445, ../scss/breakpoints/_base.scss */
-.blog .sticky {
+.blog .sticky, .archive .sticky {
   background: rgba(0, 0, 0, 0.1);
 }
 /* line 447, ../scss/breakpoints/_base.scss */
-.blog .sticky .content {
+.blog .sticky .content, .archive .sticky .content {
   padding: 10px 10px 0;
 }
 /* line 450, ../scss/breakpoints/_base.scss */
-.blog .sticky a {
+.blog .sticky a, .archive .sticky a {
   color: #295297;
 }
 /* line 452, ../scss/breakpoints/_base.scss */
-.blog .sticky a:hover {
+.blog .sticky a:hover, .archive .sticky a:hover {
   color: #0e1b32;
 }
 /* line 457, ../scss/breakpoints/_base.scss */
-.blog .content {
+.blog .content, .archive .content {
   width: 100%;
 }
 /* line 460, ../scss/breakpoints/_base.scss */
-.blog .thumbnail img {
+.blog .thumbnail img, .archive .thumbnail img {
   width: 100%;
   height: auto;
 }
 /* line 464, ../scss/breakpoints/_base.scss */
-.blog .hentry {
+.blog .hentry, .archive .hentry {
   overflow-wrap: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -2005,35 +2005,35 @@ svg {
   padding: 0;
 }
 /* line 474, ../scss/breakpoints/_base.scss */
-.blog .read-more {
+.blog .read-more, .archive .read-more {
   display: table;
   margin-top: 5px;
 }
 /* line 479, ../scss/breakpoints/_base.scss */
-.blog .hero article.hentry {
+.blog .hero article.hentry, .archive .hero article.hentry {
   padding: 0;
   margin: 2em 0 1em;
   border-bottom: 1px solid #9fa6b4;
 }
 /* line 483, ../scss/breakpoints/_base.scss */
-.blog .hero article.hentry:first-of-type {
+.blog .hero article.hentry:first-of-type, .archive .hero article.hentry:first-of-type {
   display: block;
 }
 /* line 485, ../scss/breakpoints/_base.scss */
-.blog .hero article.hentry:first-of-type .thumbnail, .blog .hero article.hentry:first-of-type .content {
+.blog .hero article.hentry:first-of-type .thumbnail, .blog .hero article.hentry:first-of-type .content, .archive .hero article.hentry:first-of-type .thumbnail, .archive .hero article.hentry:first-of-type .content {
   flex: 1 100%;
   margin-right: 0;
 }
 /* line 489, ../scss/breakpoints/_base.scss */
-.blog .hero article.hentry:first-of-type .thumbnail {
+.blog .hero article.hentry:first-of-type .thumbnail, .archive .hero article.hentry:first-of-type .thumbnail {
   margin-bottom: 10px;
 }
 /* line 494, ../scss/breakpoints/_base.scss */
-.blog .hero .read-more {
+.blog .hero .read-more, .archive .hero .read-more {
   float: none;
 }
 /* line 499, ../scss/breakpoints/_base.scss */
-.blog .full article.hentry {
+.blog .full article.hentry, .archive .full article.hentry {
   background: #00457c;
   color: #fff;
   border-radius: 10px;
@@ -2042,44 +2042,44 @@ svg {
   margin: 2em 0 1em;
 }
 /* line 506, ../scss/breakpoints/_base.scss */
-.blog .full article.hentry .content {
+.blog .full article.hentry .content, .archive .full article.hentry .content {
   padding: 10px 10px 0;
 }
 /* line 509, ../scss/breakpoints/_base.scss */
-.blog .full article.hentry .thumbnail img {
+.blog .full article.hentry .thumbnail img, .archive .full article.hentry .thumbnail img {
   border-radius: 10px 10px 0 0;
 }
 /* line 512, ../scss/breakpoints/_base.scss */
-.blog .full article.hentry .thumbnail, .blog .full article.hentry .content {
+.blog .full article.hentry .thumbnail, .blog .full article.hentry .content, .archive .full article.hentry .thumbnail, .archive .full article.hentry .content {
   flex: 1 100%;
   margin-right: 0;
 }
 /* line 516, ../scss/breakpoints/_base.scss */
-.blog .full article.hentry:nth-child(2n+1) {
+.blog .full article.hentry:nth-child(2n+1), .archive .full article.hentry:nth-child(2n+1) {
   margin-right: 0;
 }
 /* line 519, ../scss/breakpoints/_base.scss */
-.blog .full article.hentry:first-of-type {
+.blog .full article.hentry:first-of-type, .archive .full article.hentry:first-of-type {
   width: 100%;
 }
 /* line 521, ../scss/breakpoints/_base.scss */
-.blog .full article.hentry:first-of-type .thumbnail {
+.blog .full article.hentry:first-of-type .thumbnail, .archive .full article.hentry:first-of-type .thumbnail {
   max-height: inherit;
 }
 /* line 525, ../scss/breakpoints/_base.scss */
-.blog .full article.hentry a {
+.blog .full article.hentry a, .archive .full article.hentry a {
   color: #fff;
 }
 /* line 527, ../scss/breakpoints/_base.scss */
-.blog .full article.hentry a:hover {
+.blog .full article.hentry a:hover, .archive .full article.hentry a:hover {
   color: #2e5dab;
 }
 /* line 532, ../scss/breakpoints/_base.scss */
-.blog .full .read-more {
+.blog .full .read-more, .archive .full .read-more {
   display: none;
 }
 /* line 536, ../scss/breakpoints/_base.scss */
-.blog .rich {
+.blog .rich, .archive .rich {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -2088,24 +2088,24 @@ svg {
   flex-wrap: wrap;
 }
 /* line 543, ../scss/breakpoints/_base.scss */
-.blog .rich .has-post-thumbnail {
+.blog .rich .has-post-thumbnail, .archive .rich .has-post-thumbnail {
   position: relative;
 }
 /* line 545, ../scss/breakpoints/_base.scss */
-.blog .rich .has-post-thumbnail .content {
+.blog .rich .has-post-thumbnail .content, .archive .rich .has-post-thumbnail .content {
   position: absolute;
   bottom: 0;
 }
 /* line 550, ../scss/breakpoints/_base.scss */
-.blog .rich h2, .blog .rich .h2 {
+.blog .rich h2, .blog .rich .h2, .archive .rich h2, .archive .rich .h2 {
   font-size: 1.25em;
 }
 /* line 553, ../scss/breakpoints/_base.scss */
-.blog .rich .sticky {
+.blog .rich .sticky, .archive .rich .sticky {
   border: 10px solid rgba(255, 255, 255, 0.75);
 }
 /* line 556, ../scss/breakpoints/_base.scss */
-.blog .rich article.hentry {
+.blog .rich article.hentry, .archive .rich article.hentry {
   flex: 1 0 100%;
   background-color: #00457c;
   color: #fff;
@@ -2113,42 +2113,42 @@ svg {
   margin: 2em 0 1em;
 }
 /* line 562, ../scss/breakpoints/_base.scss */
-.blog .rich article.hentry .content {
+.blog .rich article.hentry .content, .archive .rich article.hentry .content {
   background-color: rgba(0, 69, 124, 0.5);
   padding: 10px 10px 0;
 }
 /* line 565, ../scss/breakpoints/_base.scss */
-.blog .rich article.hentry .content .article-header {
+.blog .rich article.hentry .content .article-header, .archive .rich article.hentry .content .article-header {
   padding: 0 0 .75em 0;
 }
 /* line 569, ../scss/breakpoints/_base.scss */
-.blog .rich article.hentry .thumbnail, .blog .rich article.hentry .content {
+.blog .rich article.hentry .thumbnail, .blog .rich article.hentry .content, .archive .rich article.hentry .thumbnail, .archive .rich article.hentry .content {
   width: 100%;
   margin-right: 0;
 }
 /* line 573, ../scss/breakpoints/_base.scss */
-.blog .rich article.hentry .ssb-social {
+.blog .rich article.hentry .ssb-social, .archive .rich article.hentry .ssb-social {
   padding: 0 0 0 10px;
   display: inline;
 }
 /* line 577, ../scss/breakpoints/_base.scss */
-.blog .rich article.hentry .by, .blog .rich article.hentry .entry-author {
+.blog .rich article.hentry .by, .blog .rich article.hentry .entry-author, .archive .rich article.hentry .by, .archive .rich article.hentry .entry-author {
   display: none;
 }
 /* line 580, ../scss/breakpoints/_base.scss */
-.blog .rich article.hentry a {
+.blog .rich article.hentry a, .archive .rich article.hentry a {
   color: rgba(255, 255, 255, 0.75);
 }
 /* line 582, ../scss/breakpoints/_base.scss */
-.blog .rich article.hentry a:hover {
+.blog .rich article.hentry a:hover, .archive .rich article.hentry a:hover {
   color: #2e5dab;
 }
 /* line 587, ../scss/breakpoints/_base.scss */
-.blog .rich .read-more {
+.blog .rich .read-more, .archive .rich .read-more {
   display: none;
 }
 /* line 591, ../scss/breakpoints/_base.scss */
-.blog .simple {
+.blog .simple, .archive .simple {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -2157,42 +2157,42 @@ svg {
   flex-wrap: wrap;
 }
 /* line 598, ../scss/breakpoints/_base.scss */
-.blog .simple article.hentry {
+.blog .simple article.hentry, .archive .simple article.hentry {
   flex: 1 0 100%;
 }
 /* line 601, ../scss/breakpoints/_base.scss */
-.blog .simple .thumbnail, .blog .simple .content {
+.blog .simple .thumbnail, .blog .simple .content, .archive .simple .thumbnail, .archive .simple .content {
   flex: 1 0 100%;
   width: 100%;
   margin-right: 0;
 }
 /* line 606, ../scss/breakpoints/_base.scss */
-.blog .simple .article-header {
+.blog .simple .article-header, .archive .simple .article-header {
   text-align: center;
   padding: 0 0 .5em 0;
 }
 /* line 610, ../scss/breakpoints/_base.scss */
-.blog .simple .entry-title {
+.blog .simple .entry-title, .archive .simple .entry-title {
   background-color: #00457c;
   padding: 10px 5px;
 }
 /* line 613, ../scss/breakpoints/_base.scss */
-.blog .simple .entry-title a {
+.blog .simple .entry-title a, .archive .simple .entry-title a {
   font-size: .8em;
   color: #fff;
 }
 /* line 616, ../scss/breakpoints/_base.scss */
-.blog .simple .entry-title a:hover {
+.blog .simple .entry-title a:hover, .archive .simple .entry-title a:hover {
   color: #2e5dab;
 }
 /* line 621, ../scss/breakpoints/_base.scss */
-.blog .simple .byline {
+.blog .simple .byline, .archive .simple .byline {
   background-color: rgba(0, 69, 124, 0.5);
   color: #fff;
   padding: 5px;
 }
 /* line 626, ../scss/breakpoints/_base.scss */
-.blog .simple .by, .blog .simple .entry-author, .blog .simple .read-more {
+.blog .simple .by, .blog .simple .entry-author, .blog .simple .read-more, .archive .simple .by, .archive .simple .entry-author, .archive .simple .read-more {
   display: none;
 }
 
@@ -3058,37 +3058,37 @@ tweeners.
   }
 
   /* line 111, ../scss/breakpoints/_481up.scss */
-  .blog article {
+  .blog article, .archive article {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
   }
   /* line 115, ../scss/breakpoints/_481up.scss */
-  .blog article .thumbnail, .blog article .content {
+  .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
     flex: 1 0 45%;
     margin: 0 5% 0 0;
   }
   /* line 120, ../scss/breakpoints/_481up.scss */
-  .blog .full .thumbnail {
+  .blog .full .thumbnail, .archive .full .thumbnail {
     overflow: hidden;
   }
   /* line 123, ../scss/breakpoints/_481up.scss */
-  .blog .full article.hentry, .blog .rich article.hentry, .blog .simple article.hentry {
+  .blog .full article.hentry, .blog .rich article.hentry, .blog .simple article.hentry, .archive .full article.hentry, .archive .rich article.hentry, .archive .simple article.hentry {
     width: 49%;
     margin-right: 2%;
     float: left;
   }
   /* line 128, ../scss/breakpoints/_481up.scss */
-  .blog .rich article.hentry, .blog .simple article.hentry {
+  .blog .rich article.hentry, .blog .simple article.hentry, .archive .rich article.hentry, .archive .simple article.hentry {
     flex: 1 0 45%;
     margin-right: 5%;
   }
   /* line 131, ../scss/breakpoints/_481up.scss */
-  .blog .rich article.hentry:nth-child(2n+1), .blog .rich article.hentry:last-of-type, .blog .simple article.hentry:nth-child(2n+1), .blog .simple article.hentry:last-of-type {
+  .blog .rich article.hentry:nth-child(2n+1), .blog .rich article.hentry:last-of-type, .blog .simple article.hentry:nth-child(2n+1), .blog .simple article.hentry:last-of-type, .archive .rich article.hentry:nth-child(2n+1), .archive .rich article.hentry:last-of-type, .archive .simple article.hentry:nth-child(2n+1), .archive .simple article.hentry:last-of-type {
     margin-right: 0;
   }
   /* line 134, ../scss/breakpoints/_481up.scss */
-  .blog .rich article.hentry:first-of-type, .blog .simple article.hentry:first-of-type {
+  .blog .rich article.hentry:first-of-type, .blog .simple article.hentry:first-of-type, .archive .rich article.hentry:first-of-type, .archive .simple article.hentry:first-of-type {
     flex: 1 0 100%;
   }
 
@@ -3415,20 +3415,20 @@ you can add resource intensive styles.
   }
 
   /* line 255, ../scss/breakpoints/_768up.scss */
-  .blog .hentry {
+  .blog .hentry, .archive .hentry {
     padding: 0;
     margin: 3em 0 0;
   }
   /* line 259, ../scss/breakpoints/_768up.scss */
-  .blog article {
+  .blog article, .archive article {
     display: block;
   }
   /* line 261, ../scss/breakpoints/_768up.scss */
-  .blog article .thumbnail, .blog article .content {
+  .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
     margin: 0;
   }
   /* line 265, ../scss/breakpoints/_768up.scss */
-  .blog .full article.hentry .thumbnail {
+  .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
     max-height: 220px;
   }
 
@@ -3543,27 +3543,27 @@ you can add resource intensive styles.
   }
 
   /* line 34, ../scss/breakpoints/_1030up.scss */
-  .blog article {
+  .blog article, .archive article {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
   }
   /* line 38, ../scss/breakpoints/_1030up.scss */
-  .blog article .thumbnail, .blog article .content {
+  .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
     flex: 1 0 45%;
     margin: 0 5% 0 0;
   }
   /* line 42, ../scss/breakpoints/_1030up.scss */
-  .blog article .thumbnail img {
+  .blog article .thumbnail img, .archive article .thumbnail img {
     width: 100%;
     height: auto;
   }
   /* line 47, ../scss/breakpoints/_1030up.scss */
-  .blog .full article.hentry .thumbnail {
+  .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
     max-height: 200px;
   }
   /* line 50, ../scss/breakpoints/_1030up.scss */
-  .blog .simple article {
+  .blog .simple article, .archive .simple article {
     display: block;
   }
 }
@@ -3603,7 +3603,7 @@ This is for the larger monitors and possibly full screen viewers.
   }
 
   /* line 25, ../scss/breakpoints/_1367up.scss */
-  .blog .full article.hentry .thumbnail {
+  .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
     max-height: 250px;
   }
 }

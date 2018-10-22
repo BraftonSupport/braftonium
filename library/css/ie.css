@@ -283,37 +283,37 @@ main.t-2of3 {
 }
 
 /* line 111, ../scss/breakpoints/_481up.scss */
-.blog article {
+.blog article, .archive article {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
 /* line 115, ../scss/breakpoints/_481up.scss */
-.blog article .thumbnail, .blog article .content {
+.blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
   flex: 1 0 45%;
   margin: 0 5% 0 0;
 }
 /* line 120, ../scss/breakpoints/_481up.scss */
-.blog .full .thumbnail {
+.blog .full .thumbnail, .archive .full .thumbnail {
   overflow: hidden;
 }
 /* line 123, ../scss/breakpoints/_481up.scss */
-.blog .full article.hentry, .blog .rich article.hentry, .blog .simple article.hentry {
+.blog .full article.hentry, .blog .rich article.hentry, .blog .simple article.hentry, .archive .full article.hentry, .archive .rich article.hentry, .archive .simple article.hentry {
   width: 49%;
   margin-right: 2%;
   float: left;
 }
 /* line 128, ../scss/breakpoints/_481up.scss */
-.blog .rich article.hentry, .blog .simple article.hentry {
+.blog .rich article.hentry, .blog .simple article.hentry, .archive .rich article.hentry, .archive .simple article.hentry {
   flex: 1 0 45%;
   margin-right: 5%;
 }
 /* line 131, ../scss/breakpoints/_481up.scss */
-.blog .rich article.hentry:nth-child(2n+1), .blog .rich article.hentry:last-of-type, .blog .simple article.hentry:nth-child(2n+1), .blog .simple article.hentry:last-of-type {
+.blog .rich article.hentry:nth-child(2n+1), .blog .rich article.hentry:last-of-type, .blog .simple article.hentry:nth-child(2n+1), .blog .simple article.hentry:last-of-type, .archive .rich article.hentry:nth-child(2n+1), .archive .rich article.hentry:last-of-type, .archive .simple article.hentry:nth-child(2n+1), .archive .simple article.hentry:last-of-type {
   margin-right: 0;
 }
 /* line 134, ../scss/breakpoints/_481up.scss */
-.blog .rich article.hentry:first-of-type, .blog .simple article.hentry:first-of-type {
+.blog .rich article.hentry:first-of-type, .blog .simple article.hentry:first-of-type, .archive .rich article.hentry:first-of-type, .archive .simple article.hentry:first-of-type {
   flex: 1 0 100%;
 }
 
@@ -632,20 +632,20 @@ main.t-2of3 {
 }
 
 /* line 255, ../scss/breakpoints/_768up.scss */
-.blog .hentry {
+.blog .hentry, .archive .hentry {
   padding: 0;
   margin: 3em 0 0;
 }
 /* line 259, ../scss/breakpoints/_768up.scss */
-.blog article {
+.blog article, .archive article {
   display: block;
 }
 /* line 261, ../scss/breakpoints/_768up.scss */
-.blog article .thumbnail, .blog article .content {
+.blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
   margin: 0;
 }
 /* line 265, ../scss/breakpoints/_768up.scss */
-.blog .full article.hentry .thumbnail {
+.blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
   max-height: 220px;
 }
 
@@ -752,27 +752,27 @@ nav .nav li a {
 }
 
 /* line 34, ../scss/breakpoints/_1030up.scss */
-.blog article {
+.blog article, .archive article {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
 /* line 38, ../scss/breakpoints/_1030up.scss */
-.blog article .thumbnail, .blog article .content {
+.blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
   flex: 1 0 45%;
   margin: 0 5% 0 0;
 }
 /* line 42, ../scss/breakpoints/_1030up.scss */
-.blog article .thumbnail img {
+.blog article .thumbnail img, .archive article .thumbnail img {
   width: 100%;
   height: auto;
 }
 /* line 47, ../scss/breakpoints/_1030up.scss */
-.blog .full article.hentry .thumbnail {
+.blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
   max-height: 200px;
 }
 /* line 50, ../scss/breakpoints/_1030up.scss */
-.blog .simple article {
+.blog .simple article, .archive .simple article {
   display: block;
 }
 

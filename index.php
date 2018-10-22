@@ -2,13 +2,13 @@
 $layout = sanitize_text_field(get_field('blog_layout', 'option'));
 $layoutarray = array('full','rich','simple');
 $blog_page_id = get_option( "page_for_posts" );
-
+$title = wp_kses_post(get_field('title',$blog_page_id));
 ?>
 			<div id="content">
 				<div id="inner-content" class="wrap cf">
 					<main id="main" class="m-all <?php if(is_active_sidebar('blog-sidebar')): echo 't-2of3 d-5of7'; endif; ?> cf<?php echo ' '.$layout; ?>" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-						<?php if (!$title): ?><header class="article-header hentry">
+						<?php if (!isset($title)): ?><header class="article-header hentry">
 							<h1 class="page-title" itemprop="headline"><?php echo get_the_title( $blog_page_id ); ?></h1>
 						</header><?php endif;// end article header ?>
 
