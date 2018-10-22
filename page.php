@@ -1,7 +1,5 @@
 <?php get_header();
-$background_image = esc_url(get_field('background_image'));
 $title = wp_kses_post(get_field('title'));
-$tagline = wp_kses_post(get_field('tagline'));
 $brafton_comments = get_field('comments', 'option');
 ?>
 
@@ -9,15 +7,6 @@ $brafton_comments = get_field('comments', 'option');
 		<div id="inner-content" class="cf">
 
 			<main id="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-				<?php if ($background_image||$title||$tagline) : ?>
-					<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
-						<div class="black"><div class="wrap">
-							<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
-							<?php if ($tagline): echo $tagline; endif; ?>
-						</div></div>
-					</section>
-				<?php endif; ?>
 				
 				<div class="wrap">
 					<div class="m-all <?php if ( is_active_sidebar( 'page-sidebar' ) ) : echo 't-2of3 d-5of7 '; endif; ?>cf" >

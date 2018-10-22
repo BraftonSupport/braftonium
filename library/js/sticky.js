@@ -1,8 +1,8 @@
 jQuery(document).ready(function($){
   // if ($(window).width() > 768) {
-    var mn = $('.header');
+    var mn = $('#inner-header');
         mns = 'scrolled';
-        hdr = $('.header').height();
+        hdr = $('#inner-header').height();
         content = $('#content');
   
     $(window).scroll(function() {

@@ -135,4 +135,52 @@
 						)); ?>
 					</nav>
 				</div>
+				
+				<?php if (is_single()):
+					if (has_post_thumbnail()) : ?>
+					<section class="banner visual"<?php echo ' style="background-image:url('.get_the_post_thumbnail_url(get_the_ID(),'full').')"'; ?>>
+						<div class="black"><div class="wrap">
+							<h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
+							<p class="byline entry-meta vcard">
+								<?php printf( __( 'Posted', 'braftonium' ).' %1$s',
+									/* the time the post was published */
+									'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+									/* the author of the post */
+									// '<span class="by">'.__( 'by', 'braftonium' ).'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+								);
+								?>
+								<?php //printf( __( 'filed under', 'braftonium' ).': %1$s', get_the_category_list(', ') ); ?>
+								<?php //the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'braftonium' ) . '</span> ', ', ', '</p>' );
+								if (function_exists('braftonium_social_sharing_buttons')): braftonium_social_sharing_buttons(); endif;  ?>
+							</p>
+						</div></div>
+					</section>
+					<?php endif;
+				elseif(is_home()):
+					$background_image = esc_url(get_field('background_image',$blog_page_id));
+					$title = wp_kses_post(get_field('title',$blog_page_id));
+					$tagline = wp_kses_post(get_field('tagline',$blog_page_id));
+					if ($background_image||$title||$tagline) : ?>
+						<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
+							<div class="black"><div class="wrap">
+								<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
+								<?php if ($tagline): echo $tagline; endif; ?>
+							</div></div>
+						</section>
+					<?php endif;
+				elseif(!is_page_template( 'full-width.php' ) ):
+					$background_image = esc_url(get_field('background_image'));
+					$title = wp_kses_post(get_field('title'));
+					$tagline = wp_kses_post(get_field('tagline'));
+					if (isset($background_image)) : ?>
+					<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
+						<div class="black"><div class="wrap">
+							<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; else: the_archive_title( '<h1 class="page-title">', '</h1>' ); endif; ?>
+							<?php if ($tagline): echo $tagline; else: the_archive_description( '<div class="taxonomy-description">', '</div>' ); endif; ?>
+						</div></div>
+					</section>
+					<?php endif; ?>
+
+				<?php endif; ?>
+
 			</header>
