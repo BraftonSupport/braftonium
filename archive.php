@@ -1,41 +1,53 @@
-<?php get_header(); ?>
+<?php get_header();
+$background_image = esc_url(get_field('background_image'));
+$layout = sanitize_text_field(get_field('blog_layout', 'option'));
+$layoutarray = array('full','rich','simple');
+?>
 
-			<div id="content">
+		<div id="content">
+			<div id="inner-content" class="cf">
 
-				<div id="inner-content" class="wrap cf">
+				<main id="main" itemscope itemprop="mainContentOfPage"  itemtype="http://schema.org/Blog">
+					<div class="wrap">
+						<div class="m-all <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : echo 't-2of3 d-5of7 '; endif; ?>cf" >
 
-						<main id="main" class="m-all <?php if(is_active_sidebar('blog-sidebar')): echo 't-2of3 d-5of7'; endif; ?> cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-							<?php
+							<?php if (!isset($background_image)):
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
 							the_archive_description( '<div class="taxonomy-description">', '</div>' );
-							?>
+							endif; ?>
 							
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?>>
 
-								<header class="entry-header article-header">
-
-									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+									echo '<div class="thumbnail">';
+									if (in_array($layout, $layoutarray)):
+										echo '<a href="'. get_the_permalink().'"  title="'. the_title_attribute( 'echo=0' ) .'">';
+										the_post_thumbnail('medium');
+										echo '</a>';
+									else:
+										the_post_thumbnail('medium');
+									endif;
+									echo '</div>';
+								} ?><div class="content"><header class="entry-header article-header">
+									<h2 class="h3 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 									<p class="byline entry-meta vcard">
 										<?php printf( __( 'Posted', 'braftonium' ).' %1$s %2$s',
                   							     /* the time the post was published */
                   							     '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
                        								/* the author of the post */
                        								'<span class="by">'.__('by', 'braftonium').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                    							); ?>
+                    							);
+												if (function_exists('braftonium_social_sharing_buttons')):
+													braftonium_social_sharing_buttons();
+												endif; ?>
 									</p>
-
 								</header>
 
 								<section class="entry-content cf">
-
-									<?php the_post_thumbnail( 'thumbnail' ); ?>
-
 									<?php the_excerpt(); ?>
-
-								</section>
+								</section></div>
 
 							</article>
 

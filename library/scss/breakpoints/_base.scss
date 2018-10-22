@@ -212,7 +212,7 @@ HEADER STYLES
 .header {
 	background-color: $black;
 	@include transition(all 0.2s ease-in-out);
-	&.scrolled {
+	.scrolled {
 		position: fixed;
 		top: 0;
 		width: 100%;

@@ -32,7 +32,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   color: $white;
   line-height: 1.75em;
   font-weight: normal;
-  padding: 4px 1em 0;
+  padding: 0 1em;
   border-radius: 4px;
   border: 0;
   cursor: pointer;
@@ -74,7 +74,9 @@ button {
   } // end active
 
 } // end blue button
-
+.read-more {
+  padding: 4px 1em 0;
+}
 .hero .read-more {
   @extend %btn;
   @extend .blue-btn;
