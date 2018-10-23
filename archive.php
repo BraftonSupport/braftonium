@@ -8,7 +8,7 @@ $layoutarray = array('full','rich','simple');
 			<div id="inner-content" class="wrap cf">
 				<main id="main" class="m-all <?php if(is_active_sidebar('blog-sidebar')): echo 't-2of3 d-5of7'; endif; ?> cf<?php echo ' '.$layout; ?>" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-					<?php if (!isset($background_image)):
+					<?php if (!$background_image):
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 					endif; ?>

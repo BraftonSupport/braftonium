@@ -477,11 +477,12 @@ svg {
 	}
 	.hero {
 		article.hentry {
-			padding: 0;
+			padding: 0 0 1em 0;
 			margin: 2em 0 1em;
 			border-bottom: 1px solid $meta-gray;
 			&:first-of-type {
 				display: block;
+				margin-top: 0;
 				.thumbnail, .content {
 					flex: 1 100%;
 					margin-right: 0;
