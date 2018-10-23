@@ -383,7 +383,8 @@ nav {
 POSTS & CONTENT STYLES
 *********************/
 body:not(.page-template-full-width) main {
-	margin: 0 auto 2em auto;
+	margin: 0 auto;
+	padding: 2em 0;
 }
 
 .black {
