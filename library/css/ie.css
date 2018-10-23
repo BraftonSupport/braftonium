@@ -221,7 +221,7 @@ HEADER STYLES
 POSTS & CONTENT STYLES
 *********************/
 /* line 58, ../scss/breakpoints/_481up.scss */
-main.t-2of3 {
+body:not(.page-template-full-width) main {
   padding-top: 2.5em;
 }
 
@@ -550,7 +550,7 @@ nav .nav li.current_page_ancestor > a {
 POSTS & CONTENT STYLES
 *********************/
 /* line 179, ../scss/breakpoints/_768up.scss */
-main.t-2of3 {
+body:not(.page-template-full-width) main {
   padding-top: 3em;
 }
 
@@ -642,34 +642,38 @@ main.t-2of3 {
   padding: 0;
   margin: 3em 0 0;
 }
-/* line 262, ../scss/breakpoints/_768up.scss */
+/* line 261, ../scss/breakpoints/_768up.scss */
+.blog .hentry:first-of-type, .archive .hentry:first-of-type {
+  margin-top: 0;
+}
+/* line 265, ../scss/breakpoints/_768up.scss */
 .blog article, .archive article {
   display: block;
 }
-/* line 264, ../scss/breakpoints/_768up.scss */
+/* line 267, ../scss/breakpoints/_768up.scss */
 .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
   margin: 0;
 }
-/* line 268, ../scss/breakpoints/_768up.scss */
+/* line 271, ../scss/breakpoints/_768up.scss */
 .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
   max-height: 220px;
 }
 
-/* line 273, ../scss/breakpoints/_768up.scss */
+/* line 276, ../scss/breakpoints/_768up.scss */
 .alignleft, img.alignleft {
   float: left;
   margin-right: 15px;
   margin-bottom: 15px;
 }
 
-/* line 278, ../scss/breakpoints/_768up.scss */
+/* line 281, ../scss/breakpoints/_768up.scss */
 .alignright, img.alignright {
   float: right;
   margin-left: 15px;
   margin-bottom: 15px;
 }
 
-/* line 283, ../scss/breakpoints/_768up.scss */
+/* line 286, ../scss/breakpoints/_768up.scss */
 .aligncenter, img.aligncenter {
   text-align: center;
   margin-right: auto;
@@ -679,13 +683,13 @@ main.t-2of3 {
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 294, ../scss/breakpoints/_768up.scss */
+/* line 297, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin: 3em 0 0 0;
   padding: 0 0 0 30px;
 }
 
-/* line 299, ../scss/breakpoints/_768up.scss */
+/* line 302, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
@@ -699,24 +703,24 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 314, ../scss/breakpoints/_768up.scss */
+/* line 317, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 318, ../scss/breakpoints/_768up.scss */
+/* line 321, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section {
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
   margin: 1em 2% 2em 0;
 }
-/* line 323, ../scss/breakpoints/_768up.scss */
+/* line 326, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section h3 {
   margin-bottom: 1em;
 }
-/* line 326, ../scss/breakpoints/_768up.scss */
+/* line 329, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section:last-child {
   margin-right: 0;
 }

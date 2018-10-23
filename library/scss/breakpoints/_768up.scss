@@ -176,7 +176,7 @@ nav .nav {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-main.t-2of3 {
+body:not(.page-template-full-width) main {
     padding-top: 3em;
 }
 
@@ -258,6 +258,9 @@ main.t-2of3 {
 	.hentry {
 		padding: 0;
 		margin: 3em 0 0;
+		&:first-of-type {
+			margin-top: 0;
+		}
 	}
 	article {
 		display: block;

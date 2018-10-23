@@ -382,13 +382,8 @@ nav {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-main{
-	&.t-2of3 {
-		padding-top: 2em;
-	}
-	#inner-content.wrap {
-		margin: 1.5em auto;
-	}
+body:not(.page-template-full-width) main {
+	margin: 0 auto 2em auto;
 }
 
 .black {
