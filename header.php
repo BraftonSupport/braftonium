@@ -96,44 +96,45 @@
 				<?php } else { ?>
 					<a class="skip-link" href="#inner-content">Skip to content</a>
 				<?php }?>
-				<div id="inner-header" class="<?php if (!$logo1 && !$nav=='next') : echo 'auto '; endif; ?>wrap cf container">
+				<div id="inner-header" class="<?php if (!$logo1 && !$nav=='next') : echo 'auto '; endif; ?> cf container">
+					<div class="wrap">
+						<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow" name='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+						<?php
+							if ($logo1) { ?>
+							<img src='<?php echo $logo1; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="site-title">
+						<?php } else {
+							$blogname = get_bloginfo('name');
+							if (strlen($blogname) < 30):
+								echo $blogname;
+							else :
+								echo substr($blogname, 0, 30).'...' ;
+							endif;
+						} ?></a></div>
 
-					<div id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow" name='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-					<?php
-						if ($logo1) { ?>
-						<img src='<?php echo $logo1; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="site-title">
-					<?php } else {
-						$blogname = get_bloginfo('name');
-						if (strlen($blogname) < 30):
-							echo $blogname;
-						else :
-							echo substr($blogname, 0, 30).'...' ;
-						endif;
-					} ?></a></div>
+						<div class="nextwidget">
+							<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'braftonium' );
+							echo braftonium_get_svg_path('icon-bars').braftonium_get_svg_path('icon-close'); ?></button>	
+							<?php if ( is_active_sidebar( 'header-sidebar' ) ) {
+								dynamic_sidebar( 'header-sidebar' );
+							} ?>
+						</div>
 
-					<div class="nextwidget">
-						<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'braftonium' );
-						echo braftonium_get_svg_path('icon-bars').braftonium_get_svg_path('icon-close'); ?></button>	
-						<?php if ( is_active_sidebar( 'header-sidebar' ) ) {
-							dynamic_sidebar( 'header-sidebar' );
-						} ?>
+						<nav class="<?php if ($nav): echo sanitize_text_field ($nav); else: echo 'below'; endif; ?>" itemscope itemtype="http://schema.org/SiteNavigationElement">
+							<?php wp_nav_menu(array(
+								'container' => false,                           // remove nav container
+								'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+								'menu' => __( 'The Main Menu', 'braftonium' ),  // nav name
+								'menu_class' => 'nav top-nav cf',               // adding custom nav class
+								'theme_location' => 'main-nav',                 // where it's located in the theme
+								'before' => '',                                 // before the menu
+								'after' => '',                                  // after the menu
+								'link_before' => '',                            // before each link
+								'link_after' => '',                             // after each link
+								'depth' => 0,                                   // limit the depth of the nav
+								'fallback_cb' => ''                             // fallback function (if there is one)
+							)); ?>
+						</nav>
 					</div>
-
-					<nav class="<?php if ($nav): echo sanitize_text_field ($nav); else: echo 'below'; endif; ?>" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-							'container' => false,                           // remove nav container
-							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-							'menu' => __( 'The Main Menu', 'braftonium' ),  // nav name
-							'menu_class' => 'nav top-nav cf',               // adding custom nav class
-							'theme_location' => 'main-nav',                 // where it's located in the theme
-							'before' => '',                                 // before the menu
-							'after' => '',                                  // after the menu
-							'link_before' => '',                            // before each link
-							'link_after' => '',                             // after each link
-							'depth' => 0,                                   // limit the depth of the nav
-							'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
-					</nav>
 				</div>
 				
 				<?php if (is_single()):
@@ -157,6 +158,7 @@
 					</section>
 					<?php endif;
 				elseif(is_home()):
+					$blog_page_id = get_option( "page_for_posts" );
 					$background_image = esc_url(get_field('background_image',$blog_page_id));
 					$title = wp_kses_post(get_field('title',$blog_page_id));
 					$tagline = wp_kses_post(get_field('tagline',$blog_page_id));
@@ -172,7 +174,7 @@
 					$background_image = esc_url(get_field('background_image'));
 					$title = wp_kses_post(get_field('title'));
 					$tagline = wp_kses_post(get_field('tagline'));
-					if (isset($background_image)) : ?>
+					if ($background_image||$title||$tagline) : ?>
 					<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
 						<div class="black"><div class="wrap">
 							<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; else: the_archive_title( '<h1 class="page-title">', '</h1>' ); endif; ?>

@@ -43,9 +43,13 @@ HEADER STYLES
 }
 
 #inner-header {
+	background: $black;
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	.wrap {
+		margin: auto;
+	}
 }
 
 /*********************

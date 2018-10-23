@@ -248,7 +248,7 @@ function braftonium_customize_css() {
 		}
 		if (get_theme_mod( 'braftonium_headerbg_color' )) {
 			$braftonium_headerbg = sanitize_hex_color(get_theme_mod( 'braftonium_headerbg_color' ));
-			$css .= PHP_EOL . sprintf( '.header, nav .nav li ul.sub-menu, .simple .byline, .rich article.hentry { background-color:%s; }', $braftonium_headerbg );
+			$css .= PHP_EOL . sprintf( '.header, #inner-header, .header, nav .nav li ul.sub-menu, .simple .byline, .rich article.hentry { background-color:%s; }', $braftonium_headerbg );
 			$css .= PHP_EOL . sprintf( '.rich article.hentry .content { background-color:%scc; }', $braftonium_headerbg );
 			$css .= PHP_EOL . sprintf( '@media only screen and (max-width: 768px){ nav .nav li a { background-color:%s; }}', $braftonium_headerbg );
 		}

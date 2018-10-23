@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
     var mn = $('#inner-header');
         mns = 'scrolled';
         hdr = $('#inner-header').height();
-        content = $('#content');
+        content = $('header .banner');
   
     $(window).scroll(function() {
       if( $(this).scrollTop() > hdr-45 ) {

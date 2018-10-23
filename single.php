@@ -3,12 +3,9 @@ $brafton_comments = get_field('comments', 'option');
 ?>
 
 			<div id="content">
-			<main id="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-				
 				<div id="inner-content" class="wrap cf">
-
-					<div class="m-all <?php if(is_active_sidebar('blog-sidebar')): echo 't-2of3 d-5of7'; endif; ?> cf">
-
+					<main id="main" class="m-all <?php if(is_active_sidebar('blog-sidebar')): echo 't-2of3 d-5of7'; endif; ?> cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+				
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<?php
@@ -40,14 +37,12 @@ $brafton_comments = get_field('comments', 'option');
 							</article>
 
 						<?php endif; ?>
-						</div>
-
+					</main>
 					<?php get_sidebar(); ?>
 					<?php if ( is_single() && get_field('related_posts', 'option')=='below' ) :
 						braftonium_related_posts(3);
 					endif; ?>
 				</div>
-				</main>
 			</div>
 
 <?php get_footer(); ?>
