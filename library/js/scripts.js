@@ -107,6 +107,20 @@ function menuToggle() {
     });
   }
 }
+function smoothScroll() {
+  viewport = updateViewportDimensions();
+  if (viewport.width <= 768) {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+    });
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function(event) {
   loadGravatars();
@@ -114,4 +128,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.querySelector('#menu-toggle .icon-close').style.display = "none";
   document.querySelector('#menu-toggle .icon-bars').style.display = "inline";
   menuToggle();
+  smoothScroll();
 }); /* end of as page load scripts */

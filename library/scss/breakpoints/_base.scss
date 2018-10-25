@@ -715,6 +715,7 @@ svg {
 	}
 	.cta .blue-btn {
 		margin: auto;
+		font-size: 1.15em;
 	}
 }
 
@@ -1207,6 +1208,7 @@ SIDEBARS & ASIDES
     overflow: hidden;
 	width: 0;
 	font-size: 0;
+	display: inline-block;
 }
 .show {
 	font-size: inherit;
