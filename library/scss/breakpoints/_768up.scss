@@ -195,6 +195,7 @@ body:not(.page-template-full-width) main {
 .container {
 	&.count1, &.count2, &.count3, &.count4, &.count5, &.count6, &.count7, &.count8, &.count9, &.count10, &.count11, &.count12, &.count13, &.count14, &.count15 {
 	.list-item, .widget {
+		margin-top: 1em;
 		max-width: inherit;
 		&:last-child {
 			margin-right: 0;
