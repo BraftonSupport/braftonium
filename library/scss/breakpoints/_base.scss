@@ -252,6 +252,7 @@ HEADER STYLES
 			max-width: 200px;
 		}
 		a {
+			line-height: 0;
 			color: $white;
 			display: block;
 		}
@@ -268,6 +269,7 @@ HEADER STYLES
 		}
 	}
 	.nextwidget {
+		margin-bottom: 5px;
 		.widget {
 			margin:0;
 			.widget-title {
