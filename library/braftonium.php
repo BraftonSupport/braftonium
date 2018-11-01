@@ -396,7 +396,7 @@ if( function_exists('acf_add_options_page') ) {
 		?>
 		<div class="wrap">
 			<h1><?php _e( 'Theme General Settings', 'braftonium' ); ?></h1>
-			<p><?php _e( 'Turn on the Braftonium plugin. You also ACF Pro plugin.', 'braftonium' ); ?></p>
+			<p><?php _e( 'Turn on the Braftonium plugin. You also need the ACF Pro plugin.', 'braftonium' ); ?></p>
 		</div>
 		<?php
 	}
