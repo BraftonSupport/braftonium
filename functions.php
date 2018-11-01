@@ -29,11 +29,12 @@ function braftonium_start() {
   function load_admin_style() {
 	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/library/css/admin.css', false, '1.0.0' );
   }
+  if(function_exists("register_field_group")):
 	$stickynav=get_field('sticky_nav', 'option');
   if ( is_array($stickynav) && $stickynav[0]=='on' ){
 	wp_enqueue_script( 'sticky', get_template_directory_uri() . '/library/js/sticky.js', array(), '1.0.0', true );
   }
-
+endif;
   // launching operation cleanup
   add_action( 'init', 'braftonium_head_cleanup' );
   // A better title
