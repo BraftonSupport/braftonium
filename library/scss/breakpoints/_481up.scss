@@ -90,6 +90,7 @@ body:not(.page-template-full-width) main {
 
 } /* end .entry-content */
 
+
 .container {
 	display: -ms-flexbox;
 	display: -webkit-flex;
@@ -98,7 +99,7 @@ body:not(.page-template-full-width) main {
 		-webkit-flex: 1 1 50%;
 		-ms-flex: 1 1 50%;
 		flex: 1 1 50%;
-		margin-right: 2%;
+		margin-left: 2%;
 		margin-top: auto;
 		margin-bottom: auto;
 	}
@@ -107,8 +108,8 @@ body:not(.page-template-full-width) main {
 		-ms-flex: 1 1 50%;
 		flex: 1 1 50%;
 	}
-	> *:last-child {
-		margin-right: 0;
+	> *:first-child {
+		margin-left: 0;
 	}
 }
 .blog, .archive {

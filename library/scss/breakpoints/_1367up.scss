@@ -25,3 +25,9 @@ body:not(.page-template-full-width) main {
 .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
 	max-height: 250px;
 }
+
+.container {
+	> .text, > .image {
+		margin-left: 6.5%;
+	}
+}

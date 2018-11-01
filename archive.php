@@ -1,5 +1,6 @@
 <?php get_header();
-$background_image = esc_url(get_field('background_image'));
+$term = get_queried_object()->cat_ID;
+$background_image = esc_url(get_field('background_image', 'category_'.$term));
 $layout = sanitize_text_field(get_field('blog_layout', 'option'));
 $layoutarray = array('full','rich','simple');
 ?>
