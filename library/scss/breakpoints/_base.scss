@@ -94,9 +94,6 @@ a, a:visited {
 	&:hover, &:focus {
 		color: $link-hover;
 	}
-	/* on click */
-	&:active {
-	}
 	/* mobile tap color */
 	&:link {
 		-webkit-tap-highlight-color : rgba($color: $black, $alpha: .3);
@@ -114,12 +111,21 @@ TYPOGRAPHY
 
 ul {
 	list-style-type: disc;
+	ol {
+		margin-top: 0;
+	}
 	ul {
-		margin-left: 1em;
+		margin-top: 0;
 		list-style-type: circle;
 		ul {
 			list-style-type: disc;
 		}
+	}
+}
+ol {
+	list-style-type: decimal;
+	ol, ul {
+		margin-top: 0;
 	}
 }
 section > ul {
@@ -170,7 +176,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 1.125em;
+	font-size: 1.25em;
 }
 
 h4, .h4 {
@@ -206,7 +212,7 @@ HEADER STYLES
 .header {
 	background-color: $black;
 	@include transition(all 0.2s ease-in-out);
-	&.scrolled {
+	.scrolled {
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -246,6 +252,7 @@ HEADER STYLES
 			max-width: 200px;
 		}
 		a {
+			line-height: 0;
 			color: $white;
 			display: block;
 		}
@@ -262,6 +269,7 @@ HEADER STYLES
 		}
 	}
 	.nextwidget {
+		margin-bottom: 5px;
 		.widget {
 			margin:0;
 			.widget-title {
@@ -379,8 +387,9 @@ nav {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-main.t-2of3 {
-    padding-top: 2em;
+body:not(.page-template-full-width) main {
+	margin: 0 auto;
+	padding: 2em 0;
 }
 
 .black {
@@ -430,14 +439,23 @@ svg {
 		max-width: inherit !important;
 	}
 }
+.archive .article-header {
+	margin-bottom: 2em;
+}
 .archive-title {
 	margin: 2em 0 0;
 }
-.blog {
+.blog, .archive {
 	.sticky {
 		background: rgba( #000, $alpha: .1);
 		.content {
 			padding: 10px 10px 0;
+		}
+		a {
+			color: darken($link-color, 5%);
+			&:hover {
+				color: darken($link-hover, 5%);
+			}
 		}
 	}
 	.content {
@@ -463,11 +481,12 @@ svg {
 	}
 	.hero {
 		article.hentry {
-			padding: 0;
+			padding: 0 0 1em 0;
 			margin: 2em 0 1em;
 			border-bottom: 1px solid $meta-gray;
 			&:first-of-type {
 				display: block;
+				margin-top: 0;
 				.thumbnail, .content {
 					flex: 1 100%;
 					margin-right: 0;
@@ -476,6 +495,9 @@ svg {
 					margin-bottom: 10px;
 				}
 			}
+		}
+		.read-more {
+			float: none;
 		}
 	}
 	.full {
@@ -698,6 +720,7 @@ svg {
 	}
 	.cta .blue-btn {
 		margin: auto;
+		font-size: 1.15em;
 	}
 }
 
@@ -828,6 +851,9 @@ svg {
 				margin: 0 0 1.5em 0;
 				max-width: 100%;
 				height: auto;
+				&.alignleft, &.alignright {
+					margin-top: .5em;
+				}
 			}
 
 			.size-auto,
@@ -884,7 +910,9 @@ svg {
 		display: inline-block;
 		position: relative;
 	}
-
+	iframe {
+		max-width: 100%;
+	}
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -908,7 +936,7 @@ PAGE NAVI STYLES
 
  	li {
  	  padding: 0;
- 	  margin: 0;
+ 	  margin: 0px -3px 0 0;
  	  display: inline;
  	  overflow: hidden;
  	  border-right: 1px solid $gray;
@@ -917,13 +945,12 @@ PAGE NAVI STYLES
  	a, span {
  	  margin: 0;
  	  text-decoration: none;
- 	  padding: 0;
  	  line-height: 1em;
  	  font-size: 1em;
  	  font-weight: normal;
- 	  padding: 0.75em;
+ 	  padding: .5em 0.75em;
  	  min-width: 1em;
- 	  display: block;
+ 	  display: inline-block;
  	  color: $blue;
 
  	  &:hover, &:focus {
@@ -1182,11 +1209,11 @@ SIDEBARS & ASIDES
 }
 
 .hide {
-    height: 1px;
-    margin: -1px;
+    height: 0;
     overflow: hidden;
-	width: 1px;
+	width: 0;
 	font-size: 0;
+	display: inline-block;
 }
 .show {
 	font-size: inherit;
@@ -1204,6 +1231,12 @@ FOOTER STYLES
 	clear: both;
 	background-color: $black;
 	color: $light-gray;
+	a {
+		color: $lighterblue;
+		&:hover {
+			color: lighten($lighterblue, 5%);
+		}
+	}
 	a.logo img {
 		max-width: 150px;
 		width: 100%;

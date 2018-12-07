@@ -110,7 +110,7 @@ function braftonium_scripts_and_styles() {
 		wp_enqueue_script( 'braftonium-js' );
 
 		$shenanigans = get_field('shenanigans', 'option');
-		if ($shenanigans[0]=='on') :
+		if (is_array($shenanigans) && $shenanigans[0]=='on') :
 		wp_register_style( 'shenanigans', get_template_directory_uri() . '/library/css/wickedcss.min.css' );
 		wp_enqueue_style( 'shenanigans' );
 		endif;
@@ -125,7 +125,7 @@ THEME SUPPORT
 function braftonium_support() {
 
 	// wp thumbnails (sizes handled in functions.php)
-	add_theme_support( 'custom-header');
+	//add_theme_support( 'custom-header');
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'mediumsquared', 300, 300, true );
 
@@ -290,7 +290,8 @@ function braftonium_filter_ptags_on_images($content){
 // This removes the annoying […] to a Read More link
 function braftonium_excerpt_more($more) {
 	global $post;
-	// edit here if you like
+	$link= '...<br/><a class="button read-more" href="' . get_permalink() . '">'. __( 'Continue', 'braftonium' ).'<span class="hide"> '. get_the_title('', '', false).'</span></a>';
+	return $link;
 }
 
 /**
@@ -380,7 +381,7 @@ if( function_exists('acf_add_options_page') ) {
 		?>
 		<div class="wrap">
 			<h1><?php _e( 'Theme General Settings', 'braftonium' ); ?></h1>
-			<p><?php _e( 'Turn on the Braftonium plugin. You also ACF Pro plugin.', 'braftonium' ); ?></p>
+			<p><?php _e( 'Turn on the Braftonium plugin. You also need the ACF Pro plugin.', 'braftonium' ); ?></p>
 		</div>
 		<?php
 	}
@@ -520,4 +521,5 @@ function add_title_to_iframe_oembed( $html, $url, $attributes, $post_id ) {
     return $html;
 }
 add_filter( 'embed_oembed_html', 'add_title_to_iframe_oembed', 10, 4 );
+
 ?>

@@ -1,7 +1,6 @@
 <?php
-//stop direct access
-if ( ! defined( 'ABSPATH' ) )  exit;
 
+/* Languages! */
 function braftonium_language_setup(){
 
 	load_theme_textdomain( 'braftonium', get_template_directory() . '/library/translation' );
@@ -30,13 +29,12 @@ function braftonium_start() {
   function load_admin_style() {
 	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/library/css/admin.css', false, '1.0.0' );
   }
-
-  wp_enqueue_script( 'functions', get_template_directory_uri() . '/library/js/functions.js', array(), '1.0.0', true );
-
-  if ( get_field('sticky_nav', 'option')[0]=='on' ){
+  if(function_exists("register_field_group")):
+	$stickynav=get_field('sticky_nav', 'option');
+  if ( is_array($stickynav) && $stickynav[0]=='on' ){
 	wp_enqueue_script( 'sticky', get_template_directory_uri() . '/library/js/sticky.js', array(), '1.0.0', true );
   }
-
+endif;
   // launching operation cleanup
   add_action( 'init', 'braftonium_head_cleanup' );
   // A better title
@@ -55,7 +53,7 @@ function braftonium_start() {
   // launching this stuff after theme setup
   braftonium_support();
 
-  // cleaning up random code around images
+  // cleaning up code around images
   add_filter( 'the_content', 'braftonium_filter_ptags_on_images' );
   // cleaning up excerpt
   add_filter( 'excerpt_more', 'braftonium_excerpt_more' );
@@ -75,33 +73,9 @@ if ( ! isset( $content_width ) ) {
 
 /************* THEME CUSTOMIZE *********************/
 
-/* 
-  A good tutorial for creating your own Sections, Controls and Settings:
-  http://code.tutsplus.com/series/a-guide-to-the-wordpress-theme-customizer--wp-33722
-  
-  Good articles on modifying the default options:
-  http://natko.com/changing-default-wordpress-theme-customization-api-sections/
-  http://code.tutsplus.com/tutorials/digging-into-the-theme-customizer-components--wp-27162
-  
-*/
-
 function braftonium_customizer($wp_customize) {
-  // $wp_customize calls go here.
-  //
-  // Uncomment the below lines to remove the default customize sections 
-
-  // $wp_customize->remove_section('title_tagline');
-  // $wp_customize->remove_section('colors');
   $wp_customize->remove_section('background_image');
-  // $wp_customize->remove_section('static_front_page');
-  // $wp_customize->remove_section('nav');
-
-  // Uncomment the below lines to remove the default controls
-  // $wp_customize->remove_control('blogdescription');
-  
-  // Uncomment the following to change the default section titles
   $wp_customize->get_section('colors')->title = __( 'Theme Colors', 'braftonium' );
-//   $wp_customize->get_section('background_image')->title = __( 'Images' );
 }
 
 add_action( 'customize_register', 'braftonium_customizer' );
@@ -129,11 +103,11 @@ function braftonium_get_svg_path($svgid) {
 }
 
 /**
- * What it says on the tin.
+ * Social Sharing buttons - What it says on the tin.
  */
 if (!function_exists( 'braftonium_social_sharing_buttons' ) && function_exists('get_field') ) :
 	$ssbutton = get_field('social_share_buttons', 'option');
-	if (isset($ssbutton) && in_array("on", $ssbutton) ) {
+	if (is_array($ssbutton) && in_array("on", $ssbutton) ) {
 		function braftonium_social_sharing_buttons() {
 			$social_media = get_field('social_media', 'option');
 			$ss_location = get_field('ss_button_location', 'option');
@@ -180,12 +154,6 @@ function braftonium_comments( $comment, $args, $depth ) {
 	<div id="comment-<?php comment_ID(); ?>" <?php comment_class('cf'); ?>>
 	 <article  class="cf">
 	   <header class="comment-author vcard">
-		 <?php
-		 /*
-		   this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular WordPress gravatar call:
-		   echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-		 */
-		 ?>
 		 <?php // custom gravatar call ?>
 		 <?php
 		   // create variable
@@ -258,4 +226,67 @@ function braftonium_slick_script() {
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/library/js/slick/slick.css', false, '1.0.0' );
 	wp_enqueue_style( 'slick-themes', get_template_directory_uri() . '/library/js/slick/slick-theme.css', false, '1.0.0' );
 }
+
+//customized css colors in the header
+function braftonium_customize_css() {
+	$css = '<style type="text/css">';
+		//build css from the theme customizer variables
+		if (get_theme_mod( 'braftonium_color' )) { 
+			$braftonium_text = sanitize_hex_color(get_theme_mod( 'braftonium_color' ));
+			$css .= PHP_EOL . sprintf( 'body { color:%s; }', $braftonium_text );
+		}
+		if (get_theme_mod( 'braftonium_link_color' )) {
+			$braftonium_link = sanitize_hex_color(get_theme_mod( 'braftonium_link_color' ));
+			$css .= PHP_EOL . sprintf( 'a, a:visited, .blog .read-more, .archive .read-more, .slick-prev:before, .slick-next:before { color:%s; }', $braftonium_link );
+			$css .= PHP_EOL . sprintf( 'button, .blue-btn, .pagination a:hover, .hero .read-more { background-color:%s; }', $braftonium_link );
+			$css .= PHP_EOL . sprintf( '.hero article.hentry { border-bottom-color:%s99; }', $braftonium_link );
+		}
+		if (get_theme_mod( 'braftonium_linkhover_color' )) {
+			$braftonium_hover = sanitize_hex_color(get_theme_mod( 'braftonium_linkhover_color' ));
+			$css .= PHP_EOL . sprintf( 'a:hover, a:focus, a:visited:hover, a:visited:focus, .pagination a:hover, .blog .read-more:hover, .archive .read-more:hover { color:%s; }', $braftonium_hover );
+			$css .= PHP_EOL . sprintf( '.button:hover, .blue-btn:hover, .blue-btn:focus, .blue-btn:active, .hero .read-more:hover { background-color:%s; }', $braftonium_hover );
+		}
+		if (get_theme_mod( 'braftonium_headerbg_color' )) {
+			$braftonium_headerbg = sanitize_hex_color(get_theme_mod( 'braftonium_headerbg_color' ));
+			$css .= PHP_EOL . sprintf( '.header, #inner-header, .header, nav .nav li ul.sub-menu, .simple .byline, .rich article.hentry { background-color:%s; }', $braftonium_headerbg );
+			$css .= PHP_EOL . sprintf( '.rich article.hentry .content { background-color:%scc; }', $braftonium_headerbg );
+			$css .= PHP_EOL . sprintf( '@media only screen and (max-width: 768px){ nav .nav li a { background-color:%s; }}', $braftonium_headerbg );
+		}
+		if (get_theme_mod( 'braftonium_header_color2' )) {
+			$braftonium_headercolor = sanitize_hex_color(get_theme_mod( 'braftonium_header_color2' ));
+			$css .= PHP_EOL . sprintf( '.header, .simple .byline, .rich article.hentry .content { color:%s; }', $braftonium_headercolor );
+		}
+		if (get_theme_mod( 'braftonium_headerlink_color' )) {
+			$braftonium_headerlink = sanitize_hex_color(get_theme_mod( 'braftonium_headerlink_color' ));
+			$css .= PHP_EOL . sprintf( '.header a, nav .nav li a, .simple .byline a, .rich article.hentry a, .nav button { color:%s; }', $braftonium_headerlink );
+			$css .= PHP_EOL . sprintf( '.header .blue-btn { background-color:%s; }', $braftonium_headerlink );
+		}
+		if (get_theme_mod( 'braftonium_headerlinkhover_color' )) {
+			$braftonium_headerlinkhover = sanitize_hex_color(get_theme_mod( 'braftonium_headerlinkhover_color' ));
+			$css .= PHP_EOL . sprintf( '.header a:hover, nav .nav li a:hover, .simple .byline a:hover, .rich article.hentry a:hover, .nav button:hover { color:%s; }', $braftonium_headerlinkhover );
+			$css .= PHP_EOL . sprintf( '.header .header button:hover, .header .blue-btn:hover { background-color:%s; }', $braftonium_headerlinkhover );
+		}
+		if (get_theme_mod( 'braftonium_footerbg_color' )) {
+			$braftonium_footerbg_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerbg_color' ));
+			$css .= PHP_EOL . sprintf( '.footer, .simple .entry-title, .full article.hentry { background-color:%s; }', $braftonium_footerbg_color );
+		}
+		if (get_theme_mod( 'braftonium_footer_color' )) {
+			$braftonium_footer_color = sanitize_hex_color(get_theme_mod( 'braftonium_footer_color' ));
+			$css .= PHP_EOL . sprintf( '.footer, .simple .entry-title, .full article.hentry a { color:%s; }', $braftonium_footer_color );
+		}
+		if (get_theme_mod( 'braftonium_footerlink_color' )) {
+			$braftonium_footerlink_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerlink_color' ));
+			$css .= PHP_EOL . sprintf( '.footer a, .simple .entry-title a { color:%s; }', $braftonium_footerlink_color );
+			$css .= PHP_EOL . sprintf( '.footer button, .footer .blue-btn { background-color:%s; }', $braftonium_footerlink_color );
+		}
+		if (get_theme_mod( 'braftonium_footerlinkhover_color' )) {
+			$braftonium_footerlinkhover_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerlinkhover_color' ));
+			$css .= PHP_EOL . sprintf( '.footer a:hover, .simple .entry-title a:hover, .full article.hentry a:hover%s; }', $braftonium_footerlinkhover_color );
+			$css .= PHP_EOL . sprintf( '.footer button:hover, .footer .blue-btn:hover { background-color:%s; }', $braftonium_footerlinkhover_color );
+		}
+		$css .= '</style>';
+		echo $css;
+	}
+	add_action( 'wp_head', 'braftonium_customize_css', 20);
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

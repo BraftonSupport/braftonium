@@ -3,22 +3,12 @@ $layout = sanitize_text_field(get_field('blog_layout', 'option'));
 $layoutarray = array('full','rich','simple');
 $blog_page_id = get_option( "page_for_posts" );
 $background_image = esc_url(get_field('background_image',$blog_page_id));
-$title = wp_kses_post(get_field('title',$blog_page_id));
-$tagline = wp_kses_post(get_field('tagline',$blog_page_id));
 ?>
 			<div id="content">
-				<?php if ($background_image||$title||$tagline) : ?>
-					<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
-						<div class="black"><div class="wrap">
-							<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
-							<?php if ($tagline): echo $tagline; endif; ?>
-						</div></div>
-					</section>
-				<?php endif; ?>
 				<div id="inner-content" class="wrap cf">
-					<main id="main" class="m-all t-2of3 d-5of7 cf<?php echo ' '.$layout; ?>" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="m-all <?php if(is_active_sidebar('blog-sidebar')): echo 't-2of3 d-5of7'; endif; ?> cf<?php echo ' '.$layout; ?>" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-						<?php if (!$title): ?><header class="article-header hentry">
+						<?php if (!$background_image): ?><header class="article-header hentry">
 							<h1 class="page-title" itemprop="headline"><?php echo get_the_title( $blog_page_id ); ?></h1>
 						</header><?php endif;// end article header ?>
 
@@ -37,7 +27,7 @@ $tagline = wp_kses_post(get_field('tagline',$blog_page_id));
 									echo '</div>';
 								} ?>
 								<div class="content"><header class="article-header">
-									<h2 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+									<h2 class="h3 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 									<p class="byline entry-meta vcard">
 										<?php printf( __( 'Posted', 'braftonium' ).' %1$s %2$s',
 											/* the time the post was published */
@@ -45,7 +35,9 @@ $tagline = wp_kses_post(get_field('tagline',$blog_page_id));
 											/* the author of the post */
 											'<span class="by">'.__( 'by', 'braftonium').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
 										); 
-										braftonium_social_sharing_buttons(); ?>
+										if (function_exists('braftonium_social_sharing_buttons')):
+											braftonium_social_sharing_buttons();
+										endif; ?>
 									</p>
 								</header>
 

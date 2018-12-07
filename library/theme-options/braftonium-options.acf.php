@@ -233,7 +233,7 @@ acf_add_local_field_group(array(
 			'label' => __( 'Add Shenanigans', 'braftonium' ),
 			'name' => 'shenanigans',
 			'type' => 'checkbox',
-			'instructions' => '',
+			'instructions' => 'http://kristofferandreasen.github.io/wickedCSS/documentation.html',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -336,14 +336,14 @@ function braftonium_color_options( $wp_customize ) {
 	'settings' => 'braftonium_headerbg_color',
 	) ) );
 
-	// $wp_customize->add_setting( 'braftonium_header_color', array(
-	// 	'sanitize_callback' => 'sanitize_hex_color',
-	// )  );
-	// $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_header_color', array(
-	// 'label' => __( 'Header Text Color', 'braftonium' ),
-	// 'section'  => 'colors',
-	// 'settings' => 'braftonium_header_color',
-	// ) ) );
+	$wp_customize->add_setting( 'braftonium_header_color2', array(
+		'sanitize_callback' => 'sanitize_hex_color',
+	)  );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'braftonium_header_color2', array(
+	'label' => __( 'Header Text Color', 'braftonium' ),
+	'section'  => 'colors',
+	'settings' => 'braftonium_header_color2',
+	) ) );
 
 	$wp_customize->add_setting( 'braftonium_headerlink_color', array(
 		'sanitize_callback' => 'sanitize_hex_color',

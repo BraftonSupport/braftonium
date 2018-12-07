@@ -8,8 +8,8 @@ You can add some advanced styles here if you like. This kicks in
 on larger screens.
 
 ******************************************************************/
-main.t-2of3 {
-    padding-top: 3.5em;
+body:not(.page-template-full-width) main {
+    padding: 3.5em 0;
 }
 
 .wrap {
@@ -22,6 +22,12 @@ main.t-2of3 {
 .page-template-full-width section .wrap {
 	padding: 3.5em 0 4.25em;
 }
-.blog .full article.hentry .thumbnail {
+.blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
 	max-height: 250px;
+}
+
+.container {
+	> .text, > .image {
+		margin-left: 6.5%;
+	}
 }

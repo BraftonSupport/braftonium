@@ -30,7 +30,13 @@ nav .nav {
   width: 50%;
 }
 
-.blog {
+.container {
+	> .text, > .image {
+		margin-left: 4.75%;
+	}
+}
+
+.blog, .archive {
 	article {
 		display: -ms-flexbox;
 		display: -webkit-flex;

@@ -1,9 +1,9 @@
 jQuery(document).ready(function($){
   // if ($(window).width() > 768) {
-    var mn = $('.header');
+    var mn = $('#inner-header');
         mns = 'scrolled';
-        hdr = $('.header').height();
-        content = $('#content');
+        hdr = $('#inner-header').height();
+        content = $('header .banner');
   
     $(window).scroll(function() {
       if( $(this).scrollTop() > hdr-45 ) {
