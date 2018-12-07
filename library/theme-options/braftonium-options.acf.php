@@ -273,7 +273,7 @@ acf_add_local_field_group(array(
 ));
 }
 
-/* Adding More Options to the Wordpress Theme Customizer.
+/* Adding More Options to the WordPress Theme Customizer.
 -----------------------------------------------------------------*/
 
 /* Adding the logo to the settings page*/

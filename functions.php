@@ -102,7 +102,6 @@ function braftonium_get_svg_path($svgid) {
 	return '<svg class="'.$svgid.$second_step[0].'</svg>';
 }
 
-
 /**
  * Social Sharing buttons - What it says on the tin.
  */
