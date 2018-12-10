@@ -248,13 +248,14 @@ function braftonium_customize_css() {
 		if (get_theme_mod( 'braftonium_link_color' )) {
 			$braftonium_link = sanitize_hex_color(get_theme_mod( 'braftonium_link_color' ));
 			$css .= PHP_EOL . sprintf( 'a, a:visited, .blog .read-more, .archive .read-more, .slick-prev:before, .slick-next:before { color:%s; }', $braftonium_link );
-			$css .= PHP_EOL . sprintf( 'button, .blue-btn, .pagination a:hover, .hero .read-more { background-color:%s; }', $braftonium_link );
+			$css .= PHP_EOL . sprintf( 'button, .blue-btn, .pagination a:hover, .hero .read-more, .comment-reply-link, #submit, .button { background-color:%s; }', $braftonium_link );
 			$css .= PHP_EOL . sprintf( '.hero article.hentry { border-bottom-color:%s99; }', $braftonium_link );
 		}
 		if (get_theme_mod( 'braftonium_linkhover_color' )) {
 			$braftonium_hover = sanitize_hex_color(get_theme_mod( 'braftonium_linkhover_color' ));
 			$css .= PHP_EOL . sprintf( 'a:hover, a:focus, a:visited:hover, a:visited:focus, .pagination a:hover, .blog .read-more:hover, .archive .read-more:hover { color:%s; }', $braftonium_hover );
-			$css .= PHP_EOL . sprintf( '.button:hover, .blue-btn:hover, .blue-btn:focus, .blue-btn:active, .hero .read-more:hover { background-color:%s; }', $braftonium_hover );
+			$css .= PHP_EOL . sprintf( 'button:hover, .blue-btn:hover, .hero .read-more:hover, .comment-reply-link:hover, #submit:hover, .button:hover { background-color:%s; }', $braftonium_hover );
+
 		}
 		if (get_theme_mod( 'braftonium_headerbg_color' )) {
 			$braftonium_headerbg = sanitize_hex_color(get_theme_mod( 'braftonium_headerbg_color' ));
