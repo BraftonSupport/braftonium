@@ -49,6 +49,13 @@ HEADER STYLES
 	flex-wrap: wrap;
 	.wrap {
 		margin: auto;
+		display: grid;
+		#logo {
+			grid-column: 1 / 2;
+		}
+		.nextwidget {
+			grid-column: 2 / 3;
+		}
 	}
 }
 
