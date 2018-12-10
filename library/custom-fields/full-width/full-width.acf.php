@@ -260,7 +260,7 @@ acf_add_local_field_group(array(
 									'name' => 'title',
 									'type' => 'text',
 									'instructions' => '',
-									'required' => 1,
+									'required' => 0,
 									'conditional_logic' => 0,
 									'wrapper' => array(
 										'width' => '75',
@@ -999,7 +999,7 @@ acf_add_local_field_group(array(
 							'name' => 'google_api',
 							'type' => 'text',
 							'instructions' => __( 'Go to <a href="https://developers.google.com/maps/documentation/embed/" target="_blank">this page</a> and get yourself a key. Select a new project then click "Enable API". Copy and paste the result here. It is free and takes less than a minute.', 'braftonium' ),
-							'required' => 1,
+							'required' => 0,
 							'conditional_logic' => 0,
 							'wrapper' => array(
 								'width' => '',

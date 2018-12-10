@@ -741,6 +741,15 @@ svg {
 	.list-item {
 		max-width: 100%;
 		margin: 0;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		.blue-btn {
+			margin-top: auto;
+		}
 	}
 }
 
