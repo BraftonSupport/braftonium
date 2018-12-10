@@ -800,6 +800,22 @@ nav .nav li a {
   display: block;
 }
 
+/* line 63, ../scss/breakpoints/_1030up.scss */
+.container.count5 .list-item, .container.count5 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
+  margin-right: 1%;
+  -webkit-flex: 1 1 19%;
+  -ms-flex: 1 1 19%;
+  flex: 1 1 19%;
+}
+/* line 68, ../scss/breakpoints/_1030up.scss */
+.container.count5 .list-item:nth-child(3n), .container.count5 .widget:nth-child(3n), .container.count9 .list-item:nth-child(3n), .container.count9 .widget:nth-child(3n), .container.count10 .list-item:nth-child(3n), .container.count10 .widget:nth-child(3n), .container.count13 .list-item:nth-child(3n), .container.count13 .widget:nth-child(3n), .container.count14 .list-item:nth-child(3n), .container.count14 .widget:nth-child(3n), .container.count15 .list-item:nth-child(3n), .container.count15 .widget:nth-child(3n) {
+  margin-right: 1%;
+}
+/* line 71, ../scss/breakpoints/_1030up.scss */
+.container.count5 .list-item:nth-child(5n), .container.count5 .widget:nth-child(5n), .container.count9 .list-item:nth-child(5n), .container.count9 .widget:nth-child(5n), .container.count10 .list-item:nth-child(5n), .container.count10 .widget:nth-child(5n), .container.count13 .list-item:nth-child(5n), .container.count13 .widget:nth-child(5n), .container.count14 .list-item:nth-child(5n), .container.count14 .widget:nth-child(5n), .container.count15 .list-item:nth-child(5n), .container.count15 .widget:nth-child(5n) {
+  margin-right: 0;
+}
+
 /*
 you can call the larger styles if you want, but there's really no need
 */

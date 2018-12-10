@@ -31,19 +31,3 @@ body:not(.page-template-full-width) main {
 		margin-left: 6.5%;
 	}
 }
-.container {
-	&.count5, &.count9, &.count10, &.count13, &.count14, &.count15 {
-		.list-item, .widget {
-			margin-right: 1%;
-			-webkit-flex: 1 1 19%;
-			-ms-flex: 1 1 19%;
-			flex: 1 1 19%;
-			&:nth-child(3n){
-				margin-right: 1%;
-			}
-			&:nth-child(5n){
-				margin-right: 0;
-			}
-		}
-	}
-}
