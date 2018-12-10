@@ -103,10 +103,10 @@ add_action('wp_enqueue_scripts', 'braftonium_fonts');
 /* I CALL UPON THE POWERS OF AN SVG SPRITESHEET except linking an svg file doesn't work in IE so I gots to do this */
 require_once(ABSPATH . 'wp-admin/includes/file.php');
 function braftonium_get_svg_path($svgid) {
-	WP_Filesystem();
-	global $wp_filesystem;
+	// WP_Filesystem();
+	// global $wp_filesystem;
 	$file_data = get_template_directory_uri().'/library/theme-options/svg-icons.svg';
-	$content = $wp_filesystem->get_contents($file_data);
+	$content = file_get_contents($file_data);
 	$first_step = explode( '<symbol id="'.$svgid , $content );
 	$second_step = explode("</path>" , $first_step[1] );
 	return '<svg class="'.$svgid.$second_step[0].'</svg>';
