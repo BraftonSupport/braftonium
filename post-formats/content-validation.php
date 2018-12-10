@@ -16,7 +16,7 @@ endif;
 $list_type = get_sub_field('list_type');
 	if ($list_type=='custom'): $custom = get_sub_field('custom_list'); endif;
 	if ($list_type=='recent'): $recent = sanitize_text_field(get_sub_field('recent')); $number = intval(get_sub_field('number_of_posts')); endif;
-	$showbutton	 = get_sub_field('showbutton');
+$showbutton	 = get_sub_field('read_more_button');
 $style = get_sub_field('style');
 $imagestyle	 = get_sub_field('image_size_and_shape');
 $classes = array('validation');
@@ -91,8 +91,12 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 
 				if ( $item['content'] ): echo wp_kses_post($item['content']); endif;
 
-				if ( $showbutton ): echo '<a href="'.$url.'" class="button">'.$text.'</a>';endif;
-
+				if ( $showbutton ): echo '<a href="'.$url.'" class="button">';
+					if($text): echo $text;
+					else: _e('Read More', 'braftonium');
+					endif;
+					echo '</a>';
+				endif;
 				echo '</div>';
 			endforeach;
 			
@@ -146,8 +150,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						if ($website) { echo '<br/><a href="http://'.$website.'" target="_blank"><span class="testimonial-website">'.$website.'</span></a>'; }
 						if ( $name || $position || $company || $location || $website) { echo '</p>'; }
 					if ( $showbutton ){ ?>
-						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e('', 'braftonium'); echo '<span class="hide">'.$titlestring.'</span>'; ?></a>
+						<a href="<?php echo get_permalink(); ?>" class="button"><?php _e('Read More', 'braftonium'); echo '<span class="hide">'.$titlestring.'</span>'; ?></a>
 					<?php } ?>
+					
 					</div>
 				</div>
 			<?php endwhile;

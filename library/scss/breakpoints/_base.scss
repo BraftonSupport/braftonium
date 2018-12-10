@@ -725,6 +725,9 @@ svg {
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	& + p {
+		margin-top: 2em;
+	}
 	.list-item {
 		max-width: 200px;
 		margin: 0;
@@ -736,6 +739,7 @@ svg {
 		flex-direction: column;
 		.blue-btn {
 			margin-top: auto;
+			margin-right: auto;
 		}
 	}
 }
