@@ -1,5 +1,5 @@
 # BRAFTONIUM
-The Brafton Wordpress Theme
+The Brafton WordPress Theme
 
 Designed by Yvonne Tse
 
