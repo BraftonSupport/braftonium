@@ -36,40 +36,40 @@ function rotateButtons() {
         button.classList.add('rotate');
       }
     });
-  } else {
-    navButtons = document.querySelectorAll('header nav button');
-    navButtons.forEach(function (navButton) {
-      navButton.addEventListener('click', function () {
-        if (navButton.classList) {
-          navButton.classList.toggle('rotate');
-        } else {
-          var navClasses = navButton.className.split(' ');
-          var navExistingIndex = classes.indexOf('rotate');
-
-          if (navExistingIndex >= 0)
-            navClasses.splice(navExistingIndex, 1);
-          else
-            navClasses.push('rotate');
-
-          navButton.className = navClasses.join(' ');
-        }
-        subMenu = navButton.nextElementSibling;
-        if (subMenu) {
-          subMenu.classList.toggle('toggleon');
-        } else {
-          var subMenuClasses = subMenu.className.split(' ');
-          var subMenuExistingIndex = classes.indexOf('toggleon');
-
-          if (subMenuExistingIndex >= 0) {
-            subMenuClasses.splice(subMenuExistingIndex, 1);
-          } else {
-            subMenuClasses.push('toggleon');
-          }
-          subMenu.className = subMenuClasses.join(' ');
-        }
-      });
-    });
   }
+  navButtons = document.querySelectorAll('header nav button');
+  navButtons.forEach(function (navButton) {
+    navButton.addEventListener('click', function () {
+      if (navButton.classList) {
+        navButton.classList.toggle('rotate');
+      } else {
+        var navClasses = navButton.className.split(' ');
+        var navExistingIndex = classes.indexOf('rotate');
+
+        if (navExistingIndex >= 0)
+          navClasses.splice(navExistingIndex, 1);
+        else
+          navClasses.push('rotate');
+
+        navButton.className = navClasses.join(' ');
+      }
+      subMenu = navButton.nextElementSibling;
+      if (subMenu) {
+        subMenu.classList.toggle('toggleon');
+      } else {
+        var subMenuClasses = subMenu.className.split(' ');
+        var subMenuExistingIndex = classes.indexOf('toggleon');
+
+        if (subMenuExistingIndex >= 0) {
+          subMenuClasses.splice(subMenuExistingIndex, 1);
+        } else {
+          subMenuClasses.push('toggleon');
+        }
+        subMenu.className = subMenuClasses.join(' ');
+      }
+    });
+  });
+
 }
 
 function menuToggle() {
