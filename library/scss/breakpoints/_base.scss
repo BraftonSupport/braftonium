@@ -14,7 +14,7 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-
+ 
 body {
 	font-family: $lato;
 	font-size: 100%;
@@ -322,6 +322,10 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 
+#inner-header .wrap #logo {
+	padding-right: 10px;
+}
+
 nav {
 	position: absolute;
 	top: -9999px;
@@ -330,6 +334,7 @@ nav {
 		position: inherit;
 		top: 0;
 		left: 0;
+		grid-column: 1 / 3;
 	}
 	.nav {
 		border-bottom: 0;
@@ -357,7 +362,7 @@ nav {
 			}
 			a {
 				display: block;
-				padding: 7px 0;
+				padding: 7px;
 				color: $white;
 				margin-right: auto;
 				text-decoration: none;
@@ -403,6 +408,7 @@ body:not(.page-template-full-width) main {
 .black {
 	background: rgba($color: $black, $alpha: .75);
 }
+
 .banner, .page-template-full-width .banner {
 	color: $white;
 	background-position: center;

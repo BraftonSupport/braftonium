@@ -1829,45 +1829,51 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 /* line 325, ../scss/breakpoints/_base.scss */
+#inner-header .wrap #logo {
+  padding-right: 10px;
+}
+
+/* line 329, ../scss/breakpoints/_base.scss */
 nav {
   position: absolute;
   top: -9999px;
   left: -9999px;
   /* end .nav */
 }
-/* line 329, ../scss/breakpoints/_base.scss */
+/* line 333, ../scss/breakpoints/_base.scss */
 nav.toggleon {
   position: inherit;
   top: 0;
   left: 0;
+  grid-column: 1 / 3;
 }
-/* line 334, ../scss/breakpoints/_base.scss */
+/* line 339, ../scss/breakpoints/_base.scss */
 nav .nav {
   border-bottom: 0;
   margin: 0;
   /* end li */
 }
-/* line 337, ../scss/breakpoints/_base.scss */
+/* line 342, ../scss/breakpoints/_base.scss */
 nav .nav button {
   background: transparent;
   padding: 0;
   width: 1.25em;
   top: 2px;
 }
-/* line 342, ../scss/breakpoints/_base.scss */
+/* line 347, ../scss/breakpoints/_base.scss */
 nav .nav button.rotate {
   border-left: none;
 }
-/* line 345, ../scss/breakpoints/_base.scss */
+/* line 350, ../scss/breakpoints/_base.scss */
 nav .nav button:focus {
   outline: thin dotted;
 }
-/* line 347, ../scss/breakpoints/_base.scss */
+/* line 352, ../scss/breakpoints/_base.scss */
 nav .nav li {
   margin: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* line 350, ../scss/breakpoints/_base.scss */
+/* line 355, ../scss/breakpoints/_base.scss */
 nav .nav li.menu-item-has-children {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1876,19 +1882,19 @@ nav .nav li.menu-item-has-children {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-/* line 358, ../scss/breakpoints/_base.scss */
+/* line 363, ../scss/breakpoints/_base.scss */
 nav .nav li a {
   display: block;
-  padding: 7px 0;
+  padding: 7px;
   color: #fff;
   margin-right: auto;
   text-decoration: none;
 }
-/* line 364, ../scss/breakpoints/_base.scss */
+/* line 369, ../scss/breakpoints/_base.scss */
 nav .nav li a:hover {
   color: #2e5dab;
 }
-/* line 368, ../scss/breakpoints/_base.scss */
+/* line 373, ../scss/breakpoints/_base.scss */
 nav .nav li ul.sub-menu,
 nav .nav li ul.children {
   position: absolute;
@@ -1967,7 +1973,6 @@ svg {
   position: relative;
   top: 2px;
 }
-
 /* line 441, ../scss/breakpoints/_base.scss */
 .acf-map {
   width: 100%;
@@ -2218,7 +2223,6 @@ svg {
 .blog .simple .by, .blog .simple .entry-author, .blog .simple .read-more, .archive .simple .by, .archive .simple .entry-author, .archive .simple .read-more {
   display: none;
 }
-
 /* line 645, ../scss/breakpoints/_base.scss */
 .shadow {
   height: 0;
