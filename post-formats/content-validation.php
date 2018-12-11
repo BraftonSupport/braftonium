@@ -125,7 +125,11 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						?></div><?php
 					}
 					?>
-						<div class="text"><h3><a href="<?php the_permalink() ?>"><?php
+						<div class="text
+						<?php if ( $name || $position || $company || $location || $website) {
+							echo ' testimonial';
+						} ?>
+						"><h3><a href="<?php the_permalink() ?>"><?php
 						$titlestring = get_the_title($post);
 						if (strlen($titlestring) > 65){
 							$titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
