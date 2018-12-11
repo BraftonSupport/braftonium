@@ -482,7 +482,7 @@ nav .nav > li {
   margin-right: auto;
 }
 /* line 95, ../scss/breakpoints/_768up.scss */
-nav .nav > li:last-child .sub-menu {
+nav .nav > li:last-child:hover > ul.sub-menu {
   left: -100px;
 }
 /* line 99, ../scss/breakpoints/_768up.scss */

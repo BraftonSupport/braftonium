@@ -92,7 +92,7 @@ nav {
 			border: none;
 			display: inline-block;
 			margin-right: auto;
-			&:last-child .sub-menu {
+			&:last-child:hover > ul.sub-menu {
 				left: -100px;
 			}
 		}
