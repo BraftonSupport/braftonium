@@ -11,7 +11,6 @@ if(!session_id()) session_start();
 $sectionrow = $_SESSION['sectionrow'];
 
 $map = get_sub_field('map');
-$google_api = get_sub_field('google_api');
 
 $style = get_sub_field('style');
 $classes = array('map');
@@ -67,20 +66,16 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 			endwhile;
 		endif;
 		echo '</div>';
-		if ($google_api): echo '<script src="https://maps.googleapis.com/maps/api/js?key='.sanitize_text_field($google_api).'"></script>'; endif;
 		
-		if( !empty($map) ): ?>
+		if( !empty($map) ): 
+			braftonium_map_script();
+			?>
 			<div class="acf-map">
 				<div class="marker" data-lat="<?php echo sanitize_text_field($map['lat']); ?>" data-lng="<?php echo sanitize_text_field($map['lng']); ?>"></div>
 			</div>
 		<?php endif; ?>
 
 	</div>
-	<style type="text/css">
-
-
-
-</style>
 </section><!-- section -->
 
 <?php if ( $style['other'] && in_array('shadow', $style['other']) ) { echo '<div class="shadow"></div>'; } ?>
