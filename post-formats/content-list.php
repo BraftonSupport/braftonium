@@ -117,6 +117,11 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					'showposts' => $number
 				)
 			);
+			if( is_array($imagestyle)):
+				if( in_array('thumb', $imagestyle) ): $size = 'thumbnail'; endif;
+				if( in_array('square', $imagestyle) ): $size = 'mediumsquared'; endif;
+				if( in_array('full', $imagestyle) ): $size = 'full'; endif;
+			endif;
 			while ($recent_query->have_posts()) : $recent_query->the_post();
 				$titlestring = get_the_title($post); ?>
 				<div class="list-item"><a href="<?php the_permalink() ?>" name="<?php echo $titlestring; ?>">
@@ -126,7 +131,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						 ?></div><?php
 					} elseif( has_post_thumbnail()){
 						?><div class="image"><?php
-						the_post_thumbnail('mediumsquared');
+						the_post_thumbnail($size);
 						?></div><?php
 					}
 					?>

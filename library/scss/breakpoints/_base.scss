@@ -727,9 +727,15 @@ svg {
 		&.thin .wrap {
 			padding: 1em 0 1.5em;
 		}
-		&.center div {
-			text-align: center;
-			margin: auto;
+		&.center {
+			.list-item {
+				padding: 0 5px;
+			}
+			.wrap *:not(.list-item) {
+				text-align: center;
+				margin-right: auto;
+				margin-left: auto;
+			}
 		}
 	}
 	.cta .blue-btn {
@@ -946,6 +952,12 @@ svg {
 		}
 		.list-item .text {
 			font-size: 1em;
+		}
+		.slick-prev:before, .slick-next:before {
+			color: $meta-gray;
+			&:hover {
+				color: $blue;
+			}
 		}
 	}
 /******************************************************************
@@ -1303,11 +1315,15 @@ FOOTER STYLES
 		list-style-type: none;
 		line-height: 1.75em;
 		li {
-			text-transform: uppercase;
 		}
 		.sub-menu li {
 			text-transform: capitalize;
 		}
+	}
+	.widget_recent_entries li {
+		border-bottom: groove 2px;
+		padding: 5px 0;
+		border-color: rgba(127, 127, 127, .2);
 	}
 }
 

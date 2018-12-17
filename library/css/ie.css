@@ -712,7 +712,7 @@ body:not(.page-template-full-width) main {
   width: 94%;
 }
 /* line 303, ../scss/breakpoints/_768up.scss */
-.validation .list-item .text.testimonial p:not(.testimonial-meta) {
+.validation .testimonial p:not(.testimonial-meta) {
   font-size: 2em;
 }
 

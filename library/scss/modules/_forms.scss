@@ -49,7 +49,6 @@ textarea,
   border: 0;
   display: inline-block;
   width: 100%;
-  max-width: 400px;
   font-family: $lato;
   background-color: rgba($color: $white, $alpha: .75);
   @include transition(background-color 0.24s ease-in-out);
