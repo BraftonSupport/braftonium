@@ -107,14 +107,14 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					'showposts' => $number
 				)
 			);
-			while ($recent_query->have_posts()) : $recent_query->the_post(); ?>
-				<div class="list-item">
+			while ($recent_query->have_posts()) : $recent_query->the_post();
+				$name = get_field('name', $post);
+				$position = get_field('position', $post);
+				$company = get_field('company', $post);
+				$location = get_field('location', $post);
+				$website = get_field('website', $post); ?>
+				<div class="list-item"><?php if ( $name || $position || $company || $location || $website) { echo '<div class="testimonial">'; } ?>
 					<?php
-					$name = get_field('name', $post);
-					$position = get_field('position', $post);
-					$company = get_field('company', $post);
-					$location = get_field('location', $post);
-					$website = get_field('website', $post);
 					if ( $imagestyle && in_array('round', $imagestyle) && has_post_thumbnail() ){
 						?><div class="image"><?php
 						 the_post_thumbnail('mediumsquared', ['class' => 'round']);
@@ -125,7 +125,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						?></div><?php
 					}
 					?>
-						<div class="text <?php if ( $name || $position || $company || $location || $website) { echo 'testimonial'; } ?>"><h3><a href="<?php the_permalink() ?>"><?php
+						<div class="text"><h3><a href="<?php the_permalink() ?>"><?php
 						$titlestring = get_the_title($post);
 						if (strlen($titlestring) > 65){
 							$titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
@@ -154,6 +154,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					<?php } ?>
 					
 					</div>
+					<?php if ( $name || $position || $company || $location || $website) { echo '</div>'; } ?>
 				</div>
 			<?php endwhile;
 			wp_reset_postdata();
