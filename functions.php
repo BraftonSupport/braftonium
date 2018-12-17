@@ -239,7 +239,6 @@ function braftonium_slick_script() {
 function braftonium_map_script() {
 	wp_enqueue_script( 'functions', get_template_directory_uri() . '/library/js/functions.js', array(), '1.0.0', true );
 }
-add_action( 'admin_enqueue_scripts', 'braftonium_map_script' );
 
 //customized css colors in the header
 function braftonium_customize_css() {
