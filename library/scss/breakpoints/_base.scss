@@ -960,6 +960,9 @@ svg {
 			}
 		}
 		.testimonial p:not(.testimonial-meta){
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
 			&:before {
 				content: "\201C";
 				font-size: 1em;
