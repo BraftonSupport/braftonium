@@ -959,6 +959,23 @@ svg {
 				color: $blue;
 			}
 		}
+		.testimonials p:not(.testimonial-meta){
+			&:before {
+				content: "\201C";
+				font-size: 1em;
+				display: block;
+				margin-right: 15px;
+				line-height: .75em;
+			}
+			&:after {
+				content: "\201D";
+				font-size: 1em;
+				display: block;
+				margin-left: 5px;
+				margin-top: auto;
+				line-height: 0;
+			}
+		}
 	}
 /******************************************************************
 PAGE NAVI STYLES
