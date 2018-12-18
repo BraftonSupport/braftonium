@@ -959,7 +959,7 @@ svg {
 				color: $blue;
 			}
 		}
-		.testimonials p:not(.testimonial-meta){
+		.testimonial p:not(.testimonial-meta){
 			&:before {
 				content: "\201C";
 				font-size: 1em;

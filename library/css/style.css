@@ -2571,7 +2571,7 @@ iframe {
   color: #00457c;
 }
 /* line 963, ../scss/breakpoints/_base.scss */
-.validation .testimonials p:not(.testimonial-meta):before {
+.validation .testimonial p:not(.testimonial-meta):before {
   content: "\201C";
   font-size: 1em;
   display: block;
@@ -2579,7 +2579,7 @@ iframe {
   line-height: .75em;
 }
 /* line 970, ../scss/breakpoints/_base.scss */
-.validation .testimonials p:not(.testimonial-meta):after {
+.validation .testimonial p:not(.testimonial-meta):after {
   content: "\201D";
   font-size: 1em;
   display: block;
