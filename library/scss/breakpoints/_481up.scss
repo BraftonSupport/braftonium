@@ -52,6 +52,7 @@ HEADER STYLES
 		display: grid;
 		#logo {
 			grid-column: 1 / 2;
+			padding-right: 10px;
 		}
 		.nextwidget {
 			grid-column: 2 / 3;
@@ -169,11 +170,9 @@ FOOTER STYLES
 
 .footer {
 	a.logo {
-		width: 50%;
-		float: left;
 		img {
 			margin: 10px 0 10px;
-			max-width: 100px;
+			max-width: 150px;
 		}
 	}
 }

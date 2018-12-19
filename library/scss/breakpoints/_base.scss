@@ -217,6 +217,7 @@ HEADER STYLES
 	background-color: $black;
 	@include transition(all 0.2s ease-in-out);
 	.scrolled {
+		background: $black;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -254,7 +255,7 @@ HEADER STYLES
 }
 
 	#logo {
-		margin: 5px auto 10px;
+		margin: 10px auto 15px;
 		text-align: center;
 		img {
 			@include transition(all 0.2s ease-in-out);
@@ -321,10 +322,6 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-
-#inner-header .wrap #logo {
-	padding-right: 10px;
-}
 
 nav {
 	position: absolute;
@@ -1301,6 +1298,7 @@ FOOTER STYLES
 *********************/
 
 .footer {
+	padding: 1.5em 0 0;
 	clear: both;
 	background-color: $black;
 	color: $light-gray;
@@ -1311,7 +1309,7 @@ FOOTER STYLES
 		}
 	}
 	a.logo img {
-		max-width: 150px;
+		max-width: 200px;
 		width: 100%;
 		display: block;
 		margin: 5px auto 0;
