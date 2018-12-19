@@ -2579,7 +2579,7 @@ iframe {
 /* line 966, ../scss/breakpoints/_base.scss */
 .validation .testimonial p:not(.testimonial-meta):before {
   content: "\201C";
-  font-size: 1em;
+  font-size: 1.5em;
   display: block;
   margin-right: 15px;
   line-height: .75em;
@@ -2587,7 +2587,7 @@ iframe {
 /* line 973, ../scss/breakpoints/_base.scss */
 .validation .testimonial p:not(.testimonial-meta):after {
   content: "\201D";
-  font-size: 1em;
+  font-size: 1.5em;
   display: block;
   margin-left: 5px;
   margin-top: auto;
