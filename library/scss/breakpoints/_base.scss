@@ -426,6 +426,32 @@ body:not(.page-template-full-width) main {
 	}
 }
 
+.banner.sinistral {
+    text-align: left;
+	font-size: 1em;
+	.wrap {
+		> * {
+			position: relative;
+			z-index: 1;
+			&:before{
+				content: "";
+				position: absolute;
+				left: -50%;
+				top: -10px;
+				background: #000;
+				width: 155%;
+				z-index: -1;
+				height: 100%;
+				padding-bottom: 35px;
+				padding-right: 15px;
+			}
+		}
+	}
+	.black {
+		background: transparent;
+	}
+}
+
 svg {
 	width: 1em;
 	height: 1em;

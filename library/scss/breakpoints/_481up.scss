@@ -59,6 +59,17 @@ HEADER STYLES
 	}
 }
 
+.banner.sinistral {
+	.wrap {
+		> * {
+			max-width: 65%;
+			&:before {
+				width: 150%;
+			}
+		}
+	}
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/

@@ -74,6 +74,13 @@ HEADER STYLES
 	}
 }
 
+.banner.sinistral {
+	.wrap {
+		> * {
+			max-width: 55%;
+		}
+	}
+}
 /*********************
 NAVIGATION STYLES
 *********************/
