@@ -3154,7 +3154,7 @@ tweeners.
     -ms-flex: 1 1 50%;
     flex: 1 1 50%;
     margin-left: 2%;
-    margin-top: auto;
+    margin-top: 0;
     margin-bottom: auto;
   }
   /* line 113, ../scss/breakpoints/_481up.scss */
