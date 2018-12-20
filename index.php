@@ -1,5 +1,6 @@
 <?php get_header();
 $layout = sanitize_text_field(get_field('blog_layout', 'option'));
+if (!$layout): $layout = 'hero'; endif;
 $layoutarray = array('full','rich','simple');
 $blog_page_id = get_option( "page_for_posts" );
 $background_image = esc_url(get_field('background_image',$blog_page_id));
@@ -19,10 +20,10 @@ $background_image = esc_url(get_field('background_image',$blog_page_id));
 									echo '<div class="thumbnail">';
 									if (in_array($layout, $layoutarray)):
 										echo '<a href="'. get_the_permalink().'"  title="'. the_title_attribute( 'echo=0' ) .'">';
-										the_post_thumbnail('medium');
+										the_post_thumbnail('full');
 										echo '</a>';
 									else:
-										the_post_thumbnail('medium');
+										the_post_thumbnail('full');
 									endif;
 									echo '</div>';
 								} ?>

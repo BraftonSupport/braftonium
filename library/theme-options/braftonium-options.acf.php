@@ -95,7 +95,6 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'' => 'Default',
 				'hero' => 'Hero First',
 				'rich' => 'Image Rich',
 				'full' => 'Full Card',
