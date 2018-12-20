@@ -407,9 +407,6 @@ POSTS & CONTENT STYLES
 body:not(.page-template-full-width) main {
 	margin: 0 auto;
 	padding: 2em 0;
-	p:first-child {
-		margin-top: 0;
-	}
 }
 
 .black {
@@ -713,6 +710,9 @@ svg {
 }
 
 .page-template-full-width {
+	p:first-child {
+		margin-top: 0;
+	}
 	.hentry {
 		padding: 0;
 	}
