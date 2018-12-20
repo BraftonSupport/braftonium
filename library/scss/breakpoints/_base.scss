@@ -106,6 +106,10 @@ a.blue-btn {
 	text-decoration: none!important;
 }
 
+h2 a, h3 a {
+	color: inherit;
+}
+
 /*********************
 TYPOGRAPHY
 *********************/
@@ -738,9 +742,14 @@ svg {
 			}
 		}
 	}
-	.cta .blue-btn {
-		margin: auto;
-		font-size: 1.15em;
+	.cta {
+		.blue-btn {
+			margin: auto auto 25px auto;
+			font-size: 1.15em;
+		}
+		h2 {
+			margin-bottom: 0;
+		}
 	}
 }
 
