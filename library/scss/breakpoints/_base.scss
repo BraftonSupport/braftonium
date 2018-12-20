@@ -177,7 +177,7 @@ h1, .h1 {
 h2, .h2 {
 	font-size: 1.75em;
 	line-height: 1.4em;
-	margin-bottom: 0.375em;
+	margin-bottom: 0.6em;
 }
 
 h3, .h3 {
@@ -407,6 +407,9 @@ POSTS & CONTENT STYLES
 body:not(.page-template-full-width) main {
 	margin: 0 auto;
 	padding: 2em 0;
+	p:first-child {
+		margin-top: 0;
+	}
 }
 
 .black {
@@ -744,7 +747,7 @@ svg {
 	}
 	.cta {
 		.blue-btn {
-			margin: auto auto 25px auto;
+			margin: auto auto auto 25px;
 			font-size: 1.15em;
 		}
 		h2 {
