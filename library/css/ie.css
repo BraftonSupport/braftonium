@@ -292,7 +292,7 @@ body:not(.page-template-full-width) main {
   -ms-flex: 1 1 50%;
   flex: 1 1 50%;
   margin-left: 2%;
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: auto;
 }
 /* line 125, ../scss/breakpoints/_481up.scss */
@@ -718,7 +718,7 @@ body:not(.page-template-full-width) main {
 }
 /* line 310, ../scss/breakpoints/_768up.scss */
 .validation .testimonial p:not(.testimonial-meta) {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 /*********************
