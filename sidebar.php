@@ -2,7 +2,7 @@
 					<div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
 						<?php dynamic_sidebar( 'page-sidebar' ); ?>
 					</div>
-				<?php elseif ( !is_page() && is_active_sidebar('blog-sidebar') ) : ?>
+					<?php elseif ( !is_page() && is_active_sidebar('blog-sidebar') ) : ?>
 					<div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
 						<?php dynamic_sidebar( 'blog-sidebar' ); ?>
 					

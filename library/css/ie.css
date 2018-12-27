@@ -322,26 +322,21 @@ body:not(.page-template-full-width) main {
   overflow: hidden;
 }
 /* line 147, ../scss/breakpoints/_481up.scss */
-.blog .full article.hentry, .blog .rich article.hentry, .blog .simple article.hentry, .archive .full article.hentry, .archive .rich article.hentry, .archive .simple article.hentry {
-  width: 49%;
-  margin-right: 2%;
-  float: left;
-}
-/* line 152, ../scss/breakpoints/_481up.scss */
-.blog .rich article.hentry, .blog .simple article.hentry, .archive .rich article.hentry, .archive .simple article.hentry {
+.blog .rich article.hentry, .blog .full article.hentry, .blog .simple article.hentry, .blog .simple article.hentry, .archive .rich article.hentry, .archive .full article.hentry, .archive .simple article.hentry, .archive .simple article.hentry {
   flex: 1 0 45%;
   margin-right: 5%;
 }
-/* line 155, ../scss/breakpoints/_481up.scss */
-.blog .rich article.hentry:nth-child(2n+1), .blog .rich article.hentry:last-of-type, .blog .simple article.hentry:nth-child(2n+1), .blog .simple article.hentry:last-of-type, .archive .rich article.hentry:nth-child(2n+1), .archive .rich article.hentry:last-of-type, .archive .simple article.hentry:nth-child(2n+1), .archive .simple article.hentry:last-of-type {
+/* line 148, ../scss/breakpoints/_481up.scss */
+.blog .rich article.hentry:first-of-type, .blog .full article.hentry:first-of-type, .blog .simple article.hentry:first-of-type, .blog .simple article.hentry:first-of-type, .archive .rich article.hentry:first-of-type, .archive .full article.hentry:first-of-type, .archive .simple article.hentry:first-of-type, .archive .simple article.hentry:first-of-type {
+  flex: 1 0 100%;
   margin-right: 0;
 }
-/* line 158, ../scss/breakpoints/_481up.scss */
-.blog .rich article.hentry:first-of-type, .blog .simple article.hentry:first-of-type, .archive .rich article.hentry:first-of-type, .archive .simple article.hentry:first-of-type {
-  flex: 1 0 100%;
+/* line 152, ../scss/breakpoints/_481up.scss */
+.blog .rich article.hentry:nth-of-type(2n+1), .blog .rich article.hentry:last-of-type, .blog .full article.hentry:nth-of-type(2n+1), .blog .full article.hentry:last-of-type, .blog .simple article.hentry:nth-of-type(2n+1), .blog .simple article.hentry:last-of-type, .blog .simple article.hentry:nth-of-type(2n+1), .blog .simple article.hentry:last-of-type, .archive .rich article.hentry:nth-of-type(2n+1), .archive .rich article.hentry:last-of-type, .archive .full article.hentry:nth-of-type(2n+1), .archive .full article.hentry:last-of-type, .archive .simple article.hentry:nth-of-type(2n+1), .archive .simple article.hentry:last-of-type, .archive .simple article.hentry:nth-of-type(2n+1), .archive .simple article.hentry:last-of-type {
+  margin-right: 0;
 }
 
-/* line 163, ../scss/breakpoints/_481up.scss */
+/* line 159, ../scss/breakpoints/_481up.scss */
 .acf-map {
   width: 95%;
   margin-left: 1%;
@@ -350,19 +345,19 @@ body:not(.page-template-full-width) main {
 /*********************
 FOOTER STYLES
 *********************/
-/* line 173, ../scss/breakpoints/_481up.scss */
+/* line 169, ../scss/breakpoints/_481up.scss */
 .footer a.logo img {
   margin: 10px 0 10px;
   max-width: 150px;
 }
 
-/* line 180, ../scss/breakpoints/_481up.scss */
+/* line 176, ../scss/breakpoints/_481up.scss */
 .social-navigation {
   float: right;
   text-align: right;
   margin: 5px 0 0 auto;
 }
-/* line 184, ../scss/breakpoints/_481up.scss */
+/* line 180, ../scss/breakpoints/_481up.scss */
 .social-navigation a {
   text-align: right;
   margin: .5em;

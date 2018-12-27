@@ -175,8 +175,8 @@
 					$title = wp_kses_post(get_field('title'));
 					$tagline = wp_kses_post(get_field('tagline'));
 				endif;
-				if ($background_image||$title||$tagline) : ?>
-					<section class="banner visual<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
+				if ($background_image) : ?>
+					<section class="banner visual"<?php echo ' style="background-image:url('.$background_image.')"'; ?>>
 						<div class="black"><div class="wrap">
 							<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
 							<?php if ($tagline): echo $tagline; endif; ?>

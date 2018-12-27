@@ -4,6 +4,7 @@ if (!$layout): $layout = 'hero'; endif;
 $layoutarray = array('full','rich','simple');
 $blog_page_id = get_option( "page_for_posts" );
 $background_image = esc_url(get_field('background_image',$blog_page_id));
+if ($layout == 'rich'): $i = 0; endif;
 ?>
 			<div id="content">
 				<div id="inner-content" class="wrap cf">
@@ -18,12 +19,24 @@ $background_image = esc_url(get_field('background_image',$blog_page_id));
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?>>
 								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 									echo '<div class="thumbnail">';
+									
+									if ($layout == 'rich'):
+										$getimagesize = getimagesize(get_the_post_thumbnail_url(get_the_ID(),'full'));
+										$ratio1 = $getimagesize[0] % $getimagesize[1];
+										$ratio2 = $getimagesize[1] % $getimagesize[0];
+										if ( $i != 0 && ($ratio1 > 1.5 || 1.5 > $ratio2) ) :
+											$size = 'mediumsquared';
+										endif;
+									else:
+										$size = 'full';
+									endif;
+
 									if (in_array($layout, $layoutarray)):
 										echo '<a href="'. get_the_permalink().'"  title="'. the_title_attribute( 'echo=0' ) .'">';
-										the_post_thumbnail('full');
+										the_post_thumbnail($size);
 										echo '</a>';
 									else:
-										the_post_thumbnail('full');
+										the_post_thumbnail($size);
 									endif;
 									echo '</div>';
 								} ?>
