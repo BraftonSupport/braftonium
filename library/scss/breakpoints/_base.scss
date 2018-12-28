@@ -767,6 +767,7 @@ svg {
 			padding: 1em 0 1.5em;
 		}
 		&.center {
+			text-align: center;
 			.list-item {
 				padding: 0 5px;
 			}
@@ -774,6 +775,9 @@ svg {
 				text-align: center;
 				margin-right: auto;
 				margin-left: auto;
+				.blue-btn {
+					display: table;
+				}
 			}
 		}
 	}
