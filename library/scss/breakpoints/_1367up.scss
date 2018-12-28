@@ -15,6 +15,19 @@ body:not(.page-template-full-width) main {
 .wrap {
 	max-width: 1200px;
 }
+
+.banner.sinistral {
+	.wrap {
+		> * {
+			max-width: 40%;
+			&:before {
+				left: -75%;
+				width: 175%;
+			}
+		}
+	}
+}
+
 .banner .wrap, .page-template-full-width .banner .wrap {
 	padding: 7em 0;
 }

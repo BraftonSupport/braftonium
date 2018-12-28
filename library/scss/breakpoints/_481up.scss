@@ -52,9 +52,21 @@ HEADER STYLES
 		display: grid;
 		#logo {
 			grid-column: 1 / 2;
+			padding-right: 10px;
 		}
 		.nextwidget {
 			grid-column: 2 / 3;
+		}
+	}
+}
+
+.banner.sinistral {
+	.wrap {
+		> * {
+			max-width: 65%;
+			&:before {
+				width: 150%;
+			}
 		}
 	}
 }
@@ -132,20 +144,16 @@ body:not(.page-template-full-width) main {
 	.full .thumbnail {
 		overflow: hidden;
 	}
-	.full article.hentry, .rich article.hentry, .simple article.hentry {
-		width: 49%;
-		margin-right: 2%;
-		float: left;
-	}
-	.rich article.hentry, .simple article.hentry {
-		flex: 1 0 45%;
-		margin-right: 5% ;
-		&:nth-child(2n+1), &:last-of-type {
-			margin-right: 0;
-		}
+	.rich article.hentry, .full article.hentry, .simple article.hentry, .simple article.hentry {
 		&:first-of-type {
 			flex: 1 0 100%;
+			margin-right: 0;
 		}
+		&:nth-of-type(2n+1), &:last-of-type {
+			margin-right: 0;
+		}
+		flex: 1 0 45%;
+		margin-right: 5% ;
 	}
 }
 .acf-map {
@@ -158,11 +166,9 @@ FOOTER STYLES
 
 .footer {
 	a.logo {
-		width: 50%;
-		float: left;
 		img {
 			margin: 10px 0 10px;
-			max-width: 100px;
+			max-width: 150px;
 		}
 	}
 }

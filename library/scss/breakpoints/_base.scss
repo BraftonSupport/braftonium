@@ -161,8 +161,9 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
 	font-weight: 500;
-	a {
+	a, a:visited {
 		text-decoration: none;
+		color: inherit;
 	}
 	&:first-child {
 		margin-top: 0;
@@ -221,6 +222,7 @@ HEADER STYLES
 	background-color: $black;
 	@include transition(all 0.2s ease-in-out);
 	.scrolled {
+		background: $black;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -230,6 +232,7 @@ HEADER STYLES
 			float: left;
 			img {
 				max-width: 100px;
+				padding: 7px 0;
 			}
 			.site-title {
 				display: none;
@@ -250,7 +253,7 @@ HEADER STYLES
 		}
 	}
 	p {
-		margin: 7px 0;
+		margin: 8px 0;
 	}
 	input {
 		background-color: rgba($color: $gray, $alpha: .65);
@@ -258,11 +261,12 @@ HEADER STYLES
 }
 
 	#logo {
-		margin: 5px auto 10px;
+		margin: 10px auto 15px;
 		text-align: center;
 		img {
 			@include transition(all 0.2s ease-in-out);
 			width: 100%;
+			padding: 4px 0;
 			max-width: 200px;
 		}
 		a {
@@ -325,10 +329,6 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-
-#inner-header .wrap #logo {
-	padding-right: 10px;
-}
 
 nav {
 	position: absolute;
@@ -430,6 +430,32 @@ body:not(.page-template-full-width) main {
 	}
 }
 
+.banner.sinistral {
+    text-align: left;
+	font-size: 1em;
+	.wrap {
+		> * {
+			position: relative;
+			z-index: 1;
+			&:before{
+				content: "";
+				position: absolute;
+				left: -50%;
+				top: -20px;
+				background: #000;
+				width: 155%;
+				z-index: -1;
+				height: 100%;
+				padding-bottom: 55px;
+				padding-right: 25px;
+			}
+		}
+	}
+	.black {
+		background: transparent;
+	}
+}
+
 svg {
 	width: 1em;
 	height: 1em;
@@ -518,7 +544,13 @@ svg {
 			float: none;
 		}
 	}
-	.full {
+	.full {	
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
 		article.hentry {
 			background: $blue;
 			color: $white;
@@ -534,9 +566,6 @@ svg {
 			}
 			.thumbnail, .content {
 				flex: 1 100%;
-				margin-right: 0;
-			}
-			&:nth-child(2n+1) {
 				margin-right: 0;
 			}
 			&:first-of-type {
@@ -583,7 +612,7 @@ svg {
 			padding: 0;
 			margin: 2em 0 1em;
 			.content {
-				background-color: rgba($blue, .5);
+				background-color: rgba($blue, .75);
 				padding: 10px 10px 0;
 				.article-header {
 					padding: 0 0 .75em 0;
@@ -601,7 +630,7 @@ svg {
 				display: none;
 			}
 			a {
-				color: rgba($white, .75);
+				color: rgba($white, .66);
 				&:hover {
 					color: $lightblue;
 				}
@@ -620,6 +649,9 @@ svg {
 		flex-wrap: wrap;
 		article.hentry {
 			flex: 1 0 100%;
+		}
+		.content {
+			margin-top: -.5em;
 		}
 		.thumbnail, .content {
 			flex: 1 0 100%;
@@ -812,7 +844,7 @@ svg {
 		} /* end .hentry */
 
 .text, .page-template-default .entry-content, .single .entry-content {
-	a:not(.blue-btn) {
+	p a:not(.blue-btn) {
 		text-decoration: underline;
 	}
 }
@@ -1307,6 +1339,7 @@ FOOTER STYLES
 *********************/
 
 .footer {
+	padding: 1.5em 0 0;
 	clear: both;
 	background-color: $black;
 	color: $light-gray;
@@ -1317,7 +1350,7 @@ FOOTER STYLES
 		}
 	}
 	a.logo img {
-		max-width: 150px;
+		max-width: 200px;
 		width: 100%;
 		display: block;
 		margin: 5px auto 0;

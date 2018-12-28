@@ -60,9 +60,13 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 			echo '<div class="container">';
 			while ( have_rows('row_content') ) : the_row();
 				if( get_row_layout() == 'imageblock' ):
-					echo '<div class="image">'.wp_get_attachment_image( intval(get_sub_field('Image')), 'full' ).'</div>';
+					echo '<div class="image"';
+						if (get_sub_field('change_width')): echo ' style="-webkit-flex: 1 0 '.get_sub_field('width').'%; -ms-flex: 1 0 '.get_sub_field('width').'%; flex: 1 0 '.get_sub_field('width').'%;"'; endif;
+					echo '>'.wp_get_attachment_image( intval(get_sub_field('Image')), 'full' ).'</div>';
 				elseif( get_row_layout() == 'textblock' ): 
-					echo '<div class="text">'.get_sub_field('text').'</div>';
+					echo '<div class="text"';
+						if (get_sub_field('change_width')): echo ' style="-webkit-flex: 1 0 '.get_sub_field('width').'%; -ms-flex: 1 0 '.get_sub_field('width').'%; flex: 1 0 '.get_sub_field('width').'%;"'; endif;
+					echo '>'.get_sub_field('text').'</div>';
 				endif;
 			endwhile;
 			echo '</div>';
