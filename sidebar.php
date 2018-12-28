@@ -10,4 +10,4 @@
 							braftonium_related_posts(3);
 						endif; ?>
 					</div>
-				<?php endif; ?> 
+				<?php endif; ?>
