@@ -721,16 +721,22 @@ body:not(.page-template-full-width) main {
   font-size: 1.5em;
 }
 
+/* line 314, ../scss/breakpoints/_768up.scss */
+.slick {
+  width: 100%;
+  margin: auto;
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 319, ../scss/breakpoints/_768up.scss */
+/* line 323, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin: 3em 0 0 0;
   padding: 0 0 0 30px;
 }
 
-/* line 324, ../scss/breakpoints/_768up.scss */
+/* line 328, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
@@ -744,24 +750,24 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 339, ../scss/breakpoints/_768up.scss */
+/* line 343, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 343, ../scss/breakpoints/_768up.scss */
+/* line 347, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section {
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
   margin: 1em 2% 3em 0;
 }
-/* line 348, ../scss/breakpoints/_768up.scss */
+/* line 352, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section h3 {
   margin-bottom: 1em;
 }
-/* line 351, ../scss/breakpoints/_768up.scss */
+/* line 355, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section:last-child {
   margin-right: 0;
 }
