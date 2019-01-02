@@ -8,10 +8,11 @@ You can add some advanced styles here if you like. This kicks in
 on larger screens.
 
 ******************************************************************/
-.banner.sinistral {
+.page-template-full-width .banner.sinistral {
+	font-size: .8em;
 	.wrap {
 		> * {
-			max-width: 40%;
+			max-width: 35%;
 			&:before {
 				left: -85%;
 				width: 185%;
