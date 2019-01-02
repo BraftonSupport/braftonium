@@ -16,10 +16,12 @@ body:not(.page-template-full-width) main {
 	max-width: 1200px;
 }
 
-.banner.sinistral {
+.page-template-full-width .banner.sinistral {
+	font-size: .85em;
 	.wrap {
+		padding: 6em 0 8.5em;
 		> * {
-			max-width: 45%;
+			max-width: 40%;
 			&:before {
 				left: -75%;
 				width: 175%;
