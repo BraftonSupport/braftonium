@@ -31,6 +31,9 @@
 							'container'		=> '',
 							'walker'		=> new Social_Nav_Menu(),
 						) );
+						if ( is_active_sidebar( 'footer-last' )):
+							dynamic_sidebar( 'footer-last' );
+						endif;
 						echo '</section>';
 					endif; ?>
 				</div>

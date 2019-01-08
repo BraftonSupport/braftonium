@@ -418,6 +418,15 @@ function braftonium_widgets_init() {
 		'before_title'  => '<h2 class="h3 widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'		  => __( 'Footer Underneath Social Media', 'braftonium' ),
+		'id'			=> 'footer-last',
+		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="h3 widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'braftonium_widgets_init' );
 
