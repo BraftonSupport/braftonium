@@ -38,9 +38,6 @@ if ( $style['other'] ) {
 	if (in_array('compact', $style['other'])){
 		$classes[] = "compact";
 	}
-	if (in_array('thin', $style['other'])){
-		$classes[] = "thin";
-	}
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
@@ -56,8 +53,8 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 		if ($intro): echo $intro; endif;
 		
 		if ( $custom ) :
-		$count = count($custom);
-		echo '<div class="container count'.$count.'">';
+			$count = count($custom);
+			echo '<div class="container count'.$count.'">';
 			foreach( $custom as $item ):
 				if($item['button']):
 					$url = esc_url($item['button']['url']);
@@ -84,16 +81,16 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				endif;
 				if ( $item['button'] ): echo '</a>'; endif;
 
-				if ( $item['title'] ):
-					echo '<h3>';
-					 if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
-					 if (strlen($titlestring) > 65){
-						 $titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
-					 }
-					 echo $titlestring.'</a></h3>';
-				endif;
 				echo '<div class="text">';
-				if ( $item['content'] ): echo wp_kses_post($item['content']); endif;
+					if ( $item['title'] ):
+						echo '<h3>';
+						if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
+						if (strlen($titlestring) > 65){
+							$titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
+						}
+						echo $titlestring.'</a></h3>';
+					endif;
+					if ( $item['content'] ): echo wp_kses_post($item['content']); endif;
 				echo '</div>';
 				
 				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';

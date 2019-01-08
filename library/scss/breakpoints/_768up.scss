@@ -259,7 +259,7 @@ body:not(.page-template-full-width) main {
 	flex: 1 0 75%;
 }
 
-.slick {
+.validation .slick {
 	width: inherit;
 	.image {
 		max-width: 33%;
@@ -317,6 +317,57 @@ body:not(.page-template-full-width) main {
 	width: 100%;
 	margin: auto;
 }
+
+.flipcards {
+	.wrap:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.list-item {
+		min-height: 250px;
+		position: relative;
+		-webkit-perspective: 800px;
+		-moz-perspective: 800px;
+		-o-perspective: 800px;
+		perspective: 800px;
+		.text{
+			transform: rotateY(-180deg);
+			padding: 10px;
+		}
+		&:hover {
+			.image {
+				transform: rotateY(180deg);
+			}
+			.text {
+				transform: rotateY(0deg);
+			}
+		}
+		.image, .text {
+			position:absolute;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			transition: all 0.5s ease-in;
+			backface-visibility: hidden;
+		}
+	}
+}
+
+.slideshow {
+	.container {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+	.image a.next {
+		margin-left: -22%;
+	}
+	.image a.prev {
+		margin-right: -23%;
+	}
+}
+
 
 /*********************
 SIDEBARS & ASIDES

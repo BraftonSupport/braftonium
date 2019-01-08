@@ -14,7 +14,7 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
- 
+
 body {
 	font-family: $lato;
 	font-size: 100%;
@@ -808,6 +808,9 @@ svg {
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
 		flex-direction: column;
+		.image {
+			margin: 0 auto;
+		}
 		.blue-btn {
 			margin-top: auto;
 			margin-right: auto;
@@ -815,7 +818,7 @@ svg {
 	}
 }
 
-.slick {
+.validation .slick {
 	width: 90%;
 	margin: auto;
 }
@@ -823,7 +826,7 @@ svg {
 			.image {
 				min-width: 10%;
 				text-align: center;
-				margin: auto;
+				margin: 0 auto;
 				img {
 					max-width: 100%;
 					height: auto;
@@ -1029,6 +1032,52 @@ svg {
 			}
 		}
 	}
+.slideshow {
+	.container>*{
+		flex: 1 0 33%;
+		margin: 0!important;
+	}
+	.slick-next, .slick-prev {
+		&:before {
+			color: transparent;
+		}
+	}
+	.image {
+		display: flex;
+		img {
+			margin: auto;
+			z-index: 1;
+		}
+		a.prev {
+			margin: auto -30% auto auto;
+			display: block;
+			content: '';
+			border-radius: 50% 0 0 50%;
+			line-height: 125px;
+			text-indent: -40px;
+		}
+		a.next {
+			margin: auto auto auto -30%;
+			display: block;
+			content: '';
+			background: $blue;
+			border-radius: 0 50% 50% 0;
+			line-height: 125px;
+			text-indent: 30px;
+		}
+		a.prev, a.next {
+			height: 120px;
+			width: 80px;
+			background: $blue;
+			color: $meta-gray;
+			&:hover {
+				color: $blue;
+				background: $meta-gray;
+			}
+		}
+	}
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
