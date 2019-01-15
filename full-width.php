@@ -19,7 +19,11 @@ $tagline = wp_kses_post(get_field('tagline'));
 			<?php $sectionrow=0;
 			if ($background_image||$title||$tagline) : ?>
 				<section class="banner visual<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
-					<div class="black"><div class="wrap">
+					<?php if ($banner_style == 'sinistral'): ?>
+						<div class="wrap"><div class="black">
+					<?php else : ?>
+						<div class="black"><div class="wrap">
+					<?php endif; ?>
 						<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
 						<?php if ($tagline): echo $tagline; endif; ?>
 					</div></div>
