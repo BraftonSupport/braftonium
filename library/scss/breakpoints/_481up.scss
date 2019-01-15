@@ -64,10 +64,12 @@ HEADER STYLES
 	.wrap {
 		> * {
 			max-width: 65%;
-			&:before {
-				width: 150%;
-			}
 		}
+	}
+	.black {
+		background: #000;
+		padding-left: 2em;
+		margin-left: -2em;
 	}
 }
 
@@ -157,7 +159,7 @@ body:not(.page-template-full-width) main {
 	.full .thumbnail {
 		overflow: hidden;
 	}
-	.rich article.hentry, .full article.hentry, .simple article.hentry, .simple article.hentry {
+	.full article.hentry, .simple article.hentry, .simple article.hentry {
 		&:first-of-type {
 			flex: 1 0 100%;
 			margin-right: 0;

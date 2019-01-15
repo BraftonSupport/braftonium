@@ -75,11 +75,11 @@ nav .nav {
 	}
 }
 
-.page-template-full-width .banner.sinistral {
-	.wrap {
-		> * {
-			max-width: 45%;
-		}
+.banner.sinistral {
+	.black {
+		padding: 1.5em 2em;
+		padding-left: 12%;
+		margin-left: -12%;
 	}
 }
 

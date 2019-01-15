@@ -24,12 +24,14 @@ if ($layout == 'rich'): $i = 0; endif;
 										$getimagesize = getimagesize(get_the_post_thumbnail_url(get_the_ID(),'full'));
 										$ratio1 = $getimagesize[0] % $getimagesize[1];
 										$ratio2 = $getimagesize[1] % $getimagesize[0];
+
 										if ( $i != 0 && ($ratio1 > 1.5 || 1.5 > $ratio2) ) :
 											$size = 'mediumsquared';
 										endif;
 									else:
 										$size = 'full';
 									endif;
+									$i++;
 
 									if (in_array($layout, $layoutarray)):
 										echo '<a href="'. get_the_permalink().'"  title="'. the_title_attribute( 'echo=0' ) .'">';

@@ -268,7 +268,7 @@ function braftonium_customize_css() {
 		}
 		if (get_theme_mod( 'braftonium_header_color2' )) {
 			$braftonium_headercolor = sanitize_hex_color(get_theme_mod( 'braftonium_header_color2' ));
-			$css .= PHP_EOL . sprintf( '.header, .simple .byline, .rich article.hentry .content { color:%s; }', $braftonium_headercolor );
+			$css .= PHP_EOL . sprintf( '.header { color:%s; }', $braftonium_headercolor );
 		}
 		if (get_theme_mod( 'braftonium_headerlink_color' )) {
 			$braftonium_headerlink = sanitize_hex_color(get_theme_mod( 'braftonium_headerlink_color' ));

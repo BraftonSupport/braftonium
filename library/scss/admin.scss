@@ -71,6 +71,7 @@ start customizing. All admin functions are located in lib/admin/
 		.layout {
 			flex: 1;
 			margin: 0 1% 0 0;
+			min-width: 200px;
 			&:last-child {
 				margin-right: 0;
 			}

@@ -436,23 +436,13 @@ body:not(.page-template-full-width) main {
 	.wrap {
 		> * {
 			position: relative;
-			z-index: 1;
-			&:before{
-				content: "";
-				position: absolute;
-				left: -50%;
-				top: -20px;
-				background: #000;
-				width: 155%;
-				z-index: -1;
-				height: 100%;
-				padding-bottom: 55px;
-				padding-right: 25px;
-			}
 		}
 	}
 	.black {
-		background: transparent;
+		position: relative;
+		background: rgba(0, 0, 0, 0.6);
+		padding: 1em 1.5em;
+		margin: -2.5em -1em;
 	}
 }
 
@@ -594,13 +584,22 @@ svg {
 		flex-wrap: wrap;
 		.has-post-thumbnail {
 			position: relative;
+			min-height: 200px;
 			.content {
 				position: absolute;
 				bottom: 0;
 			}
+			.entry-content {
+				height: 0;
+				overflow: hidden;
+				@include transition(all 0.2s ease-in-out);
+			}
+			&:hover .entry-content {
+				height: 100px;
+			}
 		}
 		h2, .h2 {
-			font-size: 1.25em;
+			font-size: 1em;
 		}
 		.sticky {
 			border: 10px solid rgba($white, .75);
@@ -615,7 +614,8 @@ svg {
 				background-color: rgba($blue, .75);
 				padding: 10px 10px 0;
 				.article-header {
-					padding: 0 0 .75em 0;
+					margin: 0 0 .75em 0;
+					padding: 0;
 				}
 			}
 			.thumbnail, .content {
@@ -864,7 +864,8 @@ svg {
 
 		/* post meta */
 		.byline {
-			margin: 0;
+			margin: 5px 0 0 0;
+			font-size: .8em;
 		}
 
 		/* entry content */
