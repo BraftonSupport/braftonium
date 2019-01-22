@@ -76,7 +76,7 @@ HEADER STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-body:not(.page-template-full-width) main {
+body:not(.page-template-full-width) main:not(.simple) {
     padding: 2.5em 0;
 }
 .banner .wrap, .page-template-full-width .banner .wrap {
@@ -159,7 +159,7 @@ body:not(.page-template-full-width) main {
 	.full .thumbnail {
 		overflow: hidden;
 	}
-	.full article.hentry, .simple article.hentry, .simple article.hentry {
+	.full article.hentry, .rich article.hentry {
 		&:first-of-type {
 			flex: 1 0 100%;
 			margin-right: 0;
@@ -168,7 +168,37 @@ body:not(.page-template-full-width) main {
 			margin-right: 0;
 		}
 		flex: 1 0 45%;
-		margin-right: 5% ;
+		margin-right: 5%;
+	}
+	.simple {
+		article.hentry {
+			flex: 1 0 48%;
+			margin-right: 4%;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			background: $white;
+			padding: 1em;
+			-webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.1);
+			-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.1);
+			box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.1);
+			border-radius: 3px;
+			&:nth-child(2n), &:last-child {
+				margin-right: 0;
+			}
+		}
+		&.container.wrap {
+			border-bottom: 1px solid $border-color;
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+			display: block;
+			h2 {
+				font-size: 1.25em;
+			}
+		}
+		h2 {
+			font-size: 1em;
+		}
 	}
 }
 .acf-map {

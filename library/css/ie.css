@@ -242,7 +242,7 @@ HEADER STYLES
 POSTS & CONTENT STYLES
 *********************/
 /* line 79, ../scss/breakpoints/_481up.scss */
-body:not(.page-template-full-width) main {
+body:not(.page-template-full-width) main:not(.simple) {
   padding: 2.5em 0;
 }
 
@@ -338,21 +338,54 @@ body:not(.page-template-full-width) main {
   overflow: hidden;
 }
 /* line 162, ../scss/breakpoints/_481up.scss */
-.blog .full article.hentry, .blog .simple article.hentry, .blog .simple article.hentry, .archive .full article.hentry, .archive .simple article.hentry, .archive .simple article.hentry {
+.blog .full article.hentry, .blog .rich article.hentry, .archive .full article.hentry, .archive .rich article.hentry {
   flex: 1 0 45%;
   margin-right: 5%;
 }
 /* line 163, ../scss/breakpoints/_481up.scss */
-.blog .full article.hentry:first-of-type, .blog .simple article.hentry:first-of-type, .blog .simple article.hentry:first-of-type, .archive .full article.hentry:first-of-type, .archive .simple article.hentry:first-of-type, .archive .simple article.hentry:first-of-type {
+.blog .full article.hentry:first-of-type, .blog .rich article.hentry:first-of-type, .archive .full article.hentry:first-of-type, .archive .rich article.hentry:first-of-type {
   flex: 1 0 100%;
   margin-right: 0;
 }
 /* line 167, ../scss/breakpoints/_481up.scss */
-.blog .full article.hentry:nth-of-type(2n+1), .blog .full article.hentry:last-of-type, .blog .simple article.hentry:nth-of-type(2n+1), .blog .simple article.hentry:last-of-type, .blog .simple article.hentry:nth-of-type(2n+1), .blog .simple article.hentry:last-of-type, .archive .full article.hentry:nth-of-type(2n+1), .archive .full article.hentry:last-of-type, .archive .simple article.hentry:nth-of-type(2n+1), .archive .simple article.hentry:last-of-type, .archive .simple article.hentry:nth-of-type(2n+1), .archive .simple article.hentry:last-of-type {
+.blog .full article.hentry:nth-of-type(2n+1), .blog .full article.hentry:last-of-type, .blog .rich article.hentry:nth-of-type(2n+1), .blog .rich article.hentry:last-of-type, .archive .full article.hentry:nth-of-type(2n+1), .archive .full article.hentry:last-of-type, .archive .rich article.hentry:nth-of-type(2n+1), .archive .rich article.hentry:last-of-type {
   margin-right: 0;
 }
-
 /* line 174, ../scss/breakpoints/_481up.scss */
+.blog .simple article.hentry, .archive .simple article.hentry {
+  flex: 1 0 48%;
+  margin-right: 4%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 1em;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+/* line 186, ../scss/breakpoints/_481up.scss */
+.blog .simple article.hentry:nth-child(2n), .blog .simple article.hentry:last-child, .archive .simple article.hentry:nth-child(2n), .archive .simple article.hentry:last-child {
+  margin-right: 0;
+}
+/* line 190, ../scss/breakpoints/_481up.scss */
+.blog .simple.container.wrap, .archive .simple.container.wrap {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  display: block;
+}
+/* line 195, ../scss/breakpoints/_481up.scss */
+.blog .simple.container.wrap h2, .archive .simple.container.wrap h2 {
+  font-size: 1.25em;
+}
+/* line 199, ../scss/breakpoints/_481up.scss */
+.blog .simple h2, .archive .simple h2 {
+  font-size: 1em;
+}
+
+/* line 204, ../scss/breakpoints/_481up.scss */
 .acf-map {
   width: 95%;
   margin-left: 1%;
@@ -361,17 +394,17 @@ body:not(.page-template-full-width) main {
 /*********************
 FOOTER STYLES
 *********************/
-/* line 184, ../scss/breakpoints/_481up.scss */
+/* line 214, ../scss/breakpoints/_481up.scss */
 .footer a.logo img {
   margin: 10px 0 10px;
   max-width: 150px;
 }
 
-/* line 191, ../scss/breakpoints/_481up.scss */
+/* line 221, ../scss/breakpoints/_481up.scss */
 .social-navigation {
   margin: 5px 0 0 auto;
 }
-/* line 193, ../scss/breakpoints/_481up.scss */
+/* line 223, ../scss/breakpoints/_481up.scss */
 .social-navigation a {
   text-align: right;
   margin: .5em;
@@ -426,60 +459,61 @@ HEADER STYLES
 }
 /* line 39, ../scss/breakpoints/_768up.scss */
 #inner-header .wrap #logo {
+  float: left;
   grid-column: 1 / 2;
   grid-row: 1 / 3;
   margin: auto auto auto 0;
 }
-/* line 44, ../scss/breakpoints/_768up.scss */
+/* line 45, ../scss/breakpoints/_768up.scss */
 #inner-header .wrap .nextwidget {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
-/* line 48, ../scss/breakpoints/_768up.scss */
+/* line 49, ../scss/breakpoints/_768up.scss */
 #inner-header .wrap .next {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
-/* line 52, ../scss/breakpoints/_768up.scss */
+/* line 53, ../scss/breakpoints/_768up.scss */
 #inner-header .wrap .below {
   grid-column: 1 / 3;
   grid-row: 3 / 4;
 }
 
-/* line 58, ../scss/breakpoints/_768up.scss */
+/* line 59, ../scss/breakpoints/_768up.scss */
 #inner-header.scrolled {
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
   grid-template-columns: 15% 85%;
 }
-/* line 64, ../scss/breakpoints/_768up.scss */
+/* line 65, ../scss/breakpoints/_768up.scss */
 #inner-header.scrolled .wrap #logo {
   grid-row: 1 / 3;
 }
-/* line 67, ../scss/breakpoints/_768up.scss */
+/* line 68, ../scss/breakpoints/_768up.scss */
 #inner-header.scrolled .wrap .below {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
 }
-/* line 71, ../scss/breakpoints/_768up.scss */
+/* line 72, ../scss/breakpoints/_768up.scss */
 #inner-header.scrolled .wrap .next {
   grid-row: 1 / 3;
 }
 
-/* line 77, ../scss/breakpoints/_768up.scss */
+/* line 78, ../scss/breakpoints/_768up.scss */
 .banner.sinistral {
   font-size: .9em;
 }
-/* line 79, ../scss/breakpoints/_768up.scss */
+/* line 80, ../scss/breakpoints/_768up.scss */
 .banner.sinistral .wrap {
   padding: 5.5em 0 7.5em;
 }
-/* line 81, ../scss/breakpoints/_768up.scss */
+/* line 82, ../scss/breakpoints/_768up.scss */
 .banner.sinistral .wrap > * {
   max-width: 50%;
 }
-/* line 85, ../scss/breakpoints/_768up.scss */
+/* line 86, ../scss/breakpoints/_768up.scss */
 .banner.sinistral .black {
   padding-left: 3em;
   margin-left: -3em;
@@ -488,7 +522,7 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 93, ../scss/breakpoints/_768up.scss */
+/* line 94, ../scss/breakpoints/_768up.scss */
 nav {
   position: inherit;
   top: 0;
@@ -496,60 +530,60 @@ nav {
   /* highlight current page */
   /* end current highlighters */
 }
-/* line 97, ../scss/breakpoints/_768up.scss */
+/* line 98, ../scss/breakpoints/_768up.scss */
 nav .nav {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   /* end .menu ul li */
 }
-/* line 101, ../scss/breakpoints/_768up.scss */
+/* line 102, ../scss/breakpoints/_768up.scss */
 nav .nav ul {
   margin-top: 0;
 }
-/* line 104, ../scss/breakpoints/_768up.scss */
+/* line 105, ../scss/breakpoints/_768up.scss */
 nav .nav > li {
   border: none;
   display: inline-block;
   margin-right: auto;
 }
-/* line 108, ../scss/breakpoints/_768up.scss */
+/* line 109, ../scss/breakpoints/_768up.scss */
 nav .nav > li:last-child:hover > ul.sub-menu {
   left: -100px;
 }
-/* line 112, ../scss/breakpoints/_768up.scss */
+/* line 113, ../scss/breakpoints/_768up.scss */
 nav .nav li {
   position: relative;
   /*
   plan your menus and drop-downs wisely.
   */
 }
-/* line 115, ../scss/breakpoints/_768up.scss */
+/* line 116, ../scss/breakpoints/_768up.scss */
 nav .nav li.menu-item-has-children a {
   padding-right: 5px;
 }
-/* line 119, ../scss/breakpoints/_768up.scss */
+/* line 120, ../scss/breakpoints/_768up.scss */
 nav .nav li a {
   display: inline-block;
   border-bottom: 0;
 }
-/* line 123, ../scss/breakpoints/_768up.scss */
+/* line 124, ../scss/breakpoints/_768up.scss */
 nav .nav li:first-of-type a {
   padding-left: 0;
 }
-/* line 130, ../scss/breakpoints/_768up.scss */
+/* line 131, ../scss/breakpoints/_768up.scss */
 nav .nav li:hover > ul.sub-menu {
   top: 2.1em;
   left: -5px;
 }
-/* line 135, ../scss/breakpoints/_768up.scss */
+/* line 136, ../scss/breakpoints/_768up.scss */
 nav .nav li ul.sub-menu,
 nav .nav li ul.children {
   -webkit-box-shadow: 0px 7px 5px -3px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 7px 5px -3px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 7px 5px -3px rgba(0, 0, 0, 0.3);
 }
-/* line 141, ../scss/breakpoints/_768up.scss */
+/* line 142, ../scss/breakpoints/_768up.scss */
 nav .nav li ul.sub-menu {
   position: absolute;
   top: -9999px;
@@ -560,39 +594,39 @@ nav .nav li ul.sub-menu {
   z-index: 8999;
   width: 200px;
 }
-/* line 150, ../scss/breakpoints/_768up.scss */
+/* line 151, ../scss/breakpoints/_768up.scss */
 nav .nav li ul.sub-menu.toggleon, nav .nav li ul.sub-menu:focus-within {
   position: absolute;
   top: 2.1em;
   left: -5px;
 }
-/* line 155, ../scss/breakpoints/_768up.scss */
+/* line 156, ../scss/breakpoints/_768up.scss */
 nav .nav li ul.sub-menu button {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
 }
-/* line 159, ../scss/breakpoints/_768up.scss */
+/* line 160, ../scss/breakpoints/_768up.scss */
 nav .nav li ul.sub-menu li a {
   display: block;
   padding-left: 10px;
 }
-/* line 163, ../scss/breakpoints/_768up.scss */
+/* line 164, ../scss/breakpoints/_768up.scss */
 nav .nav li ul.sub-menu li ul {
   top: -1000px;
 }
-/* line 166, ../scss/breakpoints/_768up.scss */
+/* line 167, ../scss/breakpoints/_768up.scss */
 nav .nav li ul.sub-menu li:hover ul, nav .nav li ul.sub-menu li ul:focus-within {
   top: -1px;
   left: 100%;
 }
-/* line 170, ../scss/breakpoints/_768up.scss */
+/* line 171, ../scss/breakpoints/_768up.scss */
 nav .nav li ul.sub-menu li .toggleon {
   top: -1px;
   left: 100%;
 }
-/* line 183, ../scss/breakpoints/_768up.scss */
+/* line 184, ../scss/breakpoints/_768up.scss */
 nav li.current-menu-item > a,
 nav li.current_page_item > a,
 nav li.current_page_ancestor > a {
@@ -604,7 +638,7 @@ nav li.current_page_ancestor > a {
 POSTS & CONTENT STYLES
 *********************/
 /* line 194, ../scss/breakpoints/_768up.scss */
-body:not(.page-template-full-width) main {
+body:not(.page-template-full-width) main:not(.simple) {
   padding: 3em 0;
 }
 
@@ -630,155 +664,200 @@ body:not(.page-template-full-width) main {
 .container > .text:first-child, .container > .image:first-child {
   margin-left: 0;
 }
-/* line 218, ../scss/breakpoints/_768up.scss */
-.container.count1 .list-item, .container.count1 .widget, .container.count2 .list-item, .container.count2 .widget, .container.count3 .list-item, .container.count3 .widget, .container.count4 .list-item, .container.count4 .widget, .container.count5 .list-item, .container.count5 .widget, .container.count6 .list-item, .container.count6 .widget, .container.count7 .list-item, .container.count7 .widget, .container.count8 .list-item, .container.count8 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count11 .list-item, .container.count11 .widget, .container.count12 .list-item, .container.count12 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
+/* line 217, ../scss/breakpoints/_768up.scss */
+.container .list-item, .container .widget {
   margin-top: 1em;
   max-width: inherit;
 }
-/* line 223, ../scss/breakpoints/_768up.scss */
+/* line 221, ../scss/breakpoints/_768up.scss */
 .container.count1 .list-item, .container.count1 .widget {
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
 }
-/* line 229, ../scss/breakpoints/_768up.scss */
+/* line 227, ../scss/breakpoints/_768up.scss */
 .container.count2 .list-item, .container.count2 .widget {
   margin-right: 2%;
   -webkit-flex: 1 0 49%;
   -ms-flex: 1 0 49%;
   flex: 1 0 49%;
 }
-/* line 234, ../scss/breakpoints/_768up.scss */
+/* line 232, ../scss/breakpoints/_768up.scss */
 .container.count2 .list-item:nth-child(2n), .container.count2 .widget:nth-child(2n) {
   margin-right: 0;
 }
-/* line 240, ../scss/breakpoints/_768up.scss */
+/* line 238, ../scss/breakpoints/_768up.scss */
 .container.count3 .list-item, .container.count3 .widget, .container.count6 .list-item, .container.count6 .widget, .container.count5 .list-item, .container.count5 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
   margin-right: 2%;
-  -webkit-flex: 0 1 32%;
-  -ms-flex: 0 1 32%;
-  flex: 0 1 32%;
+  -webkit-flex: 0 1 31%;
+  -ms-flex: 0 1 31%;
+  flex: 0 1 31%;
 }
-/* line 245, ../scss/breakpoints/_768up.scss */
+/* line 243, ../scss/breakpoints/_768up.scss */
 .container.count3 .list-item:nth-child(3n), .container.count3 .widget:nth-child(3n), .container.count6 .list-item:nth-child(3n), .container.count6 .widget:nth-child(3n), .container.count5 .list-item:nth-child(3n), .container.count5 .widget:nth-child(3n), .container.count9 .list-item:nth-child(3n), .container.count9 .widget:nth-child(3n), .container.count10 .list-item:nth-child(3n), .container.count10 .widget:nth-child(3n), .container.count13 .list-item:nth-child(3n), .container.count13 .widget:nth-child(3n), .container.count14 .list-item:nth-child(3n), .container.count14 .widget:nth-child(3n), .container.count15 .list-item:nth-child(3n), .container.count15 .widget:nth-child(3n) {
   margin-right: 0;
 }
-/* line 251, ../scss/breakpoints/_768up.scss */
+/* line 249, ../scss/breakpoints/_768up.scss */
 .container.count4 .list-item, .container.count4 .widget, .container.count7 .list-item, .container.count7 .widget, .container.count8 .list-item, .container.count8 .widget, .container.count11 .list-item, .container.count11 .widget, .container.count12 .list-item, .container.count12 .widget {
   margin-right: 2.35%;
   -webkit-flex: 0 1 23%;
   -ms-flex: 0 1 23%;
   flex: 0 1 23%;
 }
-/* line 256, ../scss/breakpoints/_768up.scss */
+/* line 254, ../scss/breakpoints/_768up.scss */
 .container.count4 .list-item:nth-child(4n), .container.count4 .widget:nth-child(4n), .container.count7 .list-item:nth-child(4n), .container.count7 .widget:nth-child(4n), .container.count8 .list-item:nth-child(4n), .container.count8 .widget:nth-child(4n), .container.count11 .list-item:nth-child(4n), .container.count11 .widget:nth-child(4n), .container.count12 .list-item:nth-child(4n), .container.count12 .widget:nth-child(4n) {
   margin-right: 0;
 }
 
-/* line 262, ../scss/breakpoints/_768up.scss */
+/* line 260, ../scss/breakpoints/_768up.scss */
 .acf-map {
   flex: 1 0 75%;
 }
 
-/* line 266, ../scss/breakpoints/_768up.scss */
+/* line 264, ../scss/breakpoints/_768up.scss */
 .validation .slick {
   width: inherit;
 }
-/* line 268, ../scss/breakpoints/_768up.scss */
+/* line 266, ../scss/breakpoints/_768up.scss */
 .validation .slick .image {
   max-width: 33%;
   margin-right: 25px;
   float: left;
 }
 
-/* line 274, ../scss/breakpoints/_768up.scss */
+/* line 272, ../scss/breakpoints/_768up.scss */
 .archive-title {
   margin: 3em 0 0;
 }
 
-/* line 278, ../scss/breakpoints/_768up.scss */
+/* line 276, ../scss/breakpoints/_768up.scss */
 .blog .hentry, .archive .hentry {
   padding: 0;
   margin: 3em 0 0;
 }
-/* line 281, ../scss/breakpoints/_768up.scss */
-.blog .hentry:first-of-type, .archive .hentry:first-of-type {
+/* line 279, ../scss/breakpoints/_768up.scss */
+.blog .hentry:last-child, .archive .hentry:last-child {
+  margin-bottom: 1em;
+}
+/* line 284, ../scss/breakpoints/_768up.scss */
+.blog main:not(.simple) .hentry:first-of-type, .archive main:not(.simple) .hentry:first-of-type {
   margin-top: 0;
 }
-/* line 285, ../scss/breakpoints/_768up.scss */
+/* line 289, ../scss/breakpoints/_768up.scss */
+.blog .simple.container.wrap, .archive .simple.container.wrap {
+  margin-top: 1.5em;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 294, ../scss/breakpoints/_768up.scss */
+.blog .simple.container.wrap .thumbnail, .archive .simple.container.wrap .thumbnail {
+  flex: 1 1 65%;
+  margin-right: 3%;
+  position: relative;
+  overflow: hidden;
+}
+/* line 299, ../scss/breakpoints/_768up.scss */
+.blog .simple.container.wrap .thumbnail img, .archive .simple.container.wrap .thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+/* line 306, ../scss/breakpoints/_768up.scss */
+.blog .simple.container.wrap .content, .archive .simple.container.wrap .content {
+  flex: 1 1 32%;
+  text-align: center;
+  margin: auto;
+  padding: 1.5em 0;
+}
+/* line 312, ../scss/breakpoints/_768up.scss */
+.blog .simple.container.wrap h2, .archive .simple.container.wrap h2 {
+  grid-row: 1;
+}
+/* line 315, ../scss/breakpoints/_768up.scss */
+.blog .simple.container.wrap .button, .archive .simple.container.wrap .button {
+  float: none;
+  margin: 15px auto 0;
+}
+/* line 319, ../scss/breakpoints/_768up.scss */
+.blog .simple.container.wrap .entry-content p, .archive .simple.container.wrap .entry-content p {
+  margin-bottom: 0;
+}
+/* line 324, ../scss/breakpoints/_768up.scss */
 .blog article, .archive article {
   display: block;
 }
-/* line 287, ../scss/breakpoints/_768up.scss */
+/* line 326, ../scss/breakpoints/_768up.scss */
 .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
   margin: 0;
 }
-/* line 291, ../scss/breakpoints/_768up.scss */
+/* line 330, ../scss/breakpoints/_768up.scss */
 .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
   max-height: 220px;
 }
-/* line 294, ../scss/breakpoints/_768up.scss */
+/* line 333, ../scss/breakpoints/_768up.scss */
 .blog .rich h2, .archive .rich h2 {
   font-size: 1.25em;
 }
-/* line 297, ../scss/breakpoints/_768up.scss */
+/* line 336, ../scss/breakpoints/_768up.scss */
 .blog .rich article.hentry, .archive .rich article.hentry {
   flex: 1 0 45%;
   margin-right: 5%;
 }
-/* line 298, ../scss/breakpoints/_768up.scss */
+/* line 337, ../scss/breakpoints/_768up.scss */
 .blog .rich article.hentry:first-of-type, .archive .rich article.hentry:first-of-type {
   flex: 1 0 100%;
   margin-right: 0;
 }
-/* line 302, ../scss/breakpoints/_768up.scss */
+/* line 341, ../scss/breakpoints/_768up.scss */
 .blog .rich article.hentry:nth-of-type(2n+1), .blog .rich article.hentry:last-of-type, .archive .rich article.hentry:nth-of-type(2n+1), .archive .rich article.hentry:last-of-type {
   margin-right: 0;
 }
 
-/* line 310, ../scss/breakpoints/_768up.scss */
+/* line 349, ../scss/breakpoints/_768up.scss */
 .alignleft, img.alignleft {
   float: left;
   margin-right: 15px;
   margin-bottom: 15px;
 }
 
-/* line 315, ../scss/breakpoints/_768up.scss */
+/* line 354, ../scss/breakpoints/_768up.scss */
 .alignright, img.alignright {
   float: right;
   margin-left: 15px;
   margin-bottom: 15px;
 }
 
-/* line 320, ../scss/breakpoints/_768up.scss */
+/* line 359, ../scss/breakpoints/_768up.scss */
 .aligncenter, img.aligncenter {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* line 327, ../scss/breakpoints/_768up.scss */
+/* line 366, ../scss/breakpoints/_768up.scss */
 .validation .wrap {
   width: 94%;
 }
-/* line 330, ../scss/breakpoints/_768up.scss */
+/* line 369, ../scss/breakpoints/_768up.scss */
 .validation .testimonial p:not(.testimonial-meta) {
   font-size: 1.5em;
 }
 
-/* line 334, ../scss/breakpoints/_768up.scss */
+/* line 373, ../scss/breakpoints/_768up.scss */
 .slick {
   width: 100%;
   margin: auto;
 }
 
-/* line 340, ../scss/breakpoints/_768up.scss */
+/* line 379, ../scss/breakpoints/_768up.scss */
 .flipcards .wrap:after {
   content: '';
   display: block;
   clear: both;
 }
-/* line 345, ../scss/breakpoints/_768up.scss */
+/* line 384, ../scss/breakpoints/_768up.scss */
 .flipcards .list-item {
   min-height: 250px;
   position: relative;
@@ -787,20 +866,20 @@ body:not(.page-template-full-width) main {
   -o-perspective: 800px;
   perspective: 800px;
 }
-/* line 352, ../scss/breakpoints/_768up.scss */
+/* line 391, ../scss/breakpoints/_768up.scss */
 .flipcards .list-item .text {
   transform: rotateY(-180deg);
   padding: 10px;
 }
-/* line 357, ../scss/breakpoints/_768up.scss */
+/* line 396, ../scss/breakpoints/_768up.scss */
 .flipcards .list-item:hover .image {
   transform: rotateY(180deg);
 }
-/* line 360, ../scss/breakpoints/_768up.scss */
+/* line 399, ../scss/breakpoints/_768up.scss */
 .flipcards .list-item:hover .text {
   transform: rotateY(0deg);
 }
-/* line 364, ../scss/breakpoints/_768up.scss */
+/* line 403, ../scss/breakpoints/_768up.scss */
 .flipcards .list-item .image, .flipcards .list-item .text {
   position: absolute;
   width: 100%;
@@ -810,17 +889,17 @@ body:not(.page-template-full-width) main {
   backface-visibility: hidden;
 }
 
-/* line 376, ../scss/breakpoints/_768up.scss */
+/* line 415, ../scss/breakpoints/_768up.scss */
 .slideshow .container {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 381, ../scss/breakpoints/_768up.scss */
+/* line 420, ../scss/breakpoints/_768up.scss */
 .slideshow .image a.next {
   margin-left: -22%;
 }
-/* line 384, ../scss/breakpoints/_768up.scss */
+/* line 423, ../scss/breakpoints/_768up.scss */
 .slideshow .image a.prev {
   margin-right: -23%;
 }
@@ -828,13 +907,13 @@ body:not(.page-template-full-width) main {
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 394, ../scss/breakpoints/_768up.scss */
+/* line 433, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin: 3em 0 0 0;
   padding: 0 0 0 30px;
 }
 
-/* line 399, ../scss/breakpoints/_768up.scss */
+/* line 438, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
@@ -848,24 +927,24 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 414, ../scss/breakpoints/_768up.scss */
+/* line 453, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 418, ../scss/breakpoints/_768up.scss */
+/* line 457, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section {
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
   margin: 1em 2% 3em 0;
 }
-/* line 423, ../scss/breakpoints/_768up.scss */
+/* line 462, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section h3 {
   margin-bottom: 1em;
 }
-/* line 426, ../scss/breakpoints/_768up.scss */
+/* line 465, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section:last-child {
   margin-right: 0;
 }
@@ -881,89 +960,129 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-/* line 13, ../scss/breakpoints/_1030up.scss */
+/* line 11, ../scss/breakpoints/_1030up.scss */
+#logo a {
+  font-size: inherit;
+}
+
+/* line 15, ../scss/breakpoints/_1030up.scss */
 nav .nav li {
   margin-right: auto;
 }
-/* line 15, ../scss/breakpoints/_1030up.scss */
+/* line 17, ../scss/breakpoints/_1030up.scss */
 nav .nav li a {
   padding: 5px 0;
 }
 
-/* line 20, ../scss/breakpoints/_1030up.scss */
+/* line 22, ../scss/breakpoints/_1030up.scss */
 .next .nav li {
   margin-right: 0;
   margin-left: auto;
 }
 
-/* line 25, ../scss/breakpoints/_1030up.scss */
+/* line 27, ../scss/breakpoints/_1030up.scss */
 .wrap {
   max-width: 1100px;
 }
 
-/* line 29, ../scss/breakpoints/_1030up.scss */
+/* line 31, ../scss/breakpoints/_1030up.scss */
 .page-template-full-width .compact .wrap {
   width: 50%;
 }
 
-/* line 34, ../scss/breakpoints/_1030up.scss */
+/* line 36, ../scss/breakpoints/_1030up.scss */
 .container > .text, .container > .image {
   margin-left: 4.75%;
 }
+/* line 39, ../scss/breakpoints/_1030up.scss */
+.container .list-item, .container .widget {
+  margin-top: 2em;
+}
 
-/* line 40, ../scss/breakpoints/_1030up.scss */
+/* line 45, ../scss/breakpoints/_1030up.scss */
 .blog article, .archive article {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 44, ../scss/breakpoints/_1030up.scss */
+/* line 49, ../scss/breakpoints/_1030up.scss */
 .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
   flex: 1 0 45%;
   margin: 0 5% 0 0;
 }
-/* line 48, ../scss/breakpoints/_1030up.scss */
+/* line 53, ../scss/breakpoints/_1030up.scss */
 .blog article .thumbnail img, .archive article .thumbnail img {
   width: 100%;
   height: auto;
 }
-/* line 53, ../scss/breakpoints/_1030up.scss */
+/* line 58, ../scss/breakpoints/_1030up.scss */
 .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
   max-height: 200px;
 }
-/* line 56, ../scss/breakpoints/_1030up.scss */
+/* line 62, ../scss/breakpoints/_1030up.scss */
+.blog .simple.container.wrap, .archive .simple.container.wrap {
+  margin-top: 2.5em;
+  padding-bottom: 2em;
+}
+/* line 65, ../scss/breakpoints/_1030up.scss */
+.blog .simple.container.wrap .thumbnail, .archive .simple.container.wrap .thumbnail {
+  flex: 1 1 70%;
+  margin-right: 4%;
+}
+/* line 69, ../scss/breakpoints/_1030up.scss */
+.blog .simple.container.wrap .content, .archive .simple.container.wrap .content {
+  flex: 1 1 26%;
+  padding: 2.5em 0;
+}
+/* line 73, ../scss/breakpoints/_1030up.scss */
+.blog .simple.container.wrap .article-header, .archive .simple.container.wrap .article-header {
+  padding-bottom: 1em;
+}
+/* line 76, ../scss/breakpoints/_1030up.scss */
+.blog .simple.container.wrap h2, .archive .simple.container.wrap h2 {
+  font-size: 1.5em;
+}
+/* line 79, ../scss/breakpoints/_1030up.scss */
+.blog .simple.container.wrap .button, .archive .simple.container.wrap .button {
+  margin-top: 1.5em;
+}
+/* line 83, ../scss/breakpoints/_1030up.scss */
 .blog .simple article, .archive .simple article {
   display: block;
 }
+/* line 85, ../scss/breakpoints/_1030up.scss */
+.blog .simple article h2, .archive .simple article h2 {
+  font-size: 1.25em;
+}
 
-/* line 63, ../scss/breakpoints/_1030up.scss */
+/* line 94, ../scss/breakpoints/_1030up.scss */
 .container.count5 .list-item, .container.count5 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
   margin-right: 1%;
   -webkit-flex: 1 1 19%;
   -ms-flex: 1 1 19%;
   flex: 1 1 19%;
 }
-/* line 68, ../scss/breakpoints/_1030up.scss */
+/* line 99, ../scss/breakpoints/_1030up.scss */
 .container.count5 .list-item:nth-child(3n), .container.count5 .widget:nth-child(3n), .container.count9 .list-item:nth-child(3n), .container.count9 .widget:nth-child(3n), .container.count10 .list-item:nth-child(3n), .container.count10 .widget:nth-child(3n), .container.count13 .list-item:nth-child(3n), .container.count13 .widget:nth-child(3n), .container.count14 .list-item:nth-child(3n), .container.count14 .widget:nth-child(3n), .container.count15 .list-item:nth-child(3n), .container.count15 .widget:nth-child(3n) {
   margin-right: 1%;
 }
-/* line 71, ../scss/breakpoints/_1030up.scss */
+/* line 102, ../scss/breakpoints/_1030up.scss */
 .container.count5 .list-item:nth-child(5n), .container.count5 .widget:nth-child(5n), .container.count9 .list-item:nth-child(5n), .container.count9 .widget:nth-child(5n), .container.count10 .list-item:nth-child(5n), .container.count10 .widget:nth-child(5n), .container.count13 .list-item:nth-child(5n), .container.count13 .widget:nth-child(5n), .container.count14 .list-item:nth-child(5n), .container.count14 .widget:nth-child(5n), .container.count15 .list-item:nth-child(5n), .container.count15 .widget:nth-child(5n) {
   margin-right: 0;
 }
 
-/* line 79, ../scss/breakpoints/_1030up.scss */
+/* line 110, ../scss/breakpoints/_1030up.scss */
 .banner.sinistral .black {
   padding: 1.5em 2em;
   padding-left: 12%;
   margin-left: -12%;
 }
 
-/* line 87, ../scss/breakpoints/_1030up.scss */
+/* line 118, ../scss/breakpoints/_1030up.scss */
 .slideshow .image a.next {
   margin-left: -30%;
 }
-/* line 90, ../scss/breakpoints/_1030up.scss */
+/* line 121, ../scss/breakpoints/_1030up.scss */
 .slideshow .image a.prev {
   margin-right: -31%;
 }

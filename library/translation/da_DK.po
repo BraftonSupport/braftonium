@@ -24,8 +24,8 @@ msgstr ""
 "X-Poedit-SearchPath-1: .\n"
 
 #: 404.php:13
-msgid "Epic 404 - Article Not Found"
-msgstr "Epic 404 - Artikel ikke fundet"
+msgid "Article Not Found"
+msgstr "Artikel ikke fundet"
 
 #: 404.php:19 archive.php:53 full-width.php:70
 msgid ""
