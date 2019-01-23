@@ -3,6 +3,9 @@
 http://brafton.com/
 
 *******************************************************************
+/* 2.1 update */
+New 404 page. Options to row subsection.
+
 /* 2.0 update */
 Added new subsections, added more options to blog and theme.
 
