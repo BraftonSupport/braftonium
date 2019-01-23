@@ -3,10 +3,10 @@ jQuery(document).ready(function ($) {
   var mn = $('#inner-header');
   mns = 'scrolled';
   hdr = $('#inner-header').height();
-  content = $('#content');
+  content = $('#container');
 
   $(window).scroll(function () {
-    if ($(this).scrollTop() > hdr - 45) {
+    if ($(this).scrollTop() > hdr) {
       mn.addClass(mns);
       content.css("margin-top", hdr);
     } else {

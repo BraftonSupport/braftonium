@@ -213,16 +213,32 @@ if ( WPEX_WOOCOMMERCE_ACTIVE ) {
 }
 
 
-/* Excerpt shortening*/
+/* Excerpt shortening for image rich blog style */
 if (function_exists('get_field')):
 $layout = get_field('blog_layout', 'option');
 if ( isset($layout) && $layout=='rich' ) {
 	function custom_excerpt_length( $length ) {
-		return 10;
+		return 25;
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 }
 endif;
+
+// that 404 page
+function get_page_by_title_search($string){
+    global $wpdb;
+    $title = esc_sql($string);
+    if(!$title) return;
+    $page = $wpdb->get_results("
+        SELECT * 
+        FROM $wpdb->posts
+        WHERE post_title LIKE '%$title%'
+        AND post_type = 'page' 
+        AND post_status = 'publish'
+        LIMIT 1
+    ");
+    return $page;
+}
 
 // Adds js needed for the video background.
 function braftonium_video_script() {

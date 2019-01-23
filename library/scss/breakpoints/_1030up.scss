@@ -8,7 +8,9 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-
+#logo a {
+	font-size: inherit;
+}
 nav .nav {
 	li {
 		margin-right: auto;
@@ -34,6 +36,9 @@ nav .nav {
 	> .text, > .image {
 		margin-left: 4.75%;
 	}
+	.list-item, .widget {
+		margin-top: 2em;
+	}
 }
 
 .blog, .archive {
@@ -53,8 +58,34 @@ nav .nav {
 	.full article.hentry .thumbnail {
 		max-height: 200px;
 	}
-	.simple article {
-		display: block;
+	.simple {
+		&.container.wrap {
+			margin-top: 2.5em;
+			padding-bottom: 2em;
+			.thumbnail {
+				flex: 1 1 70%;
+				margin-right: 4%;
+			}
+			.content {
+				flex: 1 1 26%;
+				padding: 2.5em 0;
+			}
+			.article-header {
+				padding-bottom: 1em;
+			}
+			h2 {
+				font-size: 1.5em;
+			}
+			.button {
+				margin-top: 1.5em;
+			}
+		}
+		article {
+			display: block;
+			h2 {
+				font-size: 1.25em;
+			}
+		}
 	}
 }
 
