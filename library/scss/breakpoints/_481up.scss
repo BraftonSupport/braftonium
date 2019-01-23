@@ -89,6 +89,11 @@ body:not(.page-template-full-width) main:not(.simple) {
 		}
 	}
 }
+
+.page-template-full-width .cta {
+	text-align: inherit;
+}
+
 /* entry content */
 .entry-content {
 	/* at this larger size, we can start to align images */

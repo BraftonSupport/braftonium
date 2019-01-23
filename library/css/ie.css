@@ -256,24 +256,29 @@ body:not(.page-template-full-width) main:not(.simple) {
   padding: 2.5em 0 3em;
 }
 
-/* entry content */
 /* line 93, ../scss/breakpoints/_481up.scss */
+.page-template-full-width .cta {
+  text-align: inherit;
+}
+
+/* entry content */
+/* line 98, ../scss/breakpoints/_481up.scss */
 .entry-content {
   /* at this larger size, we can start to align images */
 }
-/* line 95, ../scss/breakpoints/_481up.scss */
+/* line 100, ../scss/breakpoints/_481up.scss */
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
   display: inline;
   float: left;
 }
-/* line 100, ../scss/breakpoints/_481up.scss */
+/* line 105, ../scss/breakpoints/_481up.scss */
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
   display: inline;
   float: right;
 }
-/* line 105, ../scss/breakpoints/_481up.scss */
+/* line 110, ../scss/breakpoints/_481up.scss */
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;
@@ -282,13 +287,13 @@ body:not(.page-template-full-width) main:not(.simple) {
 }
 
 /* end .entry-content */
-/* line 115, ../scss/breakpoints/_481up.scss */
+/* line 120, ../scss/breakpoints/_481up.scss */
 .container {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 119, ../scss/breakpoints/_481up.scss */
+/* line 124, ../scss/breakpoints/_481up.scss */
 .container > .text, .container > .image {
   -webkit-flex: 1 1 48%;
   -ms-flex: 1 1 48%;
@@ -297,61 +302,61 @@ body:not(.page-template-full-width) main:not(.simple) {
   margin-top: auto;
   margin-bottom: auto;
 }
-/* line 127, ../scss/breakpoints/_481up.scss */
+/* line 132, ../scss/breakpoints/_481up.scss */
 .container > .list-item, .container .widget {
   -webkit-flex: 1 1 48%;
   -ms-flex: 1 1 48%;
   flex: 1 1 48%;
   margin-right: 2%;
 }
-/* line 133, ../scss/breakpoints/_481up.scss */
+/* line 138, ../scss/breakpoints/_481up.scss */
 .container > *:last-child {
   margin-right: 0;
 }
 
-/* line 138, ../scss/breakpoints/_481up.scss */
+/* line 143, ../scss/breakpoints/_481up.scss */
 .slideshow .container {
   display: block;
 }
-/* line 141, ../scss/breakpoints/_481up.scss */
+/* line 146, ../scss/breakpoints/_481up.scss */
 .slideshow .image a.next {
   margin-left: -35%;
 }
-/* line 144, ../scss/breakpoints/_481up.scss */
+/* line 149, ../scss/breakpoints/_481up.scss */
 .slideshow .image a.prev {
   margin-right: -35%;
 }
 
-/* line 150, ../scss/breakpoints/_481up.scss */
+/* line 155, ../scss/breakpoints/_481up.scss */
 .blog article, .archive article {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
-/* line 154, ../scss/breakpoints/_481up.scss */
+/* line 159, ../scss/breakpoints/_481up.scss */
 .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
   flex: 1 0 45%;
   margin: 0 5% 0 0;
 }
-/* line 159, ../scss/breakpoints/_481up.scss */
+/* line 164, ../scss/breakpoints/_481up.scss */
 .blog .full .thumbnail, .archive .full .thumbnail {
   overflow: hidden;
 }
-/* line 162, ../scss/breakpoints/_481up.scss */
+/* line 167, ../scss/breakpoints/_481up.scss */
 .blog .full article.hentry, .blog .rich article.hentry, .archive .full article.hentry, .archive .rich article.hentry {
   flex: 1 0 45%;
   margin-right: 5%;
 }
-/* line 163, ../scss/breakpoints/_481up.scss */
+/* line 168, ../scss/breakpoints/_481up.scss */
 .blog .full article.hentry:first-of-type, .blog .rich article.hentry:first-of-type, .archive .full article.hentry:first-of-type, .archive .rich article.hentry:first-of-type {
   flex: 1 0 100%;
   margin-right: 0;
 }
-/* line 167, ../scss/breakpoints/_481up.scss */
+/* line 172, ../scss/breakpoints/_481up.scss */
 .blog .full article.hentry:nth-of-type(2n+1), .blog .full article.hentry:last-of-type, .blog .rich article.hentry:nth-of-type(2n+1), .blog .rich article.hentry:last-of-type, .archive .full article.hentry:nth-of-type(2n+1), .archive .full article.hentry:last-of-type, .archive .rich article.hentry:nth-of-type(2n+1), .archive .rich article.hentry:last-of-type {
   margin-right: 0;
 }
-/* line 174, ../scss/breakpoints/_481up.scss */
+/* line 179, ../scss/breakpoints/_481up.scss */
 .blog .simple article.hentry, .archive .simple article.hentry {
   flex: 1 0 48%;
   margin-right: 4%;
@@ -365,27 +370,27 @@ body:not(.page-template-full-width) main:not(.simple) {
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
 }
-/* line 186, ../scss/breakpoints/_481up.scss */
+/* line 191, ../scss/breakpoints/_481up.scss */
 .blog .simple article.hentry:nth-child(2n), .blog .simple article.hentry:last-child, .archive .simple article.hentry:nth-child(2n), .archive .simple article.hentry:last-child {
   margin-right: 0;
 }
-/* line 190, ../scss/breakpoints/_481up.scss */
+/* line 195, ../scss/breakpoints/_481up.scss */
 .blog .simple.container.wrap, .archive .simple.container.wrap {
   border-bottom: 1px solid #ccc;
   padding-bottom: 1em;
   margin-bottom: 1em;
   display: block;
 }
-/* line 195, ../scss/breakpoints/_481up.scss */
+/* line 200, ../scss/breakpoints/_481up.scss */
 .blog .simple.container.wrap h2, .archive .simple.container.wrap h2 {
   font-size: 1.25em;
 }
-/* line 199, ../scss/breakpoints/_481up.scss */
+/* line 204, ../scss/breakpoints/_481up.scss */
 .blog .simple h2, .archive .simple h2 {
   font-size: 1em;
 }
 
-/* line 204, ../scss/breakpoints/_481up.scss */
+/* line 209, ../scss/breakpoints/_481up.scss */
 .acf-map {
   width: 95%;
   margin-left: 1%;
@@ -394,17 +399,17 @@ body:not(.page-template-full-width) main:not(.simple) {
 /*********************
 FOOTER STYLES
 *********************/
-/* line 214, ../scss/breakpoints/_481up.scss */
+/* line 219, ../scss/breakpoints/_481up.scss */
 .footer a.logo img {
   margin: 10px 0 10px;
   max-width: 150px;
 }
 
-/* line 221, ../scss/breakpoints/_481up.scss */
+/* line 226, ../scss/breakpoints/_481up.scss */
 .social-navigation {
   margin: 5px 0 0 auto;
 }
-/* line 223, ../scss/breakpoints/_481up.scss */
+/* line 228, ../scss/breakpoints/_481up.scss */
 .social-navigation a {
   text-align: right;
   margin: .5em;
