@@ -126,3 +126,8 @@ nav .nav {
 		margin-right: -31%;
 	}
 }
+.footer #inner-footer {
+	-webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}

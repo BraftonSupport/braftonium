@@ -66,30 +66,23 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
                 <div class="list-item"><div class="container"><?php
                     if ( $item['left-content'] ):
                         echo '<h3>';
-                            // if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
-                            // if (strlen($titlestring) > 65){
-                            //     $titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
-                            // }
                             echo $titlestring;
-                            // echo '</a>';
-                            echo '</h3>';
+                        echo '</h3>';
                     endif;
 
 				if ( $item['image'] ):
 					echo '<div class="image"><a class="prev"></a>';
-				    // if ( $item['button'] ): echo '<a href="'.$url.'" target="'. $target.'" name="'.$titlestring.'">'; endif;
 						if ( is_array($imagestyle) && in_array('round', $imagestyle) ):
 							echo wp_get_attachment_image( intval($item['image']), $size, "", ["class" => "round"] );
 						else:
 							echo wp_get_attachment_image( intval($item['image']), $size );
                         endif;
-				    // if ( $item['button'] ): echo '</a>'; endif;
 					echo '<a class="next"></a></div>';
 				endif;
 
 				echo '<div class="text">';
                     if ( $item['right-content'] ): echo wp_kses_post($item['right-content']); endif;
-                    if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
+                    if ( $showbutton && $item['button']['url'] ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
                         if ($text=='Read More'||$text==''): _e( 'Read More', 'braftonium' ); echo '<span class="hide">'. $titlestring.'</span>';
                         else: echo $text;
                         endif;
