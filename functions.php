@@ -267,7 +267,7 @@ function braftonium_customize_css() {
 		if (get_theme_mod( 'braftonium_link_color' )) {
 			$braftonium_link = sanitize_hex_color(get_theme_mod( 'braftonium_link_color' ));
 			$css .= PHP_EOL . sprintf( 'a, a:visited, .blog .read-more, .archive .read-more, .slick-prev:before, .slick-next:before { color:%s; }', $braftonium_link );
-			$css .= PHP_EOL . sprintf( 'button, .blue-btn, .pagination a:hover, .hero .read-more, .comment-reply-link, #submit, .button { background-color:%s; }', $braftonium_link );
+			$css .= PHP_EOL . sprintf( 'button, .blue-btn, .pagination a:hover, .hero .read-more, .comment-reply-link, #submit, .button, .flipcards .list-item .text { background-color:%s; }', $braftonium_link );
 			$css .= PHP_EOL . sprintf( '.hero article.hentry { border-bottom-color:%s99; }', $braftonium_link );
 		}
 		if (get_theme_mod( 'braftonium_linkhover_color' )) {

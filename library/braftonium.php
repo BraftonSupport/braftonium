@@ -128,6 +128,7 @@ function braftonium_support() {
 	//add_theme_support( 'custom-header');
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'mediumsquared', 300, 300, true );
+	add_image_size( 'oval', 150, 200, true );
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',

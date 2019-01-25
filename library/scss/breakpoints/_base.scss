@@ -597,10 +597,11 @@ svg {
 		flex-wrap: wrap;
 		.has-post-thumbnail {
 			position: relative;
-			min-height: 200px;
+			min-height: 250px;
 			.content {
 				position: absolute;
 				bottom: 0;
+				left: 0;
 			}
 			.entry-content {
 				height: 0;
@@ -608,7 +609,7 @@ svg {
 				@include transition(all 0.2s ease-in-out);
 			}
 			&:hover .entry-content {
-				height: 110px;
+				height: 100px;
 			}
 		}
 		h2, .h2 {
@@ -639,14 +640,9 @@ svg {
 				margin-right: 0;
 			}
 			.thumbnail {
-				-webkit-align-content: stretch;
-				-ms-flex-line-pack: stretch;
-				align-content: stretch;
 				background-position: center;
 				background-size: cover;
-				height: 100%;
 				max-height: 500px;
-				overflow: hidden;
 			}
 			.ssb-social {
 				padding: 0 0 0 10px;
@@ -669,11 +665,8 @@ svg {
 	.simple.container.wrap {
 		margin-top: 1em;
 		.thumbnail {
-			overflow: hidden;
-			img {
-				width: auto;
-				height: 100%;
-			}
+			background-position: center;
+			background-size: cover;
 		}
 	}
 	.simple {
@@ -816,8 +809,10 @@ svg {
 	}
 	.cta {
 		text-align: center;
-		.blue-btn {
+		.container > p {
 			margin: auto auto auto 25px;
+		}
+		.blue-btn {
 			font-size: 1.15em;
 		}
 		h2 {
@@ -851,6 +846,54 @@ svg {
 		.blue-btn {
 			margin-top: auto;
 			margin-left: auto;
+		}
+	}
+}
+
+.flipcards {
+	.wrap:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.list-item {
+		min-height: 250px;
+		position: relative;
+		-webkit-perspective: 800px;
+		-moz-perspective: 800px;
+		-o-perspective: 800px;
+		perspective: 800px;
+		.text{
+			transform: rotateY(-180deg);
+			padding: 10px;
+			background-color: $link-color;
+			color: $white;
+		}
+		.image {
+			position: relative;
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&:hover {
+			.image {
+				transform: rotateY(180deg);
+			}
+			.text {
+				transform: rotateY(0deg);
+			}
+		}
+		.image, .text {
+			position:absolute;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			transition: all 0.5s ease-in-out;
+			backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			-o-backface-visibility: hidden;
 		}
 	}
 }
@@ -1077,13 +1120,25 @@ svg {
 		left: 0;
 		right: 0;
 	}
+	h3 {
+		text-transform: uppercase;
+	}
 	.list-item {
-		cursor: move;
+		cursor: pointer;
 	}
 	.container{
 		> * {
 			flex: 1 0 33%;
-			margin: 0!important;
+		}
+		> .image {
+			margin: 0 auto;
+		}
+		.text {
+			padding-top: 15px;
+			margin: auto 0 auto auto;
+			.blue-btn {
+				float: right;
+			}
 		}
 	}
 	.slick-next, .slick-prev {
@@ -1109,7 +1164,6 @@ svg {
 			margin: auto auto auto -30%;
 			display: block;
 			content: '';
-			background: $blue;
 			border-radius: 0 50% 50% 0;
 			line-height: 125px;
 			text-indent: 30px;
@@ -1117,12 +1171,6 @@ svg {
 		a.prev, a.next {
 			height: 120px;
 			width: 80px;
-			background: $blue;
-			color: $meta-gray;
-			&:hover {
-				color: $blue;
-				background: $meta-gray;
-			}
 		}
 	}
 }

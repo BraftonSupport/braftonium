@@ -53,6 +53,7 @@ HEADER STYLES
 	.below {
 		grid-column: 1 / 3;
 		grid-row: 3 / 4;
+		clear: both;
 	}
 }
 
@@ -80,7 +81,7 @@ HEADER STYLES
 	.wrap {
 		padding: 5.5em 0 7.5em;
 		> * {
-			max-width: 50%;
+			max-width: 60%;
 		}
 	}
 	.black {
@@ -302,12 +303,6 @@ body:not(.page-template-full-width) main:not(.simple) {
 				margin-right: 3%;
 				position: relative;
 				overflow: hidden;
-				img {
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					-webkit-transform: translateY(-50%) translateX(-50%);
-				}
 			}
 			.content {
 				flex: 1 1 32%;
@@ -381,42 +376,6 @@ body:not(.page-template-full-width) main:not(.simple) {
 	margin: auto;
 }
 
-.flipcards {
-	.wrap:after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-	.list-item {
-		min-height: 250px;
-		position: relative;
-		-webkit-perspective: 800px;
-		-moz-perspective: 800px;
-		-o-perspective: 800px;
-		perspective: 800px;
-		.text{
-			transform: rotateY(-180deg);
-			padding: 10px;
-		}
-		&:hover {
-			.image {
-				transform: rotateY(180deg);
-			}
-			.text {
-				transform: rotateY(0deg);
-			}
-		}
-		.image, .text {
-			position:absolute;
-			width: 100%;
-			height: 100%;
-			box-sizing: border-box;
-			transition: all 0.5s ease-in-out;
-			backface-visibility: hidden;
-		}
-	}
-}
-
 .slideshow {
 	.container {
 		display: -ms-flexbox;
@@ -428,6 +387,9 @@ body:not(.page-template-full-width) main:not(.simple) {
 	}
 	.image a.prev {
 		margin-right: -23%;
+	}
+	.text {
+		padding-top: 0;
 	}
 }
 
