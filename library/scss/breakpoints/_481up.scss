@@ -130,6 +130,9 @@ body:not(.page-template-full-width) main:not(.simple) {
 		margin-top: auto;
 		margin-bottom: auto;
 	}
+	&.zero > .text, > .image {
+		margin-top: 0;
+	}
 	> .list-item, .widget  {
 		-webkit-flex: 1 1 48%;
 		-ms-flex: 1 1 48%;

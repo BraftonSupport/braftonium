@@ -13,6 +13,7 @@ $title = wp_kses_post(get_sub_field('title'));
 if ($title):
 	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
 endif;
+$change_top = get_sub_field('change_top');
 $style = get_sub_field('style');
 $video = esc_url($style['video_url']);
 $classes = array('row');
@@ -54,7 +55,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 
 		<?php if ($titletext): echo $titletext; endif;
 		if( have_rows('row_content') ):
-			echo '<div class="container">';
+			echo '<div class="container';
+				if ($change_top): echo ' '.$change_top; endif;
+			echo '">';
 			while ( have_rows('row_content') ) : the_row();
 				if( get_row_layout() == 'imageblock' ):
 					echo '<div class="image"';

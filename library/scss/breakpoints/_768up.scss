@@ -79,7 +79,6 @@ HEADER STYLES
 .banner.sinistral {
 	font-size: .9em;
 	.wrap {
-		padding: 5.5em 0 7.5em;
 		> * {
 			max-width: 60%;
 		}
@@ -87,6 +86,8 @@ HEADER STYLES
 	.black {
 		padding-left: 3em;
 		margin-left: -3em;
+		margin-top: 1em;
+		margin-bottom: 1em;
 	}
 }
 /*********************

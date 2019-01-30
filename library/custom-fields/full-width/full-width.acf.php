@@ -806,6 +806,32 @@ acf_add_local_field_group(array(
 							'min' => '',
 							'max' => '',
 						),
+						
+						array(
+							'key' => 'field_5c1ba80ed7d09',
+							'label' => 'Change top margin',
+							'name' => 'change_top',
+							'type' => 'radio',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'choices' => array(
+								'auto' => 'auto',
+								'zero' => '0',
+							),
+							'allow_custom' => 0,
+							'default_value' => array(
+							),
+							'layout' => 'horizontal',
+							'toggle' => 0,
+							'return_format' => 'value',
+							'save_custom' => 0,
+						),
 						array(
 							'key' => 'field_5a4d6026dacc4',
 							'label' => __( 'Style', 'braftonium' ),
