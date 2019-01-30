@@ -225,12 +225,14 @@ if ( isset($layout) && $layout=='rich' ) {
 endif;
 
 // that 404 page
-function get_page_by_title_search(){
+function get_page_by_title_search($string){
     global $wpdb;
+    $title = esc_sql($string);
+    if(!$title) return;
     $page = $wpdb->get_results("
         SELECT * 
         FROM $wpdb->posts
-        WHERE post_title LIKE '%contact%'
+        WHERE post_title LIKE '%$title%'
         AND post_type = 'page' 
         AND post_status = 'publish'
         LIMIT 1

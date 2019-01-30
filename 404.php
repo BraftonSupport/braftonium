@@ -40,11 +40,10 @@
 							}
 							wp_reset_query();
 						?>
-						<h3><?php _e( 'A Way to Contact Us', 'braftonium' ); ?></h3>
-							<?php $page = get_page_by_title_search();
-							var_dump($page);
+							<?php $page = get_page_by_title_search('contact');
 							if ($page):
-								echo '<a href="' . get_permalink($page[0]->ID) . '" class="blue-btn">'. $page[0]->post_title.'</a>';
+								echo '<h3>'.__( 'A Way to Contact Us', 'braftonium' ).'</h3>
+								<a href="' . get_permalink($page[0]->ID) . '" class="blue-btn">'. $page[0]->post_title.'</a>';
 							endif; ?>
 						<h3><?php _e( 'Our Homepage', 'braftonium' ); ?></h3>
 						<?php $frontpage_id = get_option( 'page_on_front' ); 
