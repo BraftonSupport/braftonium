@@ -116,11 +116,12 @@
 						endif; ?></a></div>
 
 						<div class="nextwidget">
-							<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'braftonium' );
-							echo braftonium_get_svg_path('icon-bars').braftonium_get_svg_path('icon-close'); ?></button>	
 							<?php if ( is_active_sidebar( 'header-sidebar' ) ) {
 								dynamic_sidebar( 'header-sidebar' );
 							} ?>
+							<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'braftonium' );
+							echo braftonium_get_svg_path('icon-bars').braftonium_get_svg_path('icon-close'); ?></button>	
+
 						</div>
 
 						<nav class="<?php if ($nav): echo sanitize_text_field ($nav); else: echo 'below'; endif; ?>" itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -181,7 +182,7 @@
 					$tagline = wp_kses_post(get_field('tagline'));
 				endif;
 				if ($background_image) : ?>
-					<section class="banner visual"<?php echo ' style="background-image:url('.$background_image.')"'; ?>>
+					<section class="banner visual<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php echo ' style="background-image:url('.$background_image.')"'; ?>>
 					<?php if ($banner_style == 'sinistral'): ?>
 						<div class="wrap"><div class="black">
 					<?php else: ?>

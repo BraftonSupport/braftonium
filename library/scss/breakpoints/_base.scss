@@ -296,6 +296,9 @@ HEADER STYLES
 			}
 		}
 	}
+	#inner-header.container .widget {
+		margin-top: 0;
+	}
 	#inner-header.scrolled {
 		.wrap {
 			display: grid;
