@@ -8,9 +8,7 @@ $background_image = esc_url(get_field('background_image',$blog_page_id));
 if ($layout == 'simple' && have_posts()) {
 	while (have_posts()) {
 	  the_post(); ?>
-	  	<div class="simple wrap container"><div class="thumbnail"><a href="'<?php echo get_the_permalink(); ?>'"  title="'<?php echo the_title_attribute( 'echo=0' ); ?>'">
-		  <?php echo the_post_thumbnail('full'); ?>
-		</a></div>
+	  	<div class="simple wrap container"><div class="thumbnail" style="background-image:url('<?php get_the_post_thumbnail_url(get_the_ID(),'full'); ?>')"><a href="'<?php echo get_the_permalink(); ?>'"  title="'<?php echo the_title_attribute( 'echo=0' ); ?>'"></a></div>
 		<div class="content"><header class="article-header">
 		<p class="byline entry-meta vcard"><strong>
 			<?php printf( __( 'By', 'braftonium' ).' %1$s %2$s',

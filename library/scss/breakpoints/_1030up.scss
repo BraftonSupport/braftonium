@@ -100,6 +100,7 @@ nav .nav {
 			-webkit-flex: 1 1 19%;
 			-ms-flex: 1 1 19%;
 			flex: 1 1 19%;
+			max-width: 19%;
 			&:nth-child(3n){
 				margin-right: 1%;
 			}
@@ -125,4 +126,9 @@ nav .nav {
 	.image a.prev {
 		margin-right: -31%;
 	}
+}
+.footer #inner-footer {
+	-webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
