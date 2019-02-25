@@ -70,6 +70,9 @@ start customizing. All admin functions are located in lib/admin/
 		flex-wrap: wrap;
 		.layout {
 			flex: 1;
+			-webkit-align-self: flex-start;
+			-ms-flex-item-align: start;
+			align-self: flex-start;
 			margin: 0 1% 0 0;
 			min-width: 200px;
 			&:last-child {
