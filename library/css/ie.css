@@ -874,16 +874,22 @@ body:not(.page-template-full-width) main:not(.simple) {
   padding-top: 0;
 }
 
+/* line 397, ../scss/breakpoints/_768up.scss */
+.error404 .container .list-item {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 402, ../scss/breakpoints/_768up.scss */
+/* line 406, ../scss/breakpoints/_768up.scss */
 .sidebar {
   margin: 3em 0 0 0;
   padding: 0 0 0 30px;
 }
 
-/* line 407, ../scss/breakpoints/_768up.scss */
+/* line 411, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
@@ -897,7 +903,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 422, ../scss/breakpoints/_768up.scss */
+/* line 426, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -906,18 +912,18 @@ mobile. Make sure to double check these!
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-/* line 429, ../scss/breakpoints/_768up.scss */
+/* line 433, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section {
   -webkit-flex: 0 1 48%;
   -ms-flex: 0 1 48%;
   flex: 0 1 48%;
   margin: 1em 2% 3em 0;
 }
-/* line 434, ../scss/breakpoints/_768up.scss */
+/* line 438, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section h3 {
   margin-bottom: 1em;
 }
-/* line 437, ../scss/breakpoints/_768up.scss */
+/* line 441, ../scss/breakpoints/_768up.scss */
 .footer #inner-footer section:last-child {
   margin-right: 0;
 }
@@ -1066,7 +1072,13 @@ nav .nav li a {
   margin-right: -31%;
 }
 
-/* line 130, ../scss/breakpoints/_1030up.scss */
+/* line 131, ../scss/breakpoints/_1030up.scss */
+.error404 .container .list-item {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+/* line 136, ../scss/breakpoints/_1030up.scss */
 .footer #inner-footer {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;

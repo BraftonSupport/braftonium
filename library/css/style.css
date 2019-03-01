@@ -2827,37 +2827,37 @@ iframe {
 }
 
 /* line 1182, ../scss/breakpoints/_base.scss */
-.page-template-4042 header {
+.error404 header {
   padding: 0;
 }
 /* line 1184, ../scss/breakpoints/_base.scss */
-.page-template-4042 header img {
+.error404 header img {
   width: 230px;
   margin: 0 0 0 20px;
 }
 /* line 1188, ../scss/breakpoints/_base.scss */
-.page-template-4042 header h1 {
+.error404 header h1 {
   font-size: 18em;
   margin: -.3em 0 0 0;
 }
 /* line 1193, ../scss/breakpoints/_base.scss */
-.page-template-4042 article {
+.error404 article {
   text-align: center;
 }
 /* line 1195, ../scss/breakpoints/_base.scss */
-.page-template-4042 article .searchform {
+.error404 article .searchform {
   display: block;
   margin: auto;
 }
 /* line 1198, ../scss/breakpoints/_base.scss */
-.page-template-4042 article .searchform input {
+.error404 article .searchform input {
   margin-top: -4px;
   margin-right: -3px;
   border: 4px solid #444c5d;
   border-right: 0;
 }
 /* line 1204, ../scss/breakpoints/_base.scss */
-.page-template-4042 article .searchform #searchsubmit {
+.error404 article .searchform #searchsubmit {
   padding: 2px 1em 3px 1em;
   border: 4px solid #444c5d;
   border-left: 0;
@@ -3123,29 +3123,21 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 /* line 1460, ../scss/breakpoints/_base.scss */
-.error404 .sidebar {
-  margin-bottom: 2em;
-}
-/* line 1462, ../scss/breakpoints/_base.scss */
-.error404 .sidebar .blue-btn, .error404 .sidebar .hero .read-more, .hero .error404 .sidebar .read-more, .error404 .sidebar .comment-reply-link, .error404 .sidebar #submit, .error404 .sidebar .button {
-  width: 100%;
-}
-/* line 1465, ../scss/breakpoints/_base.scss */
-.error404 .sidebar h3 {
+.error404 h3 {
   margin-bottom: .25em;
 }
 
-/* line 1470, ../scss/breakpoints/_base.scss */
+/* line 1464, ../scss/breakpoints/_base.scss */
 .sidebar {
   margin-top: 2em;
 }
 
-/* line 1474, ../scss/breakpoints/_base.scss */
+/* line 1468, ../scss/breakpoints/_base.scss */
 .widget {
   margin: 0 0 2em 0;
 }
 
-/* line 1478, ../scss/breakpoints/_base.scss */
+/* line 1472, ../scss/breakpoints/_base.scss */
 .no-widgets {
   background-color: #fff;
   padding: 1.5em;
@@ -3155,24 +3147,24 @@ SIDEBARS & ASIDES
   margin-bottom: 1.5em;
 }
 
-/* line 1486, ../scss/breakpoints/_base.scss */
+/* line 1480, ../scss/breakpoints/_base.scss */
 .latest {
   clear: both;
 }
-/* line 1488, ../scss/breakpoints/_base.scss */
+/* line 1482, ../scss/breakpoints/_base.scss */
 .latest h5 {
   margin: .5em 0 2em;
 }
-/* line 1491, ../scss/breakpoints/_base.scss */
+/* line 1485, ../scss/breakpoints/_base.scss */
 .latest img {
   max-width: 300px;
 }
 
-/* line 1497, ../scss/breakpoints/_base.scss */
+/* line 1491, ../scss/breakpoints/_base.scss */
 .latest h4 {
   margin-top: .25em;
 }
-/* line 1500, ../scss/breakpoints/_base.scss */
+/* line 1494, ../scss/breakpoints/_base.scss */
 .latest img, .latest .thumbnail {
   background-size: cover;
   background-position: center;
@@ -3181,22 +3173,22 @@ SIDEBARS & ASIDES
   height: auto;
 }
 
-/* line 1509, ../scss/breakpoints/_base.scss */
+/* line 1503, ../scss/breakpoints/_base.scss */
 #inner-content > .latest a {
   margin-right: 2%;
   flex: 1;
 }
-/* line 1512, ../scss/breakpoints/_base.scss */
+/* line 1506, ../scss/breakpoints/_base.scss */
 #inner-content > .latest a:last-child {
   margin-right: 0;
 }
 
-/* line 1517, ../scss/breakpoints/_base.scss */
+/* line 1511, ../scss/breakpoints/_base.scss */
 .tiny {
   font-size: .9em;
 }
 
-/* line 1521, ../scss/breakpoints/_base.scss */
+/* line 1515, ../scss/breakpoints/_base.scss */
 .hide {
   height: 0;
   overflow: hidden;
@@ -3205,7 +3197,7 @@ SIDEBARS & ASIDES
   display: inline-block;
 }
 
-/* line 1528, ../scss/breakpoints/_base.scss */
+/* line 1522, ../scss/breakpoints/_base.scss */
 .show {
   font-size: inherit;
   height: auto;
@@ -3217,62 +3209,62 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 1540, ../scss/breakpoints/_base.scss */
+/* line 1534, ../scss/breakpoints/_base.scss */
 .footer {
   padding: 1.5em 0 0;
   clear: both;
   background-color: #323944;
   color: #f8f9fa;
 }
-/* line 1545, ../scss/breakpoints/_base.scss */
+/* line 1539, ../scss/breakpoints/_base.scss */
 .footer a {
   color: #9ab1d8;
 }
-/* line 1547, ../scss/breakpoints/_base.scss */
+/* line 1541, ../scss/breakpoints/_base.scss */
 .footer a:hover {
   color: #acbfdf;
 }
-/* line 1551, ../scss/breakpoints/_base.scss */
+/* line 1545, ../scss/breakpoints/_base.scss */
 .footer a.logo img {
   max-width: 200px;
   width: 100%;
   display: block;
   margin: 5px auto 0;
 }
-/* line 1557, ../scss/breakpoints/_base.scss */
+/* line 1551, ../scss/breakpoints/_base.scss */
 .footer .copyright {
   font-size: .8em;
   padding: 7px 0;
   background: rgba(0, 0, 0, 0.2);
 }
-/* line 1562, ../scss/breakpoints/_base.scss */
+/* line 1556, ../scss/breakpoints/_base.scss */
 .footer section {
   margin-bottom: 1em;
 }
-/* line 1563, ../scss/breakpoints/_base.scss */
+/* line 1557, ../scss/breakpoints/_base.scss */
 .footer section h3 {
   margin-bottom: .25em;
 }
-/* line 1568, ../scss/breakpoints/_base.scss */
+/* line 1562, ../scss/breakpoints/_base.scss */
 .footer .textwidget p:first-of-type {
   margin-top: 0;
 }
 
-/* line 1574, ../scss/breakpoints/_base.scss */
+/* line 1568, ../scss/breakpoints/_base.scss */
 #inner-footer .widget {
   margin: 0;
 }
-/* line 1577, ../scss/breakpoints/_base.scss */
+/* line 1571, ../scss/breakpoints/_base.scss */
 #inner-footer ul {
   margin: 0;
   list-style-type: none;
   line-height: 1.75em;
 }
-/* line 1583, ../scss/breakpoints/_base.scss */
+/* line 1577, ../scss/breakpoints/_base.scss */
 #inner-footer ul .sub-menu li {
   text-transform: capitalize;
 }
-/* line 1587, ../scss/breakpoints/_base.scss */
+/* line 1581, ../scss/breakpoints/_base.scss */
 #inner-footer .widget_recent_entries li {
   border-bottom: groove 2px;
   padding: 5px 0;
@@ -3288,22 +3280,22 @@ FOOTER STYLES
 	override these styles for the desktop
 	view.
 	*/
-/* line 1603, ../scss/breakpoints/_base.scss */
+/* line 1597, ../scss/breakpoints/_base.scss */
 .social-navigation {
   margin: 0;
   text-align: center;
 }
-/* line 1606, ../scss/breakpoints/_base.scss */
+/* line 1600, ../scss/breakpoints/_base.scss */
 .social-navigation li {
   display: inline;
 }
-/* line 1609, ../scss/breakpoints/_base.scss */
+/* line 1603, ../scss/breakpoints/_base.scss */
 .social-navigation a {
   display: inline-block;
   margin: 1em;
   text-align: center;
 }
-/* line 1614, ../scss/breakpoints/_base.scss */
+/* line 1608, ../scss/breakpoints/_base.scss */
 .social-navigation svg {
   height: 1.5em;
   width: 1.5em;
@@ -4042,16 +4034,22 @@ you can add resource intensive styles.
     padding-top: 0;
   }
 
+  /* line 397, ../scss/breakpoints/_768up.scss */
+  .error404 .container .list-item {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 402, ../scss/breakpoints/_768up.scss */
+  /* line 406, ../scss/breakpoints/_768up.scss */
   .sidebar {
     margin: 3em 0 0 0;
     padding: 0 0 0 30px;
   }
 
-  /* line 407, ../scss/breakpoints/_768up.scss */
+  /* line 411, ../scss/breakpoints/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
@@ -4065,7 +4063,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 422, ../scss/breakpoints/_768up.scss */
+  /* line 426, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -4074,18 +4072,18 @@ you can add resource intensive styles.
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  /* line 429, ../scss/breakpoints/_768up.scss */
+  /* line 433, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer section {
     -webkit-flex: 0 1 48%;
     -ms-flex: 0 1 48%;
     flex: 0 1 48%;
     margin: 1em 2% 3em 0;
   }
-  /* line 434, ../scss/breakpoints/_768up.scss */
+  /* line 438, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer section h3 {
     margin-bottom: 1em;
   }
-  /* line 437, ../scss/breakpoints/_768up.scss */
+  /* line 441, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer section:last-child {
     margin-right: 0;
   }
@@ -4242,7 +4240,13 @@ you can add resource intensive styles.
     margin-right: -31%;
   }
 
-  /* line 130, ../scss/breakpoints/_1030up.scss */
+  /* line 131, ../scss/breakpoints/_1030up.scss */
+  .error404 .container .list-item {
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+
+  /* line 136, ../scss/breakpoints/_1030up.scss */
   .footer #inner-footer {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
