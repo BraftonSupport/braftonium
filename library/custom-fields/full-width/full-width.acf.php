@@ -368,6 +368,33 @@ acf_add_local_field_group(array(
 							'maxlength' => '',
 						),
 						array(
+							'key' => 'field_5a4d583bea06f',
+							'label' => __( 'Category', 'braftonium' ),
+							'name' => 'category',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => array(
+								array(
+									array(
+										'field' => 'field_5a4d574f8c579',
+										'operator' => '==',
+										'value' => 'recent',
+									),
+								),
+							),
+							'wrapper' => array(
+								'width' => '50',
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+						),
+						array(
 							'key' => 'field_5a590c555bed0',
 							'label' => __( 'Button?', 'braftonium' ),
 							'name' => 'showbutton',
