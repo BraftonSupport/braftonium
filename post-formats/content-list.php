@@ -115,7 +115,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						'showposts' => $number,
 						'tax_query' => array(
 							array(
-							'taxonomy' => 'story-category',
+							'taxonomy' => 'category', // change taxonomy name if its not category
 							'field'    => 'slug',
 							'terms'    => $category,
 							),
