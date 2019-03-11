@@ -13,6 +13,7 @@ $title = wp_kses_post(get_sub_field('title'));
 if ($title):
 	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
 endif;
+$change_top = get_sub_field('change_top');
 $style = get_sub_field('style');
 $video = esc_url($style['video_url']);
 $classes = array('row');
@@ -28,9 +29,6 @@ if ( $style['other'] ) {
 	}
 	if (in_array('compact', $style['other'])){
 		$classes[] = "compact";
-	}
-	if (in_array('thin', $style['other'])){
-		$classes[] = "thin";
 	}
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
@@ -57,12 +55,18 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 
 		<?php if ($titletext): echo $titletext; endif;
 		if( have_rows('row_content') ):
-			echo '<div class="container">';
+			echo '<div class="container';
+				if ($change_top): echo ' '.$change_top; endif;
+			echo '">';
 			while ( have_rows('row_content') ) : the_row();
 				if( get_row_layout() == 'imageblock' ):
-					echo '<div class="image">'.wp_get_attachment_image( intval(get_sub_field('Image')), 'full' ).'</div>';
+					echo '<div class="image"';
+						if (get_sub_field('change_width')): echo ' style="-webkit-flex: 1 0 '.get_sub_field('width').'%; -ms-flex: 1 0 '.get_sub_field('width').'%; flex: 1 0 '.get_sub_field('width').'%;"'; endif;
+					echo '>'.wp_get_attachment_image( intval(get_sub_field('Image')), 'full' ).'</div>';
 				elseif( get_row_layout() == 'textblock' ): 
-					echo '<div class="text">'.get_sub_field('text').'</div>';
+					echo '<div class="text"';
+						if (get_sub_field('change_width')): echo ' style="-webkit-flex: 1 0 '.get_sub_field('width').'%; -ms-flex: 1 0 '.get_sub_field('width').'%; flex: 1 0 '.get_sub_field('width').'%;"'; endif;
+					echo '>'.get_sub_field('text').'</div>';
 				endif;
 			endwhile;
 			echo '</div>';

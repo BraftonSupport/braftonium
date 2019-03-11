@@ -8,7 +8,9 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-
+#logo a {
+	font-size: inherit;
+}
 nav .nav {
 	li {
 		margin-right: auto;
@@ -30,9 +32,16 @@ nav .nav {
   width: 50%;
 }
 
+.validation .slick {
+	width: 100%;
+}
+
 .container {
 	> .text, > .image {
 		margin-left: 4.75%;
+	}
+	.list-item, .widget {
+		margin-top: 2em;
 	}
 }
 
@@ -53,8 +62,34 @@ nav .nav {
 	.full article.hentry .thumbnail {
 		max-height: 200px;
 	}
-	.simple article {
-		display: block;
+	.simple {
+		&.container.wrap {
+			margin-top: 2.5em;
+			padding-bottom: 2em;
+			.thumbnail {
+				flex: 1 1 70%;
+				margin-right: 4%;
+			}
+			.content {
+				flex: 1 1 26%;
+				padding: 2.5em 0;
+			}
+			.article-header {
+				padding-bottom: 1em;
+			}
+			h2 {
+				font-size: 1.5em;
+			}
+			.button {
+				margin-top: 1.5em;
+			}
+		}
+		article {
+			display: block;
+			h2 {
+				font-size: 1.25em;
+			}
+		}
 	}
 }
 
@@ -65,6 +100,7 @@ nav .nav {
 			-webkit-flex: 1 1 19%;
 			-ms-flex: 1 1 19%;
 			flex: 1 1 19%;
+			max-width: 19%;
 			&:nth-child(3n){
 				margin-right: 1%;
 			}
@@ -73,4 +109,26 @@ nav .nav {
 			}
 		}
 	}
+}
+
+.banner.sinistral {
+	.black {
+		padding: 1.5em 2em;
+		padding-left: 12%;
+		margin-left: -12%;
+	}
+}
+
+.slideshow {
+	.image a.next {
+		margin-left: -30%;
+	}
+	.image a.prev {
+		margin-right: -31%;
+	}
+}
+.footer #inner-footer {
+	-webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }

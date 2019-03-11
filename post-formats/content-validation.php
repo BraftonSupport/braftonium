@@ -33,9 +33,6 @@ if ( $style['other'] ) {
 	if (in_array('compact', $style['other'])){
 		$classes[] = "compact";
 	}
-	if (in_array('thin', $style['other'])){
-		$classes[] = "thin";
-	}
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
@@ -114,14 +111,18 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				$location = get_field('location', $post);
 				$website = get_field('website', $post); ?>
 				<div class="list-item"><?php if ( $name || $position || $company || $location || $website) { echo '<div class="testimonial">'; } ?>
-					<?php
+					<?php if( is_array($imagestyle)):
+					if( in_array('thumb', $imagestyle) ): $size = 'thumbnail'; endif;
+					if( in_array('square', $imagestyle) ): $size = 'mediumsquared'; endif;
+					if( in_array('full', $imagestyle) ): $size = 'full'; endif;
+				endif;
 					if ( $imagestyle && in_array('round', $imagestyle) && has_post_thumbnail() ){
 						?><div class="image"><?php
-						 the_post_thumbnail('mediumsquared', ['class' => 'round']);
+						 the_post_thumbnail($size, ['class' => 'round']);
 						 ?></div><?php
 					} elseif( has_post_thumbnail()){
 						?><div class="image"><?php
-						the_post_thumbnail('mediumsquared');
+						the_post_thumbnail($size);
 						?></div><?php
 					}
 					?>
@@ -136,10 +137,10 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						echo '<p>';
 						$content= get_the_content();
 						$the_excerpt= substr($content,0,strpos($content,'.')+1);
-						if (strlen($the_excerpt) > 125){
+						if (strlen($the_excerpt) > 100){
 							echo implode(' ', array_slice(explode(' ', strip_tags($the_excerpt)), 0, 20)).'...';
 						} else {
-							echo strip_tags($content);
+							echo strip_tags($the_excerpt);
 						}
 						echo '</p>';
 						if ( $name || $position || $company || $location || $website) { echo '<p class="testimonial-meta">'; }

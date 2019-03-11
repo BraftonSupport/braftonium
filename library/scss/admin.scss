@@ -59,16 +59,46 @@ start customizing. All admin functions are located in lib/admin/
 	&:nth-child(6), &:nth-child(12), &:nth-child(18), &:nth-child(24) {
     	background: rgba(0,127,127,.1);
 	}
+
+	//Row
+	.acf-field-5a4d5c19f12c0 .values {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		.layout {
+			flex: 1;
+			margin: 0 1% 0 0;
+			min-width: 200px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	.acf-field-5c1ab80ed7d09,
+	.acf-field-5c1ab80ed7d08 {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		padding-bottom: 0;
+		li {
+			margin: -5px 0 0 5px;
+		}
+	}
+	.acf-field-5ba3d27096b20,
+	.acf-field-5ba3d27096b21 {
+		border-top: 0;
+		padding-top: 0;
+	}
+
 }
 
 // Banner
 .mce-edit-area iframe {
 	max-height: 200px;
 }
-// .acf-field-5a908ed0a68bd {
-// 	float: right!important;
-// 	clear: none!important;
-// }
 
 //style
 .acf-field-5a4d3dc7e18d5 > .acf-input > .acf-fields {

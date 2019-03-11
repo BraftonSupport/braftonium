@@ -44,6 +44,7 @@
 		<?php wp_head(); ?>
 		<?php // end of WordPress head
 		$nav = get_field('navigation_bar_position', 'option');
+		$banner_style = get_field('banner_style', 'option');
 		$logo1 = esc_url(get_theme_mod( 'braftonium_logo' ));
 		$logo2 = esc_url(get_site_icon_url());
 
@@ -141,8 +142,13 @@
 				</div>
 				
 				<?php if (is_single() && has_post_thumbnail()) : ?>
-					<section class="banner visual"<?php echo ' style="background-image:url('.get_the_post_thumbnail_url(get_the_ID(),'full').')"'; ?>>
+					<section class="banner visual<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php echo ' style="background-image:url('.get_the_post_thumbnail_url(get_the_ID(),'full').')"'; ?>>
+					<?php if ($banner_style == 'sinistral'): ?>
+						<div class="wrap"><div class="black">
+					<?php else: ?>
 						<div class="black"><div class="wrap">
+					<?php endif; ?>
+					
 							<h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 							<p class="byline entry-meta vcard">
 								<?php printf( __( 'Posted', 'braftonium' ).' %1$s',
@@ -176,7 +182,11 @@
 				endif;
 				if ($background_image) : ?>
 					<section class="banner visual"<?php echo ' style="background-image:url('.$background_image.')"'; ?>>
+					<?php if ($banner_style == 'sinistral'): ?>
+						<div class="wrap"><div class="black">
+					<?php else: ?>
 						<div class="black"><div class="wrap">
+					<?php endif; ?>
 							<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
 							<?php if ($tagline): echo $tagline; endif; ?>
 						</div></div>

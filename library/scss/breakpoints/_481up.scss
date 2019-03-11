@@ -52,17 +52,32 @@ HEADER STYLES
 		display: grid;
 		#logo {
 			grid-column: 1 / 2;
+			padding-right: 10px;
 		}
 		.nextwidget {
 			grid-column: 2 / 3;
+			margin: auto 0;
 		}
+	}
+}
+
+.banner.sinistral {
+	.wrap {
+		> * {
+			max-width: 65%;
+		}
+	}
+	.black {
+		background: #000;
+		padding-left: 2em;
+		margin-left: -2em;
 	}
 }
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-body:not(.page-template-full-width) main {
+body:not(.page-template-full-width) main:not(.simple) {
     padding: 2.5em 0;
 }
 .banner .wrap, .page-template-full-width .banner .wrap {
@@ -75,6 +90,11 @@ body:not(.page-template-full-width) main {
 		}
 	}
 }
+
+.page-template-full-width .cta {
+	text-align: inherit;
+}
+
 /* entry content */
 .entry-content {
 	/* at this larger size, we can start to align images */
@@ -103,22 +123,38 @@ body:not(.page-template-full-width) main {
 	display: -webkit-flex;
 	display: flex;
 	> .text, > .image {
-		-webkit-flex: 1 1 50%;
-		-ms-flex: 1 1 50%;
-		flex: 1 1 50%;
-		margin-left: 2%;
-		margin-top: 0;
+		-webkit-flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		margin-right: 2%;
+		margin-top: auto;
 		margin-bottom: auto;
 	}
-	> .list-item, .widget  {
-		-webkit-flex: 1 1 50%;
-		-ms-flex: 1 1 50%;
-		flex: 1 1 50%;
+	&.zero > .text, > .image {
+		margin-top: 0;
 	}
-	> *:first-child {
-		margin-left: 0;
+	> .list-item, .widget  {
+		-webkit-flex: 1 1 48%;
+		-ms-flex: 1 1 48%;
+		flex: 1 1 48%;
+		margin-right: 2%;
+	}
+	> *:last-child {
+		margin-right: 0;
 	}
 }
+.slideshow {
+	.container {
+		display: block;
+	}
+	.image a.next {
+		margin-left: -35%;
+	}
+	.image a.prev {
+		margin-right: -35%;
+	}
+}
+
 .blog, .archive {
 	article {
 		display: -ms-flexbox;
@@ -132,19 +168,45 @@ body:not(.page-template-full-width) main {
 	.full .thumbnail {
 		overflow: hidden;
 	}
-	.full article.hentry, .rich article.hentry, .simple article.hentry {
-		width: 49%;
-		margin-right: 2%;
-		float: left;
-	}
-	.rich article.hentry, .simple article.hentry {
-		flex: 1 0 45%;
-		margin-right: 5% ;
-		&:nth-child(2n+1), &:last-of-type {
-			margin-right: 0;
-		}
+	.full article.hentry, .rich article.hentry {
 		&:first-of-type {
 			flex: 1 0 100%;
+			margin-right: 0;
+		}
+		&:nth-of-type(2n+1), &:last-of-type {
+			margin-right: 0;
+		}
+		flex: 1 0 45%;
+		margin-right: 5%;
+	}
+	.simple {
+		article.hentry {
+			flex: 1 0 48%;
+			margin-right: 4%;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			background: $white;
+			padding: 1em;
+			-webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.1);
+			-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.1);
+			box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.1);
+			border-radius: 3px;
+			&:nth-child(2n), &:last-child {
+				margin-right: 0;
+			}
+		}
+		&.container.wrap {
+			border-bottom: 1px solid $border-color;
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+			display: block;
+			h2 {
+				font-size: 1.25em;
+			}
+		}
+		h2 {
+			font-size: 1em;
 		}
 	}
 }
@@ -158,18 +220,14 @@ FOOTER STYLES
 
 .footer {
 	a.logo {
-		width: 50%;
-		float: left;
 		img {
 			margin: 10px 0 10px;
-			max-width: 100px;
+			max-width: 150px;
 		}
 	}
 }
 
 .social-navigation {
-	float: right;
-	text-align: right;
 	margin: 5px 0 0 auto;
 	a {
 		text-align: right;

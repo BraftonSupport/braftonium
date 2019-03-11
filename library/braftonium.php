@@ -128,6 +128,7 @@ function braftonium_support() {
 	//add_theme_support( 'custom-header');
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'mediumsquared', 300, 300, true );
+	add_image_size( 'oval', 150, 200, true );
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
@@ -381,7 +382,7 @@ if( function_exists('acf_add_options_page') ) {
 		?>
 		<div class="wrap">
 			<h1><?php _e( 'Theme General Settings', 'braftonium' ); ?></h1>
-			<p><?php _e( 'Turn on the Braftonium plugin. You also need the ACF Pro plugin.', 'braftonium' ); ?></p>
+			<div class="update-nag notice"><p><?php _e( 'Turn on the Braftonium plugin. You also need the ACF Pro plugin.', 'braftonium' ); ?></p></div>
 		</div>
 		<?php
 	}
@@ -412,6 +413,15 @@ function braftonium_widgets_init() {
 	register_sidebar( array(
 		'name'		  => __( 'Footer Right Widget', 'braftonium' ),
 		'id'			=> 'footer-right',
+		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="h3 widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'		  => __( 'Footer Underneath Social Media', 'braftonium' ),
+		'id'			=> 'footer-last',
 		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',

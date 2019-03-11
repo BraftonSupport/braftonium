@@ -6,6 +6,32 @@ acf_add_local_field_group(array(
 	'title' => __( 'Braftonium Theme Options', 'braftonium' ),
 	'fields' => array(
 		array(
+			'key' => 'field_5a4e7db764361',
+			'label' => __( 'Banner Style', 'braftonium' ),
+			'name' => 'banner_style',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'default' => __( 'Centered title with dark overlay over image', 'braftonium' ),
+				'sinistral' => __( 'Left aligned title with unaltered image', 'braftonium' ),
+			),
+			'default_value' => array(
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'ajax' => 0,
+			'return_format' => 'value',
+			'placeholder' => '',
+		),
+		array(
 			'key' => 'field_5a4e8db865361',
 			'label' => __( 'Navigation Bar Position', 'braftonium' ),
 			'name' => 'navigation_bar_position',
@@ -69,7 +95,6 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'' => 'Default',
 				'hero' => 'Hero First',
 				'rich' => 'Image Rich',
 				'full' => 'Full Card',

@@ -1,6 +1,6 @@
-<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
-				<div class="wrap cf">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo">
+			<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+				<div id="inner-footer" class="wrap cf">
+					<section><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo">
 						<?php if ( get_theme_mod( 'braftonium_footerlogo' ) ):
 							$footer_logo = esc_url(get_theme_mod( 'braftonium_footerlogo' ));
 						elseif ( get_theme_mod( 'braftonium_logo' ) ):
@@ -11,25 +11,32 @@
 						<?php else: ?>
 							<p><?php bloginfo( 'name' ); ?></p>
 						<?php endif; ?>
-					</a>
+					</a></section>
+					
+					<?php if ( is_active_sidebar( 'footer-left' )||is_active_sidebar( 'footer-middle' )||is_active_sidebar( 'footer-right' ) ) :	
+						echo '<section>';
+						dynamic_sidebar( 'footer-left' );
+						echo '</section><section>';
+						dynamic_sidebar( 'footer-middle' );
+						echo '</section><section>';
+						dynamic_sidebar( 'footer-right' );
+						echo '</section>';
+					endif; ?>
+					
 					<?php if (has_nav_menu('social')):
+					echo '<section>';
 						wp_nav_menu( array(
 							'theme_location' => 'social',
 							'menu_class'	=> 'social-navigation',
 							'container'		=> '',
 							'walker'		=> new Social_Nav_Menu(),
 						) );
+						if ( is_active_sidebar( 'footer-last' )):
+							dynamic_sidebar( 'footer-last' );
+						endif;
+						echo '</section>';
 					endif; ?>
 				</div>
-				<?php if ( is_active_sidebar( 'footer-left' )||is_active_sidebar( 'footer-middle' )||is_active_sidebar( 'footer-right' ) ) :	
-					echo '<div id="inner-footer" class="wrap cf"><section>';
-					dynamic_sidebar( 'footer-left' );
-					echo '</section><section>';
-					dynamic_sidebar( 'footer-middle' );
-					echo '</section><section>';
-					dynamic_sidebar( 'footer-right' );
-					echo '</section></div>';
-				endif; ?>
 				<div class="copyright"><p class="source-org wrap">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p></div>
 			</footer>
 

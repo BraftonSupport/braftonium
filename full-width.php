@@ -5,6 +5,7 @@ if(!session_id()) session_start();
  *
  * For more info: http://codex.wordpress.org/Page_Templates
 */
+$banner_style = get_field('banner_style', 'option');
 $background_image = esc_url(get_field('background_image'));
 $title = wp_kses_post(get_field('title'));
 $tagline = wp_kses_post(get_field('tagline'));
@@ -17,8 +18,12 @@ $tagline = wp_kses_post(get_field('tagline'));
 			<main id="main" class="m-all t-all d-all cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 			<?php $sectionrow=0;
 			if ($background_image||$title||$tagline) : ?>
-				<section class="banner visual"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
-					<div class="black"><div class="wrap">
+				<section class="banner visual<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php if ($background_image): echo ' style="background-image:url('.$background_image.')"'; endif; ?>>
+					<?php if ($banner_style == 'sinistral'): ?>
+						<div class="wrap"><div class="black">
+					<?php else : ?>
+						<div class="black"><div class="wrap">
+					<?php endif; ?>
 						<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
 						<?php if ($tagline): echo $tagline; endif; ?>
 					</div></div>

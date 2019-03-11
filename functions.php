@@ -213,16 +213,32 @@ if ( WPEX_WOOCOMMERCE_ACTIVE ) {
 }
 
 
-/* Excerpt shortening*/
+/* Excerpt shortening for image rich blog style */
 if (function_exists('get_field')):
 $layout = get_field('blog_layout', 'option');
 if ( isset($layout) && $layout=='rich' ) {
 	function custom_excerpt_length( $length ) {
-		return 10;
+		return 25;
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 }
 endif;
+
+// that 404 page
+function get_page_by_title_search($string){
+    global $wpdb;
+    $title = esc_sql($string);
+    if(!$title) return;
+    $page = $wpdb->get_results("
+        SELECT * 
+        FROM $wpdb->posts
+        WHERE post_title LIKE '%$title%'
+        AND post_type = 'page' 
+        AND post_status = 'publish'
+        LIMIT 1
+    ");
+    return $page;
+}
 
 // Adds js needed for the video background.
 function braftonium_video_script() {
@@ -252,7 +268,7 @@ function braftonium_customize_css() {
 		if (get_theme_mod( 'braftonium_link_color' )) {
 			$braftonium_link = sanitize_hex_color(get_theme_mod( 'braftonium_link_color' ));
 			$css .= PHP_EOL . sprintf( 'a, a:visited, .blog .read-more, .archive .read-more, .slick-prev:before, .slick-next:before { color:%s; }', $braftonium_link );
-			$css .= PHP_EOL . sprintf( 'button, .blue-btn, .pagination a:hover, .hero .read-more, .comment-reply-link, #submit, .button { background-color:%s; }', $braftonium_link );
+			$css .= PHP_EOL . sprintf( 'button, .blue-btn, .pagination a:hover, .hero .read-more, .comment-reply-link, #submit, .button, .flipcards .list-item .text { background-color:%s; }', $braftonium_link );
 			$css .= PHP_EOL . sprintf( '.hero article.hentry { border-bottom-color:%s99; }', $braftonium_link );
 		}
 		if (get_theme_mod( 'braftonium_linkhover_color' )) {
@@ -269,7 +285,7 @@ function braftonium_customize_css() {
 		}
 		if (get_theme_mod( 'braftonium_header_color2' )) {
 			$braftonium_headercolor = sanitize_hex_color(get_theme_mod( 'braftonium_header_color2' ));
-			$css .= PHP_EOL . sprintf( '.header, .simple .byline, .rich article.hentry .content { color:%s; }', $braftonium_headercolor );
+			$css .= PHP_EOL . sprintf( '.header { color:%s; }', $braftonium_headercolor );
 		}
 		if (get_theme_mod( 'braftonium_headerlink_color' )) {
 			$braftonium_headerlink = sanitize_hex_color(get_theme_mod( 'braftonium_headerlink_color' ));

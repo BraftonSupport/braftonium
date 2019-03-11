@@ -15,6 +15,19 @@
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
+
+.slideshow .image .prev:before {
+    font-family: 'slick';
+    content: '←';
+    font-size: 20px;
+}
+
+.slideshow .image .next:after {
+    font-family: 'slick';
+    font-size: 20px;
+    content: '→';
+}
+
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -78,11 +91,11 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: -35px;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -25px;
+    right: -35px;
     left: auto;
 }
 .slick-prev:before
@@ -96,12 +109,12 @@
 
 .slick-next
 {
-    right: -25px;
+    right: -35px;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -25px;
+    left: -35px;
 }
 .slick-next:before
 {
@@ -203,7 +216,26 @@
 }
 
 
-@media only screen and (min-width: 1030px) {
+@media only screen and (min-width: 1225px) {
+    .slick-prev
+    {
+        left: -50px;
+    }
+    [dir='rtl'] .slick-prev
+    {
+        right: -50px;
+    }
+    .slick-next
+    {
+        right: -50px;
+    }
+    [dir='rtl'] .slick-next
+    {
+        left: -50px;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
     .slick-prev
     {
         left: -75px;

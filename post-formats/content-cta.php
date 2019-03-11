@@ -33,9 +33,6 @@ if ( $style['other'] ) {
 	if (in_array('compact', $style['other'])){
 		$classes[] = "compact";
 	}
-	if (in_array('thin', $style['other'])){
-		$classes[] = "thin";
-	}
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
@@ -71,9 +68,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 		if ($text): echo $text; endif;
 		echo '</div>';
 		if (isset($button['title'])):
-			echo '<a href="'.esc_url($button['url']).'" class="blue-btn"';
+			echo '<p><a href="'.esc_url($button['url']).'" class="blue-btn"';
 			if ($button['target']): echo 'target="'.sanitize_text_field($button['target']).'"'; endif;
-			echo '>'.sanitize_text_field($button['title']).'</a>';
+			echo '>'.sanitize_text_field($button['title']).'</a></p>';
 		endif; ?>
 
 	</div>

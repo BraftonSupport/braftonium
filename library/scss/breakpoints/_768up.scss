@@ -37,6 +37,7 @@ HEADER STYLES
 		grid-template-columns: auto auto;
 	}
 	#logo {
+		float: left;
 		grid-column: 1 / 2;
 		grid-row: 1 / 3;
 		margin: auto auto auto 0;
@@ -52,6 +53,7 @@ HEADER STYLES
 	.below {
 		grid-column: 1 / 3;
 		grid-row: 3 / 4;
+		clear: both;
 	}
 }
 
@@ -74,6 +76,20 @@ HEADER STYLES
 	}
 }
 
+.banner.sinistral {
+	font-size: .9em;
+	.wrap {
+		> * {
+			max-width: 60%;
+		}
+	}
+	.black {
+		padding-left: 3em;
+		margin-left: -3em;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+}
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -174,11 +190,10 @@ nav {
 
 } /* end .nav */
 
-
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-body:not(.page-template-full-width) main {
+body:not(.page-template-full-width) main:not(.simple) {
     padding: 3em 0;
 }
 
@@ -193,7 +208,6 @@ body:not(.page-template-full-width) main {
 		width: 75%;
 	}
 }
-
 .container {
 	> .text, > .image {
 		margin-left: 3.25%;
@@ -201,11 +215,9 @@ body:not(.page-template-full-width) main {
 			margin-left: 0;
 		}
 	}
-	&.count1, &.count2, &.count3, &.count4, &.count5, &.count6, &.count7, &.count8, &.count9, &.count10, &.count11, &.count12, &.count13, &.count14, &.count15 {
-		.list-item, .widget {
-			margin-top: 1em;
-			max-width: inherit;
-		}
+	.list-item, .widget {
+		margin-top: 1em;
+		max-width: inherit;
 	}
 	&.count1 .list-item, &.count1 .widget {
 		-webkit-flex: 1 1 100%;
@@ -226,9 +238,9 @@ body:not(.page-template-full-width) main {
 	&.count3, &.count6, &.count5, &.count9, &.count10, &.count13, &.count14, &.count15 {
 		.list-item, .widget {
 			margin-right: 2%;
-			-webkit-flex: 0 1 32%;
-			-ms-flex: 0 1 32%;
-			flex: 0 1 32%;
+			-webkit-flex: 0 1 31%;
+			-ms-flex: 0 1 31%;
+			flex: 0 1 31%;
 			&:nth-child(3n){
 				margin-right: 0;
 			}
@@ -246,12 +258,19 @@ body:not(.page-template-full-width) main {
 		}
 	}
 }
+.list .container, .widgetarea .container {
+	.list-item {
+		.blue-btn {
+			margin-right: auto;
+			margin-left: 0
+		}
+	}
+}
 .acf-map {
 	flex: 1 0 75%;
 }
 
-.slick {
-	width: inherit;
+.validation .slick {
 	.image {
 		max-width: 33%;
 		margin-right: 25px;
@@ -265,8 +284,43 @@ body:not(.page-template-full-width) main {
 	.hentry {
 		padding: 0;
 		margin: 3em 0 0;
+		&:last-child {
+			margin-bottom: 1em;
+		}
+	}
+	main:not(.simple) .hentry {
 		&:first-of-type {
 			margin-top: 0;
+		}
+	}
+	.simple {
+		&.container.wrap {
+			margin-top: 1.5em;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			.thumbnail {
+				flex: 1 1 65%;
+				margin-right: 3%;
+				position: relative;
+				overflow: hidden;
+			}
+			.content {
+				flex: 1 1 32%;
+				text-align: center;
+				margin: auto;
+				padding: 1.5em 0;
+			}
+			h2 {
+				grid-row: 1;
+			}
+			.button {
+				float: none;
+				margin: 15px auto 0;
+			}
+			.entry-content p {
+				margin-bottom: 0;
+			}
 		}
 	}
 	article {
@@ -277,6 +331,20 @@ body:not(.page-template-full-width) main {
 	}
 	.full article.hentry .thumbnail {
 		max-height: 220px;
+	}
+	.rich h2 {
+		font-size: 1.25em;
+	}
+	.rich article.hentry {
+		&:first-of-type {
+			flex: 1 0 100%;
+			margin-right: 0;
+		}
+		&:nth-of-type(2n+1), &:last-of-type {
+			margin-right: 0;
+		}
+		flex: 1 0 45%;
+		margin-right: 5% ;
 	}
 }
 
@@ -304,6 +372,28 @@ body:not(.page-template-full-width) main {
 		font-size: 1.5em;
 	}
 }
+.slick {
+	width: 100%;
+	margin: auto;
+}
+
+.slideshow {
+	.container {
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+	.image a.next {
+		margin-left: -22%;
+	}
+	.image a.prev {
+		margin-right: -23%;
+	}
+	.text {
+		padding-top: 0;
+	}
+}
+
 
 /*********************
 SIDEBARS & ASIDES
@@ -333,11 +423,14 @@ mobile. Make sure to double check these!
 		display: -ms-flexbox;
 		display: -webkit-flex;
 		display: flex;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
 		section {
-			-webkit-flex: 0 1 100%;
-			-ms-flex: 0 1 100%;
-			flex: 0 1 100%;
-			margin: 1em 2% 2em 0;
+			-webkit-flex: 0 1 48%;
+			-ms-flex: 0 1 48%;
+			flex: 0 1 48%;
+			margin: 1em 2% 3em 0;
 			h3 {
 				margin-bottom: 1em;
 			}
