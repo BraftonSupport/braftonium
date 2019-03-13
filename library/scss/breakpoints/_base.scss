@@ -297,6 +297,9 @@ HEADER STYLES
 			}
 		}
 	}
+	#inner-header.container .widget {
+		margin-top: 0;
+	}
 	#inner-header.scrolled {
 		.wrap {
 			display: grid;
@@ -1176,7 +1179,7 @@ svg {
 	}
 }
 
-.page-template-4042 {
+.error404 {
 	header {
 		padding: 0;
 		img {
@@ -1455,14 +1458,8 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-.error404 .sidebar {
-	margin-bottom: 2em;
-	.blue-btn {
-		width: 100%;
-	}
-	h3 {
+.error404 h3 {
 		margin-bottom: .25em;
-	}
 }
 
 .sidebar {
