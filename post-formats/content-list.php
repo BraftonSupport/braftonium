@@ -19,7 +19,7 @@ $show_text = get_sub_field('show_text');
 	if ($show_text && in_array('outro', $show_text)): $outro = wp_kses_post(get_sub_field('outro_text')); endif;
 $list_type = get_sub_field('list_type');
 	if ($list_type=='custom'): $custom = get_sub_field('custom_list'); endif;
-	if ($list_type=='recent'): $recent = get_sub_field('recent'); $number = get_sub_field('number_of_posts'); endif;
+	if ($list_type=='recent'): $recent = get_sub_field('recent'); $number = get_sub_field('number_of_posts'); $category = get_sub_field('category'); endif;
 $imagestyle	 = get_sub_field('image_size_and_shape');
 $showbutton	 = get_sub_field('showbutton');
 
@@ -108,12 +108,29 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				$number = wp_count_posts($recent)->publish;
 			}
 		echo '<div class="container count'.$number.'">';
-			$recent_query = new WP_Query(
-				array( 
-					'post_type' => $recent,
-					'showposts' => $number
-				)
-			);
+			if ( !$recent=='post') {
+				$recent_query = new WP_Query(
+					array( 
+						'post_type' => $recent,
+						'showposts' => $number,
+						'tax_query' => array(
+							array(
+							'taxonomy' => 'category', // change taxonomy name if its not category
+							'field'    => 'slug',
+							'terms'    => $category,
+							),
+						),
+					)
+				);
+			} else {
+				$recent_query = new WP_Query(
+					array( 
+						'post_type' => $recent,
+						'category_name' => $category,
+						'showposts' => $number
+					)
+				);
+			}
 			if( is_array($imagestyle)):
 				if( in_array('thumb', $imagestyle) ): $size = 'thumbnail'; endif;
 				if( in_array('square', $imagestyle) ): $size = 'mediumsquared'; endif;
