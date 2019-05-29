@@ -105,11 +105,18 @@ require_once(ABSPATH . 'wp-admin/includes/file.php');
 function braftonium_get_svg_path($svgid) {
 	// WP_Filesystem();
 	// global $wp_filesystem;
-	$file_data = get_template_directory_uri().'/library/theme-options/svg-icons.svg';
+	/*
+	* This function relies heavily on the syntax of the svg icon file.
+	* it searches for the Icon id, and then copies the text until the closing path 
+	* tag. As a result, the return syntax is pretty janky and specific.
+	* The first '>' character is included in the $second_step element
+	* Tags need to be closed after the output though.
+	*/
+	$file_data = get_template_directory().'/library/theme-options/svg-icons.svg';
 	$content = file_get_contents($file_data);
-	$first_step = explode( '<symbol id="'.$svgid , $content );
+	$first_step = explode( '<symbol id="'.$svgid.'"' , $content );
 	$second_step = explode("</path>" , $first_step[1] );
-	return '<svg class="'.$svgid.$second_step[0].'</svg>';
+	return '<svg class="'.$svgid.'" '.$second_step[0].'</path></svg>';
 }
 
 /**
