@@ -111,6 +111,9 @@ function braftonium_get_svg_path($svgid) {
 	* tag. As a result, the return syntax is pretty janky and specific.
 	* The first '>' character is included in the $second_step element
 	* Tags need to be closed after the output though.
+	*
+	* @todo maybe rewrite the entire way this is handled? consider implementing some of
+	* the recomendations here: https://css-tricks.com/gotchas-on-getting-svg-into-production/
 	*/
 	$file_data = get_template_directory().'/library/theme-options/svg-icons.svg';
 	$content = file_get_contents($file_data);
