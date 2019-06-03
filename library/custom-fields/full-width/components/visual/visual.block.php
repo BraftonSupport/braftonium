@@ -1,0 +1,88 @@
+<?php 
+
+$visual_block = array(
+    '5a4d2cb9618e1' => array(
+        'key' => '5a4d2cb9618e1',
+        'name' => 'visual',
+        'label' => __( 'Visual', 'braftonium' ),
+        'display' => 'block',
+        'sub_fields' => array(
+            array(
+                'key' => 'field_5a4d2fe2df49a',
+                'label' => __( 'Headline', 'braftonium' ),
+                'name' => 'title',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '100',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => 'field_5a4d3006df49b',
+                'label' => __( 'Tagline', 'braftonium' ),
+                'name' => 'tagline',
+                'type' => 'wysiwyg',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'tabs' => 'all',
+                'toolbar' => 'full',
+                'media_upload' => 1,
+                'delay' => 0,
+            ),
+            array(
+                'key' => 'field_5a4d366c34608',
+                'label' => __( 'Button', 'braftonium' ),
+                'name' => 'button',
+                'type' => 'link',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'array',
+            ),
+            array(
+                'key' => 'field_5a4d39e585477',
+                'label' => __( 'Style', 'braftonium' ),
+                'name' => 'style',
+                'type' => 'clone',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'clone' => array(
+                    0 => 'group_5a4d3902e55eb',
+                ),
+                'display' => 'seamless',
+                'layout' => 'block',
+                'prefix_label' => 0,
+                'prefix_name' => 0,
+            ),
+        ),
+        'min' => '',
+        'max' => '',
+    )
+);

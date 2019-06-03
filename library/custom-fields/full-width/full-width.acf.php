@@ -1,5 +1,10 @@
 <?php
 if(function_exists("acf_add_local_field_group")){
+
+//@todo perform a glob for all component files *.block.php and import them into an array
+// $blocks = []
+// under layouts add the $blocks array
+
 acf_add_local_field_group(array(
 	'key' => 'group_5a4d29f317abe',
 	'title' => 'full-width',
