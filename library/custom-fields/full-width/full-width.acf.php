@@ -11,7 +11,7 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5a4d2a47df496',
-			'label' => __( 'Content', 'braftonium' ),
+			'label' => __( 'Content (L3go) Blocks', 'braftonium' ),
 			'name' => 'content',
 			'type' => 'flexible_content',
 			'instructions' => '',

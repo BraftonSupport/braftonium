@@ -1,14 +1,12 @@
 <?php
-// Disable Gutenberg
-
-if (version_compare($GLOBALS['wp_version'], '5.0-beta', '>')) {
-	// WP > 5 beta
-	add_filter('use_block_editor_for_post_type', '__return_false', 10);
-} else {
-	// WP < 5 beta
-	add_filter('gutenberg_can_edit_post_type', '__return_false', 10);
-}
-
+//disable gutenberg... but i don't want to blanket disable. should be enabled or disabled as a theme option or better yet only if the template is full-width.php. for now just add this snippet to your child theme files to disable where needed.
+// if (version_compare($GLOBALS['wp_version'], '5.0-beta', '>')) {
+// 	// WP > 5 beta
+// 	add_filter('use_block_editor_for_post_type', '__return_false', 10);
+// } else {
+// 	// WP < 5 beta
+// 	add_filter('gutenberg_can_edit_post_type', '__return_false', 10);
+// }
 
 /* Languages! */
 function braftonium_language_setup(){

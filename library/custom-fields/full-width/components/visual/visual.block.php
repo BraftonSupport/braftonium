@@ -1,6 +1,6 @@
 <?php 
 
-$visual_block = array(
+ return array(
     '5a4d2cb9618e1' => array(
         'key' => '5a4d2cb9618e1',
         'name' => 'visual',
