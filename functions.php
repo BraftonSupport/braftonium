@@ -262,7 +262,6 @@ function braftonium_slick_script() {
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/library/js/slick/slick.css', false, '1.0.0' );
 	wp_enqueue_style( 'slick-themes', get_template_directory_uri() . '/library/js/slick/slick-theme.css', false, '1.0.0' );
 }
-
 function braftonium_map_script() {
 	wp_enqueue_script( 'functions', get_template_directory_uri() . '/library/js/functions.js', array(), '1.0.0', true );
 }

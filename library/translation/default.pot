@@ -43,7 +43,8 @@ msgstr ""
 
 #: 404.php:13
 msgid ""
-"Article Not Found"
+"Epic 404 - Article Not "
+"Found"
 msgstr ""
 
 #: 404.php:19 archive.php:53
