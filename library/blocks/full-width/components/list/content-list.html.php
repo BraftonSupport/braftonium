@@ -8,6 +8,7 @@
  */
 
  // Note to Developers: If trying to use custom post types with taxonomy, uncomment and change line 122
+ // @todo refactor line 122 to check if we are using custom post type with taxonomy instead of requiring modifications to the parent theme which is a no no!!
 
 global $sectionrow;
 $title = wp_kses_post(get_sub_field('title'));
