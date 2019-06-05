@@ -10,10 +10,19 @@ $files = glob("$dir/components/**/*.block.php");
 $blocks = [];
 foreach($files as $file){
 	if( is_file($file) ){
-		$blocks[] = include $file;
+		$blocks = array_merge(include $file, $blocks);
 	}
 }
+//for child themes to add new custom layout blocks
 
+// $custom_blocks = apply_filters('braftonium_add_layout_block', $custom_blocks);
+// var_dump($custom_blocks);die();
+// if(count($custom_blocks) > 0){
+// 	$blocks = array_merge($blocks, $custom_blocks);
+// }
+// var_dump($blocks);
+$blocks = apply_filters('braftonium_add_layout_block', $blocks);
+// var_dump($blocks);
 acf_add_local_field_group(array(
 	'key' => 'group_5a4d29f317abe',
 	'title' => 'full-width',
@@ -23,7 +32,7 @@ acf_add_local_field_group(array(
 			'label' => __( 'Content (L3go) Blocks', 'braftonium' ),
 			'name' => 'content',
 			'type' => 'flexible_content',
-			'instructions' => '',
+			'instructions' => 'When using these Blocks your page content using the default Wordpress editor will display last after all blocks.',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
