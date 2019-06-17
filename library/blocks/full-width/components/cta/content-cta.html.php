@@ -1,31 +1,27 @@
 <?php
 /**
- * The template used for displaying visual section of page.
+ * The template used for displaying row section of page.
  *
  * @package WordPress
  * @subpackage Braftonium
  * @since braftonium 1.0
  */
-if(!session_id()) session_start();
-$sectionrow = $_SESSION['sectionrow'];
+
+global $sectionrow;
 $title = wp_kses_post(get_sub_field('title'));
 if ($title):
 	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
 endif;
 
-$tagline = wp_kses_post(get_sub_field('tagline'));
+$text = wp_kses_post(get_sub_field('text'));
 $button = get_sub_field('button');
+
 $style = get_sub_field('style');
 $video = esc_url($style['video_url']);
-
-$classes = array('visual');
+$classes = array('cta');
 if ($style['add_class']){
 	$classes[] = sanitize_html_classes($style['add_class']);
 }
-if ($video){
-	$classes[] = 'video';
-}
-
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
 }
@@ -39,13 +35,15 @@ if ( $style['other'] ) {
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
-} ?>
-
+}
+?>
+<!-- start CTA block -->
 <section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . esc_url($style['background_image']) . ');'; }
 if ( $style['background_color'] ) { echo 'background-color: ' . sanitize_hex_color($style['background_color']) . ';'; }
 if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . ';'; } ?>" >
-	<?php if ( $style['video_url'] ) {
+<?php if ( $style['background_image'] ) { echo '<div class="black">'; } ?>
+<?php if ( $style['video_url'] ) {
 		if (strpos($video, 'youtube.com') == true || strpos($video, '.webm') == false && strpos($video, '.mp4') == false) {
 			$videoid = preg_replace('/https:\/\/www.youtube.com\/watch\?v=/', '', $video);
 		?>
@@ -58,21 +56,25 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 		<?php
 			braftonium_video_script();
 		}
-	} ?><?php if ($video): echo '<div class="black">'; endif; ?><div class="wrap">
+	} ?><?php if ($video): echo '<div class="black">'; endif; ?><div class="wrap container">
 
-		<?php if (isset($button['url'])&&!isset($button['title'])): echo '<a href="'.esc_url($button['url']).'"';
-			if ($button['target']): echo ' target="'.sanitize_text_field($button['target']).'"'; endif;
+		<?php echo '<div class="text">';
+		if (isset($button['url'])&&!isset($button['title'])): echo '<a href="'.esc_url($button['url']).'"';
+			if (isset($button['target'])): echo ' target="'.sanitize_text_field($button['target']).'"'; endif;
 		echo '>'; endif;
-		if ($titletext): echo $titletext; endif;
+		if (isset($titletext)): echo $titletext; endif;
 		if (isset($button['url'])&&!isset($button['title'])): echo '</a>'; endif;
-		if ($tagline): echo $tagline; endif;
+		if ($text): echo $text; endif;
+		echo '</div>';
 		if (isset($button['title'])):
-			echo '<a href="'.esc_url($button['url']).'" class="blue-btn"';
+			echo '<p><a href="'.esc_url($button['url']).'" class="blue-btn"';
 			if ($button['target']): echo 'target="'.sanitize_text_field($button['target']).'"'; endif;
-			echo '>'.sanitize_text_field($button['title']).'</a>';
+			echo '>'.sanitize_text_field($button['title']).'</a></p>';
 		endif; ?>
 
-	<?php if ($video): echo '</div>'; endif; ?></div>
+	</div>
+<?php if ( $style['background_image'] ) { echo '</div>'; } ?>
 </section><!-- section -->
 
 <?php if ( $style['other'] && in_array('shadow', $style['other']) ) { echo '<div class="shadow"></div>'; } ?>
+<!-- end CTA block -->

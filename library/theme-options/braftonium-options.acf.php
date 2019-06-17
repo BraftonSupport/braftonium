@@ -96,8 +96,7 @@ acf_add_local_field_group(array(
 			),
 			'choices' => array(
 				'hero' => 'Hero First',
-				'rich' => 'Image Rich',
-				'full' => 'Full Card',
+				'rich' => '',
 				'simple' => 'Simple Card',
 			),
 			'default_value' => array(
@@ -255,10 +254,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5c79a40564b98',
-			'label' => 'Logo on the 404 page',
+			'label' => __('Image on the 404 page', 'braftonium' ),
 			'name' => '404logo',
 			'type' => 'image',
-			'instructions' => '(Only use if the main logo doesn\'t work in this space.)',
+			'instructions' => __('Default image is your logo.', 'braftonium' ),
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -279,10 +278,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5c79a40f64b99',
-			'label' => 'Suggested Links for the 404 page.',
+			'label' => __('Suggested Links for the 404 page.', 'braftonium' ),
 			'name' => 'suggested_links',
 			'type' => 'relationship',
-			'instructions' => '',
+			'instructions' =>  __('If none are chosen, the default is Home, Contact, and Blog page.', 'braftonium' ),
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(

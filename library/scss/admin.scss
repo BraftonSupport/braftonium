@@ -14,18 +14,17 @@ start customizing. All admin functions are located in lib/admin/
 // Theme General Settings
 #acf-group_5a4e8d955ca60 {
 	.acf-field-5a4e8e2f65362,
-	.acf-field-5b61e4ff523a7,
-	.acf-field-5c79a40f64b99 {
+	.acf-field-5b61e4ff523a7 {
 		border-bottom: 1px solid #ddd;
 	}
 	.acf-field-5b185eb33c54b,
-	.acf-field-5b61e4ff523a1,
-	.acf-field-5c79a40564b98 {
+	.acf-field-5b61e4ff523a1 {
 		border-top: 5px solid #f1f1f1;
 	}
 	& >.handlediv, & > h2.hndle {
 		display: none;
 	}
+
 }
 
 .acf-fields.-left > .acf-field:before {
@@ -71,11 +70,7 @@ start customizing. All admin functions are located in lib/admin/
 		flex-wrap: wrap;
 		.layout {
 			flex: 1;
-			-webkit-align-self: flex-start;
-			-ms-flex-item-align: start;
-			align-self: flex-start;
 			margin: 0 1% 0 0;
-			min-width: 200px;
 			&:last-child {
 				margin-right: 0;
 			}

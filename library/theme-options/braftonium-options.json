@@ -1,0 +1,336 @@
+[
+    {
+        "key": "group_5a4e8d955ca60",
+        "title": "Braftonium Theme Options",
+        "fields": [
+            {
+                "key": "field_5a4e7db764361",
+                "label": "Banner Style",
+                "name": "banner_style",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "default": "Centered title with dark overlay over image",
+                    "sinistral": "Left aligned title with unaltered image"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "value",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5a4e8db865361",
+                "label": "Navigation Bar Position",
+                "name": "navigation_bar_position",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "next": "Next to the Logo 75%",
+                    "below": "Below the Logo 100%"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "value",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5a4e8e2f65362",
+                "label": "Sticky Nav",
+                "name": "sticky_nav",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "on": "Sticky?"
+                },
+                "allow_custom": 0,
+                "save_custom": 0,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "value"
+            },
+            {
+                "key": "field_5b185eb33c54b",
+                "label": "Blog Layout",
+                "name": "blog_layout",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "hero": "Hero First",
+                    "rich": "",
+                    "simple": "Simple Card"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "value",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5a4ea9e92e432",
+                "label": "Related Posts",
+                "name": "related_posts",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "no": "No Related Posts",
+                    "below": "Below Post",
+                    "side": "On the Sidebar"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "value",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5a4e8e7665364",
+                "label": "Social Share Buttons",
+                "name": "social_share_buttons",
+                "type": "checkbox",
+                "instructions": "These are not links to your social media, these are for people to share a particular page or post on their own social media profiles.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "on": "Social Share Buttons?"
+                },
+                "allow_custom": 0,
+                "save_custom": 0,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "value"
+            },
+            {
+                "key": "field_5a4e8e9565365",
+                "label": "Social Share Button Location",
+                "name": "ss_button_location",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a4e8e7665364",
+                            "operator": "==",
+                            "value": "on"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "all": "On Both Post and Excerpt",
+                    "post": "On Post"
+                },
+                "allow_null": 0,
+                "other_choice": 0,
+                "save_other_choice": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_5a4e8f3565366",
+                "label": "Social Media",
+                "name": "social_media",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a4e8e7665364",
+                            "operator": "==",
+                            "value": "on"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "facebook": "Facebook",
+                    "twitter": "Twitter",
+                    "google": "Google+",
+                    "linkedin": "LinkedIn",
+                    "pinterest": "Pinterest",
+                    "email": "Email"
+                },
+                "allow_custom": 0,
+                "save_custom": 0,
+                "default_value": [],
+                "layout": "horizontal",
+                "toggle": 0,
+                "return_format": "value"
+            },
+            {
+                "key": "field_5b61e4ff523a7",
+                "label": "Allow Comments",
+                "name": "comments",
+                "type": "checkbox",
+                "instructions": "I must warn you, it's going to be spam.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "comments": "Comments"
+                },
+                "allow_custom": 0,
+                "save_custom": 0,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "value"
+            },
+            {
+                "key": "field_5c79a40564b98",
+                "label": "Image on the 404 page",
+                "name": "404logo",
+                "type": "image",
+                "instructions": "Default image is your logo.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5c79a40f64b99",
+                "label": "Suggested Links for the 404 page.",
+                "name": "suggested_links",
+                "type": "relationship",
+                "instructions": "If none are chosen, the default is Home, Contact, and Blog page.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": "",
+                "taxonomy": "",
+                "filters": [
+                    "search",
+                    "post_type",
+                    "taxonomy"
+                ],
+                "elements": "",
+                "min": "",
+                "max": "",
+                "return_format": "object"
+            },
+            {
+                "key": "field_5b61e4ff523a1",
+                "label": "Add Shenanigans",
+                "name": "shenanigans",
+                "type": "checkbox",
+                "instructions": "http:\/\/kristofferandreasen.github.io\/wickedCSS\/documentation.html",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "on": "Shenanigans!"
+                },
+                "allow_custom": 0,
+                "save_custom": 0,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "value"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "theme-general-settings"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

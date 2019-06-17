@@ -1,14 +1,12 @@
 <?php
-// Disable Gutenberg
-
-if (version_compare($GLOBALS['wp_version'], '5.0-beta', '>')) {
-	// WP > 5 beta
-	add_filter('use_block_editor_for_post_type', '__return_false', 10);
-} else {
-	// WP < 5 beta
-	add_filter('gutenberg_can_edit_post_type', '__return_false', 10);
-}
-
+//disable gutenberg... but i don't want to blanket disable. should be enabled or disabled as a theme option or better yet only if the template is full-width.php. for now just add this snippet to your child theme files to disable where needed.
+// if (version_compare($GLOBALS['wp_version'], '5.0-beta', '>')) {
+// 	// WP > 5 beta
+// 	add_filter('use_block_editor_for_post_type', '__return_false', 10);
+// } else {
+// 	// WP < 5 beta
+// 	add_filter('gutenberg_can_edit_post_type', '__return_false', 10);
+// }
 
 /* Languages! */
 function braftonium_language_setup(){
@@ -30,7 +28,7 @@ Let's get everything up and running.
 *********************/
 function braftonium_start() {
 	require_once( 'library/braftonium.php' );
-	include_once get_template_directory().'/library/custom-fields/fields.php';
+	include_once get_template_directory().'/library/blocks/fields.php';
 
   //Allow editor style.
   add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
@@ -105,11 +103,21 @@ require_once(ABSPATH . 'wp-admin/includes/file.php');
 function braftonium_get_svg_path($svgid) {
 	// WP_Filesystem();
 	// global $wp_filesystem;
-	$file_data = get_template_directory_uri().'/library/theme-options/svg-icons.svg';
+	/*
+	* This function relies heavily on the syntax of the svg icon file.
+	* it searches for the Icon id, and then copies the text until the closing path 
+	* tag. As a result, the return syntax is pretty janky and specific.
+	* The first '>' character is included in the $second_step element
+	* Tags need to be closed after the output though.
+	*
+	* @todo maybe rewrite the entire way this is handled? consider implementing some of
+	* the recomendations here: https://css-tricks.com/gotchas-on-getting-svg-into-production/
+	*/
+	$file_data = get_template_directory().'/library/theme-options/svg-icons.svg';
 	$content = file_get_contents($file_data);
-	$first_step = explode( '<symbol id="'.$svgid , $content );
+	$first_step = explode( '<symbol id="'.$svgid.'"' , $content );
 	$second_step = explode("</path>" , $first_step[1] );
-	return '<svg class="'.$svgid.$second_step[0].'</svg>';
+	return '<svg class="'.$svgid.'" '.$second_step[0].'</path></svg>';
 }
 
 /**
@@ -252,7 +260,6 @@ function braftonium_slick_script() {
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/library/js/slick/slick.css', false, '1.0.0' );
 	wp_enqueue_style( 'slick-themes', get_template_directory_uri() . '/library/js/slick/slick-theme.css', false, '1.0.0' );
 }
-
 function braftonium_map_script() {
 	wp_enqueue_script( 'functions', get_template_directory_uri() . '/library/js/functions.js', array(), '1.0.0', true );
 }

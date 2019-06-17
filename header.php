@@ -176,7 +176,7 @@
 					$background_image = esc_url(get_field('background_image', 'category_'.$term));
 					if(get_field('title','category_'. $term)): $title = wp_kses_post(get_field('title','category_'. $term)); else: $title = get_the_archive_title(); endif;
 					$tagline = wp_kses_post(get_field('tagline','category_'. $term));
-				elseif(!is_page_template( 'full-width.php' ) ):
+				elseif(!is_page_template( 'full-width.php' )&&!is_page_template( 'resources.php' ) ):
 					$background_image = esc_url(get_field('background_image'));
 					$title = wp_kses_post(get_field('title'));
 					$tagline = wp_kses_post(get_field('tagline'));

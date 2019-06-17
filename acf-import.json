@@ -1,0 +1,555 @@
+[
+    {
+        "key": "group_acf_testimonials",
+        "title": "Testimonials",
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "testimonial",
+                    "order_no": 0,
+                    "group_no": 0
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [],
+        "active": true,
+        "description": "",
+        "id": "acf_testimonials",
+        "_valid": 1,
+        "local": "php",
+        "fields": [
+            {
+                "ID": 0,
+                "key": "field_5925fb3a1d91d",
+                "label": "Name",
+                "name": "name",
+                "prefix": "acf",
+                "type": "text",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": false,
+                "id": "",
+                "class": "",
+                "conditional_logic": false,
+                "parent": "group_acf_testimonials",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "formatting": "html",
+                "maxlength": "",
+                "_name": "name",
+                "_valid": 1
+            },
+            {
+                "ID": 0,
+                "key": "field_5925fb4e1d91e",
+                "label": "Position",
+                "name": "position",
+                "prefix": "acf",
+                "type": "text",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": false,
+                "id": "",
+                "class": "",
+                "conditional_logic": false,
+                "parent": "group_acf_testimonials",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "formatting": "html",
+                "maxlength": "",
+                "_name": "position",
+                "_valid": 1
+            },
+            {
+                "ID": 0,
+                "key": "field_5925fb581d91f",
+                "label": "Company",
+                "name": "company",
+                "prefix": "acf",
+                "type": "text",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": false,
+                "id": "",
+                "class": "",
+                "conditional_logic": false,
+                "parent": "group_acf_testimonials",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "formatting": "html",
+                "maxlength": "",
+                "_name": "company",
+                "_valid": 1
+            },
+            {
+                "ID": 0,
+                "key": "field_5925fb5f1d920",
+                "label": "Location",
+                "name": "location",
+                "prefix": "acf",
+                "type": "text",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": false,
+                "id": "",
+                "class": "",
+                "conditional_logic": false,
+                "parent": "group_acf_testimonials",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "formatting": "html",
+                "maxlength": "",
+                "_name": "location",
+                "_valid": 1
+            },
+            {
+                "ID": 0,
+                "key": "field_website",
+                "label": "Website",
+                "name": "website",
+                "prefix": "acf",
+                "type": "text",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": false,
+                "id": "",
+                "class": "",
+                "conditional_logic": false,
+                "parent": "group_acf_testimonials",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "formatting": "html",
+                "maxlength": "",
+                "_name": "website",
+                "_valid": 1
+            }
+        ]
+    },
+    {
+        "key": "group_acf_events",
+        "title": "Events",
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "event",
+                    "order_no": 0,
+                    "group_no": 0
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [],
+        "active": true,
+        "description": "",
+        "id": "acf_events",
+        "_valid": 1,
+        "local": "php",
+        "fields": [
+            {
+                "ID": 0,
+                "key": "field_5925f6ba0e510",
+                "label": "Start Date",
+                "name": "start_date",
+                "prefix": "acf",
+                "type": "date_picker",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "If both start date and end date are left blank, you have the choice of \"TBD\" or \"Various Dates\".",
+                "required": false,
+                "id": "",
+                "class": "",
+                "conditional_logic": false,
+                "parent": "group_acf_events",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "m\/d\/Y",
+                "first_day": 0,
+                "_name": "start_date",
+                "_valid": 1,
+                "return_format": "d\/m\/Y",
+                "save_format": "yymmdd"
+            },
+            {
+                "ID": 0,
+                "key": "field_597a6e194269f",
+                "label": "End Date",
+                "name": "end_date",
+                "prefix": "acf",
+                "type": "date_picker",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": false,
+                "id": "",
+                "class": "",
+                "conditional_logic": false,
+                "parent": "group_acf_events",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "m\/d\/Y",
+                "first_day": 0,
+                "_name": "end_date",
+                "_valid": 1,
+                "return_format": "d\/m\/Y",
+                "save_format": "yymmdd"
+            },
+            {
+                "ID": 0,
+                "key": "field_597f75fe4d7bd",
+                "label": "Date Text",
+                "name": "date_text",
+                "prefix": "acf",
+                "type": "radio",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": false,
+                "id": "",
+                "class": "",
+                "conditional_logic": false,
+                "parent": "group_acf_events",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "tbd": "TBD",
+                    "various": "Various Dates"
+                },
+                "other_choice": 0,
+                "save_other_choice": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "_name": "date_text",
+                "_valid": 1,
+                "allow_null": 0,
+                "return_format": "value"
+            },
+            {
+                "ID": 0,
+                "key": "field_5925f7ba0e511",
+                "label": "Location",
+                "name": "location",
+                "prefix": "acf",
+                "type": "text",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": false,
+                "id": "",
+                "class": "",
+                "conditional_logic": false,
+                "parent": "group_acf_events",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "formatting": "html",
+                "maxlength": "",
+                "_name": "location",
+                "_valid": 1
+            }
+        ]
+    },
+    {
+        "key": "group_5a905e927edba",
+        "title": "Team Member",
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "team_member"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": [
+            {
+                "ID": 0,
+                "key": "field_5a905f64f0245",
+                "label": "Job Title",
+                "name": "job_title",
+                "prefix": "acf",
+                "type": "text",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": 0,
+                "id": "",
+                "class": "",
+                "conditional_logic": 0,
+                "parent": "group_5a905e927edba",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "_name": "job_title",
+                "_valid": 1
+            }
+        ]
+    },
+    {
+        "key": "group_5a4e8d955ca61",
+        "title": "Braftonium Plugin Options",
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "braftonium_plugin"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": [
+            {
+                "ID": 0,
+                "key": "field_5a4e8e5a65363",
+                "label": "Google Analytics",
+                "name": "google_analytics",
+                "prefix": "acf",
+                "type": "text",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": 0,
+                "id": "",
+                "class": "",
+                "conditional_logic": 0,
+                "parent": "group_5a4e8d955ca61",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "UA-xxxxxxxx-xx",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "_name": "google_analytics",
+                "_valid": 1
+            },
+            {
+                "ID": 0,
+                "key": "field_5a7e8e5a75373",
+                "label": "Google Map API Key",
+                "name": "google_map_api",
+                "prefix": "acf",
+                "type": "text",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": 0,
+                "id": "",
+                "class": "",
+                "conditional_logic": 0,
+                "parent": "group_5a4e8d955ca61",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "_name": "google_map_api",
+                "_valid": 1
+            },
+            {
+                "ID": 0,
+                "key": "field_5a4e8f8065367",
+                "label": "Extra Widget Areas",
+                "name": "extra_widget_areas",
+                "prefix": "acf",
+                "type": "checkbox",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": 0,
+                "id": "",
+                "class": "",
+                "conditional_logic": 0,
+                "parent": "group_5a4e8d955ca61",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "header": "Header",
+                    "page": "Page Sidebar",
+                    "blog": "Blog Sidebar",
+                    "footer": "Footer Widget Area"
+                },
+                "allow_custom": 1,
+                "save_custom": 1,
+                "default_value": [
+                    "footer"
+                ],
+                "layout": "horizontal",
+                "toggle": 0,
+                "return_format": "value",
+                "_name": "extra_widget_areas",
+                "_valid": 1
+            },
+            {
+                "ID": 1878,
+                "key": "field_5a8f488bf8df7",
+                "label": "Custom Post Types",
+                "name": "custom_post_types",
+                "prefix": "acf",
+                "type": "checkbox",
+                "value": null,
+                "menu_order": 3,
+                "instructions": "Adding 'testimonial', 'event', and 'team-member' will automatically add accompanying options.",
+                "required": 0,
+                "id": "",
+                "class": "",
+                "conditional_logic": 0,
+                "parent": 1874,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "testimonial": "Testimonial",
+                    "event": "Event",
+                    "team-member": "Team Member",
+                    "team_member": "team_member"
+                },
+                "allow_custom": 1,
+                "save_custom": 1,
+                "default_value": [],
+                "layout": "horizontal",
+                "toggle": 0,
+                "return_format": "value",
+                "_name": "custom_post_types",
+                "_valid": 1
+            },
+            {
+                "ID": 0,
+                "key": "field_5a4e8f8665367",
+                "label": "Resources - Optional Second Taxonomy",
+                "name": "resource_tax2",
+                "prefix": "acf",
+                "type": "radio",
+                "value": null,
+                "menu_order": 0,
+                "instructions": "",
+                "required": 0,
+                "id": "",
+                "class": "",
+                "conditional_logic": 0,
+                "parent": "group_5a4e8d955ca61",
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": [],
+                "allow_null": 0,
+                "other_choice": 1,
+                "save_other_choice": 1,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value",
+                "_name": "resource_tax2",
+                "_valid": 1
+            }
+        ]
+    }
+]
