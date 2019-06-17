@@ -8,7 +8,7 @@ You can add some advanced styles here if you like. This kicks in
 on larger screens.
 
 ******************************************************************/
-body:not(.page-template-full-width) main:not(.simple) {
+body:not(.page-template-full-width) main {
     padding: 3.5em 0;
 }
 
@@ -17,18 +17,14 @@ body:not(.page-template-full-width) main:not(.simple) {
 }
 
 .banner.sinistral {
-	font-size: .85em;
 	.wrap {
 		> * {
-			max-width: 50%;
+			max-width: 40%;
+			&:before {
+				left: -75%;
+				width: 175%;
+			}
 		}
-	}
-	.black {
-		padding: 2.5em 3em;
-		padding-left: 15%;
-		margin-left: -15%;
-		margin-top: 2em;
-		margin-bottom: 2em;
 	}
 }
 
@@ -46,21 +42,5 @@ body:not(.page-template-full-width) main:not(.simple) {
 .container {
 	> .text, > .image {
 		margin-left: 6.5%;
-	}
-}
-
-.blog .simple, .archive .simple {
-	&.container.wrap {
-		margin-top: 3.5em;
-		.thumbnail {
-			flex: 1 1 71%;
-		}
-		.content {
-			flex: 1 1 25%;
-			padding: 1.5em 0;
-		}
-		.button {
-			margin-top: 2em;
-		}
 	}
 }

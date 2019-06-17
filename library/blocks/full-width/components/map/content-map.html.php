@@ -7,8 +7,7 @@
  * @since braftonium 1.0
  */
 
-if(!session_id()) session_start();
-$sectionrow = $_SESSION['sectionrow'];
+global $sectionrow;
 
 $map = get_sub_field('map');
 

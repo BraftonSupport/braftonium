@@ -1,24 +1,32 @@
 <?php
 /**
- * The template used for displaying a widget area.
+ * The template used for displaying visual section of page.
  *
  * @package WordPress
  * @subpackage Braftonium
- * @since braftonium 1.5
+ * @since braftonium 1.0
  */
-if(!session_id()) session_start();
-$sectionrow = $_SESSION['sectionrow'];
+// $block = "blockName";
+// get_template('library/custom-fields/components', $block.'/'.$block.'html.php');
+global $sectionrow;
 $title = wp_kses_post(get_sub_field('title'));
 if ($title):
 	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
 endif;
-$widgetareas = get_sub_field('widget_area');
 
+$tagline = wp_kses_post(get_sub_field('tagline'));
+$button = get_sub_field('button');
 $style = get_sub_field('style');
-$classes = array('widgetarea');
+$video = esc_url($style['video_url']);
+
+$classes = array('visual');
 if ($style['add_class']){
 	$classes[] = sanitize_html_classes($style['add_class']);
 }
+if ($video){
+	$classes[] = 'video';
+}
+
 if (!$style['background_image'] && !$style['background_color'] ) {
 	$classes[] = "gradient";
 }
@@ -32,8 +40,8 @@ if ( $style['other'] ) {
 	if (in_array('center', $style['other'])){
 		$classes[] = "center";
 	}
-}?>
-
+} ?>
+<!-- Start Visual Block -->
 <section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . esc_url($style['background_image']) . ');'; }
 if ( $style['background_color'] ) { echo 'background-color: ' . sanitize_hex_color($style['background_color']) . ';'; }
@@ -53,17 +61,20 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 		}
 	} ?><?php if ($video): echo '<div class="black">'; endif; ?><div class="wrap">
 
-		<?php if ($titletext): echo $titletext; endif; ?>
-		<?php if ($widgetareas):
-			$count = count($widgetareas);
-			echo '<div class="container count'.$count.'">';
-			foreach($widgetareas as $widgetarea):
-				dynamic_sidebar( sanitize_text_field($widgetarea) );
-			endforeach;
-			echo '</div>';
+		<?php if (isset($button['url'])&&!isset($button['title'])): echo '<a href="'.esc_url($button['url']).'"';
+			if ($button['target']): echo ' target="'.sanitize_text_field($button['target']).'"'; endif;
+		echo '>'; endif;
+		if ($titletext): echo $titletext; endif;
+		if (isset($button['url'])&&!isset($button['title'])): echo '</a>'; endif;
+		if ($tagline): echo $tagline; endif;
+		if (isset($button['title'])):
+			echo '<a href="'.esc_url($button['url']).'" class="blue-btn"';
+			if ($button['target']): echo 'target="'.sanitize_text_field($button['target']).'"'; endif;
+			echo '>'.sanitize_text_field($button['title']).'</a>';
 		endif; ?>
-		
-	</div>
+
+	<?php if ($video): echo '</div>'; endif; ?></div>
 </section><!-- section -->
 
 <?php if ( $style['other'] && in_array('shadow', $style['other']) ) { echo '<div class="shadow"></div>'; } ?>
+<!-- End Visual Block -->

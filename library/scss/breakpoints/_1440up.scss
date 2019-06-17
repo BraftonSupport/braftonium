@@ -9,14 +9,13 @@ on larger screens.
 
 ******************************************************************/
 .banner.sinistral {
-	font-size: .8em;
 	.wrap {
 		> * {
-			max-width: 70%;
+			max-width: 35%;
+			&:before {
+				left: -85%;
+				width: 185%;
+			}
 		}
-	}
-	.black {
-		padding-left: 30%;
-		margin-left: -30%;
 	}
 }

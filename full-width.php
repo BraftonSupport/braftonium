@@ -33,9 +33,8 @@ $tagline = wp_kses_post(get_field('tagline'));
 				<?php if( have_rows('content') ):
 					// loop through the rows of data
 					while ( have_rows('content') ) : the_row();
-						$_SESSION['sectionrow']=$sectionrow;
 						$row_layout = get_row_layout();
-						get_template_part( 'post-formats/content', $row_layout);
+						get_template_part('library/blocks/full-width/components/'.$row_layout.'/content', $row_layout.'.html');
 						$sectionrow++;
 					endwhile;
 				endif; ?>
