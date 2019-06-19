@@ -22,7 +22,8 @@ $show_text = get_sub_field('show_text');
 $list_type = get_sub_field('list_type');
 	if ($list_type=='custom'): $custom = get_sub_field('custom_list'); endif;
 	if ($list_type=='recent'): $recent = get_sub_field('recent'); $number = get_sub_field('number_of_posts'); $category = strtolower(str_replace(' ', '-', sanitize_text_field(get_sub_field('category')))); endif;
-	if ($list_type=='manual'): $manual = get_sub_field('manual'); endif;
+	if ($list_type=='manual'): $manual = get_sub_field('manual_content'); endif;
+
 	if ($list_type=='first'): $first = get_sub_field('first'); endif;
 $imagestyle	 = get_sub_field('image_size_and_shape');
 $showbutton	 = get_sub_field('showbutton');
