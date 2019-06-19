@@ -60,6 +60,7 @@ $tagline = wp_kses_post(get_field('tagline'));
 
 						<article id="post-not-found" class="hentry cf">
 							<header class="article-header">
+							
 								<h1><?php _e( 'Oops, Post Not Found!', 'braftonium' ); ?></h1>
 							</header>
 							<section class="entry-content">
