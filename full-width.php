@@ -38,6 +38,7 @@ $tagline = wp_kses_post(get_field('tagline'));
 						$sectionrow++;
 					endwhile;
 				endif; ?>
+				<?php if(get_field('default_content')){?>
 				<div class="wrap">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -71,6 +72,7 @@ $tagline = wp_kses_post(get_field('tagline'));
 
 					<?php endif; ?>
 				</div>
+				<?php } ?>
 			</main><!-- //main -->
 
 		<?php get_sidebar(); ?>
