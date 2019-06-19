@@ -478,3 +478,4 @@ function braftonium_customize_preview_js() {
 	wp_enqueue_script( 'braftonium-customize-preview', get_template_directory_uri() . '/library/js/customize-preview.js', array( 'customize-preview' ), '20150825', true );
 }
 add_action( 'customize_preview_init', 'braftonium_customize_preview_js' );
+include 'block-page-options.php';
