@@ -13,15 +13,21 @@
 						<?php endif; ?>
 					</a></section>
 					
-					<?php if ( is_active_sidebar( 'footer-left' )||is_active_sidebar( 'footer-middle' )||is_active_sidebar( 'footer-right' ) ) :	
+					<?php if ( is_active_sidebar( 'footer-left' ) ){
 						echo '<section>';
 						dynamic_sidebar( 'footer-left' );
-						echo '</section><section>';
+						echo '</section>';
+					}
+					if(is_active_sidebar( 'footer-middle' )){
+						echo '<section>';
 						dynamic_sidebar( 'footer-middle' );
-						echo '</section><section>';
+						echo '</section>';
+					}
+					if(is_active_sidebar( 'footer-right' )){
+						echo '<section>';
 						dynamic_sidebar( 'footer-right' );
 						echo '</section>';
-					endif; ?>
+					} ?>
 					
 					<?php if (has_nav_menu('social')):
 					echo '<section>';
