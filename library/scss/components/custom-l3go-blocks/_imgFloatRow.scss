@@ -43,26 +43,28 @@
 			}
 		}
 		@media (min-width: $xl){
+			// at this breakpoint, wrap is set to max-width: 1100px => half = 550px
 			&.left{
 				& + .wrap{
-					padding-left: calc(3em + 550px);
+					padding-left: 550px;
 				}
 			}
 			&.right{
 				& + .wrap{
-					padding-right: calc(3em + 550px);
+					padding-right: 550px;
 				}
 			}
 		}
 		@media (min-width: $XL){
+			// at this breakpoint, wrap is set to max-width: 1200px => half = 600px
 			&.left{
 				& + .wrap{
-					padding-left: calc(3em + 600px);
+					padding-left: 600px;
 				}
 			}
 			&.right{
 				& + .wrap{
-					padding-right: calc(3em + 600px);
+					padding-right: 600px;
 				}
 			}
 		}
