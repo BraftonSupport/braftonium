@@ -42,7 +42,7 @@
                 'layout' => 'row',
                 'sub_fields' => array(
                     array(
-                        'key' => 'field_5a4d48e3cb1ff',
+                        'key' => 'field_5a4d48e3cb175ff',
                         'label' => __( 'Image', 'braftonium' ),
                         'name' => 'image',
                         'type' => 'image',
@@ -66,7 +66,7 @@
                         'mime_types' => '',
                     ),
                     array(
-                        'key' => 'field_5a4d574f8c43579',
+                        'key' => 'field_5a4d574f8saf3c43579',
                         'label' => __( 'Float', 'braftonium' ),
                         'name' => 'float',
                         'type' => 'radio',
@@ -92,7 +92,7 @@
                 ),
             ),
             array(
-                'key' => 'field_5a4d5dc3c9208',
+                'key' => 'field_5a4d5dc3c9afde3208',
                 'label' => __( 'Text', 'braftonium' ),
                 'name' => 'text',
                 'type' => 'wysiwyg',
