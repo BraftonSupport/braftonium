@@ -115,7 +115,7 @@
                 'label' => __( 'Style', 'braftonium' ),
                 'name' => 'style',
                 'type' => 'clone',
-                'instructions' => '',
+                'instructions' => 'This row does not support video backgrounds',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(

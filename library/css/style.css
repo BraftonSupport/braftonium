@@ -4043,7 +4043,7 @@ Custom L3go Block Sass
   }
   /* line 27, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */
   .full-width-image-float-row .img-wrap.left + .wrap {
-    padding-left: 45%;
+    padding-left: calc(45% + 3em);
   }
   /* line 31, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */
   .full-width-image-float-row .img-wrap.right {
@@ -4052,7 +4052,7 @@ Custom L3go Block Sass
   }
   /* line 34, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */
   .full-width-image-float-row .img-wrap.right + .wrap {
-    padding-right: 45%;
+    padding-right: calc(45% + 3em);
   }
   /* line 38, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */
   .full-width-image-float-row .img-wrap img {
@@ -4065,20 +4065,20 @@ Custom L3go Block Sass
 @media (min-width: 1200px) {
   /* line 48, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */
   .full-width-image-float-row .img-wrap.left + .wrap {
-    padding-left: 550px;
+    padding-left: calc(3em + 550px);
   }
   /* line 53, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */
   .full-width-image-float-row .img-wrap.right + .wrap {
-    padding-right: 550px;
+    padding-right: calc(3em + 550px);
   }
 }
 @media (min-width: 1367px) {
   /* line 61, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */
   .full-width-image-float-row .img-wrap.left + .wrap {
-    padding-left: 600px;
+    padding-left: calc(3em + 600px);
   }
   /* line 66, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */
   .full-width-image-float-row .img-wrap.right + .wrap {
-    padding-right: 600px;
+    padding-right: calc(3em + 600px);
   }
 }
