@@ -753,41 +753,39 @@ them however you see fit.
 @media (max-width: 767px) {
   /* line 49, ../scss/partials/_grid.scss */
   .m-all {
-    float: left;
-    padding-right: 0.75em;
     width: 100%;
     padding-right: 0;
   }
 
-  /* line 55, ../scss/partials/_grid.scss */
+  /* line 54, ../scss/partials/_grid.scss */
   .m-1of2 {
     float: left;
     padding-right: 0.75em;
     width: 50%;
   }
 
-  /* line 60, ../scss/partials/_grid.scss */
+  /* line 59, ../scss/partials/_grid.scss */
   .m-1of3 {
     float: left;
     padding-right: 0.75em;
     width: 33.33%;
   }
 
-  /* line 65, ../scss/partials/_grid.scss */
+  /* line 64, ../scss/partials/_grid.scss */
   .m-2of3 {
     float: left;
     padding-right: 0.75em;
     width: 66.66%;
   }
 
-  /* line 70, ../scss/partials/_grid.scss */
+  /* line 69, ../scss/partials/_grid.scss */
   .m-1of4 {
     float: left;
     padding-right: 0.75em;
     width: 25%;
   }
 
-  /* line 75, ../scss/partials/_grid.scss */
+  /* line 74, ../scss/partials/_grid.scss */
   .m-3of4 {
     float: left;
     padding-right: 0.75em;
@@ -796,71 +794,69 @@ them however you see fit.
 }
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
-  /* line 86, ../scss/partials/_grid.scss */
+  /* line 85, ../scss/partials/_grid.scss */
   .t-all {
-    float: left;
-    padding-right: 0.75em;
     width: 100%;
     padding-right: 0;
   }
 
-  /* line 92, ../scss/partials/_grid.scss */
+  /* line 90, ../scss/partials/_grid.scss */
   .t-1of2 {
     float: left;
     padding-right: 0.75em;
     width: 50%;
   }
 
-  /* line 97, ../scss/partials/_grid.scss */
+  /* line 95, ../scss/partials/_grid.scss */
   .t-1of3 {
     float: left;
     padding-right: 0.75em;
     width: 33.33%;
   }
 
-  /* line 102, ../scss/partials/_grid.scss */
+  /* line 100, ../scss/partials/_grid.scss */
   .t-2of3 {
     float: left;
     padding-right: 0.75em;
     width: 66.66%;
   }
 
-  /* line 107, ../scss/partials/_grid.scss */
+  /* line 105, ../scss/partials/_grid.scss */
   .t-1of4 {
     float: left;
     padding-right: 0.75em;
     width: 25%;
   }
 
-  /* line 112, ../scss/partials/_grid.scss */
+  /* line 110, ../scss/partials/_grid.scss */
   .t-3of4 {
     float: left;
     padding-right: 0.75em;
     width: 75%;
   }
 
-  /* line 117, ../scss/partials/_grid.scss */
+  /* line 115, ../scss/partials/_grid.scss */
   .t-1of5 {
     float: left;
     padding-right: 0.75em;
     width: 20%;
   }
 
-  /* line 122, ../scss/partials/_grid.scss */
+  /* line 120, ../scss/partials/_grid.scss */
   .t-2of5 {
     float: left;
     padding-right: 0.75em;
     width: 40%;
   }
 
-  /* line 127, ../scss/partials/_grid.scss */
+  /* line 125, ../scss/partials/_grid.scss */
   .t-3of5 {
     float: left;
     padding-right: 0.75em;
     width: 60%;
   }
 
-  /* line 132, ../scss/partials/_grid.scss */
+  /* line 130, ../scss/partials/_grid.scss */
   .t-4of5 {
     float: left;
     padding-right: 0.75em;
@@ -869,155 +865,153 @@ them however you see fit.
 }
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
-  /* line 142, ../scss/partials/_grid.scss */
+  /* line 140, ../scss/partials/_grid.scss */
   .d-all {
-    float: left;
-    padding-right: 0.75em;
     width: 100%;
     padding-right: 0;
   }
 
-  /* line 148, ../scss/partials/_grid.scss */
+  /* line 145, ../scss/partials/_grid.scss */
   .d-1of2 {
     float: left;
     padding-right: 0.75em;
     width: 50%;
   }
 
-  /* line 153, ../scss/partials/_grid.scss */
+  /* line 150, ../scss/partials/_grid.scss */
   .d-1of3 {
     float: left;
     padding-right: 0.75em;
     width: 33.33%;
   }
 
-  /* line 158, ../scss/partials/_grid.scss */
+  /* line 155, ../scss/partials/_grid.scss */
   .d-2of3 {
     float: left;
     padding-right: 0.75em;
     width: 66.66%;
   }
 
-  /* line 163, ../scss/partials/_grid.scss */
+  /* line 160, ../scss/partials/_grid.scss */
   .d-1of4 {
     float: left;
     padding-right: 0.75em;
     width: 25%;
   }
 
-  /* line 168, ../scss/partials/_grid.scss */
+  /* line 165, ../scss/partials/_grid.scss */
   .d-3of4 {
     float: left;
     padding-right: 0.75em;
     width: 75%;
   }
 
-  /* line 173, ../scss/partials/_grid.scss */
+  /* line 170, ../scss/partials/_grid.scss */
   .d-1of5 {
     float: left;
     padding-right: 0.75em;
     width: 20%;
   }
 
-  /* line 178, ../scss/partials/_grid.scss */
+  /* line 175, ../scss/partials/_grid.scss */
   .d-2of5 {
     float: left;
     padding-right: 0.75em;
     width: 40%;
   }
 
-  /* line 183, ../scss/partials/_grid.scss */
+  /* line 180, ../scss/partials/_grid.scss */
   .d-3of5 {
     float: left;
     padding-right: 0.75em;
     width: 60%;
   }
 
-  /* line 188, ../scss/partials/_grid.scss */
+  /* line 185, ../scss/partials/_grid.scss */
   .d-4of5 {
     float: left;
     padding-right: 0.75em;
     width: 80%;
   }
 
-  /* line 193, ../scss/partials/_grid.scss */
+  /* line 190, ../scss/partials/_grid.scss */
   .d-1of6 {
     float: left;
     padding-right: 0.75em;
     width: 16.6666666667%;
   }
 
-  /* line 198, ../scss/partials/_grid.scss */
+  /* line 195, ../scss/partials/_grid.scss */
   .d-1of7 {
     float: left;
     padding-right: 0.75em;
     width: 14.2857142857%;
   }
 
-  /* line 203, ../scss/partials/_grid.scss */
+  /* line 200, ../scss/partials/_grid.scss */
   .d-2of7 {
     float: left;
     padding-right: 0.75em;
     width: 28.5714286%;
   }
 
-  /* line 208, ../scss/partials/_grid.scss */
+  /* line 205, ../scss/partials/_grid.scss */
   .d-3of7 {
     float: left;
     padding-right: 0.75em;
     width: 42.8571429%;
   }
 
-  /* line 213, ../scss/partials/_grid.scss */
+  /* line 210, ../scss/partials/_grid.scss */
   .d-4of7 {
     float: left;
     padding-right: 0.75em;
     width: 57.1428572%;
   }
 
-  /* line 218, ../scss/partials/_grid.scss */
+  /* line 215, ../scss/partials/_grid.scss */
   .d-5of7 {
     float: left;
     padding-right: 0.75em;
     width: 71.4285715%;
   }
 
-  /* line 223, ../scss/partials/_grid.scss */
+  /* line 220, ../scss/partials/_grid.scss */
   .d-6of7 {
     float: left;
     padding-right: 0.75em;
     width: 85.7142857%;
   }
 
-  /* line 228, ../scss/partials/_grid.scss */
+  /* line 225, ../scss/partials/_grid.scss */
   .d-1of8 {
     float: left;
     padding-right: 0.75em;
     width: 12.5%;
   }
 
-  /* line 233, ../scss/partials/_grid.scss */
+  /* line 230, ../scss/partials/_grid.scss */
   .d-1of9 {
     float: left;
     padding-right: 0.75em;
     width: 11.1111111111%;
   }
 
-  /* line 238, ../scss/partials/_grid.scss */
+  /* line 235, ../scss/partials/_grid.scss */
   .d-1of10 {
     float: left;
     padding-right: 0.75em;
     width: 10%;
   }
 
-  /* line 243, ../scss/partials/_grid.scss */
+  /* line 240, ../scss/partials/_grid.scss */
   .d-1of11 {
     float: left;
     padding-right: 0.75em;
     width: 9.09090909091%;
   }
 
-  /* line 248, ../scss/partials/_grid.scss */
+  /* line 245, ../scss/partials/_grid.scss */
   .d-1of12 {
     float: left;
     padding-right: 0.75em;

@@ -47,7 +47,6 @@ them however you see fit.
 @media (max-width: 767px) {
 
   .m-all {
-    @include grid-col;
     width: 100%;
     padding-right: 0;
   }
@@ -84,7 +83,6 @@ them however you see fit.
 @media (min-width: 768px) and (max-width: 1029px) {
 
   .t-all {
-    @include grid-col;
     width: 100%;
     padding-right: 0;
   }
@@ -140,7 +138,6 @@ them however you see fit.
 @media (min-width: 1030px) {
 
   .d-all  {
-    @include grid-col;
     width: 100%;
     padding-right: 0;
   }
