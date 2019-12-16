@@ -1524,12 +1524,12 @@ LAYOUT & GRID STYLES
 .wrap {
   width: 94%;
   margin: 0 auto;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+  overflow-wrap: normal;
+  word-wrap: normal;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
 }
 
 /*********************
