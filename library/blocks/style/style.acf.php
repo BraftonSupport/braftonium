@@ -1,5 +1,13 @@
 <?php
 if(function_exists("acf_add_local_field_group")){
+
+	$style_classes = array(
+		'shadow' => __( 'Add Shadow', 'braftonium' ),
+		'full' => __( 'Full Screen', 'braftonium' ),
+		'compact' => __( 'Blockquote (add side margins)', 'braftonium' ),
+		'center' => __( 'Center', 'braftonium' ),
+	);
+	$style_classes = apply_filters('braftonium_style_classes', $style_classes);
 acf_add_local_field_group(array(
 	'key' => 'group_5a4d3902e55eb',
 	'title' => 'Style',
@@ -142,12 +150,7 @@ acf_add_local_field_group(array(
 						'class' => '',
 						'id' => '',
 					),
-					'choices' => array(
-						'shadow' => __( 'Add Shadow', 'braftonium' ),
-						'full' => __( 'Full Screen', 'braftonium' ),
-						'compact' => __( 'Blockquote (add side margins)', 'braftonium' ),
-						'center' => __( 'Center', 'braftonium' ),
-					),
+					'choices' => $style_classes,
 					'allow_custom' => 0,
 					'save_custom' => 0,
 					'default_value' => array(
