@@ -3999,6 +3999,12 @@ Begining of Componentized Sass imports
 /********************
 Custom L3go Block Sass
 ********************/
+/* line 2, ../scss/components/custom-l3go-blocks/_all.scss */
+section.brafton_block.full-width {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}
+
 /* line 1, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */
 .full-width-image-float-row {
   clear: both;

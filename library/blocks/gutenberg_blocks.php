@@ -21,21 +21,27 @@ class BraftoniumGutenbergBlocks{
         
     }
     function Braftonium_register_blocks() {
+        $dir = dirname(__FILE__);	
+        $files = glob("$dir/full-width/components/**/*.guten-block.php");
+        foreach($files as $file){
+            $settings = include $file;
+            $settings['register']['render_callback'] = array($this, 'render_block_html');
+            
+            // $settings['register']['render_template'] = apply_filters('braftonium_modify_block_template', $settings['register']);
+            acf_register_block_type($settings['register']);
+            acf_add_local_field_group($settings['fields']);
+        }
+    }
+    function render_block_html($block){
+        // '/full-width/components/cta/block-cta.html.php',
 
-        // Check function exists.
-        // if( function_exists('acf_register_block_type') ) {
-    
-            // register a testimonial block.
-            acf_register_block_type(array(
-                'name'              => 'cta',
-                'title'             => __('CTA'),
-                'description'       => __('Call to Action Block'),
-                'render_template'   => static::$dir.'/full-width/components/cta/block-cta.html.php',
-                'category'          => 'braftonium',
-                'icon'              => 'admin-comments',
-                'keywords'          => array( 'testimonial', 'quote' ),
-            ));
-        // }
+        // convert name ("acf/testimonial") into path friendly slug ("testimonial")
+        $slug = str_replace('acf/', '', $block['name']);
+        
+        // include a template part from within the "template-parts/block" folder
+        if( file_exists( get_theme_file_path("library/blocks/full-width/components/{$slug}/block-{$slug}.html.php") ) ) {
+            include get_theme_file_path("library/blocks/full-width/components/{$slug}/block-{$slug}.html.php") ;
+        }
     }
 }
 $Braftonium_Gutenberg_Blocks = new BraftoniumGutenbergBlocks();
