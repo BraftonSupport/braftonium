@@ -29,6 +29,7 @@ Let's get everything up and running.
 function braftonium_start() {
 	require_once( 'library/braftonium.php' );
 	include_once get_template_directory().'/library/blocks/fields.php';
+	require_once get_template_directory().'/library/blocks/gutenberg_blocks.php';
 
   //Allow editor style.
   add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
