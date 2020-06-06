@@ -3,6 +3,7 @@
 class BraftoniumGutenbergBlocks{
     static $dir = __DIR__;
     function __construct(){
+        // var_dump("construction");
         add_action('acf/init', array($this, 'Braftonium_register_blocks'));
         add_filter( 'block_categories', array($this, 'Create_Braftonium_Category'), 10, 2);
     }
@@ -21,6 +22,7 @@ class BraftoniumGutenbergBlocks{
         
     }
     function Braftonium_register_blocks() {
+        // var_dump("register block");
         $dir = dirname(__FILE__);	
         $files = glob("$dir/full-width/components/**/*.guten-block.php");
         foreach($files as $file){
@@ -44,4 +46,5 @@ class BraftoniumGutenbergBlocks{
         }
     }
 }
+// var_dump("In file");
 $Braftonium_Gutenberg_Blocks = new BraftoniumGutenbergBlocks();

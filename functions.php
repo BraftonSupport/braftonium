@@ -7,7 +7,7 @@
 // 	// WP < 5 beta
 // 	add_filter('gutenberg_can_edit_post_type', '__return_false', 10);
 // }
-
+require_once get_template_directory().'/library/blocks/gutenberg_blocks.php';
 /* Languages! */
 function braftonium_language_setup(){
 
@@ -29,7 +29,7 @@ Let's get everything up and running.
 function braftonium_start() {
 	require_once( 'library/braftonium.php' );
 	include_once get_template_directory().'/library/blocks/fields.php';
-	require_once get_template_directory().'/library/blocks/gutenberg_blocks.php';
+	
 
   //Allow editor style.
   add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
