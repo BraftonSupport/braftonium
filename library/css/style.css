@@ -1777,7 +1777,6 @@ HEADER STYLES
 /* line 285, ../scss/breakpoints/_base.scss */
 .nextwidget {
   margin-bottom: 5px;
-  text-align: center;
 }
 /* line 288, ../scss/breakpoints/_base.scss */
 .nextwidget .widget {
@@ -4058,6 +4057,11 @@ section.brafton_block.darken:before {
 /* line 50, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.align-top .container > * {
   margin-top: 0;
+}
+/* line 55, ../scss/components/custom-l3go-blocks/_all.scss */
+section.brafton_block.align-top .container .list-item > * {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* line 1, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */
