@@ -24,7 +24,7 @@ class BraftoniumGutenbergBlocks{
     function Braftonium_register_blocks() {
         // var_dump("register block");
         $dir = dirname(__FILE__);	
-        $files = glob("$dir/full-width/components/**/*.guten-block.php");
+        $files = glob("$dir/guten/**/*.guten-block.php");
         foreach($files as $file){
             $settings = include $file;
             $settings['register']['render_callback'] = array($this, 'render_block_html');
@@ -40,8 +40,8 @@ class BraftoniumGutenbergBlocks{
         // convert name ("acf/testimonial") into path friendly slug ("testimonial")
         $slug = str_replace('acf/', '', $block['name']);
         // include a template part from within the "template-parts/block" folder
-        if( file_exists( get_theme_file_path("library/blocks/full-width/components/{$slug}/block-{$slug}.html.php") ) ) {
-            include get_theme_file_path("library/blocks/full-width/components/{$slug}/block-{$slug}.html.php") ;
+        if( file_exists( get_theme_file_path("library/blocks/guten/{$slug}/block-{$slug}.html.php") ) ) {
+            include get_theme_file_path("library/blocks/guten/{$slug}/block-{$slug}.html.php") ;
         }
     }
 }
