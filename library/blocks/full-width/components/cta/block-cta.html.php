@@ -22,10 +22,6 @@ $classes = array('brafton_block','cta');
 if ($style['add_class']){
 	$classes[] = sanitize_html_classes($style['add_class']);
 }
-
-if (!$style['background_image'] && !$style['background_color'] ) {
-	$classes[] = "gradient";
-}
 if ( $style['other'] ) {
     // var_dump($style['other']);
     $classes = array_merge($classes, $style['other']);

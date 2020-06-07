@@ -7,7 +7,7 @@ return array(
         'description'       => __('Call to Action Block'),
         // 'render_template'   => static::$dir.'/full-width/components/cta/block-cta.html.php',
         'category'          => 'braftonium',
-        'icon'              => 'admin-comments',
+        'icon'              => 'tide',
         'keywords'          => array( 'testimonial', 'quote' ),
     ),
     'fields' => array(

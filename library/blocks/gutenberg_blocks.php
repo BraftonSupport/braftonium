@@ -28,7 +28,7 @@ class BraftoniumGutenbergBlocks{
         foreach($files as $file){
             $settings = include $file;
             $settings['register']['render_callback'] = array($this, 'render_block_html');
-            
+            // var_dump($settings);
             // $settings['register']['render_template'] = apply_filters('braftonium_modify_block_template', $settings['register']);
             acf_register_block_type($settings['register']);
             acf_add_local_field_group($settings['fields']);
@@ -39,7 +39,6 @@ class BraftoniumGutenbergBlocks{
 
         // convert name ("acf/testimonial") into path friendly slug ("testimonial")
         $slug = str_replace('acf/', '', $block['name']);
-        
         // include a template part from within the "template-parts/block" folder
         if( file_exists( get_theme_file_path("library/blocks/full-width/components/{$slug}/block-{$slug}.html.php") ) ) {
             include get_theme_file_path("library/blocks/full-width/components/{$slug}/block-{$slug}.html.php") ;
