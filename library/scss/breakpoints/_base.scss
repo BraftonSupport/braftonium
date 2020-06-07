@@ -748,11 +748,12 @@ svg {
 			padding: 2em 0 2.5em;
 		}
 		&.full {
-			height: 90vh;
+			min-height: 90vh;
 			.wrap {
 				margin: auto;
 			}
 			.black {
+				min-height:90vh;
 				height: 100%;
 			}
 		}
