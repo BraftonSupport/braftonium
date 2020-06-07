@@ -4020,10 +4020,44 @@ section.brafton_block .wrap {
     padding: 3.5em 0;
   }
 }
-/* line 13, ../scss/components/custom-l3go-blocks/_all.scss */
+@media only screen and (min-width: 780px) {
+  /* line 15, ../scss/components/custom-l3go-blocks/_all.scss */
+  section.brafton_block:not(.full-width) .wrap {
+    width: 98%;
+  }
+}
+/* line 21, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.full-width {
   margin-left: calc(50% - 50vw);
   width: 100vw;
+}
+/* line 26, ../scss/components/custom-l3go-blocks/_all.scss */
+section.brafton_block.center-heading h2, section.brafton_block.center-heading h1 {
+  text-align: center;
+}
+/* line 31, ../scss/components/custom-l3go-blocks/_all.scss */
+section.brafton_block.center-title h3 {
+  text-align: center;
+}
+/* line 35, ../scss/components/custom-l3go-blocks/_all.scss */
+section.brafton_block.darken {
+  position: relative;
+}
+/* line 37, ../scss/components/custom-l3go-blocks/_all.scss */
+section.brafton_block.darken > * {
+  position: relative;
+}
+/* line 40, ../scss/components/custom-l3go-blocks/_all.scss */
+section.brafton_block.darken:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+/* line 50, ../scss/components/custom-l3go-blocks/_all.scss */
+section.brafton_block.align-top .container > * {
+  margin-top: 0;
 }
 
 /* line 1, ../scss/components/custom-l3go-blocks/_imgFloatRow.scss */

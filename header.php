@@ -119,7 +119,7 @@
 							<?php if ( is_active_sidebar( 'header-sidebar' ) ) {
 								dynamic_sidebar( 'header-sidebar' );
 							} ?>
-							<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'braftonium' );
+							<button id="menu-toggle" class="menu-toggle blue-btn"><span><?php _e( 'Menu', 'braftonium' );echo '</span>';
 							echo braftonium_get_svg_path('icon-bars').braftonium_get_svg_path('icon-close'); ?></button>	
 
 						</div>

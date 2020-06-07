@@ -7,7 +7,8 @@ if(function_exists("acf_add_local_field_group")){
 		'compact' => __( 'Skinny Row (add side margins)', 'braftonium' ),
 		'center' => __( 'Center', 'braftonium' ),
 		'center-heading'	=> __('Center heading (h1 & h2)', 'braftonium'),
-		'center-title'		=> __('Center title (h3)', 'braftonium')
+		'center-title'		=> __('Center title (h3)', 'braftonium'),
+		'align-top'			=> __('Align content to top (flex containers)', 'braftonium')
 	);
 	$style_classes = apply_filters('braftonium_style_classes', $style_classes);
 	//Style fields for use on classic editor.

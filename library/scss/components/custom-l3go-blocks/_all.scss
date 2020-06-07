@@ -9,6 +9,14 @@ section.brafton_block{
         @media only screen and (min-width:$XL){
             padding:3.5em 0;
         }
+        
+    }
+    &:not(.full-width){
+        .wrap{
+            @media only screen and (min-width:780px){
+                width:98%;
+            }
+        }
     }
     &.full-width{
         margin-left:calc(50% - 50vw);
@@ -35,6 +43,13 @@ section.brafton_block{
             width:100%;
             height:100%;
             background-color:rgba(0,0,0,.75);
+        }
+    }
+    &.align-top{
+        .container{
+            > * {
+                margin-top:0;
+            }
         }
     }
 }
