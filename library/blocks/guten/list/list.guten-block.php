@@ -1,11 +1,7 @@
 <?php 
-$post_types = get_post_types([], 'objects');
-$valid_post_types = array();
-foreach($post_types as $type){
-    if($type->public){
-        $valid_post_types[$type->name]  = $type->label;
-    }
-}
+
+$valid_post_types = array('posts'=> 'Posts');
+
  return array(
      'register' => array(
         'name'              => 'list',
@@ -227,7 +223,7 @@ foreach($post_types as $type){
                 'key' => 'field_5a4d5799d4ddb_list',
                 'label' => __( 'Recent', 'braftonium' ),
                 'name' => 'recent',
-                'type' => 'radio',
+                'type' => 'select',
                 'instructions' => __( 'If not the most recent posts, put in a custom post type, eg: "testimonial", "event", and "team-member".', 'braftonium' ),
                 'required' => 0,
                 'conditional_logic' => array(

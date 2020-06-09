@@ -208,7 +208,6 @@ function acf_load_widget_area_field_choices( $field ) {
 }
 add_filter('acf/load_field/key=field_5b43bc9b0acf1', 'acf_load_widget_area_field_choices');
 
-
 /*********************
 RELATED POSTS FUNCTION
 *********************/

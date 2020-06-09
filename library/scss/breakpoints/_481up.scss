@@ -110,27 +110,6 @@ body:not(.page-template-full-width) main {
 } /* end .entry-content */
 
 
-.container {
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	> .text, > .image {
-		-webkit-flex: 1 1 50%;
-		-ms-flex: 1 1 50%;
-		flex: 1 1 50%;
-		margin-left: 2%;
-		margin-top: auto;
-		margin-bottom: auto;
-	}
-	> .list-item, .widget  {
-		-webkit-flex: 1 1 50%;
-		-ms-flex: 1 1 50%;
-		flex: 1 1 50%;
-	}
-	> *:first-child {
-		margin-left: 0;
-	}
-}
 .blog, .archive {
 	article {
 		display: -ms-flexbox;

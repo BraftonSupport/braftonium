@@ -72,8 +72,6 @@ endif;
 // let's get this party started
 add_action( 'after_setup_theme', 'braftonium_start' );
 
-
-
 /************* OEMBED SIZE OPTIONS *************/
 
 if ( ! isset( $content_width ) ) {
