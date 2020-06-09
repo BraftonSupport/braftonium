@@ -331,7 +331,7 @@ acf_add_local_field_group(array(
 			),
 			array(
 				'key' => 'field_5a4d42b4ce417_bf',
-				'label' => __( 'Other', 'braftonium' ),
+				'label' => __( 'Preset Class Styles', 'braftonium' ),
 				'name' => 'other',
 				'instructions'	=> "Preset Additional Styles",
 				'choices' => array_merge($style_classes, array('full-width'	=> 'Full Width')),
