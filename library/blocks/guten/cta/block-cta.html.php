@@ -6,11 +6,11 @@
  * @subpackage Braftonium
  * @since braftonium 1.0
  */
-
 $sectionrow = $block['id'];
 $title = wp_kses_post(get_field('title'));
 if ($title):
-	$titletext = ($sectionrow==0)?'<h1>'.$title.' testing</h1>':'<h2>'.$title.'testing</h2>';
+	
+	$titletext = '<h2>'.$title.'</h2>';
 endif;
 
 $text = wp_kses_post(get_field('text'));

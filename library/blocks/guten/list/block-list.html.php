@@ -13,7 +13,7 @@
 $sectionrow = $block['id'];
 $title = wp_kses_post(get_field('title'));
 if ($title):
-	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
+	$titletext = '<h2>'.$title.'</h2>';
 endif;
 
 $show_text = get_field('show_text');

@@ -10,7 +10,7 @@
 $sectionrow = $block['id'];
 $title = wp_kses_post(get_field('title'));
 if ($title):
-	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
+	$titletext = '<h2>'.$title.'</h2>';
 endif;
 $change_top = get_field('change_top');
 $style = get_field('style');
