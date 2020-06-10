@@ -45,7 +45,7 @@ $tagline = wp_kses_post(get_field('tagline'));
 						<?php if( get_the_content() ): ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> itemscope itemtype="http://schema.org/BlogPosting">
 
-								<?php if( get_the_title()&&!have_rows('content') ): ?>
+								<?php if(  !($background_image||$title||$tagline) ): ?>
 									<header class="article-header">
 										<h1 class="page-title"><?php the_title(); ?></h1>
 									</header>
