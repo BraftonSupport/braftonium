@@ -59,4 +59,20 @@ section.brafton_block{
             }
         }
     }
+    &.remove-top-padding{
+        .wrap{
+            padding-top:0;
+        }
+    }
+    &.remove-bottom-padding{
+        .wrap{
+            padding-bottom:0;
+        }
+    }
+    &.remove-padding{
+        .wrap{
+            padding-top:0;
+            padding-bottom:0;
+        }
+    }
 }
