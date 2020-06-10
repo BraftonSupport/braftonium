@@ -19,8 +19,12 @@ $classes = array('brafton_block','row');
 if ($style['add_class']){
 	$classes[] = sanitize_html_classes($style['add_class']);
 }
+$shadow = false;
 if ( $style['other'] ) {
-    // var_dump($style['other']);
+    if(($key = array_search("shadow", $style['other'])) !== false){
+		unset($style['other'][$key]);
+		$shadow = true;
+	}
     $classes = array_merge($classes, $style['other']);
 }
 if($block['className']){

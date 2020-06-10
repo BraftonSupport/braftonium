@@ -16,8 +16,12 @@ $classes = array('brafton_block','map');
 if ($style['add_class']){
 	$classes[] = sanitize_html_classes($style['add_class']);
 }
+$shadow = false;
 if ( $style['other'] ) {
-    // var_dump($style['other']);
+    if(($key = array_search("shadow", $style['other'])) !== false){
+		unset($style['other'][$key]);
+		$shadow = true;
+	}
     $classes = array_merge($classes, $style['other']);
 }
 if($block['className']){
@@ -66,4 +70,4 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 	</div>
 </section><!-- section -->
 
-<?php if ( $style['other'] && in_array('shadow', $style['other']) ) { echo '<div class="shadow"></div>'; } ?>
+<?php if ( $shadow ) { echo '<div class="shadow"></div>'; } ?>

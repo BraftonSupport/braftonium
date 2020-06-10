@@ -28,8 +28,13 @@ $classes = array('brafton_block','row', 'full-width-image-float-row', $float);
 if ($style['add_class']){
 	$classes[] = sanitize_html_classes($style['add_class']);
 }
+$shadow = false;
 if ( $style['other'] ) {
-    // var_dump($style['other']);
+	// var_dump($style['other']);
+	if(($key = array_search("shadow", $style['other'])) !== false){
+		unset($style['other'][$key]);
+		$shadow = true;
+	}
     $classes = array_merge($classes, $style['other']);
 }
 if($block['className']){
@@ -55,4 +60,4 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 	
 </section><!-- section -->
 <!-- end Image Float block -->
-<?php if ( $style['other'] && in_array('shadow', $style['other']) ) { echo '<div class="shadow"></div>'; } ?>
+<?php if ( $shadow ) { echo '<div class="shadow"></div>'; } ?>
