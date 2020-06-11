@@ -159,7 +159,10 @@ be set to display none.
 Begining of Componentized Sass imports
 ********************/
 @import "components/componentVariables";
-
+/*********************
+Blog Corrections
+***********************/
+@import "modules/blog";
 
 /********************
 Custom L3go Block Sass

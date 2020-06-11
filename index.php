@@ -8,24 +8,30 @@ $background_image = esc_url(get_field('background_image',$blog_page_id));
 if ($layout == 'simple' && have_posts()) {
 	while (have_posts()) {
 	  the_post(); ?>
-	  	<div class="simple wrap container"><div class="thumbnail" style="background-image:url('<?php get_the_post_thumbnail_url(get_the_ID(),'full'); ?>')"><a href="'<?php echo get_the_permalink(); ?>'"  title="'<?php echo the_title_attribute( 'echo=0' ); ?>'"></a></div>
+	  	<div class="simple wrap container"><div class="thumbnail" style="background-image:url('<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>')"><a href="'<?php echo get_the_permalink(); ?>'"  title="'<?php echo the_title_attribute( 'echo=0' ); ?>'"></a></div>
 		<div class="content"><header class="article-header">
+		<h2 class="h3 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 		<p class="byline entry-meta vcard"><strong>
-			<?php printf( __( 'By', 'braftonium' ).' %1$s %2$s',
+			<?php printf( __( '', 'braftonium' ).' %1$s %2$s',
+				
+				/* the time the post was published */
+				'<a href="'. get_the_permalink().'"><time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></a>',
 				/* the author of the post */
 				'<span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . ' | </span>',
-				/* the time the post was published */
-				'<a href="'. get_the_permalink().'"><time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></a>'
 			); 
 			if (function_exists('braftonium_social_sharing_buttons')):
 				braftonium_social_sharing_buttons();
 			endif; ?>
 		</strong></p>
-		<h2 class="h3 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		
 	</header>
 
 	<section class="entry-content cf">
-		<?php the_excerpt(); ?>
+		<?php the_excerpt(); 
+		echo '<a class="button read-more" href="' . get_permalink() . '">'. __( 'Continue', 'braftonium' ).'<span class="hide"> '. get_the_title('', '', false).'</span></a>';
+		?>
+		
+		
 	</section></div></div>
 	<?php break;
 	}
@@ -44,7 +50,11 @@ if ($layout == 'simple' && have_posts()) {
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?>>
 								<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 									if ($layout == 'rich'):
-										echo '<div class="thumbnail" style="background-image:url('.get_the_post_thumbnail_url(get_the_ID(),'full').')"></div>';
+										echo '<div class="thumbnail" style="background-image:url('.get_the_post_thumbnail_url(get_the_ID(),'full').')">';
+										echo '<a href="'. get_the_permalink().'"  title="'. the_title_attribute( 'echo=0' ) .'">';
+											the_post_thumbnail($size);
+											echo '</a>';
+										echo '</div>';
 									elseif (in_array($layout, $layoutarray)):
 										echo '<div class="thumbnail">';
 											echo '<a href="'. get_the_permalink().'"  title="'. the_title_attribute( 'echo=0' ) .'">';
@@ -63,9 +73,9 @@ if ($layout == 'simple' && have_posts()) {
 										<p class="byline entry-meta vcard">
 											<?php if ($layout == 'simple'):
 												echo '<strong>';
-												printf( __( 'By', 'braftonium' ).' %1$s %2$s',
+												printf( __( '', 'braftonium' ).' %1$s %2$s',
 													/* the author of the post */
-													'<span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span> | ',
+													'<span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . ' | </span>',
 													/* the time the post was published */
 													'<a href="'. get_the_permalink().'"><time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></a>'
 												); 
@@ -74,7 +84,7 @@ if ($layout == 'simple' && have_posts()) {
 												endif; 
 												echo '</strong>';
 											else:
-												printf( __( 'Posted', 'braftonium' ).' %1$s %2$s',
+												printf( __( '', 'braftonium' ).' %1$s %2$s',
 													/* the time the post was published */
 													'<a href="'. get_the_permalink().'"><time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time></a>',
 													/* the author of the post */
@@ -88,7 +98,11 @@ if ($layout == 'simple' && have_posts()) {
 									</header>
 
 								<section class="entry-content cf">
-									<?php the_excerpt(); ?>
+									<?php the_excerpt();
+									echo '<div class="read-more-container"><a class="button read-more" href="' . get_permalink() . '">'. __( 'Continue', 'braftonium' ).'<span class="hide"> '. get_the_title('', '', false).'</span></a></div>';
+									
+									?>
+									
 								</section></div>
 
 							</article>

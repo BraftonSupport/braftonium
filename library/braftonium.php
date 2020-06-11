@@ -290,7 +290,8 @@ function braftonium_filter_ptags_on_images($content){
 // This removes the annoying […] to a Read More link
 function braftonium_excerpt_more($more) {
 	global $post;
-	$link= '...<br/><a class="button read-more" href="' . get_permalink() . '">'. __( 'Continue', 'braftonium' ).'<span class="hide"> '. get_the_title('', '', false).'</span></a>';
+	return '';
+	// $link= '...<br/><a class="button read-more" href="' . get_permalink() . '">'. __( 'Continue', 'braftonium' ).'<span class="hide"> '. get_the_title('', '', false).'</span></a>';
 	return $link;
 }
 

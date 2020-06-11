@@ -58,19 +58,6 @@ $tagline = wp_kses_post(get_field('tagline'));
 						<?php endif; ?>
 					<?php endwhile; else : ?>
 
-						<article id="post-not-found" class="hentry cf">
-							<header class="article-header">
-							
-								<h1><?php _e( 'Oops, Post Not Found!', 'braftonium' ); ?></h1>
-							</header>
-							<section class="entry-content">
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'braftonium' ); ?></p>
-							</section>
-							<footer class="article-footer">
-								<p><?php //_e( 'This is the error message in the full-width.php template.', 'braftonium' ); ?></p>
-							</footer>
-						</article>
-
 					<?php endif; ?>
 				</div>
 				<?php } ?>

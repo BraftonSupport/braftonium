@@ -599,7 +599,7 @@ svg {
 			font-size: 1.25em;
 		}
 		.sticky {
-			border: 10px solid rgba($white, .75);
+			// border: 10px solid rgba($white, .75);
 		}
 		article.hentry {
 			flex: 1 0 100%;
@@ -647,7 +647,7 @@ svg {
 			flex: 1 0 100%;
 		}
 		.content {
-			margin-top: -.5em;
+			// margin-top: -.5em;
 		}
 		.thumbnail, .content {
 			flex: 1 0 100%;
@@ -674,7 +674,7 @@ svg {
 			color: $white;
 			padding: 5px;
 		}
-		.by, .entry-author, .read-more {
+		.by, .entry-author {
 			display: none;
 		}
 	}

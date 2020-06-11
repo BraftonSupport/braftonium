@@ -177,11 +177,12 @@
 					if(get_field('title','category_'. $term)): $title = wp_kses_post(get_field('title','category_'. $term)); else: $title = get_the_archive_title(); endif;
 					$tagline = wp_kses_post(get_field('tagline','category_'. $term));
 				elseif(!is_page_template( 'full-width.php' )&&!is_page_template( 'resources.php' ) ):
+					
 					$background_image = esc_url(get_field('background_image'));
 					$title = wp_kses_post(get_field('title'));
 					$tagline = wp_kses_post(get_field('tagline'));
 				endif;
-				if ($background_image) : ?>
+				if ($background_image||$title) : ?>
 					<section class="banner visual<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php echo ' style="background-image:url('.$background_image.')"'; ?>>
 					<?php if ($banner_style == 'sinistral'): ?>
 						<div class="wrap"><div class="black">

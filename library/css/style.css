@@ -2153,10 +2153,6 @@ svg {
 .blog .rich h2, .blog .rich .h2, .archive .rich h2, .archive .rich .h2 {
   font-size: 1.25em;
 }
-/* line 601, ../scss/breakpoints/_base.scss */
-.blog .rich .sticky, .archive .rich .sticky {
-  border: 10px solid rgba(255, 255, 255, 0.75);
-}
 /* line 604, ../scss/breakpoints/_base.scss */
 .blog .rich article.hentry, .archive .rich article.hentry {
   flex: 1 0 100%;
@@ -2213,10 +2209,6 @@ svg {
 .blog .simple article.hentry, .archive .simple article.hentry {
   flex: 1 0 100%;
 }
-/* line 649, ../scss/breakpoints/_base.scss */
-.blog .simple .content, .archive .simple .content {
-  margin-top: -.5em;
-}
 /* line 652, ../scss/breakpoints/_base.scss */
 .blog .simple .thumbnail, .blog .simple .content, .archive .simple .thumbnail, .archive .simple .content {
   flex: 1 0 100%;
@@ -2249,7 +2241,7 @@ svg {
   padding: 5px;
 }
 /* line 677, ../scss/breakpoints/_base.scss */
-.blog .simple .by, .blog .simple .entry-author, .blog .simple .read-more, .archive .simple .by, .archive .simple .entry-author, .archive .simple .read-more {
+.blog .simple .by, .blog .simple .entry-author, .archive .simple .by, .archive .simple .entry-author {
   display: none;
 }
 
@@ -3386,90 +3378,94 @@ you can add resource intensive styles.
   body:not(.page-template-full-width) main {
     padding: 3em 0;
   }
+  /* line 190, ../scss/breakpoints/_768up.scss */
+  body:not(.page-template-full-width) main.remove-top-padding {
+    padding-top: 0;
+  }
 
-  /* line 192, ../scss/breakpoints/_768up.scss */
+  /* line 195, ../scss/breakpoints/_768up.scss */
   .banner .wrap, .page-template-full-width .banner .wrap {
     padding: 4em 0;
   }
 
-  /* line 196, ../scss/breakpoints/_768up.scss */
+  /* line 199, ../scss/breakpoints/_768up.scss */
   .page-template-full-width section .wrap {
     padding: 3em 0 3.5em;
   }
-  /* line 199, ../scss/breakpoints/_768up.scss */
+  /* line 202, ../scss/breakpoints/_768up.scss */
   .page-template-full-width .compact .wrap {
     width: 75%;
   }
 
-  /* line 204, ../scss/breakpoints/_768up.scss */
+  /* line 207, ../scss/breakpoints/_768up.scss */
   .acf-map {
     flex: 1 0 75%;
   }
 
-  /* line 208, ../scss/breakpoints/_768up.scss */
+  /* line 211, ../scss/breakpoints/_768up.scss */
   .slick {
     width: inherit;
   }
-  /* line 210, ../scss/breakpoints/_768up.scss */
+  /* line 213, ../scss/breakpoints/_768up.scss */
   .slick .image {
     max-width: 33%;
     margin-right: 25px;
     float: left;
   }
 
-  /* line 216, ../scss/breakpoints/_768up.scss */
+  /* line 219, ../scss/breakpoints/_768up.scss */
   .archive-title {
     margin: 3em 0 0;
   }
 
-  /* line 220, ../scss/breakpoints/_768up.scss */
+  /* line 223, ../scss/breakpoints/_768up.scss */
   .blog .hentry, .archive .hentry {
     padding: 0;
     margin: 3em 0 0;
   }
-  /* line 223, ../scss/breakpoints/_768up.scss */
+  /* line 226, ../scss/breakpoints/_768up.scss */
   .blog .hentry:first-of-type, .archive .hentry:first-of-type {
     margin-top: 0;
   }
-  /* line 227, ../scss/breakpoints/_768up.scss */
+  /* line 230, ../scss/breakpoints/_768up.scss */
   .blog article, .archive article {
     display: block;
   }
-  /* line 229, ../scss/breakpoints/_768up.scss */
+  /* line 232, ../scss/breakpoints/_768up.scss */
   .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
     margin: 0;
   }
-  /* line 233, ../scss/breakpoints/_768up.scss */
+  /* line 236, ../scss/breakpoints/_768up.scss */
   .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
     max-height: 220px;
   }
 
-  /* line 238, ../scss/breakpoints/_768up.scss */
+  /* line 241, ../scss/breakpoints/_768up.scss */
   .alignleft, img.alignleft {
     float: left;
     margin-right: 15px;
     margin-bottom: 15px;
   }
 
-  /* line 243, ../scss/breakpoints/_768up.scss */
+  /* line 246, ../scss/breakpoints/_768up.scss */
   .alignright, img.alignright {
     float: right;
     margin-left: 15px;
     margin-bottom: 15px;
   }
 
-  /* line 248, ../scss/breakpoints/_768up.scss */
+  /* line 251, ../scss/breakpoints/_768up.scss */
   .aligncenter, img.aligncenter {
     text-align: center;
     margin-right: auto;
     margin-left: auto;
   }
 
-  /* line 255, ../scss/breakpoints/_768up.scss */
+  /* line 258, ../scss/breakpoints/_768up.scss */
   .validation .wrap {
     width: 94%;
   }
-  /* line 258, ../scss/breakpoints/_768up.scss */
+  /* line 261, ../scss/breakpoints/_768up.scss */
   .validation .testimonial p:not(.testimonial-meta) {
     font-size: 2em;
   }
@@ -3477,13 +3473,13 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 267, ../scss/breakpoints/_768up.scss */
+  /* line 270, ../scss/breakpoints/_768up.scss */
   .sidebar {
     margin: 3em 0 0 0;
     padding: 0 0 0 30px;
   }
 
-  /* line 272, ../scss/breakpoints/_768up.scss */
+  /* line 275, ../scss/breakpoints/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
@@ -3497,24 +3493,24 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 287, ../scss/breakpoints/_768up.scss */
+  /* line 290, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
   }
-  /* line 291, ../scss/breakpoints/_768up.scss */
+  /* line 294, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer section {
     -webkit-flex: 0 1 100%;
     -ms-flex: 0 1 100%;
     flex: 0 1 100%;
     margin: 1em 2% 3em 0;
   }
-  /* line 296, ../scss/breakpoints/_768up.scss */
+  /* line 299, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer section h3 {
     margin-bottom: 1em;
   }
-  /* line 299, ../scss/breakpoints/_768up.scss */
+  /* line 302, ../scss/breakpoints/_768up.scss */
   .footer #inner-footer section:last-child {
     margin-right: 0;
   }
@@ -3822,6 +3818,65 @@ be set to display none.
 /********************
 Begining of Componentized Sass imports
 ********************/
+/*********************
+Blog Corrections
+***********************/
+/* line 5, ../scss/modules/_blog.scss */
+.blog .simple.wrap.container {
+  margin-top: 3.5em;
+}
+/* line 7, ../scss/modules/_blog.scss */
+.blog .simple.wrap.container .thumbnail {
+  height: 400px;
+  width: 60%;
+  flex: 0 1 60%;
+}
+/* line 12, ../scss/modules/_blog.scss */
+.blog .simple.wrap.container .content {
+  flex: 0 1 40%;
+  width: 40%;
+}
+/* line 21, ../scss/modules/_blog.scss */
+.blog .simple .thumbnail {
+  height: 250px;
+  overflow: hidden;
+}
+/* line 25, ../scss/modules/_blog.scss */
+.blog .simple .content {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+/* line 46, ../scss/modules/_blog.scss */
+.blog .simple .content .entry-content {
+  padding: 0 1em;
+}
+/* line 60, ../scss/modules/_blog.scss */
+.blog .rich article:first-of-type {
+  height: 350px;
+}
+/* line 64, ../scss/modules/_blog.scss */
+.blog .rich .thumbnail {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 /********************
 Custom L3go Block Sass
 ********************/
