@@ -99,7 +99,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					if ( $item['content'] ): echo wp_kses_post($item['content']); endif;
 				echo '</div>';
 				
-				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
+				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="btn" target="'. $target.'">';
 					if ($text=='Read More'||$text==''): _e( 'Read More', 'braftonium' ); echo '<span class="hide">'. $titlestring.'</span>';
 					else: echo $text;
 					endif;

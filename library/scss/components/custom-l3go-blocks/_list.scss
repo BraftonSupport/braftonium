@@ -1,0 +1,22 @@
+.brafton_block{
+    &.column-3{
+        .container{
+            justify-content: space-evenly;
+            .list-item{
+                @media only screen and (min-width:980px){
+                    flex: 0 1 32%;
+                    &:nth-child(3n){
+                        margin-right:0;
+                    }
+                    .image{
+                        max-height:225px;
+                        margin-bottom:0;
+                        img{
+                            margin-bottom:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

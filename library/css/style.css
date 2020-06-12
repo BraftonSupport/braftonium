@@ -3921,14 +3921,18 @@ section.brafton_block.center-title h3 {
   text-align: center;
 }
 /* line 35, ../scss/components/custom-l3go-blocks/_all.scss */
+section.brafton_block.center {
+  text-align: center;
+}
+/* line 38, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.darken {
   position: relative;
 }
-/* line 37, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 40, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.darken > * {
   position: relative;
 }
-/* line 40, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 43, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.darken:before {
   content: "";
   position: absolute;
@@ -3936,24 +3940,24 @@ section.brafton_block.darken:before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
 }
-/* line 50, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 53, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.align-top .container > * {
   margin-top: 0;
 }
-/* line 55, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 58, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.align-top .container .list-item > * {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 63, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 66, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.remove-top-padding .wrap {
   padding-top: 0;
 }
-/* line 68, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 71, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.remove-bottom-padding .wrap {
   padding-bottom: 0;
 }
-/* line 73, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 76, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.remove-padding .wrap {
   padding-top: 0;
   padding-bottom: 0;
@@ -4219,5 +4223,28 @@ section.brafton_block.remove-padding .wrap {
   /* line 163, ../scss/components/custom-l3go-blocks/_interm.scss */
   .container.count5 .list-item:nth-child(5n), .container.count5 .widget:nth-child(5n), .container.count9 .list-item:nth-child(5n), .container.count9 .widget:nth-child(5n), .container.count10 .list-item:nth-child(5n), .container.count10 .widget:nth-child(5n), .container.count13 .list-item:nth-child(5n), .container.count13 .widget:nth-child(5n), .container.count14 .list-item:nth-child(5n), .container.count14 .widget:nth-child(5n), .container.count15 .list-item:nth-child(5n), .container.count15 .widget:nth-child(5n) {
     margin-right: 0;
+  }
+}
+/* line 3, ../scss/components/custom-l3go-blocks/_list.scss */
+.brafton_block.column-3 .container {
+  justify-content: space-evenly;
+}
+@media only screen and (min-width: 980px) {
+  /* line 5, ../scss/components/custom-l3go-blocks/_list.scss */
+  .brafton_block.column-3 .container .list-item {
+    flex: 0 1 32%;
+  }
+  /* line 8, ../scss/components/custom-l3go-blocks/_list.scss */
+  .brafton_block.column-3 .container .list-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 11, ../scss/components/custom-l3go-blocks/_list.scss */
+  .brafton_block.column-3 .container .list-item .image {
+    max-height: 225px;
+    margin-bottom: 0;
+  }
+  /* line 14, ../scss/components/custom-l3go-blocks/_list.scss */
+  .brafton_block.column-3 .container .list-item .image img {
+    margin-bottom: 0;
   }
 }
