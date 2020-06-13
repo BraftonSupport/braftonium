@@ -3866,15 +3866,28 @@ Blog Corrections
 .blog .simple .content .entry-content {
   padding: 0 1em;
 }
-/* line 60, ../scss/modules/_blog.scss */
+/* line 59, ../scss/modules/_blog.scss */
+.blog .rich article {
+  max-height: 400px;
+}
+/* line 61, ../scss/modules/_blog.scss */
+.blog .rich article .content {
+  height: 100%;
+}
+/* line 65, ../scss/modules/_blog.scss */
 .blog .rich article:first-of-type {
   height: 350px;
 }
-/* line 64, ../scss/modules/_blog.scss */
+/* line 67, ../scss/modules/_blog.scss */
+.blog .rich article:first-of-type .content {
+  height: auto;
+}
+/* line 73, ../scss/modules/_blog.scss */
 .blog .rich .thumbnail {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  overflow: hidden;
 }
 
 /********************
