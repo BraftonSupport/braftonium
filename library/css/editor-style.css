@@ -838,6 +838,85 @@ body#tinymce.wp-editor pre {
   }
 }
 
+/* line 4, ../scss/block-editor-style.scss */
+.brafton_block {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* line 8, ../scss/block-editor-style.scss */
+.brafton_block.full-width {
+  width: 150%;
+  margin-left: calc(-25%);
+}
+/* line 11, ../scss/block-editor-style.scss */
+.brafton_block.full-width .wrap {
+  margin: auto;
+  width: 65%;
+}
+/* line 16, ../scss/block-editor-style.scss */
+.brafton_block.full-width-image-float-row {
+  clear: both;
+  position: relative;
+}
+/* line 19, ../scss/block-editor-style.scss */
+.brafton_block.full-width-image-float-row:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+/* line 24, ../scss/block-editor-style.scss */
+.brafton_block.full-width-image-float-row .img-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+/* line 29, ../scss/block-editor-style.scss */
+.brafton_block.full-width-image-float-row .img-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 980px) {
+  /* line 24, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap {
+    position: absolute;
+    width: calc(50% - 3em);
+    height: 100%;
+    text-align: left;
+  }
+  /* line 39, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap.left {
+    left: 0;
+    margin-right: 3em;
+  }
+  /* line 42, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap.left + .wrap {
+    padding-left: calc(50% - 14em);
+  }
+  /* line 46, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap.right {
+    right: 0;
+    margin-left: 3em;
+  }
+  /* line 49, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap.right + .wrap {
+    padding-right: calc(50% - 14em);
+  }
+  /* line 53, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+/* line 64, ../scss/block-editor-style.scss */
+.brafton_block.map svg {
+  width: 1em;
+  height: 1em;
+}
+
 /* line 2, ../scss/components/custom-l3go-blocks/_interm.scss */
 .page-template-full-width .hentry {
   padding: 0;

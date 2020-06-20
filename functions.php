@@ -33,6 +33,7 @@ function braftonium_start() {
 
   //Allow editor style.
   add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
+  add_editor_style( get_template_directory_uri() . '/library/css/block-editor-style.css' );
 
   add_action( 'admin_enqueue_scripts', 'load_admin_style' );
   function load_admin_style() {
