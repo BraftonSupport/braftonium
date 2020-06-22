@@ -4283,3 +4283,11 @@ section.brafton_block.remove-padding .wrap {
     margin-bottom: 0;
   }
 }
+
+/********************
+Gutenberg block classes
+********************/
+/* line 1, ../scss/gutenberg/_classes.scss */
+.has-text-align-center {
+  text-align: center;
+}
