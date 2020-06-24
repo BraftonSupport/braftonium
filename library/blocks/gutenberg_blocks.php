@@ -70,9 +70,10 @@ class BraftoniumGutenbergBlocks{
         // echo '</pre>';
         foreach($field['sub_fields'] as $key => $option){
             if($option['name'] == "other"){
-                $field['sub_fields'][$key]['choices'] = array_merge(
+                $choices = array_merge(
                     $field['sub_fields'][$key]['choices'], 
                     array("column-2"    => "Force 2 Columns", "column-3"    => "Force 3 Columns"));
+                $field['sub_fields'][$key]['choices'] = apply_filters('custom_list_classes', $choices);
             }
         }
         // $field['choices'] = array_merge($field['choices'], array('do-it-now'=> "Wow Thisng worked"));
