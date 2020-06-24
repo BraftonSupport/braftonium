@@ -61,7 +61,7 @@ class BraftoniumGutenbergBlocks{
                 $valid_post_types[$type->name]  = $type->label;
             }
         }
-        $field['choices'] = $valid_post_types;
+        $field['choices'] = apply_filters('braftonium_customize_post_types', $valid_post_types);
         return $field;
     }
     function acf_load_list_styles($field){
@@ -73,7 +73,8 @@ class BraftoniumGutenbergBlocks{
                 $choices = array_merge(
                     $field['sub_fields'][$key]['choices'], 
                     array("column-2"    => "Force 2 Columns", "column-3"    => "Force 3 Columns"));
-                $field['sub_fields'][$key]['choices'] = apply_filters('custom_list_classes', $choices);
+                    $choices = apply_filters('braftonium_custom_list_classes', $choices);
+                $field['sub_fields'][$key]['choices'] = $choices;
             }
         }
         // $field['choices'] = array_merge($field['choices'], array('do-it-now'=> "Wow Thisng worked"));
