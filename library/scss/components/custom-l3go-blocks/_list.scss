@@ -5,6 +5,7 @@
             .list-item{
                 @media only screen and (min-width:980px){
                     flex: 0 1 45%;
+                    margin-right:10%;
                     &:nth-child(2n){
                         margin-right:0;
                     }
@@ -25,6 +26,7 @@
             .list-item{
                 @media only screen and (min-width:980px){
                     flex: 0 1 32%;
+                    margin-right:2%;
                     &:nth-child(3n){
                         margin-right:0;
                     }
