@@ -171,6 +171,9 @@
 					$background_image = esc_url(get_field('background_image',$blog_page_id));
 					$title = wp_kses_post(get_field('title',$blog_page_id));
 					$tagline = wp_kses_post(get_field('tagline',$blog_page_id));
+				elseif(is_post_type_archive('resources')):
+					$title = "Resources";
+					$background_image = null;
 				elseif(is_archive()):
 					$term = get_queried_object()->cat_ID;
 					$background_image = esc_url(get_field('background_image', 'category_'.$term));
