@@ -8,6 +8,7 @@
 // 	add_filter('gutenberg_can_edit_post_type', '__return_false', 10);
 // }
 require_once get_template_directory().'/library/blocks/gutenberg_blocks.php';
+require_once get_template_directory().'/library/tinymce.php';
 /* Languages! */
 function braftonium_language_setup(){
 
