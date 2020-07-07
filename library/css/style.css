@@ -3322,10 +3322,6 @@ you can add resource intensive styles.
     display: inline-block;
     margin-right: auto;
   }
-  /* line 132, ../scss/breakpoints/_768up.scss */
-  nav .nav > li:last-child:hover > ul.sub-menu {
-    left: -100px;
-  }
   /* line 136, ../scss/breakpoints/_768up.scss */
   nav .nav li {
     position: relative;
