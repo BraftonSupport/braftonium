@@ -79,9 +79,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				if ( $item['image'] ):
 					echo '<div class="image">';
 						if ( is_array($imagestyle) && in_array('round', $imagestyle) ):
-							echo wp_get_attachment_image( intval($item['image']), $size, "", ["class" => "round"] );
+							echo wp_get_attachment_image( intval($item['image']), $size, "", ["class" => "round", 'loading'=> 'lazy'] );
 						else:
-							echo wp_get_attachment_image( intval($item['image']), $size );
+							echo wp_get_attachment_image( intval($item['image']), $size, false, array('loading' => 'lazy') );
 						endif;
 					echo '</div>';
 				endif;

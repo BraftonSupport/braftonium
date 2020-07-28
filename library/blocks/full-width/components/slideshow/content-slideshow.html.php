@@ -71,9 +71,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					if ( $item['image'] ):
 						echo '<div class="image"><a class="prev blue-btn"></a>';
 							if ($imagestyle =='circle'):
-								echo wp_get_attachment_image( intval($item['image']), 'thumbnail', '', ['class' => 'round'] );
+								echo wp_get_attachment_image( intval($item['image']), 'thumbnail', '', ['class' => 'round', 'loading'=> 'lazy'] );
 							else:
-								echo wp_get_attachment_image( intval($item['image']), 'oval', '', ['class' => 'round'] );
+								echo wp_get_attachment_image( intval($item['image']), 'oval', '', ['class' => 'round', 'loading'=> 'lazy'] );
 							endif;
 						echo '<a class="next blue-btn"></a></div>';
 					endif;

@@ -14,6 +14,7 @@ if ($title):
 endif;
 
 $text = wp_kses_post(get_sub_field('text'));
+$text = apply_filters('the_content', $text);
 $button = get_sub_field('button');
 
 $style = get_sub_field('style');

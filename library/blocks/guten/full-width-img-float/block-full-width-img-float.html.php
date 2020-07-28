@@ -49,7 +49,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 	
 	<?php if($img){ ?>
 		<div class="img-wrap <?php echo($float); ?>">
-			<?php echo wp_get_attachment_image( intval($img), 'full' ); ?>
+			<?php echo wp_get_attachment_image( intval($img), 'medium_large', false,array('loading' => 'lazy') ); ?>
 		</div>
 	<?php } ?>
 	<div class="wrap">
