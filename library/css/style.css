@@ -3991,24 +3991,28 @@ section.brafton_block.darken:before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
 }
-/* line 53, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 52, ../scss/components/custom-l3go-blocks/_all.scss */
+section.brafton_block.align-top .container {
+  margin-top: 2em;
+}
+/* line 54, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.align-top .container > * {
   margin-top: 0;
 }
-/* line 58, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 59, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.align-top .container .list-item > * {
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 66, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 67, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.remove-top-padding .wrap {
   padding-top: 0;
 }
-/* line 71, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 72, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.remove-bottom-padding .wrap {
   padding-bottom: 0;
 }
-/* line 76, ../scss/components/custom-l3go-blocks/_all.scss */
+/* line 77, ../scss/components/custom-l3go-blocks/_all.scss */
 section.brafton_block.remove-padding .wrap {
   padding-top: 0;
   padding-bottom: 0;
