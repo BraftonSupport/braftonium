@@ -1,0 +1,69 @@
+.wp-block{
+    // max-width:780px;
+}
+.brafton_block{
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    &.full-width{
+        width:150%;
+        margin-left:calc(-25%);
+        .wrap{
+            margin:auto;
+            width:65%;
+        }
+    }
+    &.full-width-image-float-row{
+        clear: both;
+        position: relative;
+        &:after{
+            content: '';
+            clear: both;
+            display: table;
+        }
+        .img-wrap{
+            position: relative;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+    
+            @media (min-width: 980px) {
+                position: absolute;
+                width: calc(50% - 3em);
+                height: 100%;
+                text-align: left;
+                &.left{
+                    left: 0;
+                    margin-right: 3em;
+                    & + .wrap{
+                        padding-left: calc(50% - 14em);
+                    }
+                }
+                &.right{
+                    right: 0;
+                    margin-left: 3em;
+                    & + .wrap{
+                        padding-right: calc(50% - 14em);
+                    }
+                }
+                img{
+                    position: absolute;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    
+    }
+    &.map{
+        svg{
+            width:1em;
+            height:1em;
+        }
+    }
+}

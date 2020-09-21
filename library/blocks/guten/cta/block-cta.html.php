@@ -1,42 +1,40 @@
 <?php
 /**
- * The template used for displaying row section of page.
+ * The template used for displaying cta section of page.
  *
  * @package WordPress
  * @subpackage Braftonium
  * @since braftonium 1.0
  */
-
-global $sectionrow;
-$title = wp_kses_post(get_sub_field('title'));
+$sectionrow = $block['id'];
+$title = wp_kses_post(get_field('title'));
 if ($title):
-	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
+	
+	$titletext = '<h2>'.$title.'</h2>';
 endif;
 
-$text = wp_kses_post(get_sub_field('text'));
-$text = apply_filters('the_content', $text);
-$button = get_sub_field('button');
+$text = wp_kses_post(get_field('text'));
+$button = get_field('button');
 
-$style = get_sub_field('style');
+$style = get_field('style');
 $video = esc_url($style['video_url']);
-$classes = array('cta');
+$classes = array('brafton_block','cta');
 if ($style['add_class']){
 	$classes[] = sanitize_html_classes($style['add_class']);
 }
-if (!$style['background_image'] && !$style['background_color'] ) {
-	$classes[] = "gradient";
-}
+$shadow = false;
 if ( $style['other'] ) {
-	if (in_array('full', $style['other'])){
-		$classes[] = "full";
+	// var_dump($style['other']);
+	if(($key = array_search("shadow", $style['other'])) !== false){
+		unset($style['other'][$key]);
+		$shadow = true;
 	}
-	if (in_array('compact', $style['other'])){
-		$classes[] = "compact";
-	}
-	if (in_array('center', $style['other'])){
-		$classes[] = "center";
-	}
+    $classes = array_merge($classes, $style['other']);
 }
+if($block['className']){
+    $classes[] = $block['className'];
+}
+
 ?>
 <!-- start CTA block -->
 <section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
@@ -68,14 +66,14 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 		if ($text): echo $text; endif;
 		echo '</div>';
 		if (isset($button['title'])):
-			echo '<p><a href="'.esc_url($button['url']).'" class="blue-btn"';
+			echo '<div><p><a href="'.esc_url($button['url']).'" class="blue-btn"';
 			if ($button['target']): echo 'target="'.sanitize_text_field($button['target']).'"'; endif;
-			echo '>'.sanitize_text_field($button['title']).'</a></p>';
+			echo '>'.sanitize_text_field($button['title']).'</a></p></div>';
 		endif; ?>
 
 	</div>
 <?php if ( $style['background_image'] ) { echo '</div>'; } ?>
 </section><!-- section -->
 
-<?php if ( $style['other'] && in_array('shadow', $style['other']) ) { echo '<div class="shadow"></div>'; } ?>
+<?php if ($shadow ) { echo '<div class="shadow"></div>'; } ?>
 <!-- end CTA block -->

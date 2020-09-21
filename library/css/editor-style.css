@@ -452,10 +452,10 @@ body#tinymce.wp-editor hr {
 }
 /* line 166, ../scss/partials/_normalize.scss */
 body#tinymce.wp-editor p {
-  -webkit-hyphens: auto;
-  -epub-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: none;
+  -epub-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
 }
 /* line 177, ../scss/partials/_normalize.scss */
 body#tinymce.wp-editor pre {
@@ -671,9 +671,9 @@ body#tinymce.wp-editor p {
   -ms-word-wrap: break-word;
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
   hyphenate-lines: 3;
@@ -835,5 +835,262 @@ body#tinymce.wp-editor pre {
     margin-left: auto;
     display: block;
     clear: both;
+  }
+}
+
+/* line 4, ../scss/block-editor-style.scss */
+.brafton_block {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* line 8, ../scss/block-editor-style.scss */
+.brafton_block.full-width {
+  width: 150%;
+  margin-left: calc(-25%);
+}
+/* line 11, ../scss/block-editor-style.scss */
+.brafton_block.full-width .wrap {
+  margin: auto;
+  width: 65%;
+}
+/* line 16, ../scss/block-editor-style.scss */
+.brafton_block.full-width-image-float-row {
+  clear: both;
+  position: relative;
+}
+/* line 19, ../scss/block-editor-style.scss */
+.brafton_block.full-width-image-float-row:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+/* line 24, ../scss/block-editor-style.scss */
+.brafton_block.full-width-image-float-row .img-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+/* line 29, ../scss/block-editor-style.scss */
+.brafton_block.full-width-image-float-row .img-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 980px) {
+  /* line 24, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap {
+    position: absolute;
+    width: calc(50% - 3em);
+    height: 100%;
+    text-align: left;
+  }
+  /* line 39, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap.left {
+    left: 0;
+    margin-right: 3em;
+  }
+  /* line 42, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap.left + .wrap {
+    padding-left: calc(50% - 14em);
+  }
+  /* line 46, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap.right {
+    right: 0;
+    margin-left: 3em;
+  }
+  /* line 49, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap.right + .wrap {
+    padding-right: calc(50% - 14em);
+  }
+  /* line 53, ../scss/block-editor-style.scss */
+  .brafton_block.full-width-image-float-row .img-wrap img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+/* line 64, ../scss/block-editor-style.scss */
+.brafton_block.map svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* line 2, ../scss/components/custom-l3go-blocks/_interm.scss */
+.page-template-full-width .hentry {
+  padding: 0;
+}
+/* line 5, ../scss/components/custom-l3go-blocks/_interm.scss */
+.page-template-full-width section {
+  background-position: center;
+  background-size: cover;
+}
+/* line 8, ../scss/components/custom-l3go-blocks/_interm.scss */
+.page-template-full-width section .wrap {
+  padding: 2em 0 2.5em;
+}
+/* line 11, ../scss/components/custom-l3go-blocks/_interm.scss */
+.page-template-full-width section.full {
+  min-height: 90vh;
+}
+/* line 13, ../scss/components/custom-l3go-blocks/_interm.scss */
+.page-template-full-width section.full .wrap {
+  margin: auto;
+}
+/* line 16, ../scss/components/custom-l3go-blocks/_interm.scss */
+.page-template-full-width section.full .black {
+  min-height: 90vh;
+  height: 100%;
+}
+/* line 21, ../scss/components/custom-l3go-blocks/_interm.scss */
+.page-template-full-width section.thin .wrap {
+  padding: 1em 0 1.5em;
+}
+/* line 25, ../scss/components/custom-l3go-blocks/_interm.scss */
+.page-template-full-width section.center .list-item {
+  padding: 0 5px;
+}
+/* line 28, ../scss/components/custom-l3go-blocks/_interm.scss */
+.page-template-full-width section.center .wrap *:not(.list-item) {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 35, ../scss/components/custom-l3go-blocks/_interm.scss */
+.page-template-full-width .cta .blue-btn {
+  margin: auto;
+  font-size: 1.15em;
+}
+
+/* line 41, ../scss/components/custom-l3go-blocks/_interm.scss */
+.list .container, .widgetarea .container {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* line 45, ../scss/components/custom-l3go-blocks/_interm.scss */
+.list .container + p, .widgetarea .container + p {
+  margin-top: 2em;
+}
+/* line 48, ../scss/components/custom-l3go-blocks/_interm.scss */
+.list .container .list-item, .widgetarea .container .list-item {
+  max-width: 100%;
+  margin: 0;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+/* line 57, ../scss/components/custom-l3go-blocks/_interm.scss */
+.list .container .list-item .blue-btn, .widgetarea .container .list-item .blue-btn {
+  margin-top: auto;
+  margin-right: auto;
+}
+
+/* line 64, ../scss/components/custom-l3go-blocks/_interm.scss */
+.slick {
+  width: 90%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 481px) {
+  /* line 70, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  /* line 74, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container > .text, .container > .image {
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    margin-left: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  /* line 82, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container > .list-item, .container .widget {
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+  }
+  /* line 87, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container > *:first-child {
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 94, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container > .text, .container > .image {
+    margin-left: 3.25%;
+  }
+  /* line 96, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container > .text:first-child, .container > .image:first-child {
+    margin-left: 0;
+  }
+  /* line 101, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count1 .list-item, .container.count1 .widget, .container.count2 .list-item, .container.count2 .widget, .container.count3 .list-item, .container.count3 .widget, .container.count4 .list-item, .container.count4 .widget, .container.count5 .list-item, .container.count5 .widget, .container.count6 .list-item, .container.count6 .widget, .container.count7 .list-item, .container.count7 .widget, .container.count8 .list-item, .container.count8 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count11 .list-item, .container.count11 .widget, .container.count12 .list-item, .container.count12 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
+    margin-top: 1em;
+    max-width: inherit;
+  }
+  /* line 106, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count1 .list-item, .container.count1 .widget {
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+  /* line 112, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count2 .list-item, .container.count2 .widget {
+    margin-right: 2%;
+    -webkit-flex: 1 0 49%;
+    -ms-flex: 1 0 49%;
+    flex: 1 0 49%;
+  }
+  /* line 117, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count2 .list-item:nth-child(2n), .container.count2 .widget:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 123, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count3 .list-item, .container.count3 .widget, .container.count6 .list-item, .container.count6 .widget, .container.count5 .list-item, .container.count5 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
+    margin-right: 2%;
+    -webkit-flex: 0 1 32%;
+    -ms-flex: 0 1 32%;
+    flex: 0 1 32%;
+  }
+  /* line 128, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count3 .list-item:nth-child(3n), .container.count3 .widget:nth-child(3n), .container.count6 .list-item:nth-child(3n), .container.count6 .widget:nth-child(3n), .container.count5 .list-item:nth-child(3n), .container.count5 .widget:nth-child(3n), .container.count9 .list-item:nth-child(3n), .container.count9 .widget:nth-child(3n), .container.count10 .list-item:nth-child(3n), .container.count10 .widget:nth-child(3n), .container.count13 .list-item:nth-child(3n), .container.count13 .widget:nth-child(3n), .container.count14 .list-item:nth-child(3n), .container.count14 .widget:nth-child(3n), .container.count15 .list-item:nth-child(3n), .container.count15 .widget:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 134, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count4 .list-item, .container.count4 .widget, .container.count7 .list-item, .container.count7 .widget, .container.count8 .list-item, .container.count8 .widget, .container.count11 .list-item, .container.count11 .widget, .container.count12 .list-item, .container.count12 .widget {
+    margin-right: 2.35%;
+    -webkit-flex: 0 1 23%;
+    -ms-flex: 0 1 23%;
+    flex: 0 1 23%;
+  }
+  /* line 139, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count4 .list-item:nth-child(4n), .container.count4 .widget:nth-child(4n), .container.count7 .list-item:nth-child(4n), .container.count7 .widget:nth-child(4n), .container.count8 .list-item:nth-child(4n), .container.count8 .widget:nth-child(4n), .container.count11 .list-item:nth-child(4n), .container.count11 .widget:nth-child(4n), .container.count12 .list-item:nth-child(4n), .container.count12 .widget:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1030px) {
+  /* line 150, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count5 .list-item, .container.count5 .widget, .container.count9 .list-item, .container.count9 .widget, .container.count10 .list-item, .container.count10 .widget, .container.count13 .list-item, .container.count13 .widget, .container.count14 .list-item, .container.count14 .widget, .container.count15 .list-item, .container.count15 .widget {
+    margin-right: 1%;
+    -webkit-flex: 1 1 19%;
+    -ms-flex: 1 1 19%;
+    flex: 1 1 19%;
+  }
+  /* line 155, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count5 .list-item:nth-child(3n), .container.count5 .widget:nth-child(3n), .container.count9 .list-item:nth-child(3n), .container.count9 .widget:nth-child(3n), .container.count10 .list-item:nth-child(3n), .container.count10 .widget:nth-child(3n), .container.count13 .list-item:nth-child(3n), .container.count13 .widget:nth-child(3n), .container.count14 .list-item:nth-child(3n), .container.count14 .widget:nth-child(3n), .container.count15 .list-item:nth-child(3n), .container.count15 .widget:nth-child(3n) {
+    margin-right: 1%;
+  }
+  /* line 158, ../scss/components/custom-l3go-blocks/_interm.scss */
+  .container.count5 .list-item:nth-child(5n), .container.count5 .widget:nth-child(5n), .container.count9 .list-item:nth-child(5n), .container.count9 .widget:nth-child(5n), .container.count10 .list-item:nth-child(5n), .container.count10 .widget:nth-child(5n), .container.count13 .list-item:nth-child(5n), .container.count13 .widget:nth-child(5n), .container.count14 .list-item:nth-child(5n), .container.count14 .widget:nth-child(5n), .container.count15 .list-item:nth-child(5n), .container.count15 .widget:nth-child(5n) {
+    margin-right: 0;
   }
 }

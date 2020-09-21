@@ -28,14 +28,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<!--[if IE]>
-			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<![endif]-->
-		<?php // or, set /favicon.ico for IE10 win ?>
-		<meta name="msapplication-TileColor" content="#f01d4f">
-		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+		
 		<meta name="theme-color" content="#121212">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -119,7 +112,7 @@
 							<?php if ( is_active_sidebar( 'header-sidebar' ) ) {
 								dynamic_sidebar( 'header-sidebar' );
 							} ?>
-							<button id="menu-toggle" class="menu-toggle blue-btn"><?php _e( 'Menu', 'braftonium' );
+							<button id="menu-toggle" class="menu-toggle blue-btn"><span><?php _e( 'Menu', 'braftonium' );echo '</span>';
 							echo braftonium_get_svg_path('icon-bars').braftonium_get_svg_path('icon-close'); ?></button>	
 
 						</div>
@@ -171,17 +164,21 @@
 					$background_image = esc_url(get_field('background_image',$blog_page_id));
 					$title = wp_kses_post(get_field('title',$blog_page_id));
 					$tagline = wp_kses_post(get_field('tagline',$blog_page_id));
+				elseif(is_post_type_archive('resources')):
+					$title = "Resources";
+					$background_image = null;
 				elseif(is_archive()):
 					$term = get_queried_object()->cat_ID;
 					$background_image = esc_url(get_field('background_image', 'category_'.$term));
 					if(get_field('title','category_'. $term)): $title = wp_kses_post(get_field('title','category_'. $term)); else: $title = get_the_archive_title(); endif;
 					$tagline = wp_kses_post(get_field('tagline','category_'. $term));
 				elseif(!is_page_template( 'full-width.php' )&&!is_page_template( 'resources.php' ) ):
+					
 					$background_image = esc_url(get_field('background_image'));
 					$title = wp_kses_post(get_field('title'));
 					$tagline = wp_kses_post(get_field('tagline'));
 				endif;
-				if ($background_image) : ?>
+				if ($background_image||$title) : ?>
 					<section class="banner visual<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php echo ' style="background-image:url('.$background_image.')"'; ?>>
 					<?php if ($banner_style == 'sinistral'): ?>
 						<div class="wrap"><div class="black">

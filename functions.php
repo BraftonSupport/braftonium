@@ -7,7 +7,8 @@
 // 	// WP < 5 beta
 // 	add_filter('gutenberg_can_edit_post_type', '__return_false', 10);
 // }
-
+require_once get_template_directory().'/library/blocks/gutenberg_blocks.php';
+require_once get_template_directory().'/library/tinymce.php';
 /* Languages! */
 function braftonium_language_setup(){
 
@@ -29,9 +30,11 @@ Let's get everything up and running.
 function braftonium_start() {
 	require_once( 'library/braftonium.php' );
 	include_once get_template_directory().'/library/blocks/fields.php';
+	
 
   //Allow editor style.
   add_editor_style( get_template_directory_uri() . '/library/css/editor-style.css' );
+  add_editor_style( get_template_directory_uri() . '/library/css/block-editor-style.css' );
 
   add_action( 'admin_enqueue_scripts', 'load_admin_style' );
   function load_admin_style() {
@@ -70,8 +73,6 @@ endif;
 
 // let's get this party started
 add_action( 'after_setup_theme', 'braftonium_start' );
-
-
 
 /************* OEMBED SIZE OPTIONS *************/
 

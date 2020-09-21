@@ -7,32 +7,30 @@
  * @since braftonium 1.0
  */
 
-global $sectionrow;
-$title = wp_kses_post(get_sub_field('title'));
+$sectionrow = $block['id'];
+$title = wp_kses_post(get_field('title'));
 if ($title):
-	$titletext = ($sectionrow==0)?'<h1>'.$title.'</h1>':'<h2>'.$title.'</h2>';
+	$titletext = '<h2>'.$title.'</h2>';
 endif;
-$change_top = get_sub_field('change_top');
-$style = get_sub_field('style');
+$change_top = get_field('change_top');
+$style = get_field('style');
 $video = esc_url($style['video_url']);
-$classes = array('row');
+$classes = array('brafton_block','row');
 if ($style['add_class']){
 	$classes[] = sanitize_html_classes($style['add_class']);
 }
-if (!$style['background_image'] && !$style['background_color'] ) {
-	$classes[] = "gradient";
-}
+$shadow = false;
 if ( $style['other'] ) {
-	if (in_array('full', $style['other'])){
-		$classes[] = "full";
+    if(($key = array_search("shadow", $style['other'])) !== false){
+		unset($style['other'][$key]);
+		$shadow = true;
 	}
-	if (in_array('compact', $style['other'])){
-		$classes[] = "compact";
-	}
-	if (in_array('center', $style['other'])){
-		$classes[] = "center";
-	}
-} ?>
+    $classes = array_merge($classes, $style['other']);
+}
+if($block['className']){
+    $classes[] = $block['className'];
+}
+ ?>
 <section id="post-<?php the_ID(); echo '-'.$sectionrow; ?>" class="<?php echo implode(' ',$classes); ?>" style="<?php
 if ( $style['background_image'] ) { echo 'background-image: url(' . esc_url($style['background_image']) . ');'; }
 if ( $style['background_color'] ) { echo 'background-color: ' . sanitize_hex_color($style['background_color']) . ';'; }
@@ -61,7 +59,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				if( get_row_layout() == 'imageblock' ):
 					echo '<div class="image"';
 						if (get_sub_field('change_width')): echo ' style="-webkit-flex: 1 0 '.get_sub_field('width').'%; -ms-flex: 1 0 '.get_sub_field('width').'%; flex: 1 0 '.get_sub_field('width').'%;"'; endif;
-					echo '>'.wp_get_attachment_image( intval(get_sub_field('Image')), 'medium_large',false,array('loading' => 'lazy') ).'</div>';
+					echo '>'.wp_get_attachment_image( intval(get_sub_field('Image')), 'medium_large', false,array('loading' => 'lazy') ).'</div>';
 				elseif( get_row_layout() == 'textblock' ): 
 					echo '<div class="text"';
 						if (get_sub_field('change_width')): echo ' style="-webkit-flex: 1 0 '.get_sub_field('width').'%; -ms-flex: 1 0 '.get_sub_field('width').'%; flex: 1 0 '.get_sub_field('width').'%;"'; endif;

@@ -1,0 +1,44 @@
+.brafton_block{
+    &.column-2{
+        .container{
+            justify-content: space-evenly;
+            .list-item{
+                @media only screen and (min-width:980px){
+                    flex: 0 1 45%;
+                    margin-right:10%;
+                    &:nth-child(2n){
+                        margin-right:0;
+                    }
+                    .image{
+                        // max-height:225px;
+                        margin-bottom:0;
+                        img{
+                            margin-bottom:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.column-3{
+        .container{
+            justify-content: space-evenly;
+            .list-item{
+                @media only screen and (min-width:980px){
+                    flex: 0 1 32%;
+                    margin-right:2%;
+                    &:nth-child(3n){
+                        margin-right:0;
+                    }
+                    .image{
+                        max-height:225px;
+                        margin-bottom:0;
+                        img{
+                            margin-bottom:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -208,7 +208,6 @@ function acf_load_widget_area_field_choices( $field ) {
 }
 add_filter('acf/load_field/key=field_5b43bc9b0acf1', 'acf_load_widget_area_field_choices');
 
-
 /*********************
 RELATED POSTS FUNCTION
 *********************/
@@ -291,7 +290,8 @@ function braftonium_filter_ptags_on_images($content){
 // This removes the annoying […] to a Read More link
 function braftonium_excerpt_more($more) {
 	global $post;
-	$link= '...<br/><a class="button read-more" href="' . get_permalink() . '">'. __( 'Continue', 'braftonium' ).'<span class="hide"> '. get_the_title('', '', false).'</span></a>';
+	return '';
+	// $link= '...<br/><a class="button read-more" href="' . get_permalink() . '">'. __( 'Continue', 'braftonium' ).'<span class="hide"> '. get_the_title('', '', false).'</span></a>';
 	return $link;
 }
 

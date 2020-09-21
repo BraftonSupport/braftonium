@@ -86,7 +86,7 @@ acf_add_local_field_group(array(
 			'label' => __( 'Blog Layout', 'braftonium' ),
 			'name' => 'blog_layout',
 			'type' => 'select',
-			'instructions' => '',
+			'instructions' => 'All Blog sidebar option contain a full height Sidebar unless otherwise specified.',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -95,11 +95,12 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'hero' => 'Hero First',
-				'rich' => '',
-				'simple' => 'Simple Card',
+				'hero' => 'First Article Larger Image',
+				'simple' => 'Full Width with second row sidebar',
+				'rich' => 'Background Cards with Content Overlay',
 			),
 			'default_value' => array(
+				'hero'
 			),
 			'allow_null' => 0,
 			'multiple' => 0,

@@ -5,7 +5,7 @@ $brafton_comments = get_field('comments', 'option');
 
 	<div id="content">
 		<div id="inner-content" class="wrap cf">
-			<main id="main" class="m-all <?php if ( is_active_sidebar( 'page-sidebar' ) ) : echo 't-2of3 d-5of7 '; endif; ?>cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+			<main id="main" class="m-all <?php if ( is_active_sidebar( 'page-sidebar' ) ) : echo 't-2of3 d-5of7 '; endif; if($title): echo 'remove-top-padding ';endif; ?>cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 			
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
