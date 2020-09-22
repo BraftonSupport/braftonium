@@ -158,7 +158,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						?></h3></a>
 					<?php
 						echo '<p class="text">';
-						$content= get_the_content();
+						$content= the_excerpt();
 						$the_excerpt= substr($content,0,strpos($content,'.')+1);
 						if (strlen($the_excerpt) > 125){
 							echo implode(' ', array_slice(explode(' ', strip_tags($the_excerpt)), 0, 15)).'...';
