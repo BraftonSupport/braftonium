@@ -14,6 +14,14 @@ http://codex.wordpress.org/Editor_Style
 
 /* Wrap the entire post style inside the TinyMCE selector, as suggested
 here http://codex.wordpress.org/Function_Reference/add_editor_style */
+.wp-block{
+	max-width:980px;
+}
+@media (min-width: 1200px){
+	.interface-complementary-area {
+		width: 350px;
+	}
+}
 body#tinymce.wp-editor {
 
 	// normalize: http://necolas.github.io/normalize.css/
