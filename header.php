@@ -82,7 +82,10 @@
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-
+<?php $body_script = get_field('body_script', 'option');
+if($body_script){
+	echo $body_script; 
+}?>
 		<div id="container">
 
 			<header class="header" itemscope itemtype="http://schema.org/WPHeader">

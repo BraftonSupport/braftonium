@@ -56,7 +56,8 @@ endif;
   add_filter( 'wp_head', 'braftonium_remove_wp_widget_recent_comments_style', 1 );
   // clean up comment styles in the head
   add_action( 'wp_head', 'braftonium_remove_recent_comments_style', 1 );
-
+	add_action('wp_head', 'braftonium_header_scripts', 11);
+	add_action('wp_footer', 'braftonium_footer_scripts', 11);
   // enqueue base scripts and styles
   add_action( 'wp_enqueue_scripts', 'braftonium_scripts_and_styles', 20 );
   // ie conditional wrapper
@@ -325,5 +326,18 @@ function braftonium_customize_css() {
 		echo $css;
 	}
 	add_action( 'wp_head', 'braftonium_customize_css', 20);
+
+	function braftonium_header_scripts(){
+		$head = get_field('header_script', 'option');
+		if($head){
+			echo $head;
+		}
+	}
+	function braftonium_footer_scripts(){
+		$foot = get_field('footer_script', 'option');
+		if($foot){
+			echo $foot;
+		}
+	}
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
