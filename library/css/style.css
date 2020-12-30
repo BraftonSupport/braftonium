@@ -4086,6 +4086,14 @@ Blog Corrections
   min-height: inherit;
 }
 
+/* line 155, ../scss/modules/_resources.scss */
+.single-resources .display-resource {
+  width: 75%;
+  min-height: 50vh;
+  margin: auto;
+  display: block;
+}
+
 /*******************
 404 page
 *******************/
