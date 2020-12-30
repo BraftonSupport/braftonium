@@ -59,7 +59,7 @@ endif;
 	add_action('wp_head', 'braftonium_header_scripts', 11);
 	add_action('wp_footer', 'braftonium_footer_scripts', 11);
   // enqueue base scripts and styles
-  add_action( 'wp_enqueue_scripts', 'braftonium_scripts_and_styles', 20 );
+  add_action( 'wp_enqueue_scripts', 'braftonium_scripts_and_styles', 9 );
   // ie conditional wrapper
 
   // launching this stuff after theme setup
