@@ -196,9 +196,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					elseif ( get_field('background_image', $item->ID) ):
 						echo '<div class="image">';
 							if ( is_array($imagestyle) && in_array('round', $imagestyle) ):
-								echo '<img src="'.esc_url(get_field('background_image', $item->ID)).'" class="round">';
+								echo '<img src="'.esc_url(get_field('background_image', $item->ID)).'" class="round" loading="lazy">';
 							else:
-								echo '<img src="'.esc_url(get_field('background_image', $item->ID)).'">';
+								echo '<img src="'.esc_url(get_field('background_image', $item->ID)).'" loading="lazy">';
 							endif;
 						echo '</div>';
 					endif;
