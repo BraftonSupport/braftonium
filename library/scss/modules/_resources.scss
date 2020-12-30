@@ -1,0 +1,154 @@
+.post-type-archive-resources, .tax-resource-type{
+    #sort-resources{
+        margin-top:32px;
+    }
+    .resource-type, #s{
+        box-shadow:inset 0px 0px 10px 0px rgba(0,0,0,0.25);
+
+    }
+    .resource-search{
+        .resource-type{
+            background-color:rgba(255,255,255,1);
+        }
+    }
+    .screen-reader-text{
+        visibility: hidden;
+    }
+    button{
+        &[form=sort-resources]{
+            margin:auto auto auto 10px !important;
+        }
+    }
+    main{
+        &.simple, &.hero, &.rich{
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            > header{
+                &.article-header{
+                    flex:1 0 100%;
+                }
+            }
+            article{
+             &.hentry{
+                 @media only screen and (min-width:768px){
+                    flex:0 1 30%;
+                    margin-right:3%;
+                 }
+                margin-top:0;
+                margin-bottom:3em;
+                display: flex;
+                flex-direction: column;
+                &:first-of-type{
+                    @media only screen and (min-width:768px){
+                        flex:0 1 30%;
+                        margin-right:3%;
+                     }
+                }
+                &:nth-of-type(2n+1){
+                    margin-right:3%;
+                }
+                &:nth-of-type(3n+3){
+                    margin-right:0;
+                }
+                .thumbnail{
+                    flex: 1 0 225px;
+                    height:225px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                border:1px solid lightgray;
+            
+            border-radius:10px;
+            overflow: hidden;
+            h2{
+                // background-color:$black;
+                min-height:80px;
+                a{
+                    
+                }
+            }
+            
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 1 100%;
+                    header{
+                        margin-bottom:0;
+                        > p{
+                            &.byline{
+                                // background-color:#666666;
+                                color:white;
+                                a{
+                                    color:white;
+                                    &:hover{
+                                        color:white;
+                                    }
+                                }
+                            }
+                        }
+                        time.updated.entry-time {
+                            font-size: .75em;
+                        }
+                    }
+                    section{
+                        padding:1em 1em 0;
+                        flex:0 1 100%;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        p{
+                            flex:0 1 100%;
+                            &:last-child{
+                                flex:auto;
+                            }
+                        }
+
+                    }
+                    .button{
+                        float:none;
+                    }
+                }
+             }
+            }
+        }
+        &.hero{
+            article{
+                .thumbnail{
+                    margin-right:0;
+                }
+                header{
+                    padding-bottom:0;
+                }
+                .content{
+                    padding:.5em 1em;
+                    h2{
+                        min-height: inherit;
+                    }
+                    header > p.byline.vcard{
+                        color:$black;
+                    }
+                }
+                
+            }
+        }
+        &.rich{
+            article{
+                &.hentry{
+                    border-radius:0;
+                    .content{
+                        background-color:rgba(0,0,0,.65);
+                        height:100%;
+                        width:100%;
+                        h2{
+                            min-height:inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

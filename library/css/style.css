@@ -3928,6 +3928,164 @@ Blog Corrections
   overflow: hidden;
 }
 
+/* line 2, ../scss/modules/_resources.scss */
+.post-type-archive-resources #sort-resources, .tax-resource-type #sort-resources {
+  margin-top: 32px;
+}
+/* line 5, ../scss/modules/_resources.scss */
+.post-type-archive-resources .resource-type, .post-type-archive-resources #s, .tax-resource-type .resource-type, .tax-resource-type #s {
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+/* line 10, ../scss/modules/_resources.scss */
+.post-type-archive-resources .resource-search .resource-type, .tax-resource-type .resource-search .resource-type {
+  background-color: white;
+}
+/* line 14, ../scss/modules/_resources.scss */
+.post-type-archive-resources .screen-reader-text, .tax-resource-type .screen-reader-text {
+  visibility: hidden;
+}
+/* line 18, ../scss/modules/_resources.scss */
+.post-type-archive-resources button[form=sort-resources], .tax-resource-type button[form=sort-resources] {
+  margin: auto auto auto 10px !important;
+}
+/* line 23, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple, .post-type-archive-resources main.hero, .post-type-archive-resources main.rich, .tax-resource-type main.simple, .tax-resource-type main.hero, .tax-resource-type main.rich {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 28, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple > header.article-header, .post-type-archive-resources main.hero > header.article-header, .post-type-archive-resources main.rich > header.article-header, .tax-resource-type main.simple > header.article-header, .tax-resource-type main.hero > header.article-header, .tax-resource-type main.rich > header.article-header {
+  flex: 1 0 100%;
+}
+/* line 33, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry, .post-type-archive-resources main.hero article.hentry, .post-type-archive-resources main.rich article.hentry, .tax-resource-type main.simple article.hentry, .tax-resource-type main.hero article.hentry, .tax-resource-type main.rich article.hentry {
+  margin-top: 0;
+  margin-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  /* line 33, ../scss/modules/_resources.scss */
+  .post-type-archive-resources main.simple article.hentry, .post-type-archive-resources main.hero article.hentry, .post-type-archive-resources main.rich article.hentry, .tax-resource-type main.simple article.hentry, .tax-resource-type main.hero article.hentry, .tax-resource-type main.rich article.hentry {
+    flex: 0 1 30%;
+    margin-right: 3%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 42, ../scss/modules/_resources.scss */
+  .post-type-archive-resources main.simple article.hentry:first-of-type, .post-type-archive-resources main.hero article.hentry:first-of-type, .post-type-archive-resources main.rich article.hentry:first-of-type, .tax-resource-type main.simple article.hentry:first-of-type, .tax-resource-type main.hero article.hentry:first-of-type, .tax-resource-type main.rich article.hentry:first-of-type {
+    flex: 0 1 30%;
+    margin-right: 3%;
+  }
+}
+/* line 48, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry:nth-of-type(2n+1), .post-type-archive-resources main.hero article.hentry:nth-of-type(2n+1), .post-type-archive-resources main.rich article.hentry:nth-of-type(2n+1), .tax-resource-type main.simple article.hentry:nth-of-type(2n+1), .tax-resource-type main.hero article.hentry:nth-of-type(2n+1), .tax-resource-type main.rich article.hentry:nth-of-type(2n+1) {
+  margin-right: 3%;
+}
+/* line 51, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry:nth-of-type(3n+3), .post-type-archive-resources main.hero article.hentry:nth-of-type(3n+3), .post-type-archive-resources main.rich article.hentry:nth-of-type(3n+3), .tax-resource-type main.simple article.hentry:nth-of-type(3n+3), .tax-resource-type main.hero article.hentry:nth-of-type(3n+3), .tax-resource-type main.rich article.hentry:nth-of-type(3n+3) {
+  margin-right: 0;
+}
+/* line 54, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .thumbnail, .post-type-archive-resources main.hero article.hentry .thumbnail, .post-type-archive-resources main.rich article.hentry .thumbnail, .tax-resource-type main.simple article.hentry .thumbnail, .tax-resource-type main.hero article.hentry .thumbnail, .tax-resource-type main.rich article.hentry .thumbnail {
+  flex: 1 0 225px;
+  height: 225px;
+}
+/* line 57, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .thumbnail img, .post-type-archive-resources main.hero article.hentry .thumbnail img, .post-type-archive-resources main.rich article.hentry .thumbnail img, .tax-resource-type main.simple article.hentry .thumbnail img, .tax-resource-type main.hero article.hentry .thumbnail img, .tax-resource-type main.rich article.hentry .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* line 67, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry h2, .post-type-archive-resources main.hero article.hentry h2, .post-type-archive-resources main.rich article.hentry h2, .tax-resource-type main.simple article.hentry h2, .tax-resource-type main.hero article.hentry h2, .tax-resource-type main.rich article.hentry h2 {
+  min-height: 80px;
+}
+/* line 75, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .content, .post-type-archive-resources main.hero article.hentry .content, .post-type-archive-resources main.rich article.hentry .content, .tax-resource-type main.simple article.hentry .content, .tax-resource-type main.hero article.hentry .content, .tax-resource-type main.rich article.hentry .content {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 100%;
+}
+/* line 79, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .content header, .post-type-archive-resources main.hero article.hentry .content header, .post-type-archive-resources main.rich article.hentry .content header, .tax-resource-type main.simple article.hentry .content header, .tax-resource-type main.hero article.hentry .content header, .tax-resource-type main.rich article.hentry .content header {
+  margin-bottom: 0;
+}
+/* line 82, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .content header > p.byline, .post-type-archive-resources main.hero article.hentry .content header > p.byline, .post-type-archive-resources main.rich article.hentry .content header > p.byline, .tax-resource-type main.simple article.hentry .content header > p.byline, .tax-resource-type main.hero article.hentry .content header > p.byline, .tax-resource-type main.rich article.hentry .content header > p.byline {
+  color: white;
+}
+/* line 85, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .content header > p.byline a, .post-type-archive-resources main.hero article.hentry .content header > p.byline a, .post-type-archive-resources main.rich article.hentry .content header > p.byline a, .tax-resource-type main.simple article.hentry .content header > p.byline a, .tax-resource-type main.hero article.hentry .content header > p.byline a, .tax-resource-type main.rich article.hentry .content header > p.byline a {
+  color: white;
+}
+/* line 87, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .content header > p.byline a:hover, .post-type-archive-resources main.hero article.hentry .content header > p.byline a:hover, .post-type-archive-resources main.rich article.hentry .content header > p.byline a:hover, .tax-resource-type main.simple article.hentry .content header > p.byline a:hover, .tax-resource-type main.hero article.hentry .content header > p.byline a:hover, .tax-resource-type main.rich article.hentry .content header > p.byline a:hover {
+  color: white;
+}
+/* line 93, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .content header time.updated.entry-time, .post-type-archive-resources main.hero article.hentry .content header time.updated.entry-time, .post-type-archive-resources main.rich article.hentry .content header time.updated.entry-time, .tax-resource-type main.simple article.hentry .content header time.updated.entry-time, .tax-resource-type main.hero article.hentry .content header time.updated.entry-time, .tax-resource-type main.rich article.hentry .content header time.updated.entry-time {
+  font-size: .75em;
+}
+/* line 97, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .content section, .post-type-archive-resources main.hero article.hentry .content section, .post-type-archive-resources main.rich article.hentry .content section, .tax-resource-type main.simple article.hentry .content section, .tax-resource-type main.hero article.hentry .content section, .tax-resource-type main.rich article.hentry .content section {
+  padding: 1em 1em 0;
+  flex: 0 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/* line 103, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .content section p, .post-type-archive-resources main.hero article.hentry .content section p, .post-type-archive-resources main.rich article.hentry .content section p, .tax-resource-type main.simple article.hentry .content section p, .tax-resource-type main.hero article.hentry .content section p, .tax-resource-type main.rich article.hentry .content section p {
+  flex: 0 1 100%;
+}
+/* line 105, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .content section p:last-child, .post-type-archive-resources main.hero article.hentry .content section p:last-child, .post-type-archive-resources main.rich article.hentry .content section p:last-child, .tax-resource-type main.simple article.hentry .content section p:last-child, .tax-resource-type main.hero article.hentry .content section p:last-child, .tax-resource-type main.rich article.hentry .content section p:last-child {
+  flex: auto;
+}
+/* line 111, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.simple article.hentry .content .button, .post-type-archive-resources main.hero article.hentry .content .button, .post-type-archive-resources main.rich article.hentry .content .button, .tax-resource-type main.simple article.hentry .content .button, .tax-resource-type main.hero article.hentry .content .button, .tax-resource-type main.rich article.hentry .content .button {
+  float: none;
+}
+/* line 120, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.hero article .thumbnail, .tax-resource-type main.hero article .thumbnail {
+  margin-right: 0;
+}
+/* line 123, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.hero article header, .tax-resource-type main.hero article header {
+  padding-bottom: 0;
+}
+/* line 126, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.hero article .content, .tax-resource-type main.hero article .content {
+  padding: .5em 1em;
+}
+/* line 128, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.hero article .content h2, .tax-resource-type main.hero article .content h2 {
+  min-height: inherit;
+}
+/* line 131, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.hero article .content header > p.byline.vcard, .tax-resource-type main.hero article .content header > p.byline.vcard {
+  color: #323944;
+}
+/* line 140, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.rich article.hentry, .tax-resource-type main.rich article.hentry {
+  border-radius: 0;
+}
+/* line 142, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.rich article.hentry .content, .tax-resource-type main.rich article.hentry .content {
+  background-color: rgba(0, 0, 0, 0.65);
+  height: 100%;
+  width: 100%;
+}
+/* line 146, ../scss/modules/_resources.scss */
+.post-type-archive-resources main.rich article.hentry .content h2, .tax-resource-type main.rich article.hentry .content h2 {
+  min-height: inherit;
+}
+
 /*******************
 404 page
 *******************/
