@@ -31,8 +31,8 @@ License URI: http://sam.zoy.org/wtfpl/
 ** Build a Page** - Use page template "Full Width". Add rows and fill them out. Save + publish.
 ### Develop new Layout blocks for Braftonium
 
---- comming soon ---
-### Develop Custom Layout L3go blocks using a child theme.
+
+### Develop Custom Layout L3go blocks using a child theme. (Legacy)
 
 You can add custom layout blocks in your child theme by using the filter braftonium_add_layout_block, you must return an array with 1 or more arrays each with a unique key that must also match a key value pair in key => id. follow the below example and/or see the array structure under /library/custom-fields/components/**/**.block.php.  
 
@@ -108,6 +108,100 @@ When creating a new layout block you must provide an html template to display yo
                 - {Your new block}
                     - content-{Your new block}.html.php
 
+```
+
+### Develop Braftonium Gutenberg Blocks
+ou can add custom gutenberg layout blocks in your child theme by using the filter braftonium_add_block, it accepts 1 parameter which is the full array of braftonium blocks which you can modify and add to. Follow the below example and/or see the array structure under /library/blocks/guten/**/**.block.php.  
+When creating a new layout block you must provide an html template to display your new layout block.  A template must be in the following folder structure.
+
+```bash
+- library
+    - blocks
+        - guten
+            - {Your new block}
+                - block-{Your new block}.html.php
+
+```
+```php
+<?php 
+function my_custom_guten_block($blocks);
+ $blocks[] = array(
+     'register' => array(
+        'name'              => 'my_custom_block', // change this
+        'title'             => __('My Custom Block'), // Change this
+        'description'       => __('description'), //change this
+        'category'          => 'braftonium', // Do not change this.
+        'icon'              => 'id', // You can change this
+        'keywords'          => array( 'testimonial', 'quote' ), // You should change this
+     ),
+    'fields' => array(
+        'key' => 'group_5a4d605324b03548', // Must be unique
+        'title' => 'float-fields', // Must be unique
+        'fields' => array(
+            array(
+                'key' => 'field_5a4d5f297ac9885_fwir',
+                'label' => __( 'Title', 'braftonium' ),
+                'name' => 'title',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            
+            array( // Ensure that you include this array to include the styles fields
+                'key' => 'field_5a4d39e5805477_fwir', // Change this it needs to be unique but change nothing else.
+                'label' => __( 'Style', 'braftonium' ),
+                'name' => 'style',
+                'type' => 'clone',
+                'instructions' => 'This row does not support video backgrounds',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'clone' => array(
+                    0 => 'group_5a4d3902e55eb_bf',
+                ),
+                'display' => 'seamless',
+                'layout' => 'block',
+                'prefix_label' => 0,
+                'prefix_name' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'block',
+                    'operator' => '==',
+                    'value' => 'acf/my-custom-block', // change this but leave acf/ intact
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    )
+);
+return $block;
+}
+add_filter('braftonium_add_block', 'my_custom_guten_block');
 ```
 #### What the heck is **shenanigans**?
 It's not quite ready yet. Don't know how best to add it to things. [Link](http://kristofferandreasen.github.io/wickedCSS/documentation.html)

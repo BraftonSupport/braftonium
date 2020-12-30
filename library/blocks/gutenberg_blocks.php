@@ -30,6 +30,7 @@ class BraftoniumGutenbergBlocks{
         // var_dump("register block");
         $dir = dirname(__FILE__);	
         $files = glob("$dir/guten/**/*.guten-block.php");
+        $files = apply_filters('braftonium_add_block', $files);
         foreach($files as $file){
             $settings = include $file;
             $settings['register']['render_callback'] = array($this, 'render_block_html');
