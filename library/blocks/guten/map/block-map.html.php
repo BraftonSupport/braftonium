@@ -46,7 +46,9 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 			echo '<h3>'.braftonium_get_svg_path('icon-phone').' '.  __( 'Phone', 'braftonium' ) .':</h3>';
 			while ( have_rows('phone') ) : the_row();
 				echo sanitize_text_field(get_sub_field('phone_label')).': ';
-				echo sanitize_text_field(get_sub_field('phone_number'));
+				$tel = '';
+				$tel = sanitize_text_field(get_sub_field('phone_number'));
+				printf('<a href="tel:%s">%s</a>', $tel, $tel);
 				echo '<br/>';
 			endwhile;
 		endif;
