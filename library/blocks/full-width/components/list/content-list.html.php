@@ -216,6 +216,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						$tagline = wp_kses_post(get_field('tagline', $item->ID));
 						if ($content): 
 							$the_excerpt= substr($content,0,strpos($content,'.')+1);
+							$the_excerpt = strlen($the_excerpt) > 1 ? $the_excerpt : $content;
 							if (strlen($the_excerpt) > 125){
 								echo implode(' ', array_slice(explode(' ', strip_tags($the_excerpt)), 0, 15)).'...';
 							} else {
@@ -223,6 +224,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 							}
 						elseif ($tagline):
 							$the_excerpt= substr($tagline,0,strpos($tagline,'.')+1);
+							$the_excerpt = strlen($the_excerpt) > 1 ? $the_excerpt : $content;
 							if (strlen($the_excerpt) > 125){
 								echo implode(' ', array_slice(explode(' ', strip_tags($the_excerpt)), 0, 15)).'...';
 							} else {
