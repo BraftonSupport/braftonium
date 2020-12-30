@@ -68,6 +68,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 			$count = count($custom);
 			echo '<div class="container count'.$count.'">';
 			foreach( $custom as $item ):
+				$url = null;
 				if($item['button']):
 					$url = esc_url($item['button']['url']);
 					$text = sanitize_text_field($item['button']['title']);
@@ -95,7 +96,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						if (strlen($titlestring) > 65){
 							$titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
 						}
-						echo $titlestring.'</a></h3>';
+						echo $titlestring.($url?'</a>':'').'</h3>';
 					endif;
 					if ( $item['content'] ): echo wp_kses_post($item['content']); endif;
 				echo '</div>';
