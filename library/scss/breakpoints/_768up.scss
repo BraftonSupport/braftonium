@@ -36,6 +36,7 @@ HEADER STYLES
 	grid-template-rows: auto auto auto;
 	-ms-grid-columns: 20% 80%;
 	-ms-grid-rows: auto auto auto;
+	padding:.5em 0;
 	&.auto {
 		grid-template-columns: auto auto;
 		-ms-grid-columns: auto auto;
@@ -55,12 +56,40 @@ HEADER STYLES
 	.nextwidget {
 		grid-column: 2 / 3;
 		grid-row: 1 / 2;
-
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-justify-content: flex-end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		-webkit-align-content: stretch;
+		-ms-flex-line-pack: stretch;
+		align-content: stretch;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
 		-ms-grid-column:2;
 		-ms-grid-column-span:2;
 		-ms-grid-row:1;
 		-ms-grid-row-span:2;
-		
+		> .widget{
+			-webkit-order: 0;
+			-ms-flex-order: 0;
+			order: 0;
+			-webkit-flex: 0 1 auto;
+			-ms-flex: 0 1 auto;
+			flex: 0 1 auto;
+			-webkit-align-self: auto;
+			-ms-flex-item-align: auto;
+			align-self: auto;
+			margin-left:1em;
+		}
 	}
 	.next {
 		grid-column: 2 / 3;
