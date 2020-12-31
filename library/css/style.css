@@ -3681,13 +3681,14 @@ Blog Corrections
 .blog .rich .has-post-thumbnail .content, .archive .rich .has-post-thumbnail .content {
   position: absolute;
   bottom: 0;
+  left: 0;
 }
-/* line 114, ../scss/modules/_blog.scss */
+/* line 115, ../scss/modules/_blog.scss */
 .blog .rich h2, .blog .rich .h2, .archive .rich h2, .archive .rich .h2 {
   font-size: 1.5em;
   color: white;
 }
-/* line 121, ../scss/modules/_blog.scss */
+/* line 122, ../scss/modules/_blog.scss */
 .blog .rich article.hentry, .archive .rich article.hentry {
   flex: 1 0 100%;
   background-color: #00457c;
@@ -3696,38 +3697,38 @@ Blog Corrections
   margin: 2em 0 1em;
   overflow: hidden;
 }
-/* line 128, ../scss/modules/_blog.scss */
+/* line 129, ../scss/modules/_blog.scss */
 .blog .rich article.hentry .content, .archive .rich article.hentry .content {
   background-color: rgba(50, 57, 68, 0.75);
   padding: 1.4em;
 }
-/* line 131, ../scss/modules/_blog.scss */
+/* line 132, ../scss/modules/_blog.scss */
 .blog .rich article.hentry .content .article-header, .archive .rich article.hentry .content .article-header {
   padding: 0 0 .75em 0;
 }
-/* line 135, ../scss/modules/_blog.scss */
+/* line 136, ../scss/modules/_blog.scss */
 .blog .rich article.hentry .thumbnail, .blog .rich article.hentry .content, .archive .rich article.hentry .thumbnail, .archive .rich article.hentry .content {
   width: 100%;
   margin-right: 0;
 }
-/* line 139, ../scss/modules/_blog.scss */
+/* line 140, ../scss/modules/_blog.scss */
 .blog .rich article.hentry .ssb-social, .archive .rich article.hentry .ssb-social {
   padding: 0 0 0 10px;
   display: inline;
 }
-/* line 143, ../scss/modules/_blog.scss */
+/* line 144, ../scss/modules/_blog.scss */
 .blog .rich article.hentry .by, .blog .rich article.hentry .entry-author, .archive .rich article.hentry .by, .archive .rich article.hentry .entry-author {
   display: none;
 }
-/* line 146, ../scss/modules/_blog.scss */
+/* line 147, ../scss/modules/_blog.scss */
 .blog .rich article.hentry a, .archive .rich article.hentry a {
   color: #fff;
 }
-/* line 153, ../scss/modules/_blog.scss */
+/* line 154, ../scss/modules/_blog.scss */
 .blog .rich .read-more, .archive .rich .read-more {
   display: none;
 }
-/* line 157, ../scss/modules/_blog.scss */
+/* line 158, ../scss/modules/_blog.scss */
 .blog .simple, .archive .simple {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -3736,155 +3737,166 @@ Blog Corrections
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-/* line 164, ../scss/modules/_blog.scss */
+/* line 165, ../scss/modules/_blog.scss */
 .blog .simple article.hentry, .archive .simple article.hentry {
   flex: 1 0 100%;
 }
-/* line 170, ../scss/modules/_blog.scss */
+/* line 171, ../scss/modules/_blog.scss */
 .blog .simple .thumbnail, .blog .simple .content, .archive .simple .thumbnail, .archive .simple .content {
   flex: 1 0 100%;
   width: 100%;
   margin-right: 0;
 }
-/* line 175, ../scss/modules/_blog.scss */
+/* line 176, ../scss/modules/_blog.scss */
 .blog .simple .article-header, .archive .simple .article-header {
   text-align: center;
   padding: 0 0 .5em 0;
 }
-/* line 179, ../scss/modules/_blog.scss */
+/* line 180, ../scss/modules/_blog.scss */
 .blog .simple .entry-title, .archive .simple .entry-title {
   background-color: #00457c;
   padding: 10px 5px;
 }
-/* line 182, ../scss/modules/_blog.scss */
+/* line 183, ../scss/modules/_blog.scss */
 .blog .simple .entry-title a, .archive .simple .entry-title a {
   font-size: .8em;
   color: #fff;
 }
-/* line 185, ../scss/modules/_blog.scss */
+/* line 186, ../scss/modules/_blog.scss */
 .blog .simple .entry-title a:hover, .archive .simple .entry-title a:hover {
   color: #2e5dab;
 }
-/* line 190, ../scss/modules/_blog.scss */
+/* line 191, ../scss/modules/_blog.scss */
 .blog .simple .byline, .archive .simple .byline {
   background-color: rgba(0, 69, 124, 0.5);
   color: #fff;
   padding: 5px;
 }
-/* line 195, ../scss/modules/_blog.scss */
+/* line 196, ../scss/modules/_blog.scss */
 .blog .simple .by, .blog .simple .entry-author, .archive .simple .by, .archive .simple .entry-author {
   display: none;
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 206, ../scss/modules/_blog.scss */
+  /* line 207, ../scss/modules/_blog.scss */
   .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
     flex: 1 0 45%;
     margin: 0 5% 0 0;
   }
-  /* line 211, ../scss/modules/_blog.scss */
+  /* line 212, ../scss/modules/_blog.scss */
   .blog .full .thumbnail, .archive .full .thumbnail {
     overflow: hidden;
   }
-  /* line 217, ../scss/modules/_blog.scss */
+  /* line 218, ../scss/modules/_blog.scss */
   .blog .hero article.hentry .thumbnail, .archive .hero article.hentry .thumbnail {
     max-height: 250px;
     overflow: hidden;
   }
 }
 @media only screen and (min-width: 767px) {
-  /* line 227, ../scss/modules/_blog.scss */
-  .blog .hentry, .archive:not(.post-type-archive-resources) .hentry {
+  /* line 228, ../scss/modules/_blog.scss */
+  .blog .hentry, .archive .hentry, .archive .hentry {
     padding: 0;
     margin: 3em 0 0;
   }
-  /* line 230, ../scss/modules/_blog.scss */
-  .blog .hentry:first-of-type, .archive:not(.post-type-archive-resources) .hentry:first-of-type {
+  /* line 231, ../scss/modules/_blog.scss */
+  .blog .hentry:first-of-type, .archive .hentry:first-of-type, .archive .hentry:first-of-type {
     margin-top: 0;
   }
-  /* line 234, ../scss/modules/_blog.scss */
-  .blog article, .archive:not(.post-type-archive-resources) article {
+  /* line 235, ../scss/modules/_blog.scss */
+  .blog article, .archive article, .archive article {
     display: block;
   }
-  /* line 236, ../scss/modules/_blog.scss */
-  .blog article .thumbnail, .blog article .content, .archive:not(.post-type-archive-resources) article .thumbnail, .archive:not(.post-type-archive-resources) article .content {
+  /* line 237, ../scss/modules/_blog.scss */
+  .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content, .archive article .thumbnail, .archive article .content {
     margin: 0;
   }
-  /* line 240, ../scss/modules/_blog.scss */
-  .blog .full article.hentry .thumbnail, .archive:not(.post-type-archive-resources) .full article.hentry .thumbnail {
+  /* line 241, ../scss/modules/_blog.scss */
+  .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
     max-height: 220px;
   }
-  /* line 243, ../scss/modules/_blog.scss */
-  .blog .rich article.hentry, .blog .full article.hentry, .blog .simple article.hentry, .archive:not(.post-type-archive-resources) .rich article.hentry, .archive:not(.post-type-archive-resources) .full article.hentry, .archive:not(.post-type-archive-resources) .simple article.hentry {
+  /* line 244, ../scss/modules/_blog.scss */
+  .blog .full article.hentry, .blog .simple article.hentry, .archive .full article.hentry, .archive .simple article.hentry, .archive .full article.hentry, .archive .simple article.hentry {
     flex: 1 0 45%;
     margin-right: 5%;
     margin-top: 0;
     margin-bottom: 2em;
     padding-bottom: 1em;
   }
+  /* line 258, ../scss/modules/_blog.scss */
+  .blog .rich article.hentry, .archive .rich article.hentry, .archive .rich article.hentry {
+    flex: 1 0 45%;
+    margin-right: 5%;
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
 }
 @media only screen and (min-width: 1029px) {
-  /* line 261, ../scss/modules/_blog.scss */
+  /* line 268, ../scss/modules/_blog.scss */
   .blog article, .archive article {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
   }
-  /* line 265, ../scss/modules/_blog.scss */
+  /* line 272, ../scss/modules/_blog.scss */
   .blog article .thumbnail, .archive article .thumbnail {
     flex: 1 0 30%;
     margin: 0 5% 0 0;
   }
-  /* line 269, ../scss/modules/_blog.scss */
+  /* line 276, ../scss/modules/_blog.scss */
   .blog article .content, .archive article .content {
     flex: 1 0 60%;
     margin: 0 5% 0 0;
   }
-  /* line 273, ../scss/modules/_blog.scss */
+  /* line 280, ../scss/modules/_blog.scss */
   .blog article .thumbnail img, .archive article .thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  /* line 279, ../scss/modules/_blog.scss */
+  /* line 286, ../scss/modules/_blog.scss */
   .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
     max-height: 200px;
   }
-  /* line 282, ../scss/modules/_blog.scss */
+  /* line 289, ../scss/modules/_blog.scss */
   .blog .simple article, .archive .simple article {
     display: block;
   }
+  /* line 294, ../scss/modules/_blog.scss */
+  .blog.date main header, .archive.date main header {
+    flex: 1 0 100%;
+  }
 }
 @media only screen and (min-width: 1366px) {
-  /* line 288, ../scss/modules/_blog.scss */
+  /* line 302, ../scss/modules/_blog.scss */
   .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
     max-height: 250px;
   }
 }
-/* line 295, ../scss/modules/_blog.scss */
-.blog .simple.wrap.container {
+/* line 309, ../scss/modules/_blog.scss */
+.blog .simple.wrap.container, .archive .simple.wrap.container {
   margin-top: 3.5em;
 }
 @media only screen and (min-width: 480px) {
-  /* line 297, ../scss/modules/_blog.scss */
-  .blog .simple.wrap.container .thumbnail {
+  /* line 311, ../scss/modules/_blog.scss */
+  .blog .simple.wrap.container .thumbnail, .archive .simple.wrap.container .thumbnail {
     height: 400px;
     flex: 0 1 60%;
   }
 }
 @media only screen and (min-width: 480px) {
-  /* line 305, ../scss/modules/_blog.scss */
-  .blog .simple.wrap.container .content {
+  /* line 319, ../scss/modules/_blog.scss */
+  .blog .simple.wrap.container .content, .archive .simple.wrap.container .content {
     flex: 0 1 40%;
   }
 }
-/* line 316, ../scss/modules/_blog.scss */
-.blog .simple .thumbnail {
+/* line 330, ../scss/modules/_blog.scss */
+.blog .simple .thumbnail, .archive .simple .thumbnail {
   height: 250px;
   overflow: hidden;
 }
-/* line 320, ../scss/modules/_blog.scss */
-.blog .simple .content {
+/* line 334, ../scss/modules/_blog.scss */
+.blog .simple .content, .archive .simple .content {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -3904,20 +3916,20 @@ Blog Corrections
   -ms-flex-align: stretch;
   align-items: stretch;
 }
-/* line 341, ../scss/modules/_blog.scss */
-.blog .simple .content .entry-content {
+/* line 355, ../scss/modules/_blog.scss */
+.blog .simple .content .entry-content, .archive .simple .content .entry-content {
   padding: 0 1em;
 }
-/* line 354, ../scss/modules/_blog.scss */
-.blog .rich article {
+/* line 368, ../scss/modules/_blog.scss */
+.blog .rich article, .archive .rich article {
   max-height: 400px;
 }
-/* line 356, ../scss/modules/_blog.scss */
-.blog .rich article .content {
+/* line 370, ../scss/modules/_blog.scss */
+.blog .rich article .content, .archive .rich article .content {
   height: 100%;
 }
-/* line 368, ../scss/modules/_blog.scss */
-.blog .rich .thumbnail {
+/* line 382, ../scss/modules/_blog.scss */
+.blog .rich .thumbnail, .archive .rich .thumbnail {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -3971,63 +3983,75 @@ Blog Corrections
     margin-right: 3%;
   }
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 33, ../scss/modules/_resources.scss */
+  .post-type-archive-resources main.simple article.hentry, .post-type-archive-resources main.hero article.hentry, .post-type-archive-resources main.rich article.hentry, .tax-resource-type main.simple article.hentry, .tax-resource-type main.hero article.hentry, .tax-resource-type main.rich article.hentry {
+    display: block;
+  }
+}
 @media only screen and (min-width: 768px) {
-  /* line 42, ../scss/modules/_resources.scss */
+  /* line 45, ../scss/modules/_resources.scss */
   .post-type-archive-resources main.simple article.hentry:first-of-type, .post-type-archive-resources main.hero article.hentry:first-of-type, .post-type-archive-resources main.rich article.hentry:first-of-type, .tax-resource-type main.simple article.hentry:first-of-type, .tax-resource-type main.hero article.hentry:first-of-type, .tax-resource-type main.rich article.hentry:first-of-type {
     flex: 0 1 30%;
     margin-right: 3%;
   }
 }
-/* line 48, ../scss/modules/_resources.scss */
+/* line 51, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry:nth-of-type(2n+1), .post-type-archive-resources main.hero article.hentry:nth-of-type(2n+1), .post-type-archive-resources main.rich article.hentry:nth-of-type(2n+1), .tax-resource-type main.simple article.hentry:nth-of-type(2n+1), .tax-resource-type main.hero article.hentry:nth-of-type(2n+1), .tax-resource-type main.rich article.hentry:nth-of-type(2n+1) {
   margin-right: 3%;
 }
-/* line 51, ../scss/modules/_resources.scss */
+/* line 54, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry:nth-of-type(3n+3), .post-type-archive-resources main.hero article.hentry:nth-of-type(3n+3), .post-type-archive-resources main.rich article.hentry:nth-of-type(3n+3), .tax-resource-type main.simple article.hentry:nth-of-type(3n+3), .tax-resource-type main.hero article.hentry:nth-of-type(3n+3), .tax-resource-type main.rich article.hentry:nth-of-type(3n+3) {
   margin-right: 0;
 }
-/* line 54, ../scss/modules/_resources.scss */
+/* line 57, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .thumbnail, .post-type-archive-resources main.hero article.hentry .thumbnail, .post-type-archive-resources main.rich article.hentry .thumbnail, .tax-resource-type main.simple article.hentry .thumbnail, .tax-resource-type main.hero article.hentry .thumbnail, .tax-resource-type main.rich article.hentry .thumbnail {
   flex: 1 0 225px;
   height: 225px;
 }
-/* line 57, ../scss/modules/_resources.scss */
+/* line 60, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .thumbnail img, .post-type-archive-resources main.hero article.hentry .thumbnail img, .post-type-archive-resources main.rich article.hentry .thumbnail img, .tax-resource-type main.simple article.hentry .thumbnail img, .tax-resource-type main.hero article.hentry .thumbnail img, .tax-resource-type main.rich article.hentry .thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-/* line 67, ../scss/modules/_resources.scss */
+/* line 70, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry h2, .post-type-archive-resources main.hero article.hentry h2, .post-type-archive-resources main.rich article.hentry h2, .tax-resource-type main.simple article.hentry h2, .tax-resource-type main.hero article.hentry h2, .tax-resource-type main.rich article.hentry h2 {
   min-height: 80px;
 }
-/* line 75, ../scss/modules/_resources.scss */
+/* line 78, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .content, .post-type-archive-resources main.hero article.hentry .content, .post-type-archive-resources main.rich article.hentry .content, .tax-resource-type main.simple article.hentry .content, .tax-resource-type main.hero article.hentry .content, .tax-resource-type main.rich article.hentry .content {
   display: flex;
   flex-direction: column;
   flex: 0 1 100%;
 }
-/* line 79, ../scss/modules/_resources.scss */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 78, ../scss/modules/_resources.scss */
+  .post-type-archive-resources main.simple article.hentry .content, .post-type-archive-resources main.hero article.hentry .content, .post-type-archive-resources main.rich article.hentry .content, .tax-resource-type main.simple article.hentry .content, .tax-resource-type main.hero article.hentry .content, .tax-resource-type main.rich article.hentry .content {
+    display: block;
+  }
+}
+/* line 85, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .content header, .post-type-archive-resources main.hero article.hentry .content header, .post-type-archive-resources main.rich article.hentry .content header, .tax-resource-type main.simple article.hentry .content header, .tax-resource-type main.hero article.hentry .content header, .tax-resource-type main.rich article.hentry .content header {
   margin-bottom: 0;
 }
-/* line 82, ../scss/modules/_resources.scss */
+/* line 88, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .content header > p.byline, .post-type-archive-resources main.hero article.hentry .content header > p.byline, .post-type-archive-resources main.rich article.hentry .content header > p.byline, .tax-resource-type main.simple article.hentry .content header > p.byline, .tax-resource-type main.hero article.hentry .content header > p.byline, .tax-resource-type main.rich article.hentry .content header > p.byline {
   color: white;
 }
-/* line 85, ../scss/modules/_resources.scss */
+/* line 91, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .content header > p.byline a, .post-type-archive-resources main.hero article.hentry .content header > p.byline a, .post-type-archive-resources main.rich article.hentry .content header > p.byline a, .tax-resource-type main.simple article.hentry .content header > p.byline a, .tax-resource-type main.hero article.hentry .content header > p.byline a, .tax-resource-type main.rich article.hentry .content header > p.byline a {
   color: white;
 }
-/* line 87, ../scss/modules/_resources.scss */
+/* line 93, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .content header > p.byline a:hover, .post-type-archive-resources main.hero article.hentry .content header > p.byline a:hover, .post-type-archive-resources main.rich article.hentry .content header > p.byline a:hover, .tax-resource-type main.simple article.hentry .content header > p.byline a:hover, .tax-resource-type main.hero article.hentry .content header > p.byline a:hover, .tax-resource-type main.rich article.hentry .content header > p.byline a:hover {
   color: white;
 }
-/* line 93, ../scss/modules/_resources.scss */
+/* line 99, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .content header time.updated.entry-time, .post-type-archive-resources main.hero article.hentry .content header time.updated.entry-time, .post-type-archive-resources main.rich article.hentry .content header time.updated.entry-time, .tax-resource-type main.simple article.hentry .content header time.updated.entry-time, .tax-resource-type main.hero article.hentry .content header time.updated.entry-time, .tax-resource-type main.rich article.hentry .content header time.updated.entry-time {
   font-size: .75em;
 }
-/* line 97, ../scss/modules/_resources.scss */
+/* line 103, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .content section, .post-type-archive-resources main.hero article.hentry .content section, .post-type-archive-resources main.rich article.hentry .content section, .tax-resource-type main.simple article.hentry .content section, .tax-resource-type main.hero article.hentry .content section, .tax-resource-type main.rich article.hentry .content section {
   padding: 1em 1em 0;
   flex: 0 1 100%;
@@ -4035,54 +4059,54 @@ Blog Corrections
   flex-direction: column;
   justify-content: flex-end;
 }
-/* line 103, ../scss/modules/_resources.scss */
+/* line 109, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .content section p, .post-type-archive-resources main.hero article.hentry .content section p, .post-type-archive-resources main.rich article.hentry .content section p, .tax-resource-type main.simple article.hentry .content section p, .tax-resource-type main.hero article.hentry .content section p, .tax-resource-type main.rich article.hentry .content section p {
   flex: 0 1 100%;
 }
-/* line 105, ../scss/modules/_resources.scss */
+/* line 111, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .content section p:last-child, .post-type-archive-resources main.hero article.hentry .content section p:last-child, .post-type-archive-resources main.rich article.hentry .content section p:last-child, .tax-resource-type main.simple article.hentry .content section p:last-child, .tax-resource-type main.hero article.hentry .content section p:last-child, .tax-resource-type main.rich article.hentry .content section p:last-child {
   flex: auto;
 }
-/* line 111, ../scss/modules/_resources.scss */
+/* line 117, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.simple article.hentry .content .button, .post-type-archive-resources main.hero article.hentry .content .button, .post-type-archive-resources main.rich article.hentry .content .button, .tax-resource-type main.simple article.hentry .content .button, .tax-resource-type main.hero article.hentry .content .button, .tax-resource-type main.rich article.hentry .content .button {
   float: none;
 }
-/* line 120, ../scss/modules/_resources.scss */
+/* line 126, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.hero article .thumbnail, .tax-resource-type main.hero article .thumbnail {
   margin-right: 0;
 }
-/* line 123, ../scss/modules/_resources.scss */
+/* line 129, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.hero article header, .tax-resource-type main.hero article header {
   padding-bottom: 0;
 }
-/* line 126, ../scss/modules/_resources.scss */
+/* line 132, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.hero article .content, .tax-resource-type main.hero article .content {
   padding: .5em 1em;
 }
-/* line 128, ../scss/modules/_resources.scss */
+/* line 134, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.hero article .content h2, .tax-resource-type main.hero article .content h2 {
   min-height: inherit;
 }
-/* line 131, ../scss/modules/_resources.scss */
+/* line 137, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.hero article .content header > p.byline.vcard, .tax-resource-type main.hero article .content header > p.byline.vcard {
   color: #323944;
 }
-/* line 140, ../scss/modules/_resources.scss */
+/* line 146, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.rich article.hentry, .tax-resource-type main.rich article.hentry {
   border-radius: 0;
 }
-/* line 142, ../scss/modules/_resources.scss */
+/* line 148, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.rich article.hentry .content, .tax-resource-type main.rich article.hentry .content {
   background-color: rgba(0, 0, 0, 0.65);
   height: 100%;
   width: 100%;
 }
-/* line 146, ../scss/modules/_resources.scss */
+/* line 152, ../scss/modules/_resources.scss */
 .post-type-archive-resources main.rich article.hentry .content h2, .tax-resource-type main.rich article.hentry .content h2 {
   min-height: inherit;
 }
 
-/* line 155, ../scss/modules/_resources.scss */
+/* line 161, ../scss/modules/_resources.scss */
 .single-resources .display-resource {
   width: 75%;
   min-height: 50vh;

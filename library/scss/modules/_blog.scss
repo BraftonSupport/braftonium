@@ -108,7 +108,8 @@
 			position: relative;
 			.content {
 				position: absolute;
-				bottom: 0;
+                bottom: 0;
+                left:0;
 			}
 		}
 		h2, .h2 {
@@ -223,7 +224,7 @@
     }
 }
 @media only screen and (min-width:767px){
-    .blog, .archive:not(.post-type-archive-resources) {
+    .blog, .archive, .archive {
         .hentry {
             padding: 0;
             margin: 3em 0 0;
@@ -240,7 +241,7 @@
         .full article.hentry .thumbnail {
             max-height: 220px;
         }
-        .rich article.hentry, .full article.hentry, .simple article.hentry {
+        .full article.hentry, .simple article.hentry {
             &:first-of-type {
                 // flex: 1 0 100%;
                 // margin-right: 0;
@@ -253,6 +254,12 @@
             margin-top:0;
             margin-bottom:2em;
             padding-bottom:1em;
+        }
+        .rich article.hentry{
+            flex: 1 0 45%;
+            margin-right: 5% ;
+            margin-top:0;
+            margin-bottom:2em;
         }
     }
 }
@@ -282,6 +289,13 @@
         .simple article {
             display: block;
         }
+        &.date{
+            main{
+                header{
+                    flex:1 0 100%;
+                }
+            }
+        }
     }
 }
 @media only screen and (min-width:1366px){
@@ -289,7 +303,7 @@
         max-height: 250px;
     }
 }
-.blog{
+.blog, .archive{
     .simple{
         &.wrap{
             &.container{
