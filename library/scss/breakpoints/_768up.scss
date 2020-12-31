@@ -256,24 +256,7 @@ body:not(.page-template-full-width) main {
 .archive-title {
 	margin: 3em 0 0;
 }
-.blog, .archive {
-	.hentry {
-		padding: 0;
-		margin: 3em 0 0;
-		&:first-of-type {
-			margin-top: 0;
-		}
-	}
-	article {
-		display: block;
-		.thumbnail, .content {
-			margin: 0;
-		}
-	}
-	.full article.hentry .thumbnail {
-		max-height: 220px;
-	}
-}
+
 
 .alignleft, img.alignleft {
 	float: left;
