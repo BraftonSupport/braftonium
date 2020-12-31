@@ -3794,28 +3794,28 @@ Blog Corrections
 }
 @media only screen and (min-width: 767px) {
   /* line 227, ../scss/modules/_blog.scss */
-  .blog .hentry, .archive .hentry {
+  .blog .hentry, .archive:not(.post-type-archive-resources) .hentry {
     padding: 0;
     margin: 3em 0 0;
   }
   /* line 230, ../scss/modules/_blog.scss */
-  .blog .hentry:first-of-type, .archive .hentry:first-of-type {
+  .blog .hentry:first-of-type, .archive:not(.post-type-archive-resources) .hentry:first-of-type {
     margin-top: 0;
   }
   /* line 234, ../scss/modules/_blog.scss */
-  .blog article, .archive article {
+  .blog article, .archive:not(.post-type-archive-resources) article {
     display: block;
   }
   /* line 236, ../scss/modules/_blog.scss */
-  .blog article .thumbnail, .blog article .content, .archive article .thumbnail, .archive article .content {
+  .blog article .thumbnail, .blog article .content, .archive:not(.post-type-archive-resources) article .thumbnail, .archive:not(.post-type-archive-resources) article .content {
     margin: 0;
   }
   /* line 240, ../scss/modules/_blog.scss */
-  .blog .full article.hentry .thumbnail, .archive .full article.hentry .thumbnail {
+  .blog .full article.hentry .thumbnail, .archive:not(.post-type-archive-resources) .full article.hentry .thumbnail {
     max-height: 220px;
   }
   /* line 243, ../scss/modules/_blog.scss */
-  .blog .rich article.hentry, .blog .full article.hentry, .blog .simple article.hentry, .archive .rich article.hentry, .archive .full article.hentry, .archive .simple article.hentry {
+  .blog .rich article.hentry, .blog .full article.hentry, .blog .simple article.hentry, .archive:not(.post-type-archive-resources) .rich article.hentry, .archive:not(.post-type-archive-resources) .full article.hentry, .archive:not(.post-type-archive-resources) .simple article.hentry {
     flex: 1 0 45%;
     margin-right: 5%;
     margin-top: 0;

@@ -223,7 +223,7 @@
     }
 }
 @media only screen and (min-width:767px){
-    .blog, .archive {
+    .blog, .archive:not(.post-type-archive-resources) {
         .hentry {
             padding: 0;
             margin: 3em 0 0;
