@@ -20,9 +20,9 @@
 		<?php // force Internet Explorer to use the latest rendering engine available ?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
+		<?php if ( ! function_exists( '_wp_render_title_tag' ) ) { function theme_slug_render_title() { ?> <title> <?php wp_title( '|', true, 'right' ); ?> </title> <?php } add_action( 'wp_head', 'theme_slug_render_title' ); }
 
-		<?php // mobile meta (hooray!) ?>
+		 // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -82,7 +82,10 @@
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-
+<?php $body_script = get_field('body_script', 'option');
+if($body_script){
+	echo $body_script; 
+}?>
 		<div id="container">
 
 			<header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -166,7 +169,8 @@
 					$tagline = wp_kses_post(get_field('tagline',$blog_page_id));
 				elseif(is_post_type_archive('resources')):
 					$title = "Resources";
-					$background_image = null;
+					$background_image = get_field('resources_banner', 'option');
+					$background_image = $background_image? esc_url($background_image['url']) : null;
 				elseif(is_archive()):
 					$term = get_queried_object()->cat_ID;
 					$background_image = esc_url(get_field('background_image', 'category_'.$term));

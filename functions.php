@@ -56,9 +56,10 @@ endif;
   add_filter( 'wp_head', 'braftonium_remove_wp_widget_recent_comments_style', 1 );
   // clean up comment styles in the head
   add_action( 'wp_head', 'braftonium_remove_recent_comments_style', 1 );
-
+	add_action('wp_head', 'braftonium_header_scripts', 11);
+	add_action('wp_footer', 'braftonium_footer_scripts', 11);
   // enqueue base scripts and styles
-  add_action( 'wp_enqueue_scripts', 'braftonium_scripts_and_styles', 20 );
+  add_action( 'wp_enqueue_scripts', 'braftonium_scripts_and_styles', 9 );
   // ie conditional wrapper
 
   // launching this stuff after theme setup
@@ -276,13 +277,13 @@ function braftonium_customize_css() {
 		if (get_theme_mod( 'braftonium_link_color' )) {
 			$braftonium_link = sanitize_hex_color(get_theme_mod( 'braftonium_link_color' ));
 			$css .= PHP_EOL . sprintf( 'a, a:visited, .blog .read-more, .archive .read-more, .slick-prev:before, .slick-next:before { color:%s; }', $braftonium_link );
-			$css .= PHP_EOL . sprintf( 'button, .blue-btn, .hero .read-more, .pagination a:hover, .comment-reply-link, #submit, .button, .flipcards .list-item .text, .blog .full article.hentry, .archive .full article.hentry { background-color:%s; }', $braftonium_link );
+			$css .= PHP_EOL . sprintf( 'button, .blue-btn,.btn, .hero .read-more, .pagination a:hover, .comment-reply-link, #submit, .button, .flipcards .list-item .text, .blog .full article.hentry, .archive .full article.hentry { background-color:%s; }', $braftonium_link );
 			$css .= PHP_EOL . sprintf( '.blog .rich article.hentry .content, .archive .rich article.hentry .content { background-color: %sbf; }', $braftonium_link );
 		}
 		if (get_theme_mod( 'braftonium_linkhover_color' )) {
 			$braftonium_hover = sanitize_hex_color(get_theme_mod( 'braftonium_linkhover_color' ));
 			$css .= PHP_EOL . sprintf( 'a:hover, a:focus, a:visited:hover, a:visited:focus, .pagination a:hover, .blog .read-more:hover, .archive .read-more:hover { color:%s; }', $braftonium_hover );
-			$css .= PHP_EOL . sprintf( 'button:hover, .blue-btn:hover, .hero .read-more:hover, .comment-reply-link:hover, #submit:hover, .button:hover { background-color:%s; }', $braftonium_hover );
+			$css .= PHP_EOL . sprintf( 'button:hover, .blue-btn:hover,.btn:hover, .hero .read-more:hover, .comment-reply-link:hover, #submit:hover, .button:hover { background-color:%s; }', $braftonium_hover );
 		}
 		if (get_theme_mod( 'braftonium_headerbg_color' )) {
 			$braftonium_headerbg = sanitize_hex_color(get_theme_mod( 'braftonium_headerbg_color' ));
@@ -296,12 +297,12 @@ function braftonium_customize_css() {
 		if (get_theme_mod( 'braftonium_headerlink_color' )) {
 			$braftonium_headerlink = sanitize_hex_color(get_theme_mod( 'braftonium_headerlink_color' ));
 			$css .= PHP_EOL . sprintf( '.header a, nav .nav li a, .nav button { color:%s; }', $braftonium_headerlink );
-			$css .= PHP_EOL . sprintf( '.header .blue-btn { background-color:%s; }', $braftonium_headerlink );
+			$css .= PHP_EOL . sprintf( '.header .blue-btn, .header .btn { background-color:%s; }', $braftonium_headerlink );
 		}
 		if (get_theme_mod( 'braftonium_headerlinkhover_color' )) {
 			$braftonium_headerlinkhover = sanitize_hex_color(get_theme_mod( 'braftonium_headerlinkhover_color' ));
 			$css .= PHP_EOL . sprintf( '.header a:hover, nav .nav li a:hover, .nav button:hover { color:%s; }', $braftonium_headerlinkhover );
-			$css .= PHP_EOL . sprintf( '.header .header button:hover, .header .blue-btn:hover { background-color:%s; }', $braftonium_headerlinkhover );
+			$css .= PHP_EOL . sprintf( '.header .header button:hover, .header .blue-btn:hover, .header .btn:hover { background-color:%s; }', $braftonium_headerlinkhover );
 		}
 		if (get_theme_mod( 'braftonium_footerbg_color' )) {
 			$braftonium_footerbg_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerbg_color' ));
@@ -314,16 +315,29 @@ function braftonium_customize_css() {
 		if (get_theme_mod( 'braftonium_footerlink_color' )) {
 			$braftonium_footerlink_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerlink_color' ));
 			$css .= PHP_EOL . sprintf( '.footer a { color:%s; }', $braftonium_footerlink_color );
-			$css .= PHP_EOL . sprintf( '.footer button, .footer .blue-btn { background-color:%s; }', $braftonium_footerlink_color );
+			$css .= PHP_EOL . sprintf( '.footer button, .footer .blue-btn, .footer .btn { background-color:%s; }', $braftonium_footerlink_color );
 		}
 		if (get_theme_mod( 'braftonium_footerlinkhover_color' )) {
 			$braftonium_footerlinkhover_color = sanitize_hex_color(get_theme_mod( 'braftonium_footerlinkhover_color' ));
 			$css .= PHP_EOL . sprintf( '.footer a:hover }', $braftonium_footerlinkhover_color );
-			$css .= PHP_EOL . sprintf( '.footer button:hover, .footer .blue-btn:hover { background-color:%s; }', $braftonium_footerlinkhover_color );
+			$css .= PHP_EOL . sprintf( '.footer button:hover, .footer .blue-btn:hover, .footer .btn:hover { background-color:%s; }', $braftonium_footerlinkhover_color );
 		}
 		$css .= '</style>';
 		echo $css;
 	}
 	add_action( 'wp_head', 'braftonium_customize_css', 20);
+
+	function braftonium_header_scripts(){
+		$head = get_field('header_script', 'option');
+		if($head){
+			echo $head;
+		}
+	}
+	function braftonium_footer_scripts(){
+		$foot = get_field('footer_script', 'option');
+		if($foot){
+			echo $foot;
+		}
+	}
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

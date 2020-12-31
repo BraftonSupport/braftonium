@@ -36,28 +36,6 @@ nav .nav {
 	}
 }
 
-.blog, .archive {
-	article {
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		.thumbnail, .content {
-			flex: 1 0 45%;
-			margin: 0 5% 0 0;
-		}
-		.thumbnail img {
-			width: 100%;
-			height: auto;
-		}
-	}
-	.full article.hentry .thumbnail {
-		max-height: 200px;
-	}
-	.simple article {
-		display: block;
-	}
-}
-
 
 .banner.sinistral {
 	.wrap {
