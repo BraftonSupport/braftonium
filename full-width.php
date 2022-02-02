@@ -9,6 +9,7 @@ $banner_style = get_field('banner_style', 'option');
 $background_image = esc_url(get_field('background_image'));
 $title = wp_kses_post(get_field('title'));
 $tagline = wp_kses_post(get_field('tagline'));
+
 ?>
 
 <?php get_header(); ?>
@@ -26,7 +27,7 @@ $tagline = wp_kses_post(get_field('tagline'));
 					<?php endif; ?>
 						<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
 						<?php if ($tagline): echo $tagline; endif; ?>
-					</div></div>
+					</div></div>					
 				</section>
 			<?php $sectionrow++;
 			endif; // check if the flexible content field has rows of data ?>

@@ -182,6 +182,7 @@ if($body_script){
 					$title = wp_kses_post(get_field('title'));
 					$tagline = wp_kses_post(get_field('tagline'));
 				endif;
+
 				if ($background_image||$title) : ?>
 					<section class="banner visual<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php echo ' style="background-image:url('.$background_image.')"'; ?>>
 					<?php if ($banner_style == 'sinistral'): ?>
@@ -190,7 +191,7 @@ if($body_script){
 						<div class="black"><div class="wrap">
 					<?php endif; ?>
 							<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
-							<?php if ($tagline): echo $tagline; endif; ?>
+							<?php if ($tagline): echo $tagline; endif; ?>														
 						</div></div>
 					</section>
 				<?php endif; ?>
