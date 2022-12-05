@@ -84,4 +84,4 @@ class BraftoniumGutenbergBlocks{
     
 }
 // var_dump("In file");
-$Braftonium_Gutenberg_Blocks = new BraftoniumGutenbergBlocks();
+// $Braftonium_Gutenberg_Blocks = new BraftoniumGutenbergBlocks();
