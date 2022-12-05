@@ -1991,7 +1991,6 @@ POSTS & CONTENT STYLES
 /* line 403, ../scss/breakpoints/_base.scss */
 body:not(.page-template-full-width) main {
   margin: 0 auto;
-  padding: 2em 0;
 }
 
 /* line 408, ../scss/breakpoints/_base.scss */
@@ -2900,16 +2899,6 @@ tweeners.
   /*********************
   POSTS & CONTENT STYLES
   *********************/
-  /* line 77, ../scss/breakpoints/_481up.scss */
-  body:not(.page-template-full-width) main {
-    padding: 2.5em 0;
-  }
-
-  /* line 80, ../scss/breakpoints/_481up.scss */
-  .banner .wrap, .page-template-full-width .banner .wrap {
-    padding: 3.5em 0;
-  }
-
   /* line 85, ../scss/breakpoints/_481up.scss */
   .page-template-full-width section .wrap {
     padding: 2.5em 0 3em;
@@ -3257,10 +3246,6 @@ you can add resource intensive styles.
   /*********************
   POSTS & CONTENT STYLES
   *********************/
-  /* line 254, ../scss/breakpoints/_768up.scss */
-  body:not(.page-template-full-width) main {
-    padding: 3em 0;
-  }
   /* line 256, ../scss/breakpoints/_768up.scss */
   body:not(.page-template-full-width) main.remove-top-padding {
     padding-top: 0;
@@ -3445,11 +3430,6 @@ This is for the larger monitors and possibly full screen viewers.
   on larger screens.
   
   ******************************************************************/
-  /* line 11, ../scss/breakpoints/_1367up.scss */
-  body:not(.page-template-full-width) main {
-    padding: 3.5em 0;
-  }
-
   /* line 15, ../scss/breakpoints/_1367up.scss */
   .wrap {
     max-width: 1200px;

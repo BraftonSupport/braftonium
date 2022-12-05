@@ -239,16 +239,6 @@ HEADER STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-/* line 77, ../scss/breakpoints/_481up.scss */
-body:not(.page-template-full-width) main {
-  padding: 2.5em 0;
-}
-
-/* line 80, ../scss/breakpoints/_481up.scss */
-.banner .wrap, .page-template-full-width .banner .wrap {
-  padding: 3.5em 0;
-}
-
 /* line 85, ../scss/breakpoints/_481up.scss */
 .page-template-full-width section .wrap {
   padding: 2.5em 0 3em;
@@ -584,10 +574,6 @@ nav li.current_page_ancestor > a {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-/* line 254, ../scss/breakpoints/_768up.scss */
-body:not(.page-template-full-width) main {
-  padding: 3em 0;
-}
 /* line 256, ../scss/breakpoints/_768up.scss */
 body:not(.page-template-full-width) main.remove-top-padding {
   padding-top: 0;
