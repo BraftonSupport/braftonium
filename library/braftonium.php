@@ -393,6 +393,15 @@ if( function_exists('acf_add_options_page') ) {
  */
 function braftonium_widgets_init() {
 	register_sidebar( array(
+		'name'		  => __( 'Footer Below Logo Widget', 'braftonium' ),
+		'id'			=> 'footer-below-logo',
+		'description'   => __( 'This is located in the footer Below Logo. Use only 1 widget.', 'braftonium' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="h3 widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'name'		  => __( 'Footer Left Widget', 'braftonium' ),
 		'id'			=> 'footer-left',
 		'description'   => __( 'This is located in the footer. Use only 1 widget.', 'braftonium' ),
