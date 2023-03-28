@@ -11,7 +11,13 @@
 						<?php else: ?>
 							<p><?php bloginfo( 'name' ); ?></p>
 						<?php endif; ?>
-					</a></section>
+					</a>
+				<?php 
+					if ( is_active_sidebar( 'footer-below-logo' ) ){
+						dynamic_sidebar( 'footer-below-logo' );
+					}
+				?>
+				</section>
 					
 					<?php if ( is_active_sidebar( 'footer-left' ) ){
 						echo '<section>';

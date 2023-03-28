@@ -11,10 +11,6 @@ $brafton_comments = get_field('comments', 'option');
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> itemscope itemtype="http://schema.org/BlogPosting">
 
-						<?php if (!$title): ?><header class="article-header">
-							<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-						</header><?php endif;// end article header ?>
-
 						<section class="entry-content cf" itemprop="articleBody">
 							<?php
 								// the content (pretty self explanatory huh)
